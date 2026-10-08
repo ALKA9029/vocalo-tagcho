@@ -191,7 +191,8 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
 
 // 歌ってみたを、同じ曲名の本家にひもづける（いちばん古い本家を原曲とみなす）
 // YouTubeのチャンネル名からアーティスト名を取り出す（「YOASOBI - Topic」「〇〇 Official YouTube Channel」など）
-export function cleanChannel(name = "") {
+export function cleanChannel(name) {
+  name = name || "";
   return name.replace(/\s*-\s*Topic$/i, "").replace(/\s*(official\s*)?(youtube\s*)?(channel|チャンネル)$/i, "")
     .replace(/\s*(official|公式)$/i, "").replace(/\s*\/\s*.*$/, "").trim();
 }
