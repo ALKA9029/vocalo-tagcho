@@ -10,6 +10,13 @@
         "targets": "tagsExact",
         "minViews": 1000000,
         "maxPages": 10
+      },
+      {
+        "label": "人気の歌ってみた（30万再生以上）",
+        "q": "歌ってみた",
+        "targets": "tagsExact",
+        "minViews": 300000,
+        "maxPages": 10
       }
     ],
     "queries": [

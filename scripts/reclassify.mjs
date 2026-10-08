@@ -8,7 +8,8 @@ const items = JSON.parse(await readFile(path("data/songs.json"), "utf8"));
 const overrides = JSON.parse(await readFile(path("data/overrides.json"), "utf8").catch(() => "{}"));
 
 const out = items.map(old => {
-  const fresh = classify({ ...old, uploaderId: (old.a || "").includes(":") ? old.a.split(":")[1] : undefined },
+  const uploaderId = old.uploaderId ?? ((old.a || "").includes(":") ? old.a.split(":")[1] : undefined);
+  const fresh = classify({ ...old, uploaderId },
     { fallbackGenre: old.g === "その他" ? "その他" : old.g });
   const keep = { firstSeen: old.firstSeen, seed: old.seed };
   if (old.src === "youtube" && old.kind === "歌ってみた" && !old.v) fresh.kind = "歌ってみた";

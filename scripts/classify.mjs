@@ -131,12 +131,14 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     likes: video.likes ?? null,
     thumb: video.thumb ?? null,
     tags: tags.slice(0, 30),
+    uploaderId: video.uploaderId ?? null,
   };
   if (kind === "本家") {
     const isVoiceName = isVoice(parsed.creator);
     item.p = (!isVoiceName && parsed.creator) || video.uploader || "";
     if (voice) item.v = voice;
-    item.a = normalize(item.p) || `${video.src}:${video.uploaderId || ""}`;
+    // 同じ投稿者なら同じ作者とみなす（名前の書き方がばらばらでもまとまる）。投稿者が分からないときだけ名前でまとめる
+    item.a = video.uploaderId ? `${video.src}:${video.uploaderId}` : normalize(item.p);
   } else {
     item.by = (parsed.creator || video.uploader || "").replace(/^(ver\.?|by)\s*/i, "").replace(/^VOCALOID\s+/i, "").replace(/\s+/g, " ").trim();
     if (parsed.originalCreator) item.pHint = parsed.originalCreator;
@@ -145,7 +147,23 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
 }
 
 // 歌ってみたを、同じ曲名の本家にひもづける（いちばん古い本家を原曲とみなす）
+// 同じ投稿者の曲で一番よく使われている作者名を、名前のない曲にも入れる
+export function fillCreators(items) {
+  const names = new Map();
+  for (const i of items) if (i.kind === "本家" && i.a && i.p) {
+    const m = names.get(i.a) || new Map();
+    m.set(i.p, (m.get(i.p) || 0) + 1);
+    names.set(i.a, m);
+  }
+  for (const i of items) if (i.kind === "本家" && i.a && !i.p && names.has(i.a)) {
+    i.p = [...names.get(i.a)].sort((x, y) => y[1] - x[1])[0][0];
+    i.pFilled = true;
+  }
+  return items;
+}
+
 export function linkCovers(items) {
+  fillCreators(items);
   const originals = new Map();
   for (const i of items.filter(x => x.kind === "本家").sort((a, b) => (a.date || "").localeCompare(b.date || ""))) {
     const k = normalize(i.t);
