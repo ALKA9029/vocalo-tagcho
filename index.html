@@ -231,10 +231,10 @@ function related(i){
   return el("div",{class:"related", onclick:e=>e.stopPropagation()},
     ...groups.map(([h, list, sub])=>el("div",{class:"rgroup"},
       el("h3",{},h),
-      list.length ? list.map(x=>el("div",{class:"ritem"},
+      ...(list.length ? list.map(x=>el("div",{class:"ritem"},
         el("button",{onclick:()=>jump(x.id)}, x.t),
         el("span",{class:"badge kind"+(x.kind==="歌ってみた"?" cover":"")}, x.kind),
-        el("span",{class:"sub"}, sub(x)))) : el("span",{class:"none"},"まだ見つかってないよ"))));
+        el("span",{class:"sub"}, sub(x)))) : [el("span",{class:"none"},"まだ見つかってないよ")]))));
 }
 
 function jump(id){
