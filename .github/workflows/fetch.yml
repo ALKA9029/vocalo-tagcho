@@ -4,7 +4,12 @@ on:
   schedule:
     # 毎朝6時15分（日本時間）。ニコニコの検索データは毎朝5時に更新される
     - cron: "15 21 * * *"
-  workflow_dispatch: {}   # Actionsの画面から手動でも動かせる
+  workflow_dispatch:      # Actionsの画面から手動でも動かせる
+    inputs:
+      seed:
+        description: "昔からの人気曲（原曲の土台）をまとめて取り込む"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -23,7 +28,7 @@ jobs:
         with:
           node-version: 22
       - name: 曲データを取得
-        run: node scripts/fetch.mjs
+        run: node scripts/fetch.mjs ${{ inputs.seed && '--seed' || '' }}
       - name: 変わっていたら保存
         run: |
           git config user.name "github-actions[bot]"

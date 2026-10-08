@@ -98,7 +98,7 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     if (voice) item.v = voice;
     item.a = normalize(item.p) || `${video.src}:${video.uploaderId || ""}`;
   } else {
-    item.by = parsed.creator || video.uploader || "";
+    item.by = (parsed.creator || video.uploader || "").replace(/^(ver\.?|by)\s*/i, "").replace(/^VOCALOID\s+/i, "").replace(/\s+/g, " ").trim();
     if (parsed.originalCreator) item.pHint = parsed.originalCreator;
   }
   return item;

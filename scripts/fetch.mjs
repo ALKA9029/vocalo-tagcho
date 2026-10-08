@@ -14,16 +14,17 @@ async function readJson(p, fallback) {
 }
 
 // ---------- ニコニコ（スナップショット検索API v2） ----------
-async function fetchNiconico() {
+// seed=true のときは日付で絞らず、config の seedQueries（昔からの人気曲）を取りにいく
+async function fetchNiconico(seed) {
   const nc = config.niconico;
   const since = new Date(Date.now() - nc.lookbackDays * 864e5).toISOString().replace(/\.\d+Z$/, "+00:00");
   const out = [];
-  for (const q of nc.queries) {
+  for (const q of seed ? nc.seedQueries : nc.queries) {
     for (let page = 0; page < (q.maxPages || 1); page++) {
       const params = new URLSearchParams({
         q: q.q, targets: q.targets,
         fields: "contentId,title,tags,startTime,viewCounter,likeCounter,thumbnailUrl,userId,channelId",
-        "filters[startTime][gte]": since,
+        ...(seed ? {} : { "filters[startTime][gte]": since }),
         "filters[viewCounter][gte]": String(q.minViews || 0),
         _sort: "-viewCounter", _offset: String(page * 100), _limit: "100",
         _context: "vocalo-tagcho",
@@ -38,7 +39,7 @@ async function fetchNiconico() {
         src: "niconico", id: "nico:" + r.contentId, url: "https://www.nicovideo.jp/watch/" + r.contentId,
         title: r.title || "", tags: (r.tags || "").split(" ").filter(Boolean),
         date: r.startTime, views: r.viewCounter, likes: r.likeCounter, thumb: r.thumbnailUrl,
-        uploaderId: r.userId ?? r.channelId ?? null,
+        uploaderId: r.userId ?? r.channelId ?? null, seed: seed || undefined,
       });
       console.log(`ニコニコ「${q.label}」${page + 1}ページ目: ${rows.length}件`);
       // 利用ルール：前のリクエストにかかった時間以上あけて次を送る
@@ -80,10 +81,11 @@ async function fetchYouTube() {
 
 // ---------- まとめて保存 ----------
 const fixtureArg = process.argv.indexOf("--fixture");
+const SEED = process.argv.includes("--seed");
 const videos = fixtureArg > -1
   ? JSON.parse(await readFile(process.argv[fixtureArg + 1], "utf8"))
-  : [...await fetchNiconico().catch(e => (console.warn("ニコニコ取得失敗:", e.message), [])),
-     ...await fetchYouTube().catch(e => (console.warn("YouTube取得失敗:", e.message), []))];
+  : [...await fetchNiconico(SEED).catch(e => (console.warn("ニコニコ取得失敗:", e.message), [])),
+     ...(SEED ? [] : await fetchYouTube()).catch(e => (console.warn("YouTube取得失敗:", e.message), []))];
 
 const outFile = fixtureArg > -1 ? "data/songs.sample.json" : "data/songs.json";
 const existing = new Map((await readJson(outFile, [])).map(i => [i.id, i]));
@@ -92,9 +94,10 @@ const overrides = await readJson("data/overrides.json", {});
 for (const v of videos) {
   const fallback = v.channelGenre && v.channelGenre !== "歌ってみた" ? v.channelGenre : "その他";
   const item = classify(v, { fallbackGenre: fallback });
+  if (v.seed) item.seed = true;
   if (v.channelGenre === "歌ってみた") { item.kind = "歌ってみた"; item.by ||= v.uploader; delete item.p; delete item.v; }
   const prev = existing.get(item.id);
-  existing.set(item.id, prev ? { ...prev, ...item, firstSeen: prev.firstSeen } : { ...item, firstSeen: new Date().toISOString() });
+  existing.set(item.id, prev ? { ...prev, ...item, seed: prev.seed || item.seed, firstSeen: prev.firstSeen } : { ...item, firstSeen: new Date().toISOString() });
 }
 
 // 管理人の手直し（data/overrides.json）を最後に上書き
@@ -103,9 +106,11 @@ for (const i of items) {
   const o = overrides[i.id];
   if (o) { Object.assign(i, o); if ("of" in o) i.ofLocked = true; }
 }
-items = linkCovers(items)
-  .sort((a, b) => (b.date || "").localeCompare(a.date || ""))
-  .slice(0, config.maxItems);
+items = linkCovers(items).sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+// 人気曲（seed）は原曲の土台なので件数制限で消さない。それ以外は新しい順に残す
+const seeds = items.filter(i => i.seed);
+items = [...seeds, ...items.filter(i => !i.seed).slice(0, Math.max(0, config.maxItems - seeds.length))]
+  .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
 
 await mkdir(path("data/"), { recursive: true });
 await writeFile(path(outFile), JSON.stringify(items, null, 1) + "\n");

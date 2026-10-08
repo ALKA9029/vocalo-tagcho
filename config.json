@@ -3,6 +3,15 @@
   "maxItems": 5000,
   "niconico": {
     "lookbackDays": 3,
+    "seedQueries": [
+      {
+        "label": "ボカロ殿堂入り（100万再生以上）",
+        "q": "VOCALOID",
+        "targets": "tagsExact",
+        "minViews": 1000000,
+        "maxPages": 10
+      }
+    ],
     "queries": [
       {
         "label": "ボカロ新曲",
