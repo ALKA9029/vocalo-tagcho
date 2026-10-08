@@ -85,7 +85,7 @@ const SEED = process.argv.includes("--seed");
 const videos = fixtureArg > -1
   ? JSON.parse(await readFile(process.argv[fixtureArg + 1], "utf8"))
   : [...await fetchNiconico(SEED).catch(e => (console.warn("ニコニコ取得失敗:", e.message), [])),
-     ...(SEED ? [] : await fetchYouTube()).catch(e => (console.warn("YouTube取得失敗:", e.message), []))];
+     ...(SEED ? [] : await fetchYouTube().catch(e => (console.warn("YouTube取得失敗:", e.message), [])))];
 
 const outFile = fixtureArg > -1 ? "data/songs.sample.json" : "data/songs.json";
 const existing = new Map((await readJson(outFile, [])).map(i => [i.id, i]));
