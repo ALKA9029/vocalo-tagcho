@@ -38,6 +38,13 @@
   },
   "youtube": {
     "comment": "ここに追いかけたいYouTubeチャンネルを追加する。genre は ボカロ / J-POP / 歌ってみた のどれか（歌ってみたはタイトルからも自動判定される）",
+    "trending": {
+      "enabled": true,
+      "regionCode": "JP",
+      "maxPages": 4,
+      "minViews": 0,
+      "defaultGenre": "J-POP"
+    },
     "channels": [
       { "name": "例：チャンネル名", "channelId": "", "genre": "J-POP" }
     ]

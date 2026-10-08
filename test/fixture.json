@@ -146,5 +146,31 @@
   ],
   "date": "2026-10-07T00:00:00+09:00",
   "views": 400
+ },
+ {
+  "src": "youtube",
+  "id": "yt:TEST0000003",
+  "url": "",
+  "title": "テストアーティスト「テストの夜」Official Music Video",
+  "tags": [],
+  "desc": "TVアニメ『テスト』オープニングテーマ",
+  "date": "2026-10-07T00:00:00Z",
+  "views": 500000,
+  "uploader": "テストアーティスト Official YouTube Channel",
+  "uploaderId": "UCt3",
+  "channelGenre": "J-POP"
+ },
+ {
+  "src": "youtube",
+  "id": "yt:TEST0000004",
+  "url": "",
+  "title": "テストシンガー - 明日のテスト (Official Video)",
+  "tags": [],
+  "desc": "",
+  "date": "2026-10-07T00:00:00Z",
+  "views": 300000,
+  "uploader": "テストシンガー - Topic",
+  "uploaderId": "UCt4",
+  "channelGenre": "J-POP"
  }
 ]

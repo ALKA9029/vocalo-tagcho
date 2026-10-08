@@ -279,7 +279,7 @@ function render(){
   const y = window.scrollY;
   lastCounts = counts();
   const genres = [...new Set(ITEMS.map(i=>i.g))];
-  seg($("#genreSeg"), "genre", [["","すべて"], ...["ボカロ","J-POP","その他"].filter(g=>genres.includes(g)).map(g=>[g,g])]);
+  seg($("#genreSeg"), "genre", [["","すべて"], ...["ボカロ","J-POP","アニソン","その他"].filter(g=>genres.includes(g)).map(g=>[g,g])]);
   seg($("#kindSeg"), "kind", [["","すべて"],["本家","本家"],["歌ってみた","歌ってみた"]]);
   $("#personBox").replaceChildren(...(state.person ? [el("span",{class:"active"}, state.person.label,
     el("button",{"aria-label":"絞り込みを解除", onclick:()=>applyFilter(()=>state.person=null)}, "×"))] : []));

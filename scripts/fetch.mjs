@@ -79,13 +79,49 @@ async function fetchYouTube() {
   return out;
 }
 
+// ---------- YouTube 音楽の急上昇（日本）。APIキー（環境変数 YOUTUBE_API_KEY）が必要 ----------
+async function fetchYouTubeTrending() {
+  const key = process.env.YOUTUBE_API_KEY;
+  const t = config.youtube.trending;
+  if (!key || !t?.enabled) { console.log("YouTube急上昇: APIキーがないので飛ばします"); return []; }
+  const out = [];
+  let pageToken = "";
+  for (let page = 0; page < (t.maxPages || 1); page++) {
+    const params = new URLSearchParams({
+      part: "snippet,statistics", chart: "mostPopular", regionCode: t.regionCode || "JP",
+      videoCategoryId: "10", maxResults: "50", key, ...(pageToken ? { pageToken } : {}),
+    });
+    const res = await fetch("https://www.googleapis.com/youtube/v3/videos?" + params);
+    if (!res.ok) { console.warn(`YouTube急上昇: HTTP ${res.status} ${(await res.text()).slice(0, 200)}`); break; }
+    const body = await res.json();
+    for (const v of body.items || []) {
+      const sn = v.snippet || {}, st = v.statistics || {};
+      const views = Number(st.viewCount) || null;
+      if (views != null && views < (t.minViews || 0)) continue;
+      out.push({
+        src: "youtube", id: "yt:" + v.id, url: "https://www.youtube.com/watch?v=" + v.id,
+        title: sn.title || "", tags: sn.tags || [], desc: sn.description || "",
+        date: sn.publishedAt, views, likes: Number(st.likeCount) || null,
+        thumb: sn.thumbnails?.medium?.url || sn.thumbnails?.default?.url || null,
+        uploader: sn.channelTitle || "", uploaderId: sn.channelId || null,
+        channelGenre: t.defaultGenre || "J-POP",
+      });
+    }
+    console.log(`YouTube急上昇 ${page + 1}ページ目: ${(body.items || []).length}件`);
+    pageToken = body.nextPageToken;
+    if (!pageToken) break;
+  }
+  return out;
+}
+
 // ---------- まとめて保存 ----------
 const fixtureArg = process.argv.indexOf("--fixture");
 const SEED = process.argv.includes("--seed");
 const videos = fixtureArg > -1
   ? JSON.parse(await readFile(process.argv[fixtureArg + 1], "utf8"))
   : [...await fetchNiconico(SEED).catch(e => (console.warn("ニコニコ取得失敗:", e.message), [])),
-     ...(SEED ? [] : await fetchYouTube().catch(e => (console.warn("YouTube取得失敗:", e.message), [])))];
+     ...(SEED ? [] : await fetchYouTube().catch(e => (console.warn("YouTube取得失敗:", e.message), []))),
+     ...(SEED ? [] : await fetchYouTubeTrending().catch(e => (console.warn("YouTube急上昇の取得失敗:", e.message), [])))];
 
 const outFile = fixtureArg > -1 ? "data/songs.sample.json" : "data/songs.json";
 const existing = new Map((await readJson(outFile, [])).map(i => [i.id, i]));

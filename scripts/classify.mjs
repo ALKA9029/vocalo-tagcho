@@ -32,8 +32,13 @@ export function detectVoice(title, tags) {
   return null;
 }
 
-export function detectGenre(title, tags, fallback = "その他") {
+// アニメのタイアップらしい言葉（「アニメMV」はボカロでもよく使うので除く）
+const ANIME_RE = /TVアニメ|アニメ[「『]|劇場版|主題歌|オープニング(テーマ)?|エンディング(テーマ)?|ノンクレジット|(?<![A-Za-z])(OP|ED)(?![A-Za-z])|\banime\b/i;
+const ANIME_TAGS = ["アニソン", "アニメ", "アニメソング", "anime"];
+
+export function detectGenre(title, tags, fallback = "その他", desc = "") {
   if (hasTag(tags, VOCALO_TAGS) || (detectVoice(title, tags) && !hasTag(tags, JPOP_TAGS))) return "ボカロ";
+  if (hasTag(tags, ANIME_TAGS) || ANIME_RE.test(title) || ANIME_RE.test(desc.slice(0, 300))) return "アニソン";
   if (hasTag(tags, JPOP_TAGS)) return "J-POP";
   return fallback;
 }
@@ -117,7 +122,7 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
   const kind = detectKind(video.title, tags);
   const parsed = parseTitle(video.title);
   const voice = parsed.voice || detectVoice(video.title, tags);
-  const g = detectGenre(video.title, tags, fallbackGenre);
+  const g = detectGenre(video.title, tags, fallbackGenre, video.desc || "");
   const item = {
     id: video.id,
     src: video.src,
@@ -135,7 +140,7 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
   };
   if (kind === "本家") {
     const isVoiceName = isVoice(parsed.creator);
-    item.p = (!isVoiceName && parsed.creator) || video.uploader || "";
+    item.p = (!isVoiceName && parsed.creator) || cleanChannel(video.uploader) || "";
     if (voice) item.v = voice;
     // 同じ投稿者なら同じ作者とみなす（名前の書き方がばらばらでもまとまる）。投稿者が分からないときだけ名前でまとめる
     item.a = video.uploaderId ? `${video.src}:${video.uploaderId}` : normalize(item.p);
@@ -147,6 +152,12 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
 }
 
 // 歌ってみたを、同じ曲名の本家にひもづける（いちばん古い本家を原曲とみなす）
+// YouTubeのチャンネル名からアーティスト名を取り出す（「YOASOBI - Topic」「〇〇 Official YouTube Channel」など）
+export function cleanChannel(name = "") {
+  return name.replace(/\s*-\s*Topic$/i, "").replace(/\s*(official\s*)?(youtube\s*)?(channel|チャンネル)$/i, "")
+    .replace(/\s*(official|公式)$/i, "").replace(/\s*\/\s*.*$/, "").trim();
+}
+
 // 同じ投稿者の曲で一番よく使われている作者名を、名前のない曲にも入れる
 export function fillCreators(items) {
   const names = new Map();
