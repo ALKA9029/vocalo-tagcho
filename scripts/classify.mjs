@@ -28,7 +28,11 @@ export function detectVoice(title, tags) {
   // 長い名前を先に見る（「初音ミクNT」を「初音ミク」と誤判定しないため）
   const byLen = [...VOICES].sort((a, b) => b.length - a.length);
   for (const v of byLen) if (tags.some(t => normalize(t) === normalize(v))) return v;
-  for (const v of byLen) if (v.length >= 3 && title.includes(v)) return v;
+  // 英字の名前（ONE、IA など）は単語として出てきたときだけ（「SixTONES」「ONE N' ONLY」を誤判定しないため）
+  for (const v of byLen) {
+    if (/^[\x00-\x7F ]+$/.test(v)) { if (v.length >= 4 && new RegExp(`(^|[^A-Za-z])${v}(?![A-Za-z'])`).test(title) && v !== "ONE") return v; }
+    else if (v.length >= 3 && title.includes(v)) return v;
+  }
   return null;
 }
 
@@ -116,11 +120,42 @@ export function parseTitle(raw) {
   return { song: song || raw.trim(), creator, voice, originalCreator, brackets: bracketed };
 }
 
+// YouTube向け：チャンネル名を手がかりに「アーティスト」と「曲名」を分ける
+// 例）Mrs. GREEN APPLE「共犯」Official Music Video / なにわ男子 - Moonlit [Official Music Video] / 【MV】怠。 / ILLGATOR
+const YT_NOISE = /official\s*(music\s*)?(video|mv)|music\s*video|music\s*clip|lyric\s*video|performance\s*video|dance\s*practice(\s*movie)?|special\s*dance\s*performance|visualizer|\bM\/V\b|\bMV\b|MUSiC CLiP/gi;
+export function parseYouTube(raw, channel = "") {
+  const ch = cleanChannel(channel).replace(/\s*from\s+.*$/i, "").replace(/\s*[（(].*$/, "").trim();
+  let s = raw.normalize("NFKC")
+    .replace(/[“”]/g, '"').replace(/[‘’]/g, "'")
+    .replace(/【[^】]*】|\[[^\]]*\]|\([^)]*\)|（[^）]*）/g, " ")
+    .replace(/\s-[^-]{2,}-\s*$/, " ")          // 「-Music Video-」「-from TBS系…-」
+    .replace(YT_NOISE, " ").replace(/#\S+/g, " ").replace(/\s+/g, " ").trim();
+  let song = "", artist = "";
+  const q = s.match(/[「『]([^」』]+)[」』]|"([^"]+)"|(?:^|[\s|｜])'([^']+)'(?:\s|$)/);
+  if (q) {
+    song = (q[1] || q[2] || q[3]).trim();
+    artist = s.slice(0, q.index).replace(/[|｜\/／\-–—:：\s]+$/, "").trim();
+  } else {
+    const parts = s.split(/\s*[|｜\/／]\s*|\s+[-–—]\s+/).map(x => x.trim()).filter(Boolean);
+    const isCh = x => ch && (normalize(x) === normalize(ch) || normalize(x).includes(normalize(ch)) || normalize(ch).includes(normalize(x)));
+    const chIdx = parts.findIndex(isCh);
+    if (parts.length >= 2 && chIdx >= 0) { artist = parts[chIdx]; song = parts.find((_, i) => i !== chIdx); }
+    else if (parts.length >= 2) {
+      // 区切りがダッシュなら「アーティスト - 曲名」、スラッシュなら「曲名 / アーティスト」が多い
+      if (/\s[-–—]\s/.test(s)) { artist = parts[0]; song = parts[1]; } else { song = parts[0]; artist = parts[1]; }
+    } else song = parts[0] || s;
+  }
+  const featVoice = featOf(song) || featOf(artist);
+  song = song.replace(/\s*(?:feat\.?|ft\.)\s*.*$/i, "").replace(/セルフカバー|cover/gi, "").trim();
+  artist = artist.replace(/\s*(?:feat\.?|ft\.)\s*.*$/i, "").replace(/\s*[（(].*$/, "").trim() || ch;
+  return { song: song || raw.trim(), creator: artist, voice: featVoice ? (splitNames(featVoice).voices[0] || null) : null, originalCreator: "", channel: ch, brackets: [] };
+}
+
 // 動画1件 → サイトで使う形
 export function classify(video, { fallbackGenre = "その他" } = {}) {
   const tags = video.tags || [];
   const kind = detectKind(video.title, tags);
-  const parsed = parseTitle(video.title);
+  const parsed = video.src === "youtube" ? parseYouTube(video.title, video.uploader) : parseTitle(video.title);
   const voice = parsed.voice || detectVoice(video.title, tags);
   const g = detectGenre(video.title, tags, fallbackGenre, video.desc || "");
   const item = {
@@ -137,14 +172,17 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     thumb: video.thumb ?? null,
     tags: tags.slice(0, 30),
     uploaderId: video.uploaderId ?? null,
+    uploader: video.uploader ?? null,
   };
   if (kind === "本家") {
     const isVoiceName = isVoice(parsed.creator);
     item.p = (!isVoiceName && parsed.creator) || cleanChannel(video.uploader) || "";
+    if (isVoice(item.p)) item.p = "";
     if (voice) item.v = voice;
     // 同じ投稿者なら同じ作者とみなす（名前の書き方がばらばらでもまとまる）。投稿者が分からないときだけ名前でまとめる
     item.a = video.uploaderId ? `${video.src}:${video.uploaderId}` : normalize(item.p);
   } else {
+    if (video.src === "youtube") { parsed.originalCreator = parsed.creator !== parsed.channel ? parsed.creator : ""; parsed.creator = parsed.channel || parsed.creator; }
     item.by = (parsed.creator || video.uploader || "").replace(/^(ver\.?|by)\s*/i, "").replace(/^VOCALOID\s+/i, "").replace(/\s+/g, " ").trim();
     if (parsed.originalCreator) item.pHint = parsed.originalCreator;
   }
