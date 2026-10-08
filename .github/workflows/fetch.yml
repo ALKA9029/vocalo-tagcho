@@ -1,0 +1,37 @@
+name: 曲データを自動取得
+
+on:
+  schedule:
+    # 毎朝6時15分（日本時間）。ニコニコの検索データは毎朝5時に更新される
+    - cron: "15 21 * * *"
+  workflow_dispatch: {}   # Actionsの画面から手動でも動かせる
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 曲データを取得
+        run: node scripts/fetch.mjs
+      - name: 変わっていたら保存
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "変更なし"
+          else
+            git commit -m "曲データを更新 $(TZ=Asia/Tokyo date '+%Y-%m-%d')"
+            git push
+          fi

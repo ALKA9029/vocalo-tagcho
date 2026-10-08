@@ -1,0 +1,9 @@
+[
+  {"src":"niconico","id":"nico:sm00000001","url":"https://www.nicovideo.jp/watch/sm00000001","title":"千本桜 / 黒うさP feat. 初音ミク","tags":["VOCALOID","初音ミク","千本桜"],"date":"2011-09-17T00:00:00+09:00","views":1000,"likes":10},
+  {"src":"niconico","id":"nico:sm00000002","url":"https://www.nicovideo.jp/watch/sm00000002","title":"【初音ミク】ハナタバ【オリジナル】","tags":["VOCALOID","初音ミク","VOCALOIDオリジナル曲"],"date":"2022-11-19T00:00:00+09:00","views":800,"likes":20},
+  {"src":"niconico","id":"nico:sm00000003","url":"https://www.nicovideo.jp/watch/sm00000003","title":"【歌ってみた】千本桜 / テスト歌い手A","tags":["歌ってみた","千本桜"],"date":"2015-01-01T00:00:00+09:00","views":5000,"likes":30},
+  {"src":"niconico","id":"nico:sm00000004","url":"https://www.nicovideo.jp/watch/sm00000004","title":"『ハナタバ』 歌ってみた ver.テスト歌い手B","tags":["歌ってみた","VOCALOID"],"date":"2023-03-01T00:00:00+09:00","views":3000,"likes":40},
+  {"src":"niconico","id":"nico:sm00000005","url":"https://www.nicovideo.jp/watch/sm00000005","title":"新曲テスト / テストP feat. 可不","tags":["CeVIO","可不"],"date":"2026-10-07T00:00:00+09:00","views":500,"likes":5},
+  {"src":"youtube","id":"yt:TEST0000001","url":"https://www.youtube.com/watch?v=TEST0000001","title":"テストバンド「夜明けのテスト」Official Music Video","tags":[],"date":"2026-10-06T00:00:00+00:00","views":12000,"uploader":"テストバンド","uploaderId":"UCtest","channelGenre":"J-POP"},
+  {"src":"youtube","id":"yt:TEST0000002","url":"https://www.youtube.com/watch?v=TEST0000002","title":"夜明けのテスト / covered by テスト歌い手C","tags":[],"date":"2026-10-07T00:00:00+00:00","views":800,"uploader":"テスト歌い手C","uploaderId":"UCtest2","channelGenre":"歌ってみた"}
+]

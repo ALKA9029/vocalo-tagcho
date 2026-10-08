@@ -1,0 +1,29 @@
+{
+  "userAgent": "vocalo-tagcho (https://github.com/ALKA9029/vocalo-tagcho)",
+  "maxItems": 5000,
+  "niconico": {
+    "lookbackDays": 3,
+    "queries": [
+      {
+        "label": "ボカロ新曲",
+        "q": "VOCALOID",
+        "targets": "tagsExact",
+        "minViews": 300,
+        "maxPages": 3
+      },
+      {
+        "label": "歌ってみた新着",
+        "q": "歌ってみた",
+        "targets": "tagsExact",
+        "minViews": 1000,
+        "maxPages": 3
+      }
+    ]
+  },
+  "youtube": {
+    "comment": "ここに追いかけたいYouTubeチャンネルを追加する。genre は ボカロ / J-POP / 歌ってみた のどれか（歌ってみたはタイトルからも自動判定される）",
+    "channels": [
+      { "name": "例：チャンネル名", "channelId": "", "genre": "J-POP" }
+    ]
+  }
+}
