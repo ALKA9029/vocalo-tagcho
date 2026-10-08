@@ -37,7 +37,7 @@ async function fetchNiconico(seed) {
       const rows = body.data || [];
       for (const r of rows) out.push({
         src: "niconico", id: "nico:" + r.contentId, url: "https://www.nicovideo.jp/watch/" + r.contentId,
-        title: r.title || "", tags: (r.tags || "").split(" ").filter(Boolean),
+        title: unxml(r.title || ""), tags: (r.tags || "").split(" ").filter(Boolean).map(unxml),
         date: r.startTime, views: r.viewCounter, likes: r.likeCounter, thumb: r.thumbnailUrl,
         uploaderId: r.userId ?? r.channelId ?? null, seed: seed || undefined,
       });
@@ -122,4 +122,10 @@ const meta = {
   linkedCovers: items.filter(i => i.of).length,
 };
 if (fixtureArg < 0) await writeFile(path("data/meta.json"), JSON.stringify(meta, null, 1) + "\n");
+
+// サイト表示用：必要な項目だけにした軽いデータ
+const unent = s => typeof s === "string" ? s.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'") : s;
+const KEEP = ["id", "src", "url", "title", "t", "kind", "g", "p", "v", "by", "of", "a", "date", "views"];
+const site = items.map(i => Object.fromEntries(KEEP.filter(k => i[k] != null && i[k] !== "").map(k => [k, unent(i[k])])));
+if (fixtureArg < 0) await writeFile(path("data/site.json"), JSON.stringify(site) + "\n");
 console.log(`保存しました: ${outFile}（全${items.length}件、うち歌ってみたの原曲ひもづけ ${meta.linkedCovers}件）`);
