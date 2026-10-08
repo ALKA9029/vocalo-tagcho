@@ -1,10 +1,10 @@
 {
- "updatedAt": "2026-10-08T14:32:41.506Z",
- "total": 28,
- "added": 28,
+ "updatedAt": "2026-10-08T14:36:47.471Z",
+ "total": 1028,
+ "added": 1000,
  "byKind": {
-  "歌ってみた": 11,
-  "本家": 17
+  "歌ってみた": 26,
+  "本家": 1002
  },
- "linkedCovers": 0
+ "linkedCovers": 6
 }
