@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ボカロタグ帳</title>
+<meta name="description" content="ボカロ・J-POP・歌ってみたを、聴いた人がつけた印象タグで探せるサイト。">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+</style>
+
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: narrow single column "track list" — header, filter bar, then song rows like a playlist; tags sit under each row like stickers; a row expands to show related tracks */
+:root{
+  --bg:#f3f4f8; --surface:#ffffff; --ink:#1b1d2e; --muted:#6a6e85; --line:#dfe1ea;
+  --accent:#d6336c; --accent-soft:#fbe3ec; --accent-ink:#ffffff; --hot:#7b3fe4; --hot-soft:#ece4fc;
+  --cover:#0f8a7e; --cover-soft:#dcf3f0;
+  --f-display:"Dela Gothic One","Zen Kaku Gothic New",system-ui,sans-serif;
+  --f-body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+  --f-mono:"DM Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#14151f; --surface:#1d1f2c; --ink:#ecedf5; --muted:#9a9db3; --line:#2e3142;
+  --accent:#ff6b9a; --accent-soft:#3a1f2b; --accent-ink:#1a0d13; --hot:#b294ff; --hot-soft:#2b2342;
+  --cover:#4fd1c0; --cover-soft:#173430; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#14151f; --surface:#1d1f2c; --ink:#ecedf5; --muted:#9a9db3; --line:#2e3142;
+  --accent:#ff6b9a; --accent-soft:#3a1f2b; --accent-ink:#1a0d13; --hot:#b294ff; --hot-soft:#2b2342;
+  --cover:#4fd1c0; --cover-soft:#173430; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.6}
+.wrap{max-width:760px;margin:0 auto;padding-inline:16px;padding-block:28px 64px;display:flex;flex-direction:column;gap:20px}
+header{display:flex;flex-direction:column;gap:6px}
+h1{font-family:var(--f-display);font-weight:400;font-size:clamp(28px,7vw,40px);line-height:1.15;margin:0;letter-spacing:.01em;text-wrap:balance}
+h1 span{color:var(--accent)}
+.lead{color:var(--muted);margin:0;max-width:60ch}
+.notice{font-size:13px;color:var(--muted);border:1px dashed var(--line);border-radius:10px;padding:8px 12px}
+.notice b{color:var(--ink)}
+.bar{display:flex;flex-direction:column;gap:10px;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding-block:8px;z-index:2}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+input[type=search],select{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px 12px;min-width:0}
+input[type=search]{flex:1 1 200px}
+.label{font-size:11px;letter-spacing:.12em;color:var(--muted);font-family:var(--f-mono);text-transform:uppercase}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface)}
+.seg button{font:inherit;font-size:13px;background:none;border:0;color:var(--ink);padding:6px 12px;cursor:pointer}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:3px 11px;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.chip:hover{border-color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.chip:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid var(--hot);outline-offset:2px}
+.list{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.song{display:grid;grid-template-columns:28px 128px 1fr;gap:4px 14px;padding-block:16px;border-bottom:1px solid var(--line);cursor:pointer}
+.song:hover{background:linear-gradient(90deg,transparent,var(--surface) 30%,transparent)}
+.song.flash{animation:flash 1.2s ease-out}
+@keyframes flash{from{background:var(--accent-soft)}to{background:transparent}}
+.thumb{display:block;width:128px;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:var(--line);max-width:100%}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+@media (max-width:520px){.song{grid-template-columns:96px 1fr}.song .no{display:none}.thumb{width:96px}}
+.no{font-family:var(--f-mono);font-size:13px;color:var(--muted);padding-top:3px;font-variant-numeric:tabular-nums}
+.body{min-width:0;display:flex;flex-direction:column;gap:8px}
+.head{display:flex;gap:8px;align-items:flex-start;justify-content:space-between}
+.title{font-weight:700;font-size:17px;margin:0;line-height:1.35;min-width:0}
+.title a{color:inherit;text-decoration:none}
+.title a:hover{color:var(--accent);text-decoration:underline}
+.title .ext{font-size:12px;color:var(--muted);margin-left:4px}
+.more{font:inherit;font-size:12px;flex:none;background:none;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:2px 10px;cursor:pointer;white-space:nowrap}
+.more[aria-expanded="true"]{color:var(--ink);border-color:var(--ink)}
+.meta{font-size:13px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.badge{font-family:var(--f-mono);font-size:11px;border:1px solid var(--line);border-radius:4px;padding:0 6px;letter-spacing:.03em}
+.badge.kind{background:var(--surface);color:var(--ink)}
+.badge.kind.cover{background:var(--cover-soft);border-color:transparent;color:var(--cover);font-weight:500}
+.badge.genre{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+button.badge{cursor:pointer;font-family:var(--f-mono)}
+button.badge:hover{border-color:var(--accent);outline:1px solid var(--accent)}
+.who{font:inherit;font-size:13px;background:none;border:0;padding:0;color:var(--muted);cursor:pointer;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.who:hover{color:var(--accent);text-decoration-color:var(--accent)}
+.active{display:inline-flex;align-items:center;gap:6px;font-size:13px;background:var(--accent-soft);color:var(--ink);border-radius:999px;padding:3px 6px 3px 12px}
+.active button{font:inherit;background:var(--surface);border:1px solid var(--line);color:var(--muted);border-radius:999px;width:22px;height:22px;line-height:1;cursor:pointer;padding:0}
+.tags{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.tag{font:inherit;font-size:13px;border-radius:999px;padding:2px 10px;border:1px solid transparent;background:var(--hot-soft);color:var(--ink);cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.tag .n{font-family:var(--f-mono);font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+.tag.fixed{background:var(--hot);color:#fff}
+.tag.fixed .n{color:rgba(255,255,255,.8)}
+.tag.mine{border-color:var(--accent)}
+.add{font:inherit;font-size:13px;background:none;border:1px dashed var(--muted);color:var(--muted);border-radius:999px;padding:2px 10px;cursor:pointer}
+.add:hover{color:var(--accent);border-color:var(--accent)}
+.picker{display:flex;flex-direction:column;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;cursor:default}
+.picker p{margin:0;font-size:12px;color:var(--muted)}
+.related{display:flex;flex-direction:column;gap:12px;border-left:2px solid var(--cover);padding-left:12px;padding-block:4px;cursor:default}
+.related h3{margin:0;font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.04em}
+.rgroup{display:flex;flex-direction:column;gap:4px}
+.ritem{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;font-size:14px}
+.ritem button{font:inherit;background:none;border:0;padding:0;color:var(--ink);cursor:pointer;text-align:left;font-weight:500}
+.ritem button:hover{color:var(--accent);text-decoration:underline}
+.ritem .sub{font-size:12px;color:var(--muted)}
+.none{font-size:13px;color:var(--muted)}
+.empty{color:var(--muted);text-align:center;padding-block:32px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted);align-items:center}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:middle;margin-right:4px}
+@media (prefers-reduced-motion:no-preference){.tag,.chip{transition:background .15s,border-color .15s}}
+@media (prefers-reduced-motion:reduce){.song.flash{animation:none}}
+.badge.src{background:none;color:var(--muted)}
+.unknown{font-size:13px;color:var(--muted);font-style:italic}
+.count{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.loadmore{font:inherit;align-self:center;margin-top:16px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:8px 20px;cursor:pointer}
+.loadmore:hover{border-color:var(--accent)}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="label">β版 · 毎朝自動更新</div>
+    <h1>ボカロ<span>タグ帳</span></h1>
+    <p class="lead">ボカロ・J-POP・歌ってみたを、聴いた人がつけた印象タグで探せるサイトの試作版。曲の行を押すと関連曲が開くよ。</p>
+  </header>
+
+  <div class="notice" id="status">曲データを読み込み中…</div>
+
+  <div class="bar">
+    <div class="row">
+      <input type="search" id="q" placeholder="曲名・作者・歌声・歌い手で検索" aria-label="検索">
+      <select id="sort" aria-label="並び順">
+        <option value="views">再生数が多い順</option>
+        <option value="new">新しい順</option>
+        <option value="votes">タグが多い順</option>
+      </select>
+    </div>
+    <div class="row">
+      <div class="seg" id="genreSeg" role="group" aria-label="ジャンル"></div>
+      <div class="seg" id="kindSeg" role="group" aria-label="動画の種類"></div>
+      <span id="personBox"></span>
+    </div>
+    <div class="row">
+      <span class="label">タグで絞る</span>
+      <div class="chips" id="tagFilter"></div>
+    </div>
+  </div>
+
+  <div class="legend">
+    <span><i style="background:var(--hot)"></i>3票以上で定着したタグ</span>
+    <span><i style="background:var(--hot-soft)"></i>投票中のタグ</span>
+    <span><i style="border:1px solid var(--accent)"></i>自分が押したタグ</span>
+    <span class="count" id="count"></span>
+  </div>
+
+  <div class="list" id="list"></div>
+  <button class="loadmore" id="more" hidden>もっと見る</button>
+</div>
+
+<script>
+const TAGS = ["爽やか","エモい","切ない","かっこいい","かわいい","踊れる","疾走感","中毒性","泣ける","落ち着く","ピアノが好き","ギターが好き"];
+const FIXED_AT = 3;
+const PAGE = 40;
+
+let ITEMS = [], ITEM = {};
+const state = { all:{}, mine:{}, open:null, rel:null, q:"", genre:"", kind:"", sort:"views", person:null, filter:new Set(), shown:PAGE, canWrite:true, uid:null, db:null };
+const $ = s => document.querySelector(s);
+
+function counts(){
+  const c = {};
+  const add = votes => { for (const [sid, tags] of Object.entries(votes||{})){ if (!Array.isArray(tags)) continue; for (const t of tags){ if (!TAGS.includes(t)) continue; c[sid] ??= {}; c[sid][t] = (c[sid][t]||0)+1; } } };
+  for (const [uid, v] of Object.entries(state.all)) if (uid !== state.uid) add(v);
+  add(state.mine);
+  return c;
+}
+
+function el(tag, attrs={}, ...kids){
+  const e = document.createElement(tag);
+  for (const [k,v] of Object.entries(attrs)){
+    if (v == null) continue;
+    if (k === "class") e.className = v; else if (k.startsWith("on")) e.addEventListener(k.slice(2), v); else e.setAttribute(k, v);
+  }
+  for (const k of kids) if (k != null && k !== false) e.append(k);
+  return e;
+}
+
+// 作者キーが「投稿者ID」由来か（名前がない曲は同じ投稿者どうしでまとめる）
+const realKey = a => a && !/:$/.test(a);
+const fmtDate = d => d ? d.slice(0,10).replace(/-/g,"/") : "";
+const fmtViews = n => n == null ? "" : n >= 1e4 ? (n/1e4).toFixed(n >= 1e5 ? 0 : 1) + "万回" : n.toLocaleString("ja-JP") + "回";
+const original = i => i.of ? ITEM[i.of] : null;
+
+function creditText(i){
+  if (i.kind === "歌ってみた") return `${i.by || "歌い手不明"}${i.p ? `（原曲：${i.p}）` : ""}`;
+  return [i.p, i.v && `feat. ${i.v}`].filter(Boolean).join(" ") || "作者不明";
+}
+
+const who = (label, title, person) => el("button",{class:"who", title, onclick:e=>{ e.stopPropagation(); applyFilter(()=>state.person=person); }}, label);
+function creditEls(i){
+  const artist = i.p ? who(i.p, `${i.p}の曲を表示`, {label:`作者：${i.p}`, match:x=>x.a===i.a}) : null;
+  const voice = i.v ? who(i.v, `${i.v}が歌う曲を表示`, {label:`歌声：${i.v}`, match:x=>x.v===i.v}) : null;
+  if (i.kind === "歌ってみた"){
+    const singer = i.by ? who(i.by, `${i.by}の歌ってみたを表示`, {label:`歌い手：${i.by}`, match:x=>x.by===i.by}) : el("span",{class:"unknown"},"歌い手不明");
+    return [el("span",{}, singer, artist ? "（原曲：" : null, artist, artist ? "）" : null)];
+  }
+  if (!artist && !voice) return [el("span",{class:"unknown"},"作者不明")];
+  return [el("span",{}, artist, artist && voice ? " feat. " : voice ? "歌声：" : null, voice)];
+}
+
+function seg(container, key, options){
+  container.replaceChildren(...options.map(([val,label])=>
+    el("button",{"aria-pressed":String(state[key]===val), onclick:()=>applyFilter(()=>state[key]=val)}, label)));
+}
+
+function related(i){
+  const groups = [];
+  const notSelf = arr => arr.filter(x=>x.id!==i.id);
+  const cap = (arr, n=8) => arr.sort((a,b)=>(b.views||0)-(a.views||0)).slice(0,n);
+  if (i.kind === "本家"){
+    groups.push(["この曲の歌ってみた", cap(ITEMS.filter(x=>x.kind==="歌ってみた" && x.of===i.id)), x=>x.by || "歌い手不明"]);
+  } else {
+    const o = original(i);
+    groups.push(["原曲", o ? [o] : [], x=>creditText(x)]);
+    if (o) groups.push(["ほかの人の歌ってみた", cap(notSelf(ITEMS.filter(x=>x.kind==="歌ってみた" && x.of===o.id))), x=>x.by || "歌い手不明"]);
+    if (i.by) groups.push([`${i.by} のほかの歌ってみた`, cap(notSelf(ITEMS.filter(x=>x.kind==="歌ってみた" && x.by===i.by))), x=>x.t]);
+  }
+  const src = i.kind === "本家" ? i : original(i);
+  if (src && realKey(src.a)){
+    const same = cap(ITEMS.filter(x=>x.kind==="本家" && x.a===src.a && x.id!==src.id));
+    groups.push([src.p ? "同じ作者の曲" : "同じ投稿者の曲", same, x=>creditText(x)]);
+  }
+  return el("div",{class:"related", onclick:e=>e.stopPropagation()},
+    ...groups.map(([h, list, sub])=>el("div",{class:"rgroup"},
+      el("h3",{},h),
+      list.length ? list.map(x=>el("div",{class:"ritem"},
+        el("button",{onclick:()=>jump(x.id)}, x.t),
+        el("span",{class:"badge kind"+(x.kind==="歌ってみた"?" cover":"")}, x.kind),
+        el("span",{class:"sub"}, sub(x)))) : el("span",{class:"none"},"まだ見つかってないよ"))));
+}
+
+function jump(id){
+  state.q=""; $("#q").value=""; state.genre=""; state.kind=""; state.person=null; state.filter.clear();
+  state.rel = id; state.open = null;
+  // 一覧のどこにあっても表示されるように、表示件数を広げる
+  const idx = visibleItems().findIndex(x=>x.id===id);
+  if (idx >= state.shown) state.shown = idx + 1;
+  render();
+  const node = document.getElementById("item-"+id);
+  if (node){ node.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto":"smooth", block:"start"}); node.classList.remove("flash"); void node.offsetWidth; node.classList.add("flash"); }
+}
+
+function applyFilter(fn){
+  fn(); state.rel = null; state.open = null; state.shown = PAGE;
+  render();
+  const list = $("#list"), bar = $(".bar");
+  const top = list.getBoundingClientRect().top + window.scrollY - bar.offsetHeight - 8;
+  if (window.scrollY > top) window.scrollTo({top, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+}
+
+let lastCounts = {};
+function visibleItems(){
+  const c = lastCounts;
+  const q = state.q.trim().toLowerCase();
+  const items = ITEMS.filter(i=>{
+    if (state.genre && i.g !== state.genre) return false;
+    if (state.kind && i.kind !== state.kind) return false;
+    if (state.person && !state.person.match(i)) return false;
+    if (q && ![i.t,i.title,i.p,i.v,i.by].some(x=>x && x.toLowerCase().includes(q))) return false;
+    for (const t of state.filter) if (!(c[i.id]?.[t] > 0)) return false;
+    return true;
+  });
+  const total = i => Object.values(c[i.id]||{}).reduce((a,b)=>a+b,0);
+  const byDate = (a,b)=>(b.date||"").localeCompare(a.date||"");
+  items.sort(state.sort==="votes" ? (a,b)=>total(b)-total(a) || (b.views||0)-(a.views||0)
+    : state.sort==="new" ? byDate : (a,b)=>(b.views||0)-(a.views||0));
+  return items;
+}
+
+function render(){
+  const y = window.scrollY;
+  lastCounts = counts();
+  const genres = [...new Set(ITEMS.map(i=>i.g))];
+  seg($("#genreSeg"), "genre", [["","すべて"], ...["ボカロ","J-POP","その他"].filter(g=>genres.includes(g)).map(g=>[g,g])]);
+  seg($("#kindSeg"), "kind", [["","すべて"],["本家","本家"],["歌ってみた","歌ってみた"]]);
+  $("#personBox").replaceChildren(...(state.person ? [el("span",{class:"active"}, state.person.label,
+    el("button",{"aria-label":"絞り込みを解除", onclick:()=>applyFilter(()=>state.person=null)}, "×"))] : []));
+  $("#tagFilter").replaceChildren(...TAGS.map(t=>
+    el("button",{class:"chip","aria-pressed":String(state.filter.has(t)), onclick:()=>applyFilter(()=>{ state.filter.has(t)?state.filter.delete(t):state.filter.add(t); })}, t)));
+
+  const items = visibleItems();
+  $("#count").textContent = ITEMS.length ? `${items.length.toLocaleString("ja-JP")}曲` : "";
+  const list = $("#list");
+  list.style.minHeight = list.offsetHeight + "px";
+  list.replaceChildren();
+  if (ITEMS.length && !items.length) list.append(el("div",{class:"empty"},"条件に合う曲がまだないよ。絞り込みをゆるめるか、タグをつけてみよう！"));
+  items.slice(0, state.shown).forEach((i,n)=>list.append(buildItem(i, n, lastCounts)));
+  list.style.minHeight = "";
+  $("#more").hidden = items.length <= state.shown;
+  $("#more").textContent = `もっと見る（残り${(items.length - state.shown).toLocaleString("ja-JP")}曲）`;
+  window.scrollTo(0, y);
+}
+
+function refresh(...ids){
+  const c = lastCounts = counts();
+  const active = document.activeElement?.dataset?.k;
+  for (const id of new Set(ids.filter(Boolean))){
+    const node = document.getElementById("item-"+id);
+    if (!node) continue;
+    node.replaceWith(buildItem(ITEM[id], Number(node.dataset.n), c));
+  }
+  if (active) document.querySelector(`[data-k="${CSS.escape(active)}"]`)?.focus({preventScroll:true});
+}
+
+function buildItem(i, n, c){
+  const sc = c[i.id] || {};
+  const mine = new Set(state.mine[i.id] || []);
+  const tagEls = Object.entries(sc).filter(([,v])=>v>0).sort((a,b)=>b[1]-a[1]).map(([t,v])=>
+    el("button",{class:"tag"+(v>=FIXED_AT?" fixed":"")+(mine.has(t)?" mine":""), "data-k":`${i.id}|tag|${t}`, title: mine.has(t)?"タップで取り消し":"タップで自分も投票", onclick:e=>{ e.stopPropagation(); toggle(i.id,t); }}, t, el("span",{class:"n"},String(v))));
+  const isOpen = state.open === i.id, isRel = state.rel === i.id;
+  const tags = el("div",{class:"tags"}, ...tagEls,
+    state.canWrite ? el("button",{class:"add","data-k":`${i.id}|add`,"aria-expanded":String(isOpen), onclick:e=>{ e.stopPropagation(); const prev = state.open; state.open = isOpen?null:i.id; refresh(prev, i.id); }}, isOpen?"閉じる":"＋ タグをつける") : null);
+  const picker = isOpen ? el("div",{class:"picker", onclick:e=>e.stopPropagation()},
+    el("p",{},"この動画の印象は？（いくつでも選べる・もう一度押すと取り消し）"),
+    el("div",{class:"chips"}, ...TAGS.map(t=>el("button",{class:"chip","data-k":`${i.id}|pick|${t}`,"aria-pressed":String(mine.has(t)), onclick:()=>toggle(i.id,t)}, t)))) : null;
+  const toggleRel = ()=>{ const prev = state.rel; state.rel = isRel ? null : i.id; refresh(prev, i.id); };
+  return el("article",{class:"song", id:"item-"+i.id, "data-n":String(n), onclick:toggleRel},
+    el("div",{class:"no"}, String(n+1).padStart(2,"0")),
+    el("a",{class:"thumb", href:i.url, target:"_blank", rel:"noopener", tabindex:"-1", "aria-hidden":"true", onclick:e=>e.stopPropagation()},
+      i.thumb ? el("img",{src:i.thumb, alt:"", loading:"lazy", decoding:"async", referrerpolicy:"no-referrer", onerror:e=>{ e.target.remove(); }}) : null),
+    el("div",{class:"body"},
+      el("div",{class:"head"},
+        el("h2",{class:"title"}, el("a",{href:i.url,target:"_blank",rel:"noopener", title:i.title, onclick:e=>e.stopPropagation()}, i.t, el("span",{class:"ext"},"↗"))),
+        el("button",{class:"more","data-k":`${i.id}|rel`,"aria-expanded":String(isRel), onclick:e=>{ e.stopPropagation(); toggleRel(); }}, isRel?"関連を閉じる":"関連 ▾")),
+      el("div",{class:"meta"},
+        el("button",{class:"badge genre", title:`${i.g}だけ表示`, onclick:e=>{ e.stopPropagation(); applyFilter(()=>state.genre=i.g); }}, i.g),
+        el("button",{class:"badge kind"+(i.kind==="歌ってみた"?" cover":""), title:`${i.kind}だけ表示`, onclick:e=>{ e.stopPropagation(); applyFilter(()=>state.kind=i.kind); }}, i.kind),
+        ...creditEls(i),
+        el("span",{class:"badge src"}, i.src==="youtube" ? "YouTube" : "ニコニコ"),
+        el("span",{}, fmtViews(i.views)),
+        el("span",{}, fmtDate(i.date))),
+      tags, picker, isRel ? related(i) : null));
+}
+
+let saveTimer = null, saving = Promise.resolve();
+function toggle(sid, t){
+  if (!state.canWrite) return;
+  const cur = new Set(state.mine[sid] || []);
+  cur.has(t) ? cur.delete(t) : cur.add(t);
+  if (cur.size) state.mine[sid] = [...cur]; else delete state.mine[sid];
+  refresh(sid);
+  try { localStorage.setItem(LS_KEY, JSON.stringify(state.mine)); } catch {}
+  if (!state.db || !state.uid) return;
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(()=>{
+    saving = saving.then(()=>state.db.doc("votes/"+state.uid).set({v: structuredClone(state.mine)}))
+      .then(()=>{ saveTimer = null; })
+      .catch(e=>{
+        saveTimer = null;
+        if (e?.code === "invalid_argument"){ state.canWrite = false; setStatus("このページでは閲覧のみできるよ（タグ投票は権限がある人だけ）。"); render(); }
+        else setStatus("保存できなかったよ。少し待ってからもう一度押してみて。");
+      });
+  }, 500);
+}
+
+let baseNote = "";
+function setStatus(html){ $("#status").innerHTML = html; }
+
+$("#q").addEventListener("input", e=>{ state.q = e.target.value; state.shown = PAGE; render(); });
+$("#sort").addEventListener("change", e=>{ state.sort = e.target.value; state.shown = PAGE; render(); });
+$("#more").addEventListener("click", ()=>{ state.shown += PAGE; render(); });
+render();
+
+(async()=>{
+  try {
+    const [songs, meta] = await Promise.all([fetch("data/site.json").then(r=>r.json()), fetch("data/meta.json").then(r=>r.json()).catch(()=>null)]);
+    ITEMS = songs; ITEM = Object.fromEntries(ITEMS.map(i=>[i.id,i]));
+    baseNote = `${ITEMS.length.toLocaleString("ja-JP")}曲を収録${meta ? `（${fmtDate(meta.updatedAt)}時点）` : ""}。曲名の↗で動画を開く、名前やバッジで絞り込み、行を押すと関連曲。作者名が空の曲は、読み取りを改善中。タグの投票は今はこの端末にだけ保存されるよ（みんなの集計は準備中）。`;
+    setStatus(baseNote);
+    render();
+  } catch {
+    setStatus("曲データを読み込めなかったよ。ページを開き直してみて。");
+  }
+})();
+
+// みんなの集計ができるまでは、自分の票をこの端末（ブラウザ）にだけ保存する
+const LS_KEY = "vocalo-tagcho:votes";
+try { state.mine = JSON.parse(localStorage.getItem(LS_KEY) || "{}") || {}; } catch { state.mine = {}; }
+</script>
+
+</body>
+</html>
