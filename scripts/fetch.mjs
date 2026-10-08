@@ -2,7 +2,7 @@
 //   node scripts/fetch.mjs                      … ニコニコとYouTubeから取得
 //   node scripts/fetch.mjs --fixture FILE.json  … ネットにつながず、テスト用データで動かす
 import { readFile, writeFile, mkdir } from "node:fs/promises";
-import { classify, linkCovers } from "./classify.mjs";
+import { classify, linkCovers, toSite } from "./classify.mjs";
 
 const ROOT = new URL("..", import.meta.url);
 const path = p => new URL(p, ROOT);
@@ -124,8 +124,5 @@ const meta = {
 if (fixtureArg < 0) await writeFile(path("data/meta.json"), JSON.stringify(meta, null, 1) + "\n");
 
 // サイト表示用：必要な項目だけにした軽いデータ
-const unent = s => typeof s === "string" ? s.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'") : s;
-const KEEP = ["id", "src", "url", "title", "t", "kind", "g", "p", "v", "by", "of", "a", "date", "views"];
-const site = items.map(i => Object.fromEntries(KEEP.filter(k => i[k] != null && i[k] !== "").map(k => [k, unent(i[k])])));
-if (fixtureArg < 0) await writeFile(path("data/site.json"), JSON.stringify(site) + "\n");
+if (fixtureArg < 0) await writeFile(path("data/site.json"), JSON.stringify(toSite(items)) + "\n");
 console.log(`保存しました: ${outFile}（全${items.length}件、うち歌ってみたの原曲ひもづけ ${meta.linkedCovers}件）`);

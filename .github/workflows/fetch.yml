@@ -29,6 +29,8 @@ jobs:
           node-version: 22
       - name: 曲データを取得
         run: node scripts/fetch.mjs ${{ inputs.seed && '--seed' || '' }}
+      - name: 保存済みの曲を今のルールで読み直す
+        run: node scripts/reclassify.mjs
       - name: 変わっていたら保存
         run: |
           git config user.name "github-actions[bot]"
