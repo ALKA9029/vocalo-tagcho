@@ -10,7 +10,7 @@ export const VOICES = [
 
 const VOCALO_TAGS = ["VOCALOID", "ボカロ", "ボーカロイド", "CeVIO", "CeVIOAI", "SynthesizerV", "UTAU", "VOICEVOX", "NEUTRINO", "VOCALOIDオリジナル曲"];
 const JPOP_TAGS = ["J-POP", "JPOP", "J-Pop"];
-const COVER_RE = /歌ってみた|歌わせていただきました|cover(ed)?\b|カバー/i;
+const COVER_RE = /歌ってみた|歌ってもらった|歌わせてみた|歌わせていただきました|cover(ed)?\b|カバー/i;
 
 export function normalize(s = "") {
   return s.normalize("NFKC").toLowerCase()
@@ -43,26 +43,32 @@ export function parseTitle(raw) {
   let s = raw.normalize("NFKC").trim();
   const quoted = s.match(/[「『]([^」』]+)[」』]/);
   const bracketed = s.match(/【([^】]+)】|\[([^\]]+)\]/g) || [];
-  let rest = s.replace(/【[^】]*】|\[[^\]]*\]|\([^)]*(歌ってみた|cover|ver)[^)]*\)/gi, " ").trim();
+  // 【】[]（）() の中身は曲名ではないので消す。閉じ忘れの「(」はそこから後ろを消す
+  let rest = s.replace(/【[^】]*】|\[[^\]]*\]|\([^)]*\)|（[^）]*）/g, " ").replace(/[（(][^\/／]*/g, " ").trim();
 
   let credit = "";
   const slash = rest.split(/\s*[\/／]\s*/);
   if (slash.length > 1) { rest = slash[0]; credit = slash.slice(1).join(" / "); }
 
   let song = quoted ? quoted[1] : rest;
-  song = song.replace(/歌ってみた|歌わせていただきました|covered by.*$|cover(ed)?|カバー|オリジナル曲?|MV|Music Video/gi, " ")
+  song = song.replace(/\s*(?:feat\.?|ft\.)\s*.*$/i, "")
+    .replace(/を?歌ってみた|を?歌ってもらった|を?歌わせてみた|歌わせていただきました|covered by.*$|cover(ed)?|カバー|オリジナル曲?|(アニメ)?MV|Music Video/gi, " ")
     .replace(/\s+/g, " ").trim();
 
-  let creator = "", voice = null;
+  let creator = "", voice = null, originalCreator = "";
   if (credit) {
-    const feat = credit.split(/\s+(?:feat\.?|ft\.?|with)\s+/i);
-    creator = feat[0].replace(/歌ってみた|cover(ed)?\s*(by)?/gi, "").trim();
-    if (feat[1]) voice = feat[1].trim();
+    const parts = credit.split(/\s*[\/／]\s*/);
+    // 歌ってみたは「曲名 / 原曲の作者 / 歌い手」の形が多いので、最後を歌い手とみなす
+    const main = parts[parts.length - 1];
+    const feat = main.split(/\s*(?:feat\.|ft\.|\bwith\s)\s*/i);
+    creator = feat[0].replace(/を?歌ってみた|cover(ed)?\s*(by)?|(アニメ)?MV|Music Video/gi, "").trim();
+    if (feat[1]) voice = feat[1].replace(/(アニメ)?MV|Music Video/gi, "").trim();
+    if (parts.length > 1) originalCreator = parts[0].split(/\s*(?:feat\.|ft\.)\s*/i)[0].trim();
   } else {
     const by = s.match(/covered\s+by\s+(.+)$/i) || s.match(/歌ってみた\s*(?:by|ver\.?)?\s*[【\[]?([^【\[\]】]+)/);
     if (by) creator = by[1].trim();
   }
-  return { song: song || raw.trim(), creator, voice, brackets: bracketed };
+  return { song: song || raw.trim(), creator, voice, originalCreator, brackets: bracketed };
 }
 
 // 動画1件 → サイトで使う形
@@ -87,11 +93,13 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     tags: tags.slice(0, 30),
   };
   if (kind === "本家") {
-    item.p = parsed.creator || video.uploader || "";
+    const isVoiceName = VOICES.some(v => normalize(v) === normalize(parsed.creator));
+    item.p = (!isVoiceName && parsed.creator) || video.uploader || "";
     if (voice) item.v = voice;
     item.a = normalize(item.p) || `${video.src}:${video.uploaderId || ""}`;
   } else {
     item.by = parsed.creator || video.uploader || "";
+    if (parsed.originalCreator) item.pHint = parsed.originalCreator;
   }
   return item;
 }

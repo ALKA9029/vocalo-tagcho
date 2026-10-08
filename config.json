@@ -8,14 +8,14 @@
         "label": "ボカロ新曲",
         "q": "VOCALOID",
         "targets": "tagsExact",
-        "minViews": 300,
+        "minViews": 100,
         "maxPages": 3
       },
       {
         "label": "歌ってみた新着",
         "q": "歌ってみた",
         "targets": "tagsExact",
-        "minViews": 1000,
+        "minViews": 300,
         "maxPages": 3
       }
     ]
