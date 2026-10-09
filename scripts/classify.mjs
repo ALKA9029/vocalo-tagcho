@@ -364,9 +364,12 @@ export function inferNamesFromTags(items) {
     for (const i of vids) for (const t of new Set(i.tags || [])) cnt.set(t, (cnt.get(t) || 0) + 1);
     const titles = new Set(vids.map(v => normalize(v.t)));
     const allTitles = normalize(vids.map(v => v.title).join(" "));
-    const ok = t => !isVoice(t) && !GENERIC_TAG.test(t) && !titles.has(normalize(t)) && (tagUsers[kind].get(normalize(t))?.size || 9) <= 2 && t.length <= 20;
+    const inTitle = t => normalize(t).length >= 2 && allTitles.includes(normalize(t));
+    // ほかの投稿者があまり使わないタグ。ただしタイトルにも名前が出てくるなら、少し多くても作者名とみなす
+    const ok = t => !isVoice(t) && !GENERIC_TAG.test(t) && !titles.has(normalize(t)) && t.length <= 20
+      && (tagUsers[kind].get(normalize(t))?.size || 9) <= (inTitle(t) ? 8 : 2);
     // タイトルにも名前が出てくるタグ（「feat. じん」など）を優先。イラストレーターのタグより作者名を選びやすくする
-    const score = (t, c) => c + (allTitles.includes(normalize(t)) ? 0.5 : 0) + (/[PＰ]$/.test(t) ? 0.3 : 0);
+    const score = (t, c) => c + (inTitle(t) ? 1.5 : 0) + (/[PＰ]$/.test(t) ? 0.3 : 0);
     let name = "";
     if (vids.length >= 2) {
       const need = Math.max(2, Math.ceil(vids.length * 0.6));
