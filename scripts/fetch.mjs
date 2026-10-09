@@ -91,7 +91,7 @@ async function fetchYouTubeTrending() {
   let pageToken = "";
   for (let page = 0; page < (t.maxPages || 1); page++) {
     const params = new URLSearchParams({
-      part: "snippet,statistics", chart: "mostPopular", regionCode: t.regionCode || "JP",
+      part: "snippet,statistics,contentDetails", chart: "mostPopular", regionCode: t.regionCode || "JP",
       videoCategoryId: "10", maxResults: "50", key, ...(pageToken ? { pageToken } : {}),
     });
     const res = await fetch("https://www.googleapis.com/youtube/v3/videos?" + params);
@@ -117,8 +117,13 @@ function isJapanese(v) {
   return KANA.test([sn.title, sn.channelTitle, (sn.description || "").slice(0, 500), ...(sn.tags || [])].join(" "));
 }
 
-// 曲ではなさそうな動画（絵文字だらけの告知動画など）
-const isNoise = v => ((v.snippet?.title || "").match(/\p{Extended_Pictographic}/gu) || []).length >= 3;
+// 曲ではなさそうな動画：絵文字だらけの告知動画、ショート動画（1分以下）、長い配信や企画動画（12分超）
+const secs = d => { const m = (d || "").match(/PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/); return m ? (+m[1] || 0) * 3600 + (+m[2] || 0) * 60 + (+m[3] || 0) : null; };
+const isNoise = v => {
+  if (((v.snippet?.title || "").match(/\p{Extended_Pictographic}/gu) || []).length >= 3) return true;
+  const t = secs(v.contentDetails?.duration);
+  return t != null && (t <= 61 || t > 12 * 60);
+};
 
 // videos.list の1件をサイト用の形に（共通）
 function ytItem(v, genre) {
@@ -137,7 +142,7 @@ function ytItem(v, genre) {
 async function ytVideos(ids, key) {
   const out = [];
   for (let i = 0; i < ids.length; i += 50) {
-    const params = new URLSearchParams({ part: "snippet,statistics", id: ids.slice(i, i + 50).join(","), key });
+    const params = new URLSearchParams({ part: "snippet,statistics,contentDetails", id: ids.slice(i, i + 50).join(","), key });
     const res = await fetch("https://www.googleapis.com/youtube/v3/videos?" + params);
     if (!res.ok) { console.warn(`YouTube詳細: HTTP ${res.status} ${(await res.text()).slice(0, 200)}`); break; }
     out.push(...((await res.json()).items || []));

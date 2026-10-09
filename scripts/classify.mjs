@@ -181,7 +181,10 @@ export function parseYouTube(raw, channel = "") {
     const parts = s.split(/\s*[|｜\/／]\s*|\s+[-–—]\s+/).map(x => x.trim()).filter(Boolean);
     const isCh = x => ch && (normalize(x) === normalize(ch) || normalize(x).includes(normalize(ch)) || normalize(ch).includes(normalize(x)));
     const chIdx = parts.findIndex(isCh);
-    if (parts.length >= 2 && chIdx >= 0) {
+    if (/^THE FIRST TAKE$/i.test(ch) && parts.length >= 2) {
+      // THE FIRST TAKE は「アーティスト - 曲名 / THE FIRST TAKE」
+      artist = parts[0]; song = parts[1];
+    } else if (parts.length >= 2 && chIdx >= 0) {
       artist = parts[chIdx]; song = parts.find((_, i) => i !== chIdx);
       // 「曲名 - 原曲の作者 / 歌い手(チャンネル)」の形なら、残りを原曲の作者の候補に
       otherName = parts.find((x, i) => i !== chIdx && x !== song) || "";
