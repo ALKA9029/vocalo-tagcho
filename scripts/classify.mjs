@@ -2,11 +2,15 @@
 // ネットにはつながない純粋な関数だけを置いているので、テストしやすい。
 
 export const VOICES = [
-  "初音ミク", "鏡音リン", "鏡音レン", "巡音ルカ", "KAITO", "MEIKO", "GUMI", "IA", "flower", "v flower",
+  "初音ミク", "鏡音リン", "鏡音レン", "巡音ルカ", "KAITO", "MEIKO", "GUMI", "IA", "flower",
   "可不", "星界", "裏命", "狐子", "羽累", "重音テト", "歌愛ユキ", "結月ゆかり", "紲星あかり", "音街ウナ",
   "初音ミクNT", "知声", "小春六花", "夏色花梨", "花隈千冬", "東北きりたん", "東北ずん子", "ずんだもん",
   "雨衣", "Fukase", "神威がくぽ", "心華", "ONE", "結月ゆかり麗", "VY1", "VY2", "MAYU", "kokone",
 ];
+
+// 表記ゆれ・英語表記を元の歌声名に（「v flower」「Kagamine Rin」など）
+const VOICE_ALIASES = { "vflower": "flower", "v4flower": "flower", "hatsunemiku": "初音ミク", "miku": "初音ミク",
+  "kagaminerin": "鏡音リン", "kagaminelen": "鏡音レン", "megurineluka": "巡音ルカ", "kasaneteto": "重音テト", "kafu": "可不" };
 
 const VOCALO_TAGS = ["VOCALOID", "ボカロ", "ボーカロイド", "CeVIO", "CeVIOAI", "SynthesizerV", "UTAU", "VOICEVOX", "NEUTRINO", "VOCALOIDオリジナル曲"];
 const JPOP_TAGS = ["J-POP", "JPOP", "J-Pop"];
@@ -28,9 +32,10 @@ export function detectVoice(title, tags) {
   // 長い名前を先に見る（「初音ミクNT」を「初音ミク」と誤判定しないため）
   const byLen = [...VOICES].sort((a, b) => b.length - a.length);
   for (const v of byLen) if (tags.some(t => normalize(t) === normalize(v))) return v;
+  for (const t of tags) if (VOICE_ALIASES[normalize(t)]) return VOICE_ALIASES[normalize(t)];
   // 英字の名前（ONE、IA など）は単語として出てきたときだけ（「SixTONES」「ONE N' ONLY」を誤判定しないため）
   for (const v of byLen) {
-    if (/^[\x00-\x7F ]+$/.test(v)) { if (v.length >= 4 && new RegExp(`(^|[^A-Za-z])${v}(?![A-Za-z'])`).test(title) && v !== "ONE") return v; }
+    if (/^[\x00-\x7F ]+$/.test(v)) { if (v.length >= 4 && new RegExp(`(^|[^A-Za-z])${v}(?![A-Za-z'])`, "i").test(title) && v !== "ONE") return v; }
     else if (v.length >= 3 && title.includes(v)) return v;
   }
   return null;
@@ -50,13 +55,13 @@ export function detectGenre(title, tags, fallback = "その他", desc = "") {
 // 歌声の名前か（「重音テトSV」「初音ミクNT」のような後ろの表記ゆれも許す）
 export function isVoice(name = "") {
   const n = normalize(name).replace(/(sv|ai|nt|v4x|v3|v4|v5|v6|english|β)$/i, "");
-  return !!n && VOICES.some(v => normalize(v) === n);
+  return !!n && (VOICES.some(v => normalize(v) === n) || !!VOICE_ALIASES[n]);
 }
 
 // 表記ゆれ（鏡音リンV4X、重音テトSV など）を、元の歌声名にそろえる
 export function canonicalVoice(name = "") {
   const n = normalize(name).replace(/(sv|ai|nt|v4x|v3|v4|v5|v6|english|β)$/i, "");
-  return VOICES.find(v => normalize(v) === n) || name;
+  return VOICES.find(v => normalize(v) === n) || VOICE_ALIASES[n] || name;
 }
 
 // 「初音ミク・みきとP」のような並びを、歌声と作者に分ける
@@ -167,32 +172,63 @@ export function parseTitle(raw) {
 const YT_NOISE = /official\s*(music\s*)?(video|mv)|music\s*video|music\s*clip|lyric\s*video|performance\s*video|dance\s*practice(\s*movie)?|special\s*dance\s*performance|visualizer|\bM\/V\b|\bMV\b|MUSiC CLiP/gi;
 export function parseYouTube(raw, channel = "") {
   const ch = cleanChannel(channel).replace(/\s*from\s+.*$/i, "").replace(/\s*[（(].*$/, "").trim();
+  const hasJa = x => /[぀-ヿ㐀-鿿]/.test(x);
   let s = raw.normalize("NFKC")
     .replace(/[“”]/g, '"').replace(/[‘’]/g, "'")
-    .replace(/【[^】]*】|\[[^\]]*\]|\([^)]*\)|（[^）]*）/g, " ")
+    .replace(/【[^】]*】|\[[^\]]*\]|\([^)]*\)|（[^）]*）|<[^>]*>/g, " ")
     .replace(/\s-[^-]{2,}-\s*$/, " ")          // 「-Music Video-」「-from TBS系…-」
-    .replace(YT_NOISE, " ").replace(/#\S+/g, " ").replace(/\s+/g, " ").trim();
-  let song = "", artist = "", otherName = "";
+    .replace(YT_NOISE, " ").replace(/#\S+/g, " ").replace(/[「『]\s*[」』]/g, " ").replace(/\s+/g, " ").trim();
+  // 「日本語の部分 / English translation」のように、後ろにある英語だけの部分（翻訳）を外す
+  const sections = s.split(/\s*[\/／|｜]\s*|\s+,\s+/).filter(Boolean);
+  const kept = sections.filter((x, i) => i === 0 || hasJa(x) || !sections.slice(0, i).some(hasJa));
+  if (kept.length < sections.length) s = kept.join(" / ");
+
+  const chNames = ch.split(/\s*[,、\/]\s*/).filter(x => x.length >= 2);
+  const stripFeat = x => x.replace(/\s*(?:feat\.?|ft\.).*$/i, "").trim();
+  const isCh = x => {
+    const n = normalize(stripFeat(x));
+    return chNames.some(c => { const m = normalize(c); return n === m || (m.length >= 3 && (n.includes(m) || (n.length >= 3 && m.includes(n)))); });
+  };
+  let song = "", artist = "", otherName = "", voiceFromParts = null;
   const q = s.match(/[「『]([^」』]+)[」』]|"([^"]+)"|(?:^|[\s|｜])'([^']+)'(?:\s|$)/);
   if (q) {
     song = (q[1] || q[2] || q[3]).trim();
     artist = s.slice(0, q.index).replace(/[|｜\/／\-–—:：\s]+$/, "").trim();
+    if (!artist && isCh(s.slice(q.index + q[0].length))) artist = ch;
   } else {
-    const parts = s.split(/\s*[|｜\/／]\s*|\s+[-–—]\s+/).map(x => x.trim()).filter(Boolean);
-    const isCh = x => ch && (normalize(x) === normalize(ch) || normalize(x).includes(normalize(ch)) || normalize(ch).includes(normalize(x)));
+    const firstHasDash = /\s[-–—]\s/.test(s.split(/\s*[\/／|｜]\s*/)[0]);
+    let parts = s.split(/\s*[|｜\/／]\s*|\s+[-–—]\s+/).map(x => x.trim()).filter(Boolean);
+    // 歌声の名前だけの部分（「初音ミク・重音テトSV」など）は、歌声として取り出して外す
+    parts = parts.filter(x => {
+      const n = splitNames(stripFeat(x));
+      if (n.voices.length && !n.others.length) { voiceFromParts ??= canonicalVoice(n.voices[0]); return false; }
+      return true;
+    });
     const chIdx = parts.findIndex(isCh);
+    const pickSong = cands => cands.find(hasJa) || cands[0] || "";
     if (/^THE FIRST TAKE$/i.test(ch) && parts.length >= 2) {
       // THE FIRST TAKE は「アーティスト - 曲名 / THE FIRST TAKE」
       artist = parts[0]; song = parts[1];
     } else if (parts.length >= 2 && chIdx >= 0) {
-      artist = parts[chIdx]; song = parts.find((_, i) => i !== chIdx);
+      const p = stripFeat(parts[chIdx]);
+      artist = chNames.some(c => normalize(c) === normalize(p)) ? p : (normalize(p).length <= normalize(ch).length ? p : ch);
+      const rest = parts.filter((_, i) => i !== chIdx);
+      song = pickSong(rest);
       // 「曲名 - 原曲の作者 / 歌い手(チャンネル)」の形なら、残りを原曲の作者の候補に
-      otherName = parts.find((x, i) => i !== chIdx && x !== song) || "";
+      otherName = rest.find(x => x !== song) || "";
+    } else if (parts.length >= 2 && firstHasDash) {
+      // 「アーティスト - 曲名」。英語訳が並んでいるときは日本語の曲名を選ぶ
+      artist = parts[0]; song = pickSong(parts.slice(1));
+    } else if (parts.length >= 2) {
+      // 「曲名 / アーティスト」。英語だけの部分はチャンネル名と一致するときだけアーティストとみなす
+      song = parts[0];
+      artist = hasJa(parts[1]) || isCh(parts[1]) ? parts[1] : ch;
+    } else {
+      song = parts[0] || s;
+      // 「千本桜 WhiteFlame feat 初音ミク」のように、曲名のあとにチャンネル名が続く形
+      const c = chNames.find(c => c.length >= 3 && stripFeat(song).includes(c) && stripFeat(song) !== c);
+      if (c) { song = song.replace(c, " ").replace(/\s+/g, " ").trim(); artist = c; }
     }
-    else if (parts.length >= 2) {
-      // 区切りがダッシュなら「アーティスト - 曲名」、スラッシュなら「曲名 / アーティスト」が多い
-      if (/\s[-–—]\s/.test(s)) { artist = parts[0]; song = parts[1]; } else { song = parts[0]; artist = parts[1]; }
-    } else song = parts[0] || s;
   }
   const coverSong = (q ? song : s.split(/\s*[\/／|｜]\s*|\s+[-–—]\s+/)[0]).replace(/\s*cover(?:e?d)?\s*(by.*|[:：].*)?$/i, "").trim();
   const cv = readCoverCredit(raw, coverSong);
@@ -201,11 +237,12 @@ export function parseYouTube(raw, channel = "") {
     return { song: coverSong || raw.trim(), creator: cv.original || "", voice: vs.length ? canonicalVoice(vs[0]) : null,
       originalCreator: "", channel: ch, coverSinger: cv.singer, brackets: [] };
   }
-  const featVoice = featOf(song) || featOf(artist);
+  const featVoice = featOf(song) || featOf(artist) || featOf(s.split(/\s*[\/／|｜]\s*/).find(x => featOf(x)) || "");
   song = song.replace(/\s*(?:feat\.?|ft\.)\s*.*$/i, "").replace(/セルフカバー|cover/gi, "")
     .replace(/^[\s\-–—:：|｜]+|[\s\-–—:：|｜]+$/g, "").trim();
   artist = artist.replace(/\s*(?:feat\.?|ft\.)\s*.*$/i, "").replace(/\s*[（(].*$/, "").trim() || ch;
-  return { song: song || raw.trim(), creator: artist, voice: featVoice ? (splitNames(featVoice).voices[0] || null) : null, originalCreator: "", channel: ch, otherName, brackets: [] };
+  const fv = featVoice ? (splitNames(featVoice.split(/\s*[\/／]\s*/)[0]).voices[0] || (isVoice(featVoice) ? featVoice : null)) : null;
+  return { song: song || raw.trim(), creator: artist, voice: fv ? canonicalVoice(fv) : voiceFromParts, originalCreator: "", channel: ch, otherName, brackets: [] };
 }
 
 // 動画1件 → サイトで使う形
@@ -213,7 +250,8 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
   const tags = video.tags || [];
   const kind = detectKind(video.title, tags);
   const parsed = video.src === "youtube" ? parseYouTube(video.title, video.uploader) : parseTitle(video.title);
-  const voice = parsed.voice || detectVoice(video.title, tags);
+  const rawVoice = parsed.voice || detectVoice(video.title, tags);
+  const voice = rawVoice ? canonicalVoice(rawVoice) : rawVoice;
   const g = detectGenre(video.title, tags, fallbackGenre, video.desc || "");
   const item = {
     id: video.id,
@@ -259,7 +297,7 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
 // YouTubeのチャンネル名からアーティスト名を取り出す（「YOASOBI - Topic」「〇〇 Official YouTube Channel」など）
 export function cleanChannel(name) {
   name = name || "";
-  return name.replace(/\s*[|｜].*$/, "").replace(/\s+-[^-]+-\s*$/, "").replace(/\s*-\s*[A-Za-z][A-Za-z .]*-?\s*$/, "")
+  return name.replace(/\s*[|｜].*$/, "").replace(/\s+-[^-]+-\s*$/, "").replace(/\s+-\s+[A-Za-z][A-Za-z .]*-?\s*$/, "")
     .replace(/\s*(ch\.?|channel)\s*$/i, "").replace(/\s*-\s*Topic$/i, "").replace(/\s*(official\s*)?(youtube\s*)?(channel|チャンネル)$/i, "")
     .replace(/\s*(official|公式)$/i, "").replace(/\s*\/\s*.*$/, "").trim();
 }
@@ -275,6 +313,16 @@ export function fillCreators(items) {
   for (const i of items) if (i.kind === "本家" && i.a && !i.p && names.has(i.a)) {
     i.p = [...names.get(i.a)].sort((x, y) => y[1] - x[1])[0][0];
     i.pFilled = true;
+  }
+  // それでも作者がいない曲は、同じ曲名・同じジャンルの本家（ニコニコとYouTubeなど）から作者名をもらう
+  const byTitle = new Map();
+  for (const i of items) if (i.kind === "本家" && i.p && !i.pFilled) {
+    const k = i.g + "|" + normalize(i.t);
+    if (normalize(i.t).length >= 2 && !byTitle.has(k)) byTitle.set(k, i.p);
+  }
+  for (const i of items) if (i.kind === "本家" && !i.p) {
+    const p = byTitle.get(i.g + "|" + normalize(i.t));
+    if (p) { i.p = p; i.pFilled = true; }
   }
   return items;
 }

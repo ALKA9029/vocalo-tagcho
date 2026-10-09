@@ -167,7 +167,7 @@
   ],
   "uploaderId": "UCwO9rz-7dKqEDI0yIgTRUqQ",
   "uploader": "大阪桐蔭高等学校吹奏楽部OB会",
-  "p": "EBiDAN",
+  "p": "大阪桐蔭高等学校吹奏楽部OB会",
   "a": "youtube:UCwO9rz-7dKqEDI0yIgTRUqQ",
   "firstSeen": "2026-10-09T12:09:04.791Z"
  },
@@ -237,10 +237,8 @@
   "uploaderId": "UCYcb6BrBDHsFW0jtDu26yYg",
   "uploader": "노래짱 비쥬 / BIJOU",
   "by": "노래짱 비쥬",
-  "pHint": "비쥬 COVER",
-  "p": "비쥬 COVER",
-  "a": "비쥬cover",
-  "firstSeen": "2026-10-09T12:09:04.774Z"
+  "firstSeen": "2026-10-09T12:09:04.774Z",
+  "p": "비쥬 COVER"
  },
  {
   "id": "yt:cnizdn1Jn8s",
@@ -886,10 +884,8 @@
   "uploaderId": "UC0xry7czPasj1wPxR8L0MZg",
   "uploader": "早乙女 ベリー / Saotome Berry【にじさんじ】",
   "by": "早乙女 ベリー",
-  "pHint": "早乙女ベリー × 酒寄颯馬 Cover",
-  "p": "早乙女ベリー × 酒寄颯馬 Cover",
-  "a": "早乙女ベリー×酒寄颯馬cover",
-  "firstSeen": "2026-10-09T11:31:52.138Z"
+  "firstSeen": "2026-10-09T11:31:52.138Z",
+  "p": "早乙女ベリー × 酒寄颯馬 Cover"
  },
  {
   "id": "yt:eRG2hFO1z8Q",
@@ -1466,7 +1462,7 @@
   ],
   "uploaderId": "UClIsaGq7vBEW00ASqwQyzPw",
   "uploader": "BNK48",
-  "p": "BNK48 & CGM48",
+  "p": "BNK48",
   "a": "youtube:UClIsaGq7vBEW00ASqwQyzPw",
   "firstSeen": "2026-10-09T12:09:04.783Z"
  },
@@ -2846,10 +2842,11 @@
   ],
   "uploaderId": 134039896,
   "uploader": null,
-  "p": "",
+  "p": "ピノキオピー",
   "v": "初音ミク",
   "a": "niconico:134039896",
-  "firstSeen": "2026-10-08T14:32:41.477Z"
+  "firstSeen": "2026-10-08T14:32:41.477Z",
+  "pFilled": true
  },
  {
   "id": "yt:z1QwGVf8MHY",
@@ -3861,7 +3858,7 @@
   "uploaderId": 87742751,
   "uploader": null,
   "p": "",
-  "v": "重音テトSV",
+  "v": "重音テト",
   "a": "niconico:87742751",
   "firstSeen": "2026-10-09T11:31:51.978Z"
  },
@@ -4029,7 +4026,7 @@
   ],
   "uploaderId": "UCsSUATrnXqj4lI71ABdJ7_w",
   "uploader": "ブラフラ【公式】 - BLACK FLAP -",
-  "p": "BLACK FLAP",
+  "p": "ブラフラ【公式】",
   "a": "youtube:UCsSUATrnXqj4lI71ABdJ7_w",
   "firstSeen": "2026-10-09T11:31:52.085Z"
  },
@@ -4182,7 +4179,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=e0VeegjN5qQ",
   "title": "Super Mario Bros. 3 - ENDING - エンディング - FL Studio Deconstruction",
-  "t": "ENDING",
+  "t": "エンディング",
   "kind": "本家",
   "g": "アニソン",
   "date": "2026-10-04T11:00:14Z",
@@ -4562,7 +4559,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=P5ZoqrM-_2Q",
   "title": "クライマックス - SUPER BEAVER  / cover. 悠佑【歌ってみた】",
-  "t": "SUPER BEAVER",
+  "t": ". 悠佑",
   "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2026-10-04T09:00:08Z",
@@ -4772,10 +4769,11 @@
   ],
   "uploaderId": 133167443,
   "uploader": null,
-  "p": "",
+  "p": "キタニタツヤ",
   "v": "初音ミク",
   "a": "niconico:133167443",
-  "firstSeen": "2026-10-09T11:31:51.986Z"
+  "firstSeen": "2026-10-09T11:31:51.986Z",
+  "pFilled": true
  },
  {
   "id": "nico:sm46878278",
@@ -5230,7 +5228,7 @@
   ],
   "uploaderId": "UClIsaGq7vBEW00ASqwQyzPw",
   "uploader": "BNK48",
-  "p": "BNK48 & CGM48",
+  "p": "BNK48",
   "a": "youtube:UClIsaGq7vBEW00ASqwQyzPw",
   "firstSeen": "2026-10-09T11:31:52.072Z"
  },
@@ -5276,7 +5274,7 @@
   "tags": [],
   "uploaderId": "UC9AYHlE2OLcMlZJo3MBlfkQ",
   "uploader": "cosMo@暴走P",
-  "p": "夏代孝明 remixed by cosMo@暴走P",
+  "p": "cosMo@暴走P",
   "v": "初音ミク",
   "a": "youtube:UC9AYHlE2OLcMlZJo3MBlfkQ",
   "firstSeen": "2026-10-09T11:31:52.153Z"
@@ -5390,7 +5388,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=kM8HEzBGU-0",
   "title": "エメラルド / こんにちは谷田さん feat. 初音ミク - Emerald / Hello Tanitasan feat. Hatsune Miku",
-  "t": "こんにちは谷田さん",
+  "t": "エメラルド",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2026-10-03T12:00:06Z",
@@ -5415,7 +5413,7 @@
   ],
   "uploaderId": "UCgP3GbgbuVzAhlctGU5yuPA",
   "uploader": "キタニタツヤ / Tatsuya Kitani",
-  "p": "エメラルド",
+  "p": "こんにちは谷田さん",
   "v": "初音ミク",
   "a": "youtube:UCgP3GbgbuVzAhlctGU5yuPA",
   "firstSeen": "2026-10-09T11:31:52.153Z"
@@ -5536,7 +5534,7 @@
   "tags": [],
   "uploaderId": "UCW5xxEBTK0lebkTbQMNZJBw",
   "uploader": "Fake Beat Japan",
-  "p": "YAJU-MC",
+  "p": "Fake Beat Japan",
   "a": "youtube:UCW5xxEBTK0lebkTbQMNZJBw",
   "firstSeen": "2026-10-09T11:31:52.153Z"
  },
@@ -5587,10 +5585,8 @@
   "uploaderId": "UC4rJq3VrnVGEqcD_SalgzNw",
   "uploader": "VANTA Official",
   "by": "VANTA",
-  "pHint": "VANTA cover",
-  "p": "VANTA cover",
-  "a": "vantacover",
-  "firstSeen": "2026-10-09T11:31:52.149Z"
+  "firstSeen": "2026-10-09T11:31:52.149Z",
+  "p": "VANTA cover"
  },
  {
   "id": "yt:RpOzDQ-qiXc",
@@ -5667,7 +5663,7 @@
   "tags": [],
   "uploaderId": "UCz9YqqzlnP5Q6G9c3U4KN5Q",
   "uploader": "ASTRAVEIL",
-  "p": "ASTRAVEIL",
+  "p": "アニメED風",
   "a": "youtube:UCz9YqqzlnP5Q6G9c3U4KN5Q",
   "firstSeen": "2026-10-09T11:31:52.092Z"
  },
@@ -5790,7 +5786,7 @@
   "tags": [],
   "uploaderId": "UCqtGK-xDHyC_3WWBB0cVC5A",
   "uploader": "デカ文字衛門",
-  "p": "RADWIMPS",
+  "p": "デカ文字衛門",
   "a": "youtube:UCqtGK-xDHyC_3WWBB0cVC5A",
   "firstSeen": "2026-10-09T11:31:52.129Z"
  },
@@ -6230,7 +6226,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=wJktK_0m3XE",
   "title": "【オリジナル曲AI 生成】OH GIRLFRIEND / KOEDO GIRLS – 60s MERSEYBEAT STYLE",
-  "t": "KOEDO GIRLS",
+  "t": "OH GIRLFRIEND",
   "kind": "本家",
   "g": "J-POP",
   "date": "2026-10-02T14:41:52Z",
@@ -6240,7 +6236,7 @@
   "tags": [],
   "uploaderId": "UCMQH_OyOJDjD5GN_TzP_Jtw",
   "uploader": "Koedo Retro AI Music",
-  "p": "OH GIRLFRIEND",
+  "p": "Koedo Retro AI Music",
   "a": "youtube:UCMQH_OyOJDjD5GN_TzP_Jtw",
   "firstSeen": "2026-10-09T11:31:52.163Z"
  },
@@ -6466,11 +6462,10 @@
   "uploaderId": "UCmovZ2th3Sqpd00F5RdeigQ",
   "uploader": "加賀美 ハヤト/Hayato Kagami",
   "by": "加賀美 ハヤト",
-  "pHint": "DECO*27",
-  "p": "DECO*27",
-  "a": "youtube:UCGmO0S4S-AunjRdmxA6TQYg",
   "firstSeen": "2026-10-08T15:40:42.017Z",
-  "of": "yt:C-7TIDIKc98"
+  "p": "DECO*27",
+  "of": "yt:C-7TIDIKc98",
+  "a": "youtube:UCGmO0S4S-AunjRdmxA6TQYg"
  },
  {
   "id": "yt:2rhLKnWCo6Y",
@@ -6649,7 +6644,7 @@
   "by": "天星 癒亜",
   "firstSeen": "2026-10-09T11:31:52.001Z",
   "of": "yt:lzyDD8bMDKs",
-  "p": "mona",
+  "p": "HoneyWorks",
   "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w"
  },
  {
@@ -7342,7 +7337,7 @@
   ],
   "uploaderId": 90459755,
   "uploader": null,
-  "p": "Hatsune Miku",
+  "p": "",
   "v": "初音ミク",
   "a": "niconico:90459755",
   "firstSeen": "2026-10-09T11:31:51.975Z"
@@ -7594,7 +7589,7 @@
   "tags": [],
   "uploaderId": "UC9qSqkNFiByKzzoxT3Cydyw",
   "uploader": "Aiobahn",
-  "p": "Aiobahn +81",
+  "p": "Aiobahn",
   "a": "youtube:UC9qSqkNFiByKzzoxT3Cydyw",
   "firstSeen": "2026-10-08T15:40:42.001Z"
  },
@@ -7663,7 +7658,7 @@
   "tags": [],
   "uploaderId": "UC-0k-L-mjrn1Dk0kIJ5PKSg",
   "uploader": "Paradox Live 公式チャンネル",
-  "p": "ILLGATOR",
+  "p": "Paradox Live",
   "a": "youtube:UC-0k-L-mjrn1Dk0kIJ5PKSg",
   "firstSeen": "2026-10-08T15:40:42.013Z"
  },
@@ -7973,7 +7968,7 @@
   "tags": [],
   "uploaderId": "UCLHTn2UQNUpSheL816CNa7w",
   "uploader": "BMSG",
-  "p": "Nameless MythS",
+  "p": "BMSG",
   "a": "youtube:UCLHTn2UQNUpSheL816CNa7w",
   "firstSeen": "2026-10-08T15:40:42.008Z"
  },
@@ -8791,7 +8786,7 @@
   "title": "ヤミタイガール　歌ってみた【るんくん】",
   "t": "ヤミタイガール",
   "kind": "歌ってみた",
-  "g": "その他",
+  "g": "ボカロ",
   "date": "2026-09-26T19:00:00+09:00",
   "views": 17559,
   "likes": 102,
@@ -8807,7 +8802,10 @@
   "uploaderId": 120165635,
   "uploader": null,
   "by": "るんくん",
-  "firstSeen": "2026-10-09T11:31:52.009Z"
+  "firstSeen": "2026-10-09T11:31:52.009Z",
+  "of": "yt:Scpu6fB4waA",
+  "p": "れるりり",
+  "a": "youtube:UCRYh_OrRM4JnZv3SxExbCnw"
  },
  {
   "id": "nico:sm46845840",
@@ -9999,6 +9997,7 @@
   "by": "",
   "firstSeen": "2026-10-09T11:31:52.017Z",
   "of": "nico:sm31592413",
+  "p": "ユリイ・カノン",
   "a": "niconico:53435803"
  },
  {
@@ -10394,6 +10393,7 @@
   "by": "じぇれすす",
   "firstSeen": "2026-10-09T11:31:52.025Z",
   "of": "nico:sm20296308",
+  "p": "初音ミク オリジナル曲",
   "a": "niconico:28540911"
  },
  {
@@ -11057,6 +11057,7 @@
   "by": "",
   "firstSeen": "2026-10-09T11:31:52.044Z",
   "of": "nico:sm17910036",
+  "p": "すこっぷ",
   "a": "niconico:8785358"
  },
  {
@@ -11648,7 +11649,7 @@
   "uploaderId": 134886911,
   "uploader": null,
   "p": "",
-  "v": "重音テトSV",
+  "v": "重音テト",
   "a": "niconico:134886911",
   "firstSeen": "2026-10-09T11:31:51.978Z"
  },
@@ -11847,9 +11848,9 @@
   "by": "冬萌ここな",
   "pHint": "椎名もた",
   "p": "椎名もた",
-  "a": "niconico:5619789",
+  "a": "youtube:UCtGmulznR7e0KxpEdKu_nqw",
   "firstSeen": "2026-10-09T11:31:52.001Z",
-  "of": "nico:sm22061366"
+  "of": "yt:AqI97zHMoQw"
  },
  {
   "id": "nico:sm46841608",
@@ -13204,7 +13205,7 @@
   "uploaderId": 2101316,
   "uploader": null,
   "p": "神馬",
-  "v": "重音テトSV",
+  "v": "重音テト",
   "a": "niconico:2101316",
   "firstSeen": "2026-10-09T11:31:51.978Z"
  },
@@ -13293,7 +13294,7 @@
   "uploaderId": 132927542,
   "uploader": null,
   "p": "YAKiN",
-  "v": "重音テトSV",
+  "v": "重音テト",
   "a": "niconico:132927542",
   "firstSeen": "2026-10-09T11:31:51.983Z"
  },
@@ -13419,7 +13420,7 @@
   "uploaderId": 132155069,
   "uploader": null,
   "p": "",
-  "v": "重音テトSV",
+  "v": "重音テト",
   "a": "niconico:132155069",
   "firstSeen": "2026-10-09T11:31:51.998Z"
  },
@@ -14534,7 +14535,7 @@
   "uploaderId": 138356221,
   "uploader": null,
   "p": "姫野",
-  "v": "初音ミク\"",
+  "v": "初音ミク",
   "a": "niconico:138356221",
   "firstSeen": "2026-10-09T11:31:51.984Z"
  },
@@ -15326,10 +15327,11 @@
   ],
   "uploaderId": 129796455,
   "uploader": null,
-  "p": "",
+  "p": "八王子P",
   "v": "初音ミク Sour式初音ミク",
   "a": "niconico:129796455",
-  "firstSeen": "2026-10-09T11:31:51.982Z"
+  "firstSeen": "2026-10-09T11:31:51.982Z",
+  "pFilled": true
  },
  {
   "id": "nico:sm46807658",
@@ -15355,10 +15357,11 @@
   ],
   "uploaderId": 60509106,
   "uploader": null,
-  "p": "",
+  "p": "wotaku",
   "v": "KAITO",
   "a": "niconico:60509106",
-  "firstSeen": "2026-10-09T11:31:51.989Z"
+  "firstSeen": "2026-10-09T11:31:51.989Z",
+  "pFilled": true
  },
  {
   "id": "nico:sm46804405",
@@ -17112,7 +17115,7 @@
   "uploaderId": 125420313,
   "uploader": null,
   "p": "",
-  "v": "重音テトSV",
+  "v": "重音テト",
   "a": "niconico:125420313",
   "firstSeen": "2026-10-09T11:31:51.999Z"
  },
@@ -17323,7 +17326,7 @@
   "uploaderId": 140579179,
   "uploader": null,
   "p": "tszmi",
-  "v": "音街ウナSV",
+  "v": "音街ウナ",
   "a": "niconico:140579179",
   "firstSeen": "2026-10-09T11:31:51.999Z"
  },
@@ -17689,6 +17692,7 @@
   "by": "すこっぷ",
   "firstSeen": "2026-10-09T11:31:51.998Z",
   "of": "nico:sm17910036",
+  "p": "すこっぷ",
   "a": "niconico:8785358"
  },
  {
@@ -17740,7 +17744,7 @@
   "uploaderId": 117177341,
   "uploader": null,
   "p": "REISAI",
-  "v": "初音ミク",
+  "v": "flower",
   "a": "niconico:117177341",
   "firstSeen": "2026-10-09T11:31:51.989Z"
  },
@@ -18370,7 +18374,7 @@
   "uploaderId": 6982294,
   "uploader": null,
   "p": "マヨネル_リャオ",
-  "v": "重音テトSV",
+  "v": "重音テト",
   "a": "niconico:6982294",
   "firstSeen": "2026-10-09T11:31:51.999Z"
  },
@@ -18494,8 +18498,8 @@
   "tags": [],
   "uploaderId": "UCv0xLMeNJhh7J1jEDz3hOAQ",
   "uploader": "かてらざわ",
-  "p": "重音テト&初音ミク",
-  "v": "初音ミク",
+  "p": "かてらざわ",
+  "v": "重音テト",
   "a": "youtube:UCv0xLMeNJhh7J1jEDz3hOAQ",
   "firstSeen": "2026-10-09T12:20:22.412Z",
   "seed": true
@@ -18525,7 +18529,7 @@
   ],
   "uploaderId": "UC7UmHj6SucKS4VyjMa_1VpA",
   "uploader": "ZERA",
-  "p": "ZERA & via",
+  "p": "ZERA",
   "v": "重音テト",
   "a": "youtube:UC7UmHj6SucKS4VyjMa_1VpA",
   "firstSeen": "2026-10-09T12:20:22.376Z",
@@ -18594,6 +18598,7 @@
   "uploaderId": "UCam3IAA-nyfxRL8_wDQ35VA",
   "uploader": "MIMI",
   "p": "MIMI",
+  "v": "可不",
   "a": "youtube:UCam3IAA-nyfxRL8_wDQ35VA",
   "firstSeen": "2026-10-09T12:20:22.387Z",
   "seed": true
@@ -18613,7 +18618,7 @@
   "tags": [],
   "uploaderId": "UCnDqohJcDJxvZwT6hTQ0xrA",
   "uploader": "Vaundy",
-  "p": "Vaundy:",
+  "p": "Vaundy",
   "a": "youtube:UCnDqohJcDJxvZwT6hTQ0xrA",
   "firstSeen": "2026-10-09T12:23:27.119Z",
   "seed": true
@@ -18723,7 +18728,7 @@
   ],
   "uploaderId": "UCSVe_NzxYvegv-f5pWBbS5A",
   "uploader": "Atena",
-  "p": "重音テト, 重音テトSV",
+  "p": "Atena",
   "v": "重音テト",
   "a": "youtube:UCSVe_NzxYvegv-f5pWBbS5A",
   "firstSeen": "2026-10-09T12:20:22.370Z",
@@ -18790,8 +18795,8 @@
   "tags": [],
   "uploaderId": "UC8eVl53J8totm8JJWzHv9iA",
   "uploader": "Farewell225",
-  "p": "Window View",
-  "v": "重音テトSV",
+  "p": "Farewell225",
+  "v": "重音テト",
   "a": "youtube:UC8eVl53J8totm8JJWzHv9iA",
   "firstSeen": "2026-10-09T12:20:22.372Z",
   "seed": true
@@ -18801,7 +18806,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=LxVv4QneUuU",
   "title": "Chenomio -フィクションです。feat.重音テト",
-  "t": "Chenomio -フィクションです。",
+  "t": "フィクションです。",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2026-04-10T11:00:06Z",
@@ -18833,7 +18838,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=V4elF7---KQ",
   "title": "ぴーなた-アンタに言ってんの！！！ feat.重音テト",
-  "t": "ぴーなた-アンタに言ってんの!!!",
+  "t": "アンタに言ってんの!!!",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2026-03-20T13:00:06Z",
@@ -18978,6 +18983,7 @@
   "uploaderId": "UCV5szEvKEntY974aMEfNMEw",
   "uploader": "FLAVOR FOLEY",
   "p": "FLAVOR FOLEY",
+  "v": "鏡音レン",
   "a": "youtube:UCV5szEvKEntY974aMEfNMEw",
   "firstSeen": "2026-10-09T12:20:22.348Z",
   "seed": true
@@ -19042,7 +19048,7 @@
   "uploaderId": 48885386,
   "uploader": null,
   "p": "",
-  "v": "重音テトSV",
+  "v": "重音テト",
   "a": "niconico:48885386",
   "firstSeen": "2026-10-08T14:36:47.414Z",
   "seed": true
@@ -19095,7 +19101,7 @@
   "tags": [],
   "uploaderId": "UCWf4-qM-qqC6qefImjklAYg",
   "uploader": "TRAP CHICK 트랩칙",
-  "p": "카사네 테토",
+  "p": "TRAP CHICK 트랩칙",
   "a": "youtube:UCWf4-qM-qqC6qefImjklAYg",
   "firstSeen": "2026-10-09T12:20:22.365Z",
   "seed": true
@@ -19119,7 +19125,7 @@
   ],
   "uploaderId": "UCOD2pj9gjQvgJX6bbhj0xlQ",
   "uploader": "えいぷ",
-  "p": "初音ミク・重音テト",
+  "p": "えいぷ",
   "v": "初音ミク",
   "a": "youtube:UCOD2pj9gjQvgJX6bbhj0xlQ",
   "firstSeen": "2026-10-09T12:20:22.366Z",
@@ -19191,12 +19197,11 @@
   "uploaderId": "UCeBuESc6vN_IiFR3je4NYTg",
   "uploader": "雨良 Amala",
   "by": "雨良 Amala",
-  "pHint": "重音テト&雨良 Amala",
-  "p": "雨良",
-  "a": "youtube:UCeBuESc6vN_IiFR3je4NYTg",
   "firstSeen": "2026-10-09T12:20:22.368Z",
   "seed": true,
-  "of": "yt:Dz5rALpx06M"
+  "p": "雨良",
+  "of": "yt:Dz5rALpx06M",
+  "a": "youtube:UCeBuESc6vN_IiFR3je4NYTg"
  },
  {
   "id": "yt:IxSvgPhdc8c",
@@ -19257,8 +19262,8 @@
   "tags": [],
   "uploaderId": "UCv0xLMeNJhh7J1jEDz3hOAQ",
   "uploader": "かてらざわ",
-  "p": "重音テト&ずんだもん",
-  "v": "ずんだもん",
+  "p": "かてらざわ",
+  "v": "重音テト",
   "a": "youtube:UCv0xLMeNJhh7J1jEDz3hOAQ",
   "firstSeen": "2026-10-09T12:20:22.368Z",
   "seed": true
@@ -19278,7 +19283,7 @@
   "tags": [],
   "uploaderId": "UCtne7wC5nEDx5p4JzJf9JHQ",
   "uploader": "みつあくま (mitsu_akuma)",
-  "p": "初音ミク & 重音テト",
+  "p": "みつあくま",
   "v": "初音ミク",
   "a": "youtube:UCtne7wC5nEDx5p4JzJf9JHQ",
   "firstSeen": "2026-10-09T12:20:22.369Z",
@@ -19413,7 +19418,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=icBDYkfxpMs",
   "title": "ループザルーム feat. 初音ミク / \"Looping the Rooms\" ft. Hatsune Miku",
-  "t": "Looping the Rooms",
+  "t": "ループザルーム",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2025-12-18T10:01:13Z",
@@ -19433,7 +19438,7 @@
   ],
   "uploaderId": "UCjuAuVO76nZ0mjYzdz3961Q",
   "uploader": "ルシノ / rusino",
-  "p": "ループザルーム",
+  "p": "ルシノ",
   "v": "初音ミク",
   "a": "youtube:UCjuAuVO76nZ0mjYzdz3961Q",
   "firstSeen": "2026-10-09T12:20:22.324Z",
@@ -19496,7 +19501,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=M40MIxGK3is",
   "title": "ぴーなた-求＆影(Q&A) 重音テト",
-  "t": "ぴーなた-求&影 重音テト",
+  "t": "求&影 重音テト",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2025-12-05T10:00:06Z",
@@ -19568,6 +19573,7 @@
   "uploaderId": "UCam3IAA-nyfxRL8_wDQ35VA",
   "uploader": "MIMI",
   "p": "MIMI",
+  "v": "可不",
   "a": "youtube:UCam3IAA-nyfxRL8_wDQ35VA",
   "firstSeen": "2026-10-09T12:20:22.388Z",
   "seed": true
@@ -19587,7 +19593,7 @@
   "tags": [],
   "uploaderId": "UC2Kaq_xADsJSi97iWbttPlQ",
   "uploader": "MAISONdes -メゾン・デ- / 日曜日のメゾンデ",
-  "p": "MAISONdes",
+  "p": "MAISONdes -メゾン・デ-",
   "v": "重音テト",
   "a": "youtube:UC2Kaq_xADsJSi97iWbttPlQ",
   "firstSeen": "2026-10-09T12:20:22.371Z",
@@ -19643,7 +19649,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=pER24jTrGA0",
   "title": "ネオンドール feat. 重音テト / \"Neon Doll\" ft. Kasane Teto",
-  "t": "Neon Doll",
+  "t": "ネオンドール",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2025-10-11T10:01:17Z",
@@ -19656,7 +19662,7 @@
   ],
   "uploaderId": "UCjuAuVO76nZ0mjYzdz3961Q",
   "uploader": "ルシノ / rusino",
-  "p": "ネオンドール",
+  "p": "ルシノ",
   "v": "重音テト",
   "a": "youtube:UCjuAuVO76nZ0mjYzdz3961Q",
   "firstSeen": "2026-10-09T12:20:22.373Z",
@@ -19667,7 +19673,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=uDnKy_FYgvA",
   "title": "第n次元 / 重音テトSV - Dimension No.n",
-  "t": "重音テトSV",
+  "t": "第n次元",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2025-10-10T10:00:06Z",
@@ -19677,7 +19683,7 @@
   "tags": [],
   "uploaderId": "UCtmi2O7lp0C_i53hFIExAaA",
   "uploader": "サツキ",
-  "p": "第n次元",
+  "p": "サツキ",
   "v": "重音テト",
   "a": "youtube:UCtmi2O7lp0C_i53hFIExAaA",
   "firstSeen": "2026-10-09T12:20:22.371Z",
@@ -19984,8 +19990,8 @@
   "tags": [],
   "uploaderId": "UCv0xLMeNJhh7J1jEDz3hOAQ",
   "uploader": "かてらざわ",
-  "p": "重音テト&初音ミク",
-  "v": "初音ミク",
+  "p": "かてらざわ",
+  "v": "重音テト",
   "a": "youtube:UCv0xLMeNJhh7J1jEDz3hOAQ",
   "firstSeen": "2026-10-09T12:20:22.370Z",
   "seed": true
@@ -20202,11 +20208,12 @@
   ],
   "uploaderId": 53610183,
   "uploader": null,
-  "p": "",
+  "p": "なきそ",
   "v": "初音ミク",
   "a": "niconico:53610183",
   "firstSeen": "2026-10-08T14:36:47.357Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:3iUgKH8c7p4",
@@ -20333,7 +20340,7 @@
   ],
   "uploaderId": "UC1FQWQ3y3-e8l1pCtWhJt5A",
   "uploader": "Vaundy",
-  "p": "Vaundy:",
+  "p": "Vaundy",
   "a": "youtube:UC1FQWQ3y3-e8l1pCtWhJt5A",
   "firstSeen": "2026-10-09T12:23:27.112Z",
   "seed": true
@@ -20393,7 +20400,7 @@
   ],
   "uploaderId": "UCGapnPWowo1cnab40bW1SPA",
   "uploader": "WAWON /ゴマつぶワヲン",
-  "p": "Replay Defoko & Teto Kasane",
+  "p": "WAWON",
   "v": "重音テト",
   "a": "youtube:UCGapnPWowo1cnab40bW1SPA",
   "firstSeen": "2026-10-09T12:20:22.370Z",
@@ -20460,8 +20467,8 @@
   ],
   "uploaderId": "UCSVe_NzxYvegv-f5pWBbS5A",
   "uploader": "Atena",
-  "p": "GUMI, 鏡音リン",
-  "v": "鏡音リン",
+  "p": "Atena",
+  "v": "GUMI",
   "a": "youtube:UCSVe_NzxYvegv-f5pWBbS5A",
   "firstSeen": "2026-10-09T12:20:22.347Z",
   "seed": true
@@ -20566,6 +20573,7 @@
   "uploaderId": "UCryYRhW6gQG8rBbJW53OV2g",
   "uploader": "omochi",
   "p": "omochi",
+  "v": "可不",
   "a": "youtube:UCryYRhW6gQG8rBbJW53OV2g",
   "firstSeen": "2026-10-09T12:20:22.391Z",
   "seed": true
@@ -20613,7 +20621,7 @@
   "tags": [],
   "uploaderId": "UCwl_hcsJW11pZiteJsajxEw",
   "uploader": "只野 楓 / Kaede Tadano",
-  "p": "A4。",
+  "p": "只野 楓",
   "v": "可不",
   "a": "youtube:UCwl_hcsJW11pZiteJsajxEw",
   "firstSeen": "2026-10-09T12:20:22.390Z",
@@ -20661,7 +20669,7 @@
   "tags": [],
   "uploaderId": "UCJwGWV914kBlV4dKRn7AEFA",
   "uploader": "Hatsune Miku",
-  "p": "サツキ <初音ミク・重音テト>",
+  "p": "サツキ",
   "v": "初音ミク",
   "a": "youtube:UCJwGWV914kBlV4dKRn7AEFA",
   "firstSeen": "2026-10-09T12:20:22.366Z",
@@ -20752,8 +20760,8 @@
   "tags": [],
   "uploaderId": "UCv0xLMeNJhh7J1jEDz3hOAQ",
   "uploader": "かてらざわ",
-  "p": "重音テトSV&初音ミク",
-  "v": "初音ミク",
+  "p": "かてらざわ",
+  "v": "重音テト",
   "a": "youtube:UCv0xLMeNJhh7J1jEDz3hOAQ",
   "firstSeen": "2026-10-09T12:20:22.368Z",
   "seed": true
@@ -20861,12 +20869,11 @@
   "uploaderId": "UCGteuPMOJgrJ1ZiVmtfqwFA",
   "uploader": "yasai31",
   "by": "yasai31",
-  "pHint": "重音テトSV",
-  "p": "重音テトSV",
-  "a": "重音テトsv",
   "firstSeen": "2026-10-09T12:20:22.370Z",
   "seed": true,
-  "of": "nico:sm10244728"
+  "p": "重音テトSV",
+  "of": "nico:sm10244728",
+  "a": "niconico:6489932"
  },
  {
   "id": "yt:hrBjKBPNi1c",
@@ -20920,7 +20927,7 @@
   "uploaderId": "UCV-hBJ1D-s_n-vPSHzDHWjA",
   "uploader": "PPP Sounds",
   "p": "LOL",
-  "v": "重音テトSV",
+  "v": "重音テト",
   "a": "youtube:UCV-hBJ1D-s_n-vPSHzDHWjA",
   "firstSeen": "2026-10-09T12:20:22.366Z",
   "seed": true
@@ -20956,7 +20963,7 @@
   "uploaderId": "UCuNlrb3G0BLLDbwhz7EqF8w",
   "uploader": "Azari",
   "p": "Azari",
-  "v": "v flower",
+  "v": "重音テト",
   "a": "youtube:UCuNlrb3G0BLLDbwhz7EqF8w",
   "firstSeen": "2026-10-09T12:20:22.366Z",
   "seed": true
@@ -21209,7 +21216,7 @@
   "uploaderId": "UCyxF8d6d5t7HMBVf0g3Kv2A",
   "uploader": "Rukia",
   "p": "Rukia",
-  "v": "ずんだもん",
+  "v": "可不",
   "a": "youtube:UCyxF8d6d5t7HMBVf0g3Kv2A",
   "firstSeen": "2026-10-09T12:20:22.388Z",
   "seed": true
@@ -21339,11 +21346,9 @@
   "uploaderId": "UCGteuPMOJgrJ1ZiVmtfqwFA",
   "uploader": "yasai31",
   "by": "yasai31",
-  "pHint": "重音テトSV",
-  "p": "重音テトSV",
-  "a": "重音テトsv",
   "firstSeen": "2026-10-09T12:20:22.368Z",
-  "seed": true
+  "seed": true,
+  "p": "重音テトSV"
  },
  {
   "id": "yt:D50L4EeBHOs",
@@ -21514,7 +21519,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=VkWhbmeeTXs",
   "title": "外のヒト - 重音テト",
-  "t": "重音テト",
+  "t": "外のヒト",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2024-12-05T06:19:11Z",
@@ -21531,7 +21536,7 @@
   ],
   "uploaderId": "UC8W5jDneAuOeFNDAB9-8lmQ",
   "uploader": "原口沙輔",
-  "p": "外のヒト",
+  "p": "原口沙輔",
   "v": "重音テト",
   "a": "youtube:UC8W5jDneAuOeFNDAB9-8lmQ",
   "firstSeen": "2026-10-09T12:20:22.369Z",
@@ -21606,7 +21611,7 @@
   "tags": [],
   "uploaderId": "UCtne7wC5nEDx5p4JzJf9JHQ",
   "uploader": "みつあくま (mitsu_akuma)",
-  "p": "みつあくま (mitsu_akuma)",
+  "p": "みつあくま",
   "v": "重音テト",
   "a": "youtube:UCtne7wC5nEDx5p4JzJf9JHQ",
   "firstSeen": "2026-10-09T12:20:22.371Z",
@@ -21640,7 +21645,7 @@
   "uploaderId": 99293918,
   "uploader": null,
   "p": "柊マグネタイト",
-  "v": "重音テトSV",
+  "v": "重音テト",
   "a": "niconico:99293918",
   "firstSeen": "2026-10-08T14:36:47.329Z",
   "seed": true,
@@ -21699,7 +21704,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=L2hzsXOT0Nc",
   "title": "オブソミート / 初音ミク・重音テトSV - Obsolete Meat",
-  "t": "初音ミク・重音テトSV",
+  "t": "オブソミート",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2024-11-08T10:00:06Z",
@@ -21709,7 +21714,7 @@
   "tags": [],
   "uploaderId": "UCtmi2O7lp0C_i53hFIExAaA",
   "uploader": "サツキ",
-  "p": "オブソミート",
+  "p": "サツキ",
   "v": "初音ミク",
   "a": "youtube:UCtmi2O7lp0C_i53hFIExAaA",
   "firstSeen": "2026-10-09T12:20:22.365Z",
@@ -21739,7 +21744,7 @@
   "uploaderId": "UCwLPrgQaYh-JiU0rBxhSOew",
   "uploader": "TOKOTOKO(NishizawasanP) - Topic",
   "p": "TOKOTOKO",
-  "v": "GUMI SV",
+  "v": "GUMI",
   "a": "youtube:UCwLPrgQaYh-JiU0rBxhSOew",
   "firstSeen": "2026-10-09T12:20:22.360Z",
   "seed": true
@@ -21771,11 +21776,12 @@
   ],
   "uploaderId": 53610183,
   "uploader": null,
-  "p": "",
+  "p": "なきそ",
   "v": "初音ミク",
   "a": "niconico:53610183",
   "firstSeen": "2026-10-08T14:36:47.404Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm44172719",
@@ -21915,7 +21921,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=aeEodB5JBG0",
   "title": "【Kasane Teto • Hatsune Miku/重音テト • 初音ミク】メズマライザー/Mesmerizer - ROLE SWAP【UTAU...only UTAUカバー】",
-  "t": "Mesmerizer",
+  "t": "メズマライザー",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2024-09-10T02:50:53Z",
@@ -21925,12 +21931,12 @@
   "tags": [],
   "uploaderId": "UCCFzL2ZhgofuDS70FpG2SlA",
   "uploader": "Teto Kasane-Chan",
-  "by": "Teto Kasane",
-  "pHint": "メズマライザー",
-  "p": "メズマライザー",
-  "a": "メズマライザー",
+  "by": "Teto Kasane-Chan",
   "firstSeen": "2026-10-09T12:20:22.370Z",
-  "seed": true
+  "seed": true,
+  "p": "サツキ",
+  "of": "yt:19y8YTbvri8",
+  "a": "youtube:UCtmi2O7lp0C_i53hFIExAaA"
  },
  {
   "id": "yt:6wUqdA4SuBk",
@@ -21969,6 +21975,7 @@
   "uploaderId": "UCam3IAA-nyfxRL8_wDQ35VA",
   "uploader": "MIMI",
   "p": "MIMI",
+  "v": "可不",
   "a": "youtube:UCam3IAA-nyfxRL8_wDQ35VA",
   "firstSeen": "2026-10-09T12:20:22.390Z",
   "seed": true
@@ -22019,7 +22026,8 @@
   ],
   "uploaderId": "UCvq3kUGY5Dbsdkr3DZx25Sw",
   "uploader": "Giga",
-  "p": "Giga & TeddyLoid",
+  "p": "Giga",
+  "v": "鏡音リン",
   "a": "youtube:UCvq3kUGY5Dbsdkr3DZx25Sw",
   "firstSeen": "2026-10-09T12:20:22.354Z",
   "seed": true
@@ -22099,7 +22107,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=8tQiWHXSGN0",
   "title": "ファタール / GEMN - Fatal / GEMN",
-  "t": "GEMN",
+  "t": "ファタール",
   "kind": "本家",
   "g": "アニソン",
   "date": "2024-07-05T13:00:07Z",
@@ -22136,7 +22144,7 @@
   ],
   "uploaderId": "UCgP3GbgbuVzAhlctGU5yuPA",
   "uploader": "キタニタツヤ / Tatsuya Kitani",
-  "p": "ファタール",
+  "p": "キタニタツヤ",
   "a": "youtube:UCgP3GbgbuVzAhlctGU5yuPA",
   "firstSeen": "2026-10-09T12:23:27.086Z",
   "seed": true
@@ -22371,7 +22379,7 @@
   "uploaderId": 123517338,
   "uploader": null,
   "p": "",
-  "v": "重音テトSV",
+  "v": "重音テト",
   "a": "niconico:123517338",
   "firstSeen": "2026-10-08T14:36:47.364Z",
   "seed": true
@@ -22403,18 +22411,19 @@
   ],
   "uploaderId": 88956260,
   "uploader": null,
-  "p": "",
+  "p": "サツキ サバンナを支配するトランスの祝祭",
   "v": "初音ミク",
   "a": "niconico:88956260",
   "firstSeen": "2026-10-08T14:36:47.317Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:19y8YTbvri8",
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=19y8YTbvri8",
   "title": "メズマライザー / 初音ミク・重音テトSV - Mesmerizer",
-  "t": "初音ミク・重音テトSV",
+  "t": "メズマライザー",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2024-04-27T10:00:02Z",
@@ -22431,7 +22440,7 @@
   ],
   "uploaderId": "UCtmi2O7lp0C_i53hFIExAaA",
   "uploader": "サツキ",
-  "p": "メズマライザー",
+  "p": "サツキ",
   "v": "初音ミク",
   "a": "youtube:UCtmi2O7lp0C_i53hFIExAaA",
   "firstSeen": "2026-10-09T12:20:22.320Z",
@@ -22481,7 +22490,7 @@
   "uploaderId": "UCUrhvc9hxvrOQosyFyIkeMw",
   "uploader": "マキシウキョウ",
   "p": "マキシウキョウ",
-  "v": "重音テトSV",
+  "v": "重音テト",
   "a": "youtube:UCUrhvc9hxvrOQosyFyIkeMw",
   "firstSeen": "2026-10-09T12:20:22.369Z",
   "seed": true
@@ -22564,7 +22573,7 @@
   "tags": [],
   "uploaderId": "UCpLxL_MSnmSHKIZaTLzW0VA",
   "uploader": "イチ",
-  "p": "99.999999999%",
+  "p": "イチ",
   "v": "flower",
   "a": "youtube:UCpLxL_MSnmSHKIZaTLzW0VA",
   "firstSeen": "2026-10-09T12:20:22.398Z",
@@ -22601,9 +22610,10 @@
   "by": "カラオケ歌っちゃ王",
   "pHint": "吉田夜世",
   "p": "吉田夜世",
-  "a": "吉田夜世",
+  "a": "youtube:UCzTwIedETJq-dLqAhieCm2A",
   "firstSeen": "2026-10-09T12:20:22.376Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:LLjfal8jCYI"
  },
  {
   "id": "yt:_niPeUPCXZY",
@@ -22634,12 +22644,11 @@
   "uploaderId": "UC1tk9F5-MGXEq4LWnjmrtpA",
   "uploader": "カラオケ歌っちゃ王",
   "by": "カラオケ歌っちゃ王",
-  "pHint": "MIMI",
-  "p": "MIMI",
-  "a": "youtube:UCam3IAA-nyfxRL8_wDQ35VA",
   "firstSeen": "2026-10-09T12:20:22.386Z",
   "seed": true,
-  "of": "yt:340OXvocRMM"
+  "p": "MIMI",
+  "of": "yt:340OXvocRMM",
+  "a": "youtube:UCam3IAA-nyfxRL8_wDQ35VA"
  },
  {
   "id": "yt:6Fm-wW_57FY",
@@ -22686,7 +22695,7 @@
   "uploaderId": "UCfdFNsR_tvF8bwp0KhMaJZQ",
   "uploader": "TOKOTOKO / 西沢さんP / zawaso Official",
   "p": "TOKOTOKO",
-  "v": "GUMI SV",
+  "v": "GUMI",
   "a": "youtube:UCfdFNsR_tvF8bwp0KhMaJZQ",
   "firstSeen": "2026-10-09T12:20:22.358Z",
   "seed": true
@@ -22771,7 +22780,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=F38EuG2dAyM",
   "title": "イガク - 重音テト",
-  "t": "重音テト",
+  "t": "イガク",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2024-02-28T12:00:23Z",
@@ -22791,7 +22800,7 @@
   ],
   "uploaderId": "UC8W5jDneAuOeFNDAB9-8lmQ",
   "uploader": "原口沙輔",
-  "p": "イガク",
+  "p": "原口沙輔",
   "v": "重音テト",
   "a": "youtube:UC8W5jDneAuOeFNDAB9-8lmQ",
   "firstSeen": "2026-10-09T12:20:22.365Z",
@@ -22922,6 +22931,7 @@
   "uploaderId": "UCam3IAA-nyfxRL8_wDQ35VA",
   "uploader": "MIMI",
   "p": "MIMI",
+  "v": "可不",
   "a": "youtube:UCam3IAA-nyfxRL8_wDQ35VA",
   "firstSeen": "2026-10-09T12:20:22.387Z",
   "seed": true
@@ -23002,6 +23012,7 @@
   "uploaderId": "UCfzh0Ejekva_h1AUcjabTQQ",
   "uploader": "Kish.",
   "p": "Kish.",
+  "v": "可不",
   "a": "youtube:UCfzh0Ejekva_h1AUcjabTQQ",
   "firstSeen": "2026-10-09T12:20:22.388Z",
   "seed": true
@@ -23169,6 +23180,7 @@
   "uploaderId": "UCam3IAA-nyfxRL8_wDQ35VA",
   "uploader": "MIMI",
   "p": "MIMI",
+  "v": "可不",
   "a": "youtube:UCam3IAA-nyfxRL8_wDQ35VA",
   "firstSeen": "2026-10-09T12:20:22.388Z",
   "seed": true
@@ -23228,6 +23240,7 @@
   "uploaderId": "UCvq3kUGY5Dbsdkr3DZx25Sw",
   "uploader": "Giga",
   "p": "Giga",
+  "v": "初音ミク",
   "a": "youtube:UCvq3kUGY5Dbsdkr3DZx25Sw",
   "firstSeen": "2026-10-09T12:20:22.339Z",
   "seed": true
@@ -23279,7 +23292,7 @@
   "uploaderId": "UCIRAdm52I0ahkxACu0152hg",
   "uploader": "Shü",
   "p": "Shü",
-  "v": "初音ミク",
+  "v": "重音テト",
   "a": "youtube:UCIRAdm52I0ahkxACu0152hg",
   "firstSeen": "2026-10-09T12:20:22.371Z",
   "seed": true
@@ -23383,7 +23396,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=LLjfal8jCYI",
   "title": "オーバーライド - 重音テトSV[吉田夜世]",
-  "t": "重音テトSV",
+  "t": "オーバーライド",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2023-11-29T10:00:07Z",
@@ -23413,8 +23426,8 @@
   ],
   "uploaderId": "UCzTwIedETJq-dLqAhieCm2A",
   "uploader": "吉田夜世",
-  "p": "オーバーライド",
-  "v": "初音ミク",
+  "p": "吉田夜世",
+  "v": "重音テト",
   "a": "youtube:UCzTwIedETJq-dLqAhieCm2A",
   "firstSeen": "2026-10-09T12:20:22.364Z",
   "seed": true
@@ -23447,7 +23460,7 @@
   "uploaderId": 123517338,
   "uploader": null,
   "p": "",
-  "v": "重音テトSV",
+  "v": "重音テト",
   "a": "niconico:123517338",
   "firstSeen": "2026-10-08T14:36:47.423Z",
   "seed": true
@@ -23516,11 +23529,12 @@
   ],
   "uploaderId": 117400184,
   "uploader": null,
-  "p": "",
+  "p": "大漠波新",
   "v": "ずんだもん",
   "a": "niconico:117400184",
   "firstSeen": "2026-10-08T14:36:47.334Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:vY8iwpN3GXQ",
@@ -23537,7 +23551,7 @@
   "tags": [],
   "uploaderId": "UC80ttKvARb7Gslo7AgPOZeA",
   "uploader": "大漠波新",
-  "p": "ずんだもん・初音ミク・重音テト",
+  "p": "大漠波新",
   "v": "ずんだもん",
   "a": "youtube:UC80ttKvARb7Gslo7AgPOZeA",
   "firstSeen": "2026-10-09T12:20:22.402Z",
@@ -23709,11 +23723,9 @@
   "uploaderId": "UC-0nEIC-FugrulWEeAvufHw",
   "uploader": "にす",
   "by": "にす",
-  "pHint": "重音テトSV",
-  "p": "重音テトSV",
-  "a": "重音テトsv",
   "firstSeen": "2026-10-09T12:20:22.366Z",
-  "seed": true
+  "seed": true,
+  "p": "重音テトSV"
  },
  {
   "id": "nico:sm42682989",
@@ -23782,7 +23794,7 @@
   ],
   "uploaderId": "UCENRrmGuopCcwwi2jW00LDQ",
   "uploader": "jon -YAKITORY",
-  "p": "jon-YAKITORY, 初音ミク -Konton Boogie",
+  "p": "jon -YAKITORY",
   "v": "可不",
   "a": "youtube:UCENRrmGuopCcwwi2jW00LDQ",
   "firstSeen": "2026-10-09T12:20:22.322Z",
@@ -23933,18 +23945,16 @@
   "uploaderId": "UCAyiAlNizx-GtWVp7453XzA",
   "uploader": "ゆかてふ",
   "by": "ゆかてふ",
-  "pHint": "鏡音リン",
-  "p": "鏡音リン",
-  "a": "鏡音リン",
   "firstSeen": "2026-10-09T12:20:22.342Z",
-  "seed": true
+  "seed": true,
+  "p": "鏡音リン"
  },
  {
   "id": "yt:HTxwOxFt5d4",
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=HTxwOxFt5d4",
   "title": "人マニア - 重音テト",
-  "t": "重音テト",
+  "t": "人マニア",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2023-08-07T17:29:57Z",
@@ -23967,7 +23977,7 @@
   ],
   "uploaderId": "UC8W5jDneAuOeFNDAB9-8lmQ",
   "uploader": "原口沙輔",
-  "p": "人マニア",
+  "p": "原口沙輔",
   "v": "重音テト",
   "a": "youtube:UC8W5jDneAuOeFNDAB9-8lmQ",
   "firstSeen": "2026-10-09T12:20:22.364Z",
@@ -24186,11 +24196,12 @@
   ],
   "uploaderId": 15918028,
   "uploader": null,
-  "p": "",
+  "p": "MARETU",
   "v": "初音ミク",
   "a": "niconico:15918028",
   "firstSeen": "2026-10-08T14:36:47.399Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:tXMTqrubxUY",
@@ -24211,7 +24222,7 @@
   ],
   "uploaderId": "UC368BL46Vr1Y2ZbyWXY-ebw",
   "uploader": "月-Tsuki-",
-  "by": "月",
+  "by": "月-Tsuki-",
   "pHint": "だきしめるまで。",
   "p": "だきしめるまで。",
   "a": "だきしめるまで",
@@ -24255,6 +24266,7 @@
   "uploaderId": "UCam3IAA-nyfxRL8_wDQ35VA",
   "uploader": "MIMI",
   "p": "MIMI",
+  "v": "可不",
   "a": "youtube:UCam3IAA-nyfxRL8_wDQ35VA",
   "firstSeen": "2026-10-09T12:20:22.391Z",
   "seed": true
@@ -24363,6 +24375,7 @@
   "uploaderId": "UCam3IAA-nyfxRL8_wDQ35VA",
   "uploader": "MIMI",
   "p": "MIMI",
+  "v": "可不",
   "a": "youtube:UCam3IAA-nyfxRL8_wDQ35VA",
   "firstSeen": "2026-10-09T12:20:22.383Z",
   "seed": true
@@ -24395,7 +24408,7 @@
   "uploaderId": 123517338,
   "uploader": null,
   "p": "",
-  "v": "重音テトSV",
+  "v": "重音テト",
   "a": "niconico:123517338",
   "firstSeen": "2026-10-08T14:36:47.372Z",
   "seed": true
@@ -24513,7 +24526,7 @@
   "uploaderId": "UCO2scqsXB35UeOY7iEXrQdA",
   "uploader": "4696botanଓ",
   "p": "4696botanଓ",
-  "v": "重音テトSV",
+  "v": "重音テト",
   "a": "youtube:UCO2scqsXB35UeOY7iEXrQdA",
   "firstSeen": "2026-10-09T12:20:22.374Z",
   "seed": true
@@ -25284,7 +25297,8 @@
   "tags": [],
   "uploaderId": "UCVPqAY-udtbx4HCP_3oo0Aw",
   "uploader": "GaL",
-  "p": "RADWIMPS GaL Remix",
+  "p": "GaL",
+  "v": "可不",
   "a": "youtube:UCVPqAY-udtbx4HCP_3oo0Aw",
   "firstSeen": "2026-10-09T12:20:22.388Z",
   "seed": true
@@ -25576,7 +25590,7 @@
   "tags": [],
   "uploaderId": "UCGmO0S4S-AunjRdmxA6TQYg",
   "uploader": "DECO*27",
-  "p": "DECO*27 x ピノキオピー",
+  "p": "DECO*27",
   "v": "初音ミク",
   "a": "youtube:UCGmO0S4S-AunjRdmxA6TQYg",
   "firstSeen": "2026-10-09T12:20:22.330Z",
@@ -25673,6 +25687,7 @@
   "uploaderId": "UCam3IAA-nyfxRL8_wDQ35VA",
   "uploader": "MIMI",
   "p": "MIMI",
+  "v": "可不",
   "a": "youtube:UCam3IAA-nyfxRL8_wDQ35VA",
   "firstSeen": "2026-10-09T12:20:22.378Z",
   "seed": true
@@ -25856,6 +25871,7 @@
   "uploaderId": "UCam3IAA-nyfxRL8_wDQ35VA",
   "uploader": "MIMI",
   "p": "MIMI",
+  "v": "可不",
   "a": "youtube:UCam3IAA-nyfxRL8_wDQ35VA",
   "firstSeen": "2026-10-09T12:20:22.385Z",
   "seed": true
@@ -25994,6 +26010,7 @@
   "uploaderId": "UCam3IAA-nyfxRL8_wDQ35VA",
   "uploader": "MIMI",
   "p": "MIMI",
+  "v": "可不",
   "a": "youtube:UCam3IAA-nyfxRL8_wDQ35VA",
   "firstSeen": "2026-10-09T12:20:22.377Z",
   "seed": true
@@ -26259,6 +26276,7 @@
   "uploaderId": "UCam3IAA-nyfxRL8_wDQ35VA",
   "uploader": "MIMI",
   "p": "MIMI",
+  "v": "可不",
   "a": "youtube:UCam3IAA-nyfxRL8_wDQ35VA",
   "firstSeen": "2026-10-09T12:20:22.382Z",
   "seed": true
@@ -26605,7 +26623,7 @@
   "uploaderId": 119749869,
   "uploader": null,
   "p": "",
-  "v": "v flower",
+  "v": "歌愛ユキ",
   "a": "niconico:119749869",
   "firstSeen": "2026-10-08T14:36:47.416Z",
   "seed": true
@@ -26637,11 +26655,12 @@
   ],
   "uploaderId": 95303437,
   "uploader": null,
-  "p": "",
+  "p": "Kanaria",
   "v": "GUMI",
   "a": "niconico:95303437",
   "firstSeen": "2026-10-08T14:36:47.335Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:KFCaSz_yYCM",
@@ -26790,7 +26809,7 @@
   ],
   "uploaderId": "UCPq4A0-hOqaALo4F4MRdi9w",
   "uploader": "gcmstyle(アンメルツP) / Ann-MeltsP",
-  "p": "ミクリンレンルカMEIKOKAITOボスラッシュ by gcmstyle",
+  "p": "gcmstyle",
   "a": "youtube:UCPq4A0-hOqaALo4F4MRdi9w",
   "firstSeen": "2026-10-09T12:20:22.347Z",
   "seed": true
@@ -26931,6 +26950,7 @@
   "uploaderId": "UCam3IAA-nyfxRL8_wDQ35VA",
   "uploader": "MIMI",
   "p": "MIMI",
+  "v": "可不",
   "a": "youtube:UCam3IAA-nyfxRL8_wDQ35VA",
   "firstSeen": "2026-10-09T12:20:22.382Z",
   "seed": true
@@ -27490,11 +27510,12 @@
   ],
   "uploaderId": 95303437,
   "uploader": null,
-  "p": "",
+  "p": "Kanaria",
   "v": "GUMI",
   "a": "niconico:95303437",
   "firstSeen": "2026-10-08T14:36:47.327Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:vB8sxY_PJ_w",
@@ -28414,6 +28435,7 @@
   "uploaderId": "UCft5HulDeuKloukyShxyOZA",
   "uploader": "Chinozo",
   "p": "Chinozo",
+  "v": "flower",
   "a": "youtube:UCft5HulDeuKloukyShxyOZA",
   "firstSeen": "2026-10-09T12:20:22.399Z",
   "seed": true
@@ -28550,6 +28572,7 @@
   "uploaderId": "UCam3IAA-nyfxRL8_wDQ35VA",
   "uploader": "MIMI",
   "p": "MIMI",
+  "v": "可不",
   "a": "youtube:UCam3IAA-nyfxRL8_wDQ35VA",
   "firstSeen": "2026-10-09T12:20:22.378Z",
   "seed": true
@@ -28633,7 +28656,7 @@
   ],
   "uploaderId": "UCnDqohJcDJxvZwT6hTQ0xrA",
   "uploader": "Vaundy",
-  "p": "Vaundy:",
+  "p": "Vaundy",
   "a": "youtube:UCnDqohJcDJxvZwT6hTQ0xrA",
   "firstSeen": "2026-10-09T12:23:27.090Z",
   "seed": true
@@ -28670,7 +28693,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=WPl10ZrhCtk",
   "title": "ヒグチアイ / 悪魔の子 (アニメスペシャルVer.) | Ai Higuchi “Akuma no Ko” Anime Special Ver.",
-  "t": "Akuma no Ko",
+  "t": "悪魔の子",
   "kind": "本家",
   "g": "アニソン",
   "date": "2022-01-23T15:30:08Z",
@@ -28711,7 +28734,7 @@
   ],
   "uploaderId": "UCaw0rNYSe89OPzix05flcsg",
   "uploader": "ヒグチアイ",
-  "p": "ヒグチアイ / 悪魔の子 | Ai Higuchi",
+  "p": "ヒグチアイ",
   "a": "youtube:UCaw0rNYSe89OPzix05flcsg",
   "firstSeen": "2026-10-09T12:23:27.075Z",
   "seed": true
@@ -28806,7 +28829,7 @@
   ],
   "uploaderId": "UCpJgF7I5iSL5_a3xtXgQJvw",
   "uploader": "WONDERFUL★OPPORTUNITY!",
-  "p": "Niccori^^ Survey Team Theme",
+  "p": "WONDERFUL★OPPORTUNITY!",
   "v": "鏡音リン",
   "a": "youtube:UCpJgF7I5iSL5_a3xtXgQJvw",
   "firstSeen": "2026-10-09T12:20:22.343Z",
@@ -28973,11 +28996,12 @@
   ],
   "uploaderId": 95303437,
   "uploader": null,
-  "p": "",
+  "p": "カミヰユウ",
   "v": "初音ミク",
   "a": "niconico:95303437",
   "firstSeen": "2026-10-08T14:36:47.329Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:M9moY0hEJRE",
@@ -29332,11 +29356,12 @@
   ],
   "uploaderId": 15918028,
   "uploader": null,
-  "p": "",
+  "p": "MARETU",
   "v": "初音ミク",
   "a": "niconico:15918028",
   "firstSeen": "2026-10-08T14:36:47.398Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:nXNeufhq_nw",
@@ -29533,7 +29558,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=hi9fgQWnT_g",
   "title": "【Cover】キャットラビング - 香椎モイミ feat. 可不 by ﾕｷﾑﾗﾁｬﾝ！",
-  "t": "キャットラビング",
+  "t": "香椎モイミ",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2021-12-19T11:00:21Z",
@@ -29551,19 +29576,18 @@
   "uploaderId": "UCQtqQx4vaeC9NG68dlFy7VA",
   "uploader": "ユキムラチャン!",
   "by": "ユキムラチャン!",
-  "pHint": "香椎モイミ",
-  "p": "香椎モイミ",
-  "a": "youtube:UC9_8AXpxjjNl62HPhF5IAyg",
+  "pHint": "キャットラビング",
+  "p": "キャットラビング",
+  "a": "キャットラビング",
   "firstSeen": "2026-10-09T12:20:22.384Z",
-  "seed": true,
-  "of": "yt:7gwvBrlUiww"
+  "seed": true
  },
  {
   "id": "yt:y10b0mmtGNY",
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=y10b0mmtGNY",
   "title": "Chinozo 'ベビーデーズ'feat.FloweR",
-  "t": "Chinozo 'ベビーデーズ'",
+  "t": "'ベビーデーズ'",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2021-12-18T11:00:11Z",
@@ -29579,7 +29603,7 @@
   "uploaderId": "UCft5HulDeuKloukyShxyOZA",
   "uploader": "Chinozo",
   "p": "Chinozo",
-  "v": "FloweR",
+  "v": "flower",
   "a": "youtube:UCft5HulDeuKloukyShxyOZA",
   "firstSeen": "2026-10-09T12:20:22.398Z",
   "seed": true
@@ -30126,7 +30150,7 @@
   "uploaderId": 10917285,
   "uploader": null,
   "p": "Flower - ぬゆり",
-  "v": "v flower",
+  "v": "flower",
   "a": "niconico:10917285",
   "firstSeen": "2026-10-08T14:36:47.319Z",
   "seed": true
@@ -30147,6 +30171,7 @@
   "uploaderId": "UCTpvP62LES9r-5xyxZBsUWg",
   "uploader": "Lanndo / ぬゆり Official",
   "p": "ぬゆり",
+  "v": "flower",
   "a": "youtube:UCTpvP62LES9r-5xyxZBsUWg",
   "firstSeen": "2026-10-09T12:20:22.395Z",
   "seed": true
@@ -30201,7 +30226,7 @@
   "uploaderId": 55005244,
   "uploader": null,
   "p": "Chinozo",
-  "v": "KafU",
+  "v": "可不",
   "a": "niconico:55005244",
   "firstSeen": "2026-10-08T14:36:47.421Z",
   "seed": true
@@ -30221,7 +30246,7 @@
   "tags": [],
   "uploaderId": "UCmuuQIQFoRoJG1exKlfFCSA",
   "uploader": "iroha(sasaki)",
-  "p": "Meltdown",
+  "p": "iroha",
   "v": "鏡音リン",
   "a": "youtube:UCmuuQIQFoRoJG1exKlfFCSA",
   "firstSeen": "2026-10-09T12:20:22.337Z",
@@ -30763,7 +30788,7 @@
   "uploaderId": 119749869,
   "uploader": null,
   "p": "",
-  "v": "v flower",
+  "v": "flower",
   "a": "niconico:119749869",
   "firstSeen": "2026-10-08T14:36:47.374Z",
   "seed": true
@@ -31192,7 +31217,7 @@
   ],
   "uploaderId": "UCgbTJ0Qb1OpA0GEocaJ7qrw",
   "uploader": "はるまきごはん / Harumaki Gohan Official",
-  "p": "はるまきごはん×煮ル果実",
+  "p": "はるまきごはん",
   "v": "初音ミク",
   "a": "youtube:UCgbTJ0Qb1OpA0GEocaJ7qrw",
   "firstSeen": "2026-10-09T12:20:22.401Z",
@@ -31473,6 +31498,7 @@
   "uploaderId": "UCam3IAA-nyfxRL8_wDQ35VA",
   "uploader": "MIMI",
   "p": "MIMI",
+  "v": "可不",
   "a": "youtube:UCam3IAA-nyfxRL8_wDQ35VA",
   "firstSeen": "2026-10-09T12:20:22.381Z",
   "seed": true
@@ -31737,11 +31763,12 @@
   ],
   "uploaderId": 89278204,
   "uploader": null,
-  "p": "",
+  "p": "水野あつ",
   "v": "可不",
   "a": "niconico:89278204",
   "firstSeen": "2026-10-08T14:36:47.411Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:91R2hdV_-aQ",
@@ -31889,7 +31916,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=R3V4sAXUJ-g",
   "title": "ꉈꀧ꒒꒒ꁄꍈꍈꀧ꒦ꉈ ꉣꅔꎡꅔꁕꁄ - U",
-  "t": "ꉈꀧ꒒꒒ꁄꍈꍈꀧ꒦ꉈ ꉣꅔꎡꅔꁕꁄ",
+  "t": "U",
   "kind": "本家",
   "g": "アニソン",
   "date": "2021-07-15T11:00:13Z",
@@ -31930,7 +31957,7 @@
   ],
   "uploaderId": "UChex1vr4WtFu-OsAukjuYCA",
   "uploader": "MILLENNIUM PARADE Official YouTube Channel",
-  "p": "U",
+  "p": "ꉈꀧ꒒꒒ꁄꍈꍈꀧ꒦ꉈ ꉣꅔꎡꅔꁕꁄ",
   "a": "youtube:UChex1vr4WtFu-OsAukjuYCA",
   "firstSeen": "2026-10-09T12:23:27.092Z",
   "seed": true
@@ -32262,7 +32289,7 @@
   "uploaderId": "UClkc2M0xPFhoOzzHlgZDMfw",
   "uploader": "sasakure. UK",
   "p": "sasakure. UK",
-  "v": "KAITO",
+  "v": "初音ミク",
   "a": "youtube:UClkc2M0xPFhoOzzHlgZDMfw",
   "firstSeen": "2026-10-09T12:20:22.329Z",
   "seed": true
@@ -32877,7 +32904,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=3Qed7zo96Gg",
   "title": "アイカ - れるりりfeat.GUMI / Aika - rerulili feat.GUMI",
-  "t": "れるりり",
+  "t": "アイカ",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2021-04-28T11:00:03Z",
@@ -32892,7 +32919,7 @@
   ],
   "uploaderId": "UCRYh_OrRM4JnZv3SxExbCnw",
   "uploader": "れるりり, rerulili",
-  "p": "アイカ",
+  "p": "れるりり",
   "v": "GUMI",
   "a": "youtube:UCRYh_OrRM4JnZv3SxExbCnw",
   "firstSeen": "2026-10-09T12:20:22.358Z",
@@ -32989,7 +33016,7 @@
   "uploaderId": 87705822,
   "uploader": null,
   "p": "るりう + GUMI",
-  "v": "v flower",
+  "v": "GUMI",
   "a": "niconico:87705822",
   "firstSeen": "2026-10-08T14:36:47.362Z",
   "seed": true
@@ -33023,7 +33050,7 @@
   "uploaderId": "UCz27kRnxA0FVzYZBm-KiH_g",
   "uploader": "FLG4",
   "p": "FLG4",
-  "v": "Flower",
+  "v": "flower",
   "a": "youtube:UCz27kRnxA0FVzYZBm-KiH_g",
   "firstSeen": "2026-10-09T12:20:22.397Z",
   "seed": true
@@ -33548,11 +33575,12 @@
   ],
   "uploaderId": 3489219,
   "uploader": null,
-  "p": "",
+  "p": "花譜",
   "v": "可不",
   "a": "niconico:3489219",
   "firstSeen": "2026-10-08T14:36:47.327Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm38268550",
@@ -33581,11 +33609,12 @@
   ],
   "uploaderId": 95303437,
   "uploader": null,
-  "p": "",
+  "p": "Kanaria",
   "v": "GUMI",
   "a": "niconico:95303437",
   "firstSeen": "2026-10-08T14:36:47.325Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:dgS6HvEohsw",
@@ -34087,6 +34116,7 @@
   "uploaderId": "UCft5HulDeuKloukyShxyOZA",
   "uploader": "Chinozo",
   "p": "Chinozo",
+  "v": "flower",
   "a": "youtube:UCft5HulDeuKloukyShxyOZA",
   "firstSeen": "2026-10-09T12:20:22.399Z",
   "seed": true
@@ -34786,7 +34816,7 @@
   "uploaderId": 55005244,
   "uploader": null,
   "p": "Chinozo",
-  "v": "FloweR",
+  "v": "flower",
   "a": "niconico:55005244",
   "firstSeen": "2026-10-08T14:36:47.436Z",
   "seed": true
@@ -34815,7 +34845,7 @@
   "uploaderId": "UCft5HulDeuKloukyShxyOZA",
   "uploader": "Chinozo",
   "p": "Chinozo",
-  "v": "v flower",
+  "v": "flower",
   "a": "youtube:UCft5HulDeuKloukyShxyOZA",
   "firstSeen": "2026-10-09T12:20:22.396Z",
   "seed": true
@@ -35346,7 +35376,7 @@
   ],
   "uploaderId": "UCE0uNSkGhhsNMwAZcIQY7rw",
   "uploader": "Mitchie M",
-  "p": "Giga × Mitchie M",
+  "p": "Mitchie M",
   "v": "初音ミク",
   "a": "youtube:UCE0uNSkGhhsNMwAZcIQY7rw",
   "firstSeen": "2026-10-09T12:20:22.352Z",
@@ -35357,7 +35387,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=XPT91f5vU-k",
   "title": "Da-iCE / ＜TVアニメ「ONE PIECE」主題歌＞「DREAMIN' ON」MUSIC VIDEO",
-  "t": "ONE PIECE",
+  "t": "DREAMIN' ON",
   "kind": "本家",
   "g": "アニソン",
   "date": "2020-08-02T21:00:06Z",
@@ -35398,7 +35428,7 @@
   ],
   "uploaderId": "UC7JQKVJMCIuVMcrFXSozMCw",
   "uploader": "Da-iCE",
-  "p": "Da-iCE / <TVアニメ",
+  "p": "Da-iCE",
   "a": "youtube:UC7JQKVJMCIuVMcrFXSozMCw",
   "firstSeen": "2026-10-09T12:23:27.107Z",
   "seed": true
@@ -35430,11 +35460,12 @@
   ],
   "uploaderId": 95303437,
   "uploader": null,
-  "p": "",
+  "p": "SynthesizerV 宮舞モカ",
   "v": "GUMI",
   "a": "niconico:95303437",
   "firstSeen": "2026-10-08T14:36:47.320Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:cm-l2h6GB8Q",
@@ -35818,7 +35849,7 @@
   "uploaderId": "UCft5HulDeuKloukyShxyOZA",
   "uploader": "Chinozo",
   "p": "Chinozo",
-  "v": "v flower",
+  "v": "flower",
   "a": "youtube:UCft5HulDeuKloukyShxyOZA",
   "firstSeen": "2026-10-09T12:20:22.400Z",
   "seed": true
@@ -35878,11 +35909,12 @@
   ],
   "uploaderId": 63367816,
   "uploader": null,
-  "p": "",
+  "p": "SEVENTHLINKS",
   "v": "flower",
   "a": "niconico:63367816",
   "firstSeen": "2026-10-08T14:36:47.385Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:AKQWRnZ_Fc0",
@@ -36045,7 +36077,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=Scpu6fB4waA",
   "title": "ヤミタイガール - れるりりfeat.GUMI / Yamitai Girl- rerulili feat.GUMI",
-  "t": "れるりり",
+  "t": "ヤミタイガール",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2020-05-22T11:00:12Z",
@@ -36086,7 +36118,7 @@
   ],
   "uploaderId": "UCRYh_OrRM4JnZv3SxExbCnw",
   "uploader": "れるりり, rerulili",
-  "p": "ヤミタイガール",
+  "p": "れるりり",
   "v": "GUMI",
   "a": "youtube:UCRYh_OrRM4JnZv3SxExbCnw",
   "firstSeen": "2026-10-09T12:20:22.357Z",
@@ -36428,7 +36460,7 @@
   "uploaderId": 55005244,
   "uploader": null,
   "p": "Chinozo",
-  "v": "FloweR",
+  "v": "flower",
   "a": "niconico:55005244",
   "firstSeen": "2026-10-08T14:36:47.327Z",
   "seed": true
@@ -36465,7 +36497,7 @@
   "uploaderId": "UCft5HulDeuKloukyShxyOZA",
   "uploader": "Chinozo",
   "p": "Chinozo",
-  "v": "v flower",
+  "v": "flower",
   "a": "youtube:UCft5HulDeuKloukyShxyOZA",
   "firstSeen": "2026-10-09T12:20:22.394Z",
   "seed": true
@@ -36911,7 +36943,7 @@
   "tags": [],
   "uploaderId": "UCQAdXyrF2fYcqdXUUW3YxUg",
   "uploader": "てにをは",
-  "p": "flower・てにをは",
+  "p": "てにをは",
   "v": "flower",
   "a": "youtube:UCQAdXyrF2fYcqdXUUW3YxUg",
   "firstSeen": "2026-10-09T12:20:22.395Z",
@@ -37247,7 +37279,7 @@
   "uploaderId": "UCT5ZYc0Whk1NX_Fdvlm1baw",
   "uploader": "Aqu3ra",
   "p": "Aqu3ra",
-  "v": "Flower",
+  "v": "flower",
   "a": "youtube:UCT5ZYc0Whk1NX_Fdvlm1baw",
   "firstSeen": "2026-10-09T12:23:27.037Z",
   "seed": true
@@ -37367,7 +37399,7 @@
   ],
   "uploaderId": "UCxKrjx1FDU81UXuwTgwYQHw",
   "uploader": "ひとしずく×やま△ （Hitoshizuku_Yamasankakkei）",
-  "p": "The Dream That a Girl Doll Had",
+  "p": "ひとしずく×やま△",
   "v": "鏡音リン",
   "a": "youtube:UCxKrjx1FDU81UXuwTgwYQHw",
   "firstSeen": "2026-10-09T12:20:22.351Z",
@@ -37582,11 +37614,12 @@
   ],
   "uploaderId": 24455542,
   "uploader": null,
-  "p": "",
+  "p": "Release",
   "v": "GUMI",
   "a": "niconico:24455542",
   "firstSeen": "2026-10-08T14:36:47.367Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:Uc4NBh_kCL4",
@@ -37666,11 +37699,12 @@
   ],
   "uploaderId": 88786564,
   "uploader": null,
-  "p": "",
+  "p": "john",
   "v": "初音ミク",
   "a": "niconico:88786564",
   "firstSeen": "2026-10-08T14:36:47.319Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:pUH9vCsvq08",
@@ -37940,7 +37974,7 @@
   "uploaderId": 32646403,
   "uploader": null,
   "p": "∴煮ル果実",
-  "v": "v flower",
+  "v": "flower",
   "a": "niconico:32646403",
   "firstSeen": "2026-10-08T14:36:47.431Z",
   "seed": true
@@ -38100,11 +38134,12 @@
   ],
   "uploaderId": 15918028,
   "uploader": null,
-  "p": "",
+  "p": "MARETU",
   "v": "初音ミク",
   "a": "niconico:15918028",
   "firstSeen": "2026-10-08T14:36:47.380Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:LCOItseOsFE",
@@ -38230,11 +38265,12 @@
   ],
   "uploaderId": 15104449,
   "uploader": null,
-  "p": "",
+  "p": "八王子P × Giga",
   "v": "初音ミク",
   "a": "niconico:15104449",
   "firstSeen": "2026-10-08T14:36:47.337Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:ERo-sPa1a5g",
@@ -38785,7 +38821,7 @@
   "uploaderId": 32646403,
   "uploader": null,
   "p": "∴煮ル果実",
-  "v": "v flower",
+  "v": "flower",
   "a": "niconico:32646403",
   "firstSeen": "2026-10-08T14:36:47.368Z",
   "seed": true
@@ -38818,6 +38854,7 @@
   "uploaderId": "UCkltfvjVoojq0BGRt4pmlig",
   "uploader": "煮ル果実 / NILFRUITS",
   "p": "∴煮ル果実",
+  "v": "flower",
   "a": "youtube:UCkltfvjVoojq0BGRt4pmlig",
   "firstSeen": "2026-10-09T12:20:22.396Z",
   "seed": true
@@ -39047,7 +39084,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=waKONiYYouU",
   "title": "アブソリュート YASUHIRO(康寛) feat.鏡音リン",
-  "t": "アブソリュート YASUHIRO",
+  "t": "アブソリュート",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2019-08-17T11:00:11Z",
@@ -39135,18 +39172,19 @@
   ],
   "uploaderId": 45395036,
   "uploader": null,
-  "p": "",
+  "p": "Misumi",
   "v": "初音ミク",
   "a": "niconico:45395036",
   "firstSeen": "2026-10-08T14:36:47.383Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:ovrRdVce9Mc",
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=ovrRdVce9Mc",
   "title": "ももクロ【MV】『おどるポンポコリン / Odoru Pompokolin』ANIMATION MUSIC VIDEO / ももいろクローバーZ(MOMOIRO CLOVER Z)",
-  "t": "おどるポンポコリン / Odoru Pompokolin",
+  "t": "ももクロ 『おどるポンポコリン",
   "kind": "本家",
   "g": "J-POP",
   "date": "2019-08-16T09:59:46Z",
@@ -39187,7 +39225,7 @@
   ],
   "uploaderId": "UC6YNWTm6zuMFsjqd0PO3G-Q",
   "uploader": "Momoiro Clover Z Channel",
-  "p": "ももクロ",
+  "p": "ももいろクローバーZ",
   "a": "youtube:UC6YNWTm6zuMFsjqd0PO3G-Q",
   "firstSeen": "2026-10-09T12:23:27.106Z",
   "seed": true
@@ -39519,7 +39557,7 @@
   ],
   "uploaderId": "UCZjuF1trqblAaWU7TJNbrow",
   "uploader": "youまん",
-  "p": "Weenywalker",
+  "p": "youまん",
   "v": "GUMI",
   "a": "youtube:UCZjuF1trqblAaWU7TJNbrow",
   "firstSeen": "2026-10-09T12:20:22.363Z",
@@ -39817,7 +39855,7 @@
   ],
   "uploaderId": "UCAaGaynFpku5cAx6OOSrW-w",
   "uploader": "HoneyWorks OFFICIAL",
-  "p": "mona",
+  "p": "HoneyWorks",
   "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w",
   "firstSeen": "2026-10-09T12:23:27.097Z",
   "seed": true
@@ -39935,7 +39973,7 @@
   "uploaderId": 32278038,
   "uploader": null,
   "p": "",
-  "v": "GUMI English",
+  "v": "GUMI",
   "a": "niconico:32278038",
   "firstSeen": "2026-10-08T14:36:47.421Z",
   "seed": true
@@ -39971,7 +40009,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=AufydOsiD6M",
   "title": "【MV】Lucky☆Orb feat. Hatsune Miku by emon(Tes.)  / ラッキー☆オーブ feat. 初音ミク by emon(Tes.) 【MIKU EXPO 5th】",
-  "t": "ラッキー☆オーブ",
+  "t": "Lucky☆Orb",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2019-05-06T08:59:57Z",
@@ -39981,7 +40019,7 @@
   "tags": [],
   "uploaderId": "UCJwGWV914kBlV4dKRn7AEFA",
   "uploader": "Hatsune Miku",
-  "p": "Lucky☆Orb",
+  "p": "ラッキー☆オーブ",
   "v": "初音ミク",
   "a": "youtube:UCJwGWV914kBlV4dKRn7AEFA",
   "firstSeen": "2026-10-09T12:20:22.334Z",
@@ -40319,7 +40357,7 @@
   "uploaderId": 8211134,
   "uploader": null,
   "p": "ノイローゼ",
-  "v": "v flower",
+  "v": "flower",
   "a": "niconico:8211134",
   "firstSeen": "2026-10-08T14:36:47.419Z",
   "seed": true
@@ -40668,7 +40706,7 @@
   "uploaderId": 32646403,
   "uploader": null,
   "p": "∴煮ル果実",
-  "v": "v flower",
+  "v": "flower",
   "a": "niconico:32646403",
   "firstSeen": "2026-10-08T14:36:47.424Z",
   "seed": true
@@ -41029,11 +41067,12 @@
   ],
   "uploaderId": 3489219,
   "uploader": null,
-  "p": "",
+  "p": "syudou",
   "v": "初音ミク",
   "a": "niconico:3489219",
   "firstSeen": "2026-10-08T14:36:47.321Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:XCyKJD6uQyg",
@@ -41091,7 +41130,7 @@
   "uploaderId": "UCT5ZYc0Whk1NX_Fdvlm1baw",
   "uploader": "Aqu3ra",
   "p": "Aqu3ra",
-  "v": "Flower",
+  "v": "flower",
   "a": "youtube:UCT5ZYc0Whk1NX_Fdvlm1baw",
   "firstSeen": "2026-10-09T12:20:22.402Z",
   "seed": true
@@ -41432,11 +41471,12 @@
   ],
   "uploaderId": 23068914,
   "uploader": null,
-  "p": "",
+  "p": "音戯箱",
   "v": "初音ミク",
   "a": "niconico:23068914",
   "firstSeen": "2026-10-08T14:36:47.345Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:sB1e_0jkvE8",
@@ -41536,7 +41576,7 @@
   "title": "ねぇ、どろどろさん 歌ってみた／あほの坂田。",
   "t": "ねぇ、どろどろさん",
   "kind": "歌ってみた",
-  "g": "その他",
+  "g": "ボカロ",
   "date": "2018-12-05T00:00:00+09:00",
   "views": 1337899,
   "likes": 930,
@@ -41554,7 +41594,10 @@
   "uploader": null,
   "by": "あほの坂田。",
   "firstSeen": "2026-10-08T15:10:08.997Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:DOCy49mTGTE",
+  "p": "YASUHIRO",
+  "a": "youtube:UCBjUVEhPdxnVKu83i6K2Eew"
  },
  {
   "id": "nico:sm34246019",
@@ -41761,7 +41804,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=DOCy49mTGTE",
   "title": "ねぇ、どろどろさん YASUHIRO(康寛) feat.鏡音リン",
-  "t": "ねぇ、どろどろさん YASUHIRO",
+  "t": "ねぇ、どろどろさん",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2018-11-10T10:58:41Z",
@@ -41974,7 +42017,7 @@
   "uploaderId": 57395379,
   "uploader": null,
   "p": "",
-  "v": "v flower",
+  "v": "flower",
   "a": "niconico:57395379",
   "firstSeen": "2026-10-08T14:36:47.357Z",
   "seed": true
@@ -42206,7 +42249,7 @@
   "uploaderId": 32646403,
   "uploader": null,
   "p": "∴煮ル果実",
-  "v": "v flower",
+  "v": "flower",
   "a": "niconico:32646403",
   "firstSeen": "2026-10-08T14:36:47.373Z",
   "seed": true
@@ -42287,6 +42330,7 @@
   "uploaderId": "UCkltfvjVoojq0BGRt4pmlig",
   "uploader": "煮ル果実 / NILFRUITS",
   "p": "∴煮ル果実",
+  "v": "flower",
   "a": "youtube:UCkltfvjVoojq0BGRt4pmlig",
   "firstSeen": "2026-10-09T12:20:22.395Z",
   "seed": true
@@ -42498,11 +42542,12 @@
   ],
   "uploaderId": 61786845,
   "uploader": null,
-  "p": "",
+  "p": "大沼パセリ",
   "v": "flower",
   "a": "niconico:61786845",
   "firstSeen": "2026-10-08T14:36:47.387Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:QprnVxCveSY",
@@ -42568,7 +42613,7 @@
   "uploaderId": "UCJwGWV914kBlV4dKRn7AEFA",
   "uploader": "Hatsune Miku",
   "p": "Hatsune Miku",
-  "v": "初音ミク",
+  "v": "鏡音リン",
   "a": "youtube:UCJwGWV914kBlV4dKRn7AEFA",
   "firstSeen": "2026-10-09T12:20:22.346Z",
   "seed": true
@@ -43425,11 +43470,12 @@
   ],
   "uploaderId": 45187521,
   "uploader": null,
-  "p": "",
-  "v": "v flower",
+  "p": "Guiano",
+  "v": "flower",
   "a": "niconico:45187521",
   "firstSeen": "2026-10-08T14:36:47.432Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:_xXenYRkbKs",
@@ -43453,7 +43499,7 @@
   "uploaderId": "UCAwt148qKLXzPF3LHfN76Bw",
   "uploader": "Guiano",
   "p": "Guiano",
-  "v": "v flower",
+  "v": "flower",
   "a": "youtube:UCAwt148qKLXzPF3LHfN76Bw",
   "firstSeen": "2026-10-09T12:20:22.398Z",
   "seed": true
@@ -44065,7 +44111,7 @@
   "uploaderId": 32646403,
   "uploader": null,
   "p": "∴煮ル果実",
-  "v": "v flower",
+  "v": "flower",
   "a": "niconico:32646403",
   "firstSeen": "2026-10-08T14:36:47.419Z",
   "seed": true
@@ -44494,7 +44540,7 @@
   "uploaderId": 10917285,
   "uploader": null,
   "p": "心華 - ぬゆり",
-  "v": "Flower",
+  "v": "flower",
   "a": "niconico:10917285",
   "firstSeen": "2026-10-08T14:36:47.364Z",
   "seed": true
@@ -44712,7 +44758,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=IfL-bmSrueE",
   "title": "悪魔の踊り方 / こんにちは谷田さん feat. 鏡音リン - Devil's Manner / Rin Kagamine",
-  "t": "こんにちは谷田さん",
+  "t": "悪魔の踊り方",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2018-04-28T08:00:04Z",
@@ -44753,7 +44799,7 @@
   ],
   "uploaderId": "UCDcL8RXDlhxvKDHVkb_nFzg",
   "uploader": "キタニタツヤofficial",
-  "p": "悪魔の踊り方",
+  "p": "こんにちは谷田さん",
   "v": "鏡音リン",
   "a": "youtube:UCDcL8RXDlhxvKDHVkb_nFzg",
   "firstSeen": "2026-10-09T12:20:22.354Z",
@@ -44963,7 +45009,7 @@
   "firstSeen": "2026-10-08T15:10:08.915Z",
   "seed": true,
   "of": "yt:f5jDVFmEIVQ",
-  "p": "Neru & z'5",
+  "p": "Neru",
   "a": "youtube:UClxXuM2m0rIL9VCA1ds9HqA"
  },
  {
@@ -45402,7 +45448,7 @@
   ],
   "uploaderId": "UClxXuM2m0rIL9VCA1ds9HqA",
   "uploader": "Neru OFFICIAL",
-  "p": "Neru & z'5",
+  "p": "Neru",
   "v": "鏡音リン",
   "a": "youtube:UClxXuM2m0rIL9VCA1ds9HqA",
   "firstSeen": "2026-10-09T12:20:22.344Z",
@@ -45720,11 +45766,12 @@
   ],
   "uploaderId": 57395379,
   "uploader": null,
-  "p": "",
+  "p": "R Sound Design",
   "v": "初音ミク",
   "a": "niconico:57395379",
   "firstSeen": "2026-10-08T14:36:47.370Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:bUbOc97FpUA",
@@ -46304,11 +46351,12 @@
   ],
   "uploaderId": 53435803,
   "uploader": null,
-  "p": "",
+  "p": "ユリイ・カノン",
   "v": "GUMI",
   "a": "niconico:53435803",
   "firstSeen": "2026-10-08T14:36:47.323Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:hZFBTnzKa54",
@@ -46480,11 +46528,12 @@
   ],
   "uploaderId": 53052370,
   "uploader": null,
-  "p": "",
+  "p": "羽生まゐご",
   "v": "flower",
   "a": "niconico:53052370",
   "firstSeen": "2026-10-08T14:36:47.371Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:wM4phGebR4o",
@@ -46514,7 +46563,7 @@
   "uploaderId": "UCSwShVpWrdSAV9PYpH5ojBQ",
   "uploader": "羽生まゐご",
   "p": "羽生まゐご",
-  "v": "v flower",
+  "v": "初音ミク",
   "a": "youtube:UCSwShVpWrdSAV9PYpH5ojBQ",
   "firstSeen": "2026-10-09T12:20:22.397Z",
   "seed": true
@@ -47712,7 +47761,7 @@
   ],
   "uploaderId": "UCpJgF7I5iSL5_a3xtXgQJvw",
   "uploader": "WONDERFUL★OPPORTUNITY!",
-  "p": "Positive club vs Negative club",
+  "p": "WONDERFUL★OPPORTUNITY!",
   "v": "鏡音リン",
   "a": "youtube:UCpJgF7I5iSL5_a3xtXgQJvw",
   "firstSeen": "2026-10-09T12:20:22.354Z",
@@ -48343,7 +48392,7 @@
   "uploaderId": 10917285,
   "uploader": null,
   "p": "flower - ぬゆり",
-  "v": "v flower",
+  "v": "flower",
   "a": "niconico:10917285",
   "firstSeen": "2026-10-08T14:36:47.355Z",
   "seed": true
@@ -49014,7 +49063,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=GaktqScd0Yk",
   "title": "鋲心全壊ガール -れるりり feat.GUMI / Tacks heart Break all Girl -rerulili feat.GUMI",
-  "t": "鋲心全壊ガール -れるりり",
+  "t": "鋲心全壊ガール",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2017-10-09T11:57:43Z",
@@ -49041,7 +49090,7 @@
   ],
   "uploaderId": "UCRYh_OrRM4JnZv3SxExbCnw",
   "uploader": "れるりり, rerulili",
-  "p": "Tacks heart Break all Girl -rerulili",
+  "p": "れるりり",
   "v": "GUMI",
   "a": "youtube:UCRYh_OrRM4JnZv3SxExbCnw",
   "firstSeen": "2026-10-09T12:20:22.362Z",
@@ -49068,7 +49117,7 @@
   ],
   "uploaderId": "UC1tk9F5-MGXEq4LWnjmrtpA",
   "uploader": "カラオケ歌っちゃ王",
-  "p": "164",
+  "p": "カラオケ歌っちゃ王",
   "v": "GUMI",
   "a": "youtube:UC1tk9F5-MGXEq4LWnjmrtpA",
   "firstSeen": "2026-10-09T12:20:22.362Z",
@@ -49261,11 +49310,12 @@
   ],
   "uploaderId": 15918028,
   "uploader": null,
-  "p": "",
+  "p": "MARETU",
   "v": "初音ミク",
   "a": "niconico:15918028",
   "firstSeen": "2026-10-08T14:36:47.330Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm32012542",
@@ -49406,7 +49456,7 @@
   "firstSeen": "2026-10-08T15:10:09.004Z",
   "seed": true,
   "of": "yt:2IH-toUoq3w",
-  "p": "Neru & z'5",
+  "p": "Neru",
   "a": "youtube:UClxXuM2m0rIL9VCA1ds9HqA"
  },
  {
@@ -49497,7 +49547,7 @@
   ],
   "uploaderId": "UClxXuM2m0rIL9VCA1ds9HqA",
   "uploader": "Neru OFFICIAL",
-  "p": "Neru & z'5",
+  "p": "Neru",
   "v": "鏡音リン",
   "a": "youtube:UClxXuM2m0rIL9VCA1ds9HqA",
   "firstSeen": "2026-10-09T12:20:22.349Z",
@@ -50441,7 +50491,7 @@
   "uploaderId": "UCSwShVpWrdSAV9PYpH5ojBQ",
   "uploader": "羽生まゐご",
   "p": "羽生まゐご",
-  "v": "v flower",
+  "v": "初音ミク",
   "a": "youtube:UCSwShVpWrdSAV9PYpH5ojBQ",
   "firstSeen": "2026-10-09T12:20:22.395Z",
   "seed": true
@@ -50472,11 +50522,12 @@
   ],
   "uploaderId": 53052370,
   "uploader": null,
-  "p": "",
+  "p": "羽生まゐご",
   "v": "flower",
   "a": "niconico:53052370",
   "firstSeen": "2026-10-08T14:36:47.337Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm31767226",
@@ -50884,7 +50935,7 @@
   "uploaderId": 10917285,
   "uploader": null,
   "p": "結月ゆかり - ぬゆり・アボガド6",
-  "v": "Flower",
+  "v": "flower",
   "a": "niconico:10917285",
   "firstSeen": "2026-10-08T14:36:47.333Z",
   "seed": true
@@ -50907,7 +50958,7 @@
   "uploaderId": "UCTpvP62LES9r-5xyxZBsUWg",
   "uploader": "Lanndo / ぬゆり Official",
   "p": "Flower・結月ゆかり : It's Just Life",
-  "v": "結月ゆかり",
+  "v": "flower",
   "a": "youtube:UCTpvP62LES9r-5xyxZBsUWg",
   "firstSeen": "2026-10-09T12:20:22.395Z",
   "seed": true
@@ -50951,7 +51002,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=vn7vfza-6fQ",
   "title": "＜TVアニメ「恋と嘘」OPテーマ＞フレデリック「かなしいうれしい」Music Video  -2nd Full Album「フレデリズム2」2019/2/20 Release-",
-  "t": "恋と嘘",
+  "t": "かなしいうれしい",
   "kind": "本家",
   "g": "アニソン",
   "date": "2017-08-01T03:00:02Z",
@@ -50984,7 +51035,7 @@
   ],
   "uploaderId": "UCeoCO4_u1DdJBwyil66IsNw",
   "uploader": "フレデリック FREDERIC official",
-  "p": "<TVアニメ",
+  "p": "フレデリック",
   "a": "youtube:UCeoCO4_u1DdJBwyil66IsNw",
   "firstSeen": "2026-10-09T12:23:27.099Z",
   "seed": true
@@ -51227,11 +51278,12 @@
   ],
   "uploaderId": 53435803,
   "uploader": null,
-  "p": "",
+  "p": "ユリイ・カノン",
   "v": "GUMI",
   "a": "niconico:53435803",
   "firstSeen": "2026-10-08T14:36:47.342Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm31570085",
@@ -51758,6 +51810,7 @@
   "firstSeen": "2026-10-08T15:10:09.003Z",
   "seed": true,
   "of": "nico:sm29822304",
+  "p": "バルーン",
   "a": "niconico:14203891"
  },
  {
@@ -51943,7 +51996,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=9aJVr5tTTWk",
   "title": "米津玄師 - ピースサイン , Kenshi Yonezu - Peace Sign",
-  "t": "ピースサイン , Kenshi Yonezu",
+  "t": "ピースサイン",
   "kind": "本家",
   "g": "アニソン",
   "date": "2017-06-07T23:00:00Z",
@@ -52069,7 +52122,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=DdobMp1F8ac",
   "title": "有機酸/ewe「Dancer in the Dark」feat.flower MV",
-  "t": "Dancer in the Dark",
+  "t": "有機酸",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2017-05-26T11:03:32Z",
@@ -52087,7 +52140,7 @@
   ],
   "uploaderId": "UCw1U9K3S8WVWp7REGaHIW0A",
   "uploader": "神山羊 / Yoh Kamiyama",
-  "p": "有機酸/ewe",
+  "p": "神山羊",
   "v": "flower",
   "a": "youtube:UCw1U9K3S8WVWp7REGaHIW0A",
   "firstSeen": "2026-10-09T12:20:22.400Z",
@@ -52145,7 +52198,8 @@
   ],
   "uploaderId": "UCwCkTSsWNMP5eWoHeO8Hwhg",
   "uploader": "Strawberry Subs",
-  "p": "Kagamine Rin",
+  "p": "Strawberry Subs",
+  "v": "鏡音リン",
   "a": "youtube:UCwCkTSsWNMP5eWoHeO8Hwhg",
   "firstSeen": "2026-10-09T12:20:22.337Z",
   "seed": true
@@ -52925,11 +52979,12 @@
   ],
   "uploaderId": 12651886,
   "uploader": null,
-  "p": "",
+  "p": "niki",
   "v": "初音ミク",
   "a": "niconico:12651886",
   "firstSeen": "2026-10-08T14:36:47.342Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm30964600",
@@ -53253,6 +53308,7 @@
   "firstSeen": "2026-10-08T15:10:08.749Z",
   "seed": true,
   "of": "nico:sm29822304",
+  "p": "バルーン",
   "a": "niconico:14203891"
  },
  {
@@ -53283,7 +53339,7 @@
   "uploaderId": 10917285,
   "uploader": null,
   "p": "flower - ぬゆり",
-  "v": "v flower",
+  "v": "flower",
   "a": "niconico:10917285",
   "firstSeen": "2026-10-08T14:36:47.334Z",
   "seed": true
@@ -53486,6 +53542,7 @@
   "firstSeen": "2026-10-08T15:10:08.659Z",
   "seed": true,
   "of": "nico:sm29822304",
+  "p": "バルーン",
   "a": "niconico:14203891"
  },
  {
@@ -53575,6 +53632,7 @@
   "firstSeen": "2026-10-08T15:10:08.922Z",
   "seed": true,
   "of": "nico:sm29822304",
+  "p": "バルーン",
   "a": "niconico:14203891"
  },
  {
@@ -53637,11 +53695,12 @@
   ],
   "uploaderId": 57395379,
   "uploader": null,
-  "p": "",
+  "p": "R Sound Design",
   "v": "初音ミク",
   "a": "niconico:57395379",
   "firstSeen": "2026-10-08T14:36:47.327Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:hUaVxNUCbc4",
@@ -55208,11 +55267,12 @@
   ],
   "uploaderId": 1561183,
   "uploader": null,
-  "p": "",
+  "p": "ぽりふぉ",
   "v": "鏡音リン",
   "a": "niconico:1561183",
   "firstSeen": "2026-10-08T14:36:47.375Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm30191567",
@@ -55266,7 +55326,7 @@
   ],
   "uploaderId": "UCooGmyC5ax5zM9IzP9cy1QQ",
   "uploader": "ぽりふぉ / PolyphonicBranch",
-  "p": "Retro Mania Rhapsody",
+  "p": "ぽりふぉ",
   "v": "鏡音リン",
   "a": "youtube:UCooGmyC5ax5zM9IzP9cy1QQ",
   "firstSeen": "2026-10-09T12:20:22.354Z",
@@ -56038,7 +56098,7 @@
   "firstSeen": "2026-10-08T15:10:08.667Z",
   "seed": true,
   "of": "yt:vqiULULdvMA",
-  "p": "Bouken No Sho was deleted",
+  "p": "WONDERFUL★OPPORTUNITY!",
   "a": "youtube:UCpJgF7I5iSL5_a3xtXgQJvw"
  },
  {
@@ -56328,7 +56388,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=Un4JS7f6KLQ",
   "title": "有機酸/ewe「lili.」feat.flower MV",
-  "t": "lili.",
+  "t": "有機酸",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2016-10-20T11:30:01Z",
@@ -56345,7 +56405,7 @@
   ],
   "uploaderId": "UCw1U9K3S8WVWp7REGaHIW0A",
   "uploader": "神山羊 / Yoh Kamiyama",
-  "p": "有機酸/ewe",
+  "p": "神山羊",
   "v": "flower",
   "a": "youtube:UCw1U9K3S8WVWp7REGaHIW0A",
   "firstSeen": "2026-10-09T12:20:22.399Z",
@@ -56390,7 +56450,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=PPFH4h2YcKE",
   "title": "乱躁滅裂ガール れるりり feat 初音ミク&GUMI / Disturb Manic Girl - rerulili feat MIKU&GUMI",
-  "t": "Disturb Manic Girl",
+  "t": "乱躁滅裂ガール",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2016-10-14T10:00:02Z",
@@ -56431,7 +56491,7 @@
   ],
   "uploaderId": "UCRYh_OrRM4JnZv3SxExbCnw",
   "uploader": "れるりり, rerulili",
-  "p": "乱躁滅裂ガール れるりり",
+  "p": "れるりり",
   "v": "初音ミク",
   "a": "youtube:UCRYh_OrRM4JnZv3SxExbCnw",
   "firstSeen": "2026-10-09T12:20:22.333Z",
@@ -56464,11 +56524,12 @@
   ],
   "uploaderId": 14203891,
   "uploader": null,
-  "p": "",
+  "p": "バルーン",
   "v": "flower",
   "a": "niconico:14203891",
   "firstSeen": "2026-10-08T14:36:47.319Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:TA5OFS_xX0c",
@@ -56517,12 +56578,11 @@
   "uploaderId": "UC3Bjw_Ek1FTbhEKZsh9uo1w",
   "uploader": "須田景凪 バルーン",
   "by": "須田景凪 バルーン",
-  "pHint": "flower",
-  "p": "flower",
-  "a": "flower",
   "firstSeen": "2026-10-09T12:20:22.395Z",
   "seed": true,
-  "of": "nico:sm29822304"
+  "p": "バルーン",
+  "of": "nico:sm29822304",
+  "a": "niconico:14203891"
  },
  {
   "id": "nico:sm29813450",
@@ -56751,7 +56811,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=AhIPLdltlbY",
   "title": "【鏡音リンレン】KSGR地獄の刑【オリジナルMV/ワンオポ】/ KSGR Jigoku no kei - Kagamine Rin&Len",
-  "t": "KSGR Jigoku no kei",
+  "t": "KSGR地獄の刑",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2016-09-19T09:00:00Z",
@@ -56771,7 +56831,7 @@
   ],
   "uploaderId": "UCpJgF7I5iSL5_a3xtXgQJvw",
   "uploader": "WONDERFUL★OPPORTUNITY!",
-  "p": "KSGR地獄の刑",
+  "p": "WONDERFUL★OPPORTUNITY!",
   "v": "鏡音リン",
   "a": "youtube:UCpJgF7I5iSL5_a3xtXgQJvw",
   "firstSeen": "2026-10-09T12:20:22.349Z",
@@ -57590,17 +57650,18 @@
   ],
   "uploaderId": 3397653,
   "uploader": null,
-  "p": "",
+  "p": "ひとしずく×やま△",
   "a": "niconico:3397653",
   "firstSeen": "2026-10-08T14:36:47.398Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:CiEC329xPos",
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=CiEC329xPos",
   "title": "【ボカロ10人】祝福のメシアとアイの塔【オリジナルMV】/【VOCALOID 10】『Blessed Messiah and the Tower of AI』【Original MV】",
-  "t": "Blessed Messiah and the Tower of AI",
+  "t": "祝福のメシアとアイの塔",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2016-07-20T10:52:28Z",
@@ -57641,7 +57702,7 @@
   ],
   "uploaderId": "UCxKrjx1FDU81UXuwTgwYQHw",
   "uploader": "ひとしずく×やま△ （Hitoshizuku_Yamasankakkei）",
-  "p": "祝福のメシアとアイの塔",
+  "p": "ひとしずく×やま△",
   "v": "初音ミク",
   "a": "youtube:UCxKrjx1FDU81UXuwTgwYQHw",
   "firstSeen": "2026-10-09T12:20:22.404Z",
@@ -57829,7 +57890,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=GhRe642nPQs",
   "title": "難聴系男子が倒せない- 鏡音リン for LamazeP",
-  "t": "難聴系男子が倒せない- 鏡音リン for LamazeP",
+  "t": "難聴系男子が倒せない- 鏡音リン for",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2016-07-04T21:00:01Z",
@@ -58412,11 +58473,12 @@
   ],
   "uploaderId": 17586425,
   "uploader": null,
-  "p": "",
+  "p": "青谷",
   "v": "重音テト",
   "a": "niconico:17586425",
   "firstSeen": "2026-10-08T14:36:47.389Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm29036897",
@@ -58563,11 +58625,12 @@
   ],
   "uploaderId": 15104449,
   "uploader": null,
-  "p": "",
+  "p": "八王子P",
   "v": "初音ミク",
   "a": "niconico:15104449",
   "firstSeen": "2026-10-08T14:36:47.327Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:o1iz4L-5zkQ",
@@ -59186,6 +59249,7 @@
   "uploaderId": "UClxXuM2m0rIL9VCA1ds9HqA",
   "uploader": "Neru OFFICIAL",
   "p": "Neru",
+  "v": "鏡音リン",
   "a": "youtube:UClxXuM2m0rIL9VCA1ds9HqA",
   "firstSeen": "2026-10-09T12:20:22.345Z",
   "seed": true
@@ -60040,7 +60104,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=bcLYdxMusHc",
   "title": "TOKIO FUNKA /トキヲ・ファンカ - takamatt feat.GUMI",
-  "t": "TOKIO FUNKA",
+  "t": "トキヲ・ファンカ",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2016-02-14T15:40:34Z",
@@ -61031,7 +61095,7 @@
   ],
   "uploaderId": "UCYNk3hp6TYIudnvHn1bI1OQ",
   "uploader": "Mario GaGabriel",
-  "p": "The Daughter of Evil",
+  "p": "Mario GaGabriel",
   "a": "youtube:UCYNk3hp6TYIudnvHn1bI1OQ",
   "firstSeen": "2026-10-09T12:20:22.343Z",
   "seed": true
@@ -61282,6 +61346,7 @@
   "firstSeen": "2026-10-08T15:10:08.923Z",
   "seed": true,
   "of": "nico:sm20296308",
+  "p": "初音ミク オリジナル曲",
   "a": "niconico:28540911"
  },
  {
@@ -61484,7 +61549,7 @@
   ],
   "uploaderId": "UCxKrjx1FDU81UXuwTgwYQHw",
   "uploader": "ひとしずく×やま△ （Hitoshizuku_Yamasankakkei）",
-  "p": "Mistletoe~The Tree of Reincarnation~",
+  "p": "ひとしずく×やま△",
   "v": "初音ミク",
   "a": "youtube:UCxKrjx1FDU81UXuwTgwYQHw",
   "firstSeen": "2026-10-09T12:20:22.344Z",
@@ -61839,6 +61904,7 @@
   "firstSeen": "2026-10-08T15:10:08.908Z",
   "seed": true,
   "of": "nico:sm20973557",
+  "p": "takamatt",
   "a": "niconico:424424"
  },
  {
@@ -61977,7 +62043,7 @@
   "firstSeen": "2026-10-08T15:10:08.952Z",
   "seed": true,
   "of": "yt:P_At3pIE5BU",
-  "p": "CHiCO with HoneyWorks",
+  "p": "Sony Music",
   "a": "youtube:UCCy_q-N7F2FOIZ6ZggHIAKg"
  },
  {
@@ -62959,7 +63025,7 @@
   ],
   "uploaderId": "UCCy_q-N7F2FOIZ6ZggHIAKg",
   "uploader": "Sony Music (Japan)",
-  "p": "CHiCO with HoneyWorks",
+  "p": "Sony Music",
   "a": "youtube:UCCy_q-N7F2FOIZ6ZggHIAKg",
   "firstSeen": "2026-10-09T12:23:27.086Z",
   "seed": true
@@ -63073,7 +63139,7 @@
   "uploaderId": "UCAaGaynFpku5cAx6OOSrW-w",
   "uploader": "HoneyWorks OFFICIAL",
   "p": "HoneyWorks",
-  "v": "v flower",
+  "v": "GUMI",
   "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w",
   "firstSeen": "2026-10-09T12:20:22.356Z",
   "seed": true
@@ -63423,7 +63489,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=bDKWkleZoxI",
   "title": "┗|∵|┓イジワルな出会い／HoneyWorks feat.初音ミク",
-  "t": "┗",
+  "t": "┓イジワルな出会い",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2015-07-03T09:00:01Z",
@@ -63922,7 +63988,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=b1ygYIbu8hQ",
   "title": "┗|∵|┓暁月夜-アカツキヅクヨ-／HoneyWorks feat.鏡音リン",
-  "t": "┗",
+  "t": "┓暁月夜-アカツキヅクヨ",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2015-06-03T13:32:05Z",
@@ -64397,7 +64463,7 @@
   ],
   "uploaderId": "UCxKrjx1FDU81UXuwTgwYQHw",
   "uploader": "ひとしずく×やま△ （Hitoshizuku_Yamasankakkei）",
-  "p": "Genealogy of Red, White and Black",
+  "p": "ひとしずく×やま△",
   "v": "初音ミク",
   "a": "youtube:UCxKrjx1FDU81UXuwTgwYQHw",
   "firstSeen": "2026-10-09T12:20:22.352Z",
@@ -64633,7 +64699,7 @@
   ],
   "uploaderId": "UCxKrjx1FDU81UXuwTgwYQHw",
   "uploader": "ひとしずく×やま△ （Hitoshizuku_Yamasankakkei）",
-  "p": "Prisoner of Love and Desire",
+  "p": "ひとしずく×やま△",
   "v": "鏡音リン",
   "a": "youtube:UCxKrjx1FDU81UXuwTgwYQHw",
   "firstSeen": "2026-10-09T12:20:22.351Z",
@@ -64962,11 +65028,12 @@
   ],
   "uploaderId": 432349,
   "uploader": null,
-  "p": "",
+  "p": "Kikuo",
   "v": "初音ミク",
   "a": "niconico:432349",
   "firstSeen": "2026-10-08T14:36:47.361Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:NTrm_idbhUk",
@@ -65476,6 +65543,7 @@
   "firstSeen": "2026-10-08T15:10:08.999Z",
   "seed": true,
   "of": "nico:sm24841816",
+  "p": "異音緋色",
   "a": "niconico:101303"
  },
  {
@@ -65527,9 +65595,9 @@
   "by": "そらる×まふまふ",
   "firstSeen": "2026-10-08T15:10:08.638Z",
   "seed": true,
-  "of": "nico:sm25223315",
-  "p": "Iなんです",
-  "a": "niconico:2591026"
+  "of": "yt:o2ovsJkqaiM",
+  "p": "れるりり",
+  "a": "youtube:UCRYh_OrRM4JnZv3SxExbCnw"
  },
  {
   "id": "yt:wtJcLWeY114",
@@ -65685,7 +65753,7 @@
   ],
   "uploaderId": "UCCy_q-N7F2FOIZ6ZggHIAKg",
   "uploader": "Sony Music (Japan)",
-  "p": "CHiCO with HoneyWorks",
+  "p": "Sony Music",
   "a": "youtube:UCCy_q-N7F2FOIZ6ZggHIAKg",
   "firstSeen": "2026-10-09T12:23:27.087Z",
   "seed": true
@@ -65900,9 +65968,9 @@
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.977Z",
   "seed": true,
-  "of": "nico:sm25223315",
-  "p": "Iなんです",
-  "a": "niconico:2591026"
+  "of": "yt:o2ovsJkqaiM",
+  "p": "れるりり",
+  "a": "youtube:UCRYh_OrRM4JnZv3SxExbCnw"
  },
  {
   "id": "yt:09R8_2nJtjg",
@@ -66141,7 +66209,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=o2ovsJkqaiM",
   "title": "厨病激発ボーイ - れるりりfeat.鏡音レン / Outburst Dreamer Boys - rerulili feat.KagamineRen",
-  "t": "れるりり",
+  "t": "厨病激発ボーイ",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2015-01-02T11:44:36Z",
@@ -66177,7 +66245,7 @@
   ],
   "uploaderId": "UCRYh_OrRM4JnZv3SxExbCnw",
   "uploader": "れるりり, rerulili",
-  "p": "厨病激発ボーイ",
+  "p": "れるりり",
   "v": "鏡音レン",
   "a": "youtube:UCRYh_OrRM4JnZv3SxExbCnw",
   "firstSeen": "2026-10-09T12:20:22.341Z",
@@ -66198,7 +66266,7 @@
   "tags": [],
   "uploaderId": "UCAaGaynFpku5cAx6OOSrW-w",
   "uploader": "HoneyWorks OFFICIAL",
-  "p": "∵",
+  "p": "HoneyWorks",
   "v": "GUMI",
   "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w",
   "firstSeen": "2026-10-09T12:20:22.360Z",
@@ -66529,7 +66597,7 @@
   ],
   "uploaderId": "UCCejN_rqhLnQt2uEM6v-uug",
   "uploader": "蝶々P / 一之瀬ユウ",
-  "p": "Kokoronashi",
+  "p": "蝶々P",
   "v": "初音ミク",
   "a": "youtube:UCCejN_rqhLnQt2uEM6v-uug",
   "firstSeen": "2026-10-09T12:20:22.358Z",
@@ -66540,7 +66608,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=shs0rAiwsGQ",
   "title": "「ＭＶ」　千本桜　WhiteFlame feat 初音ミク",
-  "t": "「ＭＶ」　千本桜　WhiteFlame feat 初音ミク",
+  "t": "千本桜",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2014-12-02T09:40:07Z",
@@ -66603,7 +66671,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=WqlpuarOvq8",
   "title": "┗|∵|┓今好きになる。／HoneyWorks feat.初音ミク",
-  "t": "┗",
+  "t": "┓今好きになる。",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2014-11-25T10:45:16Z",
@@ -66674,6 +66742,7 @@
   "firstSeen": "2026-10-08T15:10:09.011Z",
   "seed": true,
   "of": "nico:sm24841816",
+  "p": "異音緋色",
   "a": "niconico:101303"
  },
  {
@@ -66842,7 +66911,7 @@
   ],
   "uploaderId": "UCpJgF7I5iSL5_a3xtXgQJvw",
   "uploader": "WONDERFUL★OPPORTUNITY!",
-  "p": "Bouken No Sho was deleted",
+  "p": "WONDERFUL★OPPORTUNITY!",
   "v": "鏡音リン",
   "a": "youtube:UCpJgF7I5iSL5_a3xtXgQJvw",
   "firstSeen": "2026-10-09T12:20:22.345Z",
@@ -67070,11 +67139,12 @@
   ],
   "uploaderId": 101303,
   "uploader": null,
-  "p": "",
+  "p": "異音緋色",
   "v": "初音ミク",
   "a": "niconico:101303",
   "firstSeen": "2026-10-08T14:36:47.407Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm24812825",
@@ -67425,7 +67495,7 @@
   "uploaderId": 19241380,
   "uploader": null,
   "p": "",
-  "v": "Gumi English",
+  "v": "GUMI",
   "a": "niconico:19241380",
   "firstSeen": "2026-10-08T14:36:47.320Z",
   "seed": true
@@ -68235,6 +68305,7 @@
   "firstSeen": "2026-10-08T15:10:08.902Z",
   "seed": true,
   "of": "nico:sm20296308",
+  "p": "初音ミク オリジナル曲",
   "a": "niconico:28540911"
  },
  {
@@ -68429,16 +68500,16 @@
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.746Z",
   "seed": true,
-  "of": "nico:sm22831329",
-  "p": "Iなんです",
-  "a": "niconico:2591026"
+  "of": "yt:b2GJcYBoVyg",
+  "p": "れるりり",
+  "a": "youtube:UCRYh_OrRM4JnZv3SxExbCnw"
  },
  {
   "id": "yt:CI9Gr9kxtJ0",
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=CI9Gr9kxtJ0",
   "title": "sasakure.UK - Anti-Gravities feat. GUMI / アンチグラビティーズ",
-  "t": "Anti-Gravities",
+  "t": "アンチグラビティーズ",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2014-07-29T07:59:23Z",
@@ -68522,7 +68593,7 @@
   ],
   "uploaderId": "UCCy_q-N7F2FOIZ6ZggHIAKg",
   "uploader": "Sony Music (Japan)",
-  "p": "CHiCO with HoneyWorks",
+  "p": "Sony Music",
   "a": "youtube:UCCy_q-N7F2FOIZ6ZggHIAKg",
   "firstSeen": "2026-10-09T12:23:27.083Z",
   "seed": true
@@ -68887,6 +68958,7 @@
   "firstSeen": "2026-10-08T15:10:08.970Z",
   "seed": true,
   "of": "nico:sm22608740",
+  "p": "蝶々P",
   "a": "niconico:1137213"
  },
  {
@@ -69672,7 +69744,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=Ak9S5ibCuyk",
   "title": "DECO*27 - ラブドール feat. GUMI",
-  "t": "DECO*27",
+  "t": "ラブドール",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2014-05-30T11:25:16Z",
@@ -69690,7 +69762,7 @@
   ],
   "uploaderId": "UCtGmulznR7e0KxpEdKu_nqw",
   "uploader": "U/M/A/A Inc.",
-  "p": "ラブドール",
+  "p": "DECO*27",
   "v": "GUMI",
   "a": "youtube:UCtGmulznR7e0KxpEdKu_nqw",
   "firstSeen": "2026-10-09T12:20:22.358Z",
@@ -69736,7 +69808,7 @@
   ],
   "uploaderId": "UCRQsivtS8Cjj9-X6tOhInKw",
   "uploader": "“亜沙” ASA official channel",
-  "p": "Yoshiwara Lament",
+  "p": "“亜沙” ASA",
   "v": "重音テト",
   "a": "youtube:UCRQsivtS8Cjj9-X6tOhInKw",
   "firstSeen": "2026-10-09T12:20:22.367Z",
@@ -69970,9 +70042,9 @@
   "by": "りぶ×伊東歌詞太郎",
   "firstSeen": "2026-10-08T15:10:08.614Z",
   "seed": true,
-  "of": "nico:sm22831329",
-  "p": "Iなんです",
-  "a": "niconico:2591026"
+  "of": "yt:b2GJcYBoVyg",
+  "p": "れるりり",
+  "a": "youtube:UCRYh_OrRM4JnZv3SxExbCnw"
  },
  {
   "id": "nico:sm23538606",
@@ -70506,10 +70578,11 @@
   ],
   "uploaderId": 1101042,
   "uploader": null,
-  "p": "",
+  "p": "halyosy",
   "a": "niconico:1101042",
   "firstSeen": "2026-10-08T14:36:47.341Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:E4tIHBx7bqc",
@@ -71193,7 +71266,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=WdHRGH1Qv70",
   "title": "【巡音ルカ】 \" どりーみんチュチュ / Dreamin Chuchu \" by emon 【MEGURINE LUKA】",
-  "t": "どりーみんチュチュ / Dreamin Chuchu",
+  "t": "\" どりーみんチュチュ",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2014-02-28T10:00:02Z",
@@ -71714,7 +71787,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=b2GJcYBoVyg",
   "title": "神のまにまに - れるりりfeat.ミク&リン&GUMI / At God's Mercy - rerulili feat.Vocaloids",
-  "t": "れるりり",
+  "t": "神のまにまに",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2014-02-07T11:00:03Z",
@@ -71745,7 +71818,7 @@
   ],
   "uploaderId": "UCRYh_OrRM4JnZv3SxExbCnw",
   "uploader": "れるりり, rerulili",
-  "p": "神のまにまに",
+  "p": "れるりり",
   "v": "GUMI",
   "a": "youtube:UCRYh_OrRM4JnZv3SxExbCnw",
   "firstSeen": "2026-10-09T12:20:22.336Z",
@@ -71779,7 +71852,7 @@
   "uploaderId": 1137213,
   "uploader": null,
   "p": "",
-  "v": "GUMI English",
+  "v": "GUMI",
   "a": "niconico:1137213",
   "firstSeen": "2026-10-08T14:36:47.354Z",
   "seed": true
@@ -72092,7 +72165,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=DnLFVUi3oOU",
   "title": "DECO*27 - モザイクロール feat. GUMI",
-  "t": "DECO*27",
+  "t": "モザイクロール",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2014-01-20T02:56:57Z",
@@ -72114,7 +72187,7 @@
   ],
   "uploaderId": "UCtGmulznR7e0KxpEdKu_nqw",
   "uploader": "U/M/A/A Inc.",
-  "p": "モザイクロール",
+  "p": "DECO*27",
   "v": "GUMI",
   "a": "youtube:UCtGmulznR7e0KxpEdKu_nqw",
   "firstSeen": "2026-10-09T12:20:22.357Z",
@@ -72125,7 +72198,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=B-A2eYlbrwQ",
   "title": "DECO*27 - 弱虫モンブラン feat. GUMI",
-  "t": "DECO*27",
+  "t": "弱虫モンブラン",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2014-01-20T02:56:13Z",
@@ -72147,7 +72220,7 @@
   ],
   "uploaderId": "UCtGmulznR7e0KxpEdKu_nqw",
   "uploader": "U/M/A/A Inc.",
-  "p": "弱虫モンブラン",
+  "p": "DECO*27",
   "v": "GUMI",
   "a": "youtube:UCtGmulznR7e0KxpEdKu_nqw",
   "firstSeen": "2026-10-09T12:20:22.356Z",
@@ -72315,11 +72388,12 @@
   ],
   "uploaderId": 1137213,
   "uploader": null,
-  "p": "",
+  "p": "蝶々P",
   "v": "GUMI",
   "a": "niconico:1137213",
   "firstSeen": "2026-10-08T14:36:47.381Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:5l_Uv5VtY9g",
@@ -72735,7 +72809,7 @@
   ],
   "uploaderId": "UCpJgF7I5iSL5_a3xtXgQJvw",
   "uploader": "WONDERFUL★OPPORTUNITY!",
-  "p": "Remote Control",
+  "p": "WONDERFUL★OPPORTUNITY!",
   "v": "鏡音リン",
   "a": "youtube:UCpJgF7I5iSL5_a3xtXgQJvw",
   "firstSeen": "2026-10-09T12:20:22.342Z",
@@ -72766,7 +72840,7 @@
   ],
   "uploaderId": "UCpJgF7I5iSL5_a3xtXgQJvw",
   "uploader": "WONDERFUL★OPPORTUNITY!",
-  "p": "Shindeshimautowa Nasakenai!",
+  "p": "WONDERFUL★OPPORTUNITY!",
   "v": "鏡音リン",
   "a": "youtube:UCpJgF7I5iSL5_a3xtXgQJvw",
   "firstSeen": "2026-10-09T12:20:22.345Z",
@@ -72982,11 +73056,12 @@
   ],
   "uploaderId": 8785358,
   "uploader": null,
-  "p": "",
+  "p": "すこっぷ",
   "v": "初音ミク",
   "a": "niconico:8785358",
   "firstSeen": "2026-10-08T14:36:47.426Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:6kkSexCUzeA",
@@ -73362,7 +73437,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=2NkN_QpmnFM",
   "title": "【公式】 マネマネサイコトロピック - かいりきベア feat.GUMI",
-  "t": "かいりきベア",
+  "t": "マネマネサイコトロピック",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2013-10-31T20:45:08Z",
@@ -73383,7 +73458,7 @@
   ],
   "uploaderId": "UCp13SxKXbhCS0lb6Ty774iQ",
   "uploader": "かいりきベア／Kairiki bear",
-  "p": "マネマネサイコトロピック",
+  "p": "かいりきベア",
   "v": "GUMI",
   "a": "youtube:UCp13SxKXbhCS0lb6Ty774iQ",
   "firstSeen": "2026-10-09T12:20:22.361Z",
@@ -73670,7 +73745,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=AqI97zHMoQw",
   "title": "椎名もた(siinamota) - Young Girl A / 少女A",
-  "t": "椎名もた",
+  "t": "少女A",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2013-10-17T11:02:50Z",
@@ -73690,7 +73765,7 @@
   ],
   "uploaderId": "UCtGmulznR7e0KxpEdKu_nqw",
   "uploader": "U/M/A/A Inc.",
-  "p": "Young Girl A",
+  "p": "椎名もた",
   "v": "初音ミク",
   "a": "youtube:UCtGmulznR7e0KxpEdKu_nqw",
   "firstSeen": "2026-10-09T12:20:22.335Z",
@@ -73938,6 +74013,7 @@
   "firstSeen": "2026-10-08T15:10:08.818Z",
   "seed": true,
   "of": "nico:sm20296308",
+  "p": "初音ミク オリジナル曲",
   "a": "niconico:28540911"
  },
  {
@@ -73964,9 +74040,9 @@
   "by": "フリーダムに",
   "firstSeen": "2026-10-08T15:10:08.994Z",
   "seed": true,
-  "of": "nico:sm21702752",
-  "p": "Iなんです",
-  "a": "niconico:2591026"
+  "of": "yt:MqNmKnCNLyM",
+  "p": "れるりり",
+  "a": "youtube:UCRYh_OrRM4JnZv3SxExbCnw"
  },
  {
   "id": "nico:sm21956419",
@@ -74022,9 +74098,9 @@
   "by": "フツーダムに",
   "firstSeen": "2026-10-08T15:10:08.931Z",
   "seed": true,
-  "of": "nico:sm21702752",
-  "p": "Iなんです",
-  "a": "niconico:2591026"
+  "of": "yt:MqNmKnCNLyM",
+  "p": "れるりり",
+  "a": "youtube:UCRYh_OrRM4JnZv3SxExbCnw"
  },
  {
   "id": "nico:sm21920307",
@@ -74116,9 +74192,9 @@
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.727Z",
   "seed": true,
-  "of": "nico:sm21702752",
-  "p": "Iなんです",
-  "a": "niconico:2591026"
+  "of": "yt:MqNmKnCNLyM",
+  "p": "れるりり",
+  "a": "youtube:UCRYh_OrRM4JnZv3SxExbCnw"
  },
  {
   "id": "nico:sm21870906",
@@ -74210,7 +74286,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=Ey_NHZNYTeE",
   "title": "脳漿炸裂ガール - れるりりfeat.初音ミク&GUMI / Brain Fluid Explosion Girl - rerulili feat.miku&gumi",
-  "t": "れるりり",
+  "t": "脳漿炸裂ガール",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2013-09-13T02:40:24Z",
@@ -74240,7 +74316,7 @@
   ],
   "uploaderId": "UCRYh_OrRM4JnZv3SxExbCnw",
   "uploader": "れるりり, rerulili",
-  "p": "脳漿炸裂ガール",
+  "p": "れるりり",
   "v": "初音ミク",
   "a": "youtube:UCRYh_OrRM4JnZv3SxExbCnw",
   "firstSeen": "2026-10-09T12:20:22.323Z",
@@ -74436,9 +74512,9 @@
   "by": "りぶ",
   "firstSeen": "2026-10-08T15:10:08.633Z",
   "seed": true,
-  "of": "nico:sm21702752",
-  "p": "Iなんです",
-  "a": "niconico:2591026"
+  "of": "yt:MqNmKnCNLyM",
+  "p": "れるりり",
+  "a": "youtube:UCRYh_OrRM4JnZv3SxExbCnw"
  },
  {
   "id": "nico:sm21765459",
@@ -74495,9 +74571,9 @@
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.973Z",
   "seed": true,
-  "of": "nico:sm21702752",
-  "p": "Iなんです",
-  "a": "niconico:2591026"
+  "of": "yt:MqNmKnCNLyM",
+  "p": "れるりり",
+  "a": "youtube:UCRYh_OrRM4JnZv3SxExbCnw"
  },
  {
   "id": "nico:sm21758815",
@@ -74660,11 +74736,12 @@
   ],
   "uploaderId": 432349,
   "uploader": null,
-  "p": "",
+  "p": "Kikuo",
   "v": "初音ミク",
   "a": "niconico:432349",
   "firstSeen": "2026-10-08T14:36:47.376Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:O9eHRiaTuL4",
@@ -74734,7 +74811,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=MqNmKnCNLyM",
   "title": "聖槍爆裂ボーイ - れるりりfeat.鏡音レン / Holy Lance Explosion Boy - rerulili feat.KagamineLen",
-  "t": "れるりり",
+  "t": "聖槍爆裂ボーイ",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2013-08-29T11:00:49Z",
@@ -74761,7 +74838,7 @@
   ],
   "uploaderId": "UCRYh_OrRM4JnZv3SxExbCnw",
   "uploader": "れるりり, rerulili",
-  "p": "聖槍爆裂ボーイ",
+  "p": "れるりり",
   "v": "鏡音レン",
   "a": "youtube:UCRYh_OrRM4JnZv3SxExbCnw",
   "firstSeen": "2026-10-09T12:20:22.336Z",
@@ -74936,11 +75013,12 @@
   ],
   "uploaderId": 28259263,
   "uploader": null,
-  "p": "",
+  "p": "復活の木村わいP",
   "v": "初音ミク",
   "a": "niconico:28259263",
   "firstSeen": "2026-10-08T14:36:47.394Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm21645689",
@@ -76045,11 +76123,12 @@
   ],
   "uploaderId": 424424,
   "uploader": null,
-  "p": "",
+  "p": "takamatt",
   "v": "GUMI",
   "a": "niconico:424424",
   "firstSeen": "2026-10-08T14:36:47.433Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm20973193",
@@ -76812,11 +76891,12 @@
   ],
   "uploaderId": 5683296,
   "uploader": null,
-  "p": "",
+  "p": "アリアダヨー",
   "v": "初音ミク",
   "a": "niconico:5683296",
   "firstSeen": "2026-10-08T14:36:47.335Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm20481533",
@@ -77500,11 +77580,12 @@
   ],
   "uploaderId": 28540911,
   "uploader": null,
-  "p": "",
+  "p": "初音ミク オリジナル曲",
   "v": "初音ミク",
   "a": "niconico:28540911",
   "firstSeen": "2026-10-08T14:36:47.329Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm20286605",
@@ -77656,11 +77737,12 @@
   ],
   "uploaderId": 5683296,
   "uploader": null,
-  "p": "",
+  "p": "BestVocaloidPV",
   "v": "GUMI",
   "a": "niconico:5683296",
   "firstSeen": "2026-10-08T14:36:47.341Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:WkwqYnERuDE",
@@ -78931,11 +79013,12 @@
   ],
   "uploaderId": 8785358,
   "uploader": null,
-  "p": "",
+  "p": "すこっぷ",
   "v": "GUMI",
   "a": "niconico:8785358",
   "firstSeen": "2026-10-08T14:36:47.368Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm19578845",
@@ -79552,11 +79635,12 @@
   ],
   "uploaderId": 5683296,
   "uploader": null,
-  "p": "",
+  "p": "a “a” a",
   "v": "初音ミク",
   "a": "niconico:5683296",
   "firstSeen": "2026-10-08T14:36:47.384Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:jrldXNpoaac",
@@ -80157,7 +80241,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=yezp5oG80jc",
   "title": "命短し恋せよ乙女 - デスおはぎ feat.重音テト / \"Girls, life is short so fall in love!\" - Death Ohagi feat. Kasane Teto",
-  "t": "Girls, life is short so fall in love!",
+  "t": "命短し恋せよ乙女",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2012-10-08T07:37:08Z",
@@ -80180,7 +80264,7 @@
   ],
   "uploaderId": "UC6C5iyY87iK39NnyvdC9iYg",
   "uploader": "デスおはぎ / うさみみ台風",
-  "p": "命短し恋せよ乙女 - デスおはぎ",
+  "p": "デスおはぎ",
   "v": "重音テト",
   "a": "youtube:UC6C5iyY87iK39NnyvdC9iYg",
   "firstSeen": "2026-10-09T12:20:22.370Z",
@@ -80246,11 +80330,12 @@
   ],
   "uploaderId": 6291284,
   "uploader": null,
-  "p": "",
+  "p": "デスおはぎ",
   "v": "重音テト",
   "a": "niconico:6291284",
   "firstSeen": "2026-10-08T14:36:47.400Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm19043881",
@@ -80503,7 +80588,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=GDwe44pTV-Q",
   "title": "┗|∵|┓竹取オーバーナイトセンセーション／HoneyWorks feat.鏡音リン、レン",
-  "t": "┗",
+  "t": "┓竹取オーバーナイトセンセーション",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2012-09-27T16:46:15Z",
@@ -80703,6 +80788,7 @@
   "firstSeen": "2026-10-08T15:10:08.907Z",
   "seed": true,
   "of": "nico:sm18198019",
+  "p": "shota horie",
   "a": "niconico:24550889"
  },
  {
@@ -81858,11 +81944,12 @@
   ],
   "uploaderId": 24550889,
   "uploader": null,
-  "p": "",
+  "p": "shota horie",
   "v": "GUMI",
   "a": "niconico:24550889",
   "firstSeen": "2026-10-08T14:36:47.328Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm18172311",
@@ -82191,6 +82278,7 @@
   "firstSeen": "2026-10-08T15:10:08.916Z",
   "seed": true,
   "of": "nico:sm17910036",
+  "p": "すこっぷ",
   "a": "niconico:8785358"
  },
  {
@@ -82351,11 +82439,12 @@
   ],
   "uploaderId": 8785358,
   "uploader": null,
-  "p": "",
+  "p": "すこっぷ",
   "v": "初音ミク",
   "a": "niconico:8785358",
   "firstSeen": "2026-10-08T14:36:47.340Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:Nn7aQYyKsQM",
@@ -82680,6 +82769,7 @@
   "firstSeen": "2026-10-08T15:10:08.844Z",
   "seed": true,
   "of": "nico:sm17720979",
+  "p": "Last Note.",
   "a": "niconico:595445"
  },
  {
@@ -82709,11 +82799,12 @@
   ],
   "uploaderId": 595445,
   "uploader": null,
-  "p": "",
+  "p": "Last Note.",
   "v": "GUMI",
   "a": "niconico:595445",
   "firstSeen": "2026-10-08T14:36:47.323Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm17699740",
@@ -84115,7 +84206,7 @@
   ],
   "uploaderId": "UCCbMMC7V31xVYkUNj57ou6w",
   "uploader": "Yu-hsuan Hsiao",
-  "p": "Yu",
+  "p": "Yu-hsuan Hsiao",
   "v": "初音ミク",
   "a": "youtube:UCCbMMC7V31xVYkUNj57ou6w",
   "firstSeen": "2026-10-09T12:20:22.412Z",
@@ -84529,10 +84620,11 @@
   ],
   "uploaderId": 3397653,
   "uploader": null,
-  "p": "",
+  "p": "ひとしずく×やま△",
   "a": "niconico:3397653",
   "firstSeen": "2026-10-08T14:36:47.331Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm16690311",
@@ -85621,11 +85713,12 @@
   ],
   "uploaderId": 24550889,
   "uploader": null,
-  "p": "",
+  "p": "shota horie",
   "v": "GUMI",
   "a": "niconico:24550889",
   "firstSeen": "2026-10-08T14:36:47.332Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm16075884",
@@ -86426,10 +86519,11 @@
   ],
   "uploaderId": 15550628,
   "uploader": null,
-  "p": "",
+  "p": "WhiteFlame",
   "a": "niconico:15550628",
   "firstSeen": "2026-10-08T14:36:47.359Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm15630734",
@@ -87296,11 +87390,12 @@
   ],
   "uploaderId": 7591272,
   "uploader": null,
-  "p": "",
+  "p": "GUMI, 鏡音レン Ah, It's a Wonderful Cat Life",
   "v": "鏡音レン",
   "a": "niconico:7591272",
   "firstSeen": "2026-10-08T14:36:47.362Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm14989713",
@@ -87464,6 +87559,7 @@
   "firstSeen": "2026-10-08T15:10:08.836Z",
   "seed": true,
   "of": "nico:sm14780909",
+  "p": "Non Non",
   "a": "niconico:5683296"
  },
  {
@@ -87522,11 +87618,12 @@
   ],
   "uploaderId": 5683296,
   "uploader": null,
-  "p": "",
+  "p": "Non Non",
   "v": "初音ミク",
   "a": "niconico:5683296",
   "firstSeen": "2026-10-08T14:36:47.347Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm14763680",
@@ -88265,6 +88362,7 @@
   "firstSeen": "2026-10-08T15:10:09.008Z",
   "seed": true,
   "of": "nico:sm13715524",
+  "p": "40meterP",
   "a": "niconico:3343223"
  },
  {
@@ -88558,11 +88656,12 @@
   ],
   "uploaderId": 3343223,
   "uploader": null,
-  "p": "",
+  "p": "40meterP",
   "v": "GUMI",
   "a": "niconico:3343223",
   "firstSeen": "2026-10-08T14:36:47.350Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm13696241",
@@ -88865,6 +88964,7 @@
   "firstSeen": "2026-10-08T15:10:08.903Z",
   "seed": true,
   "of": "nico:sm13304052",
+  "p": "YM",
   "a": "niconico:4027531"
  },
  {
@@ -88991,6 +89091,7 @@
   "firstSeen": "2026-10-08T15:10:08.720Z",
   "seed": true,
   "of": "nico:sm13304052",
+  "p": "YM",
   "a": "niconico:4027531"
  },
  {
@@ -89336,11 +89437,12 @@
   ],
   "uploaderId": 4027531,
   "uploader": null,
-  "p": "",
+  "p": "YM",
   "v": "GUMI",
   "a": "niconico:4027531",
   "firstSeen": "2026-10-08T14:36:47.339Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm13299882",
@@ -90191,6 +90293,7 @@
   "firstSeen": "2026-10-08T15:10:09.008Z",
   "seed": true,
   "of": "nico:sm12050471",
+  "p": "初音ミクオリジナル曲",
   "a": "niconico:7032706"
  },
  {
@@ -90654,11 +90757,12 @@
   ],
   "uploaderId": 15550628,
   "uploader": null,
-  "p": "",
+  "p": "初音ミクオリジナル曲",
   "v": "初音ミク",
   "a": "niconico:15550628",
   "firstSeen": "2026-10-08T14:36:47.402Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm12050471",
@@ -90687,11 +90791,12 @@
   ],
   "uploaderId": 7032706,
   "uploader": null,
-  "p": "",
+  "p": "初音ミクオリジナル曲",
   "v": "初音ミク",
   "a": "niconico:7032706",
   "firstSeen": "2026-10-08T14:36:47.328Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm12012748",
@@ -91652,10 +91757,11 @@
   ],
   "uploaderId": 13247004,
   "uploader": null,
-  "p": "",
+  "p": "DECO*27",
   "a": "niconico:13247004",
   "firstSeen": "2026-10-08T14:36:47.377Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm11448603",
@@ -93029,10 +93135,11 @@
   ],
   "uploaderId": 4195496,
   "uploader": null,
-  "p": "",
+  "p": "DECO*27",
   "a": "niconico:4195496",
   "firstSeen": "2026-10-08T14:36:47.410Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm10393864",
@@ -93158,11 +93265,12 @@
   ],
   "uploaderId": 3397653,
   "uploader": null,
-  "p": "",
+  "p": "ひとしずく×やま△",
   "v": "鏡音リン",
   "a": "niconico:3397653",
   "firstSeen": "2026-10-08T14:36:47.374Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm10245200",
@@ -93254,10 +93362,7 @@
   "uploader": null,
   "by": "組曲",
   "firstSeen": "2026-10-08T15:10:08.766Z",
-  "seed": true,
-  "of": "yt:XPT91f5vU-k",
-  "p": "Da-iCE / <TVアニメ",
-  "a": "youtube:UC7JQKVJMCIuVMcrFXSozMCw"
+  "seed": true
  },
  {
   "id": "nico:sm10187442",
@@ -93559,11 +93664,12 @@
   ],
   "uploaderId": 583188,
   "uploader": null,
-  "p": "",
+  "p": "wowaka",
   "v": "初音ミク",
   "a": "niconico:583188",
   "firstSeen": "2026-10-08T14:36:47.403Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm9910384",
@@ -93798,10 +93904,11 @@
   ],
   "uploaderId": 464668,
   "uploader": null,
-  "p": "",
+  "p": "wowaka",
   "a": "niconico:464668",
   "firstSeen": "2026-10-08T14:36:47.417Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm9714351",
@@ -95129,11 +95236,12 @@
   ],
   "uploaderId": 2685039,
   "uploader": null,
-  "p": "",
+  "p": "KazearashiP",
   "v": "初音ミク",
   "a": "niconico:2685039",
   "firstSeen": "2026-10-08T14:36:47.387Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm8440787",
@@ -95193,11 +95301,12 @@
   ],
   "uploaderId": 1690174,
   "uploader": null,
-  "p": "",
+  "p": "KazearashiP",
   "v": "初音ミク",
   "a": "niconico:1690174",
   "firstSeen": "2026-10-08T14:36:47.328Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm8378522",
@@ -95521,11 +95630,12 @@
   ],
   "uploaderId": 7032706,
   "uploader": null,
-  "p": "",
+  "p": "巡音ルカオリジナル曲",
   "v": "巡音ルカ",
   "a": "niconico:7032706",
   "firstSeen": "2026-10-08T14:36:47.359Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm8225194",
@@ -95608,11 +95718,12 @@
   ],
   "uploaderId": 52157,
   "uploader": null,
-  "p": "",
+  "p": "wowaka",
   "v": "初音ミク",
   "a": "niconico:52157",
   "firstSeen": "2026-10-08T14:36:47.386Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm8167036",
@@ -95837,11 +95948,12 @@
   ],
   "uploaderId": 562367,
   "uploader": null,
-  "p": "",
+  "p": "iroha",
   "v": "鏡音リン",
   "a": "niconico:562367",
   "firstSeen": "2026-10-08T14:36:47.318Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm8082467",
@@ -96905,6 +97017,7 @@
   "firstSeen": "2026-10-08T15:10:08.864Z",
   "seed": true,
   "of": "nico:sm4153727",
+  "p": "halyosy",
   "a": "niconico:1101042"
  },
  {
@@ -97362,11 +97475,12 @@
   ],
   "uploaderId": 529223,
   "uploader": null,
-  "p": "",
+  "p": "鏡音レンオリジナル曲",
   "v": "鏡音レン",
   "a": "niconico:529223",
   "firstSeen": "2026-10-08T14:36:47.328Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm6909505",
@@ -97666,11 +97780,12 @@
   ],
   "uploaderId": 925256,
   "uploader": null,
-  "p": "",
+  "p": "vo.初音ミク",
   "v": "初音ミク",
   "a": "niconico:925256",
   "firstSeen": "2026-10-08T14:36:47.421Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm6674325",
@@ -97760,11 +97875,12 @@
   ],
   "uploaderId": 529223,
   "uploader": null,
-  "p": "",
+  "p": "鏡音レンオリジナル曲",
   "v": "鏡音リン",
   "a": "niconico:529223",
   "firstSeen": "2026-10-08T14:36:47.341Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm6580450",
@@ -98696,6 +98812,7 @@
   "firstSeen": "2026-10-08T15:10:08.918Z",
   "seed": true,
   "of": "nico:sm8089993",
+  "p": "iroha",
   "a": "niconico:562367"
  },
  {
@@ -98790,6 +98907,7 @@
   "firstSeen": "2026-10-08T15:10:08.660Z",
   "seed": true,
   "of": "nico:sm8089993",
+  "p": "iroha",
   "a": "niconico:562367"
  },
  {
@@ -98820,6 +98938,7 @@
   "firstSeen": "2026-10-08T15:10:08.824Z",
   "seed": true,
   "of": "nico:sm8089993",
+  "p": "iroha",
   "a": "niconico:562367"
  },
  {
@@ -99456,11 +99575,12 @@
   ],
   "uploaderId": 1101042,
   "uploader": null,
-  "p": "",
+  "p": "halyosy",
   "v": "鏡音レン",
   "a": "niconico:1101042",
   "firstSeen": "2026-10-08T14:36:47.343Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm4144858",
@@ -100158,11 +100278,12 @@
   ],
   "uploaderId": 330524,
   "uploader": null,
-  "p": "",
+  "p": "猫お揺れる",
   "v": "KAITO",
   "a": "niconico:330524",
   "firstSeen": "2026-10-08T14:36:47.351Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "yt:hnv_ljiIpDw",
@@ -100187,7 +100308,7 @@
   ],
   "uploaderId": "UCmfkDzDqwnL0UmOrWqfsl5w",
   "uploader": "sirius774",
-  "p": "Song of Helicobacter pylor",
+  "p": "sirius774",
   "v": "初音ミク",
   "a": "youtube:UCmfkDzDqwnL0UmOrWqfsl5w",
   "firstSeen": "2026-10-09T12:20:22.412Z",
@@ -100319,11 +100440,12 @@
   ],
   "uploaderId": 4044199,
   "uploader": null,
-  "p": "",
+  "p": "Misumi",
   "v": "鏡音リン",
   "a": "niconico:4044199",
   "firstSeen": "2026-10-08T14:36:47.388Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm2849292",
