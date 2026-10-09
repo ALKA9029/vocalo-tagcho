@@ -6,6 +6,7 @@ export const VOICES = [
   "可不", "星界", "裏命", "狐子", "羽累", "重音テト", "歌愛ユキ", "結月ゆかり", "紲星あかり", "音街ウナ",
   "初音ミクNT", "知声", "小春六花", "夏色花梨", "花隈千冬", "東北きりたん", "東北ずん子", "ずんだもん",
   "雨衣", "Fukase", "神威がくぽ", "心華", "ONE", "結月ゆかり麗", "VY1", "VY2", "MAYU", "kokone", "SeeU", "UNI",
+  "Lily", "CUL", "猫村いろは", "蒼姫ラピス", "鳴花ヒメ", "鳴花ミコト", "ナツメイツキ", "足立レイ", "東北イタコ", "VOCALOID Lily",
 ];
 
 // 表記ゆれ・英語表記を元の歌声名に（「v flower」「Kagamine Rin」など）
@@ -360,11 +361,13 @@ export function inferNamesFromTags(items) {
   let filled = 0;
   for (const [, vids] of byUser) {
     const kind = vids.filter(v => v.kind === "本家").length >= vids.length / 2 ? "本家" : "歌ってみた";
-    const cnt = new Map();
-    for (const i of vids) for (const t of new Set(i.tags || [])) cnt.set(t, (cnt.get(t) || 0) + 1);
+    // 「じん(自然の敵P)」と「じん（自然の敵P）」のような表記ゆれは同じタグとして数える
+    const cnt = new Map(), rep = new Map();
+    for (const i of vids) for (const k of new Set((i.tags || []).map(normalize))) cnt.set(k, (cnt.get(k) || 0) + 1);
+    for (const i of vids) for (const t of i.tags || []) if (!rep.has(normalize(t))) rep.set(normalize(t), t);
     const titles = new Set(vids.map(v => normalize(v.t)));
     const allTitles = normalize(vids.map(v => v.title).join(" "));
-    const inTitle = t => normalize(t).length >= 2 && allTitles.includes(normalize(t));
+    const inTitle = t => { const n = normalize(t.replace(/\s*[（(][^)）]*[)）]\s*$/, "")); return n.length >= 2 && allTitles.includes(n); };
     // ほかの投稿者があまり使わないタグ。ただしタイトルにも名前が出てくるなら、少し多くても作者名とみなす
     const ok = t => !isVoice(t) && !GENERIC_TAG.test(t) && !titles.has(normalize(t)) && t.length <= 20
       && (tagUsers[kind].get(normalize(t))?.size || 9) <= (inTitle(t) ? 8 : 2);
@@ -373,12 +376,14 @@ export function inferNamesFromTags(items) {
     let name = "";
     if (vids.length >= 2) {
       const need = Math.max(2, Math.ceil(vids.length * 0.6));
-      name = [...cnt].filter(([t, c]) => c >= need && ok(t)).sort((a, b) => score(...b) - score(...a) || a[0].length - b[0].length)[0]?.[0] || "";
+      name = [...cnt].map(([k, c]) => [rep.get(k), c]).filter(([t, c]) => c >= need && ok(t)).sort((a, b) => score(...b) - score(...a) || a[0].length - b[0].length)[0]?.[0] || "";
     } else {
       // 動画が1本だけの人は、「〇〇P」のようなボカロPらしいタグだけ使う
       name = (vids[0].tags || []).find(t => /[PＰ]$/.test(t) && ok(t)) || "";
     }
     if (!name) continue;
+    // 「和田たけあき(くらげP)」→「和田たけあき」のように、後ろの括弧（別名）は外して表示する
+    name = (name.replace(/\s*[（(][^)）]*[)）]\s*$/, "").trim() || name).normalize("NFKC");
     for (const i of vids) {
       if (i.kind === "本家" && (!i.p || i.pFilled)) { i.p = name; i.pFilled = false; i.pFromTag = true; filled++; }
       else if (i.kind === "歌ってみた" && !i.by) { i.by = name; filled++; }
