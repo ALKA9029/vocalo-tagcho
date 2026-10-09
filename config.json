@@ -109,6 +109,16 @@
           "label": "オリジナル曲",
           "q": "オリジナル曲",
           "genre": "J-POP"
+        },
+        {
+          "label": "ボカロ feat.",
+          "q": "\"feat. 初音ミク\" OR \"feat.初音ミク\" OR \"feat. 重音テト\" OR \"feat. 可不\" OR \"feat. 鏡音リン\"",
+          "genre": "ボカロ"
+        },
+        {
+          "label": "ボカロオリジナル",
+          "q": "ボカロオリジナル OR \"VOCALOID オリジナル\" OR \"オリジナル曲 初音ミク\" OR \"Synthesizer V\"",
+          "genre": "ボカロ"
         }
       ]
     },
@@ -121,13 +131,50 @@
       }
     ],
     "follow": {
-      "comment": "サイトに載ったYouTubeチャンネルを自動で登録して、新着を毎日追いかける（data/channels.json）。autoAddMinViews 回以上再生された曲を出したチャンネルが対象。dropAfterDays 日のあいだ曲が載らなければ外す",
+      "comment": "サイトに載ったYouTubeチャンネルを自動で登録して、新着を毎日追いかける（data/channels.json）。ボカロの本家（作曲者）チャンネルとそれ以外で枠を分ける（genreShare）。昔からの人気曲を出したチャンネルは外さない",
       "enabled": true,
       "autoAddMinViews": 10000,
       "maxChannels": 400,
       "lookbackDays": 7,
       "minViews": 1000,
-      "dropAfterDays": 120
+      "dropAfterDays": 120,
+      "autoAddMinViewsByGenre": {
+        "ボカロ": 3000
+      },
+      "dropAfterDaysByGenre": {
+        "ボカロ": 365
+      },
+      "genreShare": {
+        "ボカロ": 0.5
+      }
+    },
+    "seedSearch": {
+      "comment": "--seed で一度だけ動く。昔からの人気ボカロ曲をYouTubeで検索して、ボカロPのチャンネルを見つける（1キーワード1ページ100ユニット）",
+      "maxPages": 2,
+      "minViews": 100000,
+      "queries": [
+        {
+          "q": "feat. 初音ミク"
+        },
+        {
+          "q": "feat. 鏡音リン"
+        },
+        {
+          "q": "feat. GUMI"
+        },
+        {
+          "q": "feat. 重音テト"
+        },
+        {
+          "q": "feat. 可不"
+        },
+        {
+          "q": "feat. flower"
+        },
+        {
+          "q": "VOCALOID オリジナル曲"
+        }
+      ]
     }
   }
 }

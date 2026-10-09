@@ -232,24 +232,65 @@ async function fetchFollowed(knownIds) {
   return details;
 }
 
-// 一定以上再生された曲を出したチャンネルを自動フォローに登録。しばらく曲が載らないチャンネルは外す
+// 一定以上再生された曲を出したチャンネルを自動フォローに登録する。
+// ボカロの本家（作曲者）チャンネルと、それ以外（J-POP・アニソン・歌い手など）が同じくらいの割合になるように枠を分ける
 async function updateFollowed(items) {
   const f = config.youtube.follow;
   if (!f?.enabled) return;
   const now = new Date().toISOString();
-  const list = new Map((await readJson("data/channels.json", [])).map(c => [c.id, c]));
+  const minFor = g => f.autoAddMinViewsByGenre?.[g] ?? f.autoAddMinViews ?? 10000;
+  const old = new Map((await readJson("data/channels.json", [])).map(c => [c.id, c]));
+  const list = new Map();
   for (const i of items) {
-    if (i.src !== "youtube" || !i.uploaderId || (i.views || 0) < (f.autoAddMinViews || 10000)) continue;
-    const c = list.get(i.uploaderId) || { id: i.uploaderId, name: i.uploader || "", added: now, genre: i.g === "アニソン" || i.g === "ボカロ" ? i.g : "J-POP" };
+    if (i.src !== "youtube" || !i.uploaderId) continue;
+    const isVocaloP = i.kind === "本家" && i.g === "ボカロ";
+    if ((i.views || 0) < minFor(isVocaloP ? "ボカロ" : i.g)) continue;
+    const prev = list.get(i.uploaderId) || old.get(i.uploaderId);
+    const c = { ...(prev || { id: i.uploaderId, added: now }), name: i.uploader || prev?.name || "" };
+    // ボカロの本家を1曲でも出していれば「ボカロ」枠
+    c.genre = c.genre === "ボカロ" || isVocaloP ? "ボカロ" : (i.g === "アニソン" ? "アニソン" : (c.genre || "J-POP"));
     if (!c.lastHit || (i.date || "") > c.lastHit) c.lastHit = i.date || now;
-    c.name = i.uploader || c.name;
+    if (i.seed) c.pinned = true;   // 昔からの人気曲を出しているチャンネルは外さない
     list.set(i.uploaderId, c);
   }
-  const keepAfter = new Date(Date.now() - (f.dropAfterDays || 120) * 864e5).toISOString();
-  const out = [...list.values()].filter(c => (c.lastHit || c.added) >= keepAfter)
-    .sort((a, b) => (b.lastHit || "").localeCompare(a.lastHit || "")).slice(0, f.maxChannels || 400);
+  const keep = c => c.pinned || (c.lastHit || c.added) >= new Date(Date.now() - (f.dropAfterDaysByGenre?.[c.genre] ?? f.dropAfterDays ?? 120) * 864e5).toISOString();
+  const byRecent = (a, b) => (b.lastHit || "").localeCompare(a.lastHit || "");
+  const all = [...list.values()].filter(keep).sort(byRecent);
+  const max = f.maxChannels || 400;
+  const vocaloMax = Math.round(max * (f.genreShare?.["ボカロ"] ?? 0.5));
+  const vocalo = all.filter(c => c.genre === "ボカロ").slice(0, vocaloMax);
+  const others = all.filter(c => c.genre !== "ボカロ").slice(0, max - vocaloMax);
+  const out = [...vocalo, ...others];
   await writeFile(path("data/channels.json"), JSON.stringify(out, null, 1) + "\n");
-  console.log(`自動フォローのチャンネル: ${out.length}件`);
+  console.log(`自動フォローのチャンネル: ${out.length}件（ボカロの本家 ${vocalo.length}件・その他 ${others.length}件）`);
+}
+
+// ---------- 一度だけ：YouTubeにいるボカロPのチャンネルを見つけるため、昔からの人気ボカロ曲を検索 ----------
+async function fetchYouTubeSeedSearch() {
+  const key = process.env.YOUTUBE_API_KEY;
+  const s = config.youtube.seedSearch;
+  if (!key || !s?.queries?.length) return [];
+  const found = new Map();
+  for (const q of s.queries) {
+    let pageToken = "";
+    for (let page = 0; page < (s.maxPages || 1); page++) {
+      const params = new URLSearchParams({
+        part: "id", type: "video", q: q.q || q, videoCategoryId: "10", regionCode: "JP", relevanceLanguage: "ja",
+        order: "viewCount", maxResults: "50", key, ...(pageToken ? { pageToken } : {}),
+      });
+      const res = await fetch("https://www.googleapis.com/youtube/v3/search?" + params);
+      if (!res.ok) { console.warn(`YouTube人気ボカロ検索「${q.q || q}」: HTTP ${res.status}`); break; }
+      const body = await res.json();
+      for (const it of body.items || []) if (it.id?.videoId) found.set(it.id.videoId, q.genre || "ボカロ");
+      pageToken = body.nextPageToken;
+      if (!pageToken) break;
+    }
+  }
+  const details = (await ytVideos([...found.keys()], key)).filter(v => isJapanese(v) && !isNoise(v));
+  const out = details.map(v => ({ ...ytItem(v, found.get(v.id)), seed: true }))
+    .filter(v => (v.views || 0) >= (s.minViews || 0));
+  console.log(`YouTube人気ボカロ検索: ${found.size}本のうち ${out.length}本を追加`);
+  return out;
 }
 
 // ---------- まとめて保存 ----------
@@ -261,6 +302,7 @@ const videos = fixtureArg > -1
      ...(SEED ? [] : await fetchYouTube().catch(e => (console.warn("YouTube取得失敗:", e.message), []))),
      ...(SEED ? [] : await fetchYouTubeTrending().catch(e => (console.warn("YouTube急上昇の取得失敗:", e.message), []))),
      ...(SEED ? [] : await fetchYouTubeSearch().catch(e => (console.warn("YouTube新着検索の取得失敗:", e.message), []))),
+     ...(SEED ? await fetchYouTubeSeedSearch().catch(e => (console.warn("YouTube人気ボカロ検索の取得失敗:", e.message), [])) : []),
      ...(SEED ? [] : await fetchFollowed(new Set((await readJson("data/songs.json", [])).map(i => i.id))).catch(e => (console.warn("自動フォローの取得失敗:", e.message), [])))];
 
 const outFile = fixtureArg > -1 ? "data/songs.sample.json" : "data/songs.json";
@@ -303,7 +345,7 @@ items = [...seeds, ...items.filter(i => !i.seed).slice(0, Math.max(0, config.max
   .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
 
 await mkdir(path("data/"), { recursive: true });
-if (fixtureArg < 0 && !SEED) await updateFollowed(items).catch(e => console.warn("自動フォローの更新に失敗:", e.message));
+if (fixtureArg < 0) await updateFollowed(items).catch(e => console.warn("自動フォローの更新に失敗:", e.message));
 await writeFile(path(outFile), JSON.stringify(items, null, 1) + "\n");
 const meta = {
   updatedAt: new Date().toISOString(),
