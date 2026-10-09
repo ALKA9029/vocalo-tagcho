@@ -98,7 +98,7 @@ async function fetchYouTubeTrending() {
       part: "snippet,statistics,contentDetails", chart: "mostPopular", regionCode: t.regionCode || "JP",
       videoCategoryId: "10", maxResults: "50", key, ...(pageToken ? { pageToken } : {}),
     });
-    const res = await fetch("https://www.googleapis.com/youtube/v3/videos?" + params);
+    const res = await ytFetch("https://www.googleapis.com/youtube/v3/videos?" + params);
     if (!res.ok) { console.warn(`YouTube急上昇: HTTP ${res.status} ${(await res.text()).slice(0, 200)}`); break; }
     const body = await res.json();
     for (const v of (body.items || []).filter(v => isJapanese(v) && !isNoise(v))) {
@@ -137,6 +137,15 @@ const isNoise = v => {
   return t != null && (t <= 61 || t > 12 * 60);
 };
 
+// YouTube APIを呼ぶ。短い時間に送りすぎて 429 が返ったら、少し待ってやり直す（最大3回）
+async function ytFetch(url) {
+  for (let i = 0; ; i++) {
+    const res = await fetch(url);
+    if (res.status !== 429 || i >= 3) return res;
+    await sleep(5000 * (i + 1));
+  }
+}
+
 // videos.list の1件をサイト用の形に（共通）
 function ytItem(v, genre) {
   const sn = v.snippet || {}, st = v.statistics || {};
@@ -155,7 +164,7 @@ async function ytVideos(ids, key) {
   const out = [];
   for (let i = 0; i < ids.length; i += 50) {
     const params = new URLSearchParams({ part: "snippet,statistics,contentDetails", id: ids.slice(i, i + 50).join(","), key });
-    const res = await fetch("https://www.googleapis.com/youtube/v3/videos?" + params);
+    const res = await ytFetch("https://www.googleapis.com/youtube/v3/videos?" + params);
     if (!res.ok) { console.warn(`YouTube詳細: HTTP ${res.status} ${(await res.text()).slice(0, 200)}`); break; }
     out.push(...((await res.json()).items || []));
   }
@@ -178,7 +187,8 @@ async function fetchYouTubeSearch() {
         relevanceLanguage: q.relevanceLanguage || "ja", publishedAfter, order: "viewCount", maxResults: "50", key,
         ...(pageToken ? { pageToken } : {}),
       });
-      const res = await fetch("https://www.googleapis.com/youtube/v3/search?" + params);
+      await sleep(1000);
+      const res = await ytFetch("https://www.googleapis.com/youtube/v3/search?" + params);
       if (!res.ok) { console.warn(`YouTube新着検索「${q.label}」: HTTP ${res.status} ${(await res.text()).slice(0, 200)}`); break; }
       const body = await res.json();
       for (const it of body.items || []) if (it.id?.videoId && !found.has(it.id.videoId)) found.set(it.id.videoId, q.genre);
@@ -302,7 +312,8 @@ async function fetchYouTubeSeedSearch() {
         part: "id", type: "video", q: q.q || q, videoCategoryId: "10", regionCode: q.regionCode || "JP", relevanceLanguage: q.relevanceLanguage || "ja",
         order: "viewCount", maxResults: "50", key, ...(pageToken ? { pageToken } : {}),
       });
-      const res = await fetch("https://www.googleapis.com/youtube/v3/search?" + params);
+      await sleep(1000);
+      const res = await ytFetch("https://www.googleapis.com/youtube/v3/search?" + params);
       if (!res.ok) { console.warn(`YouTube人気ボカロ検索「${q.q || q}」: HTTP ${res.status}`); break; }
       const body = await res.json();
       console.log(`YouTube人気曲検索「${q.q || q}」${page + 1}ページ目: ${(body.items || []).length}件`);
