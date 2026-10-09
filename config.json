@@ -29,12 +29,14 @@
         "maxPages": 3
       },
       {
-        "label": "ボカロ 直近1か月の人気（再生数の更新用）",
+        "label": "ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）",
         "q": "VOCALOID",
         "targets": "tagsExact",
-        "lookbackDays": 31,
+        "lookbackDays": 183,
         "minViews": 1000,
-        "maxPages": 3
+        "maxPages": 20,
+        "updateOnly": true,
+        "addWithinDays": 31
       },
       {
         "label": "歌ってみた新着",
@@ -45,12 +47,14 @@
         "maxPages": 3
       },
       {
-        "label": "歌ってみた 直近1か月の人気（再生数の更新用）",
+        "label": "歌ってみた 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）",
         "q": "歌ってみた",
         "targets": "tagsExact",
-        "lookbackDays": 31,
+        "lookbackDays": 183,
         "minViews": 3000,
-        "maxPages": 2
+        "maxPages": 10,
+        "updateOnly": true,
+        "addWithinDays": 31
       }
     ]
   },

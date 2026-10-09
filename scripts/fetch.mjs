@@ -41,6 +41,8 @@ async function fetchNiconico(seed) {
         title: unxml(r.title || ""), tags: (r.tags || "").split(" ").filter(Boolean).map(unxml),
         date: r.startTime, views: r.viewCounter, likes: r.likeCounter, thumb: r.thumbnailUrl,
         uploaderId: r.userId ?? r.channelId ?? null, seed: seed || undefined,
+        // updateOnly のクエリは、すでにある曲の再生数を更新するだけ（addWithinDays 日以内の投稿だけは新しく追加する）
+        updateOnly: q.updateOnly && !(q.addWithinDays && Date.now() - new Date(r.startTime) < q.addWithinDays * 864e5) || undefined,
       });
       console.log(`ニコニコ「${q.label}」${page + 1}ページ目: ${rows.length}件`);
       // 利用ルール：前のリクエストにかかった時間以上あけて次を送る
@@ -206,7 +208,13 @@ const outFile = fixtureArg > -1 ? "data/songs.sample.json" : "data/songs.json";
 const existing = new Map((await readJson(outFile, [])).map(i => [i.id, i]));
 const overrides = await readJson("data/overrides.json", {});
 
+let statsOnly = 0;
 for (const v of videos) {
+  if (v.updateOnly) {
+    const prev = existing.get(v.id);
+    if (prev) { prev.views = v.views ?? prev.views; prev.likes = v.likes ?? prev.likes; statsOnly++; }
+    continue;
+  }
   const fallback = v.channelGenre && v.channelGenre !== "歌ってみた" ? v.channelGenre : "その他";
   const item = classify(v, { fallbackGenre: fallback });
   if (v.seed) item.seed = true;
@@ -214,6 +222,8 @@ for (const v of videos) {
   const prev = existing.get(item.id);
   existing.set(item.id, prev ? { ...prev, ...item, seed: prev.seed || item.seed, firstSeen: prev.firstSeen } : { ...item, firstSeen: new Date().toISOString() });
 }
+
+if (statsOnly) console.log(`ニコニコの再生数を更新: ${statsOnly}件`);
 
 // 管理人の手直し（data/overrides.json）を最後に上書き
 let items = [...existing.values()];
