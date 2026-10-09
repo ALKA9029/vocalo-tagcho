@@ -241,14 +241,22 @@ async function updateFollowed(items) {
   const minFor = g => f.autoAddMinViewsByGenre?.[g] ?? f.autoAddMinViews ?? 10000;
   const old = new Map((await readJson("data/channels.json", [])).map(c => [c.id, c]));
   const list = new Map();
+  // チャンネルごとに「ボカロの本家」と「歌ってみた」の数を数える（歌い手をボカロPと間違えないため）
+  const tally = new Map();
+  for (const i of items) if (i.src === "youtube" && i.uploaderId) {
+    const t = tally.get(i.uploaderId) || { vocaloP: 0, cover: 0 };
+    if (i.kind === "本家" && i.g === "ボカロ") t.vocaloP++; else if (i.kind === "歌ってみた") t.cover++;
+    tally.set(i.uploaderId, t);
+  }
   for (const i of items) {
     if (i.src !== "youtube" || !i.uploaderId) continue;
-    const isVocaloP = i.kind === "本家" && i.g === "ボカロ";
+    const t = tally.get(i.uploaderId);
+    const isVocaloP = t.vocaloP > 0 && t.vocaloP >= t.cover;
     if ((i.views || 0) < minFor(isVocaloP ? "ボカロ" : i.g)) continue;
     const prev = list.get(i.uploaderId) || old.get(i.uploaderId);
     const c = { ...(prev || { id: i.uploaderId, added: now }), name: i.uploader || prev?.name || "" };
     // ボカロの本家を1曲でも出していれば「ボカロ」枠
-    c.genre = c.genre === "ボカロ" || isVocaloP ? "ボカロ" : (i.g === "アニソン" ? "アニソン" : (c.genre || "J-POP"));
+    c.genre = isVocaloP ? "ボカロ" : (i.g === "アニソン" ? "アニソン" : (c.genre && c.genre !== "ボカロ" ? c.genre : "J-POP"));
     if (!c.lastHit || (i.date || "") > c.lastHit) c.lastHit = i.date || now;
     if (i.seed) c.pinned = true;   // 昔からの人気曲を出しているチャンネルは外さない
     list.set(i.uploaderId, c);
@@ -258,8 +266,11 @@ async function updateFollowed(items) {
   const all = [...list.values()].filter(keep).sort(byRecent);
   const max = f.maxChannels || 400;
   const vocaloMax = Math.round(max * (f.genreShare?.["ボカロ"] ?? 0.5));
-  const vocalo = all.filter(c => c.genre === "ボカロ").slice(0, vocaloMax);
-  const others = all.filter(c => c.genre !== "ボカロ").slice(0, max - vocaloMax);
+  const floor = f.minPerSide ?? 100;
+  const vAll = all.filter(c => c.genre === "ボカロ"), oAll = all.filter(c => c.genre !== "ボカロ");
+  // 片方だけが増えすぎないように、もう片方の数（最低 floor）までにそろえる
+  const vocalo = vAll.slice(0, Math.min(vocaloMax, Math.max(oAll.length, floor)));
+  const others = oAll.slice(0, Math.min(max - vocaloMax, Math.max(vAll.length, floor)));
   const out = [...vocalo, ...others];
   await writeFile(path("data/channels.json"), JSON.stringify(out, null, 1) + "\n");
   console.log(`自動フォローのチャンネル: ${out.length}件（ボカロの本家 ${vocalo.length}件・その他 ${others.length}件）`);

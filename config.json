@@ -146,10 +146,11 @@
       },
       "genreShare": {
         "ボカロ": 0.5
-      }
+      },
+      "minPerSide": 100
     },
     "seedSearch": {
-      "comment": "--seed で一度だけ動く。昔からの人気ボカロ曲をYouTubeで検索して、ボカロPのチャンネルを見つける（1キーワード1ページ100ユニット）",
+      "comment": "--seed で一度だけ動く。昔からの人気曲をYouTubeで検索して、ボカロPやアーティストのチャンネルを見つける（1キーワード1ページ100ユニット）",
       "maxPages": 2,
       "minViews": 100000,
       "queries": [
@@ -173,6 +174,18 @@
         },
         {
           "q": "VOCALOID オリジナル曲"
+        },
+        {
+          "q": "Official Music Video",
+          "genre": "J-POP"
+        },
+        {
+          "q": "MV",
+          "genre": "J-POP"
+        },
+        {
+          "q": "アニメ 主題歌 MV",
+          "genre": "アニソン"
         }
       ]
     }
