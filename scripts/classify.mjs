@@ -53,6 +53,12 @@ export function isVoice(name = "") {
   return !!n && VOICES.some(v => normalize(v) === n);
 }
 
+// 表記ゆれ（鏡音リンV4X、重音テトSV など）を、元の歌声名にそろえる
+export function canonicalVoice(name = "") {
+  const n = normalize(name).replace(/(sv|ai|nt|v4x|v3|v4|v5|v6|english|β)$/i, "");
+  return VOICES.find(v => normalize(v) === n) || name;
+}
+
 // 「初音ミク・みきとP」のような並びを、歌声と作者に分ける
 function splitNames(text) {
   const names = text.split(/\s*[・＆&、,]\s*|\s+x\s+|\s+×\s+/).map(x => x.trim()).filter(Boolean);
@@ -115,6 +121,17 @@ export function parseTitle(raw) {
     if (by) creator = by[1].trim();
   }
   // 【IA】【初音ミク＆GUMI】のような括弧の中の歌声
+  // 「原曲の作者-Covered by 歌い手」「〜 / VOCALOID KAITO COVER」のような書き方
+  const flat = s.replace(/【[^】]*】|\[[^\]]*\]/g, " ");
+  const cleanSinger = x => x.replace(/^\s*(VOCALOID|ボカロ)\s*/i, "").replace(/\s*\+.*$/, "").replace(/\s*cover\s*$/i, "").replace(/[\s\-–—]+$/, "").trim();
+  const cb = flat.match(/(?:^|[\/／]\s*)([^\/／]*?)[\s\-–—]*covered\s+by\s+([^\/／]+)/i);
+  if (cb) {
+    creator = cleanSinger(cb[2]);
+    const orig = cb[1].trim();
+    if (orig && normalize(orig) !== normalize(song)) originalCreator = orig;
+  } else if (credit && /\scover\s*$/i.test(credit)) {
+    creator = cleanSinger(credit.split(/\s*[\/／]\s*/).pop());
+  }
   if (!voice) for (const br of bracketed) { const v = splitNames(br.slice(1, -1)).voices[0]; if (v) { voice = v; break; } }
   if (voice) voice = splitNames(voice).voices[0] || voice.split(/\s*[・＆&]\s*/)[0];
   return { song: song || raw.trim(), creator, voice, originalCreator, brackets: bracketed };
@@ -184,8 +201,12 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     item.a = video.uploaderId ? `${video.src}:${video.uploaderId}` : normalize(item.p);
   } else {
     if (video.src === "youtube") { parsed.originalCreator = parsed.creator !== parsed.channel ? parsed.creator : ""; parsed.creator = parsed.channel || parsed.creator; }
-    item.by = (parsed.creator || video.uploader || "").replace(/^(ver\.?|by)\s*/i, "").replace(/^VOCALOID\s+/i, "").replace(/\s+/g, " ").trim();
+    item.by = (parsed.creator || video.uploader || "").replace(/^(ver\.?|by)\s*/i, "").replace(/^VOCALOID\s+/i, "").replace(/\s*\+.*$/, "").replace(/\s+/g, " ").trim();
     if (parsed.originalCreator) item.pHint = parsed.originalCreator;
+    // 歌い手が歌声（KAITOなど）なら、歌声としても絞り込めるように
+    if (isVoice(item.by)) item.v = canonicalVoice(item.by);
+    // 原曲の作者が分かれば表示用に入れておく（原曲が見つかればそちらで上書きされる）
+    if (item.pHint) { item.p = item.pHint; item.a = normalize(item.pHint); }
   }
   return item;
 }

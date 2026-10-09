@@ -122,7 +122,11 @@
   ],
   "uploaderId": 121576727,
   "uploader": null,
-  "by": "King・Prince- KAITO",
+  "by": "KAITO",
+  "pHint": "King&Prince",
+  "v": "KAITO",
+  "p": "King&Prince",
+  "a": "king&prince",
   "firstSeen": "2026-10-09T11:31:51.964Z"
  },
  {
@@ -424,6 +428,8 @@
   "uploader": "水無瀬 / Minase",
   "by": "水無瀬",
   "pHint": "歌ってみた",
+  "p": "歌ってみた",
+  "a": "歌ってみた",
   "firstSeen": "2026-10-09T11:31:52.147Z"
  },
  {
@@ -566,6 +572,8 @@
   "uploader": "早乙女 ベリー / Saotome Berry【にじさんじ】",
   "by": "早乙女 ベリー",
   "pHint": "早乙女ベリー × 酒寄颯馬 Cover",
+  "p": "早乙女ベリー × 酒寄颯馬 Cover",
+  "a": "早乙女ベリー×酒寄颯馬cover",
   "firstSeen": "2026-10-09T11:31:52.138Z"
  },
  {
@@ -735,7 +743,8 @@
   ],
   "uploaderId": 143994593,
   "uploader": null,
-  "by": "CALOID KAITO",
+  "by": "KAITO",
+  "v": "KAITO",
   "firstSeen": "2026-10-08T14:32:41.477Z",
   "of": "yt:hML9ZiIRuuQ",
   "p": "",
@@ -1203,10 +1212,10 @@
   "uploader": "塚原大地 / Tsukahara Daichi【にじさんじ】",
   "by": "塚原大地",
   "pHint": "Covered by Y4T4男",
-  "firstSeen": "2026-10-09T11:31:52.140Z",
   "p": "ハチ",
-  "of": "nico:sm13386216",
-  "a": "niconico:380847"
+  "a": "niconico:380847",
+  "firstSeen": "2026-10-09T11:31:52.140Z",
+  "of": "nico:sm13386216"
  },
  {
   "id": "yt:kmKPTBm7tjM",
@@ -1299,6 +1308,8 @@
   "uploader": "琶舞 -ʙᴇᴍᴀ-",
   "by": "琶舞 -ʙᴇᴍᴀ-",
   "pHint": "第六感",
+  "p": "第六感",
+  "a": "第六感",
   "firstSeen": "2026-10-09T11:31:52.142Z"
  },
  {
@@ -1367,6 +1378,8 @@
   "uploader": "明透 -ᴀsᴜ-",
   "by": "明透 -ᴀsᴜ-",
   "pHint": "クスシキ",
+  "p": "クスシキ",
+  "a": "クスシキ",
   "firstSeen": "2026-10-09T11:31:52.145Z"
  },
  {
@@ -1459,6 +1472,8 @@
   "uploader": "Watame Ch. 角巻わため",
   "by": "Watame Ch. 角巻わため",
   "pHint": "角巻わため",
+  "p": "角巻わため",
+  "a": "角巻わため",
   "firstSeen": "2026-10-09T11:31:52.075Z"
  },
  {
@@ -1664,10 +1679,10 @@
   "uploader": "久々湊るい - Kugumi Rui -",
   "by": "久々湊るい - Kugumi Rui -",
   "pHint": "初星学園 ー 久々湊るい",
-  "firstSeen": "2026-10-09T11:31:52.153Z",
   "p": "初星学園",
-  "of": "yt:hSg9Yb28vZA",
-  "a": "youtube:UC2dXx-3RXeeP8hA5AGt8vuw"
+  "a": "youtube:UC2dXx-3RXeeP8hA5AGt8vuw",
+  "firstSeen": "2026-10-09T11:31:52.153Z",
+  "of": "yt:hSg9Yb28vZA"
  },
  {
   "id": "yt:l17w14oPzoM",
@@ -1752,6 +1767,8 @@
   "uploader": "레비얀 Leviyan",
   "by": "레비얀 Leviyan",
   "pHint": "Leviyan",
+  "p": "Leviyan",
+  "a": "leviyan",
   "firstSeen": "2026-10-09T11:31:52.153Z"
  },
  {
@@ -1828,7 +1845,11 @@
   ],
   "uploaderId": 128909125,
   "uploader": null,
-  "by": "葵木ゴウ KAITO",
+  "by": "KAITO",
+  "pHint": "葵木ゴウ",
+  "v": "KAITO",
+  "p": "葵木ゴウ",
+  "a": "葵木ゴウ",
   "firstSeen": "2026-10-08T14:32:41.480Z"
  },
  {
@@ -1979,6 +2000,8 @@
   "uploader": null,
   "by": "Rion.",
   "pHint": "164",
+  "p": "164",
+  "a": "164",
   "firstSeen": "2026-10-08T14:32:41.480Z"
  },
  {
@@ -2326,6 +2349,8 @@
   "uploader": "SPLENDID GOD GIRAFFE",
   "by": "SPLENDID GOD GIRAFFE",
   "pHint": "安全地帯cover by秀人",
+  "p": "安全地帯cover by秀人",
+  "a": "安全地帯coverby秀人",
   "firstSeen": "2026-10-09T11:31:52.152Z"
  },
  {
@@ -2504,6 +2529,8 @@
   "uploader": "小鳥遊うた /Takanashi Uta",
   "by": "小鳥遊うた",
   "pHint": "爆裂愛してる/M!LK",
+  "p": "爆裂愛してる/M!LK",
+  "a": "爆裂愛してる/mlk",
   "firstSeen": "2026-10-09T11:36:19.716Z"
  },
  {
@@ -2542,6 +2569,8 @@
   "uploader": "Deeper's View",
   "by": "Deeper's View",
   "pHint": "HANA",
+  "p": "HANA",
+  "a": "hana",
   "firstSeen": "2026-10-09T11:36:19.714Z"
  },
  {
@@ -2855,10 +2884,10 @@
   "uploader": "神凪アンナ - Kannagi Anna - ",
   "by": "神凪アンナ - Kannagi Anna -",
   "pHint": "NOMELON NOLEMON 歌ってみた",
-  "firstSeen": "2026-10-09T11:36:19.716Z",
-  "of": "nico:sm24841816",
   "p": "",
-  "a": "niconico:101303"
+  "a": "niconico:101303",
+  "firstSeen": "2026-10-09T11:36:19.716Z",
+  "of": "nico:sm24841816"
  },
  {
   "id": "yt:4QYko9iK6Ps",
@@ -2885,6 +2914,8 @@
   "uploader": "Soul",
   "by": "Soul",
   "pHint": "まふまふ",
+  "p": "まふまふ",
+  "a": "まふまふ",
   "firstSeen": "2026-10-09T11:36:19.714Z"
  },
  {
@@ -3042,6 +3073,8 @@
   "uploader": "Tokyo Street Live 4K",
   "by": "Tokyo Street Live 4K",
   "pHint": "クールで痺れる弾き語りの17歳シンガーソングライター!",
+  "p": "クールで痺れる弾き語りの17歳シンガーソングライター!",
+  "a": "クールで痺れる弾き語りの17歳シンガーソングライター",
   "firstSeen": "2026-10-09T11:31:52.160Z"
  },
  {
@@ -3155,10 +3188,10 @@
   "uploader": "Chihami",
   "by": "Chihami",
   "pHint": "歌ってみた:Chihami",
-  "firstSeen": "2026-10-09T11:36:19.714Z",
   "p": "すりぃ",
-  "of": "nico:sm41295783",
-  "a": "niconico:78655994"
+  "a": "niconico:78655994",
+  "firstSeen": "2026-10-09T11:36:19.714Z",
+  "of": "nico:sm41295783"
  },
  {
   "id": "yt:PmvnmjqJ4EM",
@@ -3283,6 +3316,8 @@
   "uploader": "イトナンジ / itonanji",
   "by": "イトナンジ",
   "pHint": "忘れらんねえよ 重音テトcover",
+  "p": "忘れらんねえよ 重音テトcover",
+  "a": "忘れらんねえよ重音テトcover",
   "firstSeen": "2026-10-09T11:31:52.155Z"
  },
  {
@@ -3415,6 +3450,8 @@
   "uploader": "日本名曲カバー",
   "by": "日本名曲カバー",
   "pHint": "藤あや子",
+  "p": "藤あや子",
+  "a": "藤あや子",
   "firstSeen": "2026-10-09T11:31:52.151Z"
  },
  {
@@ -3497,7 +3534,8 @@
   ],
   "uploaderId": "UChMOQ1DOaMPHX_KtFhRQszw",
   "uploader": null,
-  "by": "花隈千冬+ust・svp",
+  "by": "花隈千冬",
+  "v": "花隈千冬",
   "firstSeen": "2026-10-08T14:30:41.046Z",
   "of": "yt:4urpSWkaboA",
   "p": "Tatsuya Kitani",
@@ -3844,6 +3882,8 @@
   "uploader": "渚トラウト / Nagisa Trout【にじさんじ】",
   "by": "渚トラウト",
   "pHint": "monet Covered by 渚トラウト",
+  "p": "monet Covered by 渚トラウト",
+  "a": "monetcoveredby渚トラウト",
   "firstSeen": "2026-10-09T11:31:52.137Z"
  },
  {
@@ -3931,6 +3971,8 @@
   "uploader": "みふゆん平田深冬",
   "by": "みふゆん平田深冬",
   "pHint": "弾き語りで映画",
+  "p": "弾き語りで映画",
+  "a": "弾き語りで映画",
   "firstSeen": "2026-10-09T11:31:52.131Z"
  },
  {
@@ -4427,10 +4469,10 @@
   "uploader": "roiro music",
   "by": "roiro music",
   "pHint": "YOASOBI",
-  "firstSeen": "2026-10-09T11:31:52.130Z",
   "p": "主題歌",
-  "of": "yt:8DDXUIq70gk",
-  "a": "youtube:UCpEXggDN6KWpc4yn46OpiQw"
+  "a": "youtube:UCpEXggDN6KWpc4yn46OpiQw",
+  "firstSeen": "2026-10-09T11:31:52.130Z",
+  "of": "yt:8DDXUIq70gk"
  },
  {
   "id": "nico:sm46879843",
@@ -4743,6 +4785,8 @@
   "uploader": "七声 七丸 | Nanamaru Ch. ",
   "by": "七声 七丸 | Nanamaru Ch.",
   "pHint": "七声七丸",
+  "p": "七声七丸",
+  "a": "七声七丸",
   "firstSeen": "2026-10-09T11:31:52.152Z"
  },
  {
@@ -4839,10 +4883,10 @@
   "uploader": "010 -mato-",
   "by": "010 -mato-",
   "pHint": "低音女子が歌う",
-  "firstSeen": "2026-10-09T11:36:19.713Z",
   "p": "米津玄師",
-  "of": "yt:YRYU9H91ZSg",
-  "a": "youtube:UCfaaDRLlr9VXScDVkIeb4Tw"
+  "a": "youtube:UCfaaDRLlr9VXScDVkIeb4Tw",
+  "firstSeen": "2026-10-09T11:36:19.713Z",
+  "of": "yt:YRYU9H91ZSg"
  },
  {
   "id": "yt:e0VeegjN5qQ",
@@ -4938,6 +4982,8 @@
   "uploader": "椎名唯華 / Shiina Yuika",
   "by": "椎名唯華",
   "pHint": "栗山夕璃",
+  "p": "栗山夕璃",
+  "a": "栗山夕璃",
   "firstSeen": "2026-10-09T11:31:52.154Z"
  },
  {
@@ -5102,6 +5148,8 @@
   "uploader": "🎧イケメン彼氏研究所",
   "by": "🎧イケメン彼氏研究所",
   "pHint": "五条悟で",
+  "p": "五条悟で",
+  "a": "五条悟で",
   "firstSeen": "2026-10-09T11:31:52.151Z"
  },
  {
@@ -5190,10 +5238,10 @@
   "uploader": "カラオケキー検索",
   "by": "カラオケキー検索",
   "pHint": "いよわ",
-  "firstSeen": "2026-10-09T11:36:19.714Z",
   "p": "いよわ",
-  "of": "nico:sm41193299",
-  "a": "niconico:78166728"
+  "a": "niconico:78166728",
+  "firstSeen": "2026-10-09T11:36:19.714Z",
+  "of": "nico:sm41193299"
  },
  {
   "id": "yt:cnQyP9TNJqk",
@@ -5238,6 +5286,8 @@
   "uploader": "焔魔るり CH. / Ruri Enma",
   "by": "焔魔るり CH.",
   "pHint": "Penthouse Cover:焔魔るり,ヨミ",
+  "p": "Penthouse Cover:焔魔るり,ヨミ",
+  "a": "penthousecover:焔魔るりヨミ",
   "firstSeen": "2026-10-09T11:31:52.152Z"
  },
  {
@@ -5259,6 +5309,8 @@
   "uploader": "ぶいみく / 444ppi",
   "by": "ぶいみく",
   "pHint": "Surges",
+  "p": "Surges",
+  "a": "surges",
   "firstSeen": "2026-10-09T11:31:52.156Z"
  },
  {
@@ -5473,6 +5525,8 @@
   "uploader": "Yusuke ch.悠佑",
   "by": "Yusuke ch.悠佑",
   "pHint": "クライマックス",
+  "p": "クライマックス",
+  "a": "クライマックス",
   "firstSeen": "2026-10-09T11:31:52.148Z"
  },
  {
@@ -5770,6 +5824,8 @@
   "uploader": "#HIIRAGI",
   "by": "#HIIRAGI",
   "pHint": "8人で",
+  "p": "8人で",
+  "a": "8人で",
   "firstSeen": "2026-10-09T11:31:52.147Z"
  },
  {
@@ -6375,6 +6431,8 @@
   "uploader": "騎士X - Knight X -",
   "by": "騎士X - Knight X -",
   "pHint": "騎士X",
+  "p": "騎士X",
+  "a": "騎士x",
   "firstSeen": "2026-10-09T11:31:52.080Z"
  },
  {
@@ -6971,6 +7029,8 @@
   "uploader": "アクア【メルノア】",
   "by": "アクア【メルノア】",
   "pHint": "MONET",
+  "p": "MONET",
+  "a": "monet",
   "firstSeen": "2026-10-09T11:31:52.148Z"
  },
  {
@@ -7059,6 +7119,8 @@
   "uploader": "VANTA Official",
   "by": "VANTA",
   "pHint": "VANTA cover",
+  "p": "VANTA cover",
+  "a": "vantacover",
   "firstSeen": "2026-10-09T11:31:52.149Z"
  },
  {
@@ -7269,6 +7331,8 @@
   "uploader": "エモ動画部",
   "by": "エモ動画部",
   "pHint": "YOASOBI 夜に駆ける カバー曲、実は",
+  "p": "YOASOBI 夜に駆ける カバー曲、実は",
+  "a": "yoasobi夜に駆けるカバー曲実は",
   "firstSeen": "2026-10-09T11:31:52.147Z"
  },
  {
@@ -7306,6 +7370,8 @@
   "uploader": "Tokyo Street Live 4K",
   "by": "Tokyo Street Live 4K",
   "pHint": "切なく沁みる歌声!",
+  "p": "切なく沁みる歌声!",
+  "a": "切なく沁みる歌声",
   "firstSeen": "2026-10-09T11:31:52.162Z"
  },
  {
@@ -7325,6 +7391,8 @@
   "uploader": "J-POP Re:Birth - 邦楽転生",
   "by": "J-POP Re:Birth - 邦楽転生",
   "pHint": "1990",
+  "p": "1990",
+  "a": "1990",
   "firstSeen": "2026-10-09T11:31:52.147Z"
  },
  {
@@ -7362,10 +7430,10 @@
   "uploader": "小倉悠吾 OFFICIAL YouTube CHANNEL",
   "by": "小倉悠吾",
   "pHint": "主題歌",
-  "firstSeen": "2026-10-09T11:31:52.129Z",
   "p": "主題歌",
-  "of": "yt:8DDXUIq70gk",
-  "a": "youtube:UCpEXggDN6KWpc4yn46OpiQw"
+  "a": "youtube:UCpEXggDN6KWpc4yn46OpiQw",
+  "firstSeen": "2026-10-09T11:31:52.129Z",
+  "of": "yt:8DDXUIq70gk"
  },
  {
   "id": "yt:A55IBEzCqNA",
@@ -8078,6 +8146,8 @@
   "uploader": "エモ動画部",
   "by": "エモ動画部",
   "pHint": "LiSA 炎 カバー曲、実は",
+  "p": "LiSA 炎 カバー曲、実は",
+  "a": "lisa炎カバー曲実は",
   "firstSeen": "2026-10-09T11:31:52.148Z"
  },
  {
@@ -8296,10 +8366,10 @@
   "uploader": "加賀美 ハヤト/Hayato Kagami",
   "by": "加賀美 ハヤト",
   "pHint": "DECO*27",
-  "firstSeen": "2026-10-08T15:40:42.017Z",
   "p": "DECO*27",
-  "of": "nico:sm43084181",
-  "a": "niconico:811012"
+  "a": "niconico:811012",
+  "firstSeen": "2026-10-08T15:40:42.017Z",
+  "of": "nico:sm43084181"
  },
  {
   "id": "yt:2rhLKnWCo6Y",
@@ -11227,6 +11297,9 @@
   "uploaderId": 9846146,
   "uploader": null,
   "by": "歌唱力ゾンビ",
+  "pHint": "『全ての声』を使った異次元歌唱で歌ってみた<hihihiGホイッスル>",
+  "p": "『全ての声』を使った異次元歌唱で歌ってみた<hihihiGホイッスル>",
+  "a": "『全ての声』を使った異次元歌唱で歌ってみた<hihihigホイッスル>",
   "firstSeen": "2026-10-09T11:31:52.042Z"
  },
  {
@@ -13153,7 +13226,7 @@
   ],
   "uploaderId": 38893652,
   "uploader": null,
-  "by": "花森なずな×南レイ",
+  "by": "花森なずな×南レイ(れい・ふるーる)",
   "firstSeen": "2026-10-09T11:31:52.052Z"
  },
  {
@@ -13370,11 +13443,13 @@
   ],
   "uploaderId": 95796,
   "uploader": null,
-  "by": "Kanaria 鏡音リンV4X",
-  "firstSeen": "2026-10-09T11:31:51.980Z",
-  "of": "nico:sm37287661",
+  "by": "鏡音リンV4X",
+  "pHint": "Kanaria",
+  "v": "鏡音リン",
   "p": "",
-  "a": "niconico:95303437"
+  "a": "niconico:95303437",
+  "firstSeen": "2026-10-09T11:31:51.980Z",
+  "of": "nico:sm37287661"
  },
  {
   "id": "nico:sm46845637",
@@ -13652,11 +13727,12 @@
   ],
   "uploaderId": 141756444,
   "uploader": null,
-  "by": "椎名もた 冬萌ここな",
-  "firstSeen": "2026-10-09T11:31:52.001Z",
-  "of": "nico:sm22061366",
+  "by": "冬萌ここな",
+  "pHint": "椎名もた",
   "p": "",
-  "a": "niconico:5619789"
+  "a": "niconico:5619789",
+  "firstSeen": "2026-10-09T11:31:52.001Z",
+  "of": "nico:sm22061366"
  },
  {
   "id": "nico:sm46841608",
@@ -13886,11 +13962,12 @@
   ],
   "uploaderId": 141073088,
   "uploader": null,
-  "by": "じん ひろうみ。",
-  "firstSeen": "2026-10-09T11:31:52.031Z",
-  "of": "nico:sm18406343",
+  "by": "ひろうみ。",
+  "pHint": "じん",
   "p": "じん",
-  "a": "niconico:15872264"
+  "a": "niconico:15872264",
+  "firstSeen": "2026-10-09T11:31:52.031Z",
+  "of": "nico:sm18406343"
  },
  {
   "id": "nico:sm46728098",
@@ -13916,6 +13993,8 @@
   "uploader": null,
   "by": "歌コレルーキー2026秋参加曲",
   "pHint": "北川ゆう",
+  "p": "北川ゆう",
+  "a": "北川ゆう",
   "firstSeen": "2026-10-09T11:31:52.031Z"
  },
  {
@@ -13942,11 +14021,12 @@
   ],
   "uploaderId": 136697300,
   "uploader": null,
-  "by": "kemu HASYU",
-  "firstSeen": "2026-10-09T11:31:52.032Z",
-  "of": "nico:sm17520775",
+  "by": "HASYU",
+  "pHint": "kemu",
   "p": "",
-  "a": "niconico:24550889"
+  "a": "niconico:24550889",
+  "firstSeen": "2026-10-09T11:31:52.032Z",
+  "of": "nico:sm17520775"
  },
  {
   "id": "nico:sm46844564",
@@ -17489,7 +17569,7 @@
   ],
   "uploaderId": 141654394,
   "uploader": null,
-  "by": "宮舞モカ・弦巻マキ【SynthesizerV カバー曲】",
+  "by": "宮舞モカ・弦巻マキ",
   "firstSeen": "2026-10-09T11:31:51.987Z"
  },
  {
@@ -18706,7 +18786,8 @@
   ],
   "uploaderId": 2802630,
   "uploader": null,
-  "by": "",
+  "by": "夏色花梨",
+  "v": "夏色花梨",
   "firstSeen": "2026-10-09T11:31:51.992Z"
  },
  {
@@ -19511,7 +19592,10 @@
   ],
   "uploaderId": 129472427,
   "uploader": null,
-  "by": "DECO*27 菊花はる",
+  "by": "菊花はる",
+  "pHint": "DECO*27",
+  "p": "DECO*27",
+  "a": "deco*27",
   "firstSeen": "2026-10-09T11:31:51.994Z"
  },
  {
@@ -19843,7 +19927,8 @@
   ],
   "uploaderId": 141654394,
   "uploader": null,
-  "by": "夏色花梨【SynthesizerV カバー曲】",
+  "by": "夏色花梨",
+  "v": "夏色花梨",
   "firstSeen": "2026-10-09T11:31:51.995Z"
  },
  {
@@ -45489,7 +45574,7 @@
   ],
   "uploaderId": 2834277,
   "uploader": null,
-  "by": "+α/あるふぁきゅん。",
+  "by": "",
   "firstSeen": "2026-10-08T15:10:08.933Z",
   "seed": true,
   "of": "nico:sm20244918",
@@ -55990,7 +56075,7 @@
   ],
   "uploaderId": 3537176,
   "uploader": null,
-  "by": "EVO+",
+  "by": "EVO",
   "firstSeen": "2026-10-08T15:10:08.700Z",
   "seed": true
  },
@@ -75537,7 +75622,7 @@
   ],
   "uploaderId": 5154924,
   "uploader": null,
-  "by": "+おまけ",
+  "by": "",
   "firstSeen": "2026-10-08T15:10:08.747Z",
   "seed": true
  },
@@ -77363,6 +77448,8 @@
   "uploader": null,
   "by": "メドレー",
   "pHint": "サービス",
+  "p": "サービス",
+  "a": "サービス",
   "firstSeen": "2026-10-08T15:10:08.963Z",
   "seed": true
  },
@@ -77926,7 +78013,7 @@
   ],
   "uploaderId": 3416529,
   "uploader": null,
-  "by": "+mp3(ちょうちょver.)",
+  "by": "",
   "firstSeen": "2026-10-08T15:10:08.826Z",
   "seed": true,
   "of": "nico:sm5524166",
