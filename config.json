@@ -56,7 +56,13 @@
         "updateOnly": true,
         "addWithinDays": 31
       }
-    ]
+    ],
+    "originalLookup": {
+      "comment": "原曲がサイトにない歌ってみたについて、ニコニコで同じ曲名のVOCALOIDタグ付き動画を探して本家として追加する。1回の取得で調べる最大の曲数",
+      "enabled": true,
+      "maxPerRun": 300,
+      "recheckDays": 30
+    }
   },
   "youtube": {
     "comment": "ここに追いかけたいYouTubeチャンネルを追加する。genre は ボカロ / J-POP / 歌ってみた のどれか（歌ってみたはタイトルからも自動判定される）",

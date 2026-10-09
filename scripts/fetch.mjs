@@ -2,7 +2,7 @@
 //   node scripts/fetch.mjs                      … ニコニコとYouTubeから取得
 //   node scripts/fetch.mjs --fixture FILE.json  … ネットにつながず、テスト用データで動かす
 import { readFile, writeFile, mkdir } from "node:fs/promises";
-import { classify, linkCovers, toSite, isKaraoke } from "./classify.mjs";
+import { classify, linkCovers, toSite, isKaraoke, normalize } from "./classify.mjs";
 
 // 実行の記録を data/last-run.txt にも残す（GitHubの画面を開かなくても、何件取れたか確認できるように）
 const RUNLOG = [];
@@ -331,6 +331,51 @@ async function fetchYouTubeSeedSearch() {
   return out;
 }
 
+// ---------- 原曲さがし：原曲がサイトにない歌ってみたについて、ニコニコで同じ曲名のボカロ曲を探す ----------
+// 一度調べた曲名は data/original-lookup.json に覚えておき、見つからなかった曲名は30日たったら調べ直す
+async function lookupOriginals(items) {
+  const cfg = config.niconico.originalLookup;
+  if (!cfg?.enabled) return [];
+  const cache = await readJson("data/original-lookup.json", {});
+  const have = new Set(items.filter(i => i.kind === "本家").map(i => normalize(i.t)));
+  const recheck = new Date(Date.now() - (cfg.recheckDays || 30) * 864e5).toISOString();
+  const seen = new Set();
+  const todo = items
+    .filter(i => i.kind === "歌ってみた" && !i.of && i.t && normalize(i.t).length >= 2 && !have.has(normalize(i.t)))
+    .sort((a, b) => (a.g === "その他" ? 0 : 1) - (b.g === "その他" ? 0 : 1) || (b.views || 0) - (a.views || 0))
+    .filter(i => { const k = normalize(i.t); if (seen.has(k)) return false; seen.add(k); const c = cache[k]; return !c || (!c.id && c.checked < recheck); })
+    .slice(0, cfg.maxPerRun || 300);
+  const out = [];
+  for (const c of todo) {
+    const key = normalize(c.t);
+    const params = new URLSearchParams({
+      q: c.t, targets: "title",
+      fields: "contentId,title,tags,startTime,viewCounter,likeCounter,thumbnailUrl,userId,channelId",
+      "filters[tagsExact][0]": "VOCALOID", _sort: "-viewCounter", _limit: "10", _context: "vocalo-tagcho",
+    });
+    const started = Date.now();
+    try {
+      const res = await fetch("https://snapshot.search.nicovideo.jp/api/v2/snapshot/video/contents/search?" + params, { headers: { "User-Agent": config.userAgent } });
+      if (!res.ok) { console.warn(`原曲さがし: HTTP ${res.status}、今日はここまで`); break; }
+      const rows = (await res.json()).data || [];
+      let hit = null;
+      for (const r of rows) {
+        const v = { src: "niconico", id: "nico:" + r.contentId, url: "https://www.nicovideo.jp/watch/" + r.contentId,
+          title: unxml(r.title || ""), tags: (r.tags || "").split(" ").filter(Boolean).map(unxml),
+          date: r.startTime, views: r.viewCounter, likes: r.likeCounter, thumb: r.thumbnailUrl, uploaderId: r.userId ?? r.channelId ?? null };
+        const it = classify(v, { fallbackGenre: "ボカロ" });
+        if (it.kind === "本家" && normalize(it.t) === key) { hit = { ...v, seed: true }; break; }
+      }
+      cache[key] = { id: hit?.id || null, checked: new Date().toISOString() };
+      if (hit && !items.some(i => i.id === hit.id)) out.push(hit);
+    } catch (e) { console.warn("原曲さがし:", e.message); break; }
+    await sleep(Math.max(1000, Date.now() - started));
+  }
+  await writeFile(path("data/original-lookup.json"), JSON.stringify(cache) + "\n");
+  console.log(`原曲さがし: ${todo.length}曲を調べて、原曲を${out.length}曲見つけた`);
+  return out;
+}
+
 // ---------- まとめて保存 ----------
 const fixtureArg = process.argv.indexOf("--fixture");
 const SEED = process.argv.includes("--seed");
@@ -367,6 +412,11 @@ if (statsOnly) console.log(`ニコニコの再生数を更新: ${statsOnly}件`)
 
 // 管理人の手直し（data/overrides.json）を最後に上書き
 let items = [...existing.values()];
+if (fixtureArg < 0 && !SEED) {
+  // 原曲がサイトにない歌ってみたの原曲を探して、見つかった本家を追加する
+  const found = await lookupOriginals(items).catch(e => (console.warn("原曲さがしに失敗:", e.message), []));
+  for (const v of found) items.push({ ...classify(v, { fallbackGenre: "ボカロ" }), seed: true, firstSeen: new Date().toISOString() });
+}
 if (fixtureArg < 0 && !SEED) {
   // 今回の取得で更新されなかった最近のYouTube曲だけ、再生数を取り直す
   const fresh = new Set(videos.map(v => v.id));
