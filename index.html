@@ -128,6 +128,13 @@ button.badge:hover{border-color:var(--accent);outline:1px solid var(--accent)}
   <div class="bar">
     <div class="row">
       <input type="search" id="q" placeholder="曲名・作者・歌声・歌い手で検索" aria-label="検索">
+      <select id="period" aria-label="投稿された期間">
+        <option value="">すべての期間</option>
+        <option value="1">24時間以内</option>
+        <option value="7">1週間以内</option>
+        <option value="30">1か月以内</option>
+        <option value="365">1年以内</option>
+      </select>
       <select id="sort" aria-label="並び順">
         <option value="views">再生数が多い順</option>
         <option value="new">新しい順</option>
@@ -162,7 +169,7 @@ const FIXED_AT = 3;
 const PAGE = 40;
 
 let ITEMS = [], ITEM = {};
-const state = { all:{}, mine:{}, open:null, rel:null, q:"", genre:"", kind:"", sort:"views", person:null, filter:new Set(), shown:PAGE, canWrite:true, uid:null, db:null };
+const state = { all:{}, mine:{}, open:null, rel:null, q:"", genre:"", kind:"", sort:"views", period:"", person:null, filter:new Set(), shown:PAGE, canWrite:true, uid:null, db:null };
 const $ = s => document.querySelector(s);
 
 function counts(){
@@ -238,7 +245,7 @@ function related(i){
 }
 
 function jump(id){
-  state.q=""; $("#q").value=""; state.genre=""; state.kind=""; state.person=null; state.filter.clear();
+  state.q=""; $("#q").value=""; state.period=""; $("#period").value=""; state.genre=""; state.kind=""; state.person=null; state.filter.clear();
   state.rel = id; state.open = null;
   // 一覧のどこにあっても表示されるように、表示件数を広げる
   const idx = visibleItems().findIndex(x=>x.id===id);
@@ -260,7 +267,9 @@ let lastCounts = {};
 function visibleItems(){
   const c = lastCounts;
   const q = state.q.trim().toLowerCase();
+  const since = state.period ? new Date(Date.now() - Number(state.period) * 864e5).toISOString() : "";
   const items = ITEMS.filter(i=>{
+    if (since && (!i.date || new Date(i.date).toISOString() < since)) return false;
     if (state.genre && i.g !== state.genre) return false;
     if (state.kind && i.kind !== state.kind) return false;
     if (state.person && !state.person.match(i)) return false;
@@ -366,6 +375,7 @@ function setStatus(html){ $("#status").innerHTML = html; }
 
 $("#q").addEventListener("input", e=>{ state.q = e.target.value; state.shown = PAGE; render(); });
 $("#sort").addEventListener("change", e=>{ state.sort = e.target.value; state.shown = PAGE; render(); });
+$("#period").addEventListener("change", e=>{ state.period = e.target.value; state.shown = PAGE; render(); });
 $("#more").addEventListener("click", ()=>{ state.shown += PAGE; render(); });
 render();
 

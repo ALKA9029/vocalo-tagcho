@@ -1,6 +1,6 @@
 {
   "userAgent": "TagTune (https://github.com/ALKA9029/vocalo-tagcho)",
-  "maxItems": 5000,
+  "maxItems": 8000,
   "niconico": {
     "lookbackDays": 3,
     "seedQueries": [
@@ -24,15 +24,33 @@
         "label": "ボカロ新曲",
         "q": "VOCALOID",
         "targets": "tagsExact",
+        "lookbackDays": 3,
         "minViews": 100,
+        "maxPages": 3
+      },
+      {
+        "label": "ボカロ 直近1か月の人気（再生数の更新用）",
+        "q": "VOCALOID",
+        "targets": "tagsExact",
+        "lookbackDays": 31,
+        "minViews": 1000,
         "maxPages": 3
       },
       {
         "label": "歌ってみた新着",
         "q": "歌ってみた",
         "targets": "tagsExact",
+        "lookbackDays": 3,
         "minViews": 300,
         "maxPages": 3
+      },
+      {
+        "label": "歌ってみた 直近1か月の人気（再生数の更新用）",
+        "q": "歌ってみた",
+        "targets": "tagsExact",
+        "lookbackDays": 31,
+        "minViews": 3000,
+        "maxPages": 2
       }
     ]
   },
@@ -45,8 +63,58 @@
       "minViews": 0,
       "defaultGenre": "J-POP"
     },
+    "search": {
+      "comment": "直近 lookbackDays 日に投稿された音楽動画を、キーワードごとに再生数の多い順で取得。1キーワード1ページで100ユニット（1日の無料枠は10,000）",
+      "enabled": true,
+      "regionCode": "JP",
+      "lookbackDays": 7,
+      "maxPages": 1,
+      "minViews": 1000,
+      "queries": [
+        {
+          "label": "MV",
+          "q": "MV",
+          "genre": "J-POP"
+        },
+        {
+          "label": "Music Video",
+          "q": "\"Music Video\"",
+          "genre": "J-POP"
+        },
+        {
+          "label": "アニメ主題歌",
+          "q": "主題歌 OR オープニング OR エンディング",
+          "genre": "アニソン"
+        },
+        {
+          "label": "歌ってみた",
+          "q": "歌ってみた",
+          "genre": "J-POP"
+        },
+        {
+          "label": "cover",
+          "q": "cover 歌ってみた OR カバー",
+          "genre": "J-POP"
+        },
+        {
+          "label": "ボカロ",
+          "q": "初音ミク OR 重音テト OR 可不 OR ボカロ",
+          "genre": "ボカロ"
+        },
+        {
+          "label": "オリジナル曲",
+          "q": "オリジナル曲",
+          "genre": "J-POP"
+        }
+      ]
+    },
+    "refreshDays": 35,
     "channels": [
-      { "name": "例：チャンネル名", "channelId": "", "genre": "J-POP" }
+      {
+        "name": "例：チャンネル名",
+        "channelId": "",
+        "genre": "J-POP"
+      }
     ]
   }
 }

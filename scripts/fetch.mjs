@@ -17,9 +17,10 @@ async function readJson(p, fallback) {
 // seed=true のときは日付で絞らず、config の seedQueries（昔からの人気曲）を取りにいく
 async function fetchNiconico(seed) {
   const nc = config.niconico;
-  const since = new Date(Date.now() - nc.lookbackDays * 864e5).toISOString().replace(/\.\d+Z$/, "+00:00");
+  const sinceFor = days => new Date(Date.now() - days * 864e5).toISOString().replace(/\.\d+Z$/, "+00:00");
   const out = [];
   for (const q of seed ? nc.seedQueries : nc.queries) {
+    const since = sinceFor(q.lookbackDays ?? nc.lookbackDays);
     for (let page = 0; page < (q.maxPages || 1); page++) {
       const params = new URLSearchParams({
         q: q.q, targets: q.targets,
@@ -95,23 +96,89 @@ async function fetchYouTubeTrending() {
     if (!res.ok) { console.warn(`YouTube急上昇: HTTP ${res.status} ${(await res.text()).slice(0, 200)}`); break; }
     const body = await res.json();
     for (const v of body.items || []) {
-      const sn = v.snippet || {}, st = v.statistics || {};
-      const views = Number(st.viewCount) || null;
-      if (views != null && views < (t.minViews || 0)) continue;
-      out.push({
-        src: "youtube", id: "yt:" + v.id, url: "https://www.youtube.com/watch?v=" + v.id,
-        title: sn.title || "", tags: sn.tags || [], desc: sn.description || "",
-        date: sn.publishedAt, views, likes: Number(st.likeCount) || null,
-        thumb: sn.thumbnails?.medium?.url || sn.thumbnails?.default?.url || null,
-        uploader: sn.channelTitle || "", uploaderId: sn.channelId || null,
-        channelGenre: t.defaultGenre || "J-POP",
-      });
+      const item = ytItem(v, t.defaultGenre);
+      if (item.views != null && item.views < (t.minViews || 0)) continue;
+      out.push(item);
     }
     console.log(`YouTube急上昇 ${page + 1}ページ目: ${(body.items || []).length}件`);
     pageToken = body.nextPageToken;
     if (!pageToken) break;
   }
   return out;
+}
+
+// videos.list の1件をサイト用の形に（共通）
+function ytItem(v, genre) {
+  const sn = v.snippet || {}, st = v.statistics || {};
+  return {
+    src: "youtube", id: "yt:" + v.id, url: "https://www.youtube.com/watch?v=" + v.id,
+    title: sn.title || "", tags: sn.tags || [], desc: sn.description || "",
+    date: sn.publishedAt, views: st.viewCount != null ? Number(st.viewCount) : null, likes: st.likeCount != null ? Number(st.likeCount) : null,
+    thumb: sn.thumbnails?.medium?.url || sn.thumbnails?.default?.url || null,
+    uploader: sn.channelTitle || "", uploaderId: sn.channelId || null,
+    channelGenre: genre || "J-POP",
+  };
+}
+
+// 動画IDから詳細（再生数・タグ・説明文）をまとめて取る。50件で1ユニットと安い
+async function ytVideos(ids, key) {
+  const out = [];
+  for (let i = 0; i < ids.length; i += 50) {
+    const params = new URLSearchParams({ part: "snippet,statistics", id: ids.slice(i, i + 50).join(","), key });
+    const res = await fetch("https://www.googleapis.com/youtube/v3/videos?" + params);
+    if (!res.ok) { console.warn(`YouTube詳細: HTTP ${res.status} ${(await res.text()).slice(0, 200)}`); break; }
+    out.push(...((await res.json()).items || []));
+  }
+  return out;
+}
+
+// ---------- YouTube 新着検索：直近N日に投稿された音楽動画を、キーワードごとに再生数の多い順で ----------
+// 検索は1回100ユニット（1日の無料枠は10,000）なので、キーワード数×ページ数に注意
+async function fetchYouTubeSearch() {
+  const key = process.env.YOUTUBE_API_KEY;
+  const s = config.youtube.search;
+  if (!key || !s?.enabled) { console.log("YouTube新着検索: APIキーがないので飛ばします"); return []; }
+  const publishedAfter = new Date(Date.now() - (s.lookbackDays || 7) * 864e5).toISOString().replace(/\.\d+Z$/, "Z");
+  const found = new Map();   // videoId -> ジャンルの手がかり
+  for (const q of s.queries) {
+    let pageToken = "";
+    for (let page = 0; page < (q.maxPages || s.maxPages || 1); page++) {
+      const params = new URLSearchParams({
+        part: "id", type: "video", q: q.q, videoCategoryId: "10", regionCode: s.regionCode || "JP",
+        relevanceLanguage: "ja", publishedAfter, order: "viewCount", maxResults: "50", key,
+        ...(pageToken ? { pageToken } : {}),
+      });
+      const res = await fetch("https://www.googleapis.com/youtube/v3/search?" + params);
+      if (!res.ok) { console.warn(`YouTube新着検索「${q.label}」: HTTP ${res.status} ${(await res.text()).slice(0, 200)}`); break; }
+      const body = await res.json();
+      for (const it of body.items || []) if (it.id?.videoId && !found.has(it.id.videoId)) found.set(it.id.videoId, q.genre);
+      console.log(`YouTube新着検索「${q.label}」${page + 1}ページ目: ${(body.items || []).length}件`);
+      pageToken = body.nextPageToken;
+      if (!pageToken) break;
+    }
+  }
+  const details = await ytVideos([...found.keys()], key);
+  return details.map(v => ytItem(v, found.get(v.id)))
+    .filter(v => v.views == null || v.views >= (s.minViews || 0))
+    .filter(v => !/#shorts/i.test(v.title));
+}
+
+// ---------- 最近のYouTube曲の再生数を更新（期間ランキングを正しくするため） ----------
+async function refreshYouTubeStats(items) {
+  const key = process.env.YOUTUBE_API_KEY;
+  const days = config.youtube.refreshDays || 35;
+  if (!key) return 0;
+  const since = new Date(Date.now() - days * 864e5).toISOString();
+  const targets = items.filter(i => i.src === "youtube" && (i.date || "") >= since);
+  const byId = new Map(targets.map(i => [i.id.slice(3), i]));
+  const details = await ytVideos([...byId.keys()], key);
+  for (const v of details) {
+    const i = byId.get(v.id);
+    if (v.statistics?.viewCount != null) i.views = Number(v.statistics.viewCount);
+    if (v.statistics?.likeCount != null) i.likes = Number(v.statistics.likeCount);
+  }
+  console.log(`YouTubeの再生数を更新: ${details.length}件`);
+  return details.length;
 }
 
 // ---------- まとめて保存 ----------
@@ -121,7 +188,8 @@ const videos = fixtureArg > -1
   ? JSON.parse(await readFile(process.argv[fixtureArg + 1], "utf8"))
   : [...await fetchNiconico(SEED).catch(e => (console.warn("ニコニコ取得失敗:", e.message), [])),
      ...(SEED ? [] : await fetchYouTube().catch(e => (console.warn("YouTube取得失敗:", e.message), []))),
-     ...(SEED ? [] : await fetchYouTubeTrending().catch(e => (console.warn("YouTube急上昇の取得失敗:", e.message), [])))];
+     ...(SEED ? [] : await fetchYouTubeTrending().catch(e => (console.warn("YouTube急上昇の取得失敗:", e.message), []))),
+     ...(SEED ? [] : await fetchYouTubeSearch().catch(e => (console.warn("YouTube新着検索の取得失敗:", e.message), [])))];
 
 const outFile = fixtureArg > -1 ? "data/songs.sample.json" : "data/songs.json";
 const existing = new Map((await readJson(outFile, [])).map(i => [i.id, i]));
@@ -138,6 +206,11 @@ for (const v of videos) {
 
 // 管理人の手直し（data/overrides.json）を最後に上書き
 let items = [...existing.values()];
+if (fixtureArg < 0 && !SEED) {
+  // 今回の取得で更新されなかった最近のYouTube曲だけ、再生数を取り直す
+  const fresh = new Set(videos.map(v => v.id));
+  await refreshYouTubeStats(items.filter(i => !fresh.has(i.id))).catch(e => console.warn("再生数の更新に失敗:", e.message));
+}
 for (const i of items) {
   const o = overrides[i.id];
   if (o) { Object.assign(i, o); if ("of" in o) i.ofLocked = true; }
