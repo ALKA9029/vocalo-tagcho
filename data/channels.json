@@ -40,6 +40,13 @@
   "pinned": true
  },
  {
+  "id": "UCQdVTf3gBPy0X95QB2ZQ4TQ",
+  "added": "2026-10-09T17:21:50.995Z",
+  "name": "クワガタP / kuwagataP",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-09T10:00:06Z"
+ },
+ {
   "id": "UC8xkzBruPP96NI22ki4mB_w",
   "name": "バーバパパ",
   "added": "2026-10-09T12:06:54.468Z",
@@ -160,13 +167,6 @@
   "name": "TRXSHY",
   "genre": "ボカロ",
   "lastHit": "2026-10-04T14:26:27Z"
- },
- {
-  "id": "UCRrNOLvQ1LztDKbXtxvDAEQ",
-  "added": "2026-10-09T15:55:32.664Z",
-  "name": "EdKara",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-04T10:00:06Z"
  },
  {
   "id": "UCAfQ5CojppHVIiLwuRDBzTg",
@@ -1254,14 +1254,6 @@
   "pinned": true
  },
  {
-  "id": "UCGGY3oTOQ9g9FCu9hLFJsqw",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "*Luna",
-  "genre": "ボカロ",
-  "lastHit": "2018-07-07T10:00:03Z",
-  "pinned": true
- },
- {
   "id": "UC9zY_E8mcAo_Oq772LEZq8Q",
   "name": "THE FIRST TAKE",
   "added": "2026-10-09T12:06:54.468Z",
@@ -1568,13 +1560,6 @@
   "lastHit": "2026-10-07T10:00:39Z"
  },
  {
-  "id": "UCNMbL86u5LBeO_BWHp5pJ5g",
-  "name": "Element Sicks【EL6】",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "J-POP",
-  "lastHit": "2026-10-07T10:00:26Z"
- },
- {
   "id": "UCNwP0ghb6J-xRSTqM3sXVXA",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "WHITEBOX",
@@ -1661,12 +1646,26 @@
   "pinned": true
  },
  {
+  "id": "UCaO6TYtlC8U5ttz62hTrZgg",
+  "added": "2026-10-09T17:21:50.995Z",
+  "name": "JYP Entertainment",
+  "genre": "J-POP",
+  "lastHit": "2026-10-06T09:00:05Z"
+ },
+ {
   "id": "UCCy_q-N7F2FOIZ6ZggHIAKg",
   "added": "2026-10-09T12:23:27.151Z",
   "name": "Sony Music (Japan)",
   "genre": "アニソン",
   "lastHit": "2026-10-06T03:01:24Z",
   "pinned": true
+ },
+ {
+  "id": "UCgUCsArNN7sOklsjh0turRQ",
+  "added": "2026-10-09T17:21:50.995Z",
+  "name": "日本名曲カバー",
+  "genre": "J-POP",
+  "lastHit": "2026-10-06T01:33:46Z"
  },
  {
   "id": "UCdPCarwi28K5Z7s5l2nMiLw",
@@ -2043,14 +2042,6 @@
   "pinned": true
  },
  {
-  "id": "UC1tk9F5-MGXEq4LWnjmrtpA",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "カラオケ歌っちゃ王",
-  "genre": "J-POP",
-  "lastHit": "2024-04-12T06:54:39Z",
-  "pinned": true
- },
- {
   "id": "UCzRUSFIF_plgY0a7u7TulEQ",
   "added": "2026-10-09T12:23:27.151Z",
   "name": "FZMZ Official",
@@ -2248,14 +2239,6 @@
   "name": "藍井エイル Official YouTube Channel",
   "genre": "アニソン",
   "lastHit": "2021-10-19T03:00:23Z",
-  "pinned": true
- },
- {
-  "id": "UCfaIo2ISxoPA7Zr1uv9KpIQ",
-  "added": "2026-10-09T12:23:27.151Z",
-  "name": "石川智晶",
-  "genre": "アニソン",
-  "lastHit": "2021-10-12T15:00:00Z",
   "pinned": true
  },
  {
