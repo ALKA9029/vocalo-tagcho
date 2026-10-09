@@ -164,20 +164,32 @@ button.badge:hover{border-color:var(--accent);outline:1px solid var(--accent)}
   <button class="loadmore" id="more" hidden>もっと見る</button>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js"></script>
 <script>
+// みんなのタグ投票を保存するデータベース（Supabase）の接続先。
+// ここに入れるのは公開用の鍵なので、サイトに載せても大丈夫（書き込みはデータベース側のルールで制限している）
+const SUPABASE_URL = "";
+const SUPABASE_KEY = "";
+
 const TAGS = ["爽やか","エモい","切ない","かっこいい","かわいい","踊れる","疾走感","中毒性","泣ける","落ち着く","ピアノが好き","ギターが好き"];
 const FIXED_AT = 3;
 const PAGE = 40;
 
 let ITEMS = [], ITEM = {};
-const state = { all:{}, mine:{}, open:null, rel:null, q:"", genre:"", kind:"", sort:"views", period:"", person:null, filter:new Set(), shown:PAGE, canWrite:true, uid:null, db:null };
+const state = { serverCounts:{}, serverMine:{}, mine:{}, open:null, rel:null, q:"", genre:"", kind:"", sort:"views", period:"", person:null, filter:new Set(), shown:PAGE, canWrite:true, uid:null, db:null };
 const $ = s => document.querySelector(s);
 
+// 表示する票数 = みんなの票数（最後に読み込んだ時点）から自分の分を引いて、今の自分の票を足したもの
 function counts(){
   const c = {};
-  const add = votes => { for (const [sid, tags] of Object.entries(votes||{})){ if (!Array.isArray(tags)) continue; for (const t of tags){ if (!TAGS.includes(t)) continue; c[sid] ??= {}; c[sid][t] = (c[sid][t]||0)+1; } } };
-  for (const [uid, v] of Object.entries(state.all)) if (uid !== state.uid) add(v);
-  add(state.mine);
+  for (const [sid, tags] of Object.entries(state.serverCounts)) for (const [t, n] of Object.entries(tags)) {
+    const v = n - (state.serverMine[sid]?.includes(t) ? 1 : 0);
+    if (v > 0) { c[sid] ??= {}; c[sid][t] = v; }
+  }
+  for (const [sid, tags] of Object.entries(state.mine)) for (const t of tags) {
+    if (!TAGS.includes(t)) continue;
+    c[sid] ??= {}; c[sid][t] = (c[sid][t] || 0) + 1;
+  }
   return c;
 }
 
@@ -350,26 +362,102 @@ function buildItem(i, n, c){
       tags, picker, isRel ? related(i) : null));
 }
 
-let saveTimer = null, saving = Promise.resolve();
+// ---------- タグ投票の保存 ----------
+// Supabase の設定があれば、みんなの票として保存・集計する。なければこのブラウザにだけ保存する
+const LS_KEY = "vocalo-tagcho:votes";
+const sb = SUPABASE_URL && SUPABASE_KEY && window.supabase ? window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY) : null;
+let queue = Promise.resolve();
+
+function saveLocal(){ try { localStorage.setItem(LS_KEY, JSON.stringify(state.mine)); } catch {} }
+function loadLocal(){ try { return JSON.parse(localStorage.getItem(LS_KEY) || "{}") || {}; } catch { return {}; } }
+
+// 匿名でログイン（初めて投票したときだけ）。同じブラウザなら次からも同じ人として扱われる
+async function ensureSession(){
+  const { data } = await sb.auth.getSession();
+  if (data.session) return data.session;
+  const r = await sb.auth.signInAnonymously();
+  if (r.error) throw r.error;
+  return r.data.session;
+}
+
+// みんなの票数を読み込む（1,000件ずつ）
+async function loadCounts(){
+  const all = {};
+  for (let from = 0; ; from += 1000) {
+    const { data, error } = await sb.rpc("get_tag_counts").range(from, from + 999);
+    if (error) throw error;
+    for (const r of data) { all[r.song_id] ??= {}; all[r.song_id][r.tag] = Number(r.n); }
+    if (data.length < 1000) break;
+  }
+  state.serverCounts = all;
+}
+
+// 自分の票を読み込む
+async function loadMine(){
+  const mine = {};
+  for (let from = 0; ; from += 1000) {
+    const { data, error } = await sb.from("votes").select("song_id,tag").range(from, from + 999);
+    if (error) throw error;
+    for (const r of data) (mine[r.song_id] ??= []).push(r.tag);
+    if (data.length < 1000) break;
+  }
+  state.serverMine = structuredClone(mine);
+  state.mine = mine;
+}
+
 function toggle(sid, t){
   if (!state.canWrite) return;
   const cur = new Set(state.mine[sid] || []);
-  cur.has(t) ? cur.delete(t) : cur.add(t);
+  const adding = !cur.has(t);
+  adding ? cur.add(t) : cur.delete(t);
   if (cur.size) state.mine[sid] = [...cur]; else delete state.mine[sid];
   refresh(sid);
-  try { localStorage.setItem(LS_KEY, JSON.stringify(state.mine)); } catch {}
-  if (!state.db || !state.uid) return;
-  clearTimeout(saveTimer);
-  saveTimer = setTimeout(()=>{
-    saving = saving.then(()=>state.db.doc("votes/"+state.uid).set({v: structuredClone(state.mine)}))
-      .then(()=>{ saveTimer = null; })
-      .catch(e=>{
-        saveTimer = null;
-        if (e?.code === "invalid_argument"){ state.canWrite = false; setStatus("このページでは閲覧のみできるよ（タグ投票は権限がある人だけ）。"); render(); }
-        else setStatus("保存できなかったよ。少し待ってからもう一度押してみて。");
-      });
-  }, 500);
+  if (!sb) { saveLocal(); return; }
+  queue = queue.then(async ()=>{
+    await ensureSession();
+    const r = adding
+      ? await sb.from("votes").upsert({ song_id: sid, tag: t }, { onConflict: "user_id,song_id,tag", ignoreDuplicates: true })
+      : await sb.from("votes").delete().eq("song_id", sid).eq("tag", t);
+    if (r.error) throw r.error;
+  }).catch(e=>{
+    console.warn(e);
+    // 保存できなかったら画面を元に戻す
+    const back = new Set(state.mine[sid] || []);
+    adding ? back.delete(t) : back.add(t);
+    if (back.size) state.mine[sid] = [...back]; else delete state.mine[sid];
+    refresh(sid);
+    setStatus(/上限/.test(e?.message || "") ? "投票できる数の上限に達したよ。" : "投票を保存できなかったよ。少し待ってからもう一度押してみて。");
+  });
 }
+
+async function startVotes(){
+  if (!sb) { state.mine = loadLocal(); render(); return; }
+  try {
+    await loadCounts();
+    const { data } = await sb.auth.getSession();
+    if (data.session) await loadMine();
+    // 以前このブラウザだけに保存していた票があれば、みんなの票に移す
+    const local = loadLocal();
+    const rows = Object.entries(local).flatMap(([song_id, tags]) => tags.filter(t => TAGS.includes(t)).map(tag => ({ song_id, tag })));
+    if (rows.length) {
+      await ensureSession();
+      const r = await sb.from("votes").upsert(rows, { onConflict: "user_id,song_id,tag", ignoreDuplicates: true });
+      if (!r.error) { try { localStorage.removeItem(LS_KEY); } catch {} await loadCounts(); await loadMine(); }
+    }
+  } catch (e) {
+    console.warn(e);
+    setStatus(baseNote + " みんなのタグを読み込めなかったよ。少し待ってから開き直してみて。");
+  }
+  render();
+}
+
+// 別のタブから戻ってきたときなどに、みんなの票数を新しくする（1分に1回まで）
+let lastCountsAt = Date.now();
+document.addEventListener("visibilitychange", async ()=>{
+  if (!sb || document.visibilityState !== "visible" || Date.now() - lastCountsAt < 60e3) return;
+  lastCountsAt = Date.now();
+  try { await loadCounts(); refresh(...[...document.querySelectorAll("#list .song")].map(n=>n.id.slice(5))); } catch {}
+});
 
 let baseNote = "";
 function setStatus(html){ $("#status").innerHTML = html; }
@@ -384,17 +472,15 @@ render();
   try {
     const [songs, meta] = await Promise.all([fetch("data/site.json").then(r=>r.json()), fetch("data/meta.json").then(r=>r.json()).catch(()=>null)]);
     ITEMS = songs; ITEM = Object.fromEntries(ITEMS.map(i=>[i.id,i]));
-    baseNote = `${ITEMS.length.toLocaleString("ja-JP")}曲を収録${meta ? `（${fmtDate(meta.updatedAt)}時点）` : ""}。曲名の↗で動画を開く、名前やバッジで絞り込み、行を押すと関連曲。作者名が空の曲は、読み取りを改善中。タグの投票は今はこの端末にだけ保存されるよ（みんなの集計は準備中）。`;
+    baseNote = `${ITEMS.length.toLocaleString("ja-JP")}曲を収録${meta ? `（${fmtDate(meta.updatedAt)}時点）` : ""}。曲名の↗で動画を開く、名前やバッジで絞り込み、行を押すと関連曲。作者名が空の曲は、読み取りを改善中。${sb ? "「＋ タグをつける」から、聴いた印象を投票してね。みんなの票で3票以上集まったタグが定着するよ。" : "タグの投票は今はこの端末にだけ保存されるよ（みんなの集計は準備中）。"}`;
     setStatus(baseNote);
     render();
+    startVotes();
   } catch {
     setStatus("曲データを読み込めなかったよ。ページを開き直してみて。");
   }
 })();
 
-// みんなの集計ができるまでは、自分の票をこの端末（ブラウザ）にだけ保存する
-const LS_KEY = "vocalo-tagcho:votes";
-try { state.mine = JSON.parse(localStorage.getItem(LS_KEY) || "{}") || {}; } catch { state.mine = {}; }
 </script>
 
 </body>
