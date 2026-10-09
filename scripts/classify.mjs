@@ -252,7 +252,11 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
   const parsed = video.src === "youtube" ? parseYouTube(video.title, video.uploader) : parseTitle(video.title);
   const rawVoice = parsed.voice || detectVoice(video.title, tags);
   const voice = rawVoice ? canonicalVoice(rawVoice) : rawVoice;
-  const g = detectGenre(video.title, tags, fallbackGenre, video.desc || "");
+  const desc = video.desc || video.descHead || "";
+  // YouTubeで「ボカロ」として集めた動画でも、歌声やボカロの手がかりがなければボカロにしない
+  const vocaloHint = !!rawVoice || hasTag(tags, VOCALO_TAGS) || /VOCALOID|ボカロ|ボーカロイド|初音ミク|重音テト|可不|Synthesizer ?V|UTAU|CeVIO/i.test(`${video.title} ${desc.slice(0, 300)}`);
+  const fb = video.src === "youtube" && fallbackGenre === "ボカロ" && !vocaloHint ? "J-POP" : fallbackGenre;
+  const g = detectGenre(video.title, tags, fb, desc);
   const item = {
     id: video.id,
     src: video.src,
@@ -268,6 +272,7 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     tags: tags.slice(0, 30),
     uploaderId: video.uploaderId ?? null,
     uploader: video.uploader ?? null,
+    ...(video.src === "youtube" && (video.descHead || video.desc) ? { descHead: (video.descHead || video.desc).slice(0, 300) } : {}),
   };
   if (kind === "本家") {
     const isVoiceName = isVoice(parsed.creator);

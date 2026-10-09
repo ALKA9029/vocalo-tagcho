@@ -114,7 +114,9 @@ const KANA = /[\u3040-\u30ff]/;
 function isJapanese(v) {
   const sn = v.snippet || {};
   if (/^ja/i.test(sn.defaultAudioLanguage || "") || /^ja/i.test(sn.defaultLanguage || "")) return true;
-  return KANA.test([sn.title, sn.channelTitle, (sn.description || "").slice(0, 500), ...(sn.tags || [])].join(" "));
+  if (KANA.test(`${sn.title} ${sn.channelTitle}`)) return true;
+  // 説明文はしっかり日本語で書かれているときだけ（海外の曲のタグや字幕案内に少しだけカタカナがある、を除くため）
+  return ((sn.description || "").slice(0, 600).match(/[\u3040-\u30ff]/g) || []).length >= 15;
 }
 
 // 曲ではなさそうな動画：絵文字だらけの告知動画、ショート動画（1分以下）、長い配信や企画動画（12分超）
@@ -130,7 +132,7 @@ function ytItem(v, genre) {
   const sn = v.snippet || {}, st = v.statistics || {};
   return {
     src: "youtube", id: "yt:" + v.id, url: "https://www.youtube.com/watch?v=" + v.id,
-    title: sn.title || "", tags: sn.tags || [], desc: sn.description || "",
+    title: sn.title || "", tags: sn.tags || [], desc: sn.description || "", descHead: (sn.description || "").slice(0, 300),
     date: sn.publishedAt, views: st.viewCount != null ? Number(st.viewCount) : null, likes: st.likeCount != null ? Number(st.likeCount) : null,
     thumb: sn.thumbnails?.medium?.url || sn.thumbnails?.default?.url || null,
     uploader: sn.channelTitle || "", uploaderId: sn.channelId || null,
@@ -191,7 +193,8 @@ async function refreshYouTubeStats(items) {
   const details = await ytVideos([...byId.keys()], key);
   for (const v of details) {
     const i = byId.get(v.id);
-    if ((!isJapanese(v) || isNoise(v)) && !i.seed) { drop.add(i.id); continue; }
+    if (!isJapanese(v) || (isNoise(v) && !i.seed)) { drop.add(i.id); continue; }
+    i.descHead = (v.snippet?.description || "").slice(0, 300);
     if (v.statistics?.viewCount != null) i.views = Number(v.statistics.viewCount);
     if (v.statistics?.likeCount != null) i.likes = Number(v.statistics.likeCount);
   }
