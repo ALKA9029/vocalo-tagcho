@@ -4,6 +4,10 @@
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { classify, linkCovers, toSite } from "./classify.mjs";
 
+// 実行の記録を data/last-run.txt にも残す（GitHubの画面を開かなくても、何件取れたか確認できるように）
+const RUNLOG = [];
+for (const k of ["log", "warn"]) { const orig = console[k]; console[k] = (...a) => { RUNLOG.push((k === "warn" ? "⚠ " : "") + a.join(" ")); orig(...a); }; }
+
 const ROOT = new URL("..", import.meta.url);
 const path = p => new URL(p, ROOT);
 const config = JSON.parse(await readFile(path("config.json"), "utf8"));
@@ -301,12 +305,15 @@ async function fetchYouTubeSeedSearch() {
       const res = await fetch("https://www.googleapis.com/youtube/v3/search?" + params);
       if (!res.ok) { console.warn(`YouTube人気ボカロ検索「${q.q || q}」: HTTP ${res.status}`); break; }
       const body = await res.json();
+      console.log(`YouTube人気曲検索「${q.q || q}」${page + 1}ページ目: ${(body.items || []).length}件`);
       for (const it of body.items || []) if (it.id?.videoId) found.set(it.id.videoId, q.genre || "ボカロ");
       pageToken = body.nextPageToken;
       if (!pageToken) break;
     }
   }
-  const details = (await ytVideos([...found.keys()], key)).filter(v => isJapanese(v) && !isNoise(v));
+  const all = await ytVideos([...found.keys()], key);
+  const details = all.filter(v => isJapanese(v) && !isNoise(v));
+  console.log(`YouTube人気曲検索: 見つかった${found.size}本／詳細${all.length}本／日本・韓国ボカロの曲${all.filter(isJapanese).length}本／長さOK${details.length}本`);
   const out = details.map(v => ({ ...ytItem(v, found.get(v.id)), seed: true }))
     .filter(v => (v.views || 0) >= (s.minViews || 0));
   console.log(`YouTube人気ボカロ検索: ${found.size}本のうち ${out.length}本を追加`);
@@ -379,3 +386,4 @@ if (fixtureArg < 0) await writeFile(path("data/meta.json"), JSON.stringify(meta,
 // サイト表示用：必要な項目だけにした軽いデータ
 if (fixtureArg < 0) await writeFile(path("data/site.json"), JSON.stringify(toSite(items)) + "\n");
 console.log(`保存しました: ${outFile}（全${items.length}件、うち歌ってみたの原曲ひもづけ ${meta.linkedCovers}件）`);
+if (fixtureArg < 0) await writeFile(path("data/last-run.txt"), `${new Date().toISOString()}${SEED ? "（seed）" : ""}\n` + RUNLOG.join("\n") + "\n");
