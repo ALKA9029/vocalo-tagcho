@@ -1,10 +1,10 @@
 // ネットにつながずに、保存済みのデータ（タイトルとタグ）を今の判定ルールで読み直す。
 //   node scripts/reclassify.mjs
 import { readFile, writeFile } from "node:fs/promises";
-import { classify, linkCovers, toSite } from "./classify.mjs";
+import { classify, linkCovers, toSite, isKaraoke } from "./classify.mjs";
 
 const path = p => new URL("../" + p, import.meta.url);
-const items = JSON.parse(await readFile(path("data/songs.json"), "utf8"));
+const items = JSON.parse(await readFile(path("data/songs.json"), "utf8")).filter(i => !isKaraoke(i.title));
 const overrides = JSON.parse(await readFile(path("data/overrides.json"), "utf8").catch(() => "{}"));
 
 const out = items.map(old => {

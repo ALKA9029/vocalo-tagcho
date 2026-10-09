@@ -26,6 +26,9 @@ export function normalize(s = "") {
 
 const hasTag = (tags, list) => tags.some(t => list.some(x => normalize(t) === normalize(x)));
 
+// カラオケ（ニコカラ・Off Vocal）など、曲そのものではない動画
+export const isKaraoke = title => /ニコカラ|off ?vocal|カラオケ|instrumental|インスト/i.test(title || "");
+
 export function detectKind(title, tags) {
   if (tags.some(t => /^歌ってみた/.test(t)) || COVER_RE.test(title)) return "歌ってみた";
   return "本家";
@@ -122,7 +125,8 @@ export function parseTitle(raw) {
     voice = featOf(q[1]) || null;
     const before = s.slice(0, q.index).replace(/【[^】]*】|\[[^\]]*\]/g, " ")
       .replace(/オリジナル曲?|MV|PV|が|を?歌ってくれたよ|歌ってみた/g, " ").trim();
-    const b = splitNames(before);
+    const b = splitNames(before.replace(/より$/, ""));
+    if (/より$/.test(before) && !b.voices.length) b.others = [];
     if (b.others.length === 1 && !/\s/.test(b.others[0])) creator = b.others[0];
     const after = s.slice(q.index + q[0].length);
     if (!voice) voice = featOf(after.replace(/【[^】]*】/g, "")) || null;
@@ -151,7 +155,10 @@ export function parseTitle(raw) {
     // 歌ってみたは「曲名 / 原曲の作者 / 歌い手」の形が多いので、最後を歌い手とみなす
     const main = parts[parts.length - 1];
     const [who, featVoice] = main.split(/\s*(?:feat\.|ft\.|\bwith\s)\s*/i);
-    const n = splitNames(who.replace(/を?歌ってみた|cover(ed)?\s*(by)?|(アニメ)?MV|Music Video|vo\.?/gi, " ").trim());
+    // 「／音街ウナ・鏡音リンより」の「より」は「〜から（届いた曲）」の意味なので、作者名ではない
+    const fromYori = /より$/.test(who.trim());
+    const n = splitNames(who.replace(/より$/, "").replace(/を?歌ってみた|cover(ed)?\s*(by)?|(アニメ)?MV|Music Video|vo\.?/gi, " ").trim());
+    if (fromYori && !n.voices.length) n.others = [];
     if (n.others.length) creator = n.others.join("・");
     if (!voice && n.voices.length) voice = n.voices[0];
     if (featVoice) voice = featVoice.replace(/(アニメ)?MV|Music Video/gi, "").trim();
@@ -341,7 +348,44 @@ export function fillCreators(items) {
   return items;
 }
 
+// ニコニコの曲：同じ投稿者の動画にいつも付いているタグ（＝その人の名前であることが多い）から、作者名・歌い手名を補う
+const GENERIC_TAG = /VOCALOID|ボカロ|ボーカロイド|オリジナル|歌ってみた|殿堂入り|伝説入り|神話入り|ミリオン|再生|MMD|PV|MV|曲|音楽|カバー|cover|UTAU|CeVIO|Synth|VOICEVOX|NEUTRINO|ニコニコ|投稿|祭|コレ|ランキング|プロジェクト|シリーズ|大会|企画|合作|^[0-9]+$/i;
+export function inferNamesFromTags(items) {
+  const nico = items.filter(i => i.src === "niconico" && i.uploaderId);
+  // 歌ってみたには原曲の作者名のタグが付くので、「何人の投稿者が使っているタグか」は本家と歌ってみたで別々に数える
+  const tagUsers = { "本家": new Map(), "歌ってみた": new Map() };
+  for (const i of nico) for (const t of i.tags || []) { const m = tagUsers[i.kind]; const n = normalize(t); if (!m.has(n)) m.set(n, new Set()); m.get(n).add(i.uploaderId); }
+  const byUser = new Map();
+  for (const i of nico) { if (!byUser.has(i.uploaderId)) byUser.set(i.uploaderId, []); byUser.get(i.uploaderId).push(i); }
+  let filled = 0;
+  for (const [, vids] of byUser) {
+    const kind = vids.filter(v => v.kind === "本家").length >= vids.length / 2 ? "本家" : "歌ってみた";
+    const cnt = new Map();
+    for (const i of vids) for (const t of new Set(i.tags || [])) cnt.set(t, (cnt.get(t) || 0) + 1);
+    const titles = new Set(vids.map(v => normalize(v.t)));
+    const allTitles = normalize(vids.map(v => v.title).join(" "));
+    const ok = t => !isVoice(t) && !GENERIC_TAG.test(t) && !titles.has(normalize(t)) && (tagUsers[kind].get(normalize(t))?.size || 9) <= 2 && t.length <= 20;
+    // タイトルにも名前が出てくるタグ（「feat. じん」など）を優先。イラストレーターのタグより作者名を選びやすくする
+    const score = (t, c) => c + (allTitles.includes(normalize(t)) ? 0.5 : 0) + (/[PＰ]$/.test(t) ? 0.3 : 0);
+    let name = "";
+    if (vids.length >= 2) {
+      const need = Math.max(2, Math.ceil(vids.length * 0.6));
+      name = [...cnt].filter(([t, c]) => c >= need && ok(t)).sort((a, b) => score(...b) - score(...a) || a[0].length - b[0].length)[0]?.[0] || "";
+    } else {
+      // 動画が1本だけの人は、「〇〇P」のようなボカロPらしいタグだけ使う
+      name = (vids[0].tags || []).find(t => /[PＰ]$/.test(t) && ok(t)) || "";
+    }
+    if (!name) continue;
+    for (const i of vids) {
+      if (i.kind === "本家" && (!i.p || i.pFilled)) { i.p = name; i.pFilled = false; i.pFromTag = true; filled++; }
+      else if (i.kind === "歌ってみた" && !i.by) { i.by = name; filled++; }
+    }
+  }
+  return filled;
+}
+
 export function linkCovers(items) {
+  inferNamesFromTags(items);
   fillCreators(items);
   const originals = new Map();
   for (const i of items.filter(x => x.kind === "本家").sort((a, b) => (a.date || "").localeCompare(b.date || ""))) {

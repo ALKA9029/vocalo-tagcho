@@ -2,7 +2,7 @@
 //   node scripts/fetch.mjs                      … ニコニコとYouTubeから取得
 //   node scripts/fetch.mjs --fixture FILE.json  … ネットにつながず、テスト用データで動かす
 import { readFile, writeFile, mkdir } from "node:fs/promises";
-import { classify, linkCovers, toSite } from "./classify.mjs";
+import { classify, linkCovers, toSite, isKaraoke } from "./classify.mjs";
 
 // 実行の記録を data/last-run.txt にも残す（GitHubの画面を開かなくても、何件取れたか確認できるように）
 const RUNLOG = [];
@@ -349,6 +349,7 @@ const overrides = await readJson("data/overrides.json", {});
 
 let statsOnly = 0;
 for (const v of videos) {
+  if (isKaraoke(v.title)) continue;
   if (v.updateOnly) {
     const prev = existing.get(v.id);
     if (prev) { prev.views = v.views ?? prev.views; prev.likes = v.likes ?? prev.likes; statsOnly++; }
