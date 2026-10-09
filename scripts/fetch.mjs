@@ -95,7 +95,7 @@ async function fetchYouTubeTrending() {
     const res = await fetch("https://www.googleapis.com/youtube/v3/videos?" + params);
     if (!res.ok) { console.warn(`YouTube急上昇: HTTP ${res.status} ${(await res.text()).slice(0, 200)}`); break; }
     const body = await res.json();
-    for (const v of (body.items || []).filter(isJapanese)) {
+    for (const v of (body.items || []).filter(v => isJapanese(v) && !isNoise(v))) {
       const item = ytItem(v, t.defaultGenre);
       if (item.views != null && item.views < (t.minViews || 0)) continue;
       out.push(item);
@@ -114,6 +114,9 @@ function isJapanese(v) {
   if (/^ja/i.test(sn.defaultAudioLanguage || "") || /^ja/i.test(sn.defaultLanguage || "")) return true;
   return KANA.test([sn.title, sn.channelTitle, (sn.description || "").slice(0, 500), ...(sn.tags || [])].join(" "));
 }
+
+// 曲ではなさそうな動画（絵文字だらけの告知動画など）
+const isNoise = v => ((v.snippet?.title || "").match(/\p{Extended_Pictographic}/gu) || []).length >= 3;
 
 // videos.list の1件をサイト用の形に（共通）
 function ytItem(v, genre) {
@@ -165,7 +168,7 @@ async function fetchYouTubeSearch() {
       if (!pageToken) break;
     }
   }
-  const details = (await ytVideos([...found.keys()], key)).filter(isJapanese);
+  const details = (await ytVideos([...found.keys()], key)).filter(v => isJapanese(v) && !isNoise(v));
   return details.map(v => ytItem(v, found.get(v.id)))
     .filter(v => v.views == null || v.views >= (s.minViews || 0))
     .filter(v => !/#shorts/i.test(v.title));
@@ -181,7 +184,7 @@ async function refreshYouTubeStats(items) {
   const details = await ytVideos([...byId.keys()], key);
   for (const v of details) {
     const i = byId.get(v.id);
-    if (!isJapanese(v) && !i.seed) { drop.add(i.id); continue; }
+    if ((!isJapanese(v) || isNoise(v)) && !i.seed) { drop.add(i.id); continue; }
     if (v.statistics?.viewCount != null) i.views = Number(v.statistics.viewCount);
     if (v.statistics?.likeCount != null) i.likes = Number(v.statistics.likeCount);
   }
