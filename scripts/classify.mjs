@@ -73,6 +73,30 @@ const cleanSong = t => t.replace(/\s*(?:feat\.?|ft\.)\s*.*$/i, "")
   .replace(/\s+/g, " ").trim();
 const featOf = t => (t.match(/(?:feat\.?|ft\.)\s*(.+)$/i) || [])[1]?.trim();
 
+// 「原曲の作者 covered by 歌い手」「Cover:歌い手」「〜 重音テトcover」などから、歌い手と原曲の作者を取り出す（ニコニコ・YouTube共通）
+// 「coverd by」「Covered By」「cover by秀人」のような表記ゆれも許す
+export function readCoverCredit(raw, song = "") {
+  const flat = raw.normalize("NFKC").replace(/【[^】]*】|\[[^\]]*\]|#\S+/g, " ").replace(/\s+/g, " ").trim();
+  const cleanSinger = x => x.replace(/^\s*(VOCALOID|ボカロ)\s*/i, "").replace(/\s*\+.*$/, "")
+    .replace(/\s*[（(].*$/, "").replace(/\s*cover\s*$/i, "").replace(/[\s\-–—:：|｜]+$/, "").trim();
+  const cleanOrig = x => x.split(/\s[-–—]\s/).pop().replace(/^.*[「『]|[」』].*$/g, "").replace(/\s*(cover|カバー|歌ってみた)\s*$/i, "")
+    .replace(/^[\s\-–—:：|｜\/／]+|[\s\-–—:：|｜\/／]+$/g, "").trim();
+  const notSong = x => x && normalize(x) !== normalize(song) && !(normalize(song) && normalize(x).includes(normalize(song)));
+  // A) covered by / coverd by / cover by
+  let m = flat.match(/(?:^|[\/／|｜]\s*|\s[-–—]\s*)([^\/／|｜]*?)[\s\-–—]*cover(?:e?d)?\s*by\s*[:：]?\s*([^\/／|｜]+)/i);
+  if (m) {
+    const orig = cleanOrig(m[1]);
+    return { singer: cleanSinger(m[2]), original: notSong(orig) ? orig : "" };
+  }
+  // B) Cover:歌い手
+  m = flat.match(/(?:^|[\/／|｜]\s*)([^\/／|｜]*?)\s*cover\s*[:：]\s*([^\/／|｜]+)/i);
+  if (m) { const orig = cleanOrig(m[1]); return { singer: cleanSinger(m[2].split(/[,、]/)[0]), original: notSong(orig) ? orig : "" }; }
+  // C) 「〜 / 原曲の作者 重音テトcover」のように、歌声名のすぐ後ろに cover
+  m = flat.match(/(?:^|[\/／]\s*)([^\/／]*?)\s*(\S+?)\s*cover\b/i);
+  if (m && isVoice(m[2])) { const orig = cleanOrig(m[1]); return { singer: canonicalVoice(m[2]), original: notSong(orig) ? orig : "" }; }
+  return null;
+}
+
 // 「曲名 / 作者 feat. 歌声」「【初音ミク】曲名【オリジナル】」「作者『曲名』feat. 歌声」「作者 - 曲名」などから曲名と名前を取り出す
 export function parseTitle(raw) {
   const s = raw.normalize("NFKC").trim();
@@ -91,6 +115,11 @@ export function parseTitle(raw) {
     if (b.others.length === 1 && !/\s/.test(b.others[0])) creator = b.others[0];
     const after = s.slice(q.index + q[0].length);
     if (!voice) voice = featOf(after.replace(/【[^】]*】/g, "")) || null;
+    if (!creator) {
+      const a = after.replace(/【[^】]*】|\[[^\]]*\]|\([^)]*\)/g, " ").split(/\s*[\/／]\s*/)[0]
+        .replace(/\s*(?:feat\.?|ft\.).*$/i, "").replace(/オリジナル曲?|MV|PV|歌ってみた|cover/gi, " ").trim();
+      if (a && !/\s{2,}/.test(a) && a.length <= 30 && !isVoice(a)) creator = a;
+    }
     const sl = after.split(/\s*[\/／]\s*/);
     if (sl.length > 1) credit = sl.slice(1).join(" / ");
   } else {
@@ -123,14 +152,10 @@ export function parseTitle(raw) {
   // 【IA】【初音ミク＆GUMI】のような括弧の中の歌声
   // 「原曲の作者-Covered by 歌い手」「〜 / VOCALOID KAITO COVER」のような書き方
   const flat = s.replace(/【[^】]*】|\[[^\]]*\]/g, " ");
-  const cleanSinger = x => x.replace(/^\s*(VOCALOID|ボカロ)\s*/i, "").replace(/\s*\+.*$/, "").replace(/\s*cover\s*$/i, "").replace(/[\s\-–—]+$/, "").trim();
-  const cb = flat.match(/(?:^|[\/／]\s*)([^\/／]*?)[\s\-–—]*covered\s+by\s+([^\/／]+)/i);
-  if (cb) {
-    creator = cleanSinger(cb[2]);
-    const orig = cb[1].trim();
-    if (orig && normalize(orig) !== normalize(song)) originalCreator = orig;
-  } else if (credit && /\scover\s*$/i.test(credit)) {
-    creator = cleanSinger(credit.split(/\s*[\/／]\s*/).pop());
+  const cv = readCoverCredit(s, song);
+  if (cv && cv.singer) {
+    creator = cv.singer;
+    if (cv.original) originalCreator = cv.original;
   }
   if (!voice) for (const br of bracketed) { const v = splitNames(br.slice(1, -1)).voices[0]; if (v) { voice = v; break; } }
   if (voice) voice = splitNames(voice).voices[0] || voice.split(/\s*[・＆&]\s*/)[0];
@@ -147,7 +172,7 @@ export function parseYouTube(raw, channel = "") {
     .replace(/【[^】]*】|\[[^\]]*\]|\([^)]*\)|（[^）]*）/g, " ")
     .replace(/\s-[^-]{2,}-\s*$/, " ")          // 「-Music Video-」「-from TBS系…-」
     .replace(YT_NOISE, " ").replace(/#\S+/g, " ").replace(/\s+/g, " ").trim();
-  let song = "", artist = "";
+  let song = "", artist = "", otherName = "";
   const q = s.match(/[「『]([^」』]+)[」』]|"([^"]+)"|(?:^|[\s|｜])'([^']+)'(?:\s|$)/);
   if (q) {
     song = (q[1] || q[2] || q[3]).trim();
@@ -156,17 +181,28 @@ export function parseYouTube(raw, channel = "") {
     const parts = s.split(/\s*[|｜\/／]\s*|\s+[-–—]\s+/).map(x => x.trim()).filter(Boolean);
     const isCh = x => ch && (normalize(x) === normalize(ch) || normalize(x).includes(normalize(ch)) || normalize(ch).includes(normalize(x)));
     const chIdx = parts.findIndex(isCh);
-    if (parts.length >= 2 && chIdx >= 0) { artist = parts[chIdx]; song = parts.find((_, i) => i !== chIdx); }
+    if (parts.length >= 2 && chIdx >= 0) {
+      artist = parts[chIdx]; song = parts.find((_, i) => i !== chIdx);
+      // 「曲名 - 原曲の作者 / 歌い手(チャンネル)」の形なら、残りを原曲の作者の候補に
+      otherName = parts.find((x, i) => i !== chIdx && x !== song) || "";
+    }
     else if (parts.length >= 2) {
       // 区切りがダッシュなら「アーティスト - 曲名」、スラッシュなら「曲名 / アーティスト」が多い
       if (/\s[-–—]\s/.test(s)) { artist = parts[0]; song = parts[1]; } else { song = parts[0]; artist = parts[1]; }
     } else song = parts[0] || s;
   }
+  const coverSong = (q ? song : s.split(/\s*[\/／|｜]\s*|\s+[-–—]\s+/)[0]).replace(/\s*cover(?:e?d)?\s*(by.*|[:：].*)?$/i, "").trim();
+  const cv = readCoverCredit(raw, coverSong);
+  if (cv && cv.singer) {
+    const vs = splitNames(cv.singer).voices;
+    return { song: coverSong || raw.trim(), creator: cv.original || "", voice: vs.length ? canonicalVoice(vs[0]) : null,
+      originalCreator: "", channel: ch, coverSinger: cv.singer, brackets: [] };
+  }
   const featVoice = featOf(song) || featOf(artist);
   song = song.replace(/\s*(?:feat\.?|ft\.)\s*.*$/i, "").replace(/セルフカバー|cover/gi, "")
     .replace(/^[\s\-–—:：|｜]+|[\s\-–—:：|｜]+$/g, "").trim();
   artist = artist.replace(/\s*(?:feat\.?|ft\.)\s*.*$/i, "").replace(/\s*[（(].*$/, "").trim() || ch;
-  return { song: song || raw.trim(), creator: artist, voice: featVoice ? (splitNames(featVoice).voices[0] || null) : null, originalCreator: "", channel: ch, brackets: [] };
+  return { song: song || raw.trim(), creator: artist, voice: featVoice ? (splitNames(featVoice).voices[0] || null) : null, originalCreator: "", channel: ch, otherName, brackets: [] };
 }
 
 // 動画1件 → サイトで使う形
@@ -200,11 +236,16 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     // 同じ投稿者なら同じ作者とみなす（名前の書き方がばらばらでもまとまる）。投稿者が分からないときだけ名前でまとめる
     item.a = video.uploaderId ? `${video.src}:${video.uploaderId}` : normalize(item.p);
   } else {
-    if (video.src === "youtube") { parsed.originalCreator = parsed.creator !== parsed.channel ? parsed.creator : ""; parsed.creator = parsed.channel || parsed.creator; }
+    if (video.src === "youtube") {
+      // タイトルに「covered by 歌い手」があればそれを、なければチャンネル名を歌い手とみなす
+      parsed.originalCreator = parsed.creator && normalize(parsed.creator) !== normalize(parsed.channel) ? parsed.creator : (parsed.otherName || "");
+      parsed.creator = parsed.coverSinger || parsed.channel || parsed.creator;
+    }
     item.by = (parsed.creator || video.uploader || "").replace(/^(ver\.?|by)\s*/i, "").replace(/^VOCALOID\s+/i, "").replace(/\s*\+.*$/, "").replace(/\s+/g, " ").trim();
     if (parsed.originalCreator) item.pHint = parsed.originalCreator;
     // 歌い手が歌声（KAITOなど）なら、歌声としても絞り込めるように
     if (isVoice(item.by)) item.v = canonicalVoice(item.by);
+    else if (parsed.coverSinger && parsed.voice) item.v = parsed.voice;
     // 原曲の作者が分かれば表示用に入れておく（原曲が見つかればそちらで上書きされる）
     if (item.pHint) { item.p = item.pHint; item.a = normalize(item.pHint); }
   }
@@ -215,7 +256,8 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
 // YouTubeのチャンネル名からアーティスト名を取り出す（「YOASOBI - Topic」「〇〇 Official YouTube Channel」など）
 export function cleanChannel(name) {
   name = name || "";
-  return name.replace(/\s*-\s*Topic$/i, "").replace(/\s*(official\s*)?(youtube\s*)?(channel|チャンネル)$/i, "")
+  return name.replace(/\s*[|｜].*$/, "").replace(/\s+-[^-]+-\s*$/, "").replace(/\s*-\s*[A-Za-z][A-Za-z .]*-?\s*$/, "")
+    .replace(/\s*(ch\.?|channel)\s*$/i, "").replace(/\s*-\s*Topic$/i, "").replace(/\s*(official\s*)?(youtube\s*)?(channel|チャンネル)$/i, "")
     .replace(/\s*(official|公式)$/i, "").replace(/\s*\/\s*.*$/, "").trim();
 }
 
@@ -244,7 +286,7 @@ export function linkCovers(items) {
   for (const c of items) {
     if (c.kind !== "歌ってみた" || c.ofLocked) continue;
     const o = originals.get(normalize(c.t));
-    if (o) { c.of = o.id; c.p = o.p; c.a = o.a; if (c.g === "その他") c.g = o.g; }
+    if (o) { c.of = o.id; c.p = o.p || c.p; c.a = o.p ? o.a : (c.a || o.a); if (c.g === "その他") c.g = o.g; }
   }
   return items;
 }

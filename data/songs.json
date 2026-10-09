@@ -152,11 +152,10 @@
   ],
   "uploaderId": 811012,
   "uploader": null,
-  "p": "DECO*27",
+  "p": "]",
   "v": "初音ミク",
   "a": "niconico:811012",
-  "firstSeen": "2026-10-09T11:31:51.966Z",
-  "pFilled": true
+  "firstSeen": "2026-10-09T11:31:51.966Z"
  },
  {
   "id": "nico:sm46896153",
@@ -744,11 +743,12 @@
   "uploaderId": 143994593,
   "uploader": null,
   "by": "KAITO",
+  "pHint": "VOCALOID",
   "v": "KAITO",
+  "p": "VOCALOID",
+  "a": "vocaloid",
   "firstSeen": "2026-10-08T14:32:41.477Z",
-  "of": "yt:hML9ZiIRuuQ",
-  "p": "",
-  "a": "youtube:UCirbuk79YaCevtuEvu2wERA"
+  "of": "yt:hML9ZiIRuuQ"
  },
  {
   "id": "nico:sm46892986",
@@ -829,7 +829,7 @@
   ],
   "uploaderId": 33916307,
   "uploader": null,
-  "p": "",
+  "p": "開催のお知らせ",
   "v": "重音テト",
   "a": "niconico:33916307",
   "firstSeen": "2026-10-08T14:30:41.045Z"
@@ -1131,7 +1131,7 @@
   "tags": [],
   "uploaderId": "UCRdKkgI-mTt_3OKqKvs56rA",
   "uploader": "みんなのボカロ考察コメントまとめch",
-  "p": "みんなのボカロ考察コメントまとめch",
+  "p": "みんなのボカロ考察コメントまとめ",
   "v": "KAITO",
   "a": "youtube:UCRdKkgI-mTt_3OKqKvs56rA",
   "firstSeen": "2026-10-09T11:31:52.155Z"
@@ -1210,12 +1210,11 @@
   ],
   "uploaderId": "UC9HYkiQZ1_b3J_F8gc12eaA",
   "uploader": "塚原大地 / Tsukahara Daichi【にじさんじ】",
-  "by": "塚原大地",
-  "pHint": "Covered by Y4T4男",
-  "p": "ハチ",
-  "a": "niconico:380847",
+  "by": "Y4T4男",
   "firstSeen": "2026-10-09T11:31:52.140Z",
-  "of": "nico:sm13386216"
+  "p": "ハチ",
+  "of": "nico:sm13386216",
+  "a": "niconico:380847"
  },
  {
   "id": "yt:kmKPTBm7tjM",
@@ -1265,7 +1264,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=YM9nTzZOrKY",
   "title": "【歌ってみた】第六感 - Reol  covered by 琶舞【神椿】",
-  "t": "Reol ed by 琶舞",
+  "t": "第六感",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-10-07T10:30:18Z",
@@ -1306,10 +1305,10 @@
   ],
   "uploaderId": "UCO6mA1hC3Gv9jEoCTITjAQw",
   "uploader": "琶舞 -ʙᴇᴍᴀ-",
-  "by": "琶舞 -ʙᴇᴍᴀ-",
-  "pHint": "第六感",
-  "p": "第六感",
-  "a": "第六感",
+  "by": "琶舞",
+  "pHint": "Reol",
+  "p": "Reol",
+  "a": "reol",
   "firstSeen": "2026-10-09T11:31:52.142Z"
  },
  {
@@ -1336,7 +1335,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=F7KQf7s3iBM",
   "title": "【歌ってみた】クスシキ -  Mrs. GREEN APPLE covered by 明透【神椿】",
-  "t": "Mrs. GREEN APPLE ed by 明透",
+  "t": "クスシキ",
   "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2026-10-07T10:00:39Z",
@@ -1376,10 +1375,10 @@
   ],
   "uploaderId": "UCBLGjbYv6-xxju1i44RjnnA",
   "uploader": "明透 -ᴀsᴜ-",
-  "by": "明透 -ᴀsᴜ-",
-  "pHint": "クスシキ",
-  "p": "クスシキ",
-  "a": "クスシキ",
+  "by": "明透",
+  "pHint": "Mrs. GREEN APPLE",
+  "p": "Mrs. GREEN APPLE",
+  "a": "mrsgreenapple",
   "firstSeen": "2026-10-09T11:31:52.145Z"
  },
  {
@@ -1677,7 +1676,7 @@
   "tags": [],
   "uploaderId": "UCv7hPaqfIM06j3B1vOgSPyg",
   "uploader": "久々湊るい - Kugumi Rui -",
-  "by": "久々湊るい - Kugumi Rui -",
+  "by": "久々湊るい",
   "pHint": "初星学園 ー 久々湊るい",
   "p": "初星学園",
   "a": "youtube:UC2dXx-3RXeeP8hA5AGt8vuw",
@@ -2347,10 +2346,10 @@
   "tags": [],
   "uploaderId": "UCku_lu7-_U_suOM_xOm6nGw",
   "uploader": "SPLENDID GOD GIRAFFE",
-  "by": "SPLENDID GOD GIRAFFE",
-  "pHint": "安全地帯cover by秀人",
-  "p": "安全地帯cover by秀人",
-  "a": "安全地帯coverby秀人",
+  "by": "秀人",
+  "pHint": "安全地帯",
+  "p": "安全地帯",
+  "a": "安全地帯",
   "firstSeen": "2026-10-09T11:31:52.152Z"
  },
  {
@@ -2882,10 +2881,10 @@
   ],
   "uploaderId": "UCvuAdWg_I8U9kwVGZ4XLvog",
   "uploader": "神凪アンナ - Kannagi Anna - ",
-  "by": "神凪アンナ - Kannagi Anna -",
+  "by": "神凪アンナ",
   "pHint": "NOMELON NOLEMON 歌ってみた",
-  "p": "",
-  "a": "niconico:101303",
+  "p": "NOMELON NOLEMON 歌ってみた",
+  "a": "nomelonnolemon歌ってみた",
   "firstSeen": "2026-10-09T11:36:19.716Z",
   "of": "nico:sm24841816"
  },
@@ -3314,10 +3313,11 @@
   "tags": [],
   "uploaderId": "UCteIz-t7DtvrTejMcUtruRg",
   "uploader": "イトナンジ / itonanji",
-  "by": "イトナンジ",
-  "pHint": "忘れらんねえよ 重音テトcover",
-  "p": "忘れらんねえよ 重音テトcover",
-  "a": "忘れらんねえよ重音テトcover",
+  "by": "重音テト",
+  "pHint": "忘れらんねえよ",
+  "v": "重音テト",
+  "p": "忘れらんねえよ",
+  "a": "忘れらんねえよ",
   "firstSeen": "2026-10-09T11:31:52.155Z"
  },
  {
@@ -3795,7 +3795,7 @@
   "tags": [],
   "uploaderId": "UCXos4VWtLz_TNjLZy6F8mdw",
   "uploader": "BURNOUT SYNDROMES Official YouTube Channel",
-  "p": "BURNOUT SYNDROMES",
+  "p": "BURNOUT SYNDROMES Official YouTube",
   "a": "youtube:UCXos4VWtLz_TNjLZy6F8mdw",
   "firstSeen": "2026-10-09T11:31:52.135Z"
  },
@@ -3817,7 +3817,6 @@
   "by": "お冷や",
   "firstSeen": "2026-10-09T11:36:19.713Z",
   "of": "nico:sm32076378",
-  "p": "",
   "a": "niconico:10103681"
  },
  {
@@ -3900,9 +3899,9 @@
   "uploaderId": "UCpjypWF_wNRs9_TrjjWngpQ",
   "uploader": "渚トラウト / Nagisa Trout【にじさんじ】",
   "by": "渚トラウト",
-  "pHint": "monet Covered by 渚トラウト",
-  "p": "monet Covered by 渚トラウト",
-  "a": "monetcoveredby渚トラウト",
+  "pHint": "monet",
+  "p": "monet",
+  "a": "monet",
   "firstSeen": "2026-10-09T11:31:52.137Z"
  },
  {
@@ -4486,8 +4485,8 @@
   "tags": [],
   "uploaderId": "UCYRtF_yv-7jE7ABxZ3Uqahw",
   "uploader": "roiro music",
-  "by": "roiro music",
-  "pHint": "YOASOBI",
+  "by": "roiro",
+  "pHint": "NHK 朝ドラ 主題歌 INSPIRED JAZZ PIANO",
   "p": "主題歌",
   "a": "youtube:UCpEXggDN6KWpc4yn46OpiQw",
   "firstSeen": "2026-10-09T11:31:52.130Z",
@@ -4802,10 +4801,10 @@
   "tags": [],
   "uploaderId": "UCJXU7v0Nc42_KWpmI0sjyJA",
   "uploader": "七声 七丸 | Nanamaru Ch. ",
-  "by": "七声 七丸 | Nanamaru Ch.",
-  "pHint": "七声七丸",
-  "p": "七声七丸",
-  "a": "七声七丸",
+  "by": "七声 七丸",
+  "pHint": "アボカド6",
+  "p": "アボカド6",
+  "a": "アボカド6",
   "firstSeen": "2026-10-09T11:31:52.152Z"
  },
  {
@@ -4900,7 +4899,7 @@
   ],
   "uploaderId": "UC-NsYsspnVA5WA7IRLJ60BQ",
   "uploader": "010 -mato-",
-  "by": "010 -mato-",
+  "by": "010",
   "pHint": "低音女子が歌う",
   "p": "米津玄師",
   "a": "youtube:UCfaaDRLlr9VXScDVkIeb4Tw",
@@ -5267,7 +5266,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=cnQyP9TNJqk",
   "title": "接吻 cover by 石狩あかり【歌ってみた】",
-  "t": "接吻  by 石狩あかり",
+  "t": "接吻",
   "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2026-10-04T10:00:08Z",
@@ -5303,10 +5302,10 @@
   "tags": [],
   "uploaderId": "UC1nqXaKzG4hd1SRFVra16gw",
   "uploader": "焔魔るり CH. / Ruri Enma",
-  "by": "焔魔るり CH.",
-  "pHint": "Penthouse Cover:焔魔るり,ヨミ",
-  "p": "Penthouse Cover:焔魔るり,ヨミ",
-  "a": "penthousecover:焔魔るりヨミ",
+  "by": "焔魔るり",
+  "pHint": "Penthouse",
+  "p": "Penthouse",
+  "a": "penthouse",
   "firstSeen": "2026-10-09T11:31:52.152Z"
  },
  {
@@ -5314,7 +5313,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=abFbHCnJjkE",
   "title": "Surges - covered by 初音ミクV6 × 初音ミクV4X【VOCALOID Cover】",
-  "t": "ed by 初音ミクV6 × 初音ミクV4X",
+  "t": "Surges",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-10-04T10:00:06Z",
@@ -5326,11 +5325,12 @@
   ],
   "uploaderId": "UCE43wCNYRrIaxsxc0Fhi0CQ",
   "uploader": "ぶいみく / 444ppi",
-  "by": "ぶいみく",
-  "pHint": "Surges",
-  "p": "Surges",
-  "a": "surges",
-  "firstSeen": "2026-10-09T11:31:52.156Z"
+  "by": "初音ミクV6 × 初音ミクV4X",
+  "v": "初音ミク",
+  "firstSeen": "2026-10-09T11:31:52.156Z",
+  "p": "Orangestar",
+  "of": "nico:sm39227588",
+  "a": "niconico:32260190"
  },
  {
   "id": "yt:YPS73pqyi10",
@@ -5994,7 +5994,6 @@
   "by": "",
   "firstSeen": "2026-10-09T11:31:51.973Z",
   "of": "nico:sm33360604",
-  "p": "",
   "a": "niconico:2686789"
  },
  {
@@ -6448,11 +6447,9 @@
   ],
   "uploaderId": "UCmwgWWVJPuQqWr91bUY3RHw",
   "uploader": "騎士X - Knight X -",
-  "by": "騎士X - Knight X -",
-  "pHint": "騎士X",
-  "p": "騎士X",
-  "a": "騎士x",
-  "firstSeen": "2026-10-09T11:31:52.080Z"
+  "by": "騎士X",
+  "firstSeen": "2026-10-09T11:31:52.080Z",
+  "p": "騎士X"
  },
  {
   "id": "yt:qdBtGpZl_jE",
@@ -6629,7 +6626,7 @@
   "tags": [],
   "uploaderId": "UCXos4VWtLz_TNjLZy6F8mdw",
   "uploader": "BURNOUT SYNDROMES Official YouTube Channel",
-  "p": "BURNOUT SYNDROMES",
+  "p": "BURNOUT SYNDROMES Official YouTube",
   "a": "youtube:UCXos4VWtLz_TNjLZy6F8mdw",
   "firstSeen": "2026-10-09T11:31:52.133Z"
  },
@@ -6690,7 +6687,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=3WTSg6gMIl8",
   "title": "Layla intro cover by RYUTO  #ericclapton #ギター #エリッククラプトン #弾いてみた #カバー #音楽 #music #guitar #cover",
-  "t": "Layla intro  by RYUTO",
+  "t": "Layla intro",
   "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2026-10-03T12:00:30Z",
@@ -6731,7 +6728,7 @@
   ],
   "uploaderId": "UCKBPmmfrGD6X8vuYEf5H93A",
   "uploader": "RYUTO Guitarist",
-  "by": "RYUTO Guitarist",
+  "by": "RYUTO",
   "firstSeen": "2026-10-09T11:36:19.714Z"
  },
  {
@@ -7448,7 +7445,7 @@
   "uploaderId": "UCncIzM0jsamBOSEMfNoYBhA",
   "uploader": "小倉悠吾 OFFICIAL YouTube CHANNEL",
   "by": "小倉悠吾",
-  "pHint": "主題歌",
+  "pHint": "NHK",
   "p": "主題歌",
   "a": "youtube:UCpEXggDN6KWpc4yn46OpiQw",
   "firstSeen": "2026-10-09T11:31:52.129Z",
@@ -7836,7 +7833,7 @@
   "tags": [],
   "uploaderId": "UCdPCarwi28K5Z7s5l2nMiLw",
   "uploader": "Uru Official YouTube Channel",
-  "p": "Uru",
+  "p": "Uru Official YouTube",
   "a": "youtube:UCdPCarwi28K5Z7s5l2nMiLw",
   "firstSeen": "2026-10-09T11:31:52.131Z"
  },
@@ -9137,11 +9134,10 @@
   ],
   "uploaderId": 2578628,
   "uploader": null,
-  "p": "Crusher",
+  "p": "アフターレポート",
   "v": "初音ミク",
   "a": "niconico:2578628",
-  "firstSeen": "2026-10-09T11:31:52.000Z",
-  "pFilled": true
+  "firstSeen": "2026-10-09T11:31:52.000Z"
  },
  {
   "id": "nico:sm46823350",
@@ -10139,7 +10135,6 @@
   "by": "八木勇征",
   "firstSeen": "2026-10-09T11:31:52.032Z",
   "of": "nico:sm34425299",
-  "p": "",
   "a": "niconico:3489219"
  },
  {
@@ -11316,9 +11311,6 @@
   "uploaderId": 9846146,
   "uploader": null,
   "by": "歌唱力ゾンビ",
-  "pHint": "『全ての声』を使った異次元歌唱で歌ってみた<hihihiGホイッスル>",
-  "p": "『全ての声』を使った異次元歌唱で歌ってみた<hihihiGホイッスル>",
-  "a": "『全ての声』を使った異次元歌唱で歌ってみた<hihihigホイッスル>",
   "firstSeen": "2026-10-09T11:31:52.042Z"
  },
  {
@@ -11434,7 +11426,6 @@
   "by": "神谷玲",
   "firstSeen": "2026-10-09T11:31:52.002Z",
   "of": "nico:sm25086693",
-  "p": "",
   "a": "niconico:12440440"
  },
  {
@@ -11662,7 +11653,6 @@
   "by": "湯毛",
   "firstSeen": "2026-10-09T11:31:52.006Z",
   "of": "nico:sm14332782",
-  "p": "",
   "a": "niconico:5683296"
  },
  {
@@ -11750,7 +11740,6 @@
   "by": "梅とら",
   "firstSeen": "2026-10-09T11:31:52.009Z",
   "of": "nico:sm22110492",
-  "p": "",
   "a": "niconico:12440440"
  },
  {
@@ -11880,7 +11869,7 @@
   ],
   "uploaderId": 132435442,
   "uploader": null,
-  "by": "",
+  "by": "#歌コレ2026秋マイキP部門",
   "firstSeen": "2026-10-09T11:31:52.015Z"
  },
  {
@@ -11912,7 +11901,6 @@
   "by": "",
   "firstSeen": "2026-10-09T11:31:52.017Z",
   "of": "nico:sm31592413",
-  "p": "",
   "a": "niconico:53435803"
  },
  {
@@ -12248,7 +12236,10 @@
   ],
   "uploaderId": 2445709,
   "uploader": null,
-  "by": "鬱P - d by 胃腸薬",
+  "by": "胃腸薬",
+  "pHint": "鬱P",
+  "p": "鬱P",
+  "a": "鬱p",
   "firstSeen": "2026-10-09T11:31:52.025Z"
  },
  {
@@ -12302,7 +12293,6 @@
   "by": "じぇれすす",
   "firstSeen": "2026-10-09T11:31:52.025Z",
   "of": "nico:sm20296308",
-  "p": "",
   "a": "niconico:28540911"
  },
  {
@@ -12332,7 +12322,6 @@
   "by": "ryo うたってみた 記憶に残る",
   "firstSeen": "2026-10-09T11:31:52.026Z",
   "of": "nico:sm3645817",
-  "p": "",
   "a": "niconico:317063"
  },
  {
@@ -12691,7 +12680,7 @@
   ],
   "uploaderId": 36990466,
   "uploader": null,
-  "by": "",
+  "by": "うたいました。ver.杠葉よるせ",
   "firstSeen": "2026-10-09T11:31:52.036Z"
  },
  {
@@ -12745,7 +12734,10 @@
   ],
   "uploaderId": 124157896,
   "uploader": null,
-  "by": "*Luna",
+  "by": "あおいろ× totte ×おもちぇ× Rano)",
+  "pHint": "*Luna (",
+  "p": "*Luna (",
+  "a": "*luna(",
   "firstSeen": "2026-10-09T11:31:52.037Z"
  },
  {
@@ -12852,7 +12844,7 @@
   "by": "doriko - by たいむくん",
   "firstSeen": "2026-10-09T11:31:52.039Z",
   "of": "nico:sm6666016",
-  "p": "",
+  "p": "vo.初音ミク",
   "a": "niconico:655340"
  },
  {
@@ -12880,7 +12872,6 @@
   "by": "八王子P×Giga",
   "firstSeen": "2026-10-09T11:31:52.040Z",
   "of": "nico:sm35866152",
-  "p": "",
   "a": "niconico:15104449"
  },
  {
@@ -12961,7 +12952,6 @@
   "by": "",
   "firstSeen": "2026-10-09T11:31:52.044Z",
   "of": "nico:sm17910036",
-  "p": "",
   "a": "niconico:8785358"
  },
  {
@@ -13245,7 +13235,7 @@
   ],
   "uploaderId": 38893652,
   "uploader": null,
-  "by": "花森なずな×南レイ(れい・ふるーる)",
+  "by": "花森なずな×南レイ",
   "firstSeen": "2026-10-09T11:31:52.052Z"
  },
  {
@@ -13465,8 +13455,8 @@
   "by": "鏡音リンV4X",
   "pHint": "Kanaria",
   "v": "鏡音リン",
-  "p": "",
-  "a": "niconico:95303437",
+  "p": "Kanaria",
+  "a": "kanaria",
   "firstSeen": "2026-10-09T11:31:51.980Z",
   "of": "nico:sm37287661"
  },
@@ -13496,7 +13486,6 @@
   "by": "",
   "firstSeen": "2026-10-09T11:31:51.996Z",
   "of": "nico:sm39875801",
-  "p": "",
   "a": "niconico:95303437"
  },
  {
@@ -13748,7 +13737,7 @@
   "uploader": null,
   "by": "冬萌ここな",
   "pHint": "椎名もた",
-  "p": "",
+  "p": "椎名もた",
   "a": "niconico:5619789",
   "firstSeen": "2026-10-09T11:31:52.001Z",
   "of": "nico:sm22061366"
@@ -13829,7 +13818,6 @@
   "by": "のろま",
   "firstSeen": "2026-10-09T11:31:52.014Z",
   "of": "nico:sm3645817",
-  "p": "",
   "a": "niconico:317063"
  },
  {
@@ -14042,8 +14030,8 @@
   "uploader": null,
   "by": "HASYU",
   "pHint": "kemu",
-  "p": "",
-  "a": "niconico:24550889",
+  "p": "kemu",
+  "a": "kemu",
   "firstSeen": "2026-10-09T11:31:52.032Z",
   "of": "nico:sm17520775"
  },
@@ -14261,7 +14249,6 @@
   "by": "Eve ver.ha-ku",
   "firstSeen": "2026-10-09T11:31:52.052Z",
   "of": "nico:sm33009959",
-  "p": "",
   "a": "niconico:10103681"
  },
  {
@@ -14288,7 +14275,6 @@
   "by": "Kanaria",
   "firstSeen": "2026-10-08T15:40:42.020Z",
   "of": "nico:sm39875801",
-  "p": "",
   "a": "niconico:95303437"
  },
  {
@@ -14347,7 +14333,6 @@
   "by": "117人の",
   "firstSeen": "2026-10-09T11:31:52.013Z",
   "of": "nico:sm16719809",
-  "p": "",
   "a": "niconico:3343223"
  },
  {
@@ -14460,7 +14445,10 @@
   ],
   "uploaderId": 91400165,
   "uploader": null,
-  "by": "奏音69",
+  "by": ".結城碧)",
+  "pHint": "奏音69 (",
+  "p": "奏音69 (",
+  "a": "奏音69(",
   "firstSeen": "2026-10-09T11:31:52.041Z"
  },
  {
@@ -15984,7 +15972,7 @@
   ],
   "uploaderId": 120201228,
   "uploader": null,
-  "by": "",
+  "by": "を歌わせてみた",
   "firstSeen": "2026-10-09T11:31:51.974Z"
  },
  {
@@ -16374,7 +16362,7 @@
   ],
   "uploaderId": 1110778,
   "uploader": null,
-  "p": "",
+  "p": "SynthesizerV 宮舞モカ",
   "a": "niconico:1110778",
   "firstSeen": "2026-10-09T11:31:51.992Z"
  },
@@ -17020,7 +17008,7 @@
   ],
   "uploaderId": 138113276,
   "uploader": null,
-  "p": "",
+  "p": "bickai",
   "v": "音街ウナ",
   "a": "niconico:138113276",
   "firstSeen": "2026-10-09T11:31:51.993Z"
@@ -17342,7 +17330,7 @@
   ],
   "uploaderId": 673608,
   "uploader": null,
-  "p": "",
+  "p": ")",
   "v": "重音テト",
   "a": "niconico:673608",
   "firstSeen": "2026-10-09T11:31:51.971Z"
@@ -19133,7 +19121,6 @@
   "by": "",
   "firstSeen": "2026-10-09T11:31:51.972Z",
   "of": "nico:sm37287661",
-  "p": "",
   "a": "niconico:95303437"
  },
  {
@@ -19588,7 +19575,6 @@
   "by": "すこっぷ",
   "firstSeen": "2026-10-09T11:31:51.998Z",
   "of": "nico:sm17910036",
-  "p": "",
   "a": "niconico:8785358"
  },
  {
@@ -19916,10 +19902,11 @@
   ],
   "uploaderId": 673608,
   "uploader": null,
-  "p": "",
+  "p": ")",
   "v": "重音テト",
   "a": "niconico:673608",
-  "firstSeen": "2026-10-09T11:31:51.992Z"
+  "firstSeen": "2026-10-09T11:31:51.992Z",
+  "pFilled": true
  },
  {
   "id": "nico:sm46779713",
@@ -21471,11 +21458,12 @@
   ],
   "uploaderId": 33916307,
   "uploader": null,
-  "p": "",
+  "p": "開催のお知らせ",
   "v": "重音テト",
   "a": "niconico:33916307",
   "firstSeen": "2026-10-08T14:36:47.426Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm42574301",
@@ -25117,7 +25105,6 @@
   "firstSeen": "2026-10-08T15:10:08.944Z",
   "seed": true,
   "of": "nico:sm38268550",
-  "p": "",
   "a": "niconico:95303437"
  },
  {
@@ -26377,7 +26364,6 @@
   "firstSeen": "2026-10-08T15:10:08.999Z",
   "seed": true,
   "of": "nico:sm36053074",
-  "p": "",
   "a": "niconico:88786564"
  },
  {
@@ -27000,7 +26986,6 @@
   "firstSeen": "2026-10-08T15:10:08.832Z",
   "seed": true,
   "of": "nico:sm36036629",
-  "p": "",
   "a": "niconico:86488427"
  },
  {
@@ -27030,7 +27015,6 @@
   "firstSeen": "2026-10-08T15:10:08.648Z",
   "seed": true,
   "of": "nico:sm35866152",
-  "p": "",
   "a": "niconico:15104449"
  },
  {
@@ -27687,7 +27671,6 @@
   "firstSeen": "2026-10-08T15:10:08.956Z",
   "seed": true,
   "of": "nico:sm26099756",
-  "p": "",
   "a": "niconico:2686789"
  },
  {
@@ -28678,7 +28661,6 @@
   "firstSeen": "2026-10-08T15:10:09.009Z",
   "seed": true,
   "of": "nico:sm34425299",
-  "p": "",
   "a": "niconico:3489219"
  },
  {
@@ -28736,7 +28718,6 @@
   "firstSeen": "2026-10-08T15:10:09.008Z",
   "seed": true,
   "of": "nico:sm34425299",
-  "p": "",
   "a": "niconico:3489219"
  },
  {
@@ -29021,7 +29002,6 @@
   "firstSeen": "2026-10-08T15:10:08.737Z",
   "seed": true,
   "of": "nico:sm34317927",
-  "p": "",
   "a": "niconico:10103681"
  },
  {
@@ -30211,7 +30191,6 @@
   "firstSeen": "2026-10-08T15:10:08.922Z",
   "seed": true,
   "of": "nico:sm32727744",
-  "p": "",
   "a": "niconico:53435803"
  },
  {
@@ -30811,11 +30790,12 @@
   ],
   "uploaderId": 49716308,
   "uploader": null,
-  "p": "",
+  "p": "を歌ってくれたヨ",
   "v": "初音ミク",
   "a": "niconico:49716308",
   "firstSeen": "2026-10-08T14:36:47.397Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm33481540",
@@ -31240,7 +31220,7 @@
   ],
   "uploaderId": 3537176,
   "uploader": null,
-  "by": "",
+  "by": "EVO",
   "firstSeen": "2026-10-08T15:10:08.805Z",
   "seed": true
  },
@@ -31269,7 +31249,6 @@
   "firstSeen": "2026-10-08T15:10:08.713Z",
   "seed": true,
   "of": "nico:sm33189938",
-  "p": "",
   "a": "niconico:2786131"
  },
  {
@@ -31487,7 +31466,6 @@
   "firstSeen": "2026-10-08T15:10:08.935Z",
   "seed": true,
   "of": "nico:sm22110492",
-  "p": "",
   "a": "niconico:12440440"
  },
  {
@@ -31702,7 +31680,6 @@
   "firstSeen": "2026-10-08T15:10:08.847Z",
   "seed": true,
   "of": "nico:sm33009959",
-  "p": "",
   "a": "niconico:10103681"
  },
  {
@@ -31821,7 +31798,6 @@
   "firstSeen": "2026-10-08T15:10:08.779Z",
   "seed": true,
   "of": "nico:sm33009959",
-  "p": "",
   "a": "niconico:10103681"
  },
  {
@@ -32024,7 +32000,6 @@
   "firstSeen": "2026-10-08T15:10:08.735Z",
   "seed": true,
   "of": "nico:sm32852412",
-  "p": "",
   "a": "niconico:57395379"
  },
  {
@@ -32339,7 +32314,7 @@
   "firstSeen": "2026-10-08T15:10:08.887Z",
   "seed": true,
   "of": "nico:sm32769089",
-  "p": "",
+  "p": "を歌ってくれたヨ",
   "a": "niconico:49716308"
  },
  {
@@ -32373,7 +32348,6 @@
   "firstSeen": "2026-10-08T15:10:08.834Z",
   "seed": true,
   "of": "nico:sm23743672",
-  "p": "",
   "a": "niconico:2686789"
  },
  {
@@ -32645,7 +32619,6 @@
   "firstSeen": "2026-10-08T15:10:08.969Z",
   "seed": true,
   "of": "nico:sm32688081",
-  "p": "",
   "a": "niconico:53052370"
  },
  {
@@ -32737,7 +32710,7 @@
   "firstSeen": "2026-10-08T15:10:08.782Z",
   "seed": true,
   "of": "nico:sm32769089",
-  "p": "",
+  "p": "を歌ってくれたヨ",
   "a": "niconico:49716308"
  },
  {
@@ -32766,11 +32739,12 @@
   ],
   "uploaderId": 49716308,
   "uploader": null,
-  "p": "",
+  "p": "を歌ってくれたヨ",
   "v": "初音ミク",
   "a": "niconico:49716308",
   "firstSeen": "2026-10-08T14:36:47.365Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm32758120",
@@ -32803,7 +32777,6 @@
   "firstSeen": "2026-10-08T15:10:08.955Z",
   "seed": true,
   "of": "nico:sm32672006",
-  "p": "",
   "a": "niconico:176618"
  },
  {
@@ -33019,7 +32992,6 @@
   "firstSeen": "2026-10-08T15:10:09.006Z",
   "seed": true,
   "of": "nico:sm21336351",
-  "p": "",
   "a": "niconico:2721625"
  },
  {
@@ -33409,7 +33381,6 @@
   "firstSeen": "2026-10-08T14:36:47.361Z",
   "seed": true,
   "of": "nico:sm32209048",
-  "p": "",
   "a": "niconico:53694143"
  },
  {
@@ -33817,7 +33788,7 @@
   "firstSeen": "2026-10-08T15:10:08.851Z",
   "seed": true,
   "of": "nico:sm28576299",
-  "p": "",
+  "p": "を歌ってくれたヨ",
   "a": "niconico:49716308"
  },
  {
@@ -34152,7 +34123,7 @@
   ],
   "uploaderId": 4159483,
   "uploader": null,
-  "by": "ぱなまん",
+  "by": "を",
   "firstSeen": "2026-10-08T15:10:08.891Z",
   "seed": true
  },
@@ -34744,7 +34715,6 @@
   "firstSeen": "2026-10-08T15:10:08.609Z",
   "seed": true,
   "of": "nico:sm32076378",
-  "p": "",
   "a": "niconico:10103681"
  },
  {
@@ -35559,7 +35529,7 @@
   ],
   "uploaderId": 49716308,
   "uploader": null,
-  "p": "",
+  "p": "を歌ってくれたヨ",
   "v": "初音ミク",
   "a": "niconico:49716308",
   "firstSeen": "2026-10-08T14:36:47.365Z",
@@ -35596,8 +35566,7 @@
   "v": "IA",
   "a": "niconico:32260190",
   "firstSeen": "2026-10-08T14:36:47.340Z",
-  "seed": true,
-  "pFilled": true
+  "seed": true
  },
  {
   "id": "nico:sm31836556",
@@ -35825,7 +35794,7 @@
   ],
   "uploaderId": 174719,
   "uploader": null,
-  "by": "",
+  "by": "歌わせて頂きました。灯油",
   "firstSeen": "2026-10-08T15:10:09.012Z",
   "seed": true,
   "of": "nico:sm31791630",
@@ -36345,7 +36314,7 @@
   ],
   "uploaderId": 174719,
   "uploader": null,
-  "by": "",
+  "by": "歌わせて頂きました。灯油",
   "firstSeen": "2026-10-08T15:10:08.862Z",
   "seed": true,
   "of": "nico:sm31606995",
@@ -36674,7 +36643,6 @@
   "firstSeen": "2026-10-08T15:10:08.992Z",
   "seed": true,
   "of": "nico:sm31477166",
-  "p": "",
   "a": "niconico:8186836"
  },
  {
@@ -36801,7 +36769,6 @@
   "firstSeen": "2026-10-08T15:10:08.654Z",
   "seed": true,
   "of": "nico:sm23770496",
-  "p": "",
   "a": "niconico:1615825"
  },
  {
@@ -36832,7 +36799,7 @@
   "firstSeen": "2026-10-08T15:10:08.767Z",
   "seed": true,
   "of": "nico:sm30469574",
-  "p": "",
+  "p": "を歌ってくれたヨ",
   "a": "niconico:49716308"
  },
  {
@@ -36926,7 +36893,6 @@
   "firstSeen": "2026-10-08T15:10:09.003Z",
   "seed": true,
   "of": "nico:sm29822304",
-  "p": "",
   "a": "niconico:14203891"
  },
  {
@@ -37038,7 +37004,6 @@
   "firstSeen": "2026-10-08T15:10:08.769Z",
   "seed": true,
   "of": "nico:sm31241401",
-  "p": "",
   "a": "niconico:10103681"
  },
  {
@@ -37195,7 +37160,6 @@
   "firstSeen": "2026-10-08T15:10:08.776Z",
   "seed": true,
   "of": "nico:sm30788596",
-  "p": "",
   "a": "niconico:57395379"
  },
  {
@@ -37436,7 +37400,6 @@
   "firstSeen": "2026-10-08T15:10:08.829Z",
   "seed": true,
   "of": "nico:sm30788596",
-  "p": "",
   "a": "niconico:57395379"
  },
  {
@@ -37920,11 +37883,12 @@
   ],
   "uploaderId": 49716308,
   "uploader": null,
-  "p": "",
+  "p": "を歌ってくれたヨ",
   "v": "初音ミク",
   "a": "niconico:49716308",
   "firstSeen": "2026-10-08T14:36:47.329Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm30960061",
@@ -38021,7 +37985,6 @@
   "firstSeen": "2026-10-08T15:10:08.793Z",
   "seed": true,
   "of": "nico:sm30225611",
-  "p": "",
   "a": "niconico:14203891"
  },
  {
@@ -38053,7 +38016,6 @@
   "firstSeen": "2026-10-08T15:10:08.843Z",
   "seed": true,
   "of": "nico:sm26099756",
-  "p": "",
   "a": "niconico:2686789"
  },
  {
@@ -38085,7 +38047,6 @@
   "firstSeen": "2026-10-08T15:10:08.822Z",
   "seed": true,
   "of": "nico:sm30701132",
-  "p": "",
   "a": "niconico:656109"
  },
  {
@@ -38229,7 +38190,6 @@
   "firstSeen": "2026-10-08T15:10:08.749Z",
   "seed": true,
   "of": "nico:sm29822304",
-  "p": "",
   "a": "niconico:14203891"
  },
  {
@@ -38440,7 +38400,6 @@
   "firstSeen": "2026-10-08T15:10:08.659Z",
   "seed": true,
   "of": "nico:sm29822304",
-  "p": "",
   "a": "niconico:14203891"
  },
  {
@@ -38471,7 +38430,6 @@
   "firstSeen": "2026-10-08T15:10:08.765Z",
   "seed": true,
   "of": "nico:sm30789907",
-  "p": "",
   "a": "niconico:14203891"
  },
  {
@@ -38527,11 +38485,10 @@
   ],
   "uploaderId": 4159483,
   "uploader": null,
-  "by": "ぱなまん",
+  "by": "を",
   "firstSeen": "2026-10-08T15:10:08.922Z",
   "seed": true,
   "of": "nico:sm29822304",
-  "p": "",
   "a": "niconico:14203891"
  },
  {
@@ -39117,7 +39074,7 @@
   "firstSeen": "2026-10-08T15:10:08.698Z",
   "seed": true,
   "of": "nico:sm30469574",
-  "p": "",
+  "p": "を歌ってくれたヨ",
   "a": "niconico:49716308"
  },
  {
@@ -39367,11 +39324,12 @@
   ],
   "uploaderId": 49716308,
   "uploader": null,
-  "p": "",
+  "p": "を歌ってくれたヨ",
   "v": "初音ミク",
   "a": "niconico:49716308",
   "firstSeen": "2026-10-08T14:36:47.323Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm30447915",
@@ -40086,7 +40044,6 @@
   "firstSeen": "2026-10-08T15:10:08.906Z",
   "seed": true,
   "of": "nico:sm20252366",
-  "p": "",
   "a": "niconico:5683296"
  },
  {
@@ -40178,11 +40135,12 @@
   ],
   "uploaderId": 49716308,
   "uploader": null,
-  "p": "",
+  "p": "を歌ってくれたヨ",
   "v": "初音ミク",
   "a": "niconico:49716308",
   "firstSeen": "2026-10-08T14:36:47.319Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm30171731",
@@ -40856,11 +40814,12 @@
   ],
   "uploaderId": 49716308,
   "uploader": null,
-  "p": "",
+  "p": "を歌ってくれたヨ",
   "v": "初音ミク",
   "a": "niconico:49716308",
   "firstSeen": "2026-10-08T14:36:47.331Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm29911405",
@@ -41875,7 +41834,6 @@
   "firstSeen": "2026-10-08T14:36:47.385Z",
   "seed": true,
   "of": "nico:sm1715919",
-  "p": "",
   "a": "niconico:317063"
  },
  {
@@ -42028,11 +41986,12 @@
   ],
   "uploaderId": 49716308,
   "uploader": null,
-  "p": "",
+  "p": "を歌ってくれたヨ",
   "v": "初音ミク",
   "a": "niconico:49716308",
   "firstSeen": "2026-10-08T14:36:47.372Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm29219455",
@@ -42114,7 +42073,7 @@
   ],
   "uploaderId": 252274,
   "uploader": null,
-  "by": "__",
+  "by": "を",
   "firstSeen": "2026-10-08T15:10:08.740Z",
   "seed": true
  },
@@ -42173,11 +42132,10 @@
   ],
   "uploaderId": 4159483,
   "uploader": null,
-  "by": "ぱなまん",
+  "by": "を",
   "firstSeen": "2026-10-08T15:10:08.992Z",
   "seed": true,
   "of": "nico:sm28255984",
-  "p": "",
   "a": "niconico:14203891"
  },
  {
@@ -42237,7 +42195,7 @@
   "firstSeen": "2026-10-08T15:10:08.814Z",
   "seed": true,
   "of": "nico:sm28576299",
-  "p": "",
+  "p": "を歌ってくれたヨ",
   "a": "niconico:49716308"
  },
  {
@@ -42559,7 +42517,7 @@
   "firstSeen": "2026-10-08T15:10:08.696Z",
   "seed": true,
   "of": "nico:sm28576299",
-  "p": "",
+  "p": "を歌ってくれたヨ",
   "a": "niconico:49716308"
  },
  {
@@ -42615,7 +42573,6 @@
   "firstSeen": "2026-10-08T15:10:08.636Z",
   "seed": true,
   "of": "nico:sm23770496",
-  "p": "",
   "a": "niconico:1615825"
  },
  {
@@ -42983,7 +42940,6 @@
   "firstSeen": "2026-10-08T15:10:08.863Z",
   "seed": true,
   "of": "nico:sm23304692",
-  "p": "",
   "a": "niconico:1101042"
  },
  {
@@ -43090,7 +43046,7 @@
   "firstSeen": "2026-10-08T15:10:08.797Z",
   "seed": true,
   "of": "nico:sm11224129",
-  "p": "",
+  "p": "- KEI",
   "a": "niconico:334765"
  },
  {
@@ -43579,11 +43535,12 @@
   ],
   "uploaderId": 49716308,
   "uploader": null,
-  "p": "",
+  "p": "を歌ってくれたヨ",
   "v": "初音ミク",
   "a": "niconico:49716308",
   "firstSeen": "2026-10-08T14:36:47.319Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm28547837",
@@ -43666,7 +43623,6 @@
   "firstSeen": "2026-10-08T15:10:08.912Z",
   "seed": true,
   "of": "nico:sm28276238",
-  "p": "",
   "a": "niconico:466979"
  },
  {
@@ -43782,7 +43738,6 @@
   "firstSeen": "2026-10-08T15:10:08.647Z",
   "seed": true,
   "of": "nico:sm28255984",
-  "p": "",
   "a": "niconico:14203891"
  },
  {
@@ -43806,7 +43761,7 @@
   ],
   "uploaderId": 12666461,
   "uploader": null,
-  "by": "。",
+  "by": "を 。",
   "firstSeen": "2026-10-08T15:10:09.010Z",
   "seed": true
  },
@@ -43840,7 +43795,6 @@
   "firstSeen": "2026-10-08T15:10:08.910Z",
   "seed": true,
   "of": "nico:sm25724827",
-  "p": "",
   "a": "niconico:432349"
  },
  {
@@ -44207,7 +44161,6 @@
   "firstSeen": "2026-10-08T15:10:08.830Z",
   "seed": true,
   "of": "nico:sm25943367",
-  "p": "",
   "a": "niconico:40904618"
  },
  {
@@ -44468,7 +44421,7 @@
   ],
   "uploaderId": 4159483,
   "uploader": null,
-  "by": "ぱなまん",
+  "by": "を",
   "firstSeen": "2026-10-08T15:10:08.678Z",
   "seed": true
  },
@@ -44742,7 +44695,7 @@
   ],
   "uploaderId": 32091755,
   "uploader": null,
-  "by": "",
+  "by": "をウザさMAXでコラボってみたったwwwwwww",
   "firstSeen": "2026-10-08T15:10:08.666Z",
   "seed": true,
   "of": "nico:sm20331479",
@@ -44870,11 +44823,12 @@
   ],
   "uploaderId": 49716308,
   "uploader": null,
-  "p": "",
+  "p": "を歌ってくれたヨ",
   "v": "初音ミク",
   "a": "niconico:49716308",
   "firstSeen": "2026-10-08T14:36:47.391Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm27730221",
@@ -44957,7 +44911,6 @@
   "firstSeen": "2026-10-08T15:10:08.689Z",
   "seed": true,
   "of": "nico:sm24643818",
-  "p": "",
   "a": "niconico:19241380"
  },
  {
@@ -45067,7 +45020,6 @@
   "firstSeen": "2026-10-08T15:10:08.637Z",
   "seed": true,
   "of": "nico:sm23404002",
-  "p": "",
   "a": "niconico:19096296"
  },
  {
@@ -45124,7 +45076,6 @@
   "firstSeen": "2026-10-08T15:10:08.923Z",
   "seed": true,
   "of": "nico:sm20296308",
-  "p": "",
   "a": "niconico:28540911"
  },
  {
@@ -45431,11 +45382,12 @@
   ],
   "uploaderId": 49716308,
   "uploader": null,
-  "p": "",
+  "p": "を歌ってくれたヨ",
   "v": "初音ミク",
   "a": "niconico:49716308",
   "firstSeen": "2026-10-08T14:36:47.364Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm27269828",
@@ -45484,11 +45436,10 @@
   ],
   "uploaderId": 3537176,
   "uploader": null,
-  "by": "",
+  "by": "EVO",
   "firstSeen": "2026-10-08T15:10:08.908Z",
   "seed": true,
   "of": "nico:sm20973557",
-  "p": "",
   "a": "niconico:424424"
  },
  {
@@ -45623,7 +45574,7 @@
   ],
   "uploaderId": 32091755,
   "uploader": null,
-  "by": "ったwwwwwwwwwww",
+  "by": "をウザさMAXで ったwwwwwwwwwww",
   "firstSeen": "2026-10-08T15:10:08.952Z",
   "seed": true
  },
@@ -45891,11 +45842,12 @@
   ],
   "uploaderId": 49716308,
   "uploader": null,
-  "p": "",
+  "p": "を歌ってくれたヨ",
   "v": "初音ミク",
   "a": "niconico:49716308",
   "firstSeen": "2026-10-08T14:36:47.387Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm27057005",
@@ -46023,7 +45975,6 @@
   "firstSeen": "2026-10-08T15:10:08.792Z",
   "seed": true,
   "of": "nico:sm19233263",
-  "p": "",
   "a": "niconico:12440440"
  },
  {
@@ -46466,11 +46417,12 @@
   ],
   "uploaderId": 49716308,
   "uploader": null,
-  "p": "",
+  "p": "を歌ってくれたヨ",
   "v": "初音ミク",
   "a": "niconico:49716308",
   "firstSeen": "2026-10-08T14:36:47.350Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm26837797",
@@ -46583,11 +46535,12 @@
   ],
   "uploaderId": 5619789,
   "uploader": null,
-  "p": "",
+  "p": "椎名もた",
   "v": "初音ミク",
   "a": "niconico:5619789",
   "firstSeen": "2026-10-08T14:36:47.432Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm26758712",
@@ -46799,7 +46752,6 @@
   "firstSeen": "2026-10-08T15:10:08.785Z",
   "seed": true,
   "of": "nico:sm23750267",
-  "p": "",
   "a": "niconico:3343223"
  },
  {
@@ -46855,11 +46807,12 @@
   ],
   "uploaderId": 49716308,
   "uploader": null,
-  "p": "",
+  "p": "を歌ってくれたヨ",
   "v": "初音ミク",
   "a": "niconico:49716308",
   "firstSeen": "2026-10-08T14:36:47.353Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm26586389",
@@ -47052,7 +47005,6 @@
   "firstSeen": "2026-10-08T15:10:08.958Z",
   "seed": true,
   "of": "nico:sm23769673",
-  "p": "",
   "a": "niconico:12440440"
  },
  {
@@ -47311,7 +47263,7 @@
   ],
   "uploaderId": 19544925,
   "uploader": null,
-  "by": "。by坂田銀時",
+  "by": "を 。by坂田銀時",
   "firstSeen": "2026-10-08T15:10:08.820Z",
   "seed": true
  },
@@ -47337,11 +47289,10 @@
   ],
   "uploaderId": 5888056,
   "uploader": null,
-  "by": "",
+  "by": "を歌ってみました。",
   "firstSeen": "2026-10-08T15:10:08.762Z",
   "seed": true,
   "of": "nico:sm26099756",
-  "p": "",
   "a": "niconico:2686789"
  },
  {
@@ -47450,7 +47401,7 @@
   ],
   "uploaderId": 32091755,
   "uploader": null,
-  "by": "ったwwwwwwwwwwwwwww",
+  "by": "をwwwウザさMAXで ったwwwwwwwwwwwwwww",
   "firstSeen": "2026-10-08T15:10:08.965Z",
   "seed": true
  },
@@ -47514,7 +47465,7 @@
   ],
   "uploaderId": 22580750,
   "uploader": null,
-  "p": "",
+  "p": "番組",
   "v": "初音ミク",
   "a": "niconico:22580750",
   "firstSeen": "2026-10-08T14:36:47.434Z",
@@ -47706,7 +47657,6 @@
   "firstSeen": "2026-10-08T15:10:08.897Z",
   "seed": true,
   "of": "nico:sm6529016",
-  "p": "",
   "a": "niconico:7032706"
  },
  {
@@ -47860,7 +47810,6 @@
   "firstSeen": "2026-10-08T15:10:08.728Z",
   "seed": true,
   "of": "nico:sm25658559",
-  "p": "",
   "a": "niconico:3343223"
  },
  {
@@ -48446,7 +48395,7 @@
   ],
   "uploaderId": 4159483,
   "uploader": null,
-  "by": "ぱなまん",
+  "by": "を",
   "firstSeen": "2026-10-08T15:10:08.910Z",
   "seed": true,
   "of": "nico:sm24892241",
@@ -48481,7 +48430,6 @@
   "firstSeen": "2026-10-08T15:10:08.794Z",
   "seed": true,
   "of": "nico:sm23769673",
-  "p": "",
   "a": "niconico:12440440"
  },
  {
@@ -48539,7 +48487,6 @@
   "firstSeen": "2026-10-08T15:10:08.999Z",
   "seed": true,
   "of": "nico:sm24841816",
-  "p": "",
   "a": "niconico:101303"
  },
  {
@@ -48707,7 +48654,6 @@
   "firstSeen": "2026-10-08T15:10:08.657Z",
   "seed": true,
   "of": "nico:sm25086693",
-  "p": "",
   "a": "niconico:12440440"
  },
  {
@@ -48889,7 +48835,7 @@
   ],
   "uploaderId": 32759986,
   "uploader": null,
-  "by": "",
+  "by": "nqrse × EVO",
   "firstSeen": "2026-10-08T15:10:08.947Z",
   "seed": true
  },
@@ -49247,7 +49193,6 @@
   "firstSeen": "2026-10-08T15:10:09.011Z",
   "seed": true,
   "of": "nico:sm24841816",
-  "p": "",
   "a": "niconico:101303"
  },
  {
@@ -49659,7 +49604,6 @@
   "firstSeen": "2026-10-08T15:10:08.998Z",
   "seed": true,
   "of": "nico:sm12098837",
-  "p": "",
   "a": "niconico:3343223"
  },
  {
@@ -49744,7 +49688,6 @@
   "firstSeen": "2026-10-08T15:10:08.890Z",
   "seed": true,
   "of": "nico:sm24657407",
-  "p": "",
   "a": "niconico:11314366"
  },
  {
@@ -50547,7 +50490,6 @@
   "firstSeen": "2026-10-08T15:10:08.902Z",
   "seed": true,
   "of": "nico:sm20296308",
-  "p": "",
   "a": "niconico:28540911"
  },
  {
@@ -50896,7 +50838,7 @@
   ],
   "uploaderId": 595445,
   "uploader": null,
-  "by": "",
+  "by": "Band Edition",
   "firstSeen": "2026-10-08T15:10:08.972Z",
   "seed": true
  },
@@ -51073,7 +51015,6 @@
   "firstSeen": "2026-10-08T15:10:08.970Z",
   "seed": true,
   "of": "nico:sm22608740",
-  "p": "",
   "a": "niconico:1137213"
  },
  {
@@ -51104,7 +51045,6 @@
   "firstSeen": "2026-10-08T15:10:08.875Z",
   "seed": true,
   "of": "nico:sm23304692",
-  "p": "",
   "a": "niconico:1101042"
  },
  {
@@ -52089,7 +52029,7 @@
   ],
   "uploaderId": 32091755,
   "uploader": null,
-  "by": "ったwwwwwwwww",
+  "by": "をウザさMAXで ったwwwwwwwww",
   "firstSeen": "2026-10-08T15:10:08.722Z",
   "seed": true,
   "of": "nico:sm20244918",
@@ -52179,7 +52119,7 @@
   "firstSeen": "2026-10-08T15:10:08.791Z",
   "seed": true,
   "of": "nico:sm15630734",
-  "p": "",
+  "p": "カンタレラ 『 』",
   "a": "niconico:449061"
  },
  {
@@ -52274,7 +52214,6 @@
   "firstSeen": "2026-10-08T15:10:08.962Z",
   "seed": true,
   "of": "nico:sm23304692",
-  "p": "",
   "a": "niconico:1101042"
  },
  {
@@ -52337,7 +52276,6 @@
   "firstSeen": "2026-10-08T15:10:08.622Z",
   "seed": true,
   "of": "nico:sm23304692",
-  "p": "",
   "a": "niconico:1101042"
  },
  {
@@ -52367,7 +52305,6 @@
   "firstSeen": "2026-10-08T15:10:08.610Z",
   "seed": true,
   "of": "nico:sm23304692",
-  "p": "",
   "a": "niconico:1101042"
  },
  {
@@ -52487,7 +52424,7 @@
   "firstSeen": "2026-10-08T15:10:08.795Z",
   "seed": true,
   "of": "nico:sm15488191",
-  "p": "",
+  "p": "- KEI",
   "a": "niconico:334765"
  },
  {
@@ -52841,7 +52778,6 @@
   "firstSeen": "2026-10-08T15:10:08.779Z",
   "seed": true,
   "of": "nico:sm22110492",
-  "p": "",
   "a": "niconico:12440440"
  },
  {
@@ -53071,11 +53007,10 @@
   ],
   "uploaderId": 4159483,
   "uploader": null,
-  "by": "ぱなまん",
+  "by": "を",
   "firstSeen": "2026-10-08T15:10:08.693Z",
   "seed": true,
   "of": "nico:sm22820339",
-  "p": "",
   "a": "niconico:1137213"
  },
  {
@@ -53225,7 +53160,6 @@
   "firstSeen": "2026-10-08T15:10:08.659Z",
   "seed": true,
   "of": "nico:sm22835696",
-  "p": "",
   "a": "niconico:8773700"
  },
  {
@@ -53423,7 +53357,6 @@
   "firstSeen": "2026-10-08T15:10:09.007Z",
   "seed": true,
   "of": "nico:sm20810930",
-  "p": "",
   "a": "niconico:20345306"
  },
  {
@@ -53518,11 +53451,12 @@
   ],
   "uploaderId": 22580750,
   "uploader": null,
-  "p": "",
+  "p": "付",
   "v": "初音ミク",
   "a": "niconico:22580750",
   "firstSeen": "2026-10-08T14:36:47.347Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm22786247",
@@ -54327,7 +54261,6 @@
   "firstSeen": "2026-10-08T15:10:08.691Z",
   "seed": true,
   "of": "nico:sm19233263",
-  "p": "",
   "a": "niconico:12440440"
  },
  {
@@ -54351,11 +54284,11 @@
   ],
   "uploaderId": 32091755,
   "uploader": null,
-  "by": "ったwwwwwwwwwwwwww",
+  "by": "をウザさMAXで ったwwwwwwwwwwwwww",
   "firstSeen": "2026-10-08T15:10:08.953Z",
   "seed": true,
   "of": "nico:sm21443197",
-  "p": "",
+  "p": "付",
   "a": "niconico:22580750"
  },
  {
@@ -54587,11 +54520,12 @@
   ],
   "uploaderId": 2523470,
   "uploader": null,
-  "p": "",
+  "p": "fullver.",
   "v": "初音ミク",
   "a": "niconico:2523470",
   "firstSeen": "2026-10-08T14:36:47.416Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm22149613",
@@ -54827,7 +54761,7 @@
   ],
   "uploaderId": 5619789,
   "uploader": null,
-  "p": "",
+  "p": "椎名もた",
   "v": "鏡音リン",
   "a": "niconico:5619789",
   "firstSeen": "2026-10-08T14:36:47.376Z",
@@ -55075,7 +55009,6 @@
   "firstSeen": "2026-10-08T15:10:08.818Z",
   "seed": true,
   "of": "nico:sm20296308",
-  "p": "",
   "a": "niconico:28540911"
  },
  {
@@ -55219,7 +55152,7 @@
   ],
   "uploaderId": 13522012,
   "uploader": null,
-  "by": "ったwwww",
+  "by": "をウザさMAXで ったwwww",
   "firstSeen": "2026-10-08T15:10:08.813Z",
   "seed": true,
   "of": "nico:sm18406343",
@@ -56172,11 +56105,10 @@
   ],
   "uploaderId": 3960446,
   "uploader": null,
-  "by": "。KK",
+  "by": "を 。KK",
   "firstSeen": "2026-10-08T15:10:08.774Z",
   "seed": true,
   "of": "nico:sm20503793",
-  "p": "",
   "a": "niconico:76265"
  },
  {
@@ -56260,7 +56192,7 @@
   ],
   "uploaderId": 22580750,
   "uploader": null,
-  "p": "",
+  "p": "付",
   "v": "初音ミク",
   "a": "niconico:22580750",
   "firstSeen": "2026-10-08T14:36:47.330Z",
@@ -56288,7 +56220,7 @@
   ],
   "uploaderId": 11341167,
   "uploader": null,
-  "by": "",
+  "by": "全部俺の声で",
   "firstSeen": "2026-10-08T15:10:08.798Z",
   "seed": true
  },
@@ -56319,11 +56251,12 @@
   ],
   "uploaderId": 449061,
   "uploader": null,
-  "p": "",
+  "p": "カンタレラ 『 』",
   "v": "KAITO",
   "a": "niconico:449061",
   "firstSeen": "2026-10-08T14:36:47.397Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm21341769",
@@ -56712,7 +56645,6 @@
   "firstSeen": "2026-10-08T15:10:08.702Z",
   "seed": true,
   "of": "nico:sm20252366",
-  "p": "",
   "a": "niconico:5683296"
  },
  {
@@ -56743,7 +56675,6 @@
   "firstSeen": "2026-10-08T15:10:08.795Z",
   "seed": true,
   "of": "nico:sm20797677",
-  "p": "",
   "a": "niconico:24550889"
  },
  {
@@ -57028,7 +56959,6 @@
   "firstSeen": "2026-10-08T15:10:08.859Z",
   "seed": true,
   "of": "nico:sm20797677",
-  "p": "",
   "a": "niconico:24550889"
  },
  {
@@ -57085,7 +57015,7 @@
   "firstSeen": "2026-10-08T15:10:08.775Z",
   "seed": true,
   "of": "nico:sm18279200",
-  "p": "",
+  "p": "- KEI",
   "a": "niconico:334765"
  },
  {
@@ -57390,7 +57320,7 @@
   ],
   "uploaderId": 101942,
   "uploader": null,
-  "by": "",
+  "by": "が熱血ソングだったから",
   "firstSeen": "2026-10-08T15:10:08.927Z",
   "seed": true
  },
@@ -58454,7 +58384,6 @@
   "firstSeen": "2026-10-08T15:10:08.842Z",
   "seed": true,
   "of": "nico:sm20127682",
-  "p": "",
   "a": "niconico:3343223"
  },
  {
@@ -58540,7 +58469,7 @@
   ],
   "uploaderId": 174719,
   "uploader": null,
-  "by": "",
+  "by": "を歌わせて頂きました。灯油",
   "firstSeen": "2026-10-08T15:10:08.877Z",
   "seed": true,
   "of": "nico:sm20116702",
@@ -58743,7 +58672,7 @@
   "firstSeen": "2026-10-08T14:36:47.351Z",
   "seed": true,
   "of": "nico:sm1249071",
-  "p": "",
+  "p": "Full ver.",
   "a": "niconico:528581"
  },
  {
@@ -58923,7 +58852,6 @@
   "firstSeen": "2026-10-08T15:10:08.840Z",
   "seed": true,
   "of": "nico:sm15155336",
-  "p": "",
   "a": "niconico:5259112"
  },
  {
@@ -58953,7 +58881,7 @@
   ],
   "uploaderId": 5619789,
   "uploader": null,
-  "p": "",
+  "p": "椎名もた",
   "v": "鏡音リン",
   "a": "niconico:5619789",
   "firstSeen": "2026-10-08T14:36:47.345Z",
@@ -58984,7 +58912,7 @@
   ],
   "uploaderId": 5619789,
   "uploader": null,
-  "p": "",
+  "p": "椎名もた",
   "v": "鏡音リン",
   "a": "niconico:5619789",
   "firstSeen": "2026-10-08T14:36:47.428Z",
@@ -59115,7 +59043,6 @@
   "firstSeen": "2026-10-08T15:10:08.662Z",
   "seed": true,
   "of": "nico:sm19625630",
-  "p": "",
   "a": "niconico:5683296"
  },
  {
@@ -59266,7 +59193,7 @@
   "firstSeen": "2026-10-08T15:10:08.682Z",
   "seed": true,
   "of": "nico:sm11224129",
-  "p": "",
+  "p": "- KEI",
   "a": "niconico:334765"
  },
  {
@@ -59508,11 +59435,10 @@
   ],
   "uploaderId": 4496935,
   "uploader": null,
-  "by": "ヲタみんver.",
+  "by": "を",
   "firstSeen": "2026-10-08T15:10:08.917Z",
   "seed": true,
   "of": "nico:sm19233263",
-  "p": "",
   "a": "niconico:12440440"
  },
  {
@@ -59541,7 +59467,7 @@
   ],
   "uploaderId": 22580750,
   "uploader": null,
-  "p": "",
+  "p": "付",
   "v": "初音ミク",
   "a": "niconico:22580750",
   "firstSeen": "2026-10-08T14:36:47.412Z",
@@ -59700,7 +59626,6 @@
   "firstSeen": "2026-10-08T15:10:08.910Z",
   "seed": true,
   "of": "nico:sm19466301",
-  "p": "",
   "a": "niconico:865371"
  },
  {
@@ -59857,7 +59782,6 @@
   "firstSeen": "2026-10-08T15:10:08.901Z",
   "seed": true,
   "of": "nico:sm18945135",
-  "p": "",
   "a": "niconico:12651886"
  },
  {
@@ -59883,11 +59807,10 @@
   ],
   "uploaderId": 3960446,
   "uploader": null,
-  "by": "。KK",
+  "by": "を 。KK",
   "firstSeen": "2026-10-08T15:10:08.975Z",
   "seed": true,
   "of": "nico:sm19361252",
-  "p": "",
   "a": "niconico:8559678"
  },
  {
@@ -59984,7 +59907,6 @@
   "firstSeen": "2026-10-08T15:10:08.810Z",
   "seed": true,
   "of": "nico:sm19286279",
-  "p": "",
   "a": "niconico:5683296"
  },
  {
@@ -60018,7 +59940,6 @@
   "firstSeen": "2026-10-08T14:36:47.405Z",
   "seed": true,
   "of": "nico:sm18626305",
-  "p": "",
   "a": "niconico:7783663"
  },
  {
@@ -60074,7 +59995,7 @@
   ],
   "uploaderId": 101942,
   "uploader": null,
-  "by": "",
+  "by": "全部俺ってみた。タイ焼き屋",
   "firstSeen": "2026-10-08T15:10:08.826Z",
   "seed": true
  },
@@ -60138,7 +60059,7 @@
   ],
   "uploaderId": 5619789,
   "uploader": null,
-  "p": "",
+  "p": "椎名もた",
   "v": "初音ミク",
   "a": "niconico:5619789",
   "firstSeen": "2026-10-08T14:36:47.417Z",
@@ -60206,7 +60127,6 @@
   "firstSeen": "2026-10-08T15:10:08.729Z",
   "seed": true,
   "of": "nico:sm16179659",
-  "p": "",
   "a": "niconico:15348821"
  },
  {
@@ -60267,7 +60187,7 @@
   ],
   "uploaderId": 174719,
   "uploader": null,
-  "by": "",
+  "by": "を歌わせて頂きました。灯油",
   "firstSeen": "2026-10-08T15:10:08.827Z",
   "seed": true,
   "of": "nico:sm19133907",
@@ -60510,7 +60430,6 @@
   "firstSeen": "2026-10-08T15:10:08.787Z",
   "seed": true,
   "of": "nico:sm17520775",
-  "p": "",
   "a": "niconico:24550889"
  },
  {
@@ -60883,7 +60802,6 @@
   "firstSeen": "2026-10-08T15:10:08.965Z",
   "seed": true,
   "of": "nico:sm8686165",
-  "p": "",
   "a": "niconico:3631203"
  },
  {
@@ -61008,7 +60926,6 @@
   "firstSeen": "2026-10-08T15:10:08.905Z",
   "seed": true,
   "of": "nico:sm18821036",
-  "p": "",
   "a": "niconico:5683296"
  },
  {
@@ -61033,11 +60950,10 @@
   ],
   "uploaderId": 4496935,
   "uploader": null,
-  "by": "ヲタみんver.",
+  "by": "を",
   "firstSeen": "2026-10-08T15:10:08.907Z",
   "seed": true,
   "of": "nico:sm18198019",
-  "p": "",
   "a": "niconico:24550889"
  },
  {
@@ -61614,7 +61530,7 @@
   ],
   "uploaderId": 18361375,
   "uploader": null,
-  "by": "YouTube『コレコレチャンネル』で新作動画公開中!",
+  "by": "で新作動画公開中!",
   "firstSeen": "2026-10-08T15:10:08.828Z",
   "seed": true
  },
@@ -61898,7 +61814,6 @@
   "firstSeen": "2026-10-08T15:10:08.932Z",
   "seed": true,
   "of": "nico:sm7021921",
-  "p": "",
   "a": "niconico:11362506"
  },
  {
@@ -61958,7 +61873,6 @@
   "firstSeen": "2026-10-08T15:10:08.887Z",
   "seed": true,
   "of": "nico:sm18100389",
-  "p": "",
   "a": "niconico:531122"
  },
  {
@@ -62067,7 +61981,7 @@
   ],
   "uploaderId": 334765,
   "uploader": null,
-  "p": "",
+  "p": "- KEI",
   "v": "GUMI",
   "a": "niconico:334765",
   "firstSeen": "2026-10-08T14:36:47.431Z",
@@ -62353,11 +62267,12 @@
   ],
   "uploaderId": 22580750,
   "uploader": null,
-  "p": "",
+  "p": "付",
   "v": "初音ミク",
   "a": "niconico:22580750",
   "firstSeen": "2026-10-08T14:36:47.415Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm17988609",
@@ -62386,7 +62301,6 @@
   "firstSeen": "2026-10-08T15:10:08.973Z",
   "seed": true,
   "of": "nico:sm11209477",
-  "p": "",
   "a": "niconico:10821010"
  },
  {
@@ -62411,11 +62325,10 @@
   ],
   "uploaderId": 4496935,
   "uploader": null,
-  "by": "ヲタみんver.",
+  "by": "を",
   "firstSeen": "2026-10-08T15:10:08.916Z",
   "seed": true,
   "of": "nico:sm17910036",
-  "p": "",
   "a": "niconico:8785358"
  },
  {
@@ -62448,7 +62361,6 @@
   "firstSeen": "2026-10-08T14:36:47.383Z",
   "seed": true,
   "of": "nico:sm12099561",
-  "p": "",
   "a": "niconico:12651886"
  },
  {
@@ -62510,11 +62422,12 @@
   ],
   "uploaderId": 449061,
   "uploader": null,
-  "p": "",
+  "p": "カンタレラ 『 』",
   "v": "初音ミク",
   "a": "niconico:449061",
   "firstSeen": "2026-10-08T14:36:47.406Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm17930619",
@@ -62730,7 +62643,6 @@
   "firstSeen": "2026-10-08T15:10:08.797Z",
   "seed": true,
   "of": "nico:sm17763107",
-  "p": "",
   "a": "niconico:8851187"
  },
  {
@@ -62820,11 +62732,10 @@
   ],
   "uploaderId": 4496935,
   "uploader": null,
-  "by": "ヲタみんver.",
+  "by": "を",
   "firstSeen": "2026-10-08T15:10:08.844Z",
   "seed": true,
   "of": "nico:sm17720979",
-  "p": "",
   "a": "niconico:595445"
  },
  {
@@ -63287,7 +63198,6 @@
   "firstSeen": "2026-10-08T15:10:08.789Z",
   "seed": true,
   "of": "nico:sm16474954",
-  "p": "",
   "a": "niconico:24550889"
  },
  {
@@ -63746,7 +63656,7 @@
   ],
   "uploaderId": 1101042,
   "uploader": null,
-  "by": "halyosy",
+  "by": "を",
   "firstSeen": "2026-10-08T15:10:08.951Z",
   "seed": true,
   "of": "nico:sm16846374",
@@ -64546,7 +64456,7 @@
   ],
   "uploaderId": 14318444,
   "uploader": null,
-  "by": "",
+  "by": "に少量のキモさをプラスしてみた",
   "firstSeen": "2026-10-08T15:10:08.675Z",
   "seed": true,
   "of": "nico:sm16539814",
@@ -64676,11 +64586,12 @@
   ],
   "uploaderId": 22580750,
   "uploader": null,
-  "p": "",
+  "p": "付",
   "v": "初音ミク",
   "a": "niconico:22580750",
   "firstSeen": "2026-10-08T14:36:47.396Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm16583875",
@@ -65350,7 +65261,7 @@
   ],
   "uploaderId": 13522012,
   "uploader": null,
-  "by": "",
+  "by": "に歌詞を付けて",
   "firstSeen": "2026-10-08T15:10:08.694Z",
   "seed": true
  },
@@ -65580,7 +65491,7 @@
   "firstSeen": "2026-10-08T15:10:08.637Z",
   "seed": true,
   "of": "nico:sm15630734",
-  "p": "",
+  "p": "カンタレラ 『 』",
   "a": "niconico:449061"
  },
  {
@@ -65644,7 +65555,6 @@
   "firstSeen": "2026-10-08T15:10:08.610Z",
   "seed": true,
   "of": "nico:sm15956806",
-  "p": "",
   "a": "niconico:5683296"
  },
  {
@@ -65771,7 +65681,7 @@
   "firstSeen": "2026-10-08T15:10:08.671Z",
   "seed": true,
   "of": "nico:sm15630734",
-  "p": "",
+  "p": "カンタレラ 『 』",
   "a": "niconico:449061"
  },
  {
@@ -65826,11 +65736,11 @@
   ],
   "uploaderId": 14318444,
   "uploader": null,
-  "by": "",
+  "by": "をルー語でシングすることにトライした",
   "firstSeen": "2026-10-08T15:10:08.819Z",
   "seed": true,
   "of": "nico:sm15630734",
-  "p": "",
+  "p": "カンタレラ 『 』",
   "a": "niconico:449061"
  },
  {
@@ -66039,7 +65949,7 @@
   "firstSeen": "2026-10-08T15:10:08.937Z",
   "seed": true,
   "of": "nico:sm15630734",
-  "p": "",
+  "p": "カンタレラ 『 』",
   "a": "niconico:449061"
  },
  {
@@ -66092,7 +66002,7 @@
   "firstSeen": "2026-10-08T15:10:08.880Z",
   "seed": true,
   "of": "nico:sm15630734",
-  "p": "",
+  "p": "カンタレラ 『 』",
   "a": "niconico:449061"
  },
  {
@@ -66153,7 +66063,7 @@
   "firstSeen": "2026-10-08T15:10:08.957Z",
   "seed": true,
   "of": "nico:sm15630734",
-  "p": "",
+  "p": "カンタレラ 『 』",
   "a": "niconico:449061"
  },
  {
@@ -66211,11 +66121,12 @@
   ],
   "uploaderId": 449061,
   "uploader": null,
-  "p": "",
+  "p": "カンタレラ 『 』",
   "v": "初音ミク",
   "a": "niconico:449061",
   "firstSeen": "2026-10-08T14:36:47.312Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm15513379",
@@ -66297,7 +66208,7 @@
   ],
   "uploaderId": 334765,
   "uploader": null,
-  "p": "",
+  "p": "- KEI",
   "v": "巡音ルカ",
   "a": "niconico:334765",
   "firstSeen": "2026-10-08T14:36:47.376Z",
@@ -66461,7 +66372,6 @@
   "firstSeen": "2026-10-08T15:10:08.885Z",
   "seed": true,
   "of": "nico:sm14332782",
-  "p": "",
   "a": "niconico:5683296"
  },
  {
@@ -66612,11 +66522,10 @@
   ],
   "uploaderId": 4496935,
   "uploader": null,
-  "by": "ヲタみんver.",
+  "by": "を",
   "firstSeen": "2026-10-08T15:10:08.903Z",
   "seed": true,
   "of": "nico:sm15022913",
-  "p": "",
   "a": "niconico:3343223"
  },
  {
@@ -66679,11 +66588,12 @@
   ],
   "uploaderId": 22580750,
   "uploader": null,
-  "p": "",
+  "p": "付",
   "v": "初音ミク",
   "a": "niconico:22580750",
   "firstSeen": "2026-10-08T14:36:47.322Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm15155336",
@@ -66809,7 +66719,7 @@
   ],
   "uploaderId": 101942,
   "uploader": null,
-  "by": "",
+  "by": "が熱血ソングだったから",
   "firstSeen": "2026-10-08T15:10:08.778Z",
   "seed": true
  },
@@ -67181,7 +67091,6 @@
   "firstSeen": "2026-10-08T15:10:08.836Z",
   "seed": true,
   "of": "nico:sm14780909",
-  "p": "",
   "a": "niconico:5683296"
  },
  {
@@ -67361,7 +67270,7 @@
   ],
   "uploaderId": 14318444,
   "uploader": null,
-  "by": "",
+  "by": "を歌いたかった",
   "firstSeen": "2026-10-08T15:10:09.010Z",
   "seed": true,
   "of": "nico:sm14330479",
@@ -67457,11 +67366,12 @@
   ],
   "uploaderId": 5619789,
   "uploader": null,
-  "p": "",
+  "p": "椎名もた",
   "v": "初音ミク",
   "a": "niconico:5619789",
   "firstSeen": "2026-10-08T14:36:47.420Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm14595248",
@@ -67582,7 +67492,7 @@
   ],
   "uploaderId": 10497106,
   "uploader": null,
-  "by": "",
+  "by": "1期OPを野球選手名で",
   "firstSeen": "2026-10-08T15:10:08.858Z",
   "seed": true
  },
@@ -67641,7 +67551,7 @@
   ],
   "uploaderId": 174719,
   "uploader": null,
-  "by": "",
+  "by": "を歌わせて頂きました。 灯油",
   "firstSeen": "2026-10-08T15:10:08.735Z",
   "seed": true,
   "of": "nico:sm14330479",
@@ -67743,7 +67653,6 @@
   "firstSeen": "2026-10-08T15:10:08.983Z",
   "seed": true,
   "of": "nico:sm14332782",
-  "p": "",
   "a": "niconico:5683296"
  },
  {
@@ -67773,7 +67682,6 @@
   "firstSeen": "2026-10-08T15:10:08.768Z",
   "seed": true,
   "of": "nico:sm14332782",
-  "p": "",
   "a": "niconico:5683296"
  },
  {
@@ -67952,7 +67860,6 @@
   "firstSeen": "2026-10-08T15:10:09.008Z",
   "seed": true,
   "of": "nico:sm13715524",
-  "p": "",
   "a": "niconico:3343223"
  },
  {
@@ -68456,7 +68363,7 @@
   ],
   "uploaderId": 174719,
   "uploader": null,
-  "by": "",
+  "by": "を歌わせて頂きました。",
   "firstSeen": "2026-10-08T15:10:08.943Z",
   "seed": true,
   "of": "nico:sm13275244",
@@ -68552,7 +68459,6 @@
   "firstSeen": "2026-10-08T15:10:08.903Z",
   "seed": true,
   "of": "nico:sm13304052",
-  "p": "",
   "a": "niconico:4027531"
  },
  {
@@ -68679,7 +68585,6 @@
   "firstSeen": "2026-10-08T15:10:08.720Z",
   "seed": true,
   "of": "nico:sm13304052",
-  "p": "",
   "a": "niconico:4027531"
  },
  {
@@ -68736,7 +68641,7 @@
   ],
   "uploaderId": 174719,
   "uploader": null,
-  "by": "",
+  "by": "歌わせて頂きました。",
   "firstSeen": "2026-10-08T15:10:08.929Z",
   "seed": true,
   "of": "nico:sm13386216",
@@ -68896,11 +68801,12 @@
   ],
   "uploaderId": 5619789,
   "uploader": null,
-  "p": "",
+  "p": "椎名もた",
   "v": "初音ミク",
   "a": "niconico:5619789",
   "firstSeen": "2026-10-08T14:36:47.396Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm13320488",
@@ -68927,7 +68833,6 @@
   "firstSeen": "2026-10-08T15:10:08.878Z",
   "seed": true,
   "of": "nico:sm12894209",
-  "p": "",
   "a": "niconico:284320"
  },
  {
@@ -69156,11 +69061,12 @@
   ],
   "uploaderId": 449061,
   "uploader": null,
-  "p": "",
+  "p": "カンタレラ 『 』",
   "v": "初音ミク",
   "a": "niconico:449061",
   "firstSeen": "2026-10-08T14:36:47.386Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm13185918",
@@ -69303,7 +69209,7 @@
   ],
   "uploaderId": 4496935,
   "uploader": null,
-  "by": "ヲタみんver.",
+  "by": "を",
   "firstSeen": "2026-10-08T15:10:08.938Z",
   "seed": true,
   "of": "nico:sm12825985",
@@ -69680,7 +69586,7 @@
   ],
   "uploaderId": 655340,
   "uploader": null,
-  "p": "",
+  "p": "vo.初音ミク",
   "v": "初音ミク",
   "a": "niconico:655340",
   "firstSeen": "2026-10-08T14:36:47.371Z",
@@ -69805,7 +69711,6 @@
   "firstSeen": "2026-10-08T15:10:09.008Z",
   "seed": true,
   "of": "nico:sm12050471",
-  "p": "",
   "a": "niconico:7032706"
  },
  {
@@ -70533,7 +70438,6 @@
   "firstSeen": "2026-10-08T15:10:09.003Z",
   "seed": true,
   "of": "nico:sm11834233",
-  "p": "",
   "a": "niconico:1137213"
  },
  {
@@ -70902,11 +70806,10 @@
   ],
   "uploaderId": 7869728,
   "uploader": null,
-  "by": "",
+  "by": "を歌ってみました by ENE",
   "firstSeen": "2026-10-08T15:10:08.912Z",
   "seed": true,
   "of": "nico:sm11559163",
-  "p": "",
   "a": "niconico:3343223"
  },
  {
@@ -71524,7 +71427,7 @@
   ],
   "uploaderId": 334765,
   "uploader": null,
-  "p": "",
+  "p": "- KEI",
   "v": "初音ミク",
   "a": "niconico:334765",
   "firstSeen": "2026-10-08T14:36:47.402Z",
@@ -71555,7 +71458,6 @@
   "firstSeen": "2026-10-08T15:10:08.928Z",
   "seed": true,
   "of": "nico:sm10933505",
-  "p": "",
   "a": "niconico:424424"
  },
  {
@@ -71733,11 +71635,10 @@
   ],
   "uploaderId": 1855182,
   "uploader": null,
-  "by": "@ヤマイ",
+  "by": "を @ヤマイ",
   "firstSeen": "2026-10-08T15:10:08.645Z",
   "seed": true,
   "of": "nico:sm10122021",
-  "p": "",
   "a": "niconico:1137213"
  },
  {
@@ -72070,11 +71971,11 @@
   ],
   "uploaderId": 13685845,
   "uploader": null,
-  "by": "",
+  "by": "を1ミリも知らない弟の姉が想像で",
   "firstSeen": "2026-10-08T15:10:08.676Z",
   "seed": true,
   "of": "nico:sm6666016",
-  "p": "",
+  "p": "vo.初音ミク",
   "a": "niconico:655340"
  },
  {
@@ -72220,7 +72121,6 @@
   "firstSeen": "2026-10-08T15:10:08.872Z",
   "seed": true,
   "of": "nico:sm7528841",
-  "p": "",
   "a": "niconico:1169727"
  },
  {
@@ -72274,7 +72174,6 @@
   "firstSeen": "2026-10-08T15:10:08.829Z",
   "seed": true,
   "of": "nico:sm10444862",
-  "p": "",
   "a": "niconico:11314366"
  },
  {
@@ -72444,7 +72343,7 @@
   ],
   "uploaderId": 4496935,
   "uploader": null,
-  "by": "ヲタみんver.",
+  "by": "を",
   "firstSeen": "2026-10-08T15:10:08.975Z",
   "seed": true,
   "of": "nico:sm10393864",
@@ -73210,11 +73109,10 @@
   ],
   "uploaderId": 6283288,
   "uploader": null,
-  "by": "★実谷なな",
+  "by": "を ★実谷なな",
   "firstSeen": "2026-10-08T15:10:08.948Z",
   "seed": true,
   "of": "nico:sm9797269",
-  "p": "",
   "a": "niconico:1136553"
  },
  {
@@ -73590,7 +73488,7 @@
   ],
   "uploaderId": 6729166,
   "uploader": null,
-  "by": "",
+  "by": "歌い終わっ太。",
   "firstSeen": "2026-10-08T15:10:08.943Z",
   "seed": true
  },
@@ -73615,7 +73513,7 @@
   ],
   "uploaderId": 4496935,
   "uploader": null,
-  "by": "ヲタみんver.",
+  "by": "を",
   "firstSeen": "2026-10-08T15:10:08.940Z",
   "seed": true,
   "of": "nico:sm8061508",
@@ -74235,7 +74133,7 @@
   ],
   "uploaderId": 8370543,
   "uploader": null,
-  "by": "『Bad Apple !!』全部俺",
+  "by": "全部俺",
   "firstSeen": "2026-10-08T15:10:08.939Z",
   "seed": true
  },
@@ -75108,7 +75006,6 @@
   "firstSeen": "2026-10-08T15:10:08.969Z",
   "seed": true,
   "of": "nico:sm7021921",
-  "p": "",
   "a": "niconico:11362506"
  },
  {
@@ -75171,11 +75068,12 @@
   ],
   "uploaderId": 449061,
   "uploader": null,
-  "p": "",
+  "p": "カンタレラ 『 』",
   "v": "KAITO",
   "a": "niconico:449061",
   "firstSeen": "2026-10-08T14:36:47.362Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm7969616",
@@ -75702,11 +75600,10 @@
   ],
   "uploaderId": 1101042,
   "uploader": null,
-  "by": "(halyosy ver.)",
+  "by": "を",
   "firstSeen": "2026-10-08T15:10:08.739Z",
   "seed": true,
   "of": "nico:sm7528841",
-  "p": "",
   "a": "niconico:1169727"
  },
  {
@@ -75985,7 +75882,6 @@
   "firstSeen": "2026-10-08T15:10:08.689Z",
   "seed": true,
   "of": "nico:sm7215575",
-  "p": "",
   "a": "niconico:2393707"
  },
  {
@@ -76079,7 +75975,6 @@
   "firstSeen": "2026-10-08T15:10:08.864Z",
   "seed": true,
   "of": "nico:sm4153727",
-  "p": "",
   "a": "niconico:1101042"
  },
  {
@@ -76109,7 +76004,6 @@
   "firstSeen": "2026-10-08T15:10:09.012Z",
   "seed": true,
   "of": "nico:nm6049209",
-  "p": "",
   "a": "niconico:88511"
  },
  {
@@ -76141,7 +76035,6 @@
   "firstSeen": "2026-10-08T15:10:08.635Z",
   "seed": true,
   "of": "nico:sm6909505",
-  "p": "",
   "a": "niconico:912063"
  },
  {
@@ -76174,7 +76067,6 @@
   "firstSeen": "2026-10-08T15:10:08.810Z",
   "seed": true,
   "of": "nico:sm4410647",
-  "p": "",
   "a": "niconico:4632758"
  },
  {
@@ -76260,11 +76152,12 @@
   ],
   "uploaderId": 449061,
   "uploader": null,
-  "p": "",
+  "p": "カンタレラ 『 』",
   "v": "巡音ルカ",
   "a": "niconico:449061",
   "firstSeen": "2026-10-08T14:36:47.368Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm7153836",
@@ -76446,7 +76339,6 @@
   "firstSeen": "2026-10-08T15:10:08.641Z",
   "seed": true,
   "of": "nico:sm6909505",
-  "p": "",
   "a": "niconico:912063"
  },
  {
@@ -76643,7 +76535,7 @@
   "firstSeen": "2026-10-08T15:10:08.915Z",
   "seed": true,
   "of": "nico:sm6666016",
-  "p": "",
+  "p": "vo.初音ミク",
   "a": "niconico:655340"
  },
  {
@@ -76876,7 +76768,6 @@
   "firstSeen": "2026-10-08T15:10:08.924Z",
   "seed": true,
   "of": "nico:sm3504435",
-  "p": "",
   "a": "niconico:317063"
  },
  {
@@ -76906,7 +76797,7 @@
   ],
   "uploaderId": 655340,
   "uploader": null,
-  "p": "",
+  "p": "vo.初音ミク",
   "v": "初音ミク",
   "a": "niconico:655340",
   "firstSeen": "2026-10-08T14:36:47.317Z",
@@ -76971,7 +76862,6 @@
   "firstSeen": "2026-10-08T15:10:09.014Z",
   "seed": true,
   "of": "nico:sm6529016",
-  "p": "",
   "a": "niconico:7032706"
  },
  {
@@ -77061,7 +76951,7 @@
   ],
   "uploaderId": 2735038,
   "uploader": null,
-  "by": "",
+  "by": "全部俺の声",
   "firstSeen": "2026-10-08T15:10:08.721Z",
   "seed": true
  },
@@ -77120,11 +77010,10 @@
   ],
   "uploaderId": 1101042,
   "uploader": null,
-  "by": "",
+  "by": "を",
   "firstSeen": "2026-10-08T15:10:08.781Z",
   "seed": true,
   "of": "nico:nm6049209",
-  "p": "",
   "a": "niconico:88511"
  },
  {
@@ -77213,7 +77102,6 @@
   "firstSeen": "2026-10-08T15:10:09.000Z",
   "seed": true,
   "of": "nico:sm6115924",
-  "p": "",
   "a": "niconico:334794"
  },
  {
@@ -77366,7 +77254,7 @@
   ],
   "uploaderId": 1414566,
   "uploader": null,
-  "by": "★実谷なな",
+  "by": "を ★実谷なな",
   "firstSeen": "2026-10-08T15:10:08.659Z",
   "seed": true,
   "of": "nico:sm6119955",
@@ -77494,11 +77382,10 @@
   ],
   "uploaderId": 6283288,
   "uploader": null,
-  "by": "★実谷なな",
+  "by": "を ★実谷なな",
   "firstSeen": "2026-10-08T15:10:08.871Z",
   "seed": true,
   "of": "nico:nm6049209",
-  "p": "",
   "a": "niconico:88511"
  },
  {
@@ -77528,7 +77415,6 @@
   "firstSeen": "2026-10-08T15:10:08.870Z",
   "seed": true,
   "of": "nico:nm6049209",
-  "p": "",
   "a": "niconico:88511"
  },
  {
@@ -77876,11 +77762,10 @@
   ],
   "uploaderId": 9327171,
   "uploader": null,
-  "by": "",
+  "by": "バイオリンで弾いてみました。",
   "firstSeen": "2026-10-08T15:10:08.918Z",
   "seed": true,
   "of": "nico:sm8089993",
-  "p": "",
   "a": "niconico:562367"
  },
  {
@@ -77975,7 +77860,6 @@
   "firstSeen": "2026-10-08T15:10:08.660Z",
   "seed": true,
   "of": "nico:sm8089993",
-  "p": "",
   "a": "niconico:562367"
  },
  {
@@ -78006,7 +77890,6 @@
   "firstSeen": "2026-10-08T15:10:08.824Z",
   "seed": true,
   "of": "nico:sm8089993",
-  "p": "",
   "a": "niconico:562367"
  },
  {
@@ -78036,7 +77919,6 @@
   "firstSeen": "2026-10-08T15:10:08.826Z",
   "seed": true,
   "of": "nico:sm5524166",
-  "p": "",
   "a": "niconico:317063"
  },
  {
@@ -78095,11 +77977,10 @@
   ],
   "uploaderId": 6024287,
   "uploader": null,
-  "by": "うさトゥライ",
+  "by": "ふたりで",
   "firstSeen": "2026-10-08T15:10:09.002Z",
   "seed": true,
   "of": "nico:sm4794708",
-  "p": "",
   "a": "niconico:386666"
  },
  {
@@ -78148,11 +78029,10 @@
   ],
   "uploaderId": 1304697,
   "uploader": null,
-  "by": "",
+  "by": "-ReEdited And Mastered-",
   "firstSeen": "2026-10-08T15:10:08.707Z",
   "seed": true,
   "of": "nico:sm2651288",
-  "p": "",
   "a": "niconico:101303"
  },
  {
@@ -78457,7 +78337,7 @@
   ],
   "uploaderId": 6024287,
   "uploader": null,
-  "by": "うさトゥライ",
+  "by": "ふたりで",
   "firstSeen": "2026-10-08T15:10:08.865Z",
   "seed": true
  },
@@ -78675,11 +78555,12 @@
   ],
   "uploaderId": 186916,
   "uploader": null,
-  "p": "",
+  "p": "Full Ver.",
   "v": "初音ミク",
   "a": "niconico:186916",
   "firstSeen": "2026-10-08T14:36:47.362Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm4136912",
@@ -78708,12 +78589,11 @@
   ],
   "uploaderId": 1741662,
   "uploader": null,
-  "p": "細菌汚染",
+  "p": "を唄う」の巻",
   "v": "神威がくぽ",
   "a": "niconico:1741662",
   "firstSeen": "2026-10-08T14:36:47.348Z",
-  "seed": true,
-  "pFilled": true
+  "seed": true
  },
  {
   "id": "nico:sm3968050",
@@ -78799,7 +78679,7 @@
   ],
   "uploaderId": 2523470,
   "uploader": null,
-  "p": "",
+  "p": "fullver.",
   "v": "初音ミク",
   "a": "niconico:2523470",
   "firstSeen": "2026-10-08T14:36:47.412Z",
@@ -78832,7 +78712,6 @@
   "firstSeen": "2026-10-08T15:10:08.928Z",
   "seed": true,
   "of": "nico:sm3645817",
-  "p": "",
   "a": "niconico:317063"
  },
  {
@@ -78981,11 +78860,10 @@
   ],
   "uploaderId": 1101042,
   "uploader": null,
-  "by": "(halyosy ver.)",
+  "by": "を",
   "firstSeen": "2026-10-08T15:10:08.786Z",
   "seed": true,
   "of": "nico:sm3645817",
-  "p": "",
   "a": "niconico:317063"
  },
  {
@@ -79512,7 +79390,7 @@
   ],
   "uploaderId": 655340,
   "uploader": null,
-  "p": "",
+  "p": "vo.初音ミク",
   "v": "初音ミク",
   "a": "niconico:655340",
   "firstSeen": "2026-10-08T14:36:47.407Z",
@@ -79791,7 +79669,7 @@
   ],
   "uploaderId": 449061,
   "uploader": null,
-  "p": "",
+  "p": "カンタレラ 『 』",
   "v": "KAITO",
   "a": "niconico:449061",
   "firstSeen": "2026-10-08T14:36:47.347Z",
@@ -79880,11 +79758,10 @@
   ],
   "uploaderId": 1101042,
   "uploader": null,
-  "by": "(フルVer.)",
+  "by": "を",
   "firstSeen": "2026-10-08T15:10:08.695Z",
   "seed": true,
   "of": "nico:sm1908098",
-  "p": "",
   "a": "niconico:3857447"
  },
  {
@@ -80033,7 +79910,7 @@
   ],
   "uploaderId": 1702384,
   "uploader": null,
-  "p": "",
+  "p": "アホの子増し増し改良ver.",
   "a": "niconico:1702384",
   "firstSeen": "2026-10-08T14:36:47.367Z",
   "seed": true
@@ -80065,7 +79942,7 @@
   ],
   "uploaderId": 655340,
   "uploader": null,
-  "p": "",
+  "p": "vo.初音ミク",
   "v": "初音ミク",
   "a": "niconico:655340",
   "firstSeen": "2026-10-08T14:36:47.336Z",
@@ -80385,11 +80262,10 @@
   ],
   "uploaderId": 1101042,
   "uploader": null,
-  "by": "(男性キー上げVer.)",
+  "by": "を",
   "firstSeen": "2026-10-08T15:10:08.630Z",
   "seed": true,
   "of": "nico:sm1715919",
-  "p": "",
   "a": "niconico:317063"
  },
  {
@@ -80515,11 +80391,12 @@
   ],
   "uploaderId": 186916,
   "uploader": null,
-  "p": "",
+  "p": "Full Ver.",
   "v": "初音ミク",
   "a": "niconico:186916",
   "firstSeen": "2026-10-08T14:36:47.416Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true
  },
  {
   "id": "nico:sm1639267",
@@ -80548,7 +80425,7 @@
   ],
   "uploaderId": 2197196,
   "uploader": null,
-  "p": "",
+  "p": "をKAITO,MEIKO,初音ミクにry 修正版",
   "v": "KAITO",
   "a": "niconico:2197196",
   "firstSeen": "2026-10-08T14:36:47.325Z",
@@ -80893,7 +80770,7 @@
   ],
   "uploaderId": 528581,
   "uploader": null,
-  "p": "",
+  "p": "Full ver.",
   "v": "初音ミク",
   "a": "niconico:528581",
   "firstSeen": "2026-10-08T14:36:47.345Z",
@@ -80926,7 +80803,7 @@
   ],
   "uploaderId": 1923193,
   "uploader": null,
-  "p": "",
+  "p": "baker",
   "v": "初音ミク",
   "a": "niconico:1923193",
   "firstSeen": "2026-10-08T14:36:47.373Z",
@@ -80959,7 +80836,7 @@
   ],
   "uploaderId": 186916,
   "uploader": null,
-  "p": "",
+  "p": "Full Ver.",
   "v": "初音ミク",
   "a": "niconico:186916",
   "firstSeen": "2026-10-08T14:36:47.358Z",
@@ -81117,7 +80994,7 @@
   ],
   "uploaderId": 85430,
   "uploader": null,
-  "by": "",
+  "by": "を歌わせてみた",
   "firstSeen": "2026-10-08T14:36:47.324Z",
   "seed": true
  },
@@ -81202,7 +81079,7 @@
   ],
   "uploaderId": 1672946,
   "uploader": null,
-  "by": "いさじ",
+  "by": "を",
   "firstSeen": "2026-10-08T15:10:08.894Z",
   "seed": true
  },
