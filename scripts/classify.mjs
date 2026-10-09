@@ -315,14 +315,17 @@ export function fillCreators(items) {
     i.pFilled = true;
   }
   // それでも作者がいない曲は、同じ曲名・同じジャンルの本家（ニコニコとYouTubeなど）から作者名をもらう
+  // 候補が複数あれば、いちばん多く使われている名前（同じ数なら短いほう）を選ぶ
   const byTitle = new Map();
-  for (const i of items) if (i.kind === "本家" && i.p && !i.pFilled) {
+  for (const i of items) if (i.kind === "本家" && i.p && !i.pFilled && normalize(i.t).length >= 2) {
     const k = i.g + "|" + normalize(i.t);
-    if (normalize(i.t).length >= 2 && !byTitle.has(k)) byTitle.set(k, i.p);
+    const m = byTitle.get(k) || new Map();
+    m.set(i.p, (m.get(i.p) || 0) + 1);
+    byTitle.set(k, m);
   }
   for (const i of items) if (i.kind === "本家" && !i.p) {
-    const p = byTitle.get(i.g + "|" + normalize(i.t));
-    if (p) { i.p = p; i.pFilled = true; }
+    const m = byTitle.get(i.g + "|" + normalize(i.t));
+    if (m) { i.p = [...m].sort((x, y) => y[1] - x[1] || x[0].length - y[0].length)[0][0]; i.pFilled = true; }
   }
   return items;
 }
