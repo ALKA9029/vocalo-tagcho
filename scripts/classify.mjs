@@ -146,7 +146,8 @@ export function parseYouTube(raw, channel = "") {
     } else song = parts[0] || s;
   }
   const featVoice = featOf(song) || featOf(artist);
-  song = song.replace(/\s*(?:feat\.?|ft\.)\s*.*$/i, "").replace(/セルフカバー|cover/gi, "").trim();
+  song = song.replace(/\s*(?:feat\.?|ft\.)\s*.*$/i, "").replace(/セルフカバー|cover/gi, "")
+    .replace(/^[\s\-–—:：|｜]+|[\s\-–—:：|｜]+$/g, "").trim();
   artist = artist.replace(/\s*(?:feat\.?|ft\.)\s*.*$/i, "").replace(/\s*[（(].*$/, "").trim() || ch;
   return { song: song || raw.trim(), creator: artist, voice: featVoice ? (splitNames(featVoice).voices[0] || null) : null, originalCreator: "", channel: ch, brackets: [] };
 }

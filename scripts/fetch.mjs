@@ -95,7 +95,7 @@ async function fetchYouTubeTrending() {
     const res = await fetch("https://www.googleapis.com/youtube/v3/videos?" + params);
     if (!res.ok) { console.warn(`YouTube急上昇: HTTP ${res.status} ${(await res.text()).slice(0, 200)}`); break; }
     const body = await res.json();
-    for (const v of body.items || []) {
+    for (const v of (body.items || []).filter(isJapanese)) {
       const item = ytItem(v, t.defaultGenre);
       if (item.views != null && item.views < (t.minViews || 0)) continue;
       out.push(item);
@@ -105,6 +105,14 @@ async function fetchYouTubeTrending() {
     if (!pageToken) break;
   }
   return out;
+}
+
+// 日本の曲か：音声言語が日本語、またはタイトル・チャンネル名・説明文・タグにかなが入っている
+const KANA = /[\u3040-\u30ff]/;
+function isJapanese(v) {
+  const sn = v.snippet || {};
+  if (/^ja/i.test(sn.defaultAudioLanguage || "") || /^ja/i.test(sn.defaultLanguage || "")) return true;
+  return KANA.test([sn.title, sn.channelTitle, (sn.description || "").slice(0, 500), ...(sn.tags || [])].join(" "));
 }
 
 // videos.list の1件をサイト用の形に（共通）
@@ -157,28 +165,28 @@ async function fetchYouTubeSearch() {
       if (!pageToken) break;
     }
   }
-  const details = await ytVideos([...found.keys()], key);
+  const details = (await ytVideos([...found.keys()], key)).filter(isJapanese);
   return details.map(v => ytItem(v, found.get(v.id)))
     .filter(v => v.views == null || v.views >= (s.minViews || 0))
     .filter(v => !/#shorts/i.test(v.title));
 }
 
-// ---------- 最近のYouTube曲の再生数を更新（期間ランキングを正しくするため） ----------
+// ---------- 保存済みのYouTube曲の再生数を更新（50件で1ユニットなので全件でも安い） ----------
+// あわせて、日本の曲ではないものを外す（戻り値：外す曲のIDの集合）
 async function refreshYouTubeStats(items) {
   const key = process.env.YOUTUBE_API_KEY;
-  const days = config.youtube.refreshDays || 35;
-  if (!key) return 0;
-  const since = new Date(Date.now() - days * 864e5).toISOString();
-  const targets = items.filter(i => i.src === "youtube" && (i.date || "") >= since);
-  const byId = new Map(targets.map(i => [i.id.slice(3), i]));
+  const drop = new Set();
+  if (!key) return drop;
+  const byId = new Map(items.filter(i => i.src === "youtube").map(i => [i.id.slice(3), i]));
   const details = await ytVideos([...byId.keys()], key);
   for (const v of details) {
     const i = byId.get(v.id);
+    if (!isJapanese(v) && !i.seed) { drop.add(i.id); continue; }
     if (v.statistics?.viewCount != null) i.views = Number(v.statistics.viewCount);
     if (v.statistics?.likeCount != null) i.likes = Number(v.statistics.likeCount);
   }
-  console.log(`YouTubeの再生数を更新: ${details.length}件`);
-  return details.length;
+  console.log(`YouTubeの再生数を更新: ${details.length}件（日本の曲ではないので外す: ${drop.size}件）`);
+  return drop;
 }
 
 // ---------- まとめて保存 ----------
@@ -209,7 +217,8 @@ let items = [...existing.values()];
 if (fixtureArg < 0 && !SEED) {
   // 今回の取得で更新されなかった最近のYouTube曲だけ、再生数を取り直す
   const fresh = new Set(videos.map(v => v.id));
-  await refreshYouTubeStats(items.filter(i => !fresh.has(i.id))).catch(e => console.warn("再生数の更新に失敗:", e.message));
+  const drop = await refreshYouTubeStats(items.filter(i => !fresh.has(i.id))).catch(e => (console.warn("再生数の更新に失敗:", e.message), new Set()));
+  items = items.filter(i => !drop.has(i.id));
 }
 for (const i of items) {
   const o = overrides[i.id];
