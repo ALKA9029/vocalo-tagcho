@@ -113,6 +113,8 @@ async function fetchYouTubeTrending() {
 const KANA = /[\u3040-\u30ff]/;
 function isJapanese(v) {
   const sn = v.snippet || {};
+  // タイトルかチャンネル名にハングルがあって、タイトルにかながない動画は韓国の曲（K-POPなど）とみなして外す
+  if (/[\uac00-\ud7af]/.test(`${sn.title} ${sn.channelTitle}`) && !KANA.test(sn.title || "")) return false;
   if (/^ja/i.test(sn.defaultAudioLanguage || "") || /^ja/i.test(sn.defaultLanguage || "")) return true;
   if (KANA.test(`${sn.title} ${sn.channelTitle}`)) return true;
   // 説明文はしっかり日本語で書かれているときだけ（海外の曲のタグや字幕案内に少しだけカタカナがある、を除くため）
