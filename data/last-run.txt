@@ -1,4 +1,4 @@
-2026-10-09T17:21:51.051Z
+2026-10-09T21:44:42.440Z
 ニコニコ「ボカロ新曲」1ページ目: 22件
 ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」1ページ目: 100件
 ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」2ページ目: 100件
@@ -29,9 +29,18 @@
 YouTube急上昇 1ページ目: 30件
 YouTube新着検索「MV」1ページ目: 50件
 YouTube新着検索「Music Video」1ページ目: 50件
-YouTube新着検索「アニメ主題歌」1ページ目: 50件
-YouTube新着検索「歌ってみた」1ページ目: 50件
-YouTube新着検索「cover」1ページ目: 50件
+⚠ YouTube新着検索「アニメ主題歌」: HTTP 429 {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
+⚠ YouTube新着検索「歌ってみた」: HTTP 429 {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
+⚠ YouTube新着検索「cover」: HTTP 429 {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
 ⚠ YouTube新着検索「ボカロ」: HTTP 429 {
   "error": {
     "code": 429,
@@ -52,9 +61,9 @@ YouTube新着検索「cover」1ページ目: 50件
   "error": {
     "code": 429,
     "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
-自動フォロー: 318チャンネル中 318件を確認、新着 602本のうち曲として追加 12本
-ニコニコの再生数を更新: 3件
-原曲さがし: 300曲を調べて、原曲を70曲見つけた
-YouTubeの再生数を更新: 830件（日本の曲ではないので外す: 0件）
-自動フォローのチャンネル: 316件（ボカロの本家 158件・その他 158件）
-保存しました: data/songs.json（全3423件、うち歌ってみたの原曲ひもづけ 481件）
+自動フォロー: 316チャンネル中 316件を確認、新着 591本のうち曲として追加 7本
+ニコニコの再生数を更新: 4件
+原曲さがし: 300曲を調べて、原曲を69曲見つけた
+YouTubeの再生数を更新: 872件（日本の曲ではないので外す: 0件）
+自動フォローのチャンネル: 320件（ボカロの本家 160件・その他 160件）
+保存しました: data/songs.json（全3494件、うち歌ってみたの原曲ひもづけ 560件）

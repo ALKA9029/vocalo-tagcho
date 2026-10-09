@@ -24,6 +24,13 @@
   "pinned": true
  },
  {
+  "id": "UC12dBgcsJtUjgQPI1IGB15Q",
+  "added": "2026-10-09T21:44:42.364Z",
+  "name": "底辺ボカロPのDTM作曲チャンネル",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-09T10:02:25Z"
+ },
+ {
   "id": "UCLz6MG2kx_0xeaW0LowYnMQ",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "いよわ/ iyowa",
@@ -62,6 +69,14 @@
   "pinned": true
  },
  {
+  "id": "UCAOhUv73jM5iCpOhuJOQzxA",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "KAMITSUBAKI STUDIO",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-09T09:00:29Z",
+  "pinned": true
+ },
+ {
   "id": "UCAwt148qKLXzPF3LHfN76Bw",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "Guiano",
@@ -83,6 +98,13 @@
   "genre": "ボカロ",
   "lastHit": "2026-10-08T10:00:00Z",
   "pinned": true
+ },
+ {
+  "id": "UC3yEB4lwkgEN551lbiYK8sA",
+  "added": "2026-10-09T21:44:42.364Z",
+  "name": "ゆきち",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-07T12:00:20Z"
  },
  {
   "id": "UC2r-wVWZXY-ClUPanhPe8_w",
@@ -1006,14 +1028,6 @@
   "pinned": true
  },
  {
-  "id": "UCAOhUv73jM5iCpOhuJOQzxA",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "KAMITSUBAKI STUDIO",
-  "genre": "ボカロ",
-  "lastHit": "2021-07-07T09:00:05Z",
-  "pinned": true
- },
- {
   "id": "UCwAT2cXpqkQrNj9f3pbhZNQ",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "Niisan【ピアノ楽譜 アレンジ】",
@@ -1276,6 +1290,13 @@
   "lastHit": "2026-10-09T12:00:08Z"
  },
  {
+  "id": "UCkHCieVhC_HXVRmnWGWcB1A",
+  "added": "2026-10-09T21:44:42.364Z",
+  "name": "Aぇ! group",
+  "genre": "J-POP",
+  "lastHit": "2026-10-09T12:00:06Z"
+ },
+ {
   "id": "UCyWEVH8tkJcJVO7IiQ1DGEg",
   "name": "Tokyo Street Live 4K",
   "added": "2026-10-09T12:06:54.468Z",
@@ -1304,6 +1325,13 @@
   "name": "成人男性三人組 Official",
   "genre": "J-POP",
   "lastHit": "2026-10-09T11:00:10Z"
+ },
+ {
+  "id": "UCyY6YeINiwQoA-FnmdQCkug",
+  "added": "2026-10-09T21:44:42.364Z",
+  "name": "ちよみch. 千代浦蝶美 /あおぎり高校",
+  "genre": "アニソン",
+  "lastHit": "2026-10-09T11:00:06Z"
  },
  {
   "id": "UCwjAKjycHHT1QzHrQN5Stww",
