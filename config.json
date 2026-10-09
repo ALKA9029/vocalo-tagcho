@@ -119,6 +119,13 @@
           "label": "ボカロオリジナル",
           "q": "ボカロオリジナル OR \"VOCALOID オリジナル\" OR \"オリジナル曲 初音ミク\" OR \"Synthesizer V\"",
           "genre": "ボカロ"
+        },
+        {
+          "label": "韓国語のボカロ",
+          "q": "보컬로이드 OR 카사네 테토 OR 하츠네 미쿠 OR SeeU",
+          "genre": "ボカロ",
+          "regionCode": "KR",
+          "relevanceLanguage": "ko"
         }
       ]
     },
@@ -186,6 +193,16 @@
         {
           "q": "アニメ 主題歌 MV",
           "genre": "アニソン"
+        },
+        {
+          "q": "보컬로이드 오리지널",
+          "regionCode": "KR",
+          "relevanceLanguage": "ko"
+        },
+        {
+          "q": "카사네 테토 오리지널",
+          "regionCode": "KR",
+          "relevanceLanguage": "ko"
         }
       ]
     }

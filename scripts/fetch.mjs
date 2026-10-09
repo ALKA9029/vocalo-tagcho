@@ -111,10 +111,14 @@ async function fetchYouTubeTrending() {
 
 // 日本の曲か：音声言語が日本語、またはタイトル・チャンネル名・説明文・タグにかなが入っている
 const KANA = /[\u3040-\u30ff]/;
+const KOREAN_VOCALO = /보컬로이드|보카로|VOCALOID|UTAU|Synth(esizer)? ?V|CeVIO|하츠네|미쿠|카사네|테토|카가미네|메구리네|시유|SeeU|Hatsune|Miku|Kasane|Teto|Kagamine|初音ミク|重音テト|feat\.?\s*(GUMI|IA|flower|可不)/i;
 function isJapanese(v) {
   const sn = v.snippet || {};
-  // タイトルかチャンネル名にハングルがあって、タイトルにかながない動画は韓国の曲（K-POPなど）とみなして外す
-  if (/[\uac00-\ud7af]/.test(`${sn.title} ${sn.channelTitle}`) && !KANA.test(sn.title || "")) return false;
+  // タイトルかチャンネル名にハングルがあって、タイトルにかながない動画は韓国の曲。
+  // K-POPなどは外すが、韓国語のボカロ曲（歌声の名前やボカロの手がかりがあるもの）は残す
+  if (/[\uac00-\ud7af]/.test(`${sn.title} ${sn.channelTitle}`) && !KANA.test(sn.title || "")) {
+    return KOREAN_VOCALO.test([sn.title, (sn.description || "").slice(0, 600), ...(sn.tags || [])].join(" "));
+  }
   if (/^ja/i.test(sn.defaultAudioLanguage || "") || /^ja/i.test(sn.defaultLanguage || "")) return true;
   if (KANA.test(`${sn.title} ${sn.channelTitle}`)) return true;
   // 説明文はしっかり日本語で書かれているときだけ（海外の曲のタグや字幕案内に少しだけカタカナがある、を除くため）
@@ -166,8 +170,8 @@ async function fetchYouTubeSearch() {
     let pageToken = "";
     for (let page = 0; page < (q.maxPages || s.maxPages || 1); page++) {
       const params = new URLSearchParams({
-        part: "id", type: "video", q: q.q, videoCategoryId: "10", regionCode: s.regionCode || "JP",
-        relevanceLanguage: "ja", publishedAfter, order: "viewCount", maxResults: "50", key,
+        part: "id", type: "video", q: q.q, videoCategoryId: "10", regionCode: q.regionCode || s.regionCode || "JP",
+        relevanceLanguage: q.relevanceLanguage || "ja", publishedAfter, order: "viewCount", maxResults: "50", key,
         ...(pageToken ? { pageToken } : {}),
       });
       const res = await fetch("https://www.googleapis.com/youtube/v3/search?" + params);
@@ -291,7 +295,7 @@ async function fetchYouTubeSeedSearch() {
     let pageToken = "";
     for (let page = 0; page < (s.maxPages || 1); page++) {
       const params = new URLSearchParams({
-        part: "id", type: "video", q: q.q || q, videoCategoryId: "10", regionCode: "JP", relevanceLanguage: "ja",
+        part: "id", type: "video", q: q.q || q, videoCategoryId: "10", regionCode: q.regionCode || "JP", relevanceLanguage: q.relevanceLanguage || "ja",
         order: "viewCount", maxResults: "50", key, ...(pageToken ? { pageToken } : {}),
       });
       const res = await fetch("https://www.googleapis.com/youtube/v3/search?" + params);

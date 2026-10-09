@@ -5,12 +5,15 @@ export const VOICES = [
   "初音ミク", "鏡音リン", "鏡音レン", "巡音ルカ", "KAITO", "MEIKO", "GUMI", "IA", "flower",
   "可不", "星界", "裏命", "狐子", "羽累", "重音テト", "歌愛ユキ", "結月ゆかり", "紲星あかり", "音街ウナ",
   "初音ミクNT", "知声", "小春六花", "夏色花梨", "花隈千冬", "東北きりたん", "東北ずん子", "ずんだもん",
-  "雨衣", "Fukase", "神威がくぽ", "心華", "ONE", "結月ゆかり麗", "VY1", "VY2", "MAYU", "kokone",
+  "雨衣", "Fukase", "神威がくぽ", "心華", "ONE", "結月ゆかり麗", "VY1", "VY2", "MAYU", "kokone", "SeeU", "UNI",
 ];
 
 // 表記ゆれ・英語表記を元の歌声名に（「v flower」「Kagamine Rin」など）
 const VOICE_ALIASES = { "vflower": "flower", "v4flower": "flower", "hatsunemiku": "初音ミク", "miku": "初音ミク",
-  "kagaminerin": "鏡音リン", "kagaminelen": "鏡音レン", "megurineluka": "巡音ルカ", "kasaneteto": "重音テト", "kafu": "可不" };
+  "kagaminerin": "鏡音リン", "kagaminelen": "鏡音レン", "megurineluka": "巡音ルカ", "kasaneteto": "重音テト", "kafu": "可不",
+  // 韓国語の表記
+  "하츠네미쿠": "初音ミク", "미쿠": "初音ミク", "카사네테토": "重音テト", "테토": "重音テト", "카가미네린": "鏡音リン",
+  "카가미네렌": "鏡音レン", "메구리네루카": "巡音ルカ", "구미": "GUMI", "시유": "SeeU", "유니": "UNI", "카후": "可不" };
 
 const VOCALO_TAGS = ["VOCALOID", "ボカロ", "ボーカロイド", "CeVIO", "CeVIOAI", "SynthesizerV", "UTAU", "VOICEVOX", "NEUTRINO", "VOCALOIDオリジナル曲"];
 const JPOP_TAGS = ["J-POP", "JPOP", "J-Pop"];
@@ -33,6 +36,9 @@ export function detectVoice(title, tags) {
   const byLen = [...VOICES].sort((a, b) => b.length - a.length);
   for (const v of byLen) if (tags.some(t => normalize(t) === normalize(v))) return v;
   for (const t of tags) if (VOICE_ALIASES[normalize(t)]) return VOICE_ALIASES[normalize(t)];
+  // 韓国語の歌声名はタイトルの中からも探す
+  const nt = normalize(title);
+  for (const [k, v] of Object.entries(VOICE_ALIASES)) if (/[\uac00-\ud7af]/.test(k) && k.length >= 2 && nt.includes(k)) return v;
   // 英字の名前（ONE、IA など）は単語として出てきたときだけ（「SixTONES」「ONE N' ONLY」を誤判定しないため）
   for (const v of byLen) {
     if (/^[\x00-\x7F ]+$/.test(v)) { if (v.length >= 4 && new RegExp(`(^|[^A-Za-z])${v}(?![A-Za-z'])`, "i").test(title) && v !== "ONE") return v; }
@@ -254,7 +260,7 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
   const voice = rawVoice ? canonicalVoice(rawVoice) : rawVoice;
   const desc = video.desc || video.descHead || "";
   // YouTubeで「ボカロ」として集めた動画でも、歌声やボカロの手がかりがなければボカロにしない
-  const vocaloHint = !!rawVoice || hasTag(tags, VOCALO_TAGS) || /VOCALOID|ボカロ|ボーカロイド|初音ミク|重音テト|可不|Synthesizer ?V|UTAU|CeVIO/i.test(`${video.title} ${desc.slice(0, 300)}`);
+  const vocaloHint = !!rawVoice || hasTag(tags, VOCALO_TAGS) || /VOCALOID|ボカロ|ボーカロイド|初音ミク|重音テト|可不|Synthesizer ?V|UTAU|CeVIO|보컬로이드|보카로/i.test(`${video.title} ${desc.slice(0, 300)}`);
   const fb = video.src === "youtube" && fallbackGenre === "ボカロ" && !vocaloHint ? "J-POP" : fallbackGenre;
   const g = detectGenre(video.title, tags, fb, desc);
   const item = {
