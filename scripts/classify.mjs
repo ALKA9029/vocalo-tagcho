@@ -83,7 +83,7 @@ function splitNames(text) {
 const NOISE = /オリジナル曲?|オリジナル|PV付?|MV|アニメ|Music Video|Full ?ver\.?|フル|付|曲/gi;
 const isNoiseText = t => !t.replace(NOISE, "").replace(/[\s・,、]/g, "") || splitNames(t).others.length === 0;
 const cleanSong = t => t.replace(/\s*(?:feat\.?|ft\.)\s*.*$/i, "")
-  .replace(/を?歌ってみた|を?歌ってもらった|を?歌わせてみた|歌わせていただきました|covered by.*$|cover(ed)?|カバー|オリジナル曲?|(アニメ)?MV|Music Video/gi, " ")
+  .replace(/を?歌って踊ってみた|を?(踊|弾|叩|ヘコ)ってみた|を?歌ってみた|を?歌ってもらった|を?歌わせてみた|歌わせていただきました|covered by.*$|cover(ed)?|カバー|オリジナル曲?|(アニメ)?MV|Music Video/gi, " ")
   .replace(/[\s、,]*(3D|MMD)?\s*PV.*$/i, "")
   .replace(/\s+/g, " ").trim();
 const featOf = t => (t.match(/(?:feat\.?|ft\.)\s*(.+)$/i) || [])[1]?.trim();
@@ -392,6 +392,24 @@ export function inferNamesFromTags(items) {
   return filled;
 }
 
+// ジャンルが分からない歌ってみたを、タグやボカロPの名前から「ボカロ」に振り分ける
+//   ・「ボカロオリジナルを歌ってみた」のようなタグがある
+//   ・タグかタイトルに、サイトに載っているボカロPの名前（2曲以上ある人）が出てくる（「洗脳(DECO*27)」「/ syudou」など）
+export function guessCoverGenre(items) {
+  const cnt = new Map();
+  for (const i of items) if (i.kind === "本家" && i.g === "ボカロ" && i.p) cnt.set(normalize(i.p), (cnt.get(normalize(i.p)) || 0) + 1);
+  const vocaloPs = [...cnt].filter(([n, c]) => c >= 2 && n.length >= 2 && !isVoice(n)).map(([n]) => n);
+  let changed = 0;
+  for (const c of items) {
+    if (c.kind !== "歌ってみた" || c.g !== "その他") continue;
+    const tags = c.tags || [];
+    const hay = normalize([c.title, ...tags].join(" "));
+    const hit = tags.some(t => /ボカロ.*歌ってみた|VOCALOID.*歌ってみた|ボカロ曲/i.test(t)) || vocaloPs.some(n => hay.includes(n));
+    if (hit) { c.g = "ボカロ"; changed++; }
+  }
+  return changed;
+}
+
 export function linkCovers(items) {
   inferNamesFromTags(items);
   fillCreators(items);
@@ -405,6 +423,7 @@ export function linkCovers(items) {
     const o = originals.get(normalize(c.t));
     if (o) { c.of = o.id; c.p = o.p || c.p; c.a = o.p ? o.a : (c.a || o.a); if (c.g === "その他") c.g = o.g; }
   }
+  guessCoverGenre(items);
   return items;
 }
 
