@@ -194,6 +194,59 @@ async function refreshYouTubeStats(items) {
   return drop;
 }
 
+// ---------- 自動フォロー：サイトに載ったYouTubeチャンネルの新着を追いかける ----------
+// data/channels.json に、一定以上再生された曲を出したチャンネルを自動で登録しておき、
+// 毎日そのチャンネルのRSS（無料）で新着を確認。新着だけ詳細を取って（50件1ユニット）、音楽カテゴリの日本の曲を足す
+async function fetchFollowed(knownIds) {
+  const key = process.env.YOUTUBE_API_KEY;
+  const f = config.youtube.follow;
+  if (!key || !f?.enabled) { console.log("自動フォロー: APIキーがないので飛ばします"); return []; }
+  const followed = await readJson("data/channels.json", []);
+  const since = Date.now() - (f.lookbackDays || 7) * 864e5;
+  const fresh = new Map();   // videoId -> チャンネル情報
+  let checked = 0;
+  for (let i = 0; i < followed.length; i += 8) {
+    await Promise.all(followed.slice(i, i + 8).map(async ch => {
+      try {
+        const res = await fetch("https://www.youtube.com/feeds/videos.xml?channel_id=" + ch.id, { headers: { "User-Agent": config.userAgent } });
+        if (!res.ok) return;
+        checked++;
+        for (const e of (await res.text()).split("<entry>").slice(1)) {
+          const vid = pick(e, /<yt:videoId>([^<]+)</);
+          const pub = Date.parse(pick(e, /<published>([^<]+)</) || "");
+          if (vid && pub >= since && !knownIds.has("yt:" + vid)) fresh.set(vid, ch);
+        }
+      } catch {}
+    }));
+  }
+  const details = (await ytVideos([...fresh.keys()], key))
+    .filter(v => v.snippet?.categoryId === "10" && isJapanese(v) && !isNoise(v))
+    .map(v => ytItem(v, fresh.get(v.id)?.genre))
+    .filter(v => v.views == null || v.views >= (f.minViews || 0));
+  console.log(`自動フォロー: ${followed.length}チャンネル中 ${checked}件を確認、新着 ${fresh.size}本のうち曲として追加 ${details.length}本`);
+  return details;
+}
+
+// 一定以上再生された曲を出したチャンネルを自動フォローに登録。しばらく曲が載らないチャンネルは外す
+async function updateFollowed(items) {
+  const f = config.youtube.follow;
+  if (!f?.enabled) return;
+  const now = new Date().toISOString();
+  const list = new Map((await readJson("data/channels.json", [])).map(c => [c.id, c]));
+  for (const i of items) {
+    if (i.src !== "youtube" || !i.uploaderId || (i.views || 0) < (f.autoAddMinViews || 10000)) continue;
+    const c = list.get(i.uploaderId) || { id: i.uploaderId, name: i.uploader || "", added: now, genre: i.g === "アニソン" || i.g === "ボカロ" ? i.g : "J-POP" };
+    if (!c.lastHit || (i.date || "") > c.lastHit) c.lastHit = i.date || now;
+    c.name = i.uploader || c.name;
+    list.set(i.uploaderId, c);
+  }
+  const keepAfter = new Date(Date.now() - (f.dropAfterDays || 120) * 864e5).toISOString();
+  const out = [...list.values()].filter(c => (c.lastHit || c.added) >= keepAfter)
+    .sort((a, b) => (b.lastHit || "").localeCompare(a.lastHit || "")).slice(0, f.maxChannels || 400);
+  await writeFile(path("data/channels.json"), JSON.stringify(out, null, 1) + "\n");
+  console.log(`自動フォローのチャンネル: ${out.length}件`);
+}
+
 // ---------- まとめて保存 ----------
 const fixtureArg = process.argv.indexOf("--fixture");
 const SEED = process.argv.includes("--seed");
@@ -202,7 +255,8 @@ const videos = fixtureArg > -1
   : [...await fetchNiconico(SEED).catch(e => (console.warn("ニコニコ取得失敗:", e.message), [])),
      ...(SEED ? [] : await fetchYouTube().catch(e => (console.warn("YouTube取得失敗:", e.message), []))),
      ...(SEED ? [] : await fetchYouTubeTrending().catch(e => (console.warn("YouTube急上昇の取得失敗:", e.message), []))),
-     ...(SEED ? [] : await fetchYouTubeSearch().catch(e => (console.warn("YouTube新着検索の取得失敗:", e.message), [])))];
+     ...(SEED ? [] : await fetchYouTubeSearch().catch(e => (console.warn("YouTube新着検索の取得失敗:", e.message), []))),
+     ...(SEED ? [] : await fetchFollowed(new Set((await readJson("data/songs.json", [])).map(i => i.id))).catch(e => (console.warn("自動フォローの取得失敗:", e.message), [])))];
 
 const outFile = fixtureArg > -1 ? "data/songs.sample.json" : "data/songs.json";
 const existing = new Map((await readJson(outFile, [])).map(i => [i.id, i]));
@@ -244,6 +298,7 @@ items = [...seeds, ...items.filter(i => !i.seed).slice(0, Math.max(0, config.max
   .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
 
 await mkdir(path("data/"), { recursive: true });
+if (fixtureArg < 0 && !SEED) await updateFollowed(items).catch(e => console.warn("自動フォローの更新に失敗:", e.message));
 await writeFile(path(outFile), JSON.stringify(items, null, 1) + "\n");
 const meta = {
   updatedAt: new Date().toISOString(),

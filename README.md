@@ -13,7 +13,8 @@ https://alka9029.github.io/vocalo-tagcho/
 - **YouTube 新着検索**：直近7日に投稿された音楽動画を、キーワード（MV、歌ってみた、主題歌など）ごとに再生数の多い順で取得（要APIキー）
 - **YouTube 急上昇**：音楽カテゴリの急上昇（日本）（要APIキー）
 - **YouTube 再生数の更新**：投稿から35日以内の曲の再生数を毎日取り直す（要APIキー）
-- **YouTube チャンネル**：`config.json` に登録したチャンネルの新着動画（RSS、APIキー不要）
+- **YouTube 自動フォロー**：サイトに載った曲のうち1万回以上再生された曲を出したチャンネルを `data/channels.json` に自動で登録し、毎日その新着をチェック。音楽カテゴリの日本の曲だけを追加する（120日間曲が載らないチャンネルは自動で外す。要APIキー）
+- **YouTube チャンネル（手動）**：`config.json` の `youtube.channels` に登録したチャンネルの新着動画（RSS、APIキー不要）
 
 YouTubeのAPIキーは、リポジトリの Settings →「Secrets and variables」→「Actions」に `YOUTUBE_API_KEY` という名前で保存する。1日の無料枠は10,000ユニットで、今の設定だと1日あたり約800ユニット使う（新着検索のキーワード1つにつき100）。
 

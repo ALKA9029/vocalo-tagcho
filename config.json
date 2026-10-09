@@ -119,6 +119,15 @@
         "channelId": "",
         "genre": "J-POP"
       }
-    ]
+    ],
+    "follow": {
+      "comment": "サイトに載ったYouTubeチャンネルを自動で登録して、新着を毎日追いかける（data/channels.json）。autoAddMinViews 回以上再生された曲を出したチャンネルが対象。dropAfterDays 日のあいだ曲が載らなければ外す",
+      "enabled": true,
+      "autoAddMinViews": 10000,
+      "maxChannels": 400,
+      "lookbackDays": 7,
+      "minViews": 1000,
+      "dropAfterDays": 120
+    }
   }
 }
