@@ -7,6 +7,8 @@ export const VOICES = [
   "初音ミクNT", "知声", "小春六花", "夏色花梨", "花隈千冬", "東北きりたん", "東北ずん子", "ずんだもん",
   "雨衣", "Fukase", "神威がくぽ", "心華", "ONE", "結月ゆかり麗", "VY1", "VY2", "MAYU", "kokone", "SeeU", "UNI",
   "Lily", "CUL", "猫村いろは", "蒼姫ラピス", "鳴花ヒメ", "鳴花ミコト", "ナツメイツキ", "足立レイ", "東北イタコ", "VOCALOID Lily",
+  "宮舞モカ", "弦巻マキ", "闇音レンリ", "春日部つむぎ", "ナースロボ_タイプT", "洛天依", "言和", "Mew", "Ci flower", "AI きりたん",
+  "四国めたん", "波音リツ", "桜乃そら", "ルウル", "Yi Xi", "ソラ", "ルク",
 ];
 
 // 表記ゆれ・英語表記を元の歌声名に（「v flower」「Kagamine Rin」など）
@@ -279,8 +281,10 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
   const tags = video.tags || [];
   const kind = detectKind(video.title, tags);
   const parsed = video.src === "youtube" ? parseYouTube(video.title, video.uploader) : parseTitle(video.title);
-  const rawVoice = parsed.voice || detectVoice(video.title, tags);
-  const voice = rawVoice ? canonicalVoice(rawVoice) : rawVoice;
+  // 歌声は、登録済みの歌声名に当てはまるものだけを使う（「feat. じん」「feat. まふまふ」のような人の名前は歌声にしない）
+  const pickVoice = x => { if (!x) return null; if (isVoice(x)) return canonicalVoice(x); const v = splitNames(x).voices[0]; return v ? canonicalVoice(v) : null; };
+  const rawVoice = pickVoice(parsed.voice) || pickVoice(detectVoice(video.title, tags));
+  const voice = rawVoice;
   const desc = video.desc || video.descHead || "";
   // YouTubeで「ボカロ」として集めた動画でも、歌声やボカロの手がかりがなければボカロにしない
   const vocaloHint = !!rawVoice || hasTag(tags, VOCALO_TAGS) || /VOCALOID|ボカロ|ボーカロイド|初音ミク|重音テト|可不|Synthesizer ?V|UTAU|CeVIO|보컬로이드|보카로/i.test(`${video.title} ${desc.slice(0, 300)}`);

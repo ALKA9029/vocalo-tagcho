@@ -681,6 +681,7 @@
   "uploaderId": 6911341,
   "uploader": null,
   "p": "宮舞モカで",
+  "v": "宮舞モカ",
   "a": "niconico:6911341",
   "firstSeen": "2026-10-10T07:34:06.762Z"
  },
@@ -765,7 +766,7 @@
   "uploaderId": 137021493,
   "uploader": null,
   "p": "",
-  "v": "初音ミク",
+  "v": "ナースロボ_タイプT",
   "a": "niconico:137021493",
   "firstSeen": "2026-10-10T07:34:06.763Z"
  },
@@ -2080,8 +2081,8 @@
   ],
   "uploaderId": 142065252,
   "uploader": null,
-  "p": "Yi Xi",
-  "v": "重音テト",
+  "p": "",
+  "v": "Yi Xi",
   "a": "niconico:142065252",
   "firstSeen": "2026-10-10T07:34:06.758Z"
  },
@@ -9586,7 +9587,8 @@
   ],
   "uploaderId": 124906921,
   "uploader": null,
-  "p": "さとうささら・四国めたん",
+  "p": "さとうささら",
+  "v": "四国めたん",
   "a": "niconico:124906921",
   "firstSeen": "2026-10-09T11:31:51.988Z"
  },
@@ -9616,9 +9618,12 @@
   ],
   "uploaderId": 32260190,
   "uploader": null,
-  "p": "ナースロボ_タイプT",
+  "p": "Orangestar",
+  "v": "ナースロボ_タイプT",
   "a": "niconico:32260190",
-  "firstSeen": "2026-10-09T11:31:51.970Z"
+  "firstSeen": "2026-10-09T11:31:51.970Z",
+  "pFilled": false,
+  "pFromTag": true
  },
  {
   "id": "yt:CdcudaaP1bw",
@@ -11119,7 +11124,7 @@
   "uploaderId": 3792256,
   "uploader": null,
   "p": "寝オチチP",
-  "v": "初音ミク(2026ver)",
+  "v": "初音ミク",
   "a": "niconico:3792256",
   "firstSeen": "2026-10-09T11:31:51.971Z",
   "pFilled": false,
@@ -11959,10 +11964,12 @@
   ],
   "uploaderId": 10917285,
   "uploader": null,
-  "p": "ナースロボ_タイプT",
+  "p": "ぬゆり",
   "v": "重音テト",
   "a": "niconico:10917285",
-  "firstSeen": "2026-10-09T11:31:51.971Z"
+  "firstSeen": "2026-10-09T11:31:51.971Z",
+  "pFilled": false,
+  "pFromTag": true
  },
  {
   "id": "yt:gFv6CAD5rcc",
@@ -17703,7 +17710,8 @@
   ],
   "uploaderId": 128291677,
   "uploader": null,
-  "p": "ルク・ソラ",
+  "p": "",
+  "v": "ルク",
   "a": "niconico:128291677",
   "firstSeen": "2026-10-09T11:31:51.974Z"
  },
@@ -18258,6 +18266,7 @@
   "uploaderId": 1110778,
   "uploader": null,
   "p": "SynthesizerV 宮舞モカ",
+  "v": "宮舞モカ",
   "a": "niconico:1110778",
   "firstSeen": "2026-10-09T11:31:51.992Z"
  },
@@ -18395,7 +18404,8 @@
   ],
   "uploaderId": 130763443,
   "uploader": null,
-  "p": "宮舞モカ",
+  "p": "",
+  "v": "宮舞モカ",
   "a": "niconico:130763443",
   "firstSeen": "2026-10-09T11:31:51.981Z"
  },
@@ -18427,7 +18437,7 @@
   "uploaderId": 3792256,
   "uploader": null,
   "p": "寝オチチP",
-  "v": "重音テトsv2",
+  "v": "重音テト",
   "a": "niconico:3792256",
   "firstSeen": "2026-10-09T11:31:51.970Z",
   "pFilled": false,
@@ -18582,7 +18592,7 @@
   "uploaderId": 28178261,
   "uploader": null,
   "p": "appy",
-  "v": "ルク, ソラ",
+  "v": "ルク",
   "a": "niconico:28178261",
   "firstSeen": "2026-10-09T11:31:51.994Z"
  },
@@ -18991,7 +19001,7 @@
   "uploaderId": 637546,
   "uploader": null,
   "p": "maroki",
-  "v": "重音テトSV2",
+  "v": "重音テト",
   "a": "niconico:637546",
   "firstSeen": "2026-10-09T11:31:52.000Z"
  },
@@ -19052,7 +19062,6 @@
   "uploaderId": 45013355,
   "uploader": null,
   "p": "SLAVE.V-V-R",
-  "v": "Bennett Fantasia",
   "a": "niconico:45013355",
   "firstSeen": "2026-10-09T11:31:51.984Z"
  },
@@ -19112,7 +19121,7 @@
   "uploaderId": 129796455,
   "uploader": null,
   "p": "八王子P",
-  "v": "初音ミク Sour式初音ミク",
+  "v": "初音ミク",
   "a": "niconico:129796455",
   "firstSeen": "2026-10-09T11:31:51.982Z",
   "pFilled": true
@@ -19169,7 +19178,8 @@
   ],
   "uploaderId": 122585642,
   "uploader": null,
-  "p": "宮舞モカ",
+  "p": "",
+  "v": "宮舞モカ",
   "a": "niconico:122585642",
   "firstSeen": "2026-10-09T11:31:51.988Z"
  },
@@ -19542,7 +19552,8 @@
   ],
   "uploaderId": 691476,
   "uploader": null,
-  "p": "弦巻マキ",
+  "p": "",
+  "v": "弦巻マキ",
   "a": "niconico:691476",
   "firstSeen": "2026-10-09T11:31:51.992Z"
  },
@@ -19662,7 +19673,7 @@
   "uploaderId": 1550191,
   "uploader": null,
   "p": "猫ヶ丘ガブリ",
-  "v": "弦巻マキ 宮舞モカ",
+  "v": "宮舞モカ",
   "a": "niconico:1550191",
   "firstSeen": "2026-10-09T11:31:51.986Z"
  },
@@ -19724,6 +19735,7 @@
   "uploaderId": 138476787,
   "uploader": null,
   "p": "弦巻マキ 桜乃そら 宮舞モカ",
+  "v": "宮舞モカ",
   "a": "niconico:138476787",
   "firstSeen": "2026-10-09T11:31:51.970Z"
  },
@@ -19753,6 +19765,7 @@
   "uploaderId": 16287491,
   "uploader": null,
   "p": "",
+  "v": "弦巻マキ",
   "a": "niconico:16287491",
   "firstSeen": "2026-10-09T11:31:51.998Z"
  },
@@ -20241,7 +20254,8 @@
   ],
   "uploaderId": 89515641,
   "uploader": null,
-  "p": "闇音レンリ",
+  "p": "",
+  "v": "闇音レンリ",
   "a": "niconico:89515641",
   "firstSeen": "2026-10-09T11:31:51.998Z"
  },
@@ -20390,7 +20404,8 @@
   ],
   "uploaderId": 39773071,
   "uploader": null,
-  "p": "ルク・ソラ",
+  "p": "",
+  "v": "ルク",
   "a": "niconico:39773071",
   "firstSeen": "2026-10-09T11:31:51.986Z"
  },
@@ -20509,6 +20524,7 @@
   "uploaderId": 96970,
   "uploader": null,
   "p": "春日部つむぎ - 青屋夏生",
+  "v": "春日部つむぎ",
   "a": "niconico:96970",
   "firstSeen": "2026-10-09T11:31:51.988Z"
  },
@@ -20652,7 +20668,8 @@
   ],
   "uploaderId": 145133642,
   "uploader": null,
-  "p": "ナースロボ_タイプT",
+  "p": "",
+  "v": "ナースロボ_タイプT",
   "a": "niconico:145133642",
   "firstSeen": "2026-10-09T11:31:51.981Z"
  },
@@ -20800,7 +20817,8 @@
   ],
   "uploaderId": 77111889,
   "uploader": null,
-  "p": "ルク・ソラ - Aliey:S",
+  "p": "ソラ - Aliey:S",
+  "v": "ルク",
   "a": "niconico:77111889",
   "firstSeen": "2026-10-09T11:31:51.975Z"
  },
@@ -21777,6 +21795,7 @@
   "uploaderId": 140365869,
   "uploader": null,
   "p": "犇めく憧憬は清潔な無関心に依って",
+  "v": "ナースロボ_タイプT",
   "a": "niconico:140365869",
   "firstSeen": "2026-10-09T11:31:51.992Z"
  },
@@ -21802,7 +21821,8 @@
   ],
   "uploaderId": 77895836,
   "uploader": null,
-  "p": "ルク・ソラ",
+  "p": "",
+  "v": "ルク",
   "a": "niconico:77895836",
   "firstSeen": "2026-10-09T11:31:51.998Z"
  },
@@ -21834,7 +21854,7 @@
   "uploaderId": 673608,
   "uploader": null,
   "p": "花猪口P",
-  "v": "重音テト",
+  "v": "宮舞モカ",
   "a": "niconico:673608",
   "firstSeen": "2026-10-09T11:31:51.992Z",
   "pFilled": false,
@@ -25298,7 +25318,6 @@
   "uploaderId": 52158359,
   "uploader": null,
   "p": "",
-  "v": "Vocoflex",
   "a": "niconico:52158359",
   "firstSeen": "2026-10-09T17:21:46.700Z",
   "seed": true
@@ -28590,7 +28609,7 @@
   "uploaderId": 15872264,
   "uploader": null,
   "p": "じん",
-  "v": "じん",
+  "v": "初音ミク",
   "a": "niconico:15872264",
   "firstSeen": "2026-10-08T14:36:47.333Z",
   "seed": true,
@@ -29946,7 +29965,7 @@
   "uploaderId": 276638,
   "uploader": null,
   "p": "みきとP",
-  "v": "みきとP 初音ミク",
+  "v": "初音ミク",
   "a": "niconico:276638",
   "firstSeen": "2026-10-10T07:39:24.123Z",
   "seed": true,
@@ -30743,7 +30762,7 @@
   "uploader": "r-906",
   "descHead": "What is a \"Catchy\" !?\n\n\nsong / Ci flower\n\nmusic / r-906 ( https://twitter.com/arukuremu )\nartworks / torishima ( https://twitter.com/oshiritorishima )\nmix & mastering / 中村涼真 ( https://twitter.com/Nakamura_Ryoma )\n\n[offvocal] https://piapro.jp/my_page/?view=content&pid=room_service\n\n+++++++++++++++++",
   "p": "r-906",
-  "v": "flower",
+  "v": "Ci flower",
   "a": "youtube:UCtwSCTpftyPm4-TBf9S6kfQ",
   "firstSeen": "2026-10-09T12:20:22.400Z",
   "seed": true
@@ -33170,7 +33189,7 @@
   "uploaderId": 461870,
   "uploader": null,
   "p": "sasakure.‌UK + 有形ランペイジ",
-  "v": "初音ミク / sasakure.‌UK + 有形ランペイジ",
+  "v": "初音ミク",
   "a": "niconico:461870",
   "firstSeen": "2026-10-08T14:36:47.397Z",
   "seed": true
@@ -38601,7 +38620,7 @@
   "uploaderId": 461870,
   "uploader": null,
   "p": "sasakure.‌UK",
-  "v": "初音ミク(+KAITO) / sasakure.‌UK",
+  "v": "KAITO",
   "a": "niconico:461870",
   "firstSeen": "2026-10-08T14:36:47.336Z",
   "seed": true
@@ -38664,7 +38683,6 @@
   "uploaderId": 8595554,
   "uploader": null,
   "p": "Spacelectro",
-  "v": "Amy SPACELECTRO",
   "a": "niconico:8595554",
   "firstSeen": "2026-10-09T21:44:36.804Z",
   "seed": true,
@@ -48396,6 +48414,7 @@
   "uploaderId": 1653063,
   "uploader": null,
   "p": "GYARI",
+  "v": "弦巻マキ",
   "a": "niconico:1653063",
   "firstSeen": "2026-10-08T14:36:47.426Z",
   "seed": true,
@@ -50554,7 +50573,7 @@
   "uploaderId": 52158359,
   "uploader": null,
   "p": "",
-  "v": "VOCALOIDs",
+  "v": "結月ゆかり",
   "a": "niconico:52158359",
   "firstSeen": "2026-10-09T21:44:36.807Z",
   "seed": true
@@ -59274,7 +59293,7 @@
   "uploaderId": 18874531,
   "uploader": null,
   "p": "まふまふ",
-  "v": "まふまふ",
+  "v": "IA",
   "a": "niconico:18874531",
   "firstSeen": "2026-10-08T14:36:47.374Z",
   "seed": true,
@@ -67805,10 +67824,13 @@
   ],
   "uploaderId": 49132820,
   "uploader": null,
-  "p": "闇音レンリ",
+  "p": "ポリスピカデリー",
+  "v": "闇音レンリ",
   "a": "niconico:49132820",
   "firstSeen": "2026-10-08T14:36:47.417Z",
-  "seed": true
+  "seed": true,
+  "pFilled": false,
+  "pFromTag": true
  },
  {
   "id": "yt:KBLmFJLYIrg",
@@ -95261,7 +95283,7 @@
   "uploaderId": 2423537,
   "uploader": null,
   "p": "EasyPop",
-  "v": "ルカ GUMI ミク",
+  "v": "初音ミク",
   "a": "niconico:2423537",
   "firstSeen": "2026-10-08T14:36:47.411Z",
   "seed": true
@@ -96380,7 +96402,7 @@
   "uploaderId": 1646151,
   "uploader": null,
   "p": "HoneyWorks",
-  "v": "GUMI ┗|∵|┓",
+  "v": "GUMI",
   "a": "niconico:1646151",
   "firstSeen": "2026-10-08T14:36:47.431Z",
   "seed": true
@@ -101194,7 +101216,7 @@
   "uploaderId": 2423537,
   "uploader": null,
   "p": "EasyPop",
-  "v": "巡音ルカ GUMI",
+  "v": "巡音ルカ",
   "a": "niconico:2423537",
   "firstSeen": "2026-10-08T14:36:47.321Z",
   "seed": true
