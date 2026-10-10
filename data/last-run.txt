@@ -1,69 +1,49 @@
-2026-10-09T21:44:42.440Z
-ニコニコ「ボカロ新曲」1ページ目: 22件
-ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」1ページ目: 100件
-ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」2ページ目: 100件
-ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」3ページ目: 100件
-ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」4ページ目: 100件
-ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」5ページ目: 100件
-ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」6ページ目: 100件
-ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」7ページ目: 100件
-ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」8ページ目: 100件
-ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」9ページ目: 100件
-ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」10ページ目: 100件
-ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」11ページ目: 100件
-ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」12ページ目: 100件
-ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」13ページ目: 100件
-ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」14ページ目: 100件
-ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」15ページ目: 100件
-ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」16ページ目: 100件
-ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」17ページ目: 100件
-ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」18ページ目: 100件
-ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」19ページ目: 100件
-ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」20ページ目: 100件
-ニコニコ「歌ってみた新着」1ページ目: 0件
-ニコニコ「歌ってみた 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」1ページ目: 100件
-ニコニコ「歌ってみた 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」2ページ目: 100件
-ニコニコ「歌ってみた 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」3ページ目: 100件
-ニコニコ「歌ってみた 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」4ページ目: 100件
-ニコニコ「歌ってみた 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」5ページ目: 41件
-YouTube急上昇 1ページ目: 30件
-YouTube新着検索「MV」1ページ目: 50件
-YouTube新着検索「Music Video」1ページ目: 50件
-⚠ YouTube新着検索「アニメ主題歌」: HTTP 429 {
-  "error": {
-    "code": 429,
-    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
-⚠ YouTube新着検索「歌ってみた」: HTTP 429 {
-  "error": {
-    "code": 429,
-    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
-⚠ YouTube新着検索「cover」: HTTP 429 {
-  "error": {
-    "code": 429,
-    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
-⚠ YouTube新着検索「ボカロ」: HTTP 429 {
-  "error": {
-    "code": 429,
-    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
-⚠ YouTube新着検索「オリジナル曲」: HTTP 429 {
-  "error": {
-    "code": 429,
-    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
-⚠ YouTube新着検索「ボカロ feat.」: HTTP 429 {
-  "error": {
-    "code": 429,
-    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
-⚠ YouTube新着検索「ボカロオリジナル」: HTTP 429 {
-  "error": {
-    "code": 429,
-    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
-⚠ YouTube新着検索「韓国語のボカロ」: HTTP 429 {
-  "error": {
-    "code": 429,
-    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
-自動フォロー: 316チャンネル中 316件を確認、新着 591本のうち曲として追加 7本
-ニコニコの再生数を更新: 4件
-原曲さがし: 300曲を調べて、原曲を69曲見つけた
-YouTubeの再生数を更新: 872件（日本の曲ではないので外す: 0件）
-自動フォローのチャンネル: 320件（ボカロの本家 160件・その他 160件）
-保存しました: data/songs.json（全3494件、うち歌ってみたの原曲ひもづけ 560件）
+2026-10-10T07:32:06.434Z（seed）
+ニコニコ「ボカロ殿堂入り（100万再生以上）」1ページ目: 100件
+ニコニコ「ボカロ殿堂入り（100万再生以上）」2ページ目: 100件
+ニコニコ「ボカロ殿堂入り（100万再生以上）」3ページ目: 100件
+ニコニコ「ボカロ殿堂入り（100万再生以上）」4ページ目: 100件
+ニコニコ「ボカロ殿堂入り（100万再生以上）」5ページ目: 100件
+ニコニコ「ボカロ殿堂入り（100万再生以上）」6ページ目: 100件
+ニコニコ「ボカロ殿堂入り（100万再生以上）」7ページ目: 100件
+ニコニコ「ボカロ殿堂入り（100万再生以上）」8ページ目: 100件
+ニコニコ「ボカロ殿堂入り（100万再生以上）」9ページ目: 100件
+ニコニコ「ボカロ殿堂入り（100万再生以上）」10ページ目: 100件
+ニコニコ「人気の歌ってみた（30万再生以上）」1ページ目: 100件
+ニコニコ「人気の歌ってみた（30万再生以上）」2ページ目: 100件
+ニコニコ「人気の歌ってみた（30万再生以上）」3ページ目: 100件
+ニコニコ「人気の歌ってみた（30万再生以上）」4ページ目: 100件
+ニコニコ「人気の歌ってみた（30万再生以上）」5ページ目: 100件
+ニコニコ「人気の歌ってみた（30万再生以上）」6ページ目: 100件
+ニコニコ「人気の歌ってみた（30万再生以上）」7ページ目: 100件
+ニコニコ「人気の歌ってみた（30万再生以上）」8ページ目: 100件
+ニコニコ「人気の歌ってみた（30万再生以上）」9ページ目: 100件
+ニコニコ「人気の歌ってみた（30万再生以上）」10ページ目: 100件
+YouTube人気曲検索「feat. 初音ミク」1ページ目: 50件
+YouTube人気曲検索「feat. 初音ミク」2ページ目: 50件
+YouTube人気曲検索「feat. 鏡音リン」1ページ目: 50件
+YouTube人気曲検索「feat. 鏡音リン」2ページ目: 50件
+YouTube人気曲検索「feat. GUMI」1ページ目: 50件
+YouTube人気曲検索「feat. GUMI」2ページ目: 50件
+YouTube人気曲検索「feat. 重音テト」1ページ目: 50件
+YouTube人気曲検索「feat. 重音テト」2ページ目: 50件
+YouTube人気曲検索「feat. 可不」1ページ目: 50件
+YouTube人気曲検索「feat. 可不」2ページ目: 50件
+YouTube人気曲検索「feat. flower」1ページ目: 50件
+YouTube人気曲検索「feat. flower」2ページ目: 50件
+YouTube人気曲検索「VOCALOID オリジナル曲」1ページ目: 50件
+YouTube人気曲検索「VOCALOID オリジナル曲」2ページ目: 50件
+YouTube人気曲検索「Official Music Video」1ページ目: 50件
+YouTube人気曲検索「Official Music Video」2ページ目: 50件
+YouTube人気曲検索「MV」1ページ目: 50件
+YouTube人気曲検索「MV」2ページ目: 50件
+YouTube人気曲検索「アニメ 主題歌 MV」1ページ目: 50件
+YouTube人気曲検索「アニメ 主題歌 MV」2ページ目: 50件
+YouTube人気曲検索「보컬로이드 오리지널」1ページ目: 50件
+YouTube人気曲検索「보컬로이드 오리지널」2ページ目: 50件
+YouTube人気曲検索「카사네 테토 오리지널」1ページ目: 50件
+YouTube人気曲検索「카사네 테토 오리지널」2ページ目: 50件
+YouTube人気曲検索: 見つかった1134本／詳細1134本／日本・韓国ボカロの曲853本／長さOK801本
+YouTube人気ボカロ検索: 1134本のうち 748本を追加
+自動フォローのチャンネル: 326件（ボカロの本家 163件・その他 163件）
+保存しました: data/songs.json（全3562件、うち歌ってみたの原曲ひもづけ 557件）
