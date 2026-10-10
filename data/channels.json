@@ -24,6 +24,14 @@
   "pinned": true
  },
  {
+  "id": "UCZqbjLg2LTpHDNHBEdv7jBQ",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "はねるさかな",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-09T11:00:07Z",
+  "pinned": true
+ },
+ {
   "id": "UC12dBgcsJtUjgQPI1IGB15Q",
   "added": "2026-10-09T21:44:42.364Z",
   "name": "底辺ボカロPのDTM作曲チャンネル",
@@ -52,6 +60,13 @@
   "name": "クワガタP / kuwagataP",
   "genre": "ボカロ",
   "lastHit": "2026-10-09T10:00:06Z"
+ },
+ {
+  "id": "UCNoWneCIsz1D3vQ2qQ8H85w",
+  "added": "2026-10-10T07:39:29.506Z",
+  "name": "오카노",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-09T09:40:11Z"
  },
  {
   "id": "UC8xkzBruPP96NI22ki4mB_w",
@@ -97,6 +112,14 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "ボカロ",
   "lastHit": "2026-10-08T10:00:00Z",
+  "pinned": true
+ },
+ {
+  "id": "UCBDz0eYq2j40pTeCmBGosNQ",
+  "added": "2026-10-10T07:32:06.370Z",
+  "name": "쵸마린 『ちょマリン』",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-07T12:46:31Z",
   "pinned": true
  },
  {
@@ -191,6 +214,29 @@
   "lastHit": "2026-10-04T14:26:27Z"
  },
  {
+  "id": "UCnjyL32Picn9AbLwLwlczmA",
+  "added": "2026-10-10T07:32:06.370Z",
+  "name": "50mang쏘망",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-04T11:00:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UCrTE7xqEqkbK170VRbcJMfA",
+  "added": "2026-10-10T07:39:29.506Z",
+  "name": "프세카 지박령",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-04T08:11:43Z"
+ },
+ {
+  "id": "UC4YK256rR7bqSuzQDaqgMyg",
+  "added": "2026-10-10T07:32:06.370Z",
+  "name": "BeckSook",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-03T22:17:14Z",
+  "pinned": true
+ },
+ {
   "id": "UCAfQ5CojppHVIiLwuRDBzTg",
   "name": "t+pazolite",
   "added": "2026-10-09T12:06:54.468Z",
@@ -233,14 +279,6 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "ボカロ",
   "lastHit": "2026-09-25T10:00:01Z",
-  "pinned": true
- },
- {
-  "id": "UC4YK256rR7bqSuzQDaqgMyg",
-  "added": "2026-10-10T07:32:06.370Z",
-  "name": "BeckSook",
-  "genre": "ボカロ",
-  "lastHit": "2026-08-27T12:00:16Z",
   "pinned": true
  },
  {
@@ -521,14 +559,6 @@
   "name": "naphillow",
   "genre": "ボカロ",
   "lastHit": "2025-09-29T21:00:06Z",
-  "pinned": true
- },
- {
-  "id": "UCBDz0eYq2j40pTeCmBGosNQ",
-  "added": "2026-10-10T07:32:06.370Z",
-  "name": "쵸마린 『ちょマリン』",
-  "genre": "ボカロ",
-  "lastHit": "2025-09-20T14:10:06Z",
   "pinned": true
  },
  {
@@ -980,14 +1010,6 @@
   "pinned": true
  },
  {
-  "id": "UCnjyL32Picn9AbLwLwlczmA",
-  "added": "2026-10-10T07:32:06.370Z",
-  "name": "50mang쏘망",
-  "genre": "ボカロ",
-  "lastHit": "2022-10-02T12:00:40Z",
-  "pinned": true
- },
- {
   "id": "UCPq4A0-hOqaALo4F4MRdi9w",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "gcmstyle(アンメルツP) / Ann-MeltsP",
@@ -1057,14 +1079,6 @@
   "name": "水野あつ",
   "genre": "ボカロ",
   "lastHit": "2022-02-19T09:00:13Z",
-  "pinned": true
- },
- {
-  "id": "UCZqbjLg2LTpHDNHBEdv7jBQ",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "はねるさかな",
-  "genre": "ボカロ",
-  "lastHit": "2022-02-11T11:00:15Z",
   "pinned": true
  },
  {
@@ -1292,6 +1306,22 @@
   "pinned": true
  },
  {
+  "id": "UCq6ENGh23SO0wWD67eRTGUw",
+  "added": "2026-10-10T07:39:29.506Z",
+  "name": "Mikito-P - Topic",
+  "genre": "ボカロ",
+  "lastHit": "2020-04-15T00:41:33Z",
+  "pinned": true
+ },
+ {
+  "id": "UCl2aT0nRejTCQO_LHZAftBw",
+  "added": "2026-10-09T12:23:27.151Z",
+  "name": "UNIVERSAL MUSIC JAPAN",
+  "genre": "J-POP",
+  "lastHit": "2026-10-09T15:00:38Z",
+  "pinned": true
+ },
+ {
   "id": "UC9zY_E8mcAo_Oq772LEZq8Q",
   "name": "THE FIRST TAKE",
   "added": "2026-10-09T12:06:54.468Z",
@@ -1465,11 +1495,11 @@
   "pinned": true
  },
  {
-  "id": "UCrpcd5WtOrdCsx5cufc4JRQ",
-  "name": "ZUTOMAYO - Topic",
-  "added": "2026-10-09T12:06:54.468Z",
+  "id": "UCQbxh2ft3vw9M6Da_kuIa6A",
+  "added": "2026-10-10T07:39:29.506Z",
+  "name": "KING OF KINGS",
   "genre": "J-POP",
-  "lastHit": "2026-10-08T12:00:11Z"
+  "lastHit": "2026-10-08T12:00:07Z"
  },
  {
   "id": "UCRlRgAguUGfWD4EDfBUls4w",
@@ -1546,6 +1576,13 @@
   "pinned": true
  },
  {
+  "id": "UCPrjycK4eiQhUw2PnVIq7Gg",
+  "added": "2026-10-10T07:39:29.506Z",
+  "name": "CANACANA family",
+  "genre": "J-POP",
+  "lastHit": "2026-10-08T08:13:42Z"
+ },
+ {
   "id": "UCpFgmZm65yOU5X-hmWkWjuw",
   "name": "Mrs. GREEN APPLE",
   "added": "2026-10-09T12:06:54.468Z",
@@ -1582,6 +1619,13 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "アニソン",
   "lastHit": "2026-10-07T12:00:11Z"
+ },
+ {
+  "id": "UCrubey1wynXddSM6xLQYLGQ",
+  "added": "2026-10-10T07:39:29.506Z",
+  "name": "Universal Music Japan International",
+  "genre": "アニソン",
+  "lastHit": "2026-10-07T11:00:25Z"
  },
  {
   "id": "UC9HYkiQZ1_b3J_F8gc12eaA",
@@ -1690,21 +1734,6 @@
   "lastHit": "2026-10-06T10:28:11Z"
  },
  {
-  "id": "UCl2aT0nRejTCQO_LHZAftBw",
-  "added": "2026-10-09T12:23:27.151Z",
-  "name": "UNIVERSAL MUSIC JAPAN",
-  "genre": "J-POP",
-  "lastHit": "2026-10-06T09:00:26Z",
-  "pinned": true
- },
- {
-  "id": "UCaO6TYtlC8U5ttz62hTrZgg",
-  "added": "2026-10-09T17:21:50.995Z",
-  "name": "JYP Entertainment",
-  "genre": "J-POP",
-  "lastHit": "2026-10-06T09:00:05Z"
- },
- {
   "id": "UCCy_q-N7F2FOIZ6ZggHIAKg",
   "added": "2026-10-09T12:23:27.151Z",
   "name": "Sony Music (Japan)",
@@ -1780,6 +1809,13 @@
   "pinned": true
  },
  {
+  "id": "UC5oqO52W1mdO8-7AJuIs5Uw",
+  "added": "2026-10-10T07:39:29.506Z",
+  "name": "佐々木李子",
+  "genre": "アニソン",
+  "lastHit": "2026-10-04T15:00:11Z"
+ },
+ {
   "id": "UCG8MvaPCa2ecKH3GZyFxduA",
   "name": "あいみょん",
   "added": "2026-10-09T12:06:54.468Z",
@@ -1835,6 +1871,13 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "J-POP",
   "lastHit": "2026-10-04T10:00:30Z"
+ },
+ {
+  "id": "UCjooy4G0O8D-4KkE1SWr5Jg",
+  "added": "2026-10-10T07:39:29.506Z",
+  "name": "ファム・ファタル - (f)EMME FATALE music-channel",
+  "genre": "J-POP",
+  "lastHit": "2026-10-04T10:00:18Z"
  },
  {
   "id": "UC7wZb5INldbGweowOhBIs8Q",
@@ -1970,13 +2013,6 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "J-POP",
   "lastHit": "2026-10-02T11:00:09Z"
- },
- {
-  "id": "UCT418-ChE6rgGuQlqzFsKZA",
-  "name": "Radwimps - Topic",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "J-POP",
-  "lastHit": "2026-10-01T15:00:18Z"
  },
  {
   "id": "UC2dXx-3RXeeP8hA5AGt8vuw",
@@ -2475,6 +2511,14 @@
   "name": "ガルナ(オワタP)",
   "genre": "J-POP",
   "lastHit": "2015-12-24T10:02:50Z",
+  "pinned": true
+ },
+ {
+  "id": "UCYNk3hp6TYIudnvHn1bI1OQ",
+  "added": "2026-10-10T07:39:29.506Z",
+  "name": "Mario GaGabriel",
+  "genre": "アニソン",
+  "lastHit": "2015-12-07T14:34:57Z",
   "pinned": true
  },
  {
