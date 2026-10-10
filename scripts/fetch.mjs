@@ -115,7 +115,7 @@ async function fetchYouTubeTrending() {
 
 // 日本の曲か：音声言語が日本語、またはタイトル・チャンネル名・説明文・タグにかなが入っている
 const KANA = /[\u3040-\u30ff]/;
-const KOREAN_VOCALO = /보컬로이드|보카로|VOCALOID|UTAU|Synth(esizer)? ?V|CeVIO|하츠네|미쿠|카사네|테토|카가미네|메구리네|시유|SeeU|Hatsune|Miku|Kasane|Teto|Kagamine|初音ミク|重音テト|feat\.?\s*(GUMI|IA|flower|可不)/i;
+const KOREAN_VOCALO = /보컬로이드|보카로|VOCALOID|UTAU|Synth(esizer)? ?V|CeVIO|하츠네|미쿠|카사네|테토|카가미네|메구리네|시유|SeeU|Hatsune|Miku|Kasane|Teto|Kagamine|初音ミク|重音テト|feat\.?\s*(GUMI|IA|flower|可不)(?![A-Za-z])/i;
 function isJapanese(v) {
   const sn = v.snippet || {};
   // タイトルかチャンネル名にハングルがあって、タイトルにかながない動画は韓国の曲。
