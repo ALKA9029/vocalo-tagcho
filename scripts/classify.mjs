@@ -187,6 +187,13 @@ const YT_NOISE = /official\s*(music\s*)?(video|mv)|music\s*video|music\s*clip|ly
 export function parseYouTube(raw, channel = "") {
   const ch = cleanChannel(channel).replace(/\s*from\s+.*$/i, "").replace(/\s*[（(].*$/, "").trim();
   const hasJa = x => /[぀-ヿ㐀-鿿]/.test(x);
+  // 【】の中の歌声（「【GUMI・鏡音リン】」「【IAオリジナル曲・PV付】」など）
+  const bracketTexts = [...raw.normalize("NFKC").matchAll(/【([^】]*)】/g)].map(m => m[1]);
+  const cleanBr = t => t.replace(/オリジナル曲?|PV付?|MV|HD|曲/gi, " ").trim();
+  const bracketVoice = bracketTexts.map(t => splitNames(cleanBr(t)).voices[0]).find(Boolean) || null;
+  // 「曲名 【歌声・オリジナル曲】- 作者」：曲名のすぐ後ろに歌声やオリジナル曲の【】があり、そのあとにダッシュが続く
+  const songFirstBracket = /^\s*(【[^】]*】\s*)?[^【\-–—]+?\s*【[^】]*】\s*[-–—]/.test(raw.normalize("NFKC"))
+    && bracketTexts.some(t => /オリジナル/.test(t) || splitNames(cleanBr(t)).voices.length);
   let s = raw.normalize("NFKC")
     .replace(/[“”]/g, '"').replace(/[‘’]/g, "'")
     .replace(/【[^】]*】|\[[^\]]*\]|\([^)]*\)|（[^）]*）|<[^>]*>/g, " ")
@@ -204,7 +211,12 @@ export function parseYouTube(raw, channel = "") {
     return chNames.some(c => { const m = normalize(c); return n === m || (m.length >= 3 && (n.includes(m) || (n.length >= 3 && m.includes(n)))); });
   };
   let song = "", artist = "", otherName = "", voiceFromParts = null;
-  const q = s.match(/[「『]([^」』]+)[」』]|"([^"]+)"|(?:^|[\s|｜])'([^']+)'(?:\s|$)/);
+  let q = s.match(/[「『]([^」』]+)[」』]|"([^"]+)"|(?:^|[\s|｜])'([^']+)'(?:\s|$)/);
+  // 「好きだから。/ 『ユイカ』」のように、カギカッコの中がチャンネル名（アーティスト名）なら曲名ではない
+  if (q && isCh(q[1] || q[2] || q[3] || "")) {
+    s = s.replace(q[0], " " + (q[1] || q[2] || q[3]) + " ").replace(/\s+/g, " ").trim();
+    q = null;
+  }
   if (q) {
     song = (q[1] || q[2] || q[3]).trim();
     artist = s.slice(0, q.index).replace(/[|｜\/／\-–—:：\s]+$/, "").trim();
@@ -230,6 +242,9 @@ export function parseYouTube(raw, channel = "") {
       song = pickSong(rest);
       // 「曲名 - 原曲の作者 / 歌い手(チャンネル)」の形なら、残りを原曲の作者の候補に
       otherName = rest.find(x => x !== song) || "";
+    } else if (parts.length >= 2 && firstHasDash && songFirstBracket) {
+      // 「曲名【GUMIオリジナル曲】- 作者」のように、曲名のすぐ後ろに歌声やオリジナル曲の【】がある形
+      song = parts[0]; artist = parts[1];
     } else if (parts.length >= 2 && firstHasDash) {
       // 「アーティスト - 曲名」。英語訳が並んでいるときは日本語の曲名を選ぶ
       artist = parts[0]; song = pickSong(parts.slice(1));
@@ -256,7 +271,7 @@ export function parseYouTube(raw, channel = "") {
     .replace(/^[\s\-–—:：|｜]+|[\s\-–—:：|｜]+$/g, "").trim();
   artist = artist.replace(/\s*(?:feat\.?|ft\.)\s*.*$/i, "").replace(/\s*[（(].*$/, "").trim() || ch;
   const fv = featVoice ? (splitNames(featVoice.split(/\s*[\/／]\s*/)[0]).voices[0] || (isVoice(featVoice) ? featVoice : null)) : null;
-  return { song: song || raw.trim(), creator: artist, voice: fv ? canonicalVoice(fv) : voiceFromParts, originalCreator: "", channel: ch, otherName, brackets: [] };
+  return { song: song || raw.trim(), creator: artist, voice: fv ? canonicalVoice(fv) : (voiceFromParts || (bracketVoice && canonicalVoice(bracketVoice))), originalCreator: "", channel: ch, otherName, brackets: [] };
 }
 
 // 動画1件 → サイトで使う形
@@ -270,7 +285,9 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
   // YouTubeで「ボカロ」として集めた動画でも、歌声やボカロの手がかりがなければボカロにしない
   const vocaloHint = !!rawVoice || hasTag(tags, VOCALO_TAGS) || /VOCALOID|ボカロ|ボーカロイド|初音ミク|重音テト|可不|Synthesizer ?V|UTAU|CeVIO|보컬로이드|보카로/i.test(`${video.title} ${desc.slice(0, 300)}`);
   const fb = video.src === "youtube" && fallbackGenre === "ボカロ" && !vocaloHint ? "J-POP" : fallbackGenre;
-  const g = detectGenre(video.title, tags, fb, desc);
+  let g = detectGenre(video.title, tags, fb, desc);
+  // タイトルの【】などから歌声が見つかっていれば、ボカロ（アニソン判定は残す）
+  if (rawVoice && isVoice(rawVoice) && (g === "J-POP" || g === "その他")) g = "ボカロ";
   const item = {
     id: video.id,
     src: video.src,
@@ -410,8 +427,23 @@ export function guessCoverGenre(items) {
   return changed;
 }
 
+// YouTubeで、ボカロの本家をよく出しているチャンネルの曲は、歌声の手がかりがなくてもボカロにする（Kikuo「愛して愛して愛して」など）
+export function guessChannelGenre(items) {
+  const tally = new Map();
+  for (const i of items) if (i.src === "youtube" && i.kind === "本家" && i.uploaderId) {
+    const t = tally.get(i.uploaderId) || { v: 0, n: 0 };
+    t.n++; if (i.g === "ボカロ") t.v++;
+    tally.set(i.uploaderId, t);
+  }
+  for (const i of items) {
+    const t = tally.get(i.uploaderId);
+    if (i.src === "youtube" && i.kind === "本家" && i.g === "J-POP" && t && t.v >= 2 && t.v / t.n >= 0.6) i.g = "ボカロ";
+  }
+}
+
 export function linkCovers(items) {
   inferNamesFromTags(items);
+  guessChannelGenre(items);
   fillCreators(items);
   const originals = new Map();
   for (const i of items.filter(x => x.kind === "本家").sort((a, b) => (a.date || "").localeCompare(b.date || ""))) {
