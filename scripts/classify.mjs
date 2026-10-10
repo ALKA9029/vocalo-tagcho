@@ -437,7 +437,7 @@ export function guessChannelGenre(items) {
   }
   for (const i of items) {
     const t = tally.get(i.uploaderId);
-    if (i.src === "youtube" && i.kind === "本家" && i.g === "J-POP" && t && t.v >= 2 && t.v / t.n >= 0.6) i.g = "ボカロ";
+    if (i.src === "youtube" && i.kind === "本家" && i.g === "J-POP" && t && t.v >= 1 && t.v / t.n >= 0.5) i.g = "ボカロ";
   }
 }
 
