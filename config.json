@@ -60,7 +60,7 @@
     "originalLookup": {
       "comment": "原曲がサイトにない歌ってみたについて、ニコニコで同じ曲名のVOCALOIDタグ付き動画を探して本家として追加する。1回の取得で調べる最大の曲数",
       "enabled": true,
-      "maxPerRun": 300,
+      "maxPerRun": 500,
       "recheckDays": 30
     }
   },

@@ -85,8 +85,14 @@ function splitNames(text) {
 const NOISE = /オリジナル曲?|オリジナル|PV付?|MV|アニメ|Music Video|Full ?ver\.?|フル|付|曲/gi;
 const isNoiseText = t => !t.replace(NOISE, "").replace(/[\s・,、]/g, "") || splitNames(t).others.length === 0;
 const cleanSong = t => t.replace(/\s*(?:feat\.?|ft\.)\s*.*$/i, "")
-  .replace(/を?歌って踊ってみた|を?(踊|弾|叩|ヘコ)ってみた|を?歌ってみた|を?歌ってもらった|を?歌わせてみた|歌わせていただきました|covered by.*$|cover(ed)?|カバー|オリジナル曲?|(アニメ)?MV|Music Video/gi, " ")
+  .replace(/〔[^〕]*〕|〈[^〉]*〉|《[^》]*》/g, " ")
+  // 歌ってみたの後ろの「ver 歌い手」「by 歌い手」「を歌ってみました」などは曲名ではない
+  .replace(/を?歌って踊ってみた|を?(踊|弾|叩|ヘコ)ってみた|を?歌ってみ(た|ました)|を?歌いました|を?歌った|を?歌ってもらった|を?歌わせてみた|歌わせていただきました/g, " ¦ ")
+  .replace(/\s*¦[\s。．.]*(ver\.?|by)\s*\S.*$/i, "")
+  .replace(/\s+(ver\.?|by)\s*[^\s]+.*$/i, "").replace(/(ver\.?|by)[^\s]{1,12}$/i, "")
+  .replace(/covered by.*$|cover(ed)?|カバー|オリジナル曲?|(アニメ)?MV|Music Video/gi, " ")
   .replace(/[\s、,]*(3D|MMD)?\s*PV.*$/i, "")
+  .replace(/¦/g, " ").replace(/^[\s✿❀☆★♪♡・。.、]+|[\s✿❀☆★♪♡・。.、]+$/g, "")
   .replace(/\s+/g, " ").trim();
 const featOf = t => (t.match(/(?:feat\.?|ft\.)\s*(.+)$/i) || [])[1]?.trim();
 
@@ -322,7 +328,11 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
       parsed.originalCreator = parsed.creator && normalize(parsed.creator) !== normalize(parsed.channel) ? parsed.creator : (parsed.otherName || "");
       parsed.creator = parsed.coverSinger || parsed.channel || parsed.creator;
     }
-    item.by = (parsed.creator || video.uploader || "").replace(/^(ver\.?|by)\s*/i, "").replace(/^VOCALOID\s+/i, "").replace(/\s*\+.*$/, "").replace(/\s+/g, " ").trim();
+    // 「ヒビカセ ver れをる」「小さな恋のうた を歌ってみた。 by天月」のように、ver／by のあとが歌い手
+    const verBy = video.title.normalize("NFKC").match(/(?:^|[\s。])(?:ver\.?|by)\s*([^\s【\[（(※#]+)/i);
+    item.by = (parsed.creator && !/^[。.\s]*$/.test(parsed.creator) ? parsed.creator : (verBy ? verBy[1] : "") || video.uploader || "")
+      .replace(/^[\s。.、]+/, "").replace(/^.*?(?:ver\.?|by)\s*/i, m => /^(ver\.?|by)/i.test(m.trim()) || /[。\s]/.test(m) ? "" : m)
+      .replace(/^VOCALOID\s+/i, "").replace(/\s*\+.*$/, "").replace(/\s*※.*$/, "").replace(/\s+/g, " ").trim();
     if (parsed.originalCreator) item.pHint = parsed.originalCreator;
     // 歌い手が歌声（KAITOなど）なら、歌声としても絞り込めるように
     if (isVoice(item.by)) item.v = canonicalVoice(item.by);
@@ -456,7 +466,17 @@ export function linkCovers(items) {
   }
   for (const c of items) {
     if (c.kind !== "歌ってみた" || c.ofLocked) continue;
-    const o = originals.get(normalize(c.t));
+    let o = originals.get(normalize(c.t));
+    // 曲名が読み取れなくても、ニコニコの歌ってみたにはたいてい曲名のタグが付いているので、タグから原曲を探す
+    if (!o) for (const t of c.tags || []) {
+      const hit = originals.get(normalize(t));
+      if (hit && normalize(t).length >= 2 && normalize(c.title).includes(normalize(t))) { o = hit; c.t = hit.t; break; }
+    }
+    // 曲名の頭が原曲の曲名と同じ（「マトリョシカ vip店長」のように歌い手名が続いている）ときも原曲とみなす
+    if (!o) {
+      const n = normalize(c.t);
+      for (let k = n.length - 1; k >= 3 && !o; k--) { const hit = originals.get(n.slice(0, k)); if (hit) { o = hit; c.t = hit.t; } }
+    }
     if (o) { c.of = o.id; c.p = o.p || c.p; c.a = o.p ? o.a : (c.a || o.a); if (c.g === "その他") c.g = o.g; }
   }
   guessCoverGenre(items);
