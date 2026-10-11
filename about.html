@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>このサイトについて｜TagTune</title>
+<meta name="description" content="TagTune（タグチューン）の説明、曲データの出どころ、プライバシーポリシー、お問い合わせ。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+:root{
+  --bg:#f3f4f8; --surface:#ffffff; --ink:#1b1d2e; --muted:#6a6e85; --line:#dfe1ea; --accent:#d6336c; --hot:#7b3fe4;
+  --f-display:"Dela Gothic One","Zen Kaku Gothic New",system-ui,sans-serif;
+  --f-body:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+  --f-mono:"DM Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#14151f; --surface:#1d1f2c; --ink:#ecedf5; --muted:#9a9db3; --line:#2e3142; --accent:#ff6b9a; --hot:#b294ff; color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14151f; --surface:#1d1f2c; --ink:#ecedf5; --muted:#9a9db3; --line:#2e3142; --accent:#ff6b9a; --hot:#b294ff; color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.8}
+.wrap{max-width:720px;margin:0 auto;padding:28px 16px 64px;display:flex;flex-direction:column;gap:28px}
+.back{font-size:13px;color:var(--muted);text-decoration:none}
+.back:hover{color:var(--accent)}
+h1{font-family:var(--f-display);font-weight:400;font-size:clamp(26px,6vw,34px);line-height:1.2;margin:4px 0 0}
+h1 span{color:var(--accent)}
+section{display:flex;flex-direction:column;gap:8px}
+h2{font-size:17px;margin:0;padding-bottom:6px;border-bottom:1px solid var(--line)}
+h3{font-size:15px;margin:8px 0 0}
+p,ul{margin:0}
+ul{padding-left:1.3em}
+li+li{margin-top:4px}
+a{color:var(--hot)}
+a:hover{color:var(--accent)}
+.muted{color:var(--muted);font-size:13px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+button{font:inherit;font-size:14px;align-self:flex-start;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:6px 16px;cursor:pointer}
+button:hover:not(:disabled){border-color:var(--accent);color:var(--accent)}
+button:disabled{opacity:.5;cursor:default}
+a:focus-visible,button:focus-visible{outline:2px solid var(--hot);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="back" href="./">← TagTune にもどる</a>
+    <h1>このサイトについて｜Tag<span>Tune</span></h1>
+  </header>
+
+  <section>
+    <h2>TagTune とは</h2>
+    <p>TagTune（タグチューン）は、ボカロ・J-POP・アニソン・歌ってみたを、聴いた人がつけた「爽やか」「エモい」などの印象タグで探せる、個人運営の非営利の音楽サイトです。広告はなく、収益化もしていません。</p>
+  </section>
+
+  <section>
+    <h2>曲の情報の出どころ</h2>
+    <p>曲の一覧は、毎朝自動で次のサービスから集めています。曲名・再生数・サムネイルなどの情報は、それぞれのサービスのものです。</p>
+    <ul>
+      <li><b>ニコニコ動画</b>：ニコニコ動画 スナップショット検索API</li>
+      <li><b>YouTube</b>：YouTube API サービス（YouTube Data API）</li>
+    </ul>
+    <p>このサイトは YouTube API サービスを利用しています。このサイトを使うことで、<a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube 利用規約</a>に同意したものとみなされます。YouTube（Google）での情報の扱いについては <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>をご覧ください。</p>
+    <p>YouTube から取得した情報は毎日取り直していて、30日より古い情報を使い続けることはありません。削除・非公開になった動画は、次の更新でサイトから外れます。</p>
+  </section>
+
+  <section>
+    <h2>ページ内での再生</h2>
+    <p>サムネイルの ▶ を押すと、YouTube またはニコニコ動画の<b>公式の埋め込みプレイヤー</b>で再生します。動画はそれぞれのサイトから直接再生されていて、このサイトが動画を保存したり、配信し直したりすることはありません。</p>
+    <p>投稿者が埋め込みを許可していない動画は ▶ を出さず、リンクで動画サイトを開くだけにしています。</p>
+    <p>プレイヤーを開いたときは、YouTube またはニコニコ動画のプレイヤーが読み込まれ、それぞれのサービスの規約・プライバシーポリシーに沿って Cookie などが使われることがあります。</p>
+  </section>
+
+  <section id="privacy">
+    <h2>プライバシーポリシー</h2>
+    <h3>集める情報</h3>
+    <ul>
+      <li><b>タグの投票</b>：はじめてタグを投票したときに、自動で匿名ログインします。名前・メールアドレスなどは使いません。保存するのは「ランダムに作られた利用者ID」「どの曲に、どのタグを、いつ押したか」だけです。</li>
+      <li>サイトに公開するのは、曲ごと・タグごとの<b>票の数だけ</b>です。誰がどのタグを押したかは公開しません。</li>
+    </ul>
+    <h3>ブラウザに保存する情報</h3>
+    <ul>
+      <li>匿名ログインの状態と、自分が押したタグを、ブラウザの保存領域（localStorage）に保存します。ブラウザのサイトデータを消すと消えます。</li>
+      <li>アクセス解析や広告のための Cookie は使っていません。</li>
+    </ul>
+    <h3>使っている外部サービス</h3>
+    <ul>
+      <li><b>Supabase</b>：タグの投票の保存と集計</li>
+      <li><b>GitHub Pages</b>：サイトの公開（GitHub がアクセスの記録を取ることがあります）</li>
+      <li><b>Google Fonts</b>・<b>jsDelivr</b>：文字のフォントと、投票に使うプログラムの読み込み</li>
+      <li><b>YouTube</b>・<b>ニコニコ動画</b>：サムネイルの表示と、ページ内での再生</li>
+    </ul>
+    <p class="muted">これらのサービスには、閲覧したときの IP アドレスなどが送られます。扱いはそれぞれのサービスのプライバシーポリシーに従います。</p>
+
+    <div class="box">
+      <h3 style="margin:0">自分の投票を全部消す</h3>
+      <p class="muted">このブラウザで押したタグの票を、データベースからまとめて削除します（元には戻せません）。1つずつ消すときは、曲のタグをもう一度押してください。</p>
+      <button type="button" id="wipe" disabled>読み込み中…</button>
+      <p class="muted" id="wipeMsg" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>著作権について</h2>
+    <p>楽曲・動画・サムネイルの著作権は、それぞれの作者・権利者にあります。このサイトは動画サイトへのリンクと、公式の埋め込みプレイヤーでの紹介だけを行っています。</p>
+  </section>
+
+  <section id="contact">
+    <h2>お問い合わせ・掲載の取り下げ</h2>
+    <p>「自分の動画を載せないでほしい」「作者名などがまちがっている」などは、下のページからお知らせください。確認して、取り下げや修正をします。</p>
+    <ul>
+      <li><a href="https://github.com/ALKA9029/vocalo-tagcho/issues" target="_blank" rel="noopener">お問い合わせ（GitHub の Issues）</a></li>
+    </ul>
+    <p class="muted">書き込むときは、動画のURLと、どうしてほしいかを書いてください。</p>
+  </section>
+
+  <p class="muted">制定日：2026年10月11日。内容を変えたときは、このページでお知らせします。</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js"></script>
+<script>
+// トップページと同じ接続先（公開用の鍵）。同じブラウザなら、トップページで匿名ログインした状態がそのまま使える
+const SUPABASE_URL = "https://qfepllrtalfvyhsezjwc.supabase.co";
+const SUPABASE_KEY = "sb_publishable_DIFM6mVEbJaB0OYSkY74Hw_1oF_6eaU";
+const LS_KEY = "vocalo-tagcho:votes";
+const btn = document.getElementById("wipe"), msg = document.getElementById("wipeMsg");
+
+(async()=>{
+  if (!window.supabase) { btn.textContent = "今は使えません"; return; }
+  const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+  const { data } = await sb.auth.getSession();
+  const uid = data.session?.user?.id;
+  if (!uid) { btn.textContent = "このブラウザでの投票はありません"; return; }
+  const { count } = await sb.from("votes").select("song_id", { count: "exact", head: true });
+  if (!count) { btn.textContent = "このブラウザでの投票はありません"; return; }
+  btn.textContent = `自分の票（${count.toLocaleString("ja-JP")}票）を全部消す`;
+  btn.disabled = false;
+  btn.addEventListener("click", async()=>{
+    if (btn.dataset.sure !== "1") { btn.dataset.sure = "1"; btn.textContent = "本当に消す？（もう一度押すと削除）"; return; }
+    btn.disabled = true; msg.textContent = "削除中…";
+    const { error } = await sb.from("votes").delete().eq("user_id", uid);
+    if (error) { msg.textContent = "削除できなかったよ。時間をおいてもう一度試してね。"; btn.disabled = false; btn.dataset.sure = ""; return; }
+    try { localStorage.removeItem(LS_KEY); } catch {}
+    btn.textContent = "削除しました"; msg.textContent = "このブラウザで押した票は、すべて消えました。";
+  });
+})().catch(()=>{ btn.textContent = "今は使えません"; });
+</script>
+</body>
+</html>

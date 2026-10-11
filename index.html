@@ -114,6 +114,23 @@ button.badge:hover{border-color:var(--accent);outline:1px solid var(--accent)}
 .count{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
 .loadmore{font:inherit;align-self:center;margin-top:16px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:8px 20px;cursor:pointer}
 .loadmore:hover{border-color:var(--accent)}
+/* ページ内再生：サムネの▶と、画面下に浮かぶプレイヤー（1曲だけ） */
+button.thumb{position:relative;border:0;padding:0;cursor:pointer;font:inherit}
+.thumb .play{position:absolute;inset:auto auto 6px 6px;width:30px;height:30px;border-radius:50%;background:rgba(0,0,0,.62);color:#fff;display:grid;place-items:center;font-size:13px;line-height:1;padding-left:2px}
+button.thumb:hover .play{background:var(--accent)}
+.thumb.playing{outline:2px solid var(--accent);outline-offset:2px}
+.thumb.playing .play{background:var(--accent);padding-left:0;font-size:11px;width:auto;padding-inline:8px;border-radius:999px}
+#player{position:fixed;z-index:5;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:400px;max-width:calc(100vw - 32px);background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.28);overflow:hidden}
+#player .ph{display:flex;align-items:center;gap:8px;padding:8px 8px 8px 12px;font-size:13px}
+#player .ph a{flex:1;min-width:0;color:var(--ink);font-weight:700;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#player .ph a:hover{color:var(--accent)}
+#player .ph button{font:inherit;flex:none;background:var(--bg);border:1px solid var(--line);color:var(--muted);border-radius:999px;width:28px;height:28px;cursor:pointer;padding:0;line-height:1}
+#player iframe{display:block;width:100%;aspect-ratio:16/9;border:0;background:#000}
+body.has-player .wrap{padding-bottom:320px}
+@media (max-width:520px){#player{right:0;left:0;bottom:0;width:auto;max-width:none;border-radius:14px 14px 0 0;border-inline:0;border-bottom:0;padding-bottom:env(safe-area-inset-bottom,0px)}body.has-player .wrap{padding-bottom:calc(56.25vw + 64px)}}
+footer{border-top:1px solid var(--line);padding-top:16px;font-size:13px;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap}
+footer a{color:var(--muted)}
+footer a:hover{color:var(--accent)}
 </style>
 
 <div class="wrap">
@@ -162,7 +179,14 @@ button.badge:hover{border-color:var(--accent);outline:1px solid var(--accent)}
 
   <div class="list" id="list"></div>
   <button class="loadmore" id="more" hidden>もっと見る</button>
+
+  <footer>
+    <a href="about.html">このサイトについて・プライバシーポリシー</a>
+    <a href="about.html#contact">お問い合わせ・掲載の取り下げ</a>
+  </footer>
 </div>
+
+<aside id="player" hidden aria-label="再生中の曲"></aside>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js"></script>
 <script>
@@ -176,7 +200,7 @@ const FIXED_AT = 3;
 const PAGE = 40;
 
 let ITEMS = [], ITEM = {};
-const state = { serverCounts:{}, serverMine:{}, mine:{}, open:null, rel:null, q:"", genre:"", kind:"", sort:"views", period:"", person:null, filter:new Set(), shown:PAGE, canWrite:true, uid:null, db:null };
+const state = { serverCounts:{}, serverMine:{}, mine:{}, open:null, rel:null, play:null, q:"", genre:"", kind:"", sort:"views", period:"", person:null, filter:new Set(), shown:PAGE, canWrite:true, uid:null, db:null };
 const $ = s => document.querySelector(s);
 
 // 表示する票数 = みんなの票数（最後に読み込んだ時点）から自分の分を引いて、今の自分の票を足したもの
@@ -332,6 +356,49 @@ function refresh(...ids){
   if (active) document.querySelector(`[data-k="${CSS.escape(active)}"]`)?.focus({preventScroll:true});
 }
 
+// ---------- ページ内再生 ----------
+// サムネの▶を押した曲だけ、YouTube／ニコニコ公式の埋め込みプレイヤーを画面下に出す（同時に1曲だけ）。
+// プレイヤーは押したときに初めて読み込むので、ページを開いたときの重さは変わらない。
+// 埋め込みが禁止されている動画（ne）は▶を出さず、今まで通りリンクで動画サイトへ飛ぶ
+function embedUrl(i){
+  const vid = i.id.slice(i.id.indexOf(":") + 1);
+  if (i.src === "youtube" && !i.ne) return `https://www.youtube.com/embed/${encodeURIComponent(vid)}?autoplay=1&playsinline=1&rel=0`;
+  if (i.src === "niconico" && /^(sm|so|nm)\d+$/.test(vid)) return `https://embed.nicovideo.jp/watch/${vid}?autoplay=1`;
+  return null;
+}
+function thumbEl(i){
+  const img = i.thumb ? el("img",{src:i.thumb, alt:"", loading:"lazy", decoding:"async", referrerpolicy:"no-referrer", onerror:e=>{ e.target.remove(); }}) : null;
+  if (!embedUrl(i)) return el("a",{class:"thumb", href:i.url, target:"_blank", rel:"noopener", tabindex:"-1", "aria-hidden":"true", onclick:e=>e.stopPropagation()}, img);
+  const playing = state.play === i.id;
+  return el("button",{class:"thumb"+(playing?" playing":""), "data-k":`${i.id}|play`, "aria-label": playing ? `「${i.t}」を再生中（押すと閉じる）` : `「${i.t}」をこのページで再生`,
+    onclick:e=>{ e.stopPropagation(); playing ? closePlayer() : play(i.id); }},
+    img, el("span",{class:"play","aria-hidden":"true"}, playing ? "再生中" : "▶"));
+}
+function play(id){
+  const i = ITEM[id], url = embedUrl(i);
+  if (!url) return;
+  const prev = state.play;
+  state.play = id;
+  $("#player").replaceChildren(
+    el("div",{class:"ph"},
+      el("a",{href:i.url, target:"_blank", rel:"noopener", title:`${i.src==="youtube"?"YouTube":"ニコニコ動画"}で開く`}, i.t, " ↗"),
+      el("button",{"aria-label":"プレイヤーを閉じる", onclick:closePlayer}, "×")),
+    el("iframe",{src:url, title:`${i.t}（${i.src==="youtube"?"YouTube":"ニコニコ動画"}のプレイヤー）`,
+      allow:"autoplay; encrypted-media; picture-in-picture; fullscreen", allowfullscreen:"", referrerpolicy:"strict-origin-when-cross-origin"}));
+  $("#player").hidden = false;
+  document.body.classList.add("has-player");
+  refresh(prev, id);
+}
+function closePlayer(){
+  const prev = state.play;
+  state.play = null;
+  $("#player").replaceChildren();   // iframeを消すと再生も止まる
+  $("#player").hidden = true;
+  document.body.classList.remove("has-player");
+  refresh(prev);
+}
+document.addEventListener("keydown", e=>{ if (e.key === "Escape" && state.play && !e.target.closest?.("input,select")) closePlayer(); });
+
 function buildItem(i, n, c){
   const sc = c[i.id] || {};
   const mine = new Set(state.mine[i.id] || []);
@@ -346,8 +413,7 @@ function buildItem(i, n, c){
   const toggleRel = ()=>{ const prev = state.rel; state.rel = isRel ? null : i.id; refresh(prev, i.id); };
   return el("article",{class:"song", id:"item-"+i.id, "data-n":String(n), onclick:toggleRel},
     el("div",{class:"no"}, String(n+1).padStart(2,"0")),
-    el("a",{class:"thumb", href:i.url, target:"_blank", rel:"noopener", tabindex:"-1", "aria-hidden":"true", onclick:e=>e.stopPropagation()},
-      i.thumb ? el("img",{src:i.thumb, alt:"", loading:"lazy", decoding:"async", referrerpolicy:"no-referrer", onerror:e=>{ e.target.remove(); }}) : null),
+    thumbEl(i),
     el("div",{class:"body"},
       el("div",{class:"head"},
         el("h2",{class:"title"}, el("a",{href:i.url,target:"_blank",rel:"noopener", title:i.title, onclick:e=>e.stopPropagation()}, i.t, el("span",{class:"ext"},"↗"))),
@@ -472,7 +538,7 @@ render();
   try {
     const [songs, meta] = await Promise.all([fetch("data/site.json").then(r=>r.json()), fetch("data/meta.json").then(r=>r.json()).catch(()=>null)]);
     ITEMS = songs; ITEM = Object.fromEntries(ITEMS.map(i=>[i.id,i]));
-    baseNote = `${ITEMS.length.toLocaleString("ja-JP")}曲を収録${meta ? `（${fmtDate(meta.updatedAt)}時点）` : ""}。曲名の↗で動画を開く、名前やバッジで絞り込み、行を押すと関連曲。作者名が空の曲は、読み取りを改善中。${sb ? "「＋ タグをつける」から、聴いた印象を投票してね。みんなの票で3票以上集まったタグが定着するよ。" : "タグの投票は今はこの端末にだけ保存されるよ（みんなの集計は準備中）。"}`;
+    baseNote = `${ITEMS.length.toLocaleString("ja-JP")}曲を収録${meta ? `（${fmtDate(meta.updatedAt)}時点）` : ""}。サムネの▶でこのページで再生、曲名の↗で動画サイトを開く、名前やバッジで絞り込み、行を押すと関連曲。作者名が空の曲は、読み取りを改善中。${sb ? "「＋ タグをつける」から、聴いた印象を投票してね。みんなの票で3票以上集まったタグが定着するよ。" : "タグの投票は今はこの端末にだけ保存されるよ（みんなの集計は準備中）。"}`;
     setStatus(baseNote);
     render();
     startVotes();

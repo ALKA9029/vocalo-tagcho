@@ -95,7 +95,7 @@ async function fetchYouTubeTrending() {
   let pageToken = "";
   for (let page = 0; page < (t.maxPages || 1); page++) {
     const params = new URLSearchParams({
-      part: "snippet,statistics,contentDetails", chart: "mostPopular", regionCode: t.regionCode || "JP",
+      part: "snippet,statistics,contentDetails,status", chart: "mostPopular", regionCode: t.regionCode || "JP",
       videoCategoryId: "10", maxResults: "50", key, ...(pageToken ? { pageToken } : {}),
     });
     const res = await ytFetch("https://www.googleapis.com/youtube/v3/videos?" + params);
@@ -156,6 +156,8 @@ function ytItem(v, genre) {
     thumb: sn.thumbnails?.medium?.url || sn.thumbnails?.default?.url || null,
     uploader: sn.channelTitle || "", uploaderId: sn.channelId || null,
     channelGenre: genre || "J-POP",
+    // ページ内で再生できない（埋め込み禁止の）動画には印をつける。サイトではリンクで飛ぶだけにする
+    ...(v.status?.embeddable === false ? { ne: 1 } : {}),
   };
 }
 
@@ -163,7 +165,7 @@ function ytItem(v, genre) {
 async function ytVideos(ids, key) {
   const out = [];
   for (let i = 0; i < ids.length; i += 50) {
-    const params = new URLSearchParams({ part: "snippet,statistics,contentDetails", id: ids.slice(i, i + 50).join(","), key });
+    const params = new URLSearchParams({ part: "snippet,statistics,contentDetails,status", id: ids.slice(i, i + 50).join(","), key });
     const res = await ytFetch("https://www.googleapis.com/youtube/v3/videos?" + params);
     if (!res.ok) { console.warn(`YouTube詳細: HTTP ${res.status} ${(await res.text()).slice(0, 200)}`); break; }
     out.push(...((await res.json()).items || []));
@@ -215,6 +217,7 @@ async function refreshYouTubeStats(items) {
     const i = byId.get(v.id);
     if (!isJapanese(v) || (isNoise(v) && !i.seed)) { drop.add(i.id); continue; }
     i.descHead = (v.snippet?.description || "").slice(0, 300);
+    if (v.status?.embeddable === false) i.ne = 1; else delete i.ne;
     if (v.statistics?.viewCount != null) i.views = Number(v.statistics.viewCount);
     if (v.statistics?.likeCount != null) i.likes = Number(v.statistics.likeCount);
   }
