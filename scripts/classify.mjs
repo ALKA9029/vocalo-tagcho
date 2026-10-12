@@ -310,11 +310,17 @@ export function fixSinger(by, title) {
     const m = rest.match(/[。.\s★☆@＠]+([^\s。.★☆@＠]+)\s*$/);
     n = m ? m[1] : "";
   }
+  // 「ヤラララ、歌ってみたんだけど楽しい とこのこα」のように、歌ってみたに続く文の切れ端なら最後の語だけ
+  if (/^[\u3041-\u3093]/.test(n) && /歌ってみた/.test(title) && title.normalize("NFKC").includes("歌ってみた" + n.split(/\s/)[0])) {
+    const paren = n.match(/[（(]([^）)]+)[）)]\s*$/);
+    const last = n.split(/[\s\/／]+/).pop();
+    n = paren ? paren[1] : last !== n ? last : "";
+  }
   // 「164 - ウトガワが歌ってみた」の「が」
   if (/[がを]$/.test(n) && title.includes(n + "歌")) n = n.slice(0, -1);
   // 「REIKA )浦和路上ライブ…」の閉じかっこから後ろ
   if (!/[（(]/.test(n)) n = n.replace(/\s*[)）].*$/, "");
-  n = n.replace(/^[\s。.、★☆@＠]+|\s+$/g, "");
+  n = n.replace(/^[\s。.、★☆@＠\-‐]+|[\s\-‐]+$/g, "");
   if (/\s[-–—]\s/.test(n)) n = n.split(/\s[-–—]\s/).pop().trim();
   if (sentence || isJunkName(n) || NOT_SINGER.test(n)) {
     if (!n || isJunkName(n) || NOT_SINGER.test(n)) n = singerFromBrackets(title);
@@ -365,12 +371,20 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
   } else {
     if (video.src === "youtube") {
       // タイトルに「covered by 歌い手」があればそれを、なければチャンネル名を歌い手とみなす
-      parsed.originalCreator = parsed.creator && normalize(parsed.creator) !== normalize(parsed.channel) ? parsed.creator : (parsed.otherName || "");
-      parsed.creator = parsed.coverSinger || parsed.channel || parsed.creator;
+      // チャンネル名「ころんの実況【すとぷり】」から歌い手の名前「ころん」だけを取り出し、
+      // タイトルにその名前を含む表記（「ころん×あっきぃ」「【だいきり×たちばな】」）があればそちらを歌い手にする
+      const core = singerCore(parsed.channel || video.uploader);
+      const brackets = [...video.title.normalize("NFKC").matchAll(/【([^】]+)】|\[([^\]]+)\]/g)].map(m => (m[1] || m[2]).trim());
+      // 「ころん×あっきぃ」のようなコラボ表記だけを認める（「KIRA 春希」のように別の語がくっついたものは使わない）
+      const isCollabWith = c => c && !NOT_SINGER.test(c) && c.split(/\s*(?:[×xX&＆・、,]|\sand\s|と)\s*/).some(part => normalize(part) === normalize(core));
+      const withCh = core && [parsed.creator, ...brackets].find(isCollabWith);
+      const creatorIsSinger = withCh && parsed.creator && normalize(parsed.creator) === normalize(withCh);
+      parsed.originalCreator = parsed.creator && !creatorIsSinger && normalize(parsed.creator) !== normalize(parsed.channel) ? parsed.creator : (parsed.otherName || "");
+      parsed.creator = parsed.coverSinger || withCh || core || parsed.channel || parsed.creator;
     }
     // 「ヒビカセ ver れをる」「小さな恋のうた を歌ってみた。 by天月」のように、ver／by のあとが歌い手
     const verBy = video.title.normalize("NFKC").match(/(?:^|[\s。])(?:ver\.?|by)\s*([^\s【\[（(※#]+)/i);
-    item.by = (parsed.creator && !/^[。.\s]*$/.test(parsed.creator) ? parsed.creator : (verBy ? verBy[1] : "") || video.uploader || "")
+    item.by = (parsed.creator && /[\p{L}\p{N}]/u.test(parsed.creator) ? parsed.creator : (verBy ? verBy[1] : "") || video.uploader || "")
       .replace(/^[\s。.、]+/, "").replace(/^.*?(?:ver\.?|by)\s*/i, m => /^(ver\.?|by)/i.test(m.trim()) || /[。\s]/.test(m) ? "" : m)
       .replace(/^VOCALOID\s+/i, "").replace(/\s*\+.*$/, "").replace(/\s*※.*$/, "").replace(/\s+/g, " ").trim();
     item.by = fixSinger(item.by, video.title);
@@ -386,6 +400,12 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
 
 // 歌ってみたを、同じ曲名の本家にひもづける（いちばん古い本家を原曲とみなす）
 // YouTubeのチャンネル名からアーティスト名を取り出す（「YOASOBI - Topic」「〇〇 Official YouTube Channel」など）
+// 歌い手のチャンネル名から名前だけを取り出す：「ころんの実況【すとぷり】」→「ころん」、「成人男性三人組 Official」→「成人男性三人組」
+export function singerCore(name) {
+  const c = cleanChannel(name);
+  return c.replace(/【[^】]*】|\[[^\]]*\]|［[^］]*］/g, "").replace(/の(ゲーム)?(実況|チャンネル|歌|うた)$/, "").trim() || c;
+}
+
 export function cleanChannel(name) {
   name = name || "";
   return name.replace(/\s*[|｜].*$/, "").replace(/\s+-[^-]+-\s*$/, "").replace(/\s+-\s+[A-Za-z][A-Za-z .]*-?\s*$/, "")
@@ -533,7 +553,7 @@ export function linkCovers(items) {
       const n = normalize(c.t);
       for (let k = n.length - 1; k >= 3 && !o; k--) { const hit = originals.get(n.slice(0, k)); if (hit) { o = hit; c.t = hit.t; } }
     }
-    if (o) { c.of = o.id; c.p = o.p || c.p; c.a = o.p ? o.a : (c.a || o.a); if (c.g === "その他") c.g = o.g; }
+    if (o) { c.of = o.id; c.p = o.p || c.p; c.a = o.p ? o.a : (c.a || o.a); if (o.g !== "その他") c.g = o.g; else if (c.g === "その他") c.g = o.g; }
   }
   markSelfCovers(items);
   guessCoverGenre(items);
