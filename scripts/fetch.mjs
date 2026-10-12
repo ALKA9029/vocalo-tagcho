@@ -201,7 +201,7 @@ async function fetchYouTubeSearch() {
   }
   const details = (await ytVideos([...found.keys()], key)).filter(v => isJapanese(v) && !isNoise(v));
   return details.map(v => ytItem(v, found.get(v.id)))
-    .filter(v => v.views == null || v.views >= (s.minViews || 0))
+    .filter(v => v.views == null || v.views >= (s.minViewsByGenre?.[v.channelGenre] ?? s.minViews ?? 0))
     .filter(v => !/#shorts/i.test(v.title));
 }
 
@@ -253,7 +253,7 @@ async function fetchFollowed(knownIds) {
   const details = (await ytVideos([...fresh.keys()], key))
     .filter(v => v.snippet?.categoryId === "10" && isJapanese(v) && !isNoise(v))
     .map(v => ytItem(v, fresh.get(v.id)?.genre))
-    .filter(v => v.views == null || v.views >= (f.minViews || 0));
+    .filter(v => v.views == null || v.views >= (f.minViewsByGenre?.[v.channelGenre] ?? f.minViews ?? 0));
   console.log(`自動フォロー: ${followed.length}チャンネル中 ${checked}件を確認、新着 ${fresh.size}本のうち曲として追加 ${details.length}本`);
   return details;
 }

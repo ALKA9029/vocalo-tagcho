@@ -74,7 +74,7 @@
       "defaultGenre": "J-POP"
     },
     "search": {
-      "comment": "直近 lookbackDays 日に投稿された音楽動画を、キーワードごとに再生数の多い順で取得。1キーワード1ページで100ユニット（1日の無料枠は10,000）",
+      "comment": "直近 lookbackDays 日に投稿された音楽動画を、キーワードごとに再生数の多い順で取得。1キーワード1ページで100ユニット（1日の無料枠は10,000）。minViewsByGenre でジャンルごとに最低再生数を変えられる（ボカロは新曲の伸びがゆっくりなので低め）",
       "enabled": true,
       "regionCode": "JP",
       "lookbackDays": 7,
@@ -133,7 +133,10 @@
           "regionCode": "KR",
           "relevanceLanguage": "ko"
         }
-      ]
+      ],
+      "minViewsByGenre": {
+        "ボカロ": 300
+      }
     },
     "refreshDays": 35,
     "channels": [
@@ -160,7 +163,10 @@
       "genreShare": {
         "ボカロ": 0.5
       },
-      "minPerSide": 100
+      "minPerSide": 100,
+      "minViewsByGenre": {
+        "ボカロ": 300
+      }
     },
     "seedSearch": {
       "comment": "--seed で一度だけ動く。昔からの人気曲をYouTubeで検索して、ボカロPやアーティストのチャンネルを見つける（1キーワード1ページ100ユニット）",
