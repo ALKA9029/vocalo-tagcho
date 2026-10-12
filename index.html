@@ -128,6 +128,12 @@ button.thumb:hover .play{background:var(--accent)}
 #player iframe{display:block;width:100%;aspect-ratio:16/9;border:0;background:#000}
 body.has-player .wrap{padding-bottom:320px}
 @media (max-width:520px){#player{right:0;left:0;bottom:0;width:auto;max-width:none;border-radius:14px 14px 0 0;border-inline:0;border-bottom:0;padding-bottom:env(safe-area-inset-bottom,0px)}body.has-player .wrap{padding-bottom:calc(56.25vw + 64px)}}
+.fold{font:inherit;font-size:13px;flex:none;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:8px 12px;cursor:pointer;white-space:nowrap}
+.fold:hover{border-color:var(--accent)}
+.fold .n{display:inline-block;min-width:18px;margin-left:2px;padding:0 5px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-size:11px;font-family:var(--f-mono);text-align:center}
+.filters{display:flex;flex-direction:column;gap:10px}
+.summary{margin:0;font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar.folded .filters{display:none}
 footer{border-top:1px solid var(--line);padding-top:16px;font-size:13px;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap}
 footer a{color:var(--muted)}
 footer a:hover{color:var(--accent)}
@@ -145,6 +151,11 @@ footer a:hover{color:var(--accent)}
   <div class="bar">
     <div class="row">
       <input type="search" id="q" placeholder="曲名・作者・歌声・歌い手で検索" aria-label="検索">
+      <button type="button" class="fold" id="fold" aria-expanded="true" aria-controls="filters">絞り込み <span class="arrow" aria-hidden="true">▴</span></button>
+    </div>
+    <p class="summary" id="summary" hidden></p>
+    <div class="filters" id="filters">
+    <div class="row">
       <select id="period" aria-label="投稿された期間">
         <option value="">すべての期間</option>
         <option value="1">24時間以内</option>
@@ -167,6 +178,7 @@ footer a:hover{color:var(--accent)}
     <div class="row">
       <span class="label">タグで絞る</span>
       <div class="chips" id="tagFilter"></div>
+    </div>
     </div>
   </div>
 
@@ -292,6 +304,30 @@ function jump(id){
   if (node){ node.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto":"smooth", block:"start"}); node.classList.remove("flash"); void node.offsetWidth; node.classList.add("flash"); }
 }
 
+// ---------- 絞り込み欄をしまう ----------
+// 検索欄だけ残して、期間・並び順・ジャンル・タグをしまえる。しまっている間は、今の絞り込みを1行で見せる。
+// スマホでプレイヤーを開いたときは、曲のリストを広く見られるように自動でしまう
+const FOLD_KEY = "tagtune:fold";
+const narrow = matchMedia("(max-width:520px)");
+function setFold(folded, remember){
+  $(".bar").classList.toggle("folded", folded);
+  $("#fold").setAttribute("aria-expanded", String(!folded));
+  $("#fold .arrow").textContent = folded ? "▾" : "▴";
+  if (remember) { try { localStorage.setItem(FOLD_KEY, folded ? "1" : "0"); } catch {} }
+  updateFoldInfo();
+}
+function updateFoldInfo(){
+  const folded = $(".bar").classList.contains("folded");
+  const opt = id => $(id).selectedOptions[0]?.textContent || "";
+  const active = [state.genre, state.kind, state.person?.label, state.period && opt("#period"), ...state.filter].filter(Boolean);
+  const btn = $("#fold");
+  btn.querySelector(".n")?.remove();
+  if (active.length) btn.insertBefore(el("span",{class:"n", "aria-label":`${active.length}件の絞り込み中`}, String(active.length)), btn.querySelector(".arrow"));
+  $("#summary").hidden = !folded;
+  $("#summary").textContent = [active.length ? active.join("・") : "すべての曲", opt("#sort")].join("　｜　");
+}
+$("#fold").addEventListener("click", ()=>setFold(!$(".bar").classList.contains("folded"), true));
+
 function applyFilter(fn){
   fn(); state.rel = null; state.open = null; state.shown = PAGE;
   render();
@@ -334,6 +370,7 @@ function render(){
 
   const items = visibleItems();
   $("#count").textContent = ITEMS.length ? `${items.length.toLocaleString("ja-JP")}曲` : "";
+  updateFoldInfo();
   const list = $("#list");
   list.style.minHeight = list.offsetHeight + "px";
   list.replaceChildren();
@@ -387,6 +424,7 @@ function play(id){
       allow:"autoplay; encrypted-media; picture-in-picture; fullscreen", allowfullscreen:"", referrerpolicy:"strict-origin-when-cross-origin"}));
   $("#player").hidden = false;
   document.body.classList.add("has-player");
+  if (narrow.matches && !$(".bar").classList.contains("folded")) setFold(true, false);
   refresh(prev, id);
 }
 function closePlayer(){
@@ -532,6 +570,8 @@ $("#q").addEventListener("input", e=>{ state.q = e.target.value; state.shown = P
 $("#sort").addEventListener("change", e=>{ state.sort = e.target.value; state.shown = PAGE; render(); });
 $("#period").addEventListener("change", e=>{ state.period = e.target.value; state.shown = PAGE; render(); });
 $("#more").addEventListener("click", ()=>{ state.shown += PAGE; render(); });
+try { if (localStorage.getItem(FOLD_KEY) === "1") $(".bar").classList.add("folded"); } catch {}
+setFold($(".bar").classList.contains("folded"), false);
 render();
 
 (async()=>{
