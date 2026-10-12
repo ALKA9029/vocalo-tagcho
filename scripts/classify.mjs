@@ -496,6 +496,21 @@ export function guessChannelGenre(items) {
   }
 }
 
+// セルフカバー（作曲した本人が歌った歌ってみた）に印をつける。
+// タイトルに「self cover」「セルフカバー」「自分で歌ってみた」とある、または原曲と同じ投稿者（チャンネル）が投稿したもの。
+// （歌い手名と作者名が同じ、は読み取りまちがいのことが多いので使わない）
+const SELF_RE = /self[\s-]*cover|セルフ\s*カ[バヴ]ー|自分で歌ってみ|本人が歌ってみ|作者が歌ってみ/i;
+export function markSelfCovers(items) {
+  const byId = new Map(items.map(i => [i.id, i]));
+  for (const c of items) {
+    delete c.self;
+    if (c.kind !== "歌ってみた") continue;
+    const o = c.of ? byId.get(c.of) : null;
+    const sameUploader = o && c.uploaderId && c.uploaderId === o.uploaderId && c.src === o.src;
+    if (SELF_RE.test(c.title || "") || sameUploader) c.self = 1;
+  }
+}
+
 export function linkCovers(items) {
   inferNamesFromTags(items);
   guessChannelGenre(items);
@@ -520,11 +535,12 @@ export function linkCovers(items) {
     }
     if (o) { c.of = o.id; c.p = o.p || c.p; c.a = o.p ? o.a : (c.a || o.a); if (c.g === "その他") c.g = o.g; }
   }
+  markSelfCovers(items);
   guessCoverGenre(items);
   return items;
 }
 
 // サイト表示用：必要な項目だけにした軽いデータ
 const unent = s => typeof s === "string" ? s.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'") : s;
-const KEEP = ["id", "src", "url", "title", "t", "kind", "g", "p", "v", "by", "of", "a", "date", "views", "thumb", "ne"];
+const KEEP = ["id", "src", "url", "title", "t", "kind", "g", "p", "v", "by", "of", "a", "date", "views", "thumb", "ne", "self"];
 export const toSite = items => items.map(i => Object.fromEntries(KEEP.filter(k => i[k] != null && i[k] !== "").map(k => [k, unent(i[k])])));

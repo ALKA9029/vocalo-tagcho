@@ -80,6 +80,7 @@ input[type=search]{flex:1 1 200px}
 .badge.kind{background:var(--surface);color:var(--ink)}
 .badge.kind.cover{background:var(--cover-soft);border-color:transparent;color:var(--cover);font-weight:500}
 .badge.genre{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.badge.self{background:none;border-color:var(--cover);color:var(--cover);font-weight:500}
 button.badge{cursor:pointer;font-family:var(--f-mono)}
 button.badge:hover{border-color:var(--accent);outline:1px solid var(--accent)}
 .who{font:inherit;font-size:13px;background:none;border:0;padding:0;color:var(--muted);cursor:pointer;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
@@ -272,7 +273,10 @@ function related(i){
   const notSelf = arr => arr.filter(x=>x.id!==i.id);
   const cap = (arr, n=8) => arr.sort((a,b)=>(b.views||0)-(a.views||0)).slice(0,n);
   if (i.kind === "本家"){
-    groups.push(["この曲の歌ってみた", cap(ITEMS.filter(x=>x.kind==="歌ってみた" && x.of===i.id)), x=>x.by || "歌い手不明"]);
+    const covers = ITEMS.filter(x=>x.kind==="歌ってみた" && x.of===i.id);
+    const selfs = covers.filter(x=>x.self);
+    if (selfs.length) groups.push(["作者本人のセルフカバー", cap(selfs), x=>x.by || ""]);
+    groups.push(["この曲の歌ってみた", cap(covers.filter(x=>!x.self)), x=>x.by || "歌い手不明"]);
   } else {
     const o = original(i);
     groups.push(["原曲", o ? [o] : [], x=>creditText(x)]);
@@ -290,6 +294,7 @@ function related(i){
       ...(list.length ? list.map(x=>el("div",{class:"ritem"},
         el("button",{onclick:()=>jump(x.id)}, x.t),
         el("span",{class:"badge kind"+(x.kind==="歌ってみた"?" cover":"")}, x.kind),
+        x.self ? el("span",{class:"badge self"}, "セルフカバー") : null,
         el("span",{class:"sub"}, sub(x)))) : [el("span",{class:"none"},"まだ見つかってないよ")]))));
 }
 
@@ -459,6 +464,7 @@ function buildItem(i, n, c){
       el("div",{class:"meta"},
         el("button",{class:"badge genre", title:`${i.g}だけ表示`, onclick:e=>{ e.stopPropagation(); applyFilter(()=>state.genre=i.g); }}, i.g),
         el("button",{class:"badge kind"+(i.kind==="歌ってみた"?" cover":""), title:`${i.kind}だけ表示`, onclick:e=>{ e.stopPropagation(); applyFilter(()=>state.kind=i.kind); }}, i.kind),
+        i.self ? el("span",{class:"badge self", title:"作曲した本人が歌っている歌ってみた"}, "セルフカバー") : null,
         ...creditEls(i),
         el("span",{class:"badge src"}, i.src==="youtube" ? "YouTube" : "ニコニコ"),
         el("span",{}, fmtViews(i.views)),

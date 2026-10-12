@@ -16497,7 +16497,8 @@
   "by": "バルーン",
   "firstSeen": "2026-10-09T11:31:51.979Z",
   "of": "nico:sm29247339",
-  "a": "niconico:11396280"
+  "a": "niconico:11396280",
+  "self": 1
  },
  {
   "id": "nico:sm46853654",
@@ -21235,7 +21236,8 @@
   "firstSeen": "2026-10-09T11:31:51.996Z",
   "of": "yt:M9moY0hEJRE",
   "p": "Kanaria",
-  "a": "youtube:UC10BM9XdLdrvB8japwmRUvA"
+  "a": "youtube:UC10BM9XdLdrvB8japwmRUvA",
+  "self": 1
  },
  {
   "id": "nico:sm46845521",
@@ -21773,7 +21775,8 @@
   "p": "ボカコレルーキー2026夏参加曲",
   "a": "niconico:142952562",
   "firstSeen": "2026-10-09T11:31:52.031Z",
-  "of": "nico:sm46604112"
+  "of": "nico:sm46604112",
+  "self": 1
  },
  {
   "id": "nico:sm46841691",
@@ -22052,7 +22055,8 @@
   "firstSeen": "2026-10-08T15:40:42.020Z",
   "p": "Kanaria",
   "of": "yt:M9moY0hEJRE",
-  "a": "youtube:UC10BM9XdLdrvB8japwmRUvA"
+  "a": "youtube:UC10BM9XdLdrvB8japwmRUvA",
+  "self": 1
  },
  {
   "id": "nico:sm46840281",
@@ -29852,7 +29856,8 @@
   "seed": true,
   "p": "雨良",
   "of": "yt:Dz5rALpx06M",
-  "a": "youtube:UCeBuESc6vN_IiFR3je4NYTg"
+  "a": "youtube:UCeBuESc6vN_IiFR3je4NYTg",
+  "self": 1
  },
  {
   "id": "yt:IxSvgPhdc8c",
@@ -47893,7 +47898,8 @@
   "seed": true,
   "of": "nico:sm37467451",
   "p": "Giga & KIRA",
-  "a": "niconico:4845576"
+  "a": "niconico:4845576",
+  "self": 1
  },
  {
   "id": "yt:Xz5tOyOafVc",
@@ -50272,7 +50278,8 @@
   "seed": true,
   "of": "nico:sm34608999",
   "p": "Ayase",
-  "a": "niconico:86488427"
+  "a": "niconico:86488427",
+  "self": 1
  },
  {
   "id": "nico:sm36332327",
@@ -50953,7 +50960,8 @@
   "seed": true,
   "of": "nico:sm36036629",
   "p": "Ayase",
-  "a": "niconico:86488427"
+  "a": "niconico:86488427",
+  "self": 1
  },
  {
   "id": "nico:sm36119453",
@@ -55520,7 +55528,8 @@
   "seed": true,
   "of": "nico:sm34214810",
   "p": "まふまふ",
-  "a": "niconico:18874531"
+  "a": "niconico:18874531",
+  "self": 1
  },
  {
   "id": "nico:sm34214810",
@@ -56569,7 +56578,8 @@
   "seed": true,
   "of": "nico:sm33715008",
   "p": "まふまふ",
-  "a": "niconico:18874531"
+  "a": "niconico:18874531",
+  "self": 1
  },
  {
   "id": "nico:sm33779247",
@@ -58202,7 +58212,8 @@
   "seed": true,
   "of": "nico:sm33260180",
   "p": "まふまふ",
-  "a": "niconico:18874531"
+  "a": "niconico:18874531",
+  "self": 1
  },
  {
   "id": "nico:sm33303514",
@@ -64500,7 +64511,8 @@
   "seed": true,
   "of": "nico:sm31721471",
   "p": "こんにちは谷田さん",
-  "a": "niconico:40480256"
+  "a": "niconico:40480256",
+  "self": 1
  },
  {
   "id": "nico:sm31812584",
@@ -65980,7 +65992,8 @@
   "seed": true,
   "of": "nico:sm31480307",
   "p": "まふまふ",
-  "a": "niconico:18874531"
+  "a": "niconico:18874531",
+  "self": 1
  },
  {
   "id": "yt:PBlOi5OVcKs",
@@ -77041,7 +77054,8 @@
   "seed": true,
   "of": "nico:sm26310950",
   "p": "まふまふ",
-  "a": "niconico:18874531"
+  "a": "niconico:18874531",
+  "self": 1
  },
  {
   "id": "nico:sm27726846",
@@ -77648,7 +77662,8 @@
   "firstSeen": "2026-10-08T15:10:08.672Z",
   "seed": true,
   "of": "nico:sm27399621",
-  "a": "niconico:1101042"
+  "a": "niconico:1101042",
+  "self": 1
  },
  {
   "id": "nico:sm27399621",
@@ -82337,7 +82352,8 @@
   "seed": true,
   "of": "nico:sm24623249",
   "p": "まふまふ",
-  "a": "niconico:18874531"
+  "a": "niconico:18874531",
+  "self": 1
  },
  {
   "id": "yt:uGsXN-OpxgQ",
@@ -84694,7 +84710,8 @@
   "uploader": null,
   "by": "まふまふ",
   "firstSeen": "2026-10-08T15:10:08.815Z",
-  "seed": true
+  "seed": true,
+  "self": 1
  },
  {
   "id": "nico:sm24408486",
@@ -87386,7 +87403,8 @@
   "seed": true,
   "of": "nico:sm22491239",
   "p": "まふまふ",
-  "a": "niconico:18874531"
+  "a": "niconico:18874531",
+  "self": 1
  },
  {
   "id": "nico:sm23348992",
@@ -92378,7 +92396,8 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.863Z",
-  "seed": true
+  "seed": true,
+  "self": 1
  },
  {
   "id": "nico:sm21674942",
@@ -120249,7 +120268,8 @@
   "seed": true,
   "of": "nico:sm11188434",
   "p": "yuukiss",
-  "a": "niconico:527473"
+  "a": "niconico:527473",
+  "self": 1
  },
  {
   "id": "nico:sm3176172",
