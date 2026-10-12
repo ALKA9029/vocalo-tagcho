@@ -1,5 +1,27 @@
 [
  {
+  "id": "UCii85-6X30uI0epcMi4spKQ",
+  "added": "2026-10-12T21:33:25.769Z",
+  "name": "黒魔 / Chroma",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-12T11:00:12Z"
+ },
+ {
+  "id": "UC3Bjw_Ek1FTbhEKZsh9uo1w",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "須田景凪 バルーン",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-12T11:00:05Z",
+  "pinned": true
+ },
+ {
+  "id": "UCW5xxEBTK0lebkTbQMNZJBw",
+  "name": "Fake Beat Japan",
+  "added": "2026-10-09T12:06:54.468Z",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-12T10:00:28Z"
+ },
+ {
   "id": "UCV-hBJ1D-s_n-vPSHzDHWjA",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "PPP Sounds",
@@ -14,13 +36,6 @@
   "genre": "ボカロ",
   "lastHit": "2026-10-11T10:00:27Z",
   "pinned": true
- },
- {
-  "id": "UCW5xxEBTK0lebkTbQMNZJBw",
-  "name": "Fake Beat Japan",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-11T10:00:24Z"
  },
  {
   "id": "UCv1KOiaRusvqOR4BrT9Sh8w",
@@ -75,6 +90,13 @@
   "pinned": true
  },
  {
+  "id": "UCgVoOtEHrVg4RFdD-35Pb3A",
+  "added": "2026-10-12T21:33:25.769Z",
+  "name": "Plus Music!! Channel",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-10T10:15:43Z"
+ },
+ {
   "id": "UCtmi2O7lp0C_i53hFIExAaA",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "サツキ",
@@ -89,6 +111,13 @@
   "genre": "ボカロ",
   "lastHit": "2026-10-10T10:00:09Z",
   "pinned": true
+ },
+ {
+  "id": "UCFDqQoV6E2JYApLtF4mZR8g",
+  "added": "2026-10-12T21:33:25.769Z",
+  "name": "長谷川迷子",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-10T10:00:06Z"
  },
  {
   "id": "UCQ1U65-CQdIoZ2_NA4Z4F7A",
@@ -187,6 +216,13 @@
   "genre": "ボカロ",
   "lastHit": "2026-10-09T10:00:17Z",
   "pinned": true
+ },
+ {
+  "id": "UC9abZyl9Wjfn1ZwuFgJ0hGQ",
+  "added": "2026-10-12T21:33:25.769Z",
+  "name": "奈良瀬",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-09T10:00:10Z"
  },
  {
   "id": "UC49ZFh9hYLpHIN_UbL9wE0g",
@@ -1526,14 +1562,6 @@
   "pinned": true
  },
  {
-  "id": "UC3Bjw_Ek1FTbhEKZsh9uo1w",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "須田景凪 バルーン",
-  "genre": "ボカロ",
-  "lastHit": "2019-07-19T09:00:08Z",
-  "pinned": true
- },
- {
   "id": "UChFmH8dTXNPYCY3XeF9xtSA",
   "added": "2026-10-11T21:32:47.826Z",
   "name": "164",
@@ -1542,12 +1570,25 @@
   "pinned": true
  },
  {
-  "id": "UChOF_ryuu0huXTPeyxlpfSQ",
-  "added": "2026-10-11T21:32:47.826Z",
-  "name": "栗山夕璃",
-  "genre": "ボカロ",
-  "lastHit": "2019-04-08T11:00:06Z",
-  "pinned": true
+  "id": "UC9zY_E8mcAo_Oq772LEZq8Q",
+  "name": "THE FIRST TAKE",
+  "added": "2026-10-09T12:06:54.468Z",
+  "genre": "J-POP",
+  "lastHit": "2026-10-12T13:00:08Z"
+ },
+ {
+  "id": "UCqEmTmyRamfTHxCVYR_gluA",
+  "name": "Yusuke ch.悠佑",
+  "added": "2026-10-09T12:06:54.468Z",
+  "genre": "J-POP",
+  "lastHit": "2026-10-12T12:30:07Z"
+ },
+ {
+  "id": "UCQbxh2ft3vw9M6Da_kuIa6A",
+  "added": "2026-10-10T07:39:29.506Z",
+  "name": "KING OF KINGS",
+  "genre": "J-POP",
+  "lastHit": "2026-10-12T12:00:00Z"
  },
  {
   "id": "UCFvSFbT8okMrpuFxBEIB2lg",
@@ -1557,11 +1598,46 @@
   "lastHit": "2026-10-12T10:00:36Z"
  },
  {
+  "id": "UCXLroTeJx2AFiZ0bPGsbzZQ",
+  "added": "2026-10-12T11:09:58.604Z",
+  "name": "須野高校軽音部",
+  "genre": "J-POP",
+  "lastHit": "2026-10-12T10:00:33Z"
+ },
+ {
+  "id": "UCGQg0ZjM_QQ2jvUd5j9Fp-Q",
+  "added": "2026-10-12T21:33:25.769Z",
+  "name": "センラ / SENRA",
+  "genre": "J-POP",
+  "lastHit": "2026-10-12T10:00:11Z"
+ },
+ {
+  "id": "UCWz0CSYCxf4MhRKPDm220AQ",
+  "added": "2026-10-12T21:33:25.769Z",
+  "name": "神田笑一 / Kanda Shoichi【 にじさんじ 】",
+  "genre": "アニソン",
+  "lastHit": "2026-10-12T10:00:01Z"
+ },
+ {
   "id": "UCH-SLA_jpPhM2lzdZjZDxjQ",
   "added": "2026-10-10T21:31:46.969Z",
   "name": "音ノ瀬らこ / Otonose Raco",
   "genre": "アニソン",
   "lastHit": "2026-10-12T09:06:54Z"
+ },
+ {
+  "id": "UCoEIdZkDEZdrCDCJSqwifzw",
+  "added": "2026-10-12T21:33:25.769Z",
+  "name": "Travis Japan",
+  "genre": "アニソン",
+  "lastHit": "2026-10-12T09:00:07Z"
+ },
+ {
+  "id": "UCansw_9voCUl4K_EkT-wjGQ",
+  "added": "2026-10-12T11:09:58.604Z",
+  "name": "MsCREW",
+  "genre": "J-POP",
+  "lastHit": "2026-10-11T19:23:07Z"
  },
  {
   "id": "UCi_AquB9uaI3-9xXkuWG7IQ",
@@ -1583,13 +1659,6 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "J-POP",
   "lastHit": "2026-10-11T13:00:31Z"
- },
- {
-  "id": "UC9zY_E8mcAo_Oq772LEZq8Q",
-  "name": "THE FIRST TAKE",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "J-POP",
-  "lastHit": "2026-10-11T13:00:08Z"
  },
  {
   "id": "UCyWEVH8tkJcJVO7IiQ1DGEg",
@@ -1648,6 +1717,13 @@
   "lastHit": "2026-10-11T09:00:11Z"
  },
  {
+  "id": "UC6vGLYWS98H7BKrNLrNbtYw",
+  "name": "OCEAN BEACH TREE",
+  "added": "2026-10-09T12:06:54.468Z",
+  "genre": "アニソン",
+  "lastHit": "2026-10-11T08:17:41Z"
+ },
+ {
   "id": "UCJtMfSSPKuW22GXfkaN7DOA",
   "added": "2026-10-11T21:32:47.826Z",
   "name": "ころんの実況【すとぷり】",
@@ -1683,13 +1759,6 @@
   "name": "有世華望 / Kanon Alise",
   "genre": "J-POP",
   "lastHit": "2026-10-10T12:00:14Z"
- },
- {
-  "id": "UCQbxh2ft3vw9M6Da_kuIa6A",
-  "added": "2026-10-10T07:39:29.506Z",
-  "name": "KING OF KINGS",
-  "genre": "J-POP",
-  "lastHit": "2026-10-10T12:00:11Z"
  },
  {
   "id": "UC_4tXjqecqox5Uc05ncxpxg",
@@ -2030,13 +2099,6 @@
   "pinned": true
  },
  {
-  "id": "UCXLroTeJx2AFiZ0bPGsbzZQ",
-  "added": "2026-10-12T11:09:58.604Z",
-  "name": "須野高校軽音部",
-  "genre": "J-POP",
-  "lastHit": "2026-10-08T10:00:25Z"
- },
- {
   "id": "UC2qEaPOqTb0oRJNpHbqvINQ",
   "name": "りする",
   "added": "2026-10-09T12:06:54.468Z",
@@ -2059,26 +2121,12 @@
   "lastHit": "2026-10-08T09:16:40Z"
  },
  {
-  "id": "UC6vGLYWS98H7BKrNLrNbtYw",
-  "name": "OCEAN BEACH TREE",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "アニソン",
-  "lastHit": "2026-10-08T08:29:23Z"
- },
- {
   "id": "UCpFgmZm65yOU5X-hmWkWjuw",
   "name": "Mrs. GREEN APPLE",
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "アニソン",
   "lastHit": "2026-10-08T01:21:15Z",
   "pinned": true
- },
- {
-  "id": "UCansw_9voCUl4K_EkT-wjGQ",
-  "added": "2026-10-12T11:09:58.604Z",
-  "name": "MsCREW",
-  "genre": "J-POP",
-  "lastHit": "2026-10-07T20:47:02Z"
  },
  {
   "id": "UCOBECp2BuroMCjEZhu_AK-Q",
@@ -2437,13 +2485,6 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "J-POP",
   "lastHit": "2026-10-04T09:00:09Z"
- },
- {
-  "id": "UCqEmTmyRamfTHxCVYR_gluA",
-  "name": "Yusuke ch.悠佑",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "J-POP",
-  "lastHit": "2026-10-04T09:00:08Z"
  },
  {
   "id": "UCier45f5l9zyGJLH22JlBIQ",
