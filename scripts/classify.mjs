@@ -288,6 +288,40 @@ export function parseYouTube(raw, channel = "") {
   return { song: song || raw.trim(), creator: artist, voice: fv ? canonicalVoice(fv) : (voiceFromParts || (bracketVoice && canonicalVoice(bracketVoice))), originalCreator: "", channel: ch, otherName, brackets: [] };
 }
 
+// 歌い手名の後片付け。「〜歌ってみたのはメガテラ・ゼロ」「『曲』を歌ってみた【ぱなまん】」「を歌わせて頂きました。灯油」
+// のように、タイトルの文の切れ端が歌い手名に残ったものを直す。名前が読めなければタイトルの【】の中から探す
+const SING_VERB = /(?:歌ってみ(?:た|ました)った?|歌わせて(?:頂|いただ)きました|歌わせてみた|歌いました|歌いたかった|歌った|してみた)[。.]?/g;
+const NOT_SINGER = /歌ってみ|歌わせ|cover|カバー|\bMV\b|\bPV\b|フル|キー|ショート|再投稿|アカペラ|替え歌|爆音|推奨|合唱|オリジナル|リレー|提供|ボカロ|VOCALOID|MMD|声真似|remix|edition|コラボ|で$|OP$|ED$|部門|配布|付き|\bfull\b|arrange|^ver\.?$/i;
+const isJunkName = n => !n || /w{3,}|ｗ{2,}|だった(から)?$|てみた$|^[。.、\s★☆@＠!！]*$/.test(n) || n.length > 30;
+function singerFromBrackets(title) {
+  const t = title.normalize("NFKC");
+  const cands = [...t.matchAll(/【([^】]+)】|\[([^\]]+)\]|[（(]([^）)]+?)\s*ver\.?\s*[）)]/gi)].map(m => (m[1] || m[2] || m[3] || "").replace(/\s*ver\.?$/i, "").trim());
+  for (const c of cands.reverse()) if (c && !NOT_SINGER.test(c) && !isJunkName(c)) return c;
+  return "";
+}
+export function fixSinger(by, title) {
+  let n = (by || "").trim();
+  if (!n) return "";
+  let sentence = false;   // 名前ではなく、タイトルの文の切れ端だった
+  if (/^のは/.test(n)) n = n.slice(2).trim();                       // 「歌ってみたのは○○」
+  else if (/^[をが]/.test(n) || new RegExp("^" + SING_VERB.source).test(n)) {   // 「〜を歌ってみた。○○」：区切りの後ろだけが名前
+    sentence = true;
+    const rest = n.replace(/^[をが]/, "").replace(SING_VERB, " ");
+    const m = rest.match(/[。.\s★☆@＠]+([^\s。.★☆@＠]+)\s*$/);
+    n = m ? m[1] : "";
+  }
+  // 「164 - ウトガワが歌ってみた」の「が」
+  if (/[がを]$/.test(n) && title.includes(n + "歌")) n = n.slice(0, -1);
+  // 「REIKA )浦和路上ライブ…」の閉じかっこから後ろ
+  if (!/[（(]/.test(n)) n = n.replace(/\s*[)）].*$/, "");
+  n = n.replace(/^[\s。.、★☆@＠]+|\s+$/g, "");
+  if (/\s[-–—]\s/.test(n)) n = n.split(/\s[-–—]\s/).pop().trim();
+  if (sentence || isJunkName(n) || NOT_SINGER.test(n)) {
+    if (!n || isJunkName(n) || NOT_SINGER.test(n)) n = singerFromBrackets(title);
+  }
+  return n;
+}
+
 // 動画1件 → サイトで使う形
 export function classify(video, { fallbackGenre = "その他" } = {}) {
   const tags = video.tags || [];
@@ -339,6 +373,7 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     item.by = (parsed.creator && !/^[。.\s]*$/.test(parsed.creator) ? parsed.creator : (verBy ? verBy[1] : "") || video.uploader || "")
       .replace(/^[\s。.、]+/, "").replace(/^.*?(?:ver\.?|by)\s*/i, m => /^(ver\.?|by)/i.test(m.trim()) || /[。\s]/.test(m) ? "" : m)
       .replace(/^VOCALOID\s+/i, "").replace(/\s*\+.*$/, "").replace(/\s*※.*$/, "").replace(/\s+/g, " ").trim();
+    item.by = fixSinger(item.by, video.title);
     if (parsed.originalCreator) item.pHint = parsed.originalCreator;
     // 歌い手が歌声（KAITOなど）なら、歌声としても絞り込めるように
     if (isVoice(item.by)) item.v = canonicalVoice(item.by);
