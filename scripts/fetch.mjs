@@ -406,7 +406,7 @@ for (const v of videos) {
   const fallback = v.channelGenre && v.channelGenre !== "歌ってみた" ? v.channelGenre : "その他";
   const item = classify(v, { fallbackGenre: fallback });
   if (v.seed) item.seed = true;
-  if (v.channelGenre === "歌ってみた") { item.kind = "歌ってみた"; item.by ||= v.uploader; delete item.p; delete item.v; }
+  if (v.channelGenre === "歌ってみた") { item.kind = "歌ってみた"; item.chCover = true; item.by ||= v.uploader; delete item.p; delete item.v; }
   const prev = existing.get(item.id);
   existing.set(item.id, prev ? { ...prev, ...item, seed: prev.seed || item.seed, firstSeen: prev.firstSeen } : { ...item, firstSeen: new Date().toISOString() });
 }

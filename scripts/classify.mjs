@@ -20,7 +20,7 @@ const VOICE_ALIASES = { "vflower": "flower", "v4flower": "flower", "hatsunemiku"
 
 const VOCALO_TAGS = ["VOCALOID", "ボカロ", "ボーカロイド", "CeVIO", "CeVIOAI", "SynthesizerV", "UTAU", "VOICEVOX", "NEUTRINO", "VOCALOIDオリジナル曲"];
 const JPOP_TAGS = ["J-POP", "JPOP", "J-Pop"];
-const COVER_RE = /歌ってみた|歌ってもらった|歌わせてみた|歌わせていただきました|cover(ed)?\b|カバー/i;
+const COVER_RE = /歌ってみた|歌ってみました|歌いました|歌ってもらった|歌わせてみた|歌わせていただきました|cover(ed)?\b|カバー/i;
 
 export function normalize(s = "") {
   return s.normalize("NFKC").toLowerCase()
@@ -32,8 +32,14 @@ const hasTag = (tags, list) => tags.some(t => list.some(x => normalize(t) === no
 // カラオケ（ニコカラ・Off Vocal）など、曲そのものではない動画
 export const isKaraoke = title => /ニコカラ|off ?vocal|カラオケ|instrumental|インスト/i.test(title || "");
 
-export function detectKind(title, tags) {
-  if (tags.some(t => /^歌ってみた/.test(t)) || COVER_RE.test(title)) return "歌ってみた";
+// タイトルに「オリジナル曲」「【オリジナル】」「[original]」とある動画は本家（「オリジナルMV」「オリジナル振付」は除く）
+const ORIGINAL_RE = /オリジナル(曲|楽曲|ソング)|[【\[（(]\s*(オリジナル|original(\s*song)?)\s*[】\]）)]/i;
+
+export function detectKind(title, tags, src) {
+  if (COVER_RE.test(title)) return "歌ってみた";
+  if (ORIGINAL_RE.test(title)) return "本家";
+  // YouTubeのタグは検索よけに「歌ってみた」を入れている本家（作者本人のMVなど）が多いので使わない
+  if (src !== "youtube" && tags.some(t => /^歌ってみた/.test(t))) return "歌ってみた";
   return "本家";
 }
 
@@ -285,7 +291,7 @@ export function parseYouTube(raw, channel = "") {
 // 動画1件 → サイトで使う形
 export function classify(video, { fallbackGenre = "その他" } = {}) {
   const tags = video.tags || [];
-  const kind = detectKind(video.title, tags);
+  const kind = detectKind(video.title, tags, video.src);
   const parsed = video.src === "youtube" ? parseYouTube(video.title, video.uploader) : parseTitle(video.title);
   // 歌声は、登録済みの歌声名に当てはまるものだけを使う（「feat. じん」「feat. まふまふ」のような人の名前は歌声にしない）
   const pickVoice = x => { if (!x) return null; if (isVoice(x)) return canonicalVoice(x); const v = splitNames(x).voices[0]; return v ? canonicalVoice(v) : null; };

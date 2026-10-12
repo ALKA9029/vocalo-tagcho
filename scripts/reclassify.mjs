@@ -12,7 +12,8 @@ const out = items.map(old => {
   const fresh = classify({ ...old, uploaderId },
     { fallbackGenre: old.g === "その他" ? "その他" : old.g });
   const keep = { firstSeen: old.firstSeen, seed: old.seed };
-  if (old.src === "youtube" && old.kind === "歌ってみた" && !old.v) fresh.kind = "歌ってみた";
+  // 「歌ってみた」チャンネルとして手動登録したチャンネルの動画は、タイトルに関係なく歌ってみたのまま
+  if (old.chCover) { fresh.kind = "歌ってみた"; fresh.chCover = true; }
   const merged = { ...fresh, ...keep };
   if (!merged.p && old.p && old.src === "youtube") merged.p = old.p;
   const o = overrides[merged.id];
