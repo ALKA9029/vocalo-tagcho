@@ -356,7 +356,8 @@ function visibleItems(){
     return true;
   });
   const total = i => Object.values(c[i.id]||{}).reduce((a,b)=>a+b,0);
-  const byDate = (a,b)=>(b.date||"").localeCompare(a.date||"");
+  // 投稿日時はニコニコが日本時間（+09:00）、YouTubeが世界標準時（Z）で書かれているので、文字のままではなく時刻に直して比べる
+  const byDate = (a,b)=>(b._t||0)-(a._t||0);
   items.sort(state.sort==="votes" ? (a,b)=>total(b)-total(a) || (b.views||0)-(a.views||0)
     : state.sort==="new" ? byDate : (a,b)=>(b.views||0)-(a.views||0));
   return items;
@@ -583,6 +584,7 @@ render();
 (async()=>{
   try {
     const [songs, meta] = await Promise.all([fetch("data/site.json").then(r=>r.json()), fetch("data/meta.json").then(r=>r.json()).catch(()=>null)]);
+    for (const i of songs) i._t = Date.parse(i.date) || 0;
     ITEMS = songs; ITEM = Object.fromEntries(ITEMS.map(i=>[i.id,i]));
     baseNote = `${ITEMS.length.toLocaleString("ja-JP")}曲を収録${meta ? `（${fmtDate(meta.updatedAt)}時点）` : ""}。サムネの▶でこのページで再生、曲名の↗で動画サイトを開く、名前やバッジで絞り込み、行を押すと関連曲。作者名が空の曲は、読み取りを改善中。${sb ? "「＋ タグをつける」から、聴いた印象を投票してね。みんなの票で3票以上集まったタグが定着するよ。" : "タグの投票は今はこの端末にだけ保存されるよ（みんなの集計は準備中）。"}`;
     setStatus(baseNote);

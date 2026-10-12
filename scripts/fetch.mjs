@@ -430,11 +430,13 @@ for (const i of items) {
   const o = overrides[i.id];
   if (o) { Object.assign(i, o); if ("of" in o) i.ofLocked = true; }
 }
-items = linkCovers(items).sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+// 投稿日時はニコニコが日本時間、YouTubeが世界標準時で書かれているので、時刻に直して比べる
+const byNewest = (a, b) => (Date.parse(b.date) || 0) - (Date.parse(a.date) || 0);
+items = linkCovers(items).sort(byNewest);
 // 人気曲（seed）は原曲の土台なので件数制限で消さない。それ以外は新しい順に残す
 const seeds = items.filter(i => i.seed);
 items = [...seeds, ...items.filter(i => !i.seed).slice(0, Math.max(0, config.maxItems - seeds.length))]
-  .sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+  .sort(byNewest);
 
 await mkdir(path("data/"), { recursive: true });
 if (fixtureArg < 0) await updateFollowed(items).catch(e => console.warn("自動フォローの更新に失敗:", e.message));
