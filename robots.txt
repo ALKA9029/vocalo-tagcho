@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tagtune.net/sitemap.xml

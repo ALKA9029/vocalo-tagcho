@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>TagTune（タグチューン）</title>
+<link rel="canonical" href="https://tagtune.net/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TagTune（タグチューン）">
+<meta property="og:title" content="TagTune（タグチューン）｜印象タグで探す音楽サイト">
+<meta property="og:url" content="https://tagtune.net/">
 <meta name="description" content="TagTune（タグチューン）は、ボカロ・J-POP・アニソン・歌ってみたを、聴いた人がつけた「爽やか」「エモい」などの印象タグで探せる音楽サイト。">
 <style>
 *,*::before,*::after{box-sizing:border-box}
@@ -194,6 +199,7 @@ footer a:hover{color:var(--accent)}
   <button class="loadmore" id="more" hidden>もっと見る</button>
 
   <footer>
+    <a href="tag/">タグから探す</a>
     <a href="about.html">このサイトについて・プライバシーポリシー</a>
     <a href="about.html#contact">お問い合わせ・掲載の取り下げ</a>
   </footer>
@@ -298,6 +304,12 @@ function related(i){
         el("span",{class:"sub"}, sub(x)))) : [el("span",{class:"none"},"まだ見つかってないよ")]))));
 }
 
+// 上に固定された検索欄に隠れないように、その下に曲の行が来るようにスクロールする
+function scrollToItem(node, smooth){
+  const top = node.getBoundingClientRect().top + window.scrollY - $(".bar").offsetHeight - 8;
+  window.scrollTo({ top, behavior: smooth && !matchMedia("(prefers-reduced-motion: reduce)").matches ? "smooth" : "auto" });
+}
+
 function jump(id){
   state.q=""; $("#q").value=""; state.period=""; $("#period").value=""; state.genre=""; state.kind=""; state.person=null; state.filter.clear();
   state.rel = id; state.open = null;
@@ -306,7 +318,7 @@ function jump(id){
   if (idx >= state.shown) state.shown = idx + 1;
   render();
   const node = document.getElementById("item-"+id);
-  if (node){ node.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto":"smooth", block:"start"}); node.classList.remove("flash"); void node.offsetWidth; node.classList.add("flash"); }
+  if (node){ scrollToItem(node, true); node.classList.remove("flash"); void node.offsetWidth; node.classList.add("flash"); }
 }
 
 // ---------- 絞り込み欄をしまう ----------
@@ -577,6 +589,16 @@ $("#q").addEventListener("input", e=>{ state.q = e.target.value; state.shown = P
 $("#sort").addEventListener("change", e=>{ state.sort = e.target.value; state.shown = PAGE; render(); });
 $("#period").addEventListener("change", e=>{ state.period = e.target.value; state.shown = PAGE; render(); });
 $("#more").addEventListener("click", ()=>{ state.shown += PAGE; render(); });
+
+// 曲ページ・タグページからのリンク（?id=曲 / ?tag=タグ / ?q=検索語）で開いたとき
+let pendingId = null;
+function applyUrlParams(){
+  const P = new URLSearchParams(location.search);
+  const q = P.get("q"), tag = P.get("tag"), id = P.get("id");
+  if (q) { state.q = q; $("#q").value = q; }
+  if (tag && TAGS.includes(tag)) state.filter.add(tag);
+  if (id) pendingId = id;
+}
 try { if (localStorage.getItem(FOLD_KEY) === "1") $(".bar").classList.add("folded"); } catch {}
 setFold($(".bar").classList.contains("folded"), false);
 render();
@@ -588,8 +610,11 @@ render();
     ITEMS = songs; ITEM = Object.fromEntries(ITEMS.map(i=>[i.id,i]));
     baseNote = `${ITEMS.length.toLocaleString("ja-JP")}曲を収録${meta ? `（${fmtDate(meta.updatedAt)}時点）` : ""}。サムネの▶でこのページで再生、曲名の↗で動画サイトを開く、名前やバッジで絞り込み、行を押すと関連曲。作者名が空の曲は、読み取りを改善中。${sb ? "「＋ タグをつける」から、聴いた印象を投票してね。みんなの票で3票以上集まったタグが定着するよ。" : "タグの投票は今はこの端末にだけ保存されるよ（みんなの集計は準備中）。"}`;
     setStatus(baseNote);
+    applyUrlParams();
     render();
-    startVotes();
+    if (pendingId && ITEM[pendingId]) jump(pendingId);
+    // 票を読み込んだあとに一覧を描き直すので、リンクで開いた曲の位置にもう一度合わせる
+    startVotes().finally(()=>{ if (pendingId && window.scrollY < 50) { const n = document.getElementById("item-"+pendingId); if (n) scrollToItem(n, false); } });
   } catch {
     setStatus("曲データを読み込めなかったよ。ページを開き直してみて。");
   }
