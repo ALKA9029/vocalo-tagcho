@@ -1,6 +1,6 @@
 # TagTune（タグチューン）
 
-https://alka9029.github.io/vocalo-tagcho/
+https://tagtune.net/ （前のURL https://alka9029.github.io/vocalo-tagcho/ からも自動で移動する）
 
 ボカロ・J-POP・アニソン・歌ってみたを、聴いた人がつけた印象タグで探せるサイト（制作中）。
 
