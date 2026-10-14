@@ -1,4 +1,4 @@
-2026-10-14T23:23:48.999Z
+2026-10-14T23:31:26.416Z
 ニコニコ「ボカロ新曲」1ページ目: 44件
 ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」1ページ目: 100件
 ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」2ページ目: 100件
@@ -27,23 +27,51 @@
 ニコニコ「歌ってみた 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」4ページ目: 100件
 ニコニコ「歌ってみた 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」5ページ目: 42件
 YouTube急上昇 1ページ目: 30件
-YouTube新着検索「MV」1ページ目: 50件
-YouTube新着検索「Music Video」1ページ目: 50件
-YouTube新着検索「アニメ主題歌」1ページ目: 50件
-YouTube新着検索「歌ってみた」1ページ目: 50件
-YouTube新着検索「cover」1ページ目: 50件
-YouTube新着検索「ボカロ」1ページ目: 50件
-YouTube新着検索「オリジナル曲」1ページ目: 50件
-YouTube新着検索「ボカロ feat.」1ページ目: 50件
-YouTube新着検索「ボカロオリジナル」1ページ目: 50件
-YouTube新着検索「韓国語のボカロ」1ページ目: 36件
-自動フォロー: 400チャンネル中 0件を確認、新着 0本のうち曲として追加 0本
+⚠ YouTube新着検索「MV」: HTTP 429 {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
+⚠ YouTube新着検索「Music Video」: HTTP 429 {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
+⚠ YouTube新着検索「アニメ主題歌」: HTTP 429 {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
+⚠ YouTube新着検索「歌ってみた」: HTTP 429 {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
+⚠ YouTube新着検索「cover」: HTTP 429 {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
+⚠ YouTube新着検索「ボカロ」: HTTP 429 {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
+⚠ YouTube新着検索「オリジナル曲」: HTTP 429 {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
+⚠ YouTube新着検索「ボカロ feat.」: HTTP 429 {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
+⚠ YouTube新着検索「ボカロオリジナル」: HTTP 429 {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
+⚠ YouTube新着検索「韓国語のボカロ」: HTTP 429 {
+  "error": {
+    "code": 429,
+    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
+自動フォロー: 400チャンネル中 34件を確認、新着 42本のうち曲として追加 0本
 ニコニコの再生数を更新: 54件
-原曲さがし: 3曲を調べて、原曲を3曲見つけた
-原曲さがし（YouTube）「シュガーソングとビターステップ」→ UNISON SQUARE GARDEN「シュガーソングとビターステップ」MV（unisonsgofficial）
-原曲さがし（YouTube）「only my railgun」→ 見つからず
-⚠ 原曲さがし（YouTube）: HTTP 429、今日はここまで
-原曲さがし（YouTube）: 30曲を調べて、原曲を1曲見つけた
-YouTubeの再生数を更新: 1138件（日本の曲ではないので外す: 0件）
+原曲さがし: 0曲を調べて、原曲を0曲見つけた
+⚠ 原曲さがし（YouTube）: HTTP 429 { "error": { "code": 429, "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908092212459'.", "errors": [ { "message": "Quota exceeded for quota metric 'Search Qu、今日はここまで
+原曲さがし（YouTube）: 0曲を調べて、原曲を0曲見つけた
+YouTubeの再生数を更新: 1264件（日本の曲ではないので外す: 0件）
 自動フォローのチャンネル: 400件（ボカロの本家 200件・その他 200件）
 保存しました: data/songs.json（全4290件、うち歌ってみたの原曲ひもづけ 1016件）
