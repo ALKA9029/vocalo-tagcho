@@ -411,7 +411,7 @@
   "title": "GReeeeN「キセキ」MsCREW | Cinematic Industrial AOR Rock Cover by紅櫻/BeniZakulla",
   "t": "キセキ",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "J-POP",
   "date": "2026-10-13T20:41:02Z",
   "views": 1891,
   "likes": 29,
@@ -453,10 +453,9 @@
   "descHead": "あの名曲「キセキ」を、紅櫻（BENIZAKULLA）が新たなサウンドでカバー。\n\n美しい原曲メロディを大切にしながら、重厚なIndustrial Rock、洗練されたAOR、そして映画のようにドラマチックな展開を融合しました。\n\n繊細な息遣いから力強く伸びる歌声。\n感情を揺さぶる泣きのギター。\n静寂から一気に解き放たれるバンドサウンド。\n\n広がりと奥行きを意識した立体的な音響表現とともに、MsCREWならではの「キセキ」をお楽しみください。\n\n🎧 **ヘッドホン・イヤホンでの視聴がおすすめです。**\n\n━━━━━━━━━━━━━━━━\n\n🌹 もうひとつの「キセキ」もおすすめ！\n\n以前公開し",
   "by": "紅櫻",
   "pHint": "Cinematic Industrial AOR Rock",
-  "p": "合唱団P",
-  "a": "niconico:14201029",
-  "firstSeen": "2026-10-14T11:01:07.344Z",
-  "of": "nico:nm9946083"
+  "p": "Cinematic Industrial AOR Rock",
+  "a": "cinematicindustrialaorrock",
+  "firstSeen": "2026-10-14T11:01:07.344Z"
  },
  {
   "id": "yt:0lZzisY53Us",
@@ -1826,7 +1825,7 @@
   "title": "飛び出せ青春ロケ地 - 太陽がくれた季節 【AI Cover】｜青春ドラマ　飛び出せ青春の主題歌",
   "t": "太陽がくれた季節",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2026-10-12T12:00:00Z",
   "views": 15153,
   "likes": 46,
@@ -1862,10 +1861,9 @@
   "descHead": "飛び出せ青春ロケ地 - 太陽がくれた季節 【AI Cover】｜J-POP　レッツ・ビギン Let's begin! \n1970年代の青春ドラマ『飛び出せ青春』を象徴する、あまりにも印象的な一曲。「レッツ・ビギン！」――すべては、ここから始まった。\n\n1972年に放送された青春ドラマ『飛び出せ！青春』。\nその主題歌として多くの人の記憶に残っている、青い三角定規の「太陽がくれた季節」を、AI Coverとして現代的にリメイクしました。\n\nあの頃、テレビの中に広がっていた「青春」は、今とは少し違うものでした。\n\n走って、笑って、悩んで、ぶつかって。\nそして、何かを始めるときには――\n\n「レッツ・ビ",
   "by": "Songs Japanese",
   "pHint": "飛び出せ青春ロケ地",
-  "p": "初音ミク Append Early Soft",
-  "a": "niconico:2992510",
-  "firstSeen": "2026-10-14T11:01:07.354Z",
-  "of": "nico:sm9898358"
+  "p": "飛び出せ青春ロケ地",
+  "a": "飛び出せ青春ロケ地",
+  "firstSeen": "2026-10-14T11:01:07.354Z"
  },
  {
   "id": "nico:sm46917900",
@@ -3047,7 +3045,7 @@
   "title": "【SynthesizerV】革命デュアリズムを歌ってもらった【彩澄しゅお・彩澄りりせ】",
   "t": "革命デュアリズム",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2026-10-12T05:00:00+09:00",
   "views": 2746,
   "likes": 180,
@@ -3068,10 +3066,7 @@
   "uploaderId": 1749797,
   "uploader": null,
   "by": "",
-  "firstSeen": "2026-10-13T21:45:27.518Z",
-  "of": "nico:sm23105349",
-  "p": "レフティーモンスターP",
-  "a": "niconico:24882114"
+  "firstSeen": "2026-10-13T21:45:27.518Z"
  },
  {
   "id": "yt:hKOSBD7YM8E",
@@ -3349,7 +3344,7 @@
   "url": "https://www.nicovideo.jp/watch/sm46874708",
   "title": "【波音リツ誕生祭2026】ハッピーシンセサイザ【重音テト】",
   "t": "ハッピーシンセサイザ",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-10-12T00:00:00+09:00",
   "views": 115,
@@ -3368,11 +3363,11 @@
   ],
   "uploaderId": 2455218,
   "uploader": null,
-  "p": "EasyPop",
-  "v": "重音テト",
-  "a": "niconico:2455218",
+  "by": "",
   "firstSeen": "2026-10-13T22:31:19.916Z",
-  "pFilled": true
+  "of": "nico:sm12825985",
+  "p": "EasyPop",
+  "a": "niconico:2423537"
  },
  {
   "id": "nico:sm46914176",
@@ -3471,8 +3466,7 @@
   "v": "夏色花梨",
   "p": "ずっと真夜中でいいのに。",
   "a": "ずっと真夜中でいいのに",
-  "firstSeen": "2026-10-13T21:45:27.815Z",
-  "of": "nico:sm39060917"
+  "firstSeen": "2026-10-13T21:45:27.815Z"
  },
  {
   "id": "nico:sm46913790",
@@ -3506,8 +3500,7 @@
   "v": "夏色花梨",
   "p": "ずっと真夜中でいいのに。",
   "a": "ずっと真夜中でいいのに",
-  "firstSeen": "2026-10-13T21:45:27.527Z",
-  "of": "nico:sm39060917"
+  "firstSeen": "2026-10-13T21:45:27.527Z"
  },
  {
   "id": "yt:vqSt7ieImHk",
@@ -7476,9 +7469,7 @@
   "descHead": "ZARDの名曲『負けないで』をSynthesizer Vでカバーしました。夢に向かって進む力強さを、花響琴の歌声で表現しています。\n\n今回制作したDTMカバーは、原曲の持つ前向きなメッセージを大切にアレンジしました。聴く人の背中をそっと押してくれるような、心に響くサウンドを目指しています。\n\nボーカルには「Synthesizer V 花響琴」を使用し、繊細かつ力強い歌唱を追求しました。ぜひ歌詞と一緒にお楽しみください。\n\n--------------------------------------------------\n■ 原曲情報\n・楽曲：負けないで (1993)\n・歌唱：ZARD\n・作詞",
   "by": "WORKS",
   "firstSeen": "2026-10-13T21:45:27.814Z",
-  "p": "『初音ミク』でZARDの",
-  "of": "nico:sm2050345",
-  "a": "niconico:4216109"
+  "p": "『初音ミク』でZARDの"
  },
  {
   "id": "nico:sm46907654",
@@ -8516,7 +8507,7 @@
   "title": "北国の春｜千昌夫 原唱｜心に響く女性演歌カバー ❄️ 懐かしの昭和演歌・日本の名曲｜AI Cover",
   "t": "北国の春",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "J-POP",
   "date": "2026-10-10T01:21:13Z",
   "views": 4512,
   "likes": 45,
@@ -8529,8 +8520,7 @@
   "pHint": "千昌夫 原唱",
   "p": "千昌夫 原唱",
   "a": "千昌夫原唱",
-  "firstSeen": "2026-10-11T21:32:19.203Z",
-  "of": "nico:sm21075255"
+  "firstSeen": "2026-10-11T21:32:19.203Z"
  },
  {
   "id": "nico:sm46906182",
@@ -8569,8 +8559,8 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm46905316",
   "title": "【MMD】テトさんで神っぽいな【テトの日2026】",
-  "t": "テトさんで神っぽいな",
-  "kind": "本家",
+  "t": "神っぽいな",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-10-10T10:10:00+09:00",
   "views": 273,
@@ -8591,10 +8581,11 @@
   ],
   "uploaderId": 4654430,
   "uploader": null,
-  "p": "",
-  "v": "重音テト",
-  "a": "niconico:4654430",
-  "firstSeen": "2026-10-11T00:52:52.281Z"
+  "by": "",
+  "firstSeen": "2026-10-11T00:52:52.281Z",
+  "of": "yt:EHBFKhLUVig",
+  "p": "ピノキオピー",
+  "a": "youtube:UCMMBGMjrrWcRZmG_lW4jC-Q"
  },
  {
   "id": "nico:sm46905876",
@@ -8746,10 +8737,7 @@
   "uploaderId": 134074933,
   "uploader": null,
   "by": "globe",
-  "firstSeen": "2026-10-12T11:09:17.593Z",
-  "of": "nico:sm17376314",
-  "p": "Heavenz",
-  "a": "niconico:76265"
+  "firstSeen": "2026-10-12T11:09:17.593Z"
  },
  {
   "id": "nico:sm46907092",
@@ -8757,7 +8745,7 @@
   "url": "https://www.nicovideo.jp/watch/sm46907092",
   "title": "KAITOのお墓の前で泣かなﾇﾝﾃﾞください",
   "t": "KAITOのお墓の前で泣かなヌンデください",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-10-10T09:58:10+09:00",
   "views": 238,
@@ -8774,9 +8762,7 @@
   ],
   "uploaderId": 38798168,
   "uploader": null,
-  "p": "",
-  "v": "KAITO",
-  "a": "niconico:38798168",
+  "by": "",
   "firstSeen": "2026-10-11T00:52:52.279Z"
  },
  {
@@ -8816,7 +8802,7 @@
   "title": "槇原敬之「どんなときも。」MsCREW | AOR Driving Rock Cover by紅櫻/BeniZakulla",
   "t": "どんなときも。",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "J-POP",
   "date": "2026-10-09T22:49:34Z",
   "views": 6509,
   "likes": 71,
@@ -8858,10 +8844,9 @@
   "descHead": "🎸 **どんなときも。 - AOR Driving Rock Cover**\n\n槇原敬之さんの名曲「どんなときも。」を、BENIZAKULLA（紅櫻）がAOR Rock × Driving Rockスタイルでカバー。\n\n都会的で洗練されたAORの響きに、力強いギター、躍動するベース、疾走感のあるドラムを融合。\n\n原曲が持つまっすぐな想いと希望を大切にしながら、紅櫻ならではのロックサウンドで新たな表情を描きました。\n\n懐かしさと新しさが交差する、Midnight Cinematic Rock。\n\n🎧 Headphones recommended.\n\n---\n\n**Original Song:",
   "by": "紅櫻",
   "pHint": "AOR Driving Rock",
-  "p": "合唱団P",
-  "a": "niconico:14201029",
-  "firstSeen": "2026-10-12T21:33:04.491Z",
-  "of": "nico:sm15093976"
+  "p": "AOR Driving Rock",
+  "a": "aordrivingrock",
+  "firstSeen": "2026-10-12T21:33:04.491Z"
  },
  {
   "id": "yt:hjYnwVhk9AA",
@@ -10579,7 +10564,7 @@
   "title": "【アカペラ】大きな古時計（合唱曲）〈女声4部〉",
   "t": "大きな古時計",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "J-POP",
   "date": "2026-10-09T11:30:32Z",
   "views": 81212,
   "likes": 1076,
@@ -10597,9 +10582,7 @@
   "descHead": "合唱曲、『大きな古時計』をアカペラでカバーしてみました。\n一生懸命歌ったので、たくさん聴いてもらえたら嬉しいです。\n\n⭐︎生徒⭐︎\nわさびぬき（Soprano）\nにゃるは（Alto）\nらてらてちゃん（Tenor）\nおてつきちゃん（Bass）\n\nーーーーーーーーーーーーーーーーーー\nオリジナル曲も聴いてね🎧\n\n『山下学園の校歌』\nhttps://youtu.be/ffh-TL23MTY?si=p0npzUy3NvtUaRM0\n\n『フルーツポンチ！』\nhttps://youtu.be/TQCUaxrq230?si=0mVyqV60fd04IBpk\n\n\n\nSNS⬇️\n\nX：https://x.co",
   "by": "山下学園おんがく部",
   "firstSeen": "2026-10-09T15:55:27.688Z",
-  "p": "awk",
-  "of": "nico:sm3743171",
-  "a": "niconico:1353089"
+  "p": "awk"
  },
  {
   "id": "yt:CEb3gMNCG-o",
@@ -10762,7 +10745,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=eFycrYtVfBo",
   "title": "ゆずれない願い - SpecialLIVE ver (AI COVER)",
-  "t": "SpecialLIVE ver",
+  "t": "Special",
   "kind": "歌ってみた",
   "g": "アニソン",
   "date": "2026-10-09T11:00:13Z",
@@ -11865,7 +11848,7 @@
   "title": "Welcome To The Black Parade / My Chemical Romance【Ska-Punk Cover】",
   "t": "Welcome To The Black Parade",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "J-POP",
   "date": "2026-10-09T10:00:37Z",
   "views": 3061,
   "likes": 56,
@@ -11875,9 +11858,7 @@
   "uploader": "須野高校軽音部",
   "descHead": "今回はリクエストにお応えして、My Chemical Romanceさんの「Welcome To The Black Parade」のカバーをお届けします。\n\n須野高校軽音部によるカバー、ぜひ最後までお楽しみください！\n\nーーーーー\n\nRespect / Original Artist:\n🎧 My Chemical Romance\nhttps://youtu.be/RRKJiM9Njr8?si=CiMUUT7rtNxHSRyz\n\nーーーーー\n\n💬 Members' Chat / 放課後雑談\n\n天童あかり☀️\n    「ねえねえ、マーチングバンドってかっこいいよね！ みんなで揃って行進しなが",
   "by": "須野高校軽音部",
-  "firstSeen": "2026-10-12T21:33:04.492Z",
-  "of": "nico:sm24855586",
-  "a": "niconico:44094506"
+  "firstSeen": "2026-10-12T21:33:04.492Z"
  },
  {
   "id": "yt:BK_hFtkYKHg",
@@ -12565,7 +12546,7 @@
   "title": "【歌ってみた】アノニマスファンフアレ【よるきち】",
   "t": "アノニマスファンフアレ",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2026-10-09T19:00:00+09:00",
   "views": 448,
   "likes": 57,
@@ -12578,10 +12559,7 @@
   "uploaderId": 14307170,
   "uploader": null,
   "by": "よるきち",
-  "firstSeen": "2026-10-11T00:52:52.332Z",
-  "of": "nico:sm43244362",
-  "p": "夢ノ結唱 ROSE  Tuned by セブヶ崎詠人",
-  "a": "niconico:31483136"
+  "firstSeen": "2026-10-11T00:52:52.332Z"
  },
  {
   "id": "yt:18t3OguDTGQ",
@@ -12688,7 +12666,7 @@
   "url": "https://www.nicovideo.jp/watch/ss46903678",
   "title": "宮舞モカで「ray」調声してみた #SynthesizerV",
   "t": "ray",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-10-09T18:30:00+09:00",
   "views": 2592,
@@ -12708,10 +12686,11 @@
   ],
   "uploaderId": 6911341,
   "uploader": null,
-  "p": "宮舞モカで",
-  "v": "宮舞モカ",
-  "a": "niconico:6911341",
-  "firstSeen": "2026-10-10T07:34:06.762Z"
+  "by": "",
+  "firstSeen": "2026-10-10T07:34:06.762Z",
+  "of": "yt:yT_ylSCgY6Q",
+  "p": "BUMP OF CHICKEN",
+  "a": "youtube:UCOfESRUR5duQ2hMnTQ4oqhA"
  },
  {
   "id": "yt:JkGyMUwzxQE",
@@ -14413,7 +14392,7 @@
   "title": "僕が死のうと思ったのは / 歌ってみた【 水無瀬 】",
   "t": "僕が死のうと思ったのは",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "J-POP",
   "date": "2026-10-08T11:00:10Z",
   "views": 68725,
   "likes": 4102,
@@ -14436,8 +14415,7 @@
   "pHint": "歌ってみた",
   "p": "歌ってみた",
   "a": "歌ってみた",
-  "firstSeen": "2026-10-09T11:31:52.147Z",
-  "of": "nico:sm31429976"
+  "firstSeen": "2026-10-09T11:31:52.147Z"
  },
  {
   "id": "yt:Hv_e8HnNii8",
@@ -14550,7 +14528,7 @@
   "title": "【歌ってみた(cover) キー比較】桜坂 / 福山雅治｜サビのキー比較（原キー / +2 / +4 / +6 / -3 (+9)）",
   "t": "桜坂",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "J-POP",
   "date": "2026-10-08T10:00:19Z",
   "views": 1424,
   "likes": 8,
@@ -14563,8 +14541,7 @@
   "pHint": "福山雅治",
   "p": "福山雅治",
   "a": "福山雅治",
-  "firstSeen": "2026-10-12T21:33:04.494Z",
-  "of": "nico:sm6676776"
+  "firstSeen": "2026-10-12T21:33:04.494Z"
  },
  {
   "id": "yt:MV0utABjAs4",
@@ -15402,7 +15379,7 @@
   "title": "supercell「君の知らない物語」MsCREW | Cinematic AOR Rock Cover by紅櫻/BeniZakulla 化物語エンディングテーマ",
   "t": "君の知らない物語",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2026-10-07T20:47:02Z",
   "views": 8782,
   "likes": 66,
@@ -15444,10 +15421,9 @@
   "descHead": "supercell「君の知らない物語」を\n紅櫻 - Benizakulla が Cinematic AOR Rock でカバー。\n\n静寂に近い夜の空気から始まり、\n深くスモーキーな女性ボーカル、\nメロディックなベース、力強い生ドラム、\n泣くようなギターと煌めくシンセを重ねながら、\n最後の巨大なクライマックスへ。\n\n言えなかった想い。\n届かなかった気持ち。\nそれでも消えない、あの夏の記憶。\n\n原曲の美しいメロディと切なさを大切にしながら、\n紅櫻らしい夜のAOR Rockに仕上げました。\n\n後半の「大好きでした。」から\n最後のリ・エントリーまで、ぜひ聴いてみてください。\n\nVocal : Beni",
   "by": "紅櫻",
   "pHint": "Cinematic AOR Rock",
-  "p": "合唱",
-  "a": "niconico:2620927",
-  "firstSeen": "2026-10-11T21:32:19.161Z",
-  "of": "nico:sm9691627"
+  "p": "Cinematic AOR Rock",
+  "a": "cinematicaorrock",
+  "firstSeen": "2026-10-11T21:32:19.161Z"
  },
  {
   "id": "yt:DH-kIFFVKAg",
@@ -16020,7 +15996,7 @@
   "title": "【SLAM DUNK ED2】世界が終わるまでは… / WANDS【Synthesizer V 2 AI Ayame カバー(原曲キー+4)】",
   "t": "世界が終わるまでは...",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2026-10-07T12:00:09Z",
   "views": 535,
   "likes": 6,
@@ -16037,9 +16013,7 @@
   "uploader": "Mistfeal",
   "descHead": "いいからスラムダンク進入だ！\n（オリジナルの音源が見つからなかったので第5期ver.です）\n--------------------------------------------------\n▼Original\nWANDS 「世界が終るまでは… [WANDS第５期ver.]」 MV\nhttps://www.youtube.com/watch?v=1Bk9YpwWEsg\n歌手：WANDS\n作詞：上杉昇\n作曲：織田哲郎\n編曲：柴崎浩\n\n▼DL（レコチョク）\nhttps://recochoku.jp/song/S1016019034/single?ds=1028640606\n\n#世界が終わるまでは",
   "by": "Mistfeal",
-  "firstSeen": "2026-10-12T11:09:17.871Z",
-  "of": "nico:sm38486638",
-  "a": "niconico:19855440"
+  "firstSeen": "2026-10-12T11:09:17.871Z"
  },
  {
   "id": "yt:BFSmN6fQ_04",
@@ -16631,7 +16605,7 @@
   "title": "StarRingChild - Aimer // covered by 妃那子",
   "t": "StarRingChild",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "J-POP",
   "date": "2026-10-07T10:20:33Z",
   "views": 38256,
   "likes": 2023,
@@ -16651,9 +16625,7 @@
   "uploader": "妃那子 / HINAKO",
   "descHead": "✧Original✧\nhttps://youtu.be/69w7p05W8HA?si=UE9sPAarTJwJ4mCy\n\n✧Credit✧\nIllustration yuzu\nhttps://x.com/yuzusuke10\n\nMovie / Thumbnail isooo\nhttps://x.com/iso_7777\n\nInstrumental Melónet\nhttps://x.com/MelonetMelonet\n\nMIX 170℃\nhttps://x.com/vvilhelmmeister\n\nVocal 妃那子\nhttps://x.com/myth_hydrangea\n\n#歌ってみた ",
   "by": "妃那子",
-  "firstSeen": "2026-10-11T21:32:19.175Z",
-  "of": "nico:sm45875483",
-  "a": "niconico:25408486"
+  "firstSeen": "2026-10-11T21:32:19.175Z"
  },
  {
   "id": "yt:F7KQf7s3iBM",
@@ -17276,7 +17248,7 @@
   "url": "https://www.nicovideo.jp/watch/sm46895196",
   "title": "音速少女と雨雲のための麗らかな小品 feat.ナツメイツキ",
   "t": "音速少女と雨雲のための麗らかな小品",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-10-07T18:00:00+09:00",
   "views": 334,
@@ -17293,9 +17265,7 @@
   ],
   "uploaderId": 7134649,
   "uploader": null,
-  "p": "",
-  "v": "ナツメイツキ",
-  "a": "niconico:7134649",
+  "by": "",
   "firstSeen": "2026-10-08T14:32:41.480Z"
  },
  {
@@ -18487,7 +18457,7 @@
   "title": "【歌ってみた(cover) キー比較】fake face dance music / 音田雅則｜サビのキー比較（-3 / 原キー / +1 / +2 / +5）",
   "t": "fake face dance music",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "J-POP",
   "date": "2026-10-06T10:00:10Z",
   "views": 1317,
   "likes": 26,
@@ -18500,8 +18470,7 @@
   "pHint": "音田雅則",
   "p": "音田雅則",
   "a": "音田雅則",
-  "firstSeen": "2026-10-12T21:33:04.494Z",
-  "of": "nico:sm43335222"
+  "firstSeen": "2026-10-12T21:33:04.494Z"
  },
  {
   "id": "yt:J-1tli7f2x8",
@@ -19363,7 +19332,7 @@
   "title": "花の塔 - さユり / 結川ユイナ(Cover)",
   "t": "花の塔",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2026-10-05T12:50:10Z",
   "views": 122393,
   "likes": 3713,
@@ -19379,10 +19348,9 @@
   "descHead": "はじめての歌ってみた！沢山聞いてください♩\nこれから一緒に色んな景色を見に行こう！🌈\n\n୨୧┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈୨୧\n\n✦Original：さユり様 https://www.youtube.com/watch?v=H2r25lVcIHw\n✦Inst：えんどる様 https://twitter.com/MixDolphin\n✦MIX：ソノイ様 https://twitter.com/_Sonoi\n✦Illust(漫画)：po様 https://twitter.com/___p___o___\n✦Illust(サビ)：shiohana様 https://twitter.com/",
   "by": "結川ユイナ",
   "pHint": "さユり",
-  "p": "夢ノ結唱 POPY  Tuned by セブヶ崎詠人",
-  "a": "niconico:31483136",
-  "firstSeen": "2026-10-10T21:31:18.858Z",
-  "of": "nico:sm43175946"
+  "p": "さユり",
+  "a": "さユり",
+  "firstSeen": "2026-10-10T21:31:18.858Z"
  },
  {
   "id": "yt:oX6PfHd9BOY",
@@ -22082,9 +22050,7 @@
   "uploaderId": 308589,
   "uploader": null,
   "by": "彩澄りりせ",
-  "firstSeen": "2026-10-09T11:31:51.993Z",
-  "of": "nico:ss46771263",
-  "a": "niconico:134001944"
+  "firstSeen": "2026-10-09T11:31:51.993Z"
  },
  {
   "id": "yt:58TbfRY2R8Y",
@@ -22744,9 +22710,7 @@
   "descHead": "✦ original :: YOASOBI https://youtu.be/x8VYWazR5mE\n\n\n─── Team. VANTA\n\n✦ vocal & chorus :: VANTA https://twitter.com/depth_vanta\n✦ mix & mastering :: TRMX Sound Lab https://twitter.com/nico_taramaxu\n✦ arrangement :: 918 https://twitter.com/http__918\n\n✦ illustration :: John Kafka https://twitter.com/j",
   "by": "VANTA",
   "firstSeen": "2026-10-09T11:31:52.149Z",
-  "p": "ぎゅや",
-  "of": "nico:sm39587980",
-  "a": "niconico:509247"
+  "p": "ぎゅや"
  },
  {
   "id": "yt:RpOzDQ-qiXc",
@@ -23353,7 +23317,7 @@
   "url": "https://www.nicovideo.jp/watch/sm46875423",
   "title": "いつかわかる☆きっとあえる（TVサイズ）／さとうささら＆四国めたん",
   "t": "いつかわかる☆きっとあえる",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-10-03T00:41:44+09:00",
   "views": 2477,
@@ -23370,9 +23334,7 @@
   ],
   "uploaderId": 124906921,
   "uploader": null,
-  "p": "さとうささら",
-  "v": "四国めたん",
-  "a": "niconico:124906921",
+  "by": "さとうささら",
   "firstSeen": "2026-10-09T11:31:51.988Z"
  },
  {
@@ -24279,10 +24241,7 @@
   "uploaderId": 1749797,
   "uploader": null,
   "by": "",
-  "firstSeen": "2026-10-09T11:31:51.975Z",
-  "of": "nico:sm17369221",
-  "p": "mathru",
-  "a": "niconico:1741662"
+  "firstSeen": "2026-10-09T11:31:51.975Z"
  },
  {
   "id": "nico:sm46868054",
@@ -24959,7 +24918,7 @@
   "title": "【彩澄りりせ】ぼくのフレンド【SynthesizerV2カバー】",
   "t": "ぼくのフレンド",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2026-09-29T19:19:00+09:00",
   "views": 2647,
   "likes": 268,
@@ -24980,10 +24939,7 @@
   "uploaderId": 9618309,
   "uploader": null,
   "by": "",
-  "firstSeen": "2026-10-09T11:31:51.985Z",
-  "of": "nico:sm30916572",
-  "p": "けものフレンズED",
-  "a": "niconico:989911"
+  "firstSeen": "2026-10-09T11:31:51.985Z"
  },
  {
   "id": "nico:sm46863045",
@@ -25112,7 +25068,7 @@
   "title": "英雄故事（映画「ポリス・ストーリー」主題歌）【重音テトカバー】",
   "t": "ポリス・ストーリー",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2026-09-29T18:00:00+09:00",
   "views": 4266,
   "likes": 396,
@@ -25133,10 +25089,7 @@
   "uploaderId": 673608,
   "uploader": null,
   "by": "英雄故事(映画",
-  "firstSeen": "2026-10-09T11:31:51.979Z",
-  "of": "nico:sm18186644",
-  "p": "主題歌",
-  "a": "niconico:372605"
+  "firstSeen": "2026-10-09T11:31:51.979Z"
  },
  {
   "id": "nico:sm46810540",
@@ -26659,7 +26612,7 @@
   "title": "【xxxWANTEDxxx】シル・ヴ・プレジデント歌ってみた【ぐるたみん✕Mqki.xウトガワx吉沢ぽわ✕結城碧✕神谷玲】",
   "t": "シル・ヴ・プレジデント",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2026-09-25T21:30:00+09:00",
   "views": 11939,
   "likes": 577,
@@ -26680,10 +26633,7 @@
   "uploaderId": 30723806,
   "uploader": null,
   "by": "ぐるたみん✕Mqki.xウトガワx吉沢ぽわ✕結城碧✕神谷玲",
-  "firstSeen": "2026-10-09T11:31:52.013Z",
-  "of": "nico:sm40853323",
-  "p": "AIずんだもんで",
-  "a": "niconico:47330453"
+  "firstSeen": "2026-10-09T11:31:52.013Z"
  },
  {
   "id": "nico:sm46844977",
@@ -27152,9 +27102,9 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm46846124",
   "title": "【歌ってみた】Lie-Like-Life - Stellar / covered by 永愛る人",
-  "t": "Lie",
+  "t": "Lie-Like-Life - Stellar",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2026-09-25T21:00:00+09:00",
   "views": 33013,
   "likes": 478,
@@ -27168,10 +27118,7 @@
   "uploaderId": 123631171,
   "uploader": null,
   "by": "永愛る人",
-  "firstSeen": "2026-10-09T11:31:52.004Z",
-  "of": "yt:TlgxSeGJvew",
-  "p": "雨良 Amala",
-  "a": "youtube:UCeBuESc6vN_IiFR3je4NYTg"
+  "firstSeen": "2026-10-09T11:31:52.004Z"
  },
  {
   "id": "nico:sm46841732",
@@ -27973,7 +27920,7 @@
   "title": "Melodies Of Life / 春風うた (cover)",
   "t": "Melodies Of Life",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2026-09-25T21:00:00+09:00",
   "views": 5777,
   "likes": 589,
@@ -27994,10 +27941,7 @@
   "uploaderId": 137530291,
   "uploader": null,
   "by": "春風うた",
-  "firstSeen": "2026-10-09T11:31:52.027Z",
-  "of": "nico:sm1094771",
-  "p": "FF9",
-  "a": "niconico:1239516"
+  "firstSeen": "2026-10-09T11:31:52.027Z"
  },
  {
   "id": "nico:sm46826435",
@@ -28180,7 +28124,7 @@
   "title": "ワーストリグレット【youまん】/Covered by　赤髪のTaiga",
   "t": "ワーストリグレット",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2026-09-25T21:00:00+09:00",
   "views": 4770,
   "likes": 575,
@@ -28195,10 +28139,7 @@
   "uploaderId": 2941572,
   "uploader": null,
   "by": "赤髪のTaiga",
-  "firstSeen": "2026-10-09T11:31:52.033Z",
-  "of": "nico:sm45328208",
-  "p": "星界 - 織井辺コフィ",
-  "a": "niconico:128464872"
+  "firstSeen": "2026-10-09T11:31:52.033Z"
  },
  {
   "id": "nico:sm46841498",
@@ -28257,7 +28198,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm46844741",
   "title": "ELECT -Rearrange cover-【Bolanteen】",
-  "t": "ELECT",
+  "t": "ELECT -Rearrange co",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-09-25T21:00:00+09:00",
@@ -28274,10 +28215,7 @@
   "uploaderId": 68073071,
   "uploader": null,
   "by": "",
-  "firstSeen": "2026-10-09T11:31:52.035Z",
-  "of": "nico:sm22587884",
-  "p": "niki",
-  "a": "niconico:12651886"
+  "firstSeen": "2026-10-09T11:31:52.035Z"
  },
  {
   "id": "nico:sm46837628",
@@ -28483,9 +28421,9 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm46841588",
   "title": "【爽やか微炭酸ボイスで】 RAY OF HERO 歌ってみた　狼音【ろね】",
-  "t": "ray",
+  "t": "RAY OF HERO 狼音",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2026-09-25T21:00:00+09:00",
   "views": 4157,
   "likes": 121,
@@ -28501,10 +28439,7 @@
   "uploaderId": 58126939,
   "uploader": null,
   "by": "狼音",
-  "firstSeen": "2026-10-09T11:31:52.039Z",
-  "of": "yt:yT_ylSCgY6Q",
-  "p": "BUMP OF CHICKEN",
-  "a": "youtube:UCOfESRUR5duQ2hMnTQ4oqhA"
+  "firstSeen": "2026-10-09T11:31:52.039Z"
  },
  {
   "id": "nico:sm46835346",
@@ -28784,7 +28719,7 @@
   "title": "【世界に入って】一体いつから/¿童処？【歌ってみた】",
   "t": "一体いつから",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2026-09-25T21:00:00+09:00",
   "views": 3489,
   "likes": 501,
@@ -28801,10 +28736,7 @@
   "uploaderId": 124925358,
   "uploader": null,
   "by": "¿童処?",
-  "firstSeen": "2026-10-09T11:31:52.049Z",
-  "of": "nico:ss46819231",
-  "p": "重音テトで",
-  "a": "niconico:6911341"
+  "firstSeen": "2026-10-09T11:31:52.049Z"
  },
  {
   "id": "nico:sm46844867",
@@ -28922,7 +28854,7 @@
   "title": "【歌ってみた】みちなるひろがる/covered by 花森なずな×南レイ(れい･ふるーる)",
   "t": "みちなるひろがる",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2026-09-25T21:00:00+09:00",
   "views": 3353,
   "likes": 632,
@@ -28936,10 +28868,7 @@
   "uploaderId": 38893652,
   "uploader": null,
   "by": "花森なずな×南レイ",
-  "firstSeen": "2026-10-09T11:31:52.052Z",
-  "of": "nico:sm46117935",
-  "p": "初星学園・倉本千奈・篠澤広",
-  "a": "niconico:143732420"
+  "firstSeen": "2026-10-09T11:31:52.052Z"
  },
  {
   "id": "nico:sm46833294",
@@ -29698,7 +29627,7 @@
   "title": "【歌ってみた】永遠のあくる日 / Ado 【すいのおと】",
   "t": "永遠のあくる日",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2026-09-25T18:00:00+09:00",
   "views": 6471,
   "likes": 369,
@@ -29714,9 +29643,7 @@
   "uploaderId": 139240303,
   "uploader": null,
   "by": "Ado",
-  "firstSeen": "2026-10-09T11:31:52.023Z",
-  "of": "nico:sm41527388",
-  "a": "niconico:22027800"
+  "firstSeen": "2026-10-09T11:31:52.023Z"
  },
  {
   "id": "nico:sm46843016",
@@ -30580,9 +30507,7 @@
   "uploaderId": 116107369,
   "uploader": null,
   "by": "街風めい",
-  "firstSeen": "2026-10-13T21:45:27.675Z",
-  "of": "nico:sm46377529",
-  "a": "niconico:144128518"
+  "firstSeen": "2026-10-13T21:45:27.675Z"
  },
  {
   "id": "nico:sm46836321",
@@ -31423,7 +31348,7 @@
   "title": "AIZO / King Gnu ( 低音ボイスcover ) - E-LAND",
   "t": "AIZO",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2026-09-20T20:00:00+09:00",
   "views": 12142,
   "likes": 67,
@@ -31444,10 +31369,7 @@
   "uploaderId": 136666451,
   "uploader": null,
   "by": "E-LAND",
-  "firstSeen": "2026-10-09T11:31:52.012Z",
-  "of": "nico:sm45841488",
-  "p": "King Gnu",
-  "a": "niconico:86274567"
+  "firstSeen": "2026-10-09T11:31:52.012Z"
  },
  {
   "id": "nico:sm46823005",
@@ -31721,7 +31643,7 @@
   "url": "https://www.nicovideo.jp/watch/ss46819231",
   "title": "重音テトで「一体いつから」調声してみた #SynthesizerV",
   "t": "一体いつから",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-09-19T19:39:50+09:00",
   "views": 1039,
@@ -31737,9 +31659,7 @@
   ],
   "uploaderId": 6911341,
   "uploader": null,
-  "p": "重音テトで",
-  "v": "重音テト",
-  "a": "niconico:6911341",
+  "by": "",
   "firstSeen": "2026-10-09T21:44:36.807Z",
   "seed": true
  },
@@ -32217,7 +32137,7 @@
   "url": "https://www.nicovideo.jp/watch/sm46815398",
   "title": "『KING』 SynthesizerV　宮舞モカ",
   "t": "KING",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-09-18T20:47:31+09:00",
   "views": 1714,
@@ -32234,10 +32154,11 @@
   ],
   "uploaderId": 1110778,
   "uploader": null,
-  "p": "SynthesizerV 宮舞モカ",
-  "v": "宮舞モカ",
-  "a": "niconico:1110778",
-  "firstSeen": "2026-10-09T11:31:51.992Z"
+  "by": "SynthesizerV 宮舞モカ",
+  "firstSeen": "2026-10-09T11:31:51.992Z",
+  "of": "yt:cm-l2h6GB8Q",
+  "p": "Kanaria",
+  "a": "youtube:UC10BM9XdLdrvB8japwmRUvA"
  },
  {
   "id": "nico:sm46711429",
@@ -33188,7 +33109,7 @@
   "url": "https://www.nicovideo.jp/watch/sm46797666",
   "title": "重音テトが歌うVIP先生（マリオRPGのBGM『森のキノコにご用心』）",
   "t": "森のキノコにご用心",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-09-16T18:00:00+09:00",
   "views": 13319,
@@ -33209,9 +33130,7 @@
   ],
   "uploaderId": 673608,
   "uploader": null,
-  "p": ")",
-  "v": "重音テト",
-  "a": "niconico:673608",
+  "by": "花猪口P",
   "firstSeen": "2026-10-09T11:31:51.971Z"
  },
  {
@@ -33307,7 +33226,7 @@
   "title": "【すぺしゃるえま】ハレ晴レユカイ 歌ってみた【ニコ生歌枠】",
   "t": "ハレ晴レユカイ",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2026-09-15T22:50:00+09:00",
   "views": 16599,
   "likes": 16,
@@ -33323,10 +33242,7 @@
   "uploaderId": 690868,
   "uploader": null,
   "by": "ニコ生歌枠",
-  "firstSeen": "2026-10-09T11:31:52.009Z",
-  "of": "nico:sm1085518",
-  "p": "Full ver.",
-  "a": "niconico:80336"
+  "firstSeen": "2026-10-09T11:31:52.009Z"
  },
  {
   "id": "nico:sm46804602",
@@ -33462,10 +33378,9 @@
   "uploader": null,
   "by": "宮舞モカ・弦巻マキ",
   "pHint": "カントリー・ロード",
-  "p": "合唱団P",
-  "a": "niconico:14201029",
-  "firstSeen": "2026-10-09T11:31:51.987Z",
-  "of": "nico:sm11864925"
+  "p": "カントリー・ロード",
+  "a": "カントリーロード",
+  "firstSeen": "2026-10-09T11:31:51.987Z"
  },
  {
   "id": "nico:sm46789185",
@@ -33767,11 +33682,7 @@
   "uploaderId": 6911341,
   "uploader": null,
   "by": "一体いつから",
-  "firstSeen": "2026-10-09T11:31:51.971Z",
-  "of": "nico:ss46819231",
-  "p": "重音テトで",
-  "a": "niconico:6911341",
-  "self": 1
+  "firstSeen": "2026-10-09T11:31:51.971Z"
  },
  {
   "id": "nico:sm46800318",
@@ -34064,7 +33975,7 @@
   "title": "【すぺしゃるえま】雪、無音、窓辺にて。 歌ってみた【ニコ生歌枠】",
   "t": "雪、無音、窓辺にて",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2026-09-12T23:00:00+09:00",
   "views": 29372,
   "likes": 19,
@@ -34080,10 +33991,7 @@
   "uploaderId": 690868,
   "uploader": null,
   "by": "ニコ生歌枠",
-  "firstSeen": "2026-10-09T11:31:52.005Z",
-  "of": "nico:sm969310",
-  "p": "ソレナンテP",
-  "a": "niconico:14112"
+  "firstSeen": "2026-10-09T11:31:52.005Z"
  },
  {
   "id": "nico:sm46772693",
@@ -34306,7 +34214,7 @@
   "url": "https://www.nicovideo.jp/watch/sm46790836",
   "title": "【remix】いらない　feat.弦巻マキ 【本当のルーキー祭り2026秋二次創作】",
   "t": "いらない",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-09-12T19:00:00+09:00",
   "views": 2824,
@@ -34326,9 +34234,7 @@
   ],
   "uploaderId": 129697889,
   "uploader": null,
-  "p": "",
-  "v": "弦巻マキ",
-  "a": "niconico:129697889",
+  "by": "",
   "firstSeen": "2026-10-09T11:31:51.983Z"
  },
  {
@@ -34706,10 +34612,7 @@
   "uploader": null,
   "by": "夏色花梨",
   "v": "夏色花梨",
-  "firstSeen": "2026-10-09T11:31:51.992Z",
-  "of": "nico:sm21469992",
-  "p": "TUBE",
-  "a": "niconico:8309333"
+  "firstSeen": "2026-10-09T11:31:51.992Z"
  },
  {
   "id": "nico:sm46784649",
@@ -35297,10 +35200,7 @@
   "uploaderId": 1749797,
   "uploader": null,
   "by": "",
-  "firstSeen": "2026-10-09T11:31:51.970Z",
-  "of": "nico:so9222953",
-  "p": "m.o.v.e",
-  "a": "niconico:70"
+  "firstSeen": "2026-10-09T11:31:51.970Z"
  },
  {
   "id": "nico:sm46785867",
@@ -35814,7 +35714,7 @@
   "url": "https://www.nicovideo.jp/watch/sm46778003",
   "title": "【ボイパロイド】FF1 フィールド～ダンジョン【宮舞モカ・重音テト・音街ウナ】",
   "t": "FF1 フィールド~ダンジョン",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-09-09T18:00:00+09:00",
   "views": 1671,
@@ -35835,12 +35735,8 @@
   ],
   "uploaderId": 673608,
   "uploader": null,
-  "p": "花猪口P",
-  "v": "宮舞モカ",
-  "a": "niconico:673608",
-  "firstSeen": "2026-10-09T11:31:51.992Z",
-  "pFilled": false,
-  "pFromTag": true
+  "by": "花猪口P",
+  "firstSeen": "2026-10-09T11:31:51.992Z"
  },
  {
   "id": "nico:sm46779713",
@@ -35963,10 +35859,7 @@
   "uploaderId": 1749797,
   "uploader": null,
   "by": "",
-  "firstSeen": "2026-10-09T11:31:51.974Z",
-  "of": "nico:sm2206423",
-  "p": "にもう一度挑戦しました",
-  "a": "niconico:1796300"
+  "firstSeen": "2026-10-09T11:31:51.974Z"
  },
  {
   "id": "nico:sm46778475",
@@ -36294,7 +36187,7 @@
   "url": "https://www.nicovideo.jp/watch/ss46771263",
   "title": "【60分調声大会】閑言が鳴る【蔓歌せら(UTAU)】",
   "t": "閑言が鳴る",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-09-07T00:56:21+09:00",
   "views": 72,
@@ -36310,8 +36203,7 @@
   ],
   "uploaderId": 134001944,
   "uploader": null,
-  "p": "",
-  "a": "niconico:134001944",
+  "by": "",
   "firstSeen": "2026-10-10T07:39:24.122Z",
   "seed": true
  },
@@ -36799,7 +36691,7 @@
   "url": "https://www.nicovideo.jp/watch/sm46405230",
   "title": "【MMD】Secret Answer【重音テト】",
   "t": "Secret Answer",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-06-07T08:46:57+09:00",
   "views": 227,
@@ -36819,9 +36711,7 @@
   ],
   "uploaderId": 52040168,
   "uploader": null,
-  "p": "",
-  "v": "重音テト",
-  "a": "niconico:52040168",
+  "by": "",
   "firstSeen": "2026-10-09T21:44:36.809Z",
   "seed": true
  },
@@ -36831,7 +36721,7 @@
   "url": "https://www.nicovideo.jp/watch/sm46377529",
   "title": "誇り高きアイドル(feat.重音テトSV)",
   "t": "誇り高きアイドル",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-05-31T12:42:04+09:00",
   "views": 82,
@@ -36850,9 +36740,7 @@
   ],
   "uploaderId": 144128518,
   "uploader": null,
-  "p": "",
-  "v": "重音テト",
-  "a": "niconico:144128518",
+  "by": "",
   "firstSeen": "2026-10-13T21:45:42.849Z",
   "seed": true
  },
@@ -37019,7 +36907,7 @@
   "url": "https://www.nicovideo.jp/watch/sm46284651",
   "title": "Execution Clap ft.重音テト、初音ミクV4X",
   "t": "Execution Clap",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-05-08T20:05:04+09:00",
   "views": 277,
@@ -37038,9 +36926,7 @@
   ],
   "uploaderId": 143888887,
   "uploader": null,
-  "p": "",
-  "v": "重音テト",
-  "a": "niconico:143888887",
+  "by": "",
   "firstSeen": "2026-10-10T07:39:24.119Z",
   "seed": true
  },
@@ -37120,9 +37006,7 @@
   "descHead": "Holaaa!! 👀✨\n\n¡Ya llegó la canción más esperada! 🎶🔥\n\nEsta vez con la versión solo de Akita Neru 💛\n\n¡Espero que les guste! :D 💫\n\n━━━━━━━━━━━━━━━\n🎤 Voz:\n\n・Neru Akita NEO 2.0 (CV UTAU @KuroTrash_Artk)\n\n🎧 Canción original: @tp_chick\n🎬 Mezcla, edición y visuales: Rika Chan\n\n🎵 Adaptación de letra:",
   "by": "Rika Chan",
   "firstSeen": "2026-10-10T07:32:06.238Z",
-  "seed": true,
-  "of": "nico:sm46284651",
-  "a": "niconico:143888887"
+  "seed": true
  },
  {
   "id": "nico:sm46221704",
@@ -37414,7 +37298,7 @@
   "url": "https://www.nicovideo.jp/watch/sm46117935",
   "title": "【重音テト】みちなるひろがる / 初星学園, 倉本千奈 & 篠澤広【UTAU & Synthesizer V】",
   "t": "みちなるひろがる",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-04-01T00:01:07+09:00",
   "views": 216,
@@ -37435,9 +37319,7 @@
   ],
   "uploaderId": 143732420,
   "uploader": null,
-  "p": "初星学園・倉本千奈・篠澤広",
-  "v": "重音テト",
-  "a": "niconico:143732420",
+  "by": "初星学園・倉本千奈・篠澤広",
   "firstSeen": "2026-10-09T21:44:36.808Z",
   "seed": true
  },
@@ -38004,7 +37886,7 @@
   "url": "https://www.nicovideo.jp/watch/sm45875483",
   "title": "【UTAU音源配布】StarRingChild【戯白メリー Statue】",
   "t": "StarRingChild",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-01-27T00:00:00+09:00",
   "views": 3158,
@@ -38020,8 +37902,7 @@
   ],
   "uploaderId": 25408486,
   "uploader": null,
-  "p": "",
-  "a": "niconico:25408486",
+  "by": "",
   "firstSeen": "2026-10-11T21:32:42.641Z",
   "seed": true
  },
@@ -38080,7 +37961,7 @@
   "url": "https://www.nicovideo.jp/watch/sm45841488",
   "title": "【UST配布】AIZO / King Gnu【重音テト】",
   "t": "AIZO",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-01-16T03:59:03+09:00",
   "views": 10404,
@@ -38101,9 +37982,7 @@
   ],
   "uploaderId": 86274567,
   "uploader": null,
-  "p": "King Gnu",
-  "v": "重音テト",
-  "a": "niconico:86274567",
+  "by": "King Gnu",
   "firstSeen": "2026-10-09T21:44:36.804Z",
   "seed": true
  },
@@ -38564,7 +38443,7 @@
   "url": "https://www.nicovideo.jp/watch/sm45601582",
   "title": "【らぶ誕2025】モエッ☆ＢＬ飛行【UTAU･重音テト･MMD】",
   "t": "モエッ☆BL飛行",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2025-11-08T07:56:03+09:00",
   "views": 622,
@@ -38585,9 +38464,7 @@
   ],
   "uploaderId": 19163489,
   "uploader": null,
-  "p": "",
-  "v": "重音テト",
-  "a": "niconico:19163489",
+  "by": "",
   "firstSeen": "2026-10-09T17:21:46.704Z",
   "seed": true
  },
@@ -39280,7 +39157,7 @@
   "url": "https://www.nicovideo.jp/watch/sm45328208",
   "title": "ワーストリグレット(Remix) /  星界 - 織井辺コフィ",
   "t": "ワーストリグレット",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2025-08-23T20:00:00+09:00",
   "views": 8402,
@@ -39301,9 +39178,7 @@
   ],
   "uploaderId": 128464872,
   "uploader": null,
-  "p": "星界 - 織井辺コフィ",
-  "v": "星界",
-  "a": "niconico:128464872",
+  "by": "織井辺コフィ",
   "firstSeen": "2026-10-09T21:44:36.807Z",
   "seed": true
  },
@@ -41583,7 +41458,7 @@
   "url": "https://www.nicovideo.jp/watch/sm44144228",
   "title": "夏祭り【小春六花・夏色花梨・花隈千冬】",
   "t": "夏祭り",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2024-09-25T19:30:00+09:00",
   "views": 285662,
@@ -41604,9 +41479,7 @@
   ],
   "uploaderId": 125313318,
   "uploader": null,
-  "p": "",
-  "v": "小春六花",
-  "a": "niconico:125313318",
+  "by": "",
   "firstSeen": "2026-10-10T07:39:24.118Z",
   "seed": true
  },
@@ -43022,7 +42895,7 @@
   "url": "https://www.nicovideo.jp/watch/sm43335222",
   "title": "【Synthesizer V Covers 】fake face dance music Feat.ついなちゃん【ついなちゃん誕生祭2024】",
   "t": "fake face dance music",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2024-02-03T00:00:00+09:00",
   "views": 1235,
@@ -43043,8 +42916,7 @@
   ],
   "uploaderId": 122174607,
   "uploader": null,
-  "p": "",
-  "a": "niconico:122174607",
+  "by": "",
   "firstSeen": "2026-10-12T21:33:21.303Z",
   "seed": true
  },
@@ -43084,7 +42956,7 @@
   "url": "https://www.nicovideo.jp/watch/sm43244362",
   "title": "アノニマスファンフアレ / 夢ノ結唱 ROSE(SynthV) Tuned by セブヶ崎詠人",
   "t": "アノニマスファンフアレ",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2024-01-07T18:00:00+09:00",
   "views": 25648,
@@ -43105,8 +42977,7 @@
   ],
   "uploaderId": 31483136,
   "uploader": null,
-  "p": "夢ノ結唱 ROSE  Tuned by セブヶ崎詠人",
-  "a": "niconico:31483136",
+  "by": "セブヶ崎詠人",
   "firstSeen": "2026-10-11T00:54:29.200Z",
   "seed": true
  },
@@ -43164,8 +43035,8 @@
   "url": "https://www.nicovideo.jp/watch/sm43175946",
   "title": "花の塔 / 夢ノ結唱 POPY(SynthV) Tuned by セブヶ崎詠人",
   "t": "花の塔",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2023-12-22T19:00:00+09:00",
   "views": 10174,
   "likes": 299,
@@ -43185,8 +43056,7 @@
   ],
   "uploaderId": 31483136,
   "uploader": null,
-  "p": "夢ノ結唱 POPY  Tuned by セブヶ崎詠人",
-  "a": "niconico:31483136",
+  "by": "セブヶ崎詠人",
   "firstSeen": "2026-10-10T21:31:41.335Z",
   "seed": true
  },
@@ -43315,8 +43185,8 @@
   "url": "https://www.nicovideo.jp/watch/sm43135498",
   "title": "【Synthesizer V Covers】Biri-Biri Feat.小春六花x夏色花梨",
   "t": "Biri-Biri",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2023-12-14T09:00:00+09:00",
   "views": 325,
   "likes": 9,
@@ -43336,11 +43206,12 @@
   ],
   "uploaderId": 122174607,
   "uploader": null,
-  "p": "",
-  "v": "小春六花",
-  "a": "niconico:122174607",
+  "by": "",
   "firstSeen": "2026-10-10T21:31:41.334Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:UkhGvEv5eTo",
+  "p": "YOASOBI",
+  "a": "youtube:UC_4tXjqecqox5Uc05ncxpxg"
  },
  {
   "id": "yt:sTfVL6xPm4M",
@@ -45241,8 +45112,8 @@
   "url": "https://www.nicovideo.jp/watch/sm42045349",
   "title": "ようこそジャパリパークへ【小春六花・夏色花梨・花隈千冬】",
   "t": "ようこそジャパリパークへ",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2023-04-06T21:31:03+09:00",
   "views": 391975,
   "likes": 4542,
@@ -45262,9 +45133,7 @@
   ],
   "uploaderId": 125313318,
   "uploader": null,
-  "p": "",
-  "v": "小春六花",
-  "a": "niconico:125313318",
+  "by": "",
   "firstSeen": "2026-10-09T17:21:46.700Z",
   "seed": true
  },
@@ -46273,7 +46142,7 @@
   "url": "https://www.nicovideo.jp/watch/sm41527388",
   "title": "永遠のあくる日【機流音】",
   "t": "永遠のあくる日",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2022-12-19T18:30:00+09:00",
   "views": 1181,
@@ -46289,8 +46158,7 @@
   ],
   "uploaderId": 22027800,
   "uploader": null,
-  "p": "",
-  "a": "niconico:22027800",
+  "by": "",
   "firstSeen": "2026-10-09T21:44:36.805Z",
   "seed": true
  },
@@ -46726,7 +46594,7 @@
   "url": "https://www.nicovideo.jp/watch/sm41299141",
   "title": "【SynthesizerV】Lemon/米津玄師【花隈千冬AI】",
   "t": "Lemon",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2022-10-29T23:30:00+09:00",
   "views": 121121,
@@ -46746,9 +46614,7 @@
   ],
   "uploaderId": 509247,
   "uploader": null,
-  "p": "米津玄師",
-  "v": "花隈千冬",
-  "a": "niconico:509247",
+  "by": "米津玄師",
   "firstSeen": "2026-10-11T00:54:29.195Z",
   "seed": true
  },
@@ -47427,7 +47293,7 @@
   "url": "https://www.nicovideo.jp/watch/sm40853323",
   "title": "AIずんだもんで「シル・ヴ・プレジデント」【VOICEVOX＆NEUTRINO】",
   "t": "シル・ヴ・プレジデント",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2022-08-01T00:00:00+09:00",
   "views": 262279,
@@ -47448,9 +47314,7 @@
   ],
   "uploaderId": 47330453,
   "uploader": null,
-  "p": "AIずんだもんで",
-  "v": "ずんだもん",
-  "a": "niconico:47330453",
+  "by": "VOICEVOX&NEUTRINO",
   "firstSeen": "2026-10-09T21:44:36.804Z",
   "seed": true
  },
@@ -51339,7 +51203,7 @@
   "url": "https://www.nicovideo.jp/watch/sm39587980",
   "title": "【CEVIO AI】夜に駆ける【ONE】",
   "t": "夜に駆ける",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2021-11-06T21:00:00+09:00",
   "views": 156905,
@@ -51359,13 +51223,9 @@
   ],
   "uploaderId": 509247,
   "uploader": null,
-  "p": "ぎゅや",
-  "v": "ONE",
-  "a": "niconico:509247",
+  "by": "ぎゅや",
   "firstSeen": "2026-10-10T07:39:24.120Z",
-  "seed": true,
-  "pFilled": false,
-  "pFromTag": true
+  "seed": true
  },
  {
   "id": "nico:sm39570961",
@@ -53167,7 +53027,7 @@
   "url": "https://www.nicovideo.jp/watch/sm39060917",
   "title": "あいつら全員同窓会 feat. 可不",
   "t": "あいつら全員同窓会",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2021-07-21T05:12:03+09:00",
   "views": 9262,
@@ -53183,9 +53043,7 @@
   ],
   "uploaderId": 62114352,
   "uploader": null,
-  "p": "",
-  "v": "可不",
-  "a": "niconico:62114352",
+  "by": "",
   "firstSeen": "2026-10-13T21:45:42.850Z",
   "seed": true
  },
@@ -54268,7 +54126,7 @@
   "url": "https://www.nicovideo.jp/watch/sm38685473",
   "title": "悔やむと書いてミライ／赤猫 feat.初音ミク",
   "t": "悔やむと書いてミライ",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2021-05-04T20:01:03+09:00",
   "views": 11015,
@@ -54286,9 +54144,7 @@
   ],
   "uploaderId": 95590592,
   "uploader": null,
-  "p": "赤猫",
-  "v": "初音ミク",
-  "a": "niconico:95590592",
+  "by": "赤猫",
   "firstSeen": "2026-10-10T07:39:24.117Z",
   "seed": true
  },
@@ -54519,10 +54375,7 @@
   "uploader": null,
   "by": "P丸様。",
   "firstSeen": "2026-10-08T15:10:08.716Z",
-  "seed": true,
-  "of": "nico:sm40853323",
-  "p": "AIずんだもんで",
-  "a": "niconico:47330453"
+  "seed": true
  },
  {
   "id": "yt:TNb9CVZ6Gk4",
@@ -54783,9 +54636,9 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm38486638",
   "title": "【VY2】世界が終わるまでは…【スラムダンクED】",
-  "t": "世界が終わるまでは",
-  "kind": "本家",
-  "g": "ボカロ",
+  "t": "世界が終わるまでは...",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2021-03-25T23:22:02+09:00",
   "views": 432,
   "likes": 2,
@@ -54802,9 +54655,7 @@
   ],
   "uploaderId": 19855440,
   "uploader": null,
-  "p": "",
-  "v": "VY2",
-  "a": "niconico:19855440",
+  "by": "",
   "firstSeen": "2026-10-12T11:09:53.080Z",
   "seed": true
  },
@@ -55966,7 +55817,7 @@
   "url": "https://www.nicovideo.jp/watch/sm37896664",
   "title": "【三毛音猫1周年記念】携帯恋話【音猫ギョウ】",
   "t": "携帯恋話",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2020-12-01T00:00:00+09:00",
   "views": 674,
@@ -55987,8 +55838,7 @@
   ],
   "uploaderId": 6302841,
   "uploader": null,
-  "p": "",
-  "a": "niconico:6302841",
+  "by": "",
   "firstSeen": "2026-10-10T07:39:24.117Z",
   "seed": true
  },
@@ -56802,7 +56652,7 @@
   "url": "https://www.nicovideo.jp/watch/sm37493982",
   "title": "【MMD】マリンスノーの花束を【重音テト　ＴＡＫＡＳＨＩ】",
   "t": "マリンスノーの花束を",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2020-09-09T20:16:03+09:00",
   "views": 134,
@@ -56822,9 +56672,7 @@
   ],
   "uploaderId": 52040168,
   "uploader": null,
-  "p": "",
-  "v": "重音テト",
-  "a": "niconico:52040168",
+  "by": "",
   "firstSeen": "2026-10-10T07:39:24.117Z",
   "seed": true
  },
@@ -58114,9 +57962,7 @@
   "uploader": null,
   "by": "まふまふ",
   "firstSeen": "2026-10-08T15:10:08.866Z",
-  "seed": true,
-  "of": "nico:sm37896664",
-  "a": "niconico:6302841"
+  "seed": true
  },
  {
   "id": "nico:sm36898361",
@@ -58333,10 +58179,7 @@
   "uploader": null,
   "by": "まふまふ",
   "firstSeen": "2026-10-08T15:10:08.855Z",
-  "seed": true,
-  "of": "nico:sm38685473",
-  "p": "赤猫",
-  "a": "niconico:95590592"
+  "seed": true
  },
  {
   "id": "nico:sm36713449",
@@ -61888,7 +61731,7 @@
   "url": "https://www.nicovideo.jp/watch/sm35463789",
   "title": "ラブ＆デストロイ／ 湯鬱声からす",
   "t": "ラブ&デストロイ",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2019-07-29T04:07:01+09:00",
   "views": 16718,
@@ -61904,8 +61747,7 @@
   ],
   "uploaderId": 22579956,
   "uploader": null,
-  "p": "湯鬱声からす",
-  "a": "niconico:22579956",
+  "by": "湯鬱声からす",
   "firstSeen": "2026-10-11T00:54:29.194Z",
   "seed": true
  },
@@ -65139,7 +64981,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm33881801",
   "title": "あの夏が飽和する。＠歌ってみた【まふまふ】",
-  "t": "あの夏が飽和する。",
+  "t": "あの夏が飽和する",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2018-09-19T18:00:00+09:00",
@@ -65528,7 +65370,7 @@
   "url": "https://www.nicovideo.jp/watch/sm33760727",
   "title": "【音街ウナ】新宝島【-3】",
   "t": "新宝島",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2018-08-27T23:24:02+09:00",
   "views": 6713,
@@ -65545,13 +65387,9 @@
   ],
   "uploaderId": 44656771,
   "uploader": null,
-  "p": "ジュースP",
-  "v": "音街ウナ",
-  "a": "niconico:44656771",
+  "by": "ジュースP",
   "firstSeen": "2026-10-09T17:21:46.699Z",
-  "seed": true,
-  "pFilled": false,
-  "pFromTag": true
+  "seed": true
  },
  {
   "id": "yt:mXfnndMDFPs",
@@ -67320,9 +67158,7 @@
   "uploader": null,
   "by": "After the Rain",
   "firstSeen": "2026-10-08T15:10:08.896Z",
-  "seed": true,
-  "of": "nico:sm37493982",
-  "a": "niconico:52040168"
+  "seed": true
  },
  {
   "id": "nico:sm33222454",
@@ -67644,10 +67480,7 @@
   "uploader": null,
   "by": "まふまふ",
   "firstSeen": "2026-10-08T15:10:08.813Z",
-  "seed": true,
-  "of": "nico:sm41299141",
-  "p": "米津玄師",
-  "a": "niconico:509247"
+  "seed": true
  },
  {
   "id": "yt:IfL-bmSrueE",
@@ -67746,7 +67579,7 @@
   "title": "【米津玄師】Lemon 歌ってみた ver.Sou",
   "t": "Lemon",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2018-04-20T20:00:00+09:00",
   "views": 2402779,
   "likes": 832,
@@ -67768,10 +67601,7 @@
   "uploader": null,
   "by": "Sou",
   "firstSeen": "2026-10-08T15:10:08.760Z",
-  "seed": true,
-  "of": "nico:sm41299141",
-  "p": "米津玄師",
-  "a": "niconico:509247"
+  "seed": true
  },
  {
   "id": "nico:sm33079591",
@@ -68404,7 +68234,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm32882962",
   "title": "ロキ＠歌ってみた【まふまふ feat.そらる】",
-  "t": "ロキ@",
+  "t": "ロキ",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2018-03-14T18:00:00+09:00",
@@ -68426,7 +68256,10 @@
   "uploader": null,
   "by": "まふまふ feat.そらる",
   "firstSeen": "2026-10-08T15:10:08.657Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:Xg-qfsKN2_E",
+  "p": "みきとP",
+  "a": "youtube:UCBR4N5DkgDt3PLTcfJB1iiw"
  },
  {
   "id": "nico:sm32867394",
@@ -69739,7 +69572,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm32640550",
   "title": "君氏危うくも近うよれ＠歌ってみた【まふまふ×あほの坂田】",
-  "t": "君氏危うくも近うよれ@",
+  "t": "君氏危うくも近うよれ",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2018-01-26T18:00:00+09:00",
@@ -70562,7 +70395,7 @@
   "url": "https://www.nicovideo.jp/watch/sm32442835",
   "title": "【夕歌ユウマ6号】 ベルセルク 【音源配布】",
   "t": "ベルセルク",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2017-12-19T18:00:00+09:00",
   "views": 5327,
@@ -70581,11 +70414,12 @@
   ],
   "uploaderId": 20818050,
   "uploader": null,
-  "p": "まふまふ",
-  "a": "niconico:20818050",
+  "by": "",
   "firstSeen": "2026-10-09T21:44:36.809Z",
   "seed": true,
-  "pFilled": true
+  "of": "nico:sm27485100",
+  "p": "まふまふ",
+  "a": "niconico:18874531"
  },
  {
   "id": "yt:xauTD6nRMio",
@@ -71724,7 +71558,7 @@
   "title": "【FantasticYouth】「 No title 」歌ってみた【LowFat×おん湯(♨︎)】",
   "t": "No title",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2017-10-28T19:00:00+09:00",
   "views": 4426608,
   "likes": 2599,
@@ -71746,9 +71580,7 @@
   "uploader": null,
   "by": "LowFat×おん湯(♨︎)",
   "firstSeen": "2026-10-08T15:10:08.646Z",
-  "seed": true,
-  "of": "nico:sm24846480",
-  "a": "niconico:32278038"
+  "seed": true
  },
  {
   "id": "nico:sm32173978",
@@ -73088,9 +72920,7 @@
   "uploader": null,
   "by": "天月Eve96猫そらるluz",
   "firstSeen": "2026-10-08T15:10:08.934Z",
-  "seed": true,
-  "of": "nico:sm44144228",
-  "a": "niconico:125313318"
+  "seed": true
  },
  {
   "id": "nico:sm31861092",
@@ -73393,7 +73223,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm31814115",
   "title": "カタオモイ　歌ってみたのはメガテラ・ゼロ",
-  "t": "カタオモイ のはメガテラ・ゼロ",
+  "t": "カタオモイ",
   "kind": "歌ってみた",
   "g": "その他",
   "date": "2017-08-26T19:00:00+09:00",
@@ -73742,7 +73572,7 @@
   "title": "実況者12人が『明日があるさ』歌ってみた【実写PV】",
   "t": "明日があるさ",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2017-08-19T18:00:00+09:00",
   "views": 1728589,
   "likes": 3991,
@@ -73760,10 +73590,7 @@
   "uploader": null,
   "by": "実況者12人",
   "firstSeen": "2026-10-08T15:10:08.874Z",
-  "seed": true,
-  "of": "nico:sm18773389",
-  "p": "合唱団P",
-  "a": "niconico:14201029"
+  "seed": true
  },
  {
   "id": "nico:sm31741498",
@@ -74071,8 +73898,8 @@
   "url": "https://www.nicovideo.jp/watch/sm31716173",
   "title": "【鏡音リン】嘘の火花【short ver.】",
   "t": "嘘の火花",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2017-08-09T16:04:05+09:00",
   "views": 1188,
   "likes": 0,
@@ -74087,9 +73914,7 @@
   ],
   "uploaderId": 65807882,
   "uploader": null,
-  "p": "",
-  "v": "鏡音リン",
-  "a": "niconico:65807882",
+  "by": "】",
   "firstSeen": "2026-10-10T07:39:24.117Z",
   "seed": true
  },
@@ -74787,8 +74612,8 @@
   "url": "https://www.nicovideo.jp/watch/sm31534401",
   "title": "【音街ウナ】それは僕たちの奇跡（ラブライブ！）【演奏したかった】",
   "t": "それは僕たちの奇跡",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2017-07-08T20:03:47+09:00",
   "views": 2590,
   "likes": 8,
@@ -74808,9 +74633,7 @@
   ],
   "uploaderId": 2521923,
   "uploader": null,
-  "p": "",
-  "v": "音街ウナ",
-  "a": "niconico:2521923",
+  "by": "",
   "firstSeen": "2026-10-10T07:39:24.118Z",
   "seed": true
  },
@@ -75335,7 +75158,7 @@
   "url": "https://www.nicovideo.jp/watch/sm31429976",
   "title": "【VOCALOIDFukase】僕が死のうと思ったのは【Short Ver.】",
   "t": "僕が死のうと思ったのは",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2017-06-20T21:28:52+09:00",
   "views": 2128,
@@ -75353,9 +75176,7 @@
   ],
   "uploaderId": 18954289,
   "uploader": null,
-  "p": "",
-  "v": "Fukase",
-  "a": "niconico:18954289",
+  "by": "】",
   "firstSeen": "2026-10-10T07:39:24.120Z",
   "seed": true
  },
@@ -76194,7 +76015,7 @@
   "title": "【ウォルピス社】ようこそジャパリパークへを歌ってみた【提供】",
   "t": "ようこそジャパリパークへ",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2017-04-24T19:30:00+09:00",
   "views": 2263262,
   "likes": 1110,
@@ -76212,9 +76033,7 @@
   "uploader": null,
   "by": "ウォルピス社",
   "firstSeen": "2026-10-08T15:10:08.775Z",
-  "seed": true,
-  "of": "nico:sm42045349",
-  "a": "niconico:125313318"
+  "seed": true
  },
  {
   "id": "nico:sm31082554",
@@ -76368,7 +76187,7 @@
   "title": "【ウォルピス社】ラブ＆デストロイを歌ってみました【提供】",
   "t": "ラブ&デストロイ",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2017-04-20T19:30:00+09:00",
   "views": 2941796,
   "likes": 540,
@@ -76388,10 +76207,7 @@
   "uploader": null,
   "by": "ウォルピスカーター",
   "firstSeen": "2026-10-08T15:10:08.707Z",
-  "seed": true,
-  "of": "nico:sm35463789",
-  "p": "湯鬱声からす",
-  "a": "niconico:22579956"
+  "seed": true
  },
  {
   "id": "nico:sm31020085",
@@ -76910,8 +76726,8 @@
   "url": "https://www.nicovideo.jp/watch/sm30916572",
   "title": "けものフレンズED「ぼくのフレンド」 - Arranged by daniwell feat. IA＆初音ミク",
   "t": "ぼくのフレンド",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2017-03-28T22:33:05+09:00",
   "views": 39424,
   "likes": 26,
@@ -76930,9 +76746,7 @@
   ],
   "uploaderId": 989911,
   "uploader": null,
-  "p": "けものフレンズED",
-  "v": "IA",
-  "a": "niconico:989911",
+  "by": "daniwellP",
   "firstSeen": "2026-10-10T07:39:24.122Z",
   "seed": true
  },
@@ -77678,7 +77492,7 @@
   "title": "96猫 『嘘の火花』テレビアニメ《クズの本懐OP》Music Video",
   "t": "嘘の火花",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2017-02-22T14:22:00+09:00",
   "views": 1808613,
   "likes": 341,
@@ -77695,9 +77509,7 @@
   "uploader": null,
   "by": "96猫",
   "firstSeen": "2026-10-08T15:10:08.852Z",
-  "seed": true,
-  "of": "nico:sm31716173",
-  "a": "niconico:65807882"
+  "seed": true
  },
  {
   "id": "nico:sm30681505",
@@ -78277,7 +78089,7 @@
   "url": "https://www.nicovideo.jp/watch/sm30493925",
   "title": "アイスリープウェル Ver.GUMI",
   "t": "アイスリープウェル",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2017-01-24T14:57:11+09:00",
   "views": 949,
@@ -78292,9 +78104,8 @@
   ],
   "uploaderId": 11158115,
   "uploader": null,
-  "p": "",
+  "by": "GUMI",
   "v": "GUMI",
-  "a": "niconico:11158115",
   "firstSeen": "2026-10-11T00:54:29.200Z",
   "seed": true
  },
@@ -79366,7 +79177,7 @@
   "title": "【君の名は。】なんでもないや　歌ってみた【そらる】",
   "t": "なんでもないや",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2016-12-09T18:00:00+09:00",
   "views": 1324197,
   "likes": 352,
@@ -79386,10 +79197,7 @@
   "uploader": null,
   "by": "そらる",
   "firstSeen": "2026-10-08T15:10:09.002Z",
-  "seed": true,
-  "of": "nico:sm29823359",
-  "p": "RADWIMPS",
-  "a": "niconico:18858107"
+  "seed": true
  },
  {
   "id": "nico:sm30177801",
@@ -80670,7 +80478,7 @@
   "url": "https://www.nicovideo.jp/watch/sm29823359",
   "title": "【ルカremix】　RADWIMPS「なんでもないや」remix",
   "t": "なんでもないや",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2016-10-12T20:50:08+09:00",
   "views": 1783,
@@ -80689,9 +80497,7 @@
   ],
   "uploaderId": 18858107,
   "uploader": null,
-  "p": "RADWIMPS",
-  "v": "巡音ルカ",
-  "a": "niconico:18858107",
+  "by": "RADWIMPS",
   "firstSeen": "2026-10-09T17:21:46.704Z",
   "seed": true
  },
@@ -80847,7 +80653,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm29787224",
   "title": "夏祭り-Arrange ver.-＠歌ってみた【まふまふ】",
-  "t": "夏祭り",
+  "t": "夏祭り-Arrange",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2016-10-07T18:00:00+09:00",
@@ -80870,9 +80676,7 @@
   "uploader": null,
   "by": "まふまふ",
   "firstSeen": "2026-10-08T15:10:08.989Z",
-  "seed": true,
-  "of": "nico:sm44144228",
-  "a": "niconico:125313318"
+  "seed": true
  },
  {
   "id": "nico:sm29780342",
@@ -81676,9 +81480,7 @@
   "uploader": null,
   "by": "XYZ",
   "firstSeen": "2026-10-08T15:10:08.615Z",
-  "seed": true,
-  "of": "nico:sm46405230",
-  "a": "niconico:52040168"
+  "seed": true
  },
  {
   "id": "nico:sm29371926",
@@ -82119,7 +81921,7 @@
   "title": "【アカペラ】　「新宝島」を歌ってみた　【＿＿】",
   "t": "新宝島",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2016-07-06T21:14:41+09:00",
   "views": 2587190,
   "likes": 1183,
@@ -82140,10 +81942,7 @@
   "uploader": null,
   "by": "__",
   "firstSeen": "2026-10-08T15:10:08.740Z",
-  "seed": true,
-  "of": "nico:sm33760727",
-  "p": "ジュースP",
-  "a": "niconico:44656771"
+  "seed": true
  },
  {
   "id": "nico:sm29194168",
@@ -82337,7 +82136,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm29152222",
   "title": "アイネクライネ-Acoustic Arrange-＠歌ってみた【まふまふ】",
-  "t": "アイネクライネ-Acoustic Arrange-@",
+  "t": "アイネクライネ-Acoustic Arrange-",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2016-07-01T18:00:00+09:00",
@@ -82836,7 +82635,7 @@
   "title": "【なるが100万再生されるミュージックビデオ作ってみた】only my railgun",
   "t": "only my railgun",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2016-06-12T19:00:56+09:00",
   "views": 1364893,
   "likes": 47,
@@ -82857,10 +82656,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.986Z",
-  "seed": true,
-  "of": "nico:sm8837371",
-  "p": "初音ミクで",
-  "a": "niconico:14679760"
+  "seed": true
  },
  {
   "id": "nico:sm29021785",
@@ -83352,7 +83148,7 @@
   "title": "【オリジナルPV】 小さな恋のうた を歌ってみた。 by天月",
   "t": "小さな恋のうた",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2016-05-21T18:00:00+09:00",
   "views": 4113350,
   "likes": 1645,
@@ -83370,10 +83166,7 @@
   "uploader": null,
   "by": "天月",
   "firstSeen": "2026-10-08T15:10:08.655Z",
-  "seed": true,
-  "of": "nico:sm19279478",
-  "p": "合唱団P",
-  "a": "niconico:14201029"
+  "seed": true
  },
  {
   "id": "nico:sm28856144",
@@ -83510,9 +83303,7 @@
   "uploader": null,
   "by": "あらき",
   "firstSeen": "2026-10-08T15:10:08.684Z",
-  "seed": true,
-  "of": "nico:sm30493925",
-  "a": "niconico:11158115"
+  "seed": true
  },
  {
   "id": "nico:sm28836144",
@@ -83615,7 +83406,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm28793469",
   "title": "脱獄＠歌ってみた【まふまふ】",
-  "t": "脱獄@",
+  "t": "脱獄",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2016-05-07T18:00:00+09:00",
@@ -83635,7 +83426,10 @@
   "uploader": null,
   "by": "まふまふ",
   "firstSeen": "2026-10-08T15:10:08.742Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:nEJ-m6KNddI",
+  "p": "Neru",
+  "a": "youtube:UClxXuM2m0rIL9VCA1ds9HqA"
  },
  {
   "id": "nico:sm28778872",
@@ -84360,7 +84154,7 @@
   "title": "【再投稿】「いのちの名前」を歌ってみた。【ダズビー】",
   "t": "いのちの名前",
   "kind": "歌ってみた",
-  "g": "その他",
+  "g": "アニソン",
   "date": "2016-03-04T19:30:00+09:00",
   "views": 1309354,
   "likes": 1331,
@@ -84418,7 +84212,7 @@
   "title": "No title歌ってみたのはメガテラ・ゼロ",
   "t": "No title",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2016-02-28T19:00:00+09:00",
   "views": 1620300,
   "likes": 727,
@@ -84433,9 +84227,7 @@
   "uploader": null,
   "by": "メガテラ・ゼロ",
   "firstSeen": "2026-10-08T15:10:08.898Z",
-  "seed": true,
-  "of": "nico:sm24846480",
-  "a": "niconico:32278038"
+  "seed": true
  },
  {
   "id": "nico:sm28307284",
@@ -85066,7 +84858,7 @@
   "url": "https://www.nicovideo.jp/watch/sm28067804",
   "title": "【歌うVOICEROID】琴葉茜・葵で『言の葉クリニック』【自動調整】",
   "t": "言の葉クリニック",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2016-01-24T01:00:00+09:00",
   "views": 1965482,
@@ -85086,8 +84878,7 @@
   ],
   "uploaderId": 52807909,
   "uploader": null,
-  "p": "",
-  "a": "niconico:52807909",
+  "by": "",
   "firstSeen": "2026-10-08T14:36:47.378Z",
   "seed": true
  },
@@ -85776,8 +85567,8 @@
   "url": "https://www.nicovideo.jp/watch/sm27825296",
   "title": "【白鐘ヒスイ】 はなまるぴっぴはよいこだけ 【おそ松さんOP】",
   "t": "はなまるぴっぴはよいこだけ",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2015-12-19T18:14:24+09:00",
   "views": 4257,
   "likes": 6,
@@ -85797,11 +85588,9 @@
   ],
   "uploaderId": 22579956,
   "uploader": null,
-  "p": "湯鬱声からす",
-  "a": "niconico:22579956",
+  "by": "",
   "firstSeen": "2026-10-09T21:44:36.813Z",
-  "seed": true,
-  "pFilled": true
+  "seed": true
  },
  {
   "id": "nico:sm27817807",
@@ -86114,7 +85903,7 @@
   "title": "【おそ松さんOP】６人で『はなまるぴっぴはよいこだけ』歌ってみた",
   "t": "はなまるぴっぴはよいこだけ",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2015-11-27T20:00:00+09:00",
   "views": 2243464,
   "likes": 1615,
@@ -86133,10 +85922,7 @@
   "uploader": null,
   "by": "Sou",
   "firstSeen": "2026-10-08T15:10:08.777Z",
-  "seed": true,
-  "of": "nico:sm27825296",
-  "p": "湯鬱声からす",
-  "a": "niconico:22579956"
+  "seed": true
  },
  {
   "id": "nico:sm27672146",
@@ -86526,7 +86312,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm27459772",
   "title": "夏に去りし君を想フ歌ってみたのはメガテラ・ゼロ",
-  "t": "夏に去りし君を想フ のはメガテラ・ゼロ",
+  "t": "夏に去りし君を想フ",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2015-10-27T19:00:00+09:00",
@@ -86585,7 +86371,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm27435705",
   "title": "歌ってみたノンストップメドレーⅧ【リレー】",
-  "t": "ノンストップメドレーVIII",
+  "t": "ノンストップメドレー",
   "kind": "歌ってみた",
   "g": "その他",
   "date": "2015-10-24T19:00:00+09:00",
@@ -87640,7 +87426,7 @@
   "title": "そばかす (JUDY AND MARY) 　歌った",
   "t": "そばかす",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2015-08-24T22:00:00+09:00",
   "views": 1428484,
   "likes": 460,
@@ -87655,10 +87441,7 @@
   "uploader": null,
   "by": "ろん",
   "firstSeen": "2026-10-08T15:10:08.958Z",
-  "seed": true,
-  "of": "nico:sm1831629",
-  "p": "初音ミクで",
-  "a": "niconico:25361"
+  "seed": true
  },
  {
   "id": "nico:sm27005638",
@@ -87887,7 +87670,7 @@
   "title": "【PV】シュガーソングとビターステップ 勝手に-party style- 【あらき】",
   "t": "シュガーソングとビターステップ",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2015-08-14T20:00:00+09:00",
   "views": 1800307,
   "likes": 786,
@@ -87908,9 +87691,7 @@
   "uploader": null,
   "by": "あらき",
   "firstSeen": "2026-10-08T15:10:08.857Z",
-  "seed": true,
-  "of": "nico:sm26628480",
-  "a": "niconico:13256477"
+  "seed": true
  },
  {
   "id": "nico:sm26923209",
@@ -88593,7 +88374,7 @@
   "title": "【あじっこ＆3110】シュガーソングとビターステップ【叩いて歌ってみた】",
   "t": "シュガーソングとビターステップ",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2015-07-05T19:02:15+09:00",
   "views": 1463066,
   "likes": 164,
@@ -88612,9 +88393,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.941Z",
-  "seed": true,
-  "of": "nico:sm26628480",
-  "a": "niconico:13256477"
+  "seed": true
  },
  {
   "id": "nico:sm26631466",
@@ -88653,7 +88432,7 @@
   "title": "シュガーソングとビターステップ＠歌ってみた【まふまふ】",
   "t": "シュガーソングとビターステップ",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2015-07-04T18:00:00+09:00",
   "views": 5774025,
   "likes": 2014,
@@ -88670,9 +88449,7 @@
   "uploader": null,
   "by": "まふまふ",
   "firstSeen": "2026-10-08T15:10:08.629Z",
-  "seed": true,
-  "of": "nico:sm26628480",
-  "a": "niconico:13256477"
+  "seed": true
  },
  {
   "id": "nico:sm26628480",
@@ -88680,8 +88457,8 @@
   "url": "https://www.nicovideo.jp/watch/sm26628480",
   "title": "【MEIKO】シュガーソングとビターステップ【KAITO】",
   "t": "シュガーソングとビターステップ",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2015-07-04T03:01:16+09:00",
   "views": 28109,
   "likes": 59,
@@ -88698,9 +88475,7 @@
   ],
   "uploaderId": 13256477,
   "uploader": null,
-  "p": "",
-  "v": "MEIKO",
-  "a": "niconico:13256477",
+  "by": "",
   "firstSeen": "2026-10-09T17:21:46.704Z",
   "seed": true
  },
@@ -88819,7 +88594,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm26519121",
   "title": "竹取オーバーナイトセンセーション＠歌ってみた【まふまふ×天月】",
-  "t": "竹取オーバーナイトセンセーション@",
+  "t": "竹取オーバーナイトセンセーション",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2015-06-19T18:00:00+09:00",
@@ -88848,7 +88623,7 @@
   "title": "【血界戦線ED】シュガーソングとビターステップを歌ってみた　まるぐり",
   "t": "シュガーソングとビターステップ",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2015-06-18T20:00:49+09:00",
   "views": 10864325,
   "likes": 3579,
@@ -88867,9 +88642,7 @@
   "uploader": null,
   "by": "まるぐり",
   "firstSeen": "2026-10-08T15:10:08.612Z",
-  "seed": true,
-  "of": "nico:sm26628480",
-  "a": "niconico:13256477"
+  "seed": true
  },
  {
   "id": "nico:sm26515005",
@@ -90626,8 +90399,8 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm25661704",
   "title": "【初音ミク、鏡音リン】 アナと雪の女王メドレー (ピアノ) [MMD]【Let It Go】",
-  "t": "アナと雪の女王メドレー",
-  "kind": "本家",
+  "t": "Let it go",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2015-02-25T23:28:28+09:00",
   "views": 1939,
@@ -90648,11 +90421,12 @@
   ],
   "uploaderId": 19535018,
   "uploader": null,
-  "p": "",
-  "v": "初音ミク",
-  "a": "niconico:19535018",
+  "by": "",
   "firstSeen": "2026-10-11T00:54:29.196Z",
-  "seed": true
+  "seed": true,
+  "of": "nico:sm23738347",
+  "p": "アナと雪の女王 Full ver.",
+  "a": "niconico:105759"
  },
  {
   "id": "nico:sm25658559",
@@ -92661,7 +92435,7 @@
   "title": "アナと雪の女王メドレーver.声真似【替え歌】",
   "t": "アナと雪の女王メドレー",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2014-11-06T20:07:36+09:00",
   "views": 1870375,
   "likes": 389,
@@ -92679,9 +92453,7 @@
   "uploader": null,
   "by": "声真似",
   "firstSeen": "2026-10-08T15:10:08.836Z",
-  "seed": true,
-  "of": "nico:sm25661704",
-  "a": "niconico:19535018"
+  "seed": true
  },
  {
   "id": "nico:sm24855586",
@@ -92689,7 +92461,7 @@
   "url": "https://www.nicovideo.jp/watch/sm24855586",
   "title": "初音ミク - Welcome To The Black Parade",
   "t": "Welcome To The Black Parade",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2014-11-06T19:24:15+09:00",
   "views": 1515,
@@ -92703,9 +92475,8 @@
   ],
   "uploaderId": 44094506,
   "uploader": null,
-  "p": "",
+  "by": "初音ミク",
   "v": "初音ミク",
-  "a": "niconico:44094506",
   "firstSeen": "2026-10-12T21:33:21.302Z",
   "seed": true
  },
@@ -92779,7 +92550,7 @@
   "url": "https://www.nicovideo.jp/watch/sm24846480",
   "title": "【鏡音リン】 No title 【アレンジ】",
   "t": "No title",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2014-11-05T07:38:11+09:00",
   "views": 123588,
@@ -92797,9 +92568,7 @@
   ],
   "uploaderId": 32278038,
   "uploader": null,
-  "p": "",
-  "v": "鏡音リン",
-  "a": "niconico:32278038",
+  "by": "",
   "firstSeen": "2026-10-09T17:21:46.698Z",
   "seed": true
  },
@@ -92843,7 +92612,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm24812825",
   "title": "Happy Halloween Rap ver. 【nqrse】",
-  "t": "Happy Halloween",
+  "t": "Happy Halloween Rap",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2014-11-01T00:32:47+09:00",
@@ -92866,10 +92635,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.697Z",
-  "seed": true,
-  "of": "nico:sm24657407",
-  "p": "ちほP",
-  "a": "niconico:11314366"
+  "seed": true
  },
  {
   "id": "nico:sm24789006",
@@ -93603,7 +93369,7 @@
   "url": "https://www.nicovideo.jp/watch/sm24469131",
   "title": "【アレンジ】松任谷由実　春よ、来い",
   "t": "松任谷由実 春よ、来い",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2014-09-14T19:02:32+09:00",
   "views": 1310012,
@@ -93623,9 +93389,7 @@
   ],
   "uploaderId": 32098035,
   "uploader": null,
-  "p": "",
-  "v": "初音ミク",
-  "a": "niconico:32098035",
+  "by": "",
   "firstSeen": "2026-10-08T14:36:47.414Z",
   "seed": true
  },
@@ -93774,7 +93538,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm24408079",
   "title": "林檎花火とソーダの海＠自分で歌ってみた【まふまふ】",
-  "t": "林檎花火とソーダの海@自分で",
+  "t": "林檎花火とソーダの海 自分で",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2014-09-06T18:00:00+09:00",
@@ -93802,7 +93566,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm24408486",
   "title": "by your side歌ってみたのはメガテラ・ゼロ",
-  "t": "by your side のはメガテラ・ゼロ",
+  "t": "by your side",
   "kind": "歌ってみた",
   "g": "その他",
   "date": "2014-09-06T17:44:12+09:00",
@@ -94612,8 +94376,8 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm24028752",
   "title": "【初音ミク】unravel -Full-【dubstep】東京喰種-トーキョーグール-",
-  "t": "unravel -Full- 東京喰種-トーキョーグール-",
-  "kind": "本家",
+  "t": "unravel",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2014-07-18T09:49:54+09:00",
   "views": 1227587,
@@ -94634,11 +94398,12 @@
   ],
   "uploaderId": 29209689,
   "uploader": null,
-  "p": "",
-  "v": "初音ミク",
-  "a": "niconico:29209689",
+  "by": "",
   "firstSeen": "2026-10-08T14:36:47.421Z",
-  "seed": true
+  "seed": true,
+  "of": "nico:sm25574540",
+  "p": "インコースP",
+  "a": "niconico:16029148"
  },
  {
   "id": "nico:sm24024502",
@@ -94682,7 +94447,7 @@
   "title": "【ラブライブ！2期OP】『それは僕たちの奇跡』 Band Edition 【歌ってみた】",
   "t": "それは僕たちの奇跡",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2014-07-12T19:00:00+09:00",
   "views": 1404968,
   "likes": 228,
@@ -94704,9 +94469,7 @@
   "uploader": null,
   "by": "Last_Note.",
   "firstSeen": "2026-10-08T15:10:08.972Z",
-  "seed": true,
-  "of": "nico:sm31534401",
-  "a": "niconico:2521923"
+  "seed": true
  },
  {
   "id": "nico:sm23985500",
@@ -95020,7 +94783,7 @@
   "title": "【しゃけみー】生まれてはじめて（リプライズ）【効果音全部俺。】",
   "t": "生まれてはじめて",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2014-06-28T12:00:00+09:00",
   "views": 1421041,
   "likes": 166,
@@ -95688,7 +95451,7 @@
   "title": "【しゃけみー】とびら開けて 【効果音全部俺。】",
   "t": "とびら開けて",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2014-05-31T09:00:00+09:00",
   "views": 2150868,
   "likes": 410,
@@ -95705,10 +95468,7 @@
   "uploader": null,
   "by": "しゃけみー",
   "firstSeen": "2026-10-08T15:10:08.789Z",
-  "seed": true,
-  "of": "nico:sm23565821",
-  "p": "歌わせて&喋らせてみた。",
-  "a": "niconico:34018943"
+  "seed": true
  },
  {
   "id": "yt:Ak9S5ibCuyk",
@@ -95958,7 +95718,7 @@
   "title": "【しゃけみー】生まれてはじめて 【効果音全部俺。】",
   "t": "生まれてはじめて",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2014-05-24T20:00:00+09:00",
   "views": 2484453,
   "likes": 395,
@@ -96081,7 +95841,7 @@
   "url": "https://www.nicovideo.jp/watch/sm23565821",
   "title": "【テトテッド】「とびら開けて」歌わせて&喋らせてみた。",
   "t": "とびら開けて",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2014-05-16T19:54:38+09:00",
   "views": 1616,
@@ -96099,8 +95859,7 @@
   ],
   "uploaderId": 34018943,
   "uploader": null,
-  "p": "歌わせて&喋らせてみた。",
-  "a": "niconico:34018943",
+  "by": "テトテッド",
   "firstSeen": "2026-10-09T17:21:46.700Z",
   "seed": true
  },
@@ -96111,7 +95870,7 @@
   "title": "【アナと雪の女王】 とびら開けて　歌ってみた 【そらるとろん】",
   "t": "とびら開けて",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2014-05-16T00:41:06+09:00",
   "views": 1707587,
   "likes": 818,
@@ -96130,10 +95889,7 @@
   "uploader": null,
   "by": "そらるとろん",
   "firstSeen": "2026-10-08T15:10:08.879Z",
-  "seed": true,
-  "of": "nico:sm23565821",
-  "p": "歌わせて&喋らせてみた。",
-  "a": "niconico:34018943"
+  "seed": true
  },
  {
   "id": "nico:sm23538930",
@@ -96330,7 +96086,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm23437274",
   "title": "歌ってみたノンストップメドレーⅢ【リレー】",
-  "t": "ノンストップメドレーIII",
+  "t": "ノンストップメドレー",
   "kind": "歌ってみた",
   "g": "その他",
   "date": "2014-04-29T19:00:00+09:00",
@@ -96790,7 +96546,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm23229793",
   "title": "歌ってみたノンストップメドレーⅡ【リレー】",
-  "t": "ノンストップメドレーII",
+  "t": "ノンストップメドレー",
   "kind": "歌ってみた",
   "g": "その他",
   "date": "2014-04-01T19:02:00+09:00",
@@ -97217,8 +96973,8 @@
   "url": "https://www.nicovideo.jp/watch/sm23105349",
   "title": "【鏡音リン・レン】革命デュアリズム【全力でカヴァーしてみた】",
   "t": "革命デュアリズム",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2014-03-16T20:00:00+09:00",
   "views": 241405,
   "likes": 73,
@@ -97238,13 +96994,9 @@
   ],
   "uploaderId": 24882114,
   "uploader": null,
-  "p": "レフティーモンスターP",
-  "v": "鏡音リン",
-  "a": "niconico:24882114",
+  "by": "レフティーモンスターP",
   "firstSeen": "2026-10-13T21:45:42.850Z",
-  "seed": true,
-  "pFilled": false,
-  "pFromTag": true
+  "seed": true
  },
  {
   "id": "yt:xOKplMgHxxA",
@@ -97642,7 +97394,7 @@
   "title": "『マジLOVE1000％』をwwwwwwwウザさMAXで歌ってみたったwwwwwwwwwwwwwwwwwwww",
   "t": "マジLOVE1000%",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2014-02-22T18:00:00+09:00",
   "views": 3528831,
   "likes": 3280,
@@ -97658,10 +97410,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.670Z",
-  "seed": true,
-  "of": "nico:sm15969064",
-  "p": "歌手音ピコ",
-  "a": "niconico:2927601"
+  "seed": true
  },
  {
   "id": "nico:sm22938351",
@@ -100145,7 +99894,7 @@
   "url": "https://www.nicovideo.jp/watch/sm22086284",
   "title": "【 初音ミクＶ３・LilyＶ３ 】Never Say Never【ダンガンロンパ】",
   "t": "Never Say Never",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2013-10-20T22:10:00+09:00",
   "views": 2821,
@@ -100164,9 +99913,7 @@
   ],
   "uploaderId": 35980519,
   "uploader": null,
-  "p": "",
-  "v": "初音ミク",
-  "a": "niconico:35980519",
+  "by": "",
   "firstSeen": "2026-10-09T21:44:36.813Z",
   "seed": true
  },
@@ -101570,7 +101317,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm21676184",
   "title": "【まふまふ】夢花火＠自分で歌ってみた",
-  "t": "夢花火@自分で",
+  "t": "夢花火 自分で",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2013-08-25T18:03:27+09:00",
@@ -102060,7 +101807,7 @@
   "url": "https://www.nicovideo.jp/watch/sm21469992",
   "title": "【GUMI】シーズン・イン・ザ・サン /TUBE",
   "t": "シーズン・イン・ザ・サン",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2013-07-29T22:37:10+09:00",
   "views": 2336,
@@ -102081,9 +101828,7 @@
   ],
   "uploaderId": 8309333,
   "uploader": null,
-  "p": "TUBE",
-  "v": "GUMI",
-  "a": "niconico:8309333",
+  "by": "TUBE",
   "firstSeen": "2026-10-10T07:39:24.122Z",
   "seed": true
  },
@@ -102313,9 +102058,7 @@
   "uploader": null,
   "by": "ダンガンロンパ",
   "firstSeen": "2026-10-08T15:10:08.798Z",
-  "seed": true,
-  "of": "nico:sm22086284",
-  "a": "niconico:35980519"
+  "seed": true
  },
  {
   "id": "nico:sm21360174",
@@ -102739,7 +102482,7 @@
   "url": "https://www.nicovideo.jp/watch/so21146854",
   "title": "【ZOLA PROJECT(β版)】フライングゲット【歌声確認用】",
   "t": "フライングゲット",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2013-06-18T21:00:00+09:00",
   "views": 39084,
@@ -102759,8 +102502,7 @@
   ],
   "uploaderId": 3040,
   "uploader": null,
-  "p": "",
-  "a": "niconico:3040",
+  "by": "",
   "firstSeen": "2026-10-09T17:21:46.701Z",
   "seed": true
  },
@@ -102942,7 +102684,7 @@
   "url": "https://www.nicovideo.jp/watch/sm21075255",
   "title": "【UTAU演歌系中国語ライブラリー配布】北国の春【新葛平】",
   "t": "北国の春",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2013-06-09T16:42:04+09:00",
   "views": 978,
@@ -102962,8 +102704,7 @@
   ],
   "uploaderId": 12381455,
   "uploader": null,
-  "p": "",
-  "a": "niconico:12381455",
+  "by": "",
   "firstSeen": "2026-10-11T21:32:42.642Z",
   "seed": true
  },
@@ -103451,8 +103192,8 @@
   "url": "https://www.nicovideo.jp/watch/sm20766496",
   "title": "【 鏡音リン 】　sister's noise　(FULL) 【とある科学の超電磁砲S】",
   "t": "sister's noise",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2013-05-03T21:41:06+09:00",
   "views": 2015960,
   "likes": 1341,
@@ -103472,9 +103213,7 @@
   ],
   "uploaderId": 2406525,
   "uploader": null,
-  "p": "",
-  "v": "鏡音リン",
-  "a": "niconico:2406525",
+  "by": "",
   "firstSeen": "2026-10-08T14:36:47.376Z",
   "seed": true
  },
@@ -104487,7 +104226,7 @@
   "title": "【踊ってみた】フライングゲット【キリタロー。】",
   "t": "フライングゲット",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2013-03-14T03:27:25+09:00",
   "views": 1979938,
   "likes": 488,
@@ -104508,9 +104247,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.817Z",
-  "seed": true,
-  "of": "nico:so21146854",
-  "a": "niconico:3040"
+  "seed": true
  },
  {
   "id": "nico:sm20319925",
@@ -107068,7 +106805,7 @@
   "url": "https://www.nicovideo.jp/watch/sm19279478",
   "title": "【VOCALOID2合唱団】小さな恋のうた【MONGOL800】",
   "t": "小さな恋のうた",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2012-11-04T20:34:32+09:00",
   "views": 20728,
@@ -107088,13 +106825,9 @@
   ],
   "uploaderId": 14201029,
   "uploader": null,
-  "p": "合唱団P",
-  "v": "初音ミク",
-  "a": "niconico:14201029",
+  "by": "合唱団P",
   "firstSeen": "2026-10-11T00:54:29.193Z",
-  "seed": true,
-  "pFilled": false,
-  "pFromTag": true
+  "seed": true
  },
  {
   "id": "nico:sm19254569",
@@ -108387,7 +108120,7 @@
   "url": "https://www.nicovideo.jp/watch/sm18773389",
   "title": "【VOCALOID2合唱団】明日があるさ【ウルフルズ】",
   "t": "明日があるさ",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2012-09-01T21:54:28+09:00",
   "views": 9650,
@@ -108405,12 +108138,9 @@
   ],
   "uploaderId": 14201029,
   "uploader": null,
-  "p": "合唱団P",
-  "a": "niconico:14201029",
+  "by": "合唱団P",
   "firstSeen": "2026-10-09T17:21:46.702Z",
-  "seed": true,
-  "pFilled": false,
-  "pFromTag": true
+  "seed": true
  },
  {
   "id": "nico:nm18751391",
@@ -109682,8 +109412,8 @@
   "url": "https://www.nicovideo.jp/watch/sm18186644",
   "title": "【初音ミク】 英雄故事 / 映画「ポリス・ストーリー」主題歌 【耳コピ】",
   "t": "ポリス・ストーリー",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2012-06-25T00:58:20+09:00",
   "views": 15750,
   "likes": 10,
@@ -109701,9 +109431,7 @@
   ],
   "uploaderId": 372605,
   "uploader": null,
-  "p": "主題歌",
-  "v": "初音ミク",
-  "a": "niconico:372605",
+  "by": "主題歌",
   "firstSeen": "2026-10-10T07:39:24.121Z",
   "seed": true
  },
@@ -111336,7 +111064,7 @@
   "url": "https://www.nicovideo.jp/watch/sm17376314",
   "title": "「FACES PLACES」  Heavenz feat.初音ミク・巡音ルカ 【小室哲哉meetsVOCALOID】",
   "t": "FACES PLACES",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2012-03-27T20:00:25+09:00",
   "views": 44487,
@@ -111357,9 +111085,7 @@
   ],
   "uploaderId": 76265,
   "uploader": null,
-  "p": "Heavenz",
-  "v": "初音ミク",
-  "a": "niconico:76265",
+  "by": "Heavenz",
   "firstSeen": "2026-10-12T11:09:53.081Z",
   "seed": true
  },
@@ -111403,8 +111129,8 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm17369221",
   "title": "【初音ミク】恋しさと せつなさと 心強さと【小室哲哉 meets VOCALOID】",
-  "t": "恋しさと せつなさと 心強さと",
-  "kind": "本家",
+  "t": "恋しさとせつなさと心強さと",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2012-03-26T22:59:13+09:00",
   "views": 47284,
@@ -111425,13 +111151,9 @@
   ],
   "uploaderId": 1741662,
   "uploader": null,
-  "p": "mathru",
-  "v": "初音ミク",
-  "a": "niconico:1741662",
+  "by": "mathru",
   "firstSeen": "2026-10-10T07:39:24.121Z",
-  "seed": true,
-  "pFilled": false,
-  "pFromTag": true
+  "seed": true
  },
  {
   "id": "nico:sm17367688",
@@ -112629,8 +112351,8 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm16719480",
   "title": "VOCALOID3 鳥の詩(Ver.IA) full 製品版デモ",
-  "t": "VOCALOID3 鳥の詩 full 製品版デモ",
-  "kind": "本家",
+  "t": "鳥の詩",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2012-01-17T19:27:48+09:00",
   "views": 1354224,
@@ -112651,12 +112373,12 @@
   ],
   "uploaderId": 7734512,
   "uploader": null,
-  "p": "神無月P",
-  "a": "niconico:7734512",
+  "by": "神無月P",
   "firstSeen": "2026-10-08T14:36:47.411Z",
   "seed": true,
-  "pFilled": false,
-  "pFromTag": true
+  "of": "nico:sm16943232",
+  "p": "IAさんで",
+  "a": "niconico:1289383"
  },
  {
   "id": "nico:sm16718573",
@@ -113152,7 +112874,7 @@
   "title": "【メリークリスマス!】　ジングルベル歌ってみたver 犬猫店長",
   "t": "ジングルベル",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2011-12-25T12:25:28+09:00",
   "views": 2002435,
   "likes": 354,
@@ -113173,9 +112895,7 @@
   "uploader": null,
   "by": "犬猫店長",
   "firstSeen": "2026-10-08T15:10:08.812Z",
-  "seed": true,
-  "of": "nico:sm12874906",
-  "a": "niconico:8587809"
+  "seed": true
  },
  {
   "id": "nico:sm16514197",
@@ -114329,8 +114049,8 @@
   "url": "https://www.nicovideo.jp/watch/sm15969064",
   "title": "【KAITO・がくぽ・レン】マジLOVE1000％【VY2・キヨテル・歌手音ピコ】",
   "t": "マジLOVE1000%",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2011-10-23T21:30:46+09:00",
   "views": 79652,
   "likes": 75,
@@ -114350,13 +114070,9 @@
   ],
   "uploaderId": 2927601,
   "uploader": null,
-  "p": "歌手音ピコ",
-  "v": "KAITO",
-  "a": "niconico:2927601",
+  "by": "歌手音ピコ",
   "firstSeen": "2026-10-09T17:21:46.698Z",
-  "seed": true,
-  "pFilled": false,
-  "pFromTag": true
+  "seed": true
  },
  {
   "id": "nico:sm15956806",
@@ -114815,7 +114531,7 @@
   "title": "【声真似】マジLOVE1000％の声優を総入れ替えしてみた【歌ってみた】",
   "t": "マジLOVE1000%",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2011-09-23T21:31:07+09:00",
   "views": 3152300,
   "likes": 1691,
@@ -114831,10 +114547,7 @@
   "uploader": null,
   "by": "あほの坂田",
   "firstSeen": "2026-10-08T15:10:08.696Z",
-  "seed": true,
-  "of": "nico:sm15969064",
-  "p": "歌手音ピコ",
-  "a": "niconico:2927601"
+  "seed": true
  },
  {
   "id": "nico:sm15671701",
@@ -114967,7 +114680,7 @@
   "title": "【替え歌】マジLOVE1000％の意味を根本的に履き違えてみた",
   "t": "マジLOVE1000%",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2011-09-04T18:59:01+09:00",
   "views": 1728415,
   "likes": 697,
@@ -114984,10 +114697,7 @@
   "uploader": null,
   "by": "ふに",
   "firstSeen": "2026-10-08T15:10:08.874Z",
-  "seed": true,
-  "of": "nico:sm15969064",
-  "p": "歌手音ピコ",
-  "a": "niconico:2927601"
+  "seed": true
  },
  {
   "id": "nico:sm15495837",
@@ -115054,8 +114764,8 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm15484827",
   "title": "【きゃりーれんれん】PONPONPON　Full ver.",
-  "t": "PONPONPON Full",
-  "kind": "本家",
+  "t": "PONPONPON",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2011-09-01T21:33:51+09:00",
   "views": 1724576,
@@ -115076,12 +114786,11 @@
   ],
   "uploaderId": 4845576,
   "uploader": null,
-  "p": "Giga",
-  "v": "鏡音レン",
-  "a": "niconico:4845576",
+  "by": "",
   "firstSeen": "2026-10-08T14:36:47.388Z",
   "seed": true,
-  "pFilled": true
+  "of": "nico:sm16630691",
+  "a": "niconico:10693107"
  },
  {
   "id": "nico:sm15440067",
@@ -115221,7 +114930,7 @@
   "title": "【ぐるたみん】only my railgun【本気ver】",
   "t": "only my railgun",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2011-08-16T20:25:41+09:00",
   "views": 1477439,
   "likes": 1206,
@@ -115241,10 +114950,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.939Z",
-  "seed": true,
-  "of": "nico:sm8837371",
-  "p": "初音ミクで",
-  "a": "niconico:14679760"
+  "seed": true
  },
  {
   "id": "nico:sm15308214",
@@ -115626,7 +115332,7 @@
   "title": "【爆音推奨】「マジLOVE1000%」が熱血ソングだったから歌ってみた",
   "t": "マジLOVE1000%",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2011-07-24T10:02:40+09:00",
   "views": 2237989,
   "likes": 520,
@@ -115648,18 +115354,15 @@
   "uploader": null,
   "by": "タイ焼き屋",
   "firstSeen": "2026-10-08T15:10:08.778Z",
-  "seed": true,
-  "of": "nico:sm15969064",
-  "p": "歌手音ピコ",
-  "a": "niconico:2927601"
+  "seed": true
  },
  {
   "id": "nico:sm15093976",
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm15093976",
   "title": "【VOCALOID2合唱団】どんなときも。【槇原敬之】",
-  "t": "どんなときも",
-  "kind": "本家",
+  "t": "どんなときも。",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2011-07-23T15:27:29+09:00",
   "views": 10006,
@@ -115679,12 +115382,9 @@
   ],
   "uploaderId": 14201029,
   "uploader": null,
-  "p": "合唱団P",
-  "a": "niconico:14201029",
+  "by": "合唱団P",
   "firstSeen": "2026-10-12T21:33:21.302Z",
-  "seed": true,
-  "pFilled": false,
-  "pFromTag": true
+  "seed": true
  },
  {
   "id": "nico:sm15085899",
@@ -115728,7 +115428,7 @@
   "title": "マジLOVE1000%を英訳してもう一度日本語訳して歌ったらひどいことになった",
   "t": "マジLOVE1000%",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2011-07-20T16:48:54+09:00",
   "views": 3365117,
   "likes": 1925,
@@ -115744,10 +115444,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.680Z",
-  "seed": true,
-  "of": "nico:sm15969064",
-  "p": "歌手音ピコ",
-  "a": "niconico:2927601"
+  "seed": true
  },
  {
   "id": "nico:sm15064904",
@@ -116924,7 +116621,7 @@
   "title": "あいさつの魔法。歌ってみたゴム",
   "t": "あいさつの魔法",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2011-03-26T09:38:27+09:00",
   "views": 1749715,
   "likes": 348,
@@ -116944,10 +116641,7 @@
   "uploader": null,
   "by": "ゴム",
   "firstSeen": "2026-10-08T15:10:08.868Z",
-  "seed": true,
-  "of": "nico:sm13951452",
-  "p": "マスヒロP",
-  "a": "niconico:5138478"
+  "seed": true
  },
  {
   "id": "nico:sm13954258",
@@ -116985,7 +116679,7 @@
   "url": "https://www.nicovideo.jp/watch/sm13951452",
   "title": "【初音ミク】あいさつの魔法。【ポポポポ～ン】",
   "t": "あいさつの魔法",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2011-03-24T23:14:00+09:00",
   "views": 5937,
@@ -117004,13 +116698,9 @@
   ],
   "uploaderId": 5138478,
   "uploader": null,
-  "p": "マスヒロP",
-  "v": "初音ミク",
-  "a": "niconico:5138478",
+  "by": "マスヒロP",
   "firstSeen": "2026-10-09T17:21:46.703Z",
-  "seed": true,
-  "pFilled": false,
-  "pFromTag": true
+  "seed": true
  },
  {
   "id": "nico:sm13944678",
@@ -117049,7 +116739,7 @@
   "title": "あいさつの魔法。を歌ってみた [いさじ]",
   "t": "あいさつの魔法",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2011-03-23T20:53:50+09:00",
   "views": 1501608,
   "likes": 407,
@@ -117071,10 +116761,7 @@
   "uploader": null,
   "by": "いさじ",
   "firstSeen": "2026-10-08T15:10:08.933Z",
-  "seed": true,
-  "of": "nico:sm13951452",
-  "p": "マスヒロP",
-  "a": "niconico:5138478"
+  "seed": true
  },
  {
   "id": "nico:sm13911449",
@@ -118729,7 +118416,7 @@
   "url": "https://www.nicovideo.jp/watch/sm12874906",
   "title": "【初音ミク】ジングルベル【クリスマスソング】",
   "t": "ジングルベル",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2010-11-27T22:48:31+09:00",
   "views": 14740,
@@ -118750,9 +118437,7 @@
   ],
   "uploaderId": 8587809,
   "uploader": null,
-  "p": "",
-  "v": "初音ミク",
-  "a": "niconico:8587809",
+  "by": "",
   "firstSeen": "2026-10-11T00:54:29.196Z",
   "seed": true
  },
@@ -118906,7 +118591,7 @@
   "title": "忙しい人のための「翼をください」を生弾き語り　【たろう16bit】",
   "t": "翼をください",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2010-11-21T21:12:34+09:00",
   "views": 2374445,
   "likes": 1890,
@@ -118928,10 +118613,7 @@
   "uploader": null,
   "by": "忙しい人のための",
   "firstSeen": "2026-10-08T15:10:08.763Z",
-  "seed": true,
-  "of": "nico:sm1397553",
-  "p": "MEIKOとKAITOとANNの",
-  "a": "niconico:35817"
+  "seed": true
  },
  {
   "id": "nico:sm12774972",
@@ -119923,7 +119605,7 @@
   "url": "https://www.nicovideo.jp/watch/sm11864925",
   "title": "【VOCALOID2合唱団】カントリー・ロード【耳をすませば】",
   "t": "カントリー・ロード",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2010-08-24T14:31:53+09:00",
   "views": 10313,
@@ -119944,12 +119626,9 @@
   ],
   "uploaderId": 14201029,
   "uploader": null,
-  "p": "合唱団P",
-  "a": "niconico:14201029",
+  "by": "合唱団P",
   "firstSeen": "2026-10-10T07:39:24.122Z",
-  "seed": true,
-  "pFilled": false,
-  "pFromTag": true
+  "seed": true
  },
  {
   "id": "nico:sm11857330",
@@ -120128,7 +119807,7 @@
   "title": "【うるおぼえで歌ってみた】only my railgun【ぐるたみん】",
   "t": "only my railgun",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2010-08-12T23:51:30+09:00",
   "views": 10293327,
   "likes": 5059,
@@ -120149,10 +119828,7 @@
   "uploader": null,
   "by": "ぐるたみん",
   "firstSeen": "2026-10-08T15:10:08.612Z",
-  "seed": true,
-  "of": "nico:sm8837371",
-  "p": "初音ミクで",
-  "a": "niconico:14679760"
+  "seed": true
  },
  {
   "id": "nico:sm11714132",
@@ -120681,7 +120357,7 @@
   "title": "ゴージャスな「もののけ姫」　をピアノ独唱～俺24人で重唱",
   "t": "もののけ姫",
   "kind": "歌ってみた",
-  "g": "その他",
+  "g": "アニソン",
   "date": "2010-07-10T23:51:08+09:00",
   "views": 2011008,
   "likes": 422,
@@ -121033,8 +120709,8 @@
   "url": "https://www.nicovideo.jp/watch/sm11188434",
   "title": "【GUMI】 Dearest (yks remix) 【ぼかんないんです＞＜】",
   "t": "Dearest",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2010-06-26T12:34:40+09:00",
   "views": 328424,
   "likes": 182,
@@ -121054,13 +120730,9 @@
   ],
   "uploaderId": 527473,
   "uploader": null,
-  "p": "yuukiss",
-  "v": "GUMI",
-  "a": "niconico:527473",
+  "by": "yuukiss",
   "firstSeen": "2026-10-10T07:39:24.119Z",
-  "seed": true,
-  "pFilled": false,
-  "pFromTag": true
+  "seed": true
  },
  {
   "id": "nico:sm11175045",
@@ -122739,7 +122411,7 @@
   "url": "https://www.nicovideo.jp/watch/nm9946083",
   "title": "【VOCALOID2合唱団】キセキ【GReeeeN】",
   "t": "キセキ",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2010-03-07T19:19:55+09:00",
   "views": 69325,
@@ -122759,12 +122431,9 @@
   ],
   "uploaderId": 14201029,
   "uploader": null,
-  "p": "合唱団P",
-  "a": "niconico:14201029",
+  "by": "合唱団P",
   "firstSeen": "2026-10-14T11:01:23.378Z",
-  "seed": true,
-  "pFilled": false,
-  "pFromTag": true
+  "seed": true
  },
  {
   "id": "nico:sm9910384",
@@ -122793,8 +122462,8 @@
   "url": "https://www.nicovideo.jp/watch/sm9898358",
   "title": "初音ミク Append Early Soft - 太陽がくれた季節 【青い三角定規】",
   "t": "太陽がくれた季節",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2010-03-03T16:47:10+09:00",
   "views": 4141,
   "likes": 5,
@@ -122813,9 +122482,7 @@
   ],
   "uploaderId": 2992510,
   "uploader": null,
-  "p": "初音ミク Append Early Soft",
-  "v": "神威がくぽ",
-  "a": "niconico:2992510",
+  "by": "初音ミク Append Early Soft",
   "firstSeen": "2026-10-14T11:01:23.377Z",
   "seed": true
  },
@@ -123126,8 +122793,8 @@
   "url": "https://www.nicovideo.jp/watch/sm9691627",
   "title": "【おりひめ☆】合唱「君の知らない物語」【ぱわーーー】",
   "t": "君の知らない物語",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2010-02-13T00:21:12+09:00",
   "views": 53986,
   "likes": 6,
@@ -123146,9 +122813,7 @@
   ],
   "uploaderId": 2620927,
   "uploader": null,
-  "p": "合唱",
-  "v": "初音ミク",
-  "a": "niconico:2620927",
+  "by": "ぱわーーー",
   "firstSeen": "2026-10-09T17:21:46.699Z",
   "seed": true
  },
@@ -123291,7 +122956,7 @@
   "title": "「only my railgun」歌い終わっ太。",
   "t": "only my railgun",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2010-01-28T22:35:07+09:00",
   "views": 1460511,
   "likes": 161,
@@ -123308,10 +122973,7 @@
   "uploader": null,
   "by": "歌い終わっ太。",
   "firstSeen": "2026-10-08T15:10:08.943Z",
-  "seed": true,
-  "of": "nico:sm8837371",
-  "p": "初音ミクで",
-  "a": "niconico:14679760"
+  "seed": true
  },
  {
   "id": "nico:sm9471054",
@@ -123481,7 +123143,7 @@
   "title": "合唱『only my railgun』ってみた",
   "t": "only my railgun",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2010-01-08T18:59:02+09:00",
   "views": 2509403,
   "likes": 556,
@@ -123500,10 +123162,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.749Z",
-  "seed": true,
-  "of": "nico:sm8837371",
-  "p": "初音ミクで",
-  "a": "niconico:14679760"
+  "seed": true
  },
  {
   "id": "nico:sm9305683",
@@ -123578,7 +123237,7 @@
   "url": "https://www.nicovideo.jp/watch/so9222953",
   "title": "魂のルフラン / m.o.v.e",
   "t": "魂のルフラン",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2009-12-28T13:00:00+09:00",
   "views": 162555,
@@ -123597,8 +123256,7 @@
   ],
   "uploaderId": 70,
   "uploader": null,
-  "p": "m.o.v.e",
-  "a": "niconico:70",
+  "by": "m.o.v.e",
   "firstSeen": "2026-10-10T07:39:24.119Z",
   "seed": true
  },
@@ -123975,8 +123633,8 @@
   "url": "https://www.nicovideo.jp/watch/sm8837371",
   "title": "初音ミクで「only my railgun」（とある科学の超電磁砲）",
   "t": "only my railgun",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2009-11-18T19:46:28+09:00",
   "views": 74479,
   "likes": 45,
@@ -123995,9 +123653,7 @@
   ],
   "uploaderId": 14679760,
   "uploader": null,
-  "p": "初音ミクで",
-  "v": "初音ミク",
-  "a": "niconico:14679760",
+  "by": "",
   "firstSeen": "2026-10-09T21:44:36.809Z",
   "seed": true
  },
@@ -124609,7 +124265,7 @@
   "title": "君の知らない物語　　歌ってみた（vip店長）",
   "t": "君の知らない物語",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2009-09-25T20:03:37+09:00",
   "views": 2540816,
   "likes": 580,
@@ -124629,10 +124285,7 @@
   "uploader": null,
   "by": "(vip店長)",
   "firstSeen": "2026-10-08T15:10:08.746Z",
-  "seed": true,
-  "of": "nico:sm9691627",
-  "p": "合唱",
-  "a": "niconico:2620927"
+  "seed": true
  },
  {
   "id": "yt:0GLSJHTZDuM",
@@ -124750,7 +124403,7 @@
   "title": "忙しい人のための「大きな古時計」を生弾き語り【たろう16bit】",
   "t": "大きな古時計",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2009-09-16T08:33:31+09:00",
   "views": 2478060,
   "likes": 1851,
@@ -124772,10 +124425,7 @@
   "uploader": null,
   "by": "忙しい人のための",
   "firstSeen": "2026-10-08T15:10:08.751Z",
-  "seed": true,
-  "of": "nico:sm3743171",
-  "p": "awk",
-  "a": "niconico:1353089"
+  "seed": true
  },
  {
   "id": "yt:pp_-Xk-RmDc",
@@ -126699,7 +126349,7 @@
   "url": "https://www.nicovideo.jp/watch/nm7103480",
   "title": "【東方】 チルノのすうがく教室",
   "t": "チルノのすうがく教室",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2009-05-20T21:07:26+09:00",
   "views": 1126236,
@@ -126720,9 +126370,7 @@
   ],
   "uploaderId": 89360,
   "uploader": null,
-  "p": "",
-  "v": "初音ミク",
-  "a": "niconico:89360",
+  "by": "",
   "firstSeen": "2026-10-08T14:36:47.433Z",
   "seed": true
  },
@@ -127250,7 +126898,7 @@
   "url": "https://www.nicovideo.jp/watch/sm6676776",
   "title": "【KAITO】桜坂【ゼロ＋イチ】",
   "t": "桜坂",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2009-04-07T04:51:31+09:00",
   "views": 1624,
@@ -127269,9 +126917,7 @@
   ],
   "uploaderId": 277351,
   "uploader": null,
-  "p": "",
-  "v": "KAITO",
-  "a": "niconico:277351",
+  "by": "",
   "firstSeen": "2026-10-12T21:33:21.302Z",
   "seed": true
  },
@@ -128345,8 +127991,8 @@
   "url": "https://www.nicovideo.jp/watch/sm5865063",
   "title": "ボーカロイドたちがひぐらしのYOUをセッションしたようです",
   "t": "ボーカロイドたちがひぐらしのYOUをセッションしたようです",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2009-01-17T11:23:03+09:00",
   "views": 1658125,
   "likes": 1029,
@@ -128366,13 +128012,9 @@
   ],
   "uploaderId": 1653063,
   "uploader": null,
-  "p": "GYARI",
-  "v": "KAITO",
-  "a": "niconico:1653063",
+  "by": "GYARI",
   "firstSeen": "2026-10-08T14:36:47.392Z",
-  "seed": true,
-  "pFilled": false,
-  "pFromTag": true
+  "seed": true
  },
  {
   "id": "nico:sm5858956",
@@ -128915,7 +128557,7 @@
   "url": "https://www.nicovideo.jp/watch/sm4468648",
   "title": "VOCALOIDでニコニコ動画流星群【完成版】",
   "t": "VOCALOIDでニコニコ動画流星群",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2008-08-31T00:08:12+09:00",
   "views": 2139992,
@@ -128936,13 +128578,9 @@
   ],
   "uploaderId": 1353089,
   "uploader": null,
-  "p": "awk",
-  "v": "KAITO",
-  "a": "niconico:1353089",
+  "by": "awk",
   "firstSeen": "2026-10-08T14:36:47.371Z",
-  "seed": true,
-  "pFilled": false,
-  "pFromTag": true
+  "seed": true
  },
  {
   "id": "nico:sm4467797",
@@ -129370,7 +129008,7 @@
   "title": "【替え歌】モエッ☆ＢＬ飛行　歌ってみた【バ行の腐女子】",
   "t": "モエッ☆BL飛行",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2008-07-15T05:44:31+09:00",
   "views": 1437823,
   "likes": 301,
@@ -129388,9 +129026,7 @@
   "uploader": null,
   "by": "バ行の腐女子",
   "firstSeen": "2026-10-08T15:10:08.953Z",
-  "seed": true,
-  "of": "nico:sm45601582",
-  "a": "niconico:19163489"
+  "seed": true
  },
  {
   "id": "nico:sm3945173",
@@ -129495,7 +129131,7 @@
   "url": "https://www.nicovideo.jp/watch/sm3743171",
   "title": "【KAITO】大きな古時計",
   "t": "大きな古時計",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2008-06-23T08:07:33+09:00",
   "views": 43844,
@@ -129516,13 +129152,9 @@
   ],
   "uploaderId": 1353089,
   "uploader": null,
-  "p": "awk",
-  "v": "KAITO",
-  "a": "niconico:1353089",
+  "by": "awk",
   "firstSeen": "2026-10-09T17:21:46.700Z",
-  "seed": true,
-  "pFilled": false,
-  "pFromTag": true
+  "seed": true
  },
  {
   "id": "nico:sm3718300",
@@ -129729,7 +129361,7 @@
   "title": "【初音ミク】たちが「未来予想図Ⅱ」を歌いました",
   "t": "未来予想図II",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2008-05-27T01:13:50+09:00",
   "views": 42492,
   "likes": 7,
@@ -129846,7 +129478,7 @@
   "title": "【本気MEIKO】 Dearest (pf mix) 【カバー曲】",
   "t": "Dearest",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2008-05-07T04:39:04+09:00",
   "views": 1222075,
   "likes": 502,
@@ -129864,11 +129496,7 @@
   "uploader": null,
   "by": "yuukiss",
   "firstSeen": "2026-10-08T14:36:47.422Z",
-  "seed": true,
-  "of": "nico:sm11188434",
-  "p": "yuukiss",
-  "a": "niconico:527473",
-  "self": 1
+  "seed": true
  },
  {
   "id": "nico:sm3176172",
@@ -130471,7 +130099,7 @@
   "title": "【初音ミク】たちが「もののけ姫」を歌いました",
   "t": "もののけ姫",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2008-02-29T01:58:24+09:00",
   "views": 298526,
   "likes": 69,
@@ -130535,7 +130163,7 @@
   "title": "【初音ミク】たちが「君をのせて」を歌いました",
   "t": "君をのせて",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2008-02-22T15:38:35+09:00",
   "views": 618442,
   "likes": 129,
@@ -130659,8 +130287,8 @@
   "url": "https://www.nicovideo.jp/watch/sm2352095",
   "title": "【KAITO】パプリカED「白虎野の娘」兄さん10人前(＋リン2人前)【平沢進】",
   "t": "白虎野の娘",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2008-02-17T07:50:44+09:00",
   "views": 2047462,
   "likes": 1997,
@@ -130680,9 +130308,7 @@
   ],
   "uploaderId": 259018,
   "uploader": null,
-  "p": "パプリカED",
-  "v": "KAITO",
-  "a": "niconico:259018",
+  "by": "平沢進",
   "firstSeen": "2026-10-08T14:36:47.374Z",
   "seed": true
  },
@@ -130725,7 +130351,7 @@
   "title": "【初音ミク】たちが「いのちの名前」を歌いました",
   "t": "いのちの名前",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2008-02-13T13:39:05+09:00",
   "views": 59747,
   "likes": 29,
@@ -130881,7 +130507,7 @@
   "url": "https://www.nicovideo.jp/watch/sm2206423",
   "title": "うちのKAITOがDEENの「夢であるように」にもう一度挑戦しました",
   "t": "夢であるように",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2008-02-02T19:11:03+09:00",
   "views": 9673,
@@ -130902,9 +130528,7 @@
   ],
   "uploaderId": 1796300,
   "uploader": null,
-  "p": "にもう一度挑戦しました",
-  "v": "KAITO",
-  "a": "niconico:1796300",
+  "by": "にもう一度挑戦しました",
   "firstSeen": "2026-10-10T07:39:24.120Z",
   "seed": true
  },
@@ -130944,7 +130568,7 @@
   "url": "https://www.nicovideo.jp/watch/sm2097776",
   "title": "「男女」アホの子増し増し改良ver.【ﾊﾞｶｲﾄ＆ﾍﾀﾚﾝ】",
   "t": "男女",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2008-01-21T15:01:44+09:00",
   "views": 2238460,
@@ -130964,8 +130588,7 @@
   ],
   "uploaderId": 1702384,
   "uploader": null,
-  "p": "アホの子増し増し改良ver.",
-  "a": "niconico:1702384",
+  "by": "アホの子増し増し改良ver.",
   "firstSeen": "2026-10-08T14:36:47.367Z",
   "seed": true
  },
@@ -131068,7 +130691,7 @@
   "url": "https://www.nicovideo.jp/watch/sm2050345",
   "title": "『初音ミク』でＺＡＲＤの『負けないで』【修正版】",
   "t": "負けないで",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2008-01-16T06:35:34+09:00",
   "views": 9545,
@@ -131088,9 +130711,7 @@
   ],
   "uploaderId": 4216109,
   "uploader": null,
-  "p": "『初音ミク』でZARDの",
-  "v": "初音ミク",
-  "a": "niconico:4216109",
+  "by": "『初音ミク』でZARDの",
   "firstSeen": "2026-10-13T21:45:42.850Z",
   "seed": true
  },
@@ -131359,8 +130980,8 @@
   "url": "https://www.nicovideo.jp/watch/sm1831629",
   "title": "初音ミクで「そばかす」",
   "t": "そばかす",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2007-12-21T21:57:19+09:00",
   "views": 657307,
   "likes": 271,
@@ -131379,9 +131000,7 @@
   ],
   "uploaderId": 25361,
   "uploader": null,
-  "p": "初音ミクで",
-  "v": "初音ミク",
-  "a": "niconico:25361",
+  "by": "ぢょんP",
   "firstSeen": "2026-10-11T00:54:29.198Z",
   "seed": true
  },
@@ -131781,7 +131400,7 @@
   "url": "https://www.nicovideo.jp/watch/sm1465138",
   "title": "初音ミク 「粉雪」",
   "t": "粉雪",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2007-11-06T19:34:09+09:00",
   "views": 1650419,
@@ -131800,13 +131419,9 @@
   ],
   "uploaderId": 397269,
   "uploader": null,
-  "p": "BinoP",
-  "v": "初音ミク",
-  "a": "niconico:397269",
+  "by": "BinoP",
   "firstSeen": "2026-10-08T14:36:47.393Z",
-  "seed": true,
-  "pFilled": false,
-  "pFromTag": true
+  "seed": true
  },
  {
   "id": "nico:sm1427306",
@@ -131847,7 +131462,7 @@
   "url": "https://www.nicovideo.jp/watch/sm1397553",
   "title": "【VOCALOID】MEIKOとKAITOとANNの「翼をください」",
   "t": "翼をください",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2007-10-29T00:36:39+09:00",
   "views": 41216,
@@ -131867,9 +131482,7 @@
   ],
   "uploaderId": 35817,
   "uploader": null,
-  "p": "MEIKOとKAITOとANNの",
-  "v": "KAITO",
-  "a": "niconico:35817",
+  "by": "MEIKOとKAITOとANNの",
   "firstSeen": "2026-10-09T17:21:46.700Z",
   "seed": true
  },
@@ -132007,7 +131620,7 @@
   "title": "創聖のアクエリオン（ver.ゴム）",
   "t": "創聖のアクエリオン",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2007-10-11T08:03:02+09:00",
   "views": 1679949,
   "likes": 417,
@@ -132025,10 +131638,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.884Z",
-  "seed": true,
-  "of": "nico:sm989712",
-  "p": "歌わせたら既に二番煎じ",
-  "a": "niconico:487766"
+  "seed": true
  },
  {
   "id": "nico:sm1249071",
@@ -132260,7 +131870,7 @@
   "url": "https://www.nicovideo.jp/watch/sm1094771",
   "title": "FF9 『Melodies Of Life』 を 初音ミクが歌います。",
   "t": "Melodies Of Life",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2007-09-19T19:00:19+09:00",
   "views": 53145,
@@ -132280,9 +131890,7 @@
   ],
   "uploaderId": 1239516,
   "uploader": null,
-  "p": "FF9",
-  "v": "初音ミク",
-  "a": "niconico:1239516",
+  "by": "FF9",
   "firstSeen": "2026-10-09T21:44:36.805Z",
   "seed": true
  },
@@ -132292,8 +131900,8 @@
   "url": "https://www.nicovideo.jp/watch/sm1085518",
   "title": "初音ミクの憂鬱 ～「ハレ晴レユカイ」 Full ver.",
   "t": "ハレ晴レユカイ",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2007-09-18T08:14:18+09:00",
   "views": 282134,
   "likes": 48,
@@ -132311,9 +131919,7 @@
   ],
   "uploaderId": 80336,
   "uploader": null,
-  "p": "Full ver.",
-  "v": "初音ミク",
-  "a": "niconico:80336",
+  "by": "",
   "firstSeen": "2026-10-09T21:44:36.804Z",
   "seed": true
  },
@@ -132417,8 +132023,8 @@
   "url": "https://www.nicovideo.jp/watch/sm989712",
   "title": "VOCALOID2　初音ミク　に 「創聖のアクエリオン」 歌わせたら既に二番煎じ",
   "t": "創聖のアクエリオン",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2007-09-05T16:01:32+09:00",
   "views": 86397,
   "likes": 20,
@@ -132437,9 +132043,7 @@
   ],
   "uploaderId": 487766,
   "uploader": null,
-  "p": "歌わせたら既に二番煎じ",
-  "v": "初音ミク",
-  "a": "niconico:487766",
+  "by": "",
   "firstSeen": "2026-10-09T17:21:46.702Z",
   "seed": true
  },
@@ -132483,8 +132087,8 @@
   "url": "https://www.nicovideo.jp/watch/sm969310",
   "title": "VOCALOID2 初音ミクが歌う「雪、無音、窓辺にて。」",
   "t": "雪、無音、窓辺にて",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2007-09-02T11:14:39+09:00",
   "views": 106933,
   "likes": 41,
@@ -132504,13 +132108,9 @@
   ],
   "uploaderId": 14112,
   "uploader": null,
-  "p": "ソレナンテP",
-  "v": "初音ミク",
-  "a": "niconico:14112",
+  "by": "ソレナンテP",
   "firstSeen": "2026-10-09T17:21:46.705Z",
-  "seed": true,
-  "pFilled": false,
-  "pFromTag": true
+  "seed": true
  },
  {
   "id": "nico:sm859467",
@@ -132552,7 +132152,7 @@
   "title": "『宇宙戦艦ニート』を歌ってみた [いさじ]",
   "t": "宇宙戦艦ニート",
   "kind": "歌ってみた",
-  "g": "その他",
+  "g": "アニソン",
   "date": "2007-08-10T16:20:11+09:00",
   "views": 1636246,
   "likes": 428,
@@ -132706,9 +132306,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.804Z",
-  "seed": true,
-  "of": "nico:sm382755",
-  "a": "niconico:666081"
+  "seed": true
  },
  {
   "id": "nico:sm382755",
@@ -132716,7 +132314,7 @@
   "url": "https://www.nicovideo.jp/watch/sm382755",
   "title": "おもいではおっくせんまん",
   "t": "おもいではおっくせんまん",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2007-05-31T20:54:30+09:00",
   "views": 11627,
@@ -132737,9 +132335,7 @@
   ],
   "uploaderId": 666081,
   "uploader": null,
-  "p": "",
-  "v": "MEIKO",
-  "a": "niconico:666081",
+  "by": "",
   "firstSeen": "2026-10-09T21:44:36.813Z",
   "seed": true
  }

@@ -44,6 +44,8 @@ export function detectKind(title, tags, src) {
   if (WEAK_COVER_RE.test(title)) return "歌ってみた";
   // YouTubeのタグは検索よけに「歌ってみた」を入れている本家（作者本人のMVなど）が多いので使わない
   if (src !== "youtube" && tags.some(t => /^歌ってみた/.test(t))) return "歌ってみた";
+  // ニコニコの「VOCALOIDカバー曲」「VOCALOIDアニソン」などのタグ：歌声に既存の曲を歌わせたカバー
+  if (src !== "youtube" && tags.some(t => /カバー曲$|^(VOCALOID|ボカロ|UTAU|CeVIO|SynthesizerV)(カバー|アニソン|が歌う)/i.test(t))) return "歌ってみた";
   return "本家";
 }
 
@@ -97,6 +99,7 @@ const isNoiseText = t => !t.replace(NOISE, "").replace(/[\s・,、]/g, "") || sp
 const cleanSong = t => t.replace(/\s*(?:feat\.?|ft\.)\s*.*$/i, "")
   .replace(/〔[^〕]*〕|〈[^〉]*〉|《[^》]*》/g, " ")
   // 歌ってみたの後ろの「ver 歌い手」「by 歌い手」「を歌ってみました」などは曲名ではない
+  .replace(/[@＠]\s*(?=(を\s*)?(自分で)?歌って)/g, " ")
   .replace(/(を\s*)?歌って踊ってみた|(を\s*)?(踊|弾|叩|ヘコ)ってみた|(を\s*)?歌ってみ(た|ました)|(を\s*)?歌いました|(を\s*)?歌った|を?歌ってもらった|を?歌わせてみた|歌わせていただきました/g, " ¦ ")
   .replace(/\s*¦[\s。．.]*(ver\.?|by)\s*\S.*$/i, "")
   .replace(/\s+(ver\.?|by)\s*[^\s]+.*$/i, "").replace(/(ver\.?|by)[^\s]{1,12}$/i, "")
@@ -348,8 +351,11 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
   let g = detectGenre(video.title, tags, fb, desc);
   // タイトルの【】などから歌声が見つかっていれば、ボカロ（アニソン判定は残す）
   if (rawVoice && isVoice(rawVoice) && (g === "J-POP" || g === "その他")) g = "ボカロ";
+  // 「一体いつから - 重音テトSV カバー」のように、曲名の位置に歌声名が入ってしまったら、「 - 」の前を曲名にする
+  const dashParts = video.title.match(/^(.+?)\s+[-–—]\s+(.+)$/);
+  if (kind === "歌ってみた" && dashParts && isVoice(String(parsed.song || "").split(/[\s|｜]/)[0])) parsed.song = cleanSong(dashParts[1]).trim() || parsed.song;
   // アニメの曲の歌ってみた（歌声に歌わせたもの・替え歌も）は、ボカロのタグがあってもアニソン（原曲が見つかればそちらのジャンルになる）
-  if (kind === "歌ってみた" && g === "ボカロ" && (tags.some(t => /^(アニソン|アニメ(ソング)?)/.test(t)) || ANIME_RE.test(video.title))) g = "アニソン";
+  if (kind === "歌ってみた" && g === "ボカロ" && (tags.some(t => /^(アニソン|アニメ(ソング)?)|アニソン/.test(t)) || ANIME_RE.test(video.title))) g = "アニソン";
   const item = {
     id: video.id,
     src: video.src,
@@ -493,6 +499,28 @@ export function inferNamesFromTags(items) {
 // ジャンルが分からない歌ってみたを、タグやボカロPの名前から「ボカロ」に振り分ける
 //   ・「ボカロオリジナルを歌ってみた」のようなタグがある
 //   ・タグかタイトルに、サイトに載っているボカロPの名前（2曲以上ある人）が出てくる（「洗脳(DECO*27)」「/ syudou」など）
+// 原曲が見つかっていない歌ってみたは、同じ曲名どうしでジャンルをそろえる。
+// どれか1つでもアニメの曲の手がかり（「アニソン」タグ、「血界戦線ED」のようなタイトル）があればアニソン
+const animeHint = c => (c.tags || []).some(t => /アニソン|^アニメ(ソング)?$/.test(t)) || ANIME_RE.test(c.title || "");
+export function alignCoverGenres(items) {
+  // 「シュガーソングとビターステップ」と「シュガーソングとビターステップ まるぐり」のように、後ろに余計な語が付いたものも同じ曲とみなす
+  const covers = items.filter(c => c.kind === "歌ってみた" && !c.of && c.t && normalize(c.t).length >= 2);
+  const keys = [...new Set(covers.map(c => normalize(c.t)))].sort((a, b) => a.length - b.length);
+  const groups = new Map();
+  for (const c of covers) {
+    const n = normalize(c.t);
+    const k = keys.find(k => k === n || (k.length >= 4 && n.startsWith(k))) || n;
+    (groups.get(k) || groups.set(k, []).get(k)).push(c);
+  }
+  for (const [k, list] of groups) {
+    if (list.length < 2) continue;
+    // 曲名の後ろに余計な語が付いているもの（「シュガーソングとビターステップ まるぐり」）は、短いほうの曲名にそろえる
+    const base = list.find(c => normalize(c.t) === k);
+    if (base) for (const c of list) c.t = base.t;
+    if (list.some(animeHint)) for (const c of list) c.g = "アニソン";
+  }
+}
+
 export function guessCoverGenre(items) {
   const cnt = new Map();
   for (const i of items) if (i.kind === "本家" && i.g === "ボカロ" && i.p) cnt.set(normalize(i.p), (cnt.get(normalize(i.p)) || 0) + 1);
@@ -573,7 +601,7 @@ export function linkCovers(items) {
   const originals = new Map();
   for (const i of items.filter(x => x.kind === "本家").sort((a, b) => (a.date || "").localeCompare(b.date || ""))) {
     const k = normalize(i.t);
-    if (k && !originals.has(k)) originals.set(k, i);
+    if (k && !isVoice(i.t) && !originals.has(k)) originals.set(k, i);   // 曲名が「KAITO」「重音テトSV」のような歌声名のものは原曲の候補にしない
   }
   for (const c of items) {
     if (c.kind !== "歌ってみた" || c.ofLocked) continue;
@@ -587,13 +615,18 @@ export function linkCovers(items) {
     // 曲名の頭が原曲の曲名と同じ（「マトリョシカ vip店長」のように歌い手名が続いている）ときも原曲とみなす
     if (!o) {
       const n = normalize(c.t);
-      for (let k = n.length - 1; k >= 3 && !o; k--) { const hit = originals.get(n.slice(0, k)); if (hit) { o = hit; c.t = hit.t; } }
+      // 「Dear」と「Dearest」のように、英単語の途中で切れる一致は使わない
+      for (let k = n.length - 1; k >= 3 && !o; k--) {
+        if (/[a-z0-9]/.test(n[k - 1]) && /[a-z0-9]/.test(n[k])) continue;
+        const hit = originals.get(n.slice(0, k)); if (hit) { o = hit; c.t = hit.t; }
+      }
     }
     if (o) { c.of = o.id; c.p = o.p || c.p; c.a = o.p ? o.a : (c.a || o.a); if (o.g !== "その他") c.g = o.g; else if (c.g === "その他") c.g = o.g; }
   }
   mergeSources(items);
   markSelfCovers(items);
   guessCoverGenre(items);
+  alignCoverGenres(items);
   return items;
 }
 
