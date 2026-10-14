@@ -1584,6 +1584,28 @@
   "pinned": true
  },
  {
+  "id": "UChZvE2JzSafBDeAJNmwNGGA",
+  "added": "2026-10-14T21:47:10.016Z",
+  "name": "Daoko",
+  "genre": "アニソン",
+  "lastHit": "2026-10-14T12:00:11Z"
+ },
+ {
+  "id": "UC6FmznwRG0CpdjtNyHucmTA",
+  "added": "2026-10-09T12:23:27.151Z",
+  "name": "オーイシマサヨシ",
+  "genre": "アニソン",
+  "lastHit": "2026-10-14T12:00:08Z",
+  "pinned": true
+ },
+ {
+  "id": "UCqUeHBA-AU10dbEB4F44F-A",
+  "added": "2026-10-09T16:13:05.586Z",
+  "name": "田村シュンス Official",
+  "genre": "J-POP",
+  "lastHit": "2026-10-14T11:25:12Z"
+ },
+ {
   "id": "UCmovZ2th3Sqpd00F5RdeigQ",
   "name": "加賀美 ハヤト/Hayato Kagami",
   "added": "2026-10-09T12:06:54.468Z",
@@ -1605,11 +1627,25 @@
   "lastHit": "2026-10-14T10:00:09Z"
  },
  {
+  "id": "UCDpX_q4mlkbuPJbY6h62eHQ",
+  "added": "2026-10-11T21:32:47.826Z",
+  "name": "妃那子 / HINAKO",
+  "genre": "J-POP",
+  "lastHit": "2026-10-14T10:00:08Z"
+ },
+ {
   "id": "UCPrjycK4eiQhUw2PnVIq7Gg",
   "added": "2026-10-10T07:39:29.506Z",
   "name": "CANACANA family",
   "genre": "アニソン",
   "lastHit": "2026-10-14T09:17:18Z"
+ },
+ {
+  "id": "UCG2PqTaD_zDWRKSz84j6KnA",
+  "added": "2026-10-14T21:47:10.016Z",
+  "name": "愛音虎【ｱｵﾄﾗ】",
+  "genre": "アニソン",
+  "lastHit": "2026-10-14T09:00:15Z"
  },
  {
   "id": "UC1o4SbQvLYpqYZlUKPRWaRQ",
@@ -1646,6 +1682,13 @@
   "name": "Ryoji Takarabe財部亮治",
   "genre": "J-POP",
   "lastHit": "2026-10-13T12:00:07Z"
+ },
+ {
+  "id": "UC4hGhbOxGKUgCD2eon4VJbQ",
+  "added": "2026-10-14T21:47:10.016Z",
+  "name": "Filix王",
+  "genre": "J-POP",
+  "lastHit": "2026-10-13T10:58:38Z"
  },
  {
   "id": "UCvOX0NWMvYrgSV15vuxV4Pg",
@@ -2222,13 +2265,6 @@
   "lastHit": "2026-10-08T15:00:09Z"
  },
  {
-  "id": "UCqUeHBA-AU10dbEB4F44F-A",
-  "added": "2026-10-09T16:13:05.586Z",
-  "name": "田村シュンス Official",
-  "genre": "J-POP",
-  "lastHit": "2026-10-08T14:40:10Z"
- },
- {
   "id": "UCuadjqI8LIug340-jBVBJEg",
   "name": "ONE OR EIGHT",
   "added": "2026-10-09T12:06:54.468Z",
@@ -2340,14 +2376,6 @@
   "pinned": true
  },
  {
-  "id": "UC6FmznwRG0CpdjtNyHucmTA",
-  "added": "2026-10-09T12:23:27.151Z",
-  "name": "オーイシマサヨシ",
-  "genre": "アニソン",
-  "lastHit": "2026-10-07T12:00:12Z",
-  "pinned": true
- },
- {
   "id": "UCtLQyS4toPOarqufGUxTtIQ",
   "name": "aikoOfficial",
   "added": "2026-10-09T12:06:54.468Z",
@@ -2402,13 +2430,6 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "J-POP",
   "lastHit": "2026-10-07T10:30:18Z"
- },
- {
-  "id": "UCDpX_q4mlkbuPJbY6h62eHQ",
-  "added": "2026-10-11T21:32:47.826Z",
-  "name": "妃那子 / HINAKO",
-  "genre": "J-POP",
-  "lastHit": "2026-10-07T10:20:33Z"
  },
  {
   "id": "UCBLGjbYv6-xxju1i44RjnnA",
@@ -2999,30 +3020,6 @@
   "name": "羊文学",
   "genre": "アニソン",
   "lastHit": "2022-01-11T15:00:33Z",
-  "pinned": true
- },
- {
-  "id": "UCPFQ7ao1TbzJUuITXsG0oww",
-  "added": "2026-10-09T12:23:27.151Z",
-  "name": "I Don't Like Mondays.",
-  "genre": "アニソン",
-  "lastHit": "2022-01-09T01:00:12Z",
-  "pinned": true
- },
- {
-  "id": "UCkB8HnJSDSJ2hkLQFUc-YrQ",
-  "added": "2026-10-09T12:23:27.151Z",
-  "name": "King Gnu official YouTube channel",
-  "genre": "アニソン",
-  "lastHit": "2022-01-05T12:00:10Z",
-  "pinned": true
- },
- {
-  "id": "UCchlf66z1NueAv8xY117Lmw",
-  "added": "2026-10-14T14:15:01.773Z",
-  "name": "EGOIST Official YouTube Channel",
-  "genre": "アニソン",
-  "lastHit": "2021-12-26T13:00:08Z",
   "pinned": true
  }
 ]
