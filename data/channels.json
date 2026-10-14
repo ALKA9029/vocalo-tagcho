@@ -31,6 +31,13 @@
   "lastHit": "2026-10-13T10:15:48Z"
  },
  {
+  "id": "UCI6B8NkZKqlFWoiC_xE-hzA",
+  "added": "2026-10-14T14:15:01.773Z",
+  "name": "YOASOBI - Topic",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-13T10:00:15Z"
+ },
+ {
   "id": "UCW5xxEBTK0lebkTbQMNZJBw",
   "name": "Fake Beat Japan",
   "added": "2026-10-09T12:06:54.468Z",
@@ -335,13 +342,6 @@
   "genre": "ボカロ",
   "lastHit": "2026-10-08T10:00:00Z",
   "pinned": true
- },
- {
-  "id": "UCBxb4X-4Zl7K9FKgG-p7RBQ",
-  "added": "2026-10-10T21:31:46.969Z",
-  "name": "音楽の話しかしないチャンネル",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-08T05:22:30Z"
  },
  {
   "id": "UCBDz0eYq2j40pTeCmBGosNQ",
@@ -1662,6 +1662,13 @@
   "lastHit": "2026-10-13T10:00:36Z"
  },
  {
+  "id": "UCabLXblrQG4cO8F9qdd4Xsw",
+  "added": "2026-10-14T14:15:01.773Z",
+  "name": "Yorushika - Topic",
+  "genre": "J-POP",
+  "lastHit": "2026-10-13T10:00:15Z"
+ },
+ {
   "id": "UCqEmTmyRamfTHxCVYR_gluA",
   "name": "Yusuke ch.悠佑",
   "added": "2026-10-09T12:06:54.468Z",
@@ -2166,13 +2173,6 @@
   "lastHit": "2026-10-09T09:30:03Z"
  },
  {
-  "id": "UCjKPgy9YPt16z8AFMi-TLeA",
-  "added": "2026-10-13T21:45:48.810Z",
-  "name": "ゆらぎゆら / YuragiYura🌙🫧",
-  "genre": "アニソン",
-  "lastHit": "2026-10-09T09:00:13Z"
- },
- {
   "id": "UC8yjkVmGKbonpskqWlwgrsQ",
   "added": "2026-10-09T15:55:32.664Z",
   "name": "4YN しゆん【騎士X】",
@@ -2509,13 +2509,6 @@
   "genre": "アニソン",
   "lastHit": "2026-10-05T12:19:30Z",
   "pinned": true
- },
- {
-  "id": "UCxhONsjKzuW4xZc5QAbHkgw",
-  "name": "礼賛",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "J-POP",
-  "lastHit": "2026-10-05T11:11:03Z"
  },
  {
   "id": "UCpjypWF_wNRs9_TrjjWngpQ",
@@ -3022,6 +3015,14 @@
   "name": "King Gnu official YouTube channel",
   "genre": "アニソン",
   "lastHit": "2022-01-05T12:00:10Z",
+  "pinned": true
+ },
+ {
+  "id": "UCchlf66z1NueAv8xY117Lmw",
+  "added": "2026-10-14T14:15:01.773Z",
+  "name": "EGOIST Official YouTube Channel",
+  "genre": "アニソン",
+  "lastHit": "2021-12-26T13:00:08Z",
   "pinned": true
  }
 ]
