@@ -259,6 +259,8 @@ for (const [a, c] of creators) { await put(`p/${creatorSlug(a)}/index.html`, cre
 for (const t of TAGS) { await put(`tag/${TAG_SLUG[t]}/index.html`, tagPage(t)); urls.push(tagUrl(t)); }
 await put("tag/index.html", tagIndex());
 
+// トップページから作者ページへリンクするための対応表（作者のキー → ページのURL）
+await writeFile(path("data/pages.json"), JSON.stringify({ creators: Object.fromEntries([...creators].map(([a, c]) => [a, c.url]).sort()) }) + "\n");
 await writeFile(path("sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map(u => `<url><loc>${SITE}${u}</loc></url>`).join("\n")}

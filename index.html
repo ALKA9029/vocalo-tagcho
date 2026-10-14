@@ -103,6 +103,10 @@ button.badge:hover{border-color:var(--accent);outline:1px solid var(--accent)}
 .picker{display:flex;flex-direction:column;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;cursor:default}
 .picker p{margin:0;font-size:12px;color:var(--muted)}
 .related{display:flex;flex-direction:column;gap:12px;border-left:2px solid var(--cover);padding-left:12px;padding-block:4px;cursor:default}
+.pagelink{font-size:12px;font-weight:500;color:var(--hot);text-decoration:none;margin-left:8px;white-space:nowrap}
+.pagelink:hover{color:var(--accent);text-decoration:underline}
+.related > .pagelink{margin-left:0;align-self:flex-start}
+#personBox{display:inline-flex;align-items:center;gap:4px}
 .related h3{margin:0;font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.04em}
 .rgroup{display:flex;flex-direction:column;gap:4px}
 .ritem{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;font-size:14px}
@@ -251,6 +255,10 @@ const realKey = a => a && !/:$/.test(a);
 const fmtDate = d => d ? d.slice(0,10).replace(/-/g,"/") : "";
 const fmtViews = n => n == null ? "" : n >= 1e4 ? (n/1e4).toFixed(n >= 1e5 ? 0 : 1) + "万回" : n.toLocaleString("ja-JP") + "回";
 const original = i => i.of ? ITEM[i.of] : null;
+// 曲ページ・作者ページ（scripts/pages.mjs が書き出す）へのURL
+let CREATOR_PAGE = {};
+const songPage = i => i && i.kind === "本家" ? "song/" + i.id.replace(/^nico:/, "nico-").replace(/^yt:/, "yt-") + "/" : null;
+const creatorPage = a => a && CREATOR_PAGE[a] ? CREATOR_PAGE[a].replace(/^\//, "") : null;
 
 function creditText(i){
   if (i.kind === "歌ってみた") return `${i.by || "歌い手不明"}${i.p ? `（原曲：${i.p}）` : ""}`;
@@ -259,7 +267,7 @@ function creditText(i){
 
 const who = (label, title, person) => el("button",{class:"who", title, onclick:e=>{ e.stopPropagation(); applyFilter(()=>state.person=person); }}, label);
 function creditEls(i){
-  const artist = i.p ? who(i.p, `${i.p}の曲を表示`, {label:`作者：${i.p}`, match:x=>x.a===i.a}) : null;
+  const artist = i.p ? who(i.p, `${i.p}の曲を表示`, {label:`作者：${i.p}`, match:x=>x.a===i.a, a:i.a}) : null;
   const voice = i.v ? who(i.v, `${i.v}が歌う曲を表示`, {label:`歌声：${i.v}`, match:x=>x.v===i.v}) : null;
   if (i.kind === "歌ってみた"){
     const singer = i.by ? who(i.by, `${i.by}の歌ってみたを表示`, {label:`歌い手：${i.by}`, match:x=>x.by===i.by}) : el("span",{class:"unknown"},"歌い手不明");
@@ -294,9 +302,12 @@ function related(i){
     const same = cap(ITEMS.filter(x=>x.kind==="本家" && x.a===src.a && x.id!==src.id));
     groups.push([src.p ? "同じ作者の曲" : "同じ投稿者の曲", same, x=>creditText(x)]);
   }
+  const sp = songPage(i.kind === "本家" ? i : original(i));
+  const cp = src && realKey(src.a) ? creatorPage(src.a) : null;
   return el("div",{class:"related", onclick:e=>e.stopPropagation()},
+    sp ? el("a",{class:"pagelink", href:sp}, i.kind === "本家" ? "この曲のページ →" : "原曲のページ →") : null,
     ...groups.map(([h, list, sub])=>el("div",{class:"rgroup"},
-      el("h3",{},h),
+      el("h3",{},h, /同じ作者/.test(h) && cp ? el("a",{class:"pagelink", href:cp}, "作者ページ →") : null),
       ...(list.length ? list.map(x=>el("div",{class:"ritem"},
         el("button",{onclick:()=>jump(x.id)}, x.t),
         el("span",{class:"badge kind"+(x.kind==="歌ってみた"?" cover":"")}, x.kind),
@@ -381,8 +392,10 @@ function render(){
   const genres = [...new Set(ITEMS.map(i=>i.g))];
   seg($("#genreSeg"), "genre", [["","すべて"], ...["ボカロ","J-POP","アニソン","その他"].filter(g=>genres.includes(g)).map(g=>[g,g])]);
   seg($("#kindSeg"), "kind", [["","すべて"],["本家","本家"],["歌ってみた","歌ってみた"]]);
+  const personPage = state.person?.a ? creatorPage(state.person.a) : null;
   $("#personBox").replaceChildren(...(state.person ? [el("span",{class:"active"}, state.person.label,
-    el("button",{"aria-label":"絞り込みを解除", onclick:()=>applyFilter(()=>state.person=null)}, "×"))] : []));
+    el("button",{"aria-label":"絞り込みを解除", onclick:()=>applyFilter(()=>state.person=null)}, "×")),
+    personPage ? el("a",{class:"pagelink", href:personPage}, "作者ページ →") : null] : []));
   $("#tagFilter").replaceChildren(...TAGS.map(t=>
     el("button",{class:"chip","aria-pressed":String(state.filter.has(t)), onclick:()=>applyFilter(()=>{ state.filter.has(t)?state.filter.delete(t):state.filter.add(t); })}, t)));
 
@@ -605,7 +618,8 @@ render();
 
 (async()=>{
   try {
-    const [songs, meta] = await Promise.all([fetch("data/site.json").then(r=>r.json()), fetch("data/meta.json").then(r=>r.json()).catch(()=>null)]);
+    const [songs, meta, pages] = await Promise.all([fetch("data/site.json").then(r=>r.json()), fetch("data/meta.json").then(r=>r.json()).catch(()=>null), fetch("data/pages.json").then(r=>r.json()).catch(()=>null)]);
+    CREATOR_PAGE = pages?.creators || {};
     for (const i of songs) i._t = Date.parse(i.date) || 0;
     ITEMS = songs; ITEM = Object.fromEntries(ITEMS.map(i=>[i.id,i]));
     baseNote = `${ITEMS.length.toLocaleString("ja-JP")}曲を収録${meta ? `（${fmtDate(meta.updatedAt)}時点）` : ""}。サムネの▶でこのページで再生、曲名の↗で動画サイトを開く、名前やバッジで絞り込み、行を押すと関連曲。作者名が空の曲は、読み取りを改善中。${sb ? "「＋ タグをつける」から、聴いた印象を投票してね。みんなの票で3票以上集まったタグが定着するよ。" : "タグの投票は今はこの端末にだけ保存されるよ（みんなの集計は準備中）。"}`;
