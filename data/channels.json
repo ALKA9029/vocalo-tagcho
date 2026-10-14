@@ -1,5 +1,13 @@
 [
  {
+  "id": "UCfyzrRchEuYWpbWnXNRwNLw",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "シアーミュージック",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-14T11:00:07Z",
+  "pinned": true
+ },
+ {
   "id": "UCRIgIJQWuBJ0Cv_VlU3USNA",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "ヨルシカ / n-buna Official",
@@ -13,14 +21,6 @@
   "name": "傘村トータ",
   "genre": "ボカロ",
   "lastHit": "2026-10-13T12:00:10Z",
-  "pinned": true
- },
- {
-  "id": "UCfyzrRchEuYWpbWnXNRwNLw",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "シアーミュージック",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-13T11:30:03Z",
   "pinned": true
  },
  {
@@ -126,13 +126,6 @@
   "name": "reinou",
   "genre": "ボカロ",
   "lastHit": "2026-10-10T11:00:34Z"
- },
- {
-  "id": "UCMQAS6p5-JgkVwklKRjTbag",
-  "added": "2026-10-10T21:31:46.969Z",
-  "name": "すりぃ",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-10T11:00:18Z"
  },
  {
   "id": "UCgVoOtEHrVg4RFdD-35Pb3A",
@@ -832,14 +825,6 @@
   "pinned": true
  },
  {
-  "id": "UCWtcd0cbrCrHn83HbtMqQvw",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "dada",
-  "genre": "ボカロ",
-  "lastHit": "2025-06-13T10:00:06Z",
-  "pinned": true
- },
- {
   "id": "UCv5TRXJ-oQClg6da3RDUI1A",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "Shaito - Topic",
@@ -997,14 +982,6 @@
   "name": "TOKOTOKO / 西沢さんP / zawaso Official",
   "genre": "ボカロ",
   "lastHit": "2024-03-27T10:00:44Z",
-  "pinned": true
- },
- {
-  "id": "UCzh4yY8rl38knH33XpNqXbQ",
-  "added": "2026-10-10T07:32:06.370Z",
-  "name": "왁타버스 WAKTAVERSE",
-  "genre": "ボカロ",
-  "lastHit": "2024-03-15T15:31:46Z",
   "pinned": true
  },
  {
@@ -1568,6 +1545,37 @@
   "pinned": true
  },
  {
+  "id": "UCZjuF1trqblAaWU7TJNbrow",
+  "added": "2026-10-14T14:01:50.996Z",
+  "name": "youまん",
+  "genre": "ボカロ",
+  "lastHit": "2019-07-26T09:00:08Z",
+  "pinned": true
+ },
+ {
+  "id": "UChFmH8dTXNPYCY3XeF9xtSA",
+  "added": "2026-10-14T14:01:50.996Z",
+  "name": "164",
+  "genre": "ボカロ",
+  "lastHit": "2019-05-04T11:00:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UChOF_ryuu0huXTPeyxlpfSQ",
+  "added": "2026-10-14T14:01:50.996Z",
+  "name": "栗山夕璃",
+  "genre": "ボカロ",
+  "lastHit": "2019-04-08T11:00:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UC9zY_E8mcAo_Oq772LEZq8Q",
+  "name": "THE FIRST TAKE",
+  "added": "2026-10-09T12:06:54.468Z",
+  "genre": "アニソン",
+  "lastHit": "2026-10-14T13:00:07Z"
+ },
+ {
   "id": "UC1FQWQ3y3-e8l1pCtWhJt5A",
   "added": "2026-10-09T12:23:27.151Z",
   "name": "Vaundy",
@@ -1583,11 +1591,25 @@
   "lastHit": "2026-10-14T11:00:29Z"
  },
  {
+  "id": "UCMMOL-C2nE45X3GZQCGJJ6w",
+  "name": "Ayumu Imazu",
+  "added": "2026-10-09T12:06:54.468Z",
+  "genre": "J-POP",
+  "lastHit": "2026-10-14T11:00:07Z"
+ },
+ {
   "id": "UCi_AquB9uaI3-9xXkuWG7IQ",
   "name": "BE:FIRST Official",
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "アニソン",
   "lastHit": "2026-10-14T10:00:09Z"
+ },
+ {
+  "id": "UCPrjycK4eiQhUw2PnVIq7Gg",
+  "added": "2026-10-10T07:39:29.506Z",
+  "name": "CANACANA family",
+  "genre": "アニソン",
+  "lastHit": "2026-10-14T09:17:18Z"
  },
  {
   "id": "UC1o4SbQvLYpqYZlUKPRWaRQ",
@@ -1610,13 +1632,6 @@
   "name": "Miko Ch. さくらみこ",
   "genre": "J-POP",
   "lastHit": "2026-10-13T13:00:11Z"
- },
- {
-  "id": "UC9zY_E8mcAo_Oq772LEZq8Q",
-  "name": "THE FIRST TAKE",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "J-POP",
-  "lastHit": "2026-10-13T13:00:01Z"
  },
  {
   "id": "UCo2N7C-Z91waaR6lF3LL_jw",
@@ -1766,13 +1781,6 @@
   "lastHit": "2026-10-11T15:00:06Z"
  },
  {
-  "id": "UCMMOL-C2nE45X3GZQCGJJ6w",
-  "name": "Ayumu Imazu",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "J-POP",
-  "lastHit": "2026-10-11T13:00:31Z"
- },
- {
   "id": "UCyWEVH8tkJcJVO7IiQ1DGEg",
   "name": "Tokyo Street Live 4K",
   "added": "2026-10-09T12:06:54.468Z",
@@ -1891,6 +1899,13 @@
   "name": "有世華望 / Kanon Alise",
   "genre": "J-POP",
   "lastHit": "2026-10-10T12:00:14Z"
+ },
+ {
+  "id": "UCMQAS6p5-JgkVwklKRjTbag",
+  "added": "2026-10-10T21:31:46.969Z",
+  "name": "すりぃ",
+  "genre": "アニソン",
+  "lastHit": "2026-10-10T11:00:18Z"
  },
  {
   "id": "UCv0hpsgpGWYdBsotEA3_5fQ",
@@ -2012,13 +2027,6 @@
   "name": "雨乃こさめ【シクフォニ】",
   "genre": "J-POP",
   "lastHit": "2026-10-10T08:00:11Z"
- },
- {
-  "id": "UCPrjycK4eiQhUw2PnVIq7Gg",
-  "added": "2026-10-10T07:39:29.506Z",
-  "name": "CANACANA family",
-  "genre": "J-POP",
-  "lastHit": "2026-10-10T05:07:55Z"
  },
  {
   "id": "UCgUCsArNN7sOklsjh0turRQ",
@@ -2777,6 +2785,14 @@
   "pinned": true
  },
  {
+  "id": "UCWtcd0cbrCrHn83HbtMqQvw",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "dada",
+  "genre": "J-POP",
+  "lastHit": "2025-06-13T10:00:06Z",
+  "pinned": true
+ },
+ {
   "id": "UCvpredjG93ifbCP1Y77JyFA",
   "added": "2026-10-09T12:23:27.151Z",
   "name": "YOASOBI",
@@ -2846,6 +2862,14 @@
   "name": "체리벨라 Cherrybellat",
   "genre": "J-POP",
   "lastHit": "2024-06-10T09:00:37Z",
+  "pinned": true
+ },
+ {
+  "id": "UCzh4yY8rl38knH33XpNqXbQ",
+  "added": "2026-10-10T07:32:06.370Z",
+  "name": "왁타버스 WAKTAVERSE",
+  "genre": "J-POP",
+  "lastHit": "2024-03-15T15:31:46Z",
   "pinned": true
  },
  {
@@ -2998,30 +3022,6 @@
   "name": "King Gnu official YouTube channel",
   "genre": "アニソン",
   "lastHit": "2022-01-05T12:00:10Z",
-  "pinned": true
- },
- {
-  "id": "UCchlf66z1NueAv8xY117Lmw",
-  "added": "2026-10-09T12:23:27.151Z",
-  "name": "EGOIST Official YouTube Channel",
-  "genre": "アニソン",
-  "lastHit": "2021-12-26T13:00:08Z",
-  "pinned": true
- },
- {
-  "id": "UCQtqQx4vaeC9NG68dlFy7VA",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "ユキムラチャン!",
-  "genre": "J-POP",
-  "lastHit": "2021-12-19T11:00:21Z",
-  "pinned": true
- },
- {
-  "id": "UCZ7B1oCEDT_d4c9XTtChX7w",
-  "added": "2026-10-09T12:23:27.151Z",
-  "name": "藍井エイル Official YouTube Channel",
-  "genre": "アニソン",
-  "lastHit": "2021-10-19T03:00:23Z",
   "pinned": true
  }
 ]
