@@ -428,7 +428,7 @@ if (fixtureArg < 0 && !SEED) {
 }
 for (const i of items) {
   const o = overrides[i.id];
-  if (o) { Object.assign(i, o); if ("of" in o) i.ofLocked = true; }
+  if (o) { Object.assign(i, o); if ("of" in o) i.ofLocked = true; if ("g" in o) i.gFixed = o.g; }
 }
 // 投稿日時はニコニコが日本時間、YouTubeが世界標準時で書かれているので、時刻に直して比べる
 const byNewest = (a, b) => (Date.parse(b.date) || 0) - (Date.parse(a.date) || 0);

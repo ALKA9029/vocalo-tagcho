@@ -657,6 +657,10 @@ export function linkCovers(items) {
   markSelfCovers(items);
   guessCoverGenre(items);
   alignCoverGenres(items);
+  // 管理人の手直し（overrides.json の g）は、自動の判定より優先する。原曲を手直ししたら、その歌ってみたも同じジャンルに
+  const byIdF = new Map(items.map(i => [i.id, i]));
+  for (const i of items) if (i.gFixed) i.g = i.gFixed;
+  for (const c of items) { const o = c.of && byIdF.get(c.of); if (o && o.gFixed && !c.gFixed) c.g = o.g; }
   return items;
 }
 

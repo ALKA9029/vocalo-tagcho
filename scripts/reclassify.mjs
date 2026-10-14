@@ -19,7 +19,7 @@ const out = items.map(old => {
   const merged = { ...fresh, ...keep };
   if (!merged.p && old.p && old.src === "youtube") merged.p = old.p;
   const o = overrides[merged.id];
-  if (o) { Object.assign(merged, o); if ("of" in o) merged.ofLocked = true; }
+  if (o) { Object.assign(merged, o); if ("of" in o) merged.ofLocked = true; if ("g" in o) merged.gFixed = o.g; }
   delete merged.of;
   return merged;
 });

@@ -79796,7 +79796,8 @@
   "p": "muship",
   "a": "youtube:UCkJpNAQqxeUAoomx-LW3YIQ",
   "firstSeen": "2026-10-09T12:20:22.335Z",
-  "seed": true
+  "seed": true,
+  "gFixed": "ボカロ"
  },
  {
   "id": "nico:sm30129689",
@@ -86467,7 +86468,7 @@
   "title": "【MV】ベルセルク／まふまふ　【オリジナル曲】",
   "t": "ベルセルク",
   "kind": "本家",
-  "g": "ボカロ",
+  "g": "J-POP",
   "date": "2015-11-02T12:44:51Z",
   "views": 10921132,
   "likes": 122715,
@@ -86497,6 +86498,7 @@
   "a": "youtube:UCOTR1tcOAhjgi6YukrPpZxg",
   "firstSeen": "2026-10-09T12:20:22.404Z",
   "seed": true,
+  "gFixed": "J-POP",
   "dup": "nico:sm27485100"
  },
  {
@@ -86555,7 +86557,7 @@
   "title": "ベルセルク／まふまふ　【オリジナル曲】",
   "t": "ベルセルク",
   "kind": "本家",
-  "g": "ボカロ",
+  "g": "J-POP",
   "date": "2015-10-31T18:00:00+09:00",
   "views": 4197139,
   "likes": 1176,
@@ -86575,6 +86577,7 @@
   "a": "niconico:18874531",
   "firstSeen": "2026-10-08T15:10:08.653Z",
   "seed": true,
+  "gFixed": "J-POP",
   "alt": [
    "yt:ZeDGODkAoxU"
   ]
@@ -90551,7 +90554,8 @@
   "a": "youtube:UCq3vSkJtBZdBjC8yrG-1xmA",
   "firstSeen": "2026-10-09T12:20:22.321Z",
   "seed": true,
-  "v": "初音ミク"
+  "v": "初音ミク",
+  "gFixed": "ボカロ"
  },
  {
   "id": "nico:sm25724827",
@@ -101463,7 +101467,8 @@
   "a": "youtube:UCq3vSkJtBZdBjC8yrG-1xmA",
   "firstSeen": "2026-10-09T12:20:22.327Z",
   "seed": true,
-  "v": "初音ミク"
+  "v": "初音ミク",
+  "gFixed": "ボカロ"
  },
  {
   "id": "nico:sm21720819",
