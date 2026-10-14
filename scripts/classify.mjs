@@ -30,7 +30,18 @@ export function normalize(s = "") {
 const hasTag = (tags, list) => tags.some(t => list.some(x => normalize(t) === normalize(x)));
 
 // カラオケ（ニコカラ・Off Vocal）など、曲そのものではない動画
-export const isKaraoke = title => /ニコカラ|off ?vocal|カラオケ|instrumental|インスト/i.test(title || "");
+export const isKaraoke = title => /ニコカラ|off ?vocal|カラオケ|instrumental|インスト/i.test(title || "") || isNotSong(title);
+
+// 曲ではない動画：ショート、ティザー、メイキング、ご報告、企画・バラエティ動画、「〜www」で終わる雑談系など。
+// ただし題名（# より前）に「歌ってみた」などがあれば曲として残す（【寝下呂企画】〇〇を歌ってみた など）
+const SING_RE = /コラボ|ラップ|歌r|歌っ|歌い|歌う|唄っ|弾いてみ|演奏|cover|カバー|バンド|band|feat|ft\.|MV|PV|主題歌|オリジナル/i;
+export function isNotSong(title = "") {
+  if (/#shorts?\b/i.test(title)) return true;
+  if (/\bteaser\b|ティザー|\btrailer\b|behind the scenes|メイキング|\bmaking\b|【ご報告】|【お知らせ】|大切なお知らせ/i.test(title)) return true;
+  const main = title.split(/\s#/)[0];
+  if (SING_RE.test(main)) return false;
+  return /やってみた|練習してみた|[wｗ]{3,}\s*$|【[^】]*(語録|企画|チャレンジ|検証|ドッキリ|密着|vlog|一写入魂)[^】]*】/i.test(main.trim());
+}
 
 // タイトルに「オリジナル曲」「【オリジナル】」「[original]」とある動画は本家（「オリジナルMV」「オリジナル振付」は除く）
 const ORIGINAL_RE = /オリジナル(曲|楽曲|ソング)|[【\[（(]\s*(オリジナル|original(\s*song)?)\s*[】\]）)]/i;
