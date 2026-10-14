@@ -26,14 +26,15 @@
 </div>
 
 <header class="hero">
-  <img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/46879843/46879843.60903742" alt="「フェイクエネミー」のサムネイル" referrerpolicy="no-referrer">
+  <button type="button" class="thumbbtn" data-embed="https://embed.nicovideo.jp/watch/sm46879843?autoplay=1" data-title="フェイクエネミー" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm46879843" aria-label="「フェイクエネミー」をこのページで再生"><img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/46879843/46879843.60903742" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>
   <div>
     <h1>フェイクエネミー</h1>
     <p class="credit">歌声：重音テト</p>
     <p class="meta"><span class="badge genre">ボカロ</span><span class="badge">本家</span><span>ニコニコ動画</span><span>2026/10/04 投稿</span></p>
     <p class="actions">
-      <a class="btn primary" href="/?id=nico%3Asm46879843">▶ TagTuneで聴く</a>
+      <button type="button" class="btn primary" data-embed="https://embed.nicovideo.jp/watch/sm46879843?autoplay=1" data-title="フェイクエネミー" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm46879843">▶ ここで聴く</button>
       <a class="btn" href="https://www.nicovideo.jp/watch/sm46879843" target="_blank" rel="noopener">ニコニコ動画で見る ↗</a>
+      <a class="btn" href="/?id=nico%3Asm46879843">TagTuneでタグをつける</a>
     </p>
   </div>
 </header>
@@ -46,7 +47,7 @@
 
 <section>
   <h2>「フェイクエネミー」の歌ってみた（1件）</h2>
-  <ul class="list"><li><img src="https://nicovideo.cdn.nimg.jp/thumbnails/46880623/46880623.59478330" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.nicovideo.jp/watch/sm46880623" target="_blank" rel="noopener">みそらみみ</a></div><div class="sub"><span>ニコニコ動画</span><span>2026/10/04</span><a href="/?id=nico%3Asm46880623">▶ TagTuneで聴く</a></div></div></li></ul>
+  <ul class="list"><li id="c-nico-sm46880623"><img src="https://nicovideo.cdn.nimg.jp/thumbnails/46880623/46880623.59478330" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">みそらみみ</div><div class="sub"><button type="button" class="mini" data-embed="https://embed.nicovideo.jp/watch/sm46880623?autoplay=1" data-title="フェイクエネミー（みそらみみ）" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm46880623">▶ ここで聴く</button><a href="https://www.nicovideo.jp/watch/sm46880623" target="_blank" rel="noopener">ニコニコ動画 ↗</a><span>2026/10/04</span></div></div></li></ul>
 </section>
 
 
@@ -57,5 +58,7 @@
   <a href="/about.html#contact">お問い合わせ・掲載の取り下げ</a>
 </footer>
 </div>
+<aside id="player" hidden aria-label="再生中の曲"></aside>
+<script src="/assets/page.js" defer></script>
 </body>
 </html>

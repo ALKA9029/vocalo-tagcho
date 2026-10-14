@@ -26,14 +26,15 @@
 </div>
 
 <header class="hero">
-  <img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/17369744/17369744" alt="「DEPARTURES」のサムネイル" referrerpolicy="no-referrer">
+  <button type="button" class="thumbbtn" data-embed="https://embed.nicovideo.jp/watch/sm17369744?autoplay=1" data-title="DEPARTURES" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm17369744" aria-label="「DEPARTURES」をこのページで再生"><img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/17369744/17369744" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>
   <div>
     <h1>DEPARTURES</h1>
     <p class="credit">作者：<a href="/p/nico-3397653/">ひとしずくP</a>　歌声：鏡音リン</p>
     <p class="meta"><span class="badge genre">ボカロ</span><span class="badge">本家</span><span>ニコニコ動画</span><span>2012/03/26 投稿</span></p>
     <p class="actions">
-      <a class="btn primary" href="/?id=nico%3Asm17369744">▶ TagTuneで聴く</a>
+      <button type="button" class="btn primary" data-embed="https://embed.nicovideo.jp/watch/sm17369744?autoplay=1" data-title="DEPARTURES" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm17369744">▶ ここで聴く</button>
       <a class="btn" href="https://www.nicovideo.jp/watch/sm17369744" target="_blank" rel="noopener">ニコニコ動画で見る ↗</a>
+      <a class="btn" href="/?id=nico%3Asm17369744">TagTuneでタグをつける</a>
     </p>
   </div>
 </header>
@@ -46,7 +47,7 @@
 
 <section>
   <h2>「DEPARTURES」の歌ってみた（1件）</h2>
-  <ul class="list"><li><img src="https://i.ytimg.com/vi/hKOSBD7YM8E/mqdefault.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.youtube.com/watch?v=hKOSBD7YM8E" target="_blank" rel="noopener">紅櫻</a></div><div class="sub"><span>YouTube</span><span>2026/10/11</span><a href="/?id=yt%3AhKOSBD7YM8E">▶ TagTuneで聴く</a></div></div></li></ul>
+  <ul class="list"><li id="c-yt-hKOSBD7YM8E"><img src="https://i.ytimg.com/vi/hKOSBD7YM8E/mqdefault.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">紅櫻</div><div class="sub"><button type="button" class="mini" data-embed="https://www.youtube.com/embed/hKOSBD7YM8E?autoplay=1&amp;playsinline=1&amp;rel=0" data-title="DEPARTURES（紅櫻）" data-src="YouTube" data-url="https://www.youtube.com/watch?v=hKOSBD7YM8E">▶ ここで聴く</button><a href="https://www.youtube.com/watch?v=hKOSBD7YM8E" target="_blank" rel="noopener">YouTube ↗</a><span>2026/10/11</span></div></div></li></ul>
 </section>
 
 <section>
@@ -62,5 +63,7 @@
   <a href="/about.html#contact">お問い合わせ・掲載の取り下げ</a>
 </footer>
 </div>
+<aside id="player" hidden aria-label="再生中の曲"></aside>
+<script src="/assets/page.js" defer></script>
 </body>
 </html>

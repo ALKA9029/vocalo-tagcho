@@ -26,14 +26,15 @@
 </div>
 
 <header class="hero">
-  <img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/9691627/9691627" alt="「君の知らない物語」のサムネイル" referrerpolicy="no-referrer">
+  <button type="button" class="thumbbtn" data-embed="https://embed.nicovideo.jp/watch/sm9691627?autoplay=1" data-title="君の知らない物語" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm9691627" aria-label="「君の知らない物語」をこのページで再生"><img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/9691627/9691627" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>
   <div>
     <h1>君の知らない物語</h1>
     <p class="credit">作者：合唱　歌声：初音ミク</p>
     <p class="meta"><span class="badge genre">ボカロ</span><span class="badge">本家</span><span>ニコニコ動画</span><span>2010/02/13 投稿</span></p>
     <p class="actions">
-      <a class="btn primary" href="/?id=nico%3Asm9691627">▶ TagTuneで聴く</a>
+      <button type="button" class="btn primary" data-embed="https://embed.nicovideo.jp/watch/sm9691627?autoplay=1" data-title="君の知らない物語" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm9691627">▶ ここで聴く</button>
       <a class="btn" href="https://www.nicovideo.jp/watch/sm9691627" target="_blank" rel="noopener">ニコニコ動画で見る ↗</a>
+      <a class="btn" href="/?id=nico%3Asm9691627">TagTuneでタグをつける</a>
     </p>
   </div>
 </header>
@@ -46,7 +47,7 @@
 
 <section>
   <h2>「君の知らない物語」の歌ってみた（2件）</h2>
-  <ul class="list"><li><img src="https://i.ytimg.com/vi/PU5v3jzWvD8/mqdefault.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.youtube.com/watch?v=PU5v3jzWvD8" target="_blank" rel="noopener">紅櫻</a></div><div class="sub"><span>YouTube</span><span>2026/10/07</span><a href="/?id=yt%3APU5v3jzWvD8">▶ TagTuneで聴く</a></div></div></li><li><img src="https://nicovideo.cdn.nimg.jp/thumbnails/8333380/8333380" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.nicovideo.jp/watch/sm8333380" target="_blank" rel="noopener">(vip店長)</a></div><div class="sub"><span>ニコニコ動画</span><span>2009/09/25</span><a href="/?id=nico%3Asm8333380">▶ TagTuneで聴く</a></div></div></li></ul>
+  <ul class="list"><li id="c-yt-PU5v3jzWvD8"><img src="https://i.ytimg.com/vi/PU5v3jzWvD8/mqdefault.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">紅櫻</div><div class="sub"><button type="button" class="mini" data-embed="https://www.youtube.com/embed/PU5v3jzWvD8?autoplay=1&amp;playsinline=1&amp;rel=0" data-title="君の知らない物語（紅櫻）" data-src="YouTube" data-url="https://www.youtube.com/watch?v=PU5v3jzWvD8">▶ ここで聴く</button><a href="https://www.youtube.com/watch?v=PU5v3jzWvD8" target="_blank" rel="noopener">YouTube ↗</a><span>2026/10/07</span></div></div></li><li id="c-nico-sm8333380"><img src="https://nicovideo.cdn.nimg.jp/thumbnails/8333380/8333380" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">(vip店長)</div><div class="sub"><button type="button" class="mini" data-embed="https://embed.nicovideo.jp/watch/sm8333380?autoplay=1" data-title="君の知らない物語（(vip店長)）" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm8333380">▶ ここで聴く</button><a href="https://www.nicovideo.jp/watch/sm8333380" target="_blank" rel="noopener">ニコニコ動画 ↗</a><span>2009/09/25</span></div></div></li></ul>
 </section>
 
 
@@ -57,5 +58,7 @@
   <a href="/about.html#contact">お問い合わせ・掲載の取り下げ</a>
 </footer>
 </div>
+<aside id="player" hidden aria-label="再生中の曲"></aside>
+<script src="/assets/page.js" defer></script>
 </body>
 </html>

@@ -26,14 +26,15 @@
 </div>
 
 <header class="hero">
-  <img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/12589203/12589203" alt="「繰り返し一粒」のサムネイル" referrerpolicy="no-referrer">
+  <button type="button" class="thumbbtn" data-embed="https://embed.nicovideo.jp/watch/sm12589203?autoplay=1" data-title="繰り返し一粒" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm12589203" aria-label="「繰り返し一粒」をこのページで再生"><img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/12589203/12589203" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>
   <div>
     <h1>繰り返し一粒</h1>
     <p class="credit">作者：<a href="/p/nico-484808/">猫虫</a>　歌声：初音ミク</p>
     <p class="meta"><span class="badge genre">ボカロ</span><span class="badge">本家</span><span>ニコニコ動画</span><span>2010/10/30 投稿</span></p>
     <p class="actions">
-      <a class="btn primary" href="/?id=nico%3Asm12589203">▶ TagTuneで聴く</a>
+      <button type="button" class="btn primary" data-embed="https://embed.nicovideo.jp/watch/sm12589203?autoplay=1" data-title="繰り返し一粒" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm12589203">▶ ここで聴く</button>
       <a class="btn" href="https://www.nicovideo.jp/watch/sm12589203" target="_blank" rel="noopener">ニコニコ動画で見る ↗</a>
+      <a class="btn" href="/?id=nico%3Asm12589203">TagTuneでタグをつける</a>
     </p>
   </div>
 </header>
@@ -46,7 +47,7 @@
 
 <section>
   <h2>「繰り返し一粒」の歌ってみた（1件）</h2>
-  <ul class="list"><li><img src="https://nicovideo.cdn.nimg.jp/thumbnails/16972841/16972841" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.nicovideo.jp/watch/sm16972841" target="_blank" rel="noopener">96猫</a></div><div class="sub"><span>ニコニコ動画</span><span>2012/02/14</span><a href="/?id=nico%3Asm16972841">▶ TagTuneで聴く</a></div></div></li></ul>
+  <ul class="list"><li id="c-nico-sm16972841"><img src="https://nicovideo.cdn.nimg.jp/thumbnails/16972841/16972841" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">96猫</div><div class="sub"><button type="button" class="mini" data-embed="https://embed.nicovideo.jp/watch/sm16972841?autoplay=1" data-title="繰り返し一粒（96猫）" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm16972841">▶ ここで聴く</button><a href="https://www.nicovideo.jp/watch/sm16972841" target="_blank" rel="noopener">ニコニコ動画 ↗</a><span>2012/02/14</span></div></div></li></ul>
 </section>
 
 <section>
@@ -62,5 +63,7 @@
   <a href="/about.html#contact">お問い合わせ・掲載の取り下げ</a>
 </footer>
 </div>
+<aside id="player" hidden aria-label="再生中の曲"></aside>
+<script src="/assets/page.js" defer></script>
 </body>
 </html>

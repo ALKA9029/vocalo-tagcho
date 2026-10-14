@@ -26,14 +26,15 @@
 </div>
 
 <header class="hero">
-  <img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/41588089/41588089.38102368" alt="「コネクト」のサムネイル" referrerpolicy="no-referrer">
+  <button type="button" class="thumbbtn" data-embed="https://embed.nicovideo.jp/watch/sm41588089?autoplay=1" data-title="コネクト" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm41588089" aria-label="「コネクト」をこのページで再生"><img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/41588089/41588089.38102368" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>
   <div>
     <h1>コネクト</h1>
     <p class="credit">歌声：小春六花</p>
     <p class="meta"><span class="badge genre">ボカロ</span><span class="badge">本家</span><span>ニコニコ動画</span><span>2022/12/31 投稿</span></p>
     <p class="actions">
-      <a class="btn primary" href="/?id=nico%3Asm41588089">▶ TagTuneで聴く</a>
+      <button type="button" class="btn primary" data-embed="https://embed.nicovideo.jp/watch/sm41588089?autoplay=1" data-title="コネクト" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm41588089">▶ ここで聴く</button>
       <a class="btn" href="https://www.nicovideo.jp/watch/sm41588089" target="_blank" rel="noopener">ニコニコ動画で見る ↗</a>
+      <a class="btn" href="/?id=nico%3Asm41588089">TagTuneでタグをつける</a>
     </p>
   </div>
 </header>
@@ -46,7 +47,7 @@
 
 <section>
   <h2>「コネクト」の歌ってみた（1件）</h2>
-  <ul class="list"><li><img src="https://nicovideo.cdn.nimg.jp/thumbnails/13500891/13500891" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.nicovideo.jp/watch/sm13500891" target="_blank" rel="noopener">irony</a></div><div class="sub"><span>ニコニコ動画</span><span>2011/02/05</span><a href="/?id=nico%3Asm13500891">▶ TagTuneで聴く</a></div></div></li></ul>
+  <ul class="list"><li id="c-nico-sm13500891"><img src="https://nicovideo.cdn.nimg.jp/thumbnails/13500891/13500891" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">irony</div><div class="sub"><button type="button" class="mini" data-embed="https://embed.nicovideo.jp/watch/sm13500891?autoplay=1" data-title="コネクト（irony）" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm13500891">▶ ここで聴く</button><a href="https://www.nicovideo.jp/watch/sm13500891" target="_blank" rel="noopener">ニコニコ動画 ↗</a><span>2011/02/05</span></div></div></li></ul>
 </section>
 
 
@@ -57,5 +58,7 @@
   <a href="/about.html#contact">お問い合わせ・掲載の取り下げ</a>
 </footer>
 </div>
+<aside id="player" hidden aria-label="再生中の曲"></aside>
+<script src="/assets/page.js" defer></script>
 </body>
 </html>

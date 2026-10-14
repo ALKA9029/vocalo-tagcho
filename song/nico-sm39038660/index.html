@@ -26,14 +26,15 @@
 </div>
 
 <header class="hero">
-  <img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/39038660/39038660.16018607" alt="「第六感」のサムネイル" referrerpolicy="no-referrer">
+  <button type="button" class="thumbbtn" data-embed="https://embed.nicovideo.jp/watch/sm39038660?autoplay=1" data-title="第六感" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm39038660" aria-label="「第六感」をこのページで再生"><img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/39038660/39038660.16018607" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>
   <div>
     <h1>第六感</h1>
     <p class="credit">作者：Tda式改変ミクで　歌声：初音ミク</p>
     <p class="meta"><span class="badge genre">ボカロ</span><span class="badge">本家</span><span>ニコニコ動画</span><span>2021/07/16 投稿</span></p>
     <p class="actions">
-      <a class="btn primary" href="/?id=nico%3Asm39038660">▶ TagTuneで聴く</a>
+      <button type="button" class="btn primary" data-embed="https://embed.nicovideo.jp/watch/sm39038660?autoplay=1" data-title="第六感" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm39038660">▶ ここで聴く</button>
       <a class="btn" href="https://www.nicovideo.jp/watch/sm39038660" target="_blank" rel="noopener">ニコニコ動画で見る ↗</a>
+      <a class="btn" href="/?id=nico%3Asm39038660">TagTuneでタグをつける</a>
     </p>
   </div>
 </header>
@@ -46,7 +47,7 @@
 
 <section>
   <h2>「第六感」の歌ってみた（1件）</h2>
-  <ul class="list"><li><img src="https://i.ytimg.com/vi/YM9nTzZOrKY/mqdefault.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.youtube.com/watch?v=YM9nTzZOrKY" target="_blank" rel="noopener">琶舞</a></div><div class="sub"><span>YouTube</span><span>2026/10/07</span><a href="/?id=yt%3AYM9nTzZOrKY">▶ TagTuneで聴く</a></div></div></li></ul>
+  <ul class="list"><li id="c-yt-YM9nTzZOrKY"><img src="https://i.ytimg.com/vi/YM9nTzZOrKY/mqdefault.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">琶舞</div><div class="sub"><button type="button" class="mini" data-embed="https://www.youtube.com/embed/YM9nTzZOrKY?autoplay=1&amp;playsinline=1&amp;rel=0" data-title="第六感（琶舞）" data-src="YouTube" data-url="https://www.youtube.com/watch?v=YM9nTzZOrKY">▶ ここで聴く</button><a href="https://www.youtube.com/watch?v=YM9nTzZOrKY" target="_blank" rel="noopener">YouTube ↗</a><span>2026/10/07</span></div></div></li></ul>
 </section>
 
 
@@ -57,5 +58,7 @@
   <a href="/about.html#contact">お問い合わせ・掲載の取り下げ</a>
 </footer>
 </div>
+<aside id="player" hidden aria-label="再生中の曲"></aside>
+<script src="/assets/page.js" defer></script>
 </body>
 </html>

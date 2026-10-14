@@ -26,14 +26,15 @@
 </div>
 
 <header class="hero">
-  <img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/32338124/32338124" alt="「お気に召すまま」のサムネイル" referrerpolicy="no-referrer">
+  <button type="button" class="thumbbtn" data-embed="https://embed.nicovideo.jp/watch/sm32338124?autoplay=1" data-title="お気に召すまま" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm32338124" aria-label="「お気に召すまま」をこのページで再生"><img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/32338124/32338124" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>
   <div>
     <h1>お気に召すまま</h1>
     <p class="credit">作者：<a href="/p/nico-10103681/">Eve</a>　歌声：初音ミク</p>
     <p class="meta"><span class="badge genre">ボカロ</span><span class="badge">本家</span><span>ニコニコ動画</span><span>2017/11/28 投稿</span></p>
     <p class="actions">
-      <a class="btn primary" href="/?id=nico%3Asm32338124">▶ TagTuneで聴く</a>
+      <button type="button" class="btn primary" data-embed="https://embed.nicovideo.jp/watch/sm32338124?autoplay=1" data-title="お気に召すまま" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm32338124">▶ ここで聴く</button>
       <a class="btn" href="https://www.nicovideo.jp/watch/sm32338124" target="_blank" rel="noopener">ニコニコ動画で見る ↗</a>
+      <a class="btn" href="/?id=nico%3Asm32338124">TagTuneでタグをつける</a>
     </p>
   </div>
 </header>
@@ -46,7 +47,7 @@
 
 <section>
   <h2>「お気に召すまま」の歌ってみた（1件）</h2>
-  <ul class="list"><li><img src="https://nicovideo.cdn.nimg.jp/thumbnails/32351904/32351904" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.nicovideo.jp/watch/sm32351904" target="_blank" rel="noopener">Sou</a></div><div class="sub"><span>ニコニコ動画</span><span>2017/12/01</span><a href="/?id=nico%3Asm32351904">▶ TagTuneで聴く</a></div></div></li></ul>
+  <ul class="list"><li id="c-nico-sm32351904"><img src="https://nicovideo.cdn.nimg.jp/thumbnails/32351904/32351904" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">Sou</div><div class="sub"><button type="button" class="mini" data-embed="https://embed.nicovideo.jp/watch/sm32351904?autoplay=1" data-title="お気に召すまま（Sou）" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm32351904">▶ ここで聴く</button><a href="https://www.nicovideo.jp/watch/sm32351904" target="_blank" rel="noopener">ニコニコ動画 ↗</a><span>2017/12/01</span></div></div></li></ul>
 </section>
 
 <section>
@@ -62,5 +63,7 @@
   <a href="/about.html#contact">お問い合わせ・掲載の取り下げ</a>
 </footer>
 </div>
+<aside id="player" hidden aria-label="再生中の曲"></aside>
+<script src="/assets/page.js" defer></script>
 </body>
 </html>

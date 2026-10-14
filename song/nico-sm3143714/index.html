@@ -26,14 +26,15 @@
 </div>
 
 <header class="hero">
-  <img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/3143714/3143714" alt="「人柱アリス」のサムネイル" referrerpolicy="no-referrer">
+  <button type="button" class="thumbbtn" data-embed="https://embed.nicovideo.jp/watch/sm3143714?autoplay=1" data-title="人柱アリス" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm3143714" aria-label="「人柱アリス」をこのページで再生"><img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/3143714/3143714" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>
   <div>
     <h1>人柱アリス</h1>
     <p class="credit">作者：絵本</p>
     <p class="meta"><span class="badge genre">ボカロ</span><span class="badge">本家</span><span>ニコニコ動画</span><span>2008/04/30 投稿</span></p>
     <p class="actions">
-      <a class="btn primary" href="/?id=nico%3Asm3143714">▶ TagTuneで聴く</a>
+      <button type="button" class="btn primary" data-embed="https://embed.nicovideo.jp/watch/sm3143714?autoplay=1" data-title="人柱アリス" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm3143714">▶ ここで聴く</button>
       <a class="btn" href="https://www.nicovideo.jp/watch/sm3143714" target="_blank" rel="noopener">ニコニコ動画で見る ↗</a>
+      <a class="btn" href="/?id=nico%3Asm3143714">TagTuneでタグをつける</a>
     </p>
   </div>
 </header>
@@ -46,7 +47,7 @@
 
 <section>
   <h2>「人柱アリス」の歌ってみた（3件）</h2>
-  <ul class="list"><li><img src="https://nicovideo.cdn.nimg.jp/thumbnails/46833294/46833294.17918337" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.nicovideo.jp/watch/sm46833294" target="_blank" rel="noopener">絵本</a></div><div class="sub"><span>ニコニコ動画</span><span>2026/09/25</span><a href="/?id=nico%3Asm46833294">▶ TagTuneで聴く</a></div></div></li><li><img src="https://nicovideo.cdn.nimg.jp/thumbnails/7687645/7687645" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.nicovideo.jp/watch/sm7687645" target="_blank" rel="noopener">ねる×Gero</a></div><div class="sub"><span>ニコニコ動画</span><span>2009/07/20</span><a href="/?id=nico%3Asm7687645">▶ TagTuneで聴く</a></div></div></li><li><img src="https://nicovideo.cdn.nimg.jp/thumbnails/4492586/4492586" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.nicovideo.jp/watch/sm4492586" target="_blank" rel="noopener">うさ</a></div><div class="sub"><span>ニコニコ動画</span><span>2008/09/02</span><a href="/?id=nico%3Asm4492586">▶ TagTuneで聴く</a></div></div></li></ul>
+  <ul class="list"><li id="c-nico-sm46833294"><img src="https://nicovideo.cdn.nimg.jp/thumbnails/46833294/46833294.17918337" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">絵本</div><div class="sub"><button type="button" class="mini" data-embed="https://embed.nicovideo.jp/watch/sm46833294?autoplay=1" data-title="人柱アリス（絵本）" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm46833294">▶ ここで聴く</button><a href="https://www.nicovideo.jp/watch/sm46833294" target="_blank" rel="noopener">ニコニコ動画 ↗</a><span>2026/09/25</span></div></div></li><li id="c-nico-sm7687645"><img src="https://nicovideo.cdn.nimg.jp/thumbnails/7687645/7687645" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">ねる×Gero</div><div class="sub"><button type="button" class="mini" data-embed="https://embed.nicovideo.jp/watch/sm7687645?autoplay=1" data-title="人柱アリス（ねる×Gero）" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm7687645">▶ ここで聴く</button><a href="https://www.nicovideo.jp/watch/sm7687645" target="_blank" rel="noopener">ニコニコ動画 ↗</a><span>2009/07/20</span></div></div></li><li id="c-nico-sm4492586"><img src="https://nicovideo.cdn.nimg.jp/thumbnails/4492586/4492586" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">うさ</div><div class="sub"><button type="button" class="mini" data-embed="https://embed.nicovideo.jp/watch/sm4492586?autoplay=1" data-title="人柱アリス（うさ）" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm4492586">▶ ここで聴く</button><a href="https://www.nicovideo.jp/watch/sm4492586" target="_blank" rel="noopener">ニコニコ動画 ↗</a><span>2008/09/02</span></div></div></li></ul>
 </section>
 
 
@@ -57,5 +58,7 @@
   <a href="/about.html#contact">お問い合わせ・掲載の取り下げ</a>
 </footer>
 </div>
+<aside id="player" hidden aria-label="再生中の曲"></aside>
+<script src="/assets/page.js" defer></script>
 </body>
 </html>

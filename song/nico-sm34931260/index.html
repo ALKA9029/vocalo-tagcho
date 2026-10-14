@@ -26,14 +26,15 @@
 </div>
 
 <header class="hero">
-  <img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/34931260/34931260.50336" alt="「咲き誇れ!」のサムネイル" referrerpolicy="no-referrer">
+  <button type="button" class="thumbbtn" data-embed="https://embed.nicovideo.jp/watch/sm34931260?autoplay=1" data-title="咲き誇れ!" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm34931260" aria-label="「咲き誇れ!」をこのページで再生"><img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/34931260/34931260.50336" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>
   <div>
     <h1>咲き誇れ!</h1>
     <p class="credit">作者：YOASOBI　歌声：初音ミク</p>
     <p class="meta"><span class="badge genre">ボカロ</span><span class="badge">本家</span><span>ニコニコ動画</span><span>2019/04/08 投稿</span></p>
     <p class="actions">
-      <a class="btn primary" href="/?id=nico%3Asm34931260">▶ TagTuneで聴く</a>
+      <button type="button" class="btn primary" data-embed="https://embed.nicovideo.jp/watch/sm34931260?autoplay=1" data-title="咲き誇れ!" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm34931260">▶ ここで聴く</button>
       <a class="btn" href="https://www.nicovideo.jp/watch/sm34931260" target="_blank" rel="noopener">ニコニコ動画で見る ↗</a>
+      <a class="btn" href="/?id=nico%3Asm34931260">TagTuneでタグをつける</a>
     </p>
   </div>
 </header>
@@ -46,7 +47,7 @@
 
 <section>
   <h2>「咲き誇れ!」の歌ってみた（2件）</h2>
-  <ul class="list"><li><img src="https://i.ytimg.com/vi/esds1uuQWuw/mqdefault.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.youtube.com/watch?v=esds1uuQWuw" target="_blank" rel="noopener">roiro</a></div><div class="sub"><span>YouTube</span><span>2026/10/04</span><a href="/?id=yt%3Aesds1uuQWuw">▶ TagTuneで聴く</a></div></div></li><li><img src="https://i.ytimg.com/vi/Zr3kHkxJzhE/mqdefault.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.youtube.com/watch?v=Zr3kHkxJzhE" target="_blank" rel="noopener">小倉悠吾</a></div><div class="sub"><span>YouTube</span><span>2026/10/03</span><a href="/?id=yt%3AZr3kHkxJzhE">▶ TagTuneで聴く</a></div></div></li></ul>
+  <ul class="list"><li id="c-yt-esds1uuQWuw"><img src="https://i.ytimg.com/vi/esds1uuQWuw/mqdefault.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">roiro</div><div class="sub"><button type="button" class="mini" data-embed="https://www.youtube.com/embed/esds1uuQWuw?autoplay=1&amp;playsinline=1&amp;rel=0" data-title="咲き誇れ!（roiro）" data-src="YouTube" data-url="https://www.youtube.com/watch?v=esds1uuQWuw">▶ ここで聴く</button><a href="https://www.youtube.com/watch?v=esds1uuQWuw" target="_blank" rel="noopener">YouTube ↗</a><span>2026/10/04</span></div></div></li><li id="c-yt-Zr3kHkxJzhE"><img src="https://i.ytimg.com/vi/Zr3kHkxJzhE/mqdefault.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">小倉悠吾</div><div class="sub"><button type="button" class="mini" data-embed="https://www.youtube.com/embed/Zr3kHkxJzhE?autoplay=1&amp;playsinline=1&amp;rel=0" data-title="咲き誇れ!（小倉悠吾）" data-src="YouTube" data-url="https://www.youtube.com/watch?v=Zr3kHkxJzhE">▶ ここで聴く</button><a href="https://www.youtube.com/watch?v=Zr3kHkxJzhE" target="_blank" rel="noopener">YouTube ↗</a><span>2026/10/03</span></div></div></li></ul>
 </section>
 
 
@@ -57,5 +58,7 @@
   <a href="/about.html#contact">お問い合わせ・掲載の取り下げ</a>
 </footer>
 </div>
+<aside id="player" hidden aria-label="再生中の曲"></aside>
+<script src="/assets/page.js" defer></script>
 </body>
 </html>

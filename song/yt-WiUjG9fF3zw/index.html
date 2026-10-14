@@ -26,14 +26,15 @@
 </div>
 
 <header class="hero">
-  <img class="thumb" src="https://i.ytimg.com/vi/WiUjG9fF3zw/mqdefault.jpg" alt="「ビバハピ」のサムネイル" referrerpolicy="no-referrer">
+  <button type="button" class="thumbbtn" data-embed="https://www.youtube.com/embed/WiUjG9fF3zw?autoplay=1&amp;playsinline=1&amp;rel=0" data-title="ビバハピ" data-src="YouTube" data-url="https://www.youtube.com/watch?v=WiUjG9fF3zw" aria-label="「ビバハピ」をこのページで再生"><img class="thumb" src="https://i.ytimg.com/vi/WiUjG9fF3zw/mqdefault.jpg" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>
   <div>
     <h1>ビバハピ</h1>
     <p class="credit">作者：<a href="/p/yt-UCE0uNSkGhhsNMwAZcIQY7rw/">初音ミクが声優のようにしゃべってラップする曲</a>　歌声：初音ミク</p>
     <p class="meta"><span class="badge genre">ボカロ</span><span class="badge">本家</span><span>YouTube</span><span>2013/07/26 投稿</span></p>
     <p class="actions">
-      <a class="btn primary" href="/?id=yt%3AWiUjG9fF3zw">▶ TagTuneで聴く</a>
+      <button type="button" class="btn primary" data-embed="https://www.youtube.com/embed/WiUjG9fF3zw?autoplay=1&amp;playsinline=1&amp;rel=0" data-title="ビバハピ" data-src="YouTube" data-url="https://www.youtube.com/watch?v=WiUjG9fF3zw">▶ ここで聴く</button>
       <a class="btn" href="https://www.youtube.com/watch?v=WiUjG9fF3zw" target="_blank" rel="noopener">YouTubeで見る ↗</a>
+      <a class="btn" href="/?id=yt%3AWiUjG9fF3zw">TagTuneでタグをつける</a>
     </p>
   </div>
 </header>
@@ -46,7 +47,7 @@
 
 <section>
   <h2>「ビバハピ」の歌ってみた（1件）</h2>
-  <ul class="list"><li><img src="https://nicovideo.cdn.nimg.jp/thumbnails/22257217/22257217" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.nicovideo.jp/watch/sm22257217" target="_blank" rel="noopener">歌い手不明</a></div><div class="sub"><span>ニコニコ動画</span><span>2013/11/15</span><a href="/?id=nico%3Asm22257217">▶ TagTuneで聴く</a></div></div></li></ul>
+  <ul class="list"><li id="c-nico-sm22257217"><img src="https://nicovideo.cdn.nimg.jp/thumbnails/22257217/22257217" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">歌い手不明</div><div class="sub"><button type="button" class="mini" data-embed="https://embed.nicovideo.jp/watch/sm22257217?autoplay=1" data-title="ビバハピ（歌ってみた）" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm22257217">▶ ここで聴く</button><a href="https://www.nicovideo.jp/watch/sm22257217" target="_blank" rel="noopener">ニコニコ動画 ↗</a><span>2013/11/15</span></div></div></li></ul>
 </section>
 
 <section>
@@ -62,5 +63,7 @@
   <a href="/about.html#contact">お問い合わせ・掲載の取り下げ</a>
 </footer>
 </div>
+<aside id="player" hidden aria-label="再生中の曲"></aside>
+<script src="/assets/page.js" defer></script>
 </body>
 </html>

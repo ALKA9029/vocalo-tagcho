@@ -26,14 +26,15 @@
 </div>
 
 <header class="hero">
-  <img class="thumb" src="https://i.ytimg.com/vi/5kIeUb5AE4s/mqdefault.jpg" alt="「ぼかろころしあむ」のサムネイル" referrerpolicy="no-referrer">
+  <button type="button" class="thumbbtn" data-embed="https://www.youtube.com/embed/5kIeUb5AE4s?autoplay=1&amp;playsinline=1&amp;rel=0" data-title="ぼかろころしあむ" data-src="YouTube" data-url="https://www.youtube.com/watch?v=5kIeUb5AE4s" aria-label="「ぼかろころしあむ」をこのページで再生"><img class="thumb" src="https://i.ytimg.com/vi/5kIeUb5AE4s/mqdefault.jpg" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>
   <div>
     <h1>ぼかろころしあむ</h1>
     <p class="credit">作者：<a href="/p/yt-UCrGzu0MPKQpYF2AV2oG-VpQ/">DIVELA</a>　歌声：鏡音リン</p>
     <p class="meta"><span class="badge genre">ボカロ</span><span class="badge">本家</span><span>YouTube</span><span>2018/08/05 投稿</span></p>
     <p class="actions">
-      <a class="btn primary" href="/?id=yt%3A5kIeUb5AE4s">▶ TagTuneで聴く</a>
+      <button type="button" class="btn primary" data-embed="https://www.youtube.com/embed/5kIeUb5AE4s?autoplay=1&amp;playsinline=1&amp;rel=0" data-title="ぼかろころしあむ" data-src="YouTube" data-url="https://www.youtube.com/watch?v=5kIeUb5AE4s">▶ ここで聴く</button>
       <a class="btn" href="https://www.youtube.com/watch?v=5kIeUb5AE4s" target="_blank" rel="noopener">YouTubeで見る ↗</a>
+      <a class="btn" href="/?id=yt%3A5kIeUb5AE4s">TagTuneでタグをつける</a>
     </p>
   </div>
 </header>
@@ -46,7 +47,7 @@
 
 <section>
   <h2>「ぼかろころしあむ」の歌ってみた（1件）</h2>
-  <ul class="list"><li><img src="https://nicovideo.cdn.nimg.jp/thumbnails/33736241/33736241" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.nicovideo.jp/watch/sm33736241" target="_blank" rel="noopener">島爺</a></div><div class="sub"><span>ニコニコ動画</span><span>2018/08/23</span><a href="/?id=nico%3Asm33736241">▶ TagTuneで聴く</a></div></div></li></ul>
+  <ul class="list"><li id="c-nico-sm33736241"><img src="https://nicovideo.cdn.nimg.jp/thumbnails/33736241/33736241" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">島爺</div><div class="sub"><button type="button" class="mini" data-embed="https://embed.nicovideo.jp/watch/sm33736241?autoplay=1" data-title="ぼかろころしあむ（島爺）" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm33736241">▶ ここで聴く</button><a href="https://www.nicovideo.jp/watch/sm33736241" target="_blank" rel="noopener">ニコニコ動画 ↗</a><span>2018/08/23</span></div></div></li></ul>
 </section>
 
 <section>
@@ -62,5 +63,7 @@
   <a href="/about.html#contact">お問い合わせ・掲載の取り下げ</a>
 </footer>
 </div>
+<aside id="player" hidden aria-label="再生中の曲"></aside>
+<script src="/assets/page.js" defer></script>
 </body>
 </html>

@@ -26,14 +26,15 @@
 </div>
 
 <header class="hero">
-  <img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/1159630/1159630" alt="「甲賀忍法帖」のサムネイル" referrerpolicy="no-referrer">
+  <button type="button" class="thumbbtn" data-embed="https://embed.nicovideo.jp/watch/sm1159630?autoplay=1" data-title="甲賀忍法帖" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm1159630" aria-label="「甲賀忍法帖」をこのページで再生"><img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/1159630/1159630" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>
   <div>
     <h1>甲賀忍法帖</h1>
     <p class="credit">歌声：初音ミク</p>
     <p class="meta"><span class="badge genre">ボカロ</span><span class="badge">本家</span><span>ニコニコ動画</span><span>2007/09/28 投稿</span></p>
     <p class="actions">
-      <a class="btn primary" href="/?id=nico%3Asm1159630">▶ TagTuneで聴く</a>
+      <button type="button" class="btn primary" data-embed="https://embed.nicovideo.jp/watch/sm1159630?autoplay=1" data-title="甲賀忍法帖" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm1159630">▶ ここで聴く</button>
       <a class="btn" href="https://www.nicovideo.jp/watch/sm1159630" target="_blank" rel="noopener">ニコニコ動画で見る ↗</a>
+      <a class="btn" href="/?id=nico%3Asm1159630">TagTuneでタグをつける</a>
     </p>
   </div>
 </header>
@@ -46,7 +47,7 @@
 
 <section>
   <h2>「甲賀忍法帖」の歌ってみた（1件）</h2>
-  <ul class="list"><li><img src="https://i.ytimg.com/vi/cBic9HjYctE/mqdefault.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.youtube.com/watch?v=cBic9HjYctE" target="_blank" rel="noopener">須野高校軽音部</a></div><div class="sub"><span>YouTube</span><span>2026/10/07</span><a href="/?id=yt%3AcBic9HjYctE">▶ TagTuneで聴く</a></div></div></li></ul>
+  <ul class="list"><li id="c-yt-cBic9HjYctE"><img src="https://i.ytimg.com/vi/cBic9HjYctE/mqdefault.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">須野高校軽音部</div><div class="sub"><button type="button" class="mini" data-embed="https://www.youtube.com/embed/cBic9HjYctE?autoplay=1&amp;playsinline=1&amp;rel=0" data-title="甲賀忍法帖（須野高校軽音部）" data-src="YouTube" data-url="https://www.youtube.com/watch?v=cBic9HjYctE">▶ ここで聴く</button><a href="https://www.youtube.com/watch?v=cBic9HjYctE" target="_blank" rel="noopener">YouTube ↗</a><span>2026/10/07</span></div></div></li></ul>
 </section>
 
 
@@ -57,5 +58,7 @@
   <a href="/about.html#contact">お問い合わせ・掲載の取り下げ</a>
 </footer>
 </div>
+<aside id="player" hidden aria-label="再生中の曲"></aside>
+<script src="/assets/page.js" defer></script>
 </body>
 </html>

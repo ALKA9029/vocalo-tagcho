@@ -26,14 +26,15 @@
 </div>
 
 <header class="hero">
-  <img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/40461747/40461747.1140421" alt="「COCKTAIL ‐」のサムネイル" referrerpolicy="no-referrer">
+  <button type="button" class="thumbbtn" data-embed="https://embed.nicovideo.jp/watch/sm40461747?autoplay=1" data-title="COCKTAIL ‐" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm40461747" aria-label="「COCKTAIL ‐」をこのページで再生"><img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/40461747/40461747.1140421" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>
   <div>
     <h1>COCKTAIL ‐</h1>
     <p class="credit">作者：BeatSea　歌声：知声</p>
     <p class="meta"><span class="badge genre">ボカロ</span><span class="badge">本家</span><span>ニコニコ動画</span><span>2022/05/13 投稿</span></p>
     <p class="actions">
-      <a class="btn primary" href="/?id=nico%3Asm40461747">▶ TagTuneで聴く</a>
+      <button type="button" class="btn primary" data-embed="https://embed.nicovideo.jp/watch/sm40461747?autoplay=1" data-title="COCKTAIL ‐" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm40461747">▶ ここで聴く</button>
       <a class="btn" href="https://www.nicovideo.jp/watch/sm40461747" target="_blank" rel="noopener">ニコニコ動画で見る ↗</a>
+      <a class="btn" href="/?id=nico%3Asm40461747">TagTuneでタグをつける</a>
     </p>
   </div>
 </header>
@@ -46,7 +47,7 @@
 
 <section>
   <h2>「COCKTAIL ‐」の歌ってみた（2件）</h2>
-  <ul class="list"><li><img src="https://nicovideo.cdn.nimg.jp/thumbnails/46804649/46804649.10985998" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.nicovideo.jp/watch/sm46804649" target="_blank" rel="noopener">XYZ様</a></div><div class="sub"><span>ニコニコ動画</span><span>2026/09/25</span><a href="/?id=nico%3Asm46804649">▶ TagTuneで聴く</a></div></div></li><li><img src="https://nicovideo.cdn.nimg.jp/thumbnails/32568279/32568279" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.nicovideo.jp/watch/sm32568279" target="_blank" rel="noopener">XYZ</a></div><div class="sub"><span>ニコニコ動画</span><span>2018/01/11</span><a href="/?id=nico%3Asm32568279">▶ TagTuneで聴く</a></div></div></li></ul>
+  <ul class="list"><li id="c-nico-sm46804649"><img src="https://nicovideo.cdn.nimg.jp/thumbnails/46804649/46804649.10985998" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">XYZ様</div><div class="sub"><button type="button" class="mini" data-embed="https://embed.nicovideo.jp/watch/sm46804649?autoplay=1" data-title="COCKTAIL ‐（XYZ様）" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm46804649">▶ ここで聴く</button><a href="https://www.nicovideo.jp/watch/sm46804649" target="_blank" rel="noopener">ニコニコ動画 ↗</a><span>2026/09/25</span></div></div></li><li id="c-nico-sm32568279"><img src="https://nicovideo.cdn.nimg.jp/thumbnails/32568279/32568279" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">XYZ</div><div class="sub"><button type="button" class="mini" data-embed="https://embed.nicovideo.jp/watch/sm32568279?autoplay=1" data-title="COCKTAIL ‐（XYZ）" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm32568279">▶ ここで聴く</button><a href="https://www.nicovideo.jp/watch/sm32568279" target="_blank" rel="noopener">ニコニコ動画 ↗</a><span>2018/01/11</span></div></div></li></ul>
 </section>
 
 
@@ -57,5 +58,7 @@
   <a href="/about.html#contact">お問い合わせ・掲載の取り下げ</a>
 </footer>
 </div>
+<aside id="player" hidden aria-label="再生中の曲"></aside>
+<script src="/assets/page.js" defer></script>
 </body>
 </html>

@@ -26,14 +26,15 @@
 </div>
 
 <header class="hero">
-  <img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/17376314/17376314" alt="「FACES PLACES」のサムネイル" referrerpolicy="no-referrer">
+  <button type="button" class="thumbbtn" data-embed="https://embed.nicovideo.jp/watch/sm17376314?autoplay=1" data-title="FACES PLACES" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm17376314" aria-label="「FACES PLACES」をこのページで再生"><img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/17376314/17376314" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>
   <div>
     <h1>FACES PLACES</h1>
     <p class="credit">作者：<a href="/p/nico-76265/">Heavenz</a>　歌声：初音ミク</p>
     <p class="meta"><span class="badge genre">ボカロ</span><span class="badge">本家</span><span>ニコニコ動画</span><span>2012/03/27 投稿</span></p>
     <p class="actions">
-      <a class="btn primary" href="/?id=nico%3Asm17376314">▶ TagTuneで聴く</a>
+      <button type="button" class="btn primary" data-embed="https://embed.nicovideo.jp/watch/sm17376314?autoplay=1" data-title="FACES PLACES" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm17376314">▶ ここで聴く</button>
       <a class="btn" href="https://www.nicovideo.jp/watch/sm17376314" target="_blank" rel="noopener">ニコニコ動画で見る ↗</a>
+      <a class="btn" href="/?id=nico%3Asm17376314">TagTuneでタグをつける</a>
     </p>
   </div>
 </header>
@@ -46,7 +47,7 @@
 
 <section>
   <h2>「FACES PLACES」の歌ってみた（1件）</h2>
-  <ul class="list"><li><img src="https://nicovideo.cdn.nimg.jp/thumbnails/46906725/46906725.64016240" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.nicovideo.jp/watch/sm46906725" target="_blank" rel="noopener">globe</a></div><div class="sub"><span>ニコニコ動画</span><span>2026/10/10</span><a href="/?id=nico%3Asm46906725">▶ TagTuneで聴く</a></div></div></li></ul>
+  <ul class="list"><li id="c-nico-sm46906725"><img src="https://nicovideo.cdn.nimg.jp/thumbnails/46906725/46906725.64016240" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">globe</div><div class="sub"><button type="button" class="mini" data-embed="https://embed.nicovideo.jp/watch/sm46906725?autoplay=1" data-title="FACES PLACES（globe）" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm46906725">▶ ここで聴く</button><a href="https://www.nicovideo.jp/watch/sm46906725" target="_blank" rel="noopener">ニコニコ動画 ↗</a><span>2026/10/10</span></div></div></li></ul>
 </section>
 
 <section>
@@ -62,5 +63,7 @@
   <a href="/about.html#contact">お問い合わせ・掲載の取り下げ</a>
 </footer>
 </div>
+<aside id="player" hidden aria-label="再生中の曲"></aside>
+<script src="/assets/page.js" defer></script>
 </body>
 </html>

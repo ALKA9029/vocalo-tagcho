@@ -26,14 +26,15 @@
 </div>
 
 <header class="hero">
-  <img class="thumb" src="https://i.ytimg.com/vi/TkroHwQYpFE/mqdefault.jpg" alt="「ヒビカセ」のサムネイル" referrerpolicy="no-referrer">
+  <button type="button" class="thumbbtn" data-embed="https://www.youtube.com/embed/TkroHwQYpFE?autoplay=1&amp;playsinline=1&amp;rel=0" data-title="ヒビカセ" data-src="YouTube" data-url="https://www.youtube.com/watch?v=TkroHwQYpFE" aria-label="「ヒビカセ」をこのページで再生"><img class="thumb" src="https://i.ytimg.com/vi/TkroHwQYpFE/mqdefault.jpg" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>
   <div>
     <h1>ヒビカセ</h1>
     <p class="credit">作者：<a href="/p/yt-UCB6pJFaFByws3dQj4AdLdyA/">Reol</a>　歌声：初音ミク</p>
     <p class="meta"><span class="badge genre">ボカロ</span><span class="badge">本家</span><span>YouTube</span><span>2014/09/23 投稿</span></p>
     <p class="actions">
-      <a class="btn primary" href="/?id=yt%3ATkroHwQYpFE">▶ TagTuneで聴く</a>
+      <button type="button" class="btn primary" data-embed="https://www.youtube.com/embed/TkroHwQYpFE?autoplay=1&amp;playsinline=1&amp;rel=0" data-title="ヒビカセ" data-src="YouTube" data-url="https://www.youtube.com/watch?v=TkroHwQYpFE">▶ ここで聴く</button>
       <a class="btn" href="https://www.youtube.com/watch?v=TkroHwQYpFE" target="_blank" rel="noopener">YouTubeで見る ↗</a>
+      <a class="btn" href="/?id=yt%3ATkroHwQYpFE">TagTuneでタグをつける</a>
     </p>
   </div>
 </header>
@@ -46,7 +47,7 @@
 
 <section>
   <h2>「ヒビカセ」の歌ってみた（2件）</h2>
-  <ul class="list"><li><img src="https://nicovideo.cdn.nimg.jp/thumbnails/24638286/24638286" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.nicovideo.jp/watch/sm24638286" target="_blank" rel="noopener">しゅーず</a></div><div class="sub"><span>ニコニコ動画</span><span>2014/10/07</span><a href="/?id=nico%3Asm24638286">▶ TagTuneで聴く</a></div></div></li><li><img src="https://nicovideo.cdn.nimg.jp/thumbnails/24536932/24536932" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.nicovideo.jp/watch/sm24536932" target="_blank" rel="noopener">れをる</a></div><div class="sub"><span>ニコニコ動画</span><span>2014/09/24</span><a href="/?id=nico%3Asm24536932">▶ TagTuneで聴く</a></div></div></li></ul>
+  <ul class="list"><li id="c-nico-sm24638286"><img src="https://nicovideo.cdn.nimg.jp/thumbnails/24638286/24638286" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">しゅーず</div><div class="sub"><button type="button" class="mini" data-embed="https://embed.nicovideo.jp/watch/sm24638286?autoplay=1" data-title="ヒビカセ（しゅーず）" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm24638286">▶ ここで聴く</button><a href="https://www.nicovideo.jp/watch/sm24638286" target="_blank" rel="noopener">ニコニコ動画 ↗</a><span>2014/10/07</span></div></div></li><li id="c-nico-sm24536932"><img src="https://nicovideo.cdn.nimg.jp/thumbnails/24536932/24536932" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">れをる</div><div class="sub"><button type="button" class="mini" data-embed="https://embed.nicovideo.jp/watch/sm24536932?autoplay=1" data-title="ヒビカセ（れをる）" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm24536932">▶ ここで聴く</button><a href="https://www.nicovideo.jp/watch/sm24536932" target="_blank" rel="noopener">ニコニコ動画 ↗</a><span>2014/09/24</span></div></div></li></ul>
 </section>
 
 <section>
@@ -62,5 +63,7 @@
   <a href="/about.html#contact">お問い合わせ・掲載の取り下げ</a>
 </footer>
 </div>
+<aside id="player" hidden aria-label="再生中の曲"></aside>
+<script src="/assets/page.js" defer></script>
 </body>
 </html>

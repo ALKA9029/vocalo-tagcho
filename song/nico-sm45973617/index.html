@@ -26,14 +26,15 @@
 </div>
 
 <header class="hero">
-  <img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/45973617/45973617.17882703" alt="「ハーモニー」のサムネイル" referrerpolicy="no-referrer">
+  <button type="button" class="thumbbtn" data-embed="https://embed.nicovideo.jp/watch/sm45973617?autoplay=1" data-title="ハーモニー" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm45973617" aria-label="「ハーモニー」をこのページで再生"><img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/45973617/45973617.17882703" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>
   <div>
     <h1>ハーモニー</h1>
     <p class="credit">歌声：初音ミク</p>
     <p class="meta"><span class="badge genre">ボカロ</span><span class="badge">本家</span><span>ニコニコ動画</span><span>2026/02/21 投稿</span></p>
     <p class="actions">
-      <a class="btn primary" href="/?id=nico%3Asm45973617">▶ TagTuneで聴く</a>
+      <button type="button" class="btn primary" data-embed="https://embed.nicovideo.jp/watch/sm45973617?autoplay=1" data-title="ハーモニー" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm45973617">▶ ここで聴く</button>
       <a class="btn" href="https://www.nicovideo.jp/watch/sm45973617" target="_blank" rel="noopener">ニコニコ動画で見る ↗</a>
+      <a class="btn" href="/?id=nico%3Asm45973617">TagTuneでタグをつける</a>
     </p>
   </div>
 </header>
@@ -46,7 +47,7 @@
 
 <section>
   <h2>「ハーモニー」の歌ってみた（1件）</h2>
-  <ul class="list"><li><img src="https://i.ytimg.com/vi/DSp-espJKqs/mqdefault.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.youtube.com/watch?v=DSp-espJKqs" target="_blank" rel="noopener">美古途</a></div><div class="sub"><span>YouTube</span><span>2026/10/04</span><a href="/?id=yt%3ADSp-espJKqs">▶ TagTuneで聴く</a></div></div></li></ul>
+  <ul class="list"><li id="c-yt-DSp-espJKqs"><img src="https://i.ytimg.com/vi/DSp-espJKqs/mqdefault.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">美古途</div><div class="sub"><button type="button" class="mini" data-embed="https://www.youtube.com/embed/DSp-espJKqs?autoplay=1&amp;playsinline=1&amp;rel=0" data-title="ハーモニー（美古途）" data-src="YouTube" data-url="https://www.youtube.com/watch?v=DSp-espJKqs">▶ ここで聴く</button><a href="https://www.youtube.com/watch?v=DSp-espJKqs" target="_blank" rel="noopener">YouTube ↗</a><span>2026/10/04</span></div></div></li></ul>
 </section>
 
 
@@ -57,5 +58,7 @@
   <a href="/about.html#contact">お問い合わせ・掲載の取り下げ</a>
 </footer>
 </div>
+<aside id="player" hidden aria-label="再生中の曲"></aside>
+<script src="/assets/page.js" defer></script>
 </body>
 </html>

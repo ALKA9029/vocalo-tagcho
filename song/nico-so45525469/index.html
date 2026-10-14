@@ -26,14 +26,15 @@
 </div>
 
 <header class="hero">
-  <img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/45525469/45525469.71692658" alt="「nectar」のサムネイル" referrerpolicy="no-referrer">
+  <button type="button" class="thumbbtn" data-embed="https://embed.nicovideo.jp/watch/so45525469?autoplay=1" data-title="nectar" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/so45525469" aria-label="「nectar」をこのページで再生"><img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/45525469/45525469.71692658" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>
   <div>
     <h1>nectar</h1>
     <p class="credit">歌声：知声</p>
     <p class="meta"><span class="badge genre">ボカロ</span><span class="badge">本家</span><span>ニコニコ動画</span><span>2025/11/21 投稿</span></p>
     <p class="actions">
-      <a class="btn primary" href="/?id=nico%3Aso45525469">▶ TagTuneで聴く</a>
+      <button type="button" class="btn primary" data-embed="https://embed.nicovideo.jp/watch/so45525469?autoplay=1" data-title="nectar" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/so45525469">▶ ここで聴く</button>
       <a class="btn" href="https://www.nicovideo.jp/watch/so45525469" target="_blank" rel="noopener">ニコニコ動画で見る ↗</a>
+      <a class="btn" href="/?id=nico%3Aso45525469">TagTuneでタグをつける</a>
     </p>
   </div>
 </header>
@@ -46,7 +47,7 @@
 
 <section>
   <h2>「nectar」の歌ってみた（1件）</h2>
-  <ul class="list"><li><img src="https://nicovideo.cdn.nimg.jp/thumbnails/33042955/33042955" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.nicovideo.jp/watch/sm33042955" target="_blank" rel="noopener">まふまふ</a></div><div class="sub"><span>ニコニコ動画</span><span>2018/04/13</span><a href="/?id=nico%3Asm33042955">▶ TagTuneで聴く</a></div></div></li></ul>
+  <ul class="list"><li id="c-nico-sm33042955"><img src="https://nicovideo.cdn.nimg.jp/thumbnails/33042955/33042955" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">まふまふ</div><div class="sub"><button type="button" class="mini" data-embed="https://embed.nicovideo.jp/watch/sm33042955?autoplay=1" data-title="nectar（まふまふ）" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm33042955">▶ ここで聴く</button><a href="https://www.nicovideo.jp/watch/sm33042955" target="_blank" rel="noopener">ニコニコ動画 ↗</a><span>2018/04/13</span></div></div></li></ul>
 </section>
 
 
@@ -57,5 +58,7 @@
   <a href="/about.html#contact">お問い合わせ・掲載の取り下げ</a>
 </footer>
 </div>
+<aside id="player" hidden aria-label="再生中の曲"></aside>
+<script src="/assets/page.js" defer></script>
 </body>
 </html>

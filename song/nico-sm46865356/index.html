@@ -26,14 +26,15 @@
 </div>
 
 <header class="hero">
-  <img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/46865356/46865356.91934273" alt="「えねみぃ」のサムネイル" referrerpolicy="no-referrer">
+  <button type="button" class="thumbbtn" data-embed="https://embed.nicovideo.jp/watch/sm46865356?autoplay=1" data-title="えねみぃ" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm46865356" aria-label="「えねみぃ」をこのページで再生"><img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/46865356/46865356.91934273" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>
   <div>
     <h1>えねみぃ</h1>
     <p class="credit">作者：<a href="/p/nico-865591/">ピノキオピー</a>　歌声：初音ミク</p>
     <p class="meta"><span class="badge genre">ボカロ</span><span class="badge">本家</span><span>ニコニコ動画</span><span>2026/10/02 投稿</span></p>
     <p class="actions">
-      <a class="btn primary" href="/?id=nico%3Asm46865356">▶ TagTuneで聴く</a>
+      <button type="button" class="btn primary" data-embed="https://embed.nicovideo.jp/watch/sm46865356?autoplay=1" data-title="えねみぃ" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm46865356">▶ ここで聴く</button>
       <a class="btn" href="https://www.nicovideo.jp/watch/sm46865356" target="_blank" rel="noopener">ニコニコ動画で見る ↗</a>
+      <a class="btn" href="/?id=nico%3Asm46865356">TagTuneでタグをつける</a>
     </p>
   </div>
 </header>
@@ -46,7 +47,7 @@
 
 <section>
   <h2>「えねみぃ」の歌ってみた（1件）</h2>
-  <ul class="list"><li><img src="https://i.ytimg.com/vi/6BMFV0f6M4E/mqdefault.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.youtube.com/watch?v=6BMFV0f6M4E" target="_blank" rel="noopener">4YN しゆん</a></div><div class="sub"><span>YouTube</span><span>2026/10/09</span><a href="/?id=yt%3A6BMFV0f6M4E">▶ TagTuneで聴く</a></div></div></li></ul>
+  <ul class="list"><li id="c-yt-6BMFV0f6M4E"><img src="https://i.ytimg.com/vi/6BMFV0f6M4E/mqdefault.jpg" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">4YN しゆん</div><div class="sub"><button type="button" class="mini" data-embed="https://www.youtube.com/embed/6BMFV0f6M4E?autoplay=1&amp;playsinline=1&amp;rel=0" data-title="えねみぃ（4YN しゆん）" data-src="YouTube" data-url="https://www.youtube.com/watch?v=6BMFV0f6M4E">▶ ここで聴く</button><a href="https://www.youtube.com/watch?v=6BMFV0f6M4E" target="_blank" rel="noopener">YouTube ↗</a><span>2026/10/09</span></div></div></li></ul>
 </section>
 
 <section>
@@ -62,5 +63,7 @@
   <a href="/about.html#contact">お問い合わせ・掲載の取り下げ</a>
 </footer>
 </div>
+<aside id="player" hidden aria-label="再生中の曲"></aside>
+<script src="/assets/page.js" defer></script>
 </body>
 </html>

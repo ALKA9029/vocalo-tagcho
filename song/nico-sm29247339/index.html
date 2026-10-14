@@ -26,14 +26,15 @@
 </div>
 
 <header class="hero">
-  <img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/29247339/29247339" alt="「レム」のサムネイル" referrerpolicy="no-referrer">
+  <button type="button" class="thumbbtn" data-embed="https://embed.nicovideo.jp/watch/sm29247339?autoplay=1" data-title="レム" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm29247339" aria-label="「レム」をこのページで再生"><img class="thumb" src="https://nicovideo.cdn.nimg.jp/thumbnails/29247339/29247339" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>
   <div>
     <h1>レム</h1>
     <p class="credit">作者不明</p>
     <p class="meta"><span class="badge genre">ボカロ</span><span class="badge">本家</span><span>ニコニコ動画</span><span>2016/07/15 投稿</span></p>
     <p class="actions">
-      <a class="btn primary" href="/?id=nico%3Asm29247339">▶ TagTuneで聴く</a>
+      <button type="button" class="btn primary" data-embed="https://embed.nicovideo.jp/watch/sm29247339?autoplay=1" data-title="レム" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm29247339">▶ ここで聴く</button>
       <a class="btn" href="https://www.nicovideo.jp/watch/sm29247339" target="_blank" rel="noopener">ニコニコ動画で見る ↗</a>
+      <a class="btn" href="/?id=nico%3Asm29247339">TagTuneでタグをつける</a>
     </p>
   </div>
 </header>
@@ -46,7 +47,7 @@
 
 <section>
   <h2>「レム」の歌ってみた（1件）</h2>
-  <ul class="list"><li><img src="https://nicovideo.cdn.nimg.jp/thumbnails/46862960/46862960.39541270" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name"><a href="https://www.nicovideo.jp/watch/sm46862960" target="_blank" rel="noopener">バルーン</a></div><div class="sub"><span class="badge self">セルフカバー</span><span>ニコニコ動画</span><span>2026/09/30</span><a href="/?id=nico%3Asm46862960">▶ TagTuneで聴く</a></div></div></li></ul>
+  <ul class="list"><li id="c-nico-sm46862960"><img src="https://nicovideo.cdn.nimg.jp/thumbnails/46862960/46862960.39541270" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"><div><div class="name">バルーン</div><div class="sub"><span class="badge self">セルフカバー</span><button type="button" class="mini" data-embed="https://embed.nicovideo.jp/watch/sm46862960?autoplay=1" data-title="レム（バルーン）" data-src="ニコニコ動画" data-url="https://www.nicovideo.jp/watch/sm46862960">▶ ここで聴く</button><a href="https://www.nicovideo.jp/watch/sm46862960" target="_blank" rel="noopener">ニコニコ動画 ↗</a><span>2026/09/30</span></div></div></li></ul>
 </section>
 
 
@@ -57,5 +58,7 @@
   <a href="/about.html#contact">お問い合わせ・掲載の取り下げ</a>
 </footer>
 </div>
+<aside id="player" hidden aria-label="再生中の曲"></aside>
+<script src="/assets/page.js" defer></script>
 </body>
 </html>
