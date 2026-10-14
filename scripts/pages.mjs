@@ -39,7 +39,14 @@ async function loadVotes() {
   } catch (e) { console.warn("タグの票を読めなかったので、票なしでページを作ります:", e.message); return {}; }
   return all;
 }
-const votes = await loadVotes();
+// YouTube とニコニコの両方にある曲は1曲にまとめてある（alt がもう片方の投稿）。前に別々に入った票も足し合わせる
+const ALIAS = {};
+for (const i of items) for (const v of i.alt || []) ALIAS[v.id] = i.id;
+const votes = {};
+for (const [id, tags] of Object.entries(await loadVotes())) {
+  const k = ALIAS[id] || id;
+  for (const [t, n] of Object.entries(tags)) { votes[k] ??= {}; votes[k][t] = (votes[k][t] || 0) + n; }
+}
 
 // ---------- 道具 ----------
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" })[c]);
@@ -51,6 +58,9 @@ const creatorSlug = a => /^(youtube|nico|niconico):/.test(a)
   : "n-" + createHash("sha1").update(a).digest("hex").slice(0, 12);
 const fmtDate = d => d ? d.slice(0, 10).replace(/-/g, "/") : "";
 const srcName = i => i.src === "youtube" ? "YouTube" : "ニコニコ動画";
+const sourcesOf = i => [i, ...(i.alt || [])].sort((a, b) => (a.src === "youtube" ? 0 : 1) - (b.src === "youtube" ? 0 : 1));
+const srcNames = i => sourcesOf(i).map(srcName).join("・");
+const thumbOf = i => (sourcesOf(i).find(v => v.thumb) || i).thumb;
 const playUrl = id => `/?id=${encodeURIComponent(id)}`;
 // ページ内で再生する公式埋め込みプレイヤーのURL（埋め込み禁止の動画は null）
 function embedUrl(i) {
@@ -141,26 +151,28 @@ function songPage(i) {
   const title = covers.length
     ? `${i.t}${i.p ? ` / ${i.p}` : ""}｜歌ってみた${covers.length}件と印象タグ - TagTune`
     : `${i.t}${who ? ` / ${who}` : ""}｜印象タグ - TagTune`;
-  const description = `「${i.t}」${i.p ? `（${who}）` : ""}の${srcName(i)}の動画${covers.length ? `と、歌ってみた${covers.length}件` : ""}をまとめたページ。聴いた人がつけた「エモい」「爽やか」などの印象タグで、似た曲も探せます。`;
+  const description = `「${i.t}」${i.p ? `（${who}）` : ""}の${srcNames(i)}の動画${covers.length ? `と、歌ってみた${covers.length}件` : ""}をまとめたページ。聴いた人がつけた「エモい」「爽やか」などの印象タグで、似た曲も探せます。`;
   const creditLine = [
     i.p && `作者：${creatorLink(i)}`,
     i.v && `歌声：${esc(i.v)}`,
   ].filter(Boolean).join("　") || "作者不明";
   const others = c ? c.songs.filter(x => x.id !== i.id).slice(0, 12) : [];
+  const firstPlay = sourcesOf(i).find(v => embedUrl(v));
   const body = `
 <header class="hero">
-  ${i.thumb ? (embedUrl(i)
-    ? `<button type="button" class="thumbbtn" ${playAttrs(i, i.t)} aria-label="「${esc(i.t)}」をこのページで再生"><img class="thumb" src="${esc(i.thumb)}" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>`
-    : `<img class="thumb" src="${esc(i.thumb)}" alt="「${esc(i.t)}」のサムネイル" referrerpolicy="no-referrer">`) : ""}
+  ${thumbOf(i) ? (firstPlay
+    ? `<button type="button" class="thumbbtn" ${playAttrs(firstPlay, i.t)} aria-label="「${esc(i.t)}」をこのページで再生"><img class="thumb" src="${esc(thumbOf(i))}" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>`
+    : `<img class="thumb" src="${esc(thumbOf(i))}" alt="「${esc(i.t)}」のサムネイル" referrerpolicy="no-referrer">`) : ""}
   <div>
     <h1>${esc(i.t)}</h1>
     <p class="credit">${creditLine}</p>
-    <p class="meta"><span class="badge genre">${esc(i.g)}</span><span class="badge">本家</span><span>${srcName(i)}</span><span>${fmtDate(i.date)} 投稿</span></p>
+    <p class="meta"><span class="badge genre">${esc(i.g)}</span><span class="badge">本家</span><span>${srcNames(i)}</span><span>${fmtDate(i.date)} 投稿</span></p>
     <p class="actions">
-      ${embedUrl(i) ? `<button type="button" class="btn primary" ${playAttrs(i, i.t)}>▶ ここで聴く</button>` : ""}
-      <a class="btn${embedUrl(i) ? "" : " primary"}" href="${esc(i.url)}" target="_blank" rel="noopener">${srcName(i)}で見る ↗</a>
+      ${sourcesOf(i).filter(v => embedUrl(v)).map((v, n) => `<button type="button" class="btn${n ? "" : " primary"}" ${playAttrs(v, i.t)}>▶ ${i.alt ? `${srcName(v)}で` : "ここで"}聴く</button>`).join("\n      ")}
+      ${i.alt ? "" : `<a class="btn${firstPlay ? "" : " primary"}" href="${esc(i.url)}" target="_blank" rel="noopener">${srcName(i)}で見る ↗</a>`}
       <a class="btn" href="${playUrl(i.id)}">TagTuneでタグをつける</a>
     </p>
+    ${i.alt ? `<p class="meta">動画サイトで開く：${sourcesOf(i).map(v => `<a href="${esc(v.url)}" target="_blank" rel="noopener">${srcName(v)} ↗</a>`).join("　")}</p>` : ""}
   </div>
 </header>
 <p class="note">動画タイトル：${esc(i.title)}</p>
@@ -187,8 +199,8 @@ ${others.length ? `
 `;
   const jsonld = { "@context": "https://schema.org", "@type": "MusicRecording", name: i.t, url: SITE + songUrl(i.id),
     ...(i.p ? { byArtist: { "@type": "MusicGroup", name: i.p } } : {}), ...(i.date ? { datePublished: i.date.slice(0, 10) } : {}),
-    ...(i.thumb ? { image: i.thumb } : {}), genre: i.g };
-  return page({ title, description, url: songUrl(i.id), image: i.thumb, body, jsonld,
+    ...(thumbOf(i) ? { image: thumbOf(i) } : {}), genre: i.g };
+  return page({ title, description, url: songUrl(i.id), image: thumbOf(i), body, jsonld,
     crumbs: [...(c ? [[c.name, c.url]] : []), [i.t]] });
 }
 
@@ -269,6 +281,11 @@ for (const dir of ["song", "p", "tag"]) await rm(path(dir), { recursive: true, f
 const urls = ["/", "/tag/", "/about.html"];
 const songs = items.filter(i => i.kind === "本家");
 for (const i of songs) { await put(`song/${songSlug(i.id)}/index.html`, songPage(i)); urls.push(songUrl(i.id)); }
+// まとめた曲のもう片方のページ（前に作ったURL）は、代表の曲のページへ移動させる
+for (const i of songs) for (const v of i.alt || []) {
+  const to = songUrl(i.id);
+  await put(`song/${songSlug(v.id)}/index.html`, `<!doctype html><html lang="ja"><head><meta charset="utf-8"><title>${esc(i.t)} - TagTune</title><link rel="canonical" href="${SITE}${to}"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url=${to}"></head><body><p><a href="${to}">「${esc(i.t)}」のページへ</a></p></body></html>\n`);
+}
 for (const [a, c] of creators) { await put(`p/${creatorSlug(a)}/index.html`, creatorPage(a, c)); urls.push(c.url); }
 for (const t of TAGS) { await put(`tag/${TAG_SLUG[t]}/index.html`, tagPage(t)); urls.push(tagUrl(t)); }
 await put("tag/index.html", tagIndex());

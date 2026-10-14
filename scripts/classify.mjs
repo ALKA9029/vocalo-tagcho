@@ -531,6 +531,35 @@ export function markSelfCovers(items) {
   }
 }
 
+// YouTube とニコニコの両方に投稿された同じ曲（作者と曲名が同じ本家）を1曲にまとめる。
+// 一番古い投稿を代表にして、もう片方には dup（代表のID）を付ける。サイトには代表だけを出し、もう片方は alt として持たせる。
+// Remix・ver.・アレンジなどの別バージョンはまとめない。同じサイトどうし（再投稿など）もまとめない
+const VERSION_RE = /remix|リミックス|\bver\b|ver\.|version|バージョン|アレンジ|arrange|short|ショート|full|フル|instrumental|inst\b|off ?vocal|self ?cover|セルフカバー|リメイク|remake|再投稿|piano|ピアノ|acoustic|アコースティック|live|ライブ|mv2|edit\b/i;
+export function mergeSources(items) {
+  for (const i of items) { delete i.dup; delete i.alt; }
+  const groups = new Map();
+  for (const i of items) {
+    if (i.kind !== "本家" || !i.p || !i.t || VERSION_RE.test(i.title || "")) continue;
+    const k = normalize(i.t) + "|" + normalize(i.p);
+    if (!normalize(i.t) || !normalize(i.p)) continue;
+    (groups.get(k) || groups.set(k, []).get(k)).push(i);
+  }
+  const dupOf = new Map();
+  for (const list of groups.values()) {
+    if (new Set(list.map(i => i.src)).size < 2) continue;
+    // サイトごとに一番再生されている投稿を1つずつ選ぶ（同じサイトの残りは今まで通り別の曲）
+    const best = new Map();
+    for (const i of list) { const b = best.get(i.src); if (!b || (i.views || 0) > (b.views || 0)) best.set(i.src, i); }
+    const picked = [...best.values()].sort((a, b) => (a.date || "").localeCompare(b.date || "") || (a.src === "niconico" ? -1 : 1));
+    const [main, ...rest] = picked;
+    main.alt = rest.map(r => r.id);
+    for (const r of rest) { r.dup = main.id; dupOf.set(r.id, main.id); }
+  }
+  // まとめた側に紐づいていた歌ってみたは、代表の曲に付け替える
+  for (const c of items) if (c.of && dupOf.has(c.of)) c.of = dupOf.get(c.of);
+  return items;
+}
+
 export function linkCovers(items) {
   inferNamesFromTags(items);
   guessChannelGenre(items);
@@ -555,6 +584,7 @@ export function linkCovers(items) {
     }
     if (o) { c.of = o.id; c.p = o.p || c.p; c.a = o.p ? o.a : (c.a || o.a); if (o.g !== "その他") c.g = o.g; else if (c.g === "その他") c.g = o.g; }
   }
+  mergeSources(items);
   markSelfCovers(items);
   guessCoverGenre(items);
   return items;
@@ -563,4 +593,17 @@ export function linkCovers(items) {
 // サイト表示用：必要な項目だけにした軽いデータ
 const unent = s => typeof s === "string" ? s.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'") : s;
 const KEEP = ["id", "src", "url", "title", "t", "kind", "g", "p", "v", "by", "of", "a", "date", "views", "thumb", "ne", "self"];
-export const toSite = items => items.map(i => Object.fromEntries(KEEP.filter(k => i[k] != null && i[k] !== "").map(k => [k, unent(i[k])])));
+const ALT_KEEP = ["id", "src", "url", "views", "thumb", "ne", "date"];
+// サイト用：まとめた曲（dup）は出さず、代表の曲に alt（もう片方のサイトの投稿）として持たせる。再生数は合計にする
+export const toSite = items => {
+  const byId = new Map(items.map(i => [i.id, i]));
+  return items.filter(i => !i.dup).map(i => {
+    const o = Object.fromEntries(KEEP.filter(k => i[k] != null && i[k] !== "").map(k => [k, unent(i[k])]));
+    const alts = (i.alt || []).map(id => byId.get(id)).filter(Boolean);
+    if (alts.length) {
+      o.alt = alts.map(a => Object.fromEntries(ALT_KEEP.filter(k => a[k] != null && a[k] !== "").map(k => [k, a[k]])));
+      o.views = (i.views || 0) + alts.reduce((n, a) => n + (a.views || 0), 0);
+    }
+    return o;
+  });
+};

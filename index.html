@@ -120,7 +120,8 @@ button.badge:hover{border-color:var(--accent);outline:1px solid var(--accent)}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:middle;margin-right:4px}
 @media (prefers-reduced-motion:no-preference){.tag,.chip{transition:background .15s,border-color .15s}}
 @media (prefers-reduced-motion:reduce){.song.flash{animation:none}}
-.badge.src{background:none;color:var(--muted)}
+.badge.src{background:none;color:var(--muted);text-decoration:none}
+a.badge.src:hover{color:var(--accent);border-color:var(--accent)}
 .unknown{font-size:13px;color:var(--muted);font-style:italic}
 .count{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
 .loadmore{font:inherit;align-self:center;margin-top:16px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:8px 20px;cursor:pointer}
@@ -258,6 +259,7 @@ const fmtViews = n => n == null ? "" : n >= 1e4 ? (n/1e4).toFixed(n >= 1e5 ? 0 :
 const original = i => i.of ? ITEM[i.of] : null;
 // 曲ページ・作者ページ（scripts/pages.mjs が書き出す）へのURL
 let CREATOR_PAGE = {};
+const ALIAS = {};
 const songPage = i => i && i.kind === "本家" ? "song/" + i.id.replace(/^nico:/, "nico-").replace(/^yt:/, "yt-") + "/" : null;
 const pageSlug = id => id.replace(/^nico:/, "nico-").replace(/^yt:/, "yt-");
 // 曲名を押したときの行き先：本家は曲ページ、歌ってみたは原曲のページのその行。ページがなければ null
@@ -437,14 +439,21 @@ function refresh(...ids){
 // サムネの▶を押した曲だけ、YouTube／ニコニコ公式の埋め込みプレイヤーを画面下に出す（同時に1曲だけ）。
 // プレイヤーは押したときに初めて読み込むので、ページを開いたときの重さは変わらない。
 // 埋め込みが禁止されている動画（ne）は▶を出さず、今まで通りリンクで動画サイトへ飛ぶ
-function embedUrl(i){
-  const vid = i.id.slice(i.id.indexOf(":") + 1);
-  if (i.src === "youtube" && !i.ne) return `https://www.youtube.com/embed/${encodeURIComponent(vid)}?autoplay=1&playsinline=1&rel=0`;
-  if (i.src === "niconico" && /^(sm|so|nm)\d+$/.test(vid)) return `https://embed.nicovideo.jp/watch/${vid}?autoplay=1`;
+// YouTube とニコニコの両方にある曲は、1行にまとめて alt（もう片方の投稿）を持っている
+const sources = i => [i, ...(i.alt || [])];
+const srcLabel = src => src === "youtube" ? "YouTube" : "ニコニコ";
+function embedOf(v){
+  const vid = v.id.slice(v.id.indexOf(":") + 1);
+  if (v.src === "youtube" && !v.ne) return `https://www.youtube.com/embed/${encodeURIComponent(vid)}?autoplay=1&playsinline=1&rel=0`;
+  if (v.src === "niconico" && /^(sm|so|nm)\d+$/.test(vid)) return `https://embed.nicovideo.jp/watch/${vid}?autoplay=1`;
   return null;
 }
+// ページ内で再生する投稿（両方あるときは YouTube を優先）
+const playSource = i => [...sources(i)].sort((a,b)=>(a.src==="youtube"?0:1)-(b.src==="youtube"?0:1)).find(embedOf) || null;
+const embedUrl = i => { const v = playSource(i); return v ? embedOf(v) : null; };
+const thumbOf = i => (sources(i).find(v=>v.src==="youtube" && v.thumb) || i).thumb;
 function thumbEl(i){
-  const img = i.thumb ? el("img",{src:i.thumb, alt:"", loading:"lazy", decoding:"async", referrerpolicy:"no-referrer", onerror:e=>{ e.target.remove(); }}) : null;
+  const img = thumbOf(i) ? el("img",{src:thumbOf(i), alt:"", loading:"lazy", decoding:"async", referrerpolicy:"no-referrer", onerror:e=>{ e.target.remove(); }}) : null;
   if (!embedUrl(i)) return el("a",{class:"thumb", href:i.url, target:"_blank", rel:"noopener", tabindex:"-1", "aria-hidden":"true", onclick:e=>e.stopPropagation()}, img);
   const playing = state.play === i.id;
   return el("button",{class:"thumb"+(playing?" playing":""), "data-k":`${i.id}|play`, "aria-label": playing ? `「${i.t}」を再生中（押すと閉じる）` : `「${i.t}」をこのページで再生`,
@@ -452,15 +461,15 @@ function thumbEl(i){
     img, el("span",{class:"play","aria-hidden":"true"}, playing ? "再生中" : "▶"));
 }
 function play(id){
-  const i = ITEM[id], url = embedUrl(i);
+  const i = ITEM[id], url = embedUrl(i), ps = playSource(i);
   if (!url) return;
   const prev = state.play;
   state.play = id;
   $("#player").replaceChildren(
     el("div",{class:"ph"},
-      el("a",{href:i.url, target:"_blank", rel:"noopener", title:`${i.src==="youtube"?"YouTube":"ニコニコ動画"}で開く`}, i.t, " ↗"),
+      el("a",{href:ps.url, target:"_blank", rel:"noopener", title:`${ps.src==="youtube"?"YouTube":"ニコニコ動画"}で開く`}, i.t, " ↗"),
       el("button",{"aria-label":"プレイヤーを閉じる", onclick:closePlayer}, "×")),
-    el("iframe",{src:url, title:`${i.t}（${i.src==="youtube"?"YouTube":"ニコニコ動画"}のプレイヤー）`,
+    el("iframe",{src:url, title:`${i.t}（${ps.src==="youtube"?"YouTube":"ニコニコ動画"}のプレイヤー）`,
       allow:"autoplay; encrypted-media; picture-in-picture; fullscreen", allowfullscreen:"", referrerpolicy:"strict-origin-when-cross-origin"}));
   $("#player").hidden = false;
   document.body.classList.add("has-player");
@@ -504,8 +513,8 @@ function buildItem(i, n, c){
         el("button",{class:"badge kind"+(i.kind==="歌ってみた"?" cover":""), title:`${i.kind}だけ表示`, onclick:e=>{ e.stopPropagation(); applyFilter(()=>state.kind=i.kind); }}, i.kind),
         i.self ? el("span",{class:"badge self", title:"作曲した本人が歌っている歌ってみた"}, "セルフカバー") : null,
         ...creditEls(i),
-        el("span",{class:"badge src"}, i.src==="youtube" ? "YouTube" : "ニコニコ"),
-        el("span",{}, fmtViews(i.views)),
+        ...sources(i).map(v=>el("a",{class:"badge src", href:v.url, target:"_blank", rel:"noopener", title:`${srcLabel(v.src)}で開く${i.alt ? `（${fmtViews(v.views)}）` : ""}`, onclick:e=>e.stopPropagation()}, srcLabel(v.src))),
+        el("span",{title: i.alt ? sources(i).map(v=>`${srcLabel(v.src)} ${fmtViews(v.views)}`).join("・") : null}, (i.alt ? "合計 " : "") + fmtViews(i.views)),
         el("span",{}, fmtDate(i.date))),
       tags, picker, isRel ? related(i) : null));
 }
@@ -534,7 +543,7 @@ async function loadCounts(){
   for (let from = 0; ; from += 1000) {
     const { data, error } = await sb.rpc("get_tag_counts").range(from, from + 999);
     if (error) throw error;
-    for (const r of data) { all[r.song_id] ??= {}; all[r.song_id][r.tag] = Number(r.n); }
+    for (const r of data) { const id = ALIAS[r.song_id] || r.song_id; all[id] ??= {}; all[id][r.tag] = (all[id][r.tag] || 0) + Number(r.n); }
     if (data.length < 1000) break;
   }
   state.serverCounts = all;
@@ -546,7 +555,7 @@ async function loadMine(){
   for (let from = 0; ; from += 1000) {
     const { data, error } = await sb.from("votes").select("song_id,tag").range(from, from + 999);
     if (error) throw error;
-    for (const r of data) (mine[r.song_id] ??= []).push(r.tag);
+    for (const r of data) { const id = ALIAS[r.song_id] || r.song_id; mine[id] ??= []; if (!mine[id].includes(r.tag)) mine[id].push(r.tag); }
     if (data.length < 1000) break;
   }
   state.serverMine = structuredClone(mine);
@@ -565,7 +574,7 @@ function toggle(sid, t){
     await ensureSession();
     const r = adding
       ? await sb.from("votes").upsert({ song_id: sid, tag: t }, { onConflict: "user_id,song_id,tag", ignoreDuplicates: true })
-      : await sb.from("votes").delete().eq("song_id", sid).eq("tag", t);
+      : await sb.from("votes").delete().in("song_id", [sid, ...(ITEM[sid]?.alt || []).map(v=>v.id)]).eq("tag", t);
     if (r.error) throw r.error;
   }).catch(e=>{
     console.warn(e);
@@ -672,9 +681,12 @@ render();
     CREATOR_PAGE = pages?.creators || {};
     for (const i of songs) i._t = Date.parse(i.date) || 0;
     ITEMS = songs; ITEM = Object.fromEntries(ITEMS.map(i=>[i.id,i]));
+    // まとめた曲のもう片方のID → 代表のID（前に別々に入った票やリンクも同じ曲として扱う）
+    for (const i of ITEMS) for (const v of i.alt || []) { ALIAS[v.id] = i.id; ITEM[v.id] = i; }
     baseNote = `${ITEMS.length.toLocaleString("ja-JP")}曲を収録${meta ? `（${fmtDate(meta.updatedAt)}時点）` : ""}。サムネの▶でこのページで再生、曲名で曲のページ、↗で動画サイトを開く、名前やバッジで絞り込み、行を押すと関連曲。作者名が空の曲は、読み取りを改善中。${sb ? "「＋ タグをつける」から、聴いた印象を投票してね。みんなの票で3票以上集まったタグが定着するよ。" : "タグの投票は今はこの端末にだけ保存されるよ（みんなの集計は準備中）。"}`;
     setStatus(baseNote);
     applyUrlParams();
+    if (pendingId && ALIAS[pendingId]) pendingId = ALIAS[pendingId];
     const view = pendingId ? null : loadView();
     if (view) { state.shown = Math.max(PAGE, view.shown || PAGE); state.rel = view.rel && ITEM[view.rel] ? view.rel : null; }
     render();

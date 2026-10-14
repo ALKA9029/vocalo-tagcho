@@ -1370,7 +1370,8 @@
   "v": "鏡音リン",
   "a": "niconico:135484262",
   "firstSeen": "2026-10-13T22:31:19.909Z",
-  "pFilled": true
+  "pFilled": true,
+  "dup": "yt:VIiOdLG1aZs"
  },
  {
   "id": "yt:_57QX4hzOwo",
@@ -1809,7 +1810,10 @@
   "p": "黒魔",
   "v": "鏡音リン",
   "a": "youtube:UCii85-6X30uI0epcMi4spKQ",
-  "firstSeen": "2026-10-12T21:33:04.468Z"
+  "firstSeen": "2026-10-12T21:33:04.468Z",
+  "alt": [
+   "nico:sm46918574"
+  ]
  },
  {
   "id": "yt:siTFKHWIRXM",
@@ -1935,7 +1939,8 @@
   "v": "初音ミク",
   "a": "niconico:123290045",
   "firstSeen": "2026-10-13T22:31:19.910Z",
-  "pFilled": true
+  "pFilled": true,
+  "dup": "yt:dgmlXcpP56o"
  },
  {
   "id": "yt:tyAeCkL8obQ",
@@ -5812,7 +5817,10 @@
   "p": "reinou",
   "v": "可不",
   "a": "youtube:UCeg7W176gefmYQcIJMfDNcA",
-  "firstSeen": "2026-10-10T21:31:18.913Z"
+  "firstSeen": "2026-10-10T21:31:18.913Z",
+  "alt": [
+   "nico:sm46908279"
+  ]
  },
  {
   "id": "yt:Lj3f9A-KgEw",
@@ -5858,7 +5866,10 @@
   "descHead": "\"青い空に走るノイズを睨む\"\n\n雨沢レイです。誰かの涙が、遠い街のニュースで終わらないように。\n\nアイドル「午前４時」様とのコラボレーション楽曲です。\n\n─────────────────────────────────\nProject：午前４時　https://weibo.com/u/7942257229\nMusic：雨沢レイ      https://x.com/Ray__music\nIllust：来栖くるり    https://x.com/curusucururi\nMovie：ゆな浜          https://x.com/yunahama_w\n─────────────────",
   "p": "雨沢レイ",
   "a": "youtube:UC587llsNRuguUuly0TYDDqQ",
-  "firstSeen": "2026-10-11T21:32:19.190Z"
+  "firstSeen": "2026-10-11T21:32:19.190Z",
+  "alt": [
+   "nico:sm46907113"
+  ]
  },
  {
   "id": "yt:PVo1w5a_3LY",
@@ -6178,7 +6189,8 @@
   "uploader": null,
   "p": "雨沢レイ",
   "a": "niconico:88404170",
-  "firstSeen": "2026-10-11T00:52:52.288Z"
+  "firstSeen": "2026-10-11T00:52:52.288Z",
+  "dup": "yt:Lj3f9A-KgEw"
  },
  {
   "id": "nico:sm46907500",
@@ -6239,7 +6251,8 @@
   "p": "reinou",
   "v": "可不",
   "a": "niconico:121319177",
-  "firstSeen": "2026-10-12T11:09:17.590Z"
+  "firstSeen": "2026-10-12T11:09:17.590Z",
+  "dup": "yt:H3OvNgq0Adk"
  },
  {
   "id": "nico:sm46887452",
@@ -6461,7 +6474,8 @@
   "p": "YOASOBI",
   "v": "宮舞モカ",
   "a": "youtube:UCgVoOtEHrVg4RFdD-35Pb3A",
-  "firstSeen": "2026-10-12T11:09:17.866Z"
+  "firstSeen": "2026-10-12T11:09:17.866Z",
+  "dup": "nico:sm34931260"
  },
  {
   "id": "yt:_1zXFNOiWfg",
@@ -6938,7 +6952,10 @@
   "p": "長谷川迷子",
   "v": "初音ミク",
   "a": "youtube:UCFDqQoV6E2JYApLtF4mZR8g",
-  "firstSeen": "2026-10-12T21:33:04.458Z"
+  "firstSeen": "2026-10-12T21:33:04.458Z",
+  "alt": [
+   "nico:sm46917514"
+  ]
  },
  {
   "id": "yt:wsPJOT-Enr0",
@@ -7579,7 +7596,10 @@
   "p": "なみぐる",
   "v": "初音ミク",
   "a": "youtube:UCRu9LBf2hAp7saEYYQZFFTQ",
-  "firstSeen": "2026-10-10T21:31:18.912Z"
+  "firstSeen": "2026-10-10T21:31:18.912Z",
+  "alt": [
+   "nico:sm46906568"
+  ]
  },
  {
   "id": "yt:wslDQmopVtM",
@@ -7641,7 +7661,8 @@
   "p": "なみぐる",
   "v": "初音ミク",
   "a": "niconico:120201228",
-  "firstSeen": "2026-10-11T00:52:52.268Z"
+  "firstSeen": "2026-10-11T00:52:52.268Z",
+  "dup": "yt:oGyaTCOgdVI"
  },
  {
   "id": "nico:sm46903654",
@@ -9888,7 +9909,8 @@
   "p": "Kuratu",
   "v": "初音ミク",
   "a": "niconico:81175799",
-  "firstSeen": "2026-10-12T11:09:17.593Z"
+  "firstSeen": "2026-10-12T11:09:17.593Z",
+  "dup": "yt:CEb3gMNCG-o"
  },
  {
   "id": "yt:SrO4BlObKzM",
@@ -10422,7 +10444,10 @@
   "p": "r-906",
   "v": "足立レイ",
   "a": "youtube:UCtwSCTpftyPm4-TBf9S6kfQ",
-  "firstSeen": "2026-10-09T15:55:27.678Z"
+  "firstSeen": "2026-10-09T15:55:27.678Z",
+  "alt": [
+   "nico:sm46904843"
+  ]
  },
  {
   "id": "yt:aw9hVulJdVs",
@@ -10470,7 +10495,10 @@
   "p": "Kuratu",
   "v": "初音ミク",
   "a": "youtube:UCvNAVGgVY7-qzQdJP4__2OQ",
-  "firstSeen": "2026-10-11T21:32:19.189Z"
+  "firstSeen": "2026-10-11T21:32:19.189Z",
+  "alt": [
+   "nico:sm46905019"
+  ]
  },
  {
   "id": "nico:sm46904843",
@@ -10502,7 +10530,8 @@
   "p": "r-906",
   "v": "足立レイ",
   "a": "niconico:79470667",
-  "firstSeen": "2026-10-10T07:34:06.756Z"
+  "firstSeen": "2026-10-10T07:34:06.756Z",
+  "dup": "yt:xhDSaqgNtVQ"
  },
  {
   "id": "yt:8aPg0TKGFRM",
@@ -10660,7 +10689,10 @@
   "p": "Neru",
   "v": "鏡音リン",
   "a": "youtube:UClxXuM2m0rIL9VCA1ds9HqA",
-  "firstSeen": "2026-10-09T15:55:27.688Z"
+  "firstSeen": "2026-10-09T15:55:27.688Z",
+  "alt": [
+   "nico:sm46904318"
+  ]
  },
  {
   "id": "yt:u0NuTK8yH4g",
@@ -10881,7 +10913,10 @@
   "p": "だし。",
   "v": "初音ミク",
   "a": "youtube:UCXPS_CJxD4hZkORxDpgD5bg",
-  "firstSeen": "2026-10-11T21:32:19.189Z"
+  "firstSeen": "2026-10-11T21:32:19.189Z",
+  "alt": [
+   "nico:sm46903072"
+  ]
  },
  {
   "id": "yt:BxdoUGu0G5A",
@@ -10974,7 +11009,8 @@
   "p": "Neru",
   "v": "鏡音リン",
   "a": "niconico:112798",
-  "firstSeen": "2026-10-10T07:34:06.754Z"
+  "firstSeen": "2026-10-10T07:34:06.754Z",
+  "dup": "yt:MecJkEnEG9w"
  },
  {
   "id": "nico:sm46843617",
@@ -11004,7 +11040,8 @@
   "p": "きさら",
   "v": "初音ミク",
   "a": "niconico:78626571",
-  "firstSeen": "2026-10-10T07:34:06.758Z"
+  "firstSeen": "2026-10-10T07:34:06.758Z",
+  "dup": "yt:mZxDjbWrTbw"
  },
  {
   "id": "nico:sm46889959",
@@ -11125,7 +11162,8 @@
   "p": "だし。",
   "v": "初音ミク",
   "a": "niconico:45617238",
-  "firstSeen": "2026-10-10T07:34:06.761Z"
+  "firstSeen": "2026-10-10T07:34:06.761Z",
+  "dup": "yt:9jxH_9FBPM4"
  },
  {
   "id": "nico:sm46904181",
@@ -11787,7 +11825,10 @@
   "p": "いよわ",
   "v": "足立レイ",
   "a": "youtube:UCLz6MG2kx_0xeaW0LowYnMQ",
-  "firstSeen": "2026-10-09T15:55:27.685Z"
+  "firstSeen": "2026-10-09T15:55:27.685Z",
+  "alt": [
+   "nico:sm46904359"
+  ]
  },
  {
   "id": "yt:tBcm9XPPF0U",
@@ -11832,7 +11873,10 @@
   "p": "奈良瀬",
   "v": "初音ミク",
   "a": "youtube:UC9abZyl9Wjfn1ZwuFgJ0hGQ",
-  "firstSeen": "2026-10-12T21:33:04.459Z"
+  "firstSeen": "2026-10-12T21:33:04.459Z",
+  "alt": [
+   "nico:sm46900110"
+  ]
  },
  {
   "id": "yt:4C0DvjVgZWg",
@@ -11889,7 +11933,10 @@
   "p": "きさら",
   "v": "初音ミク",
   "a": "youtube:UC49ZFh9hYLpHIN_UbL9wE0g",
-  "firstSeen": "2026-10-10T21:31:18.899Z"
+  "firstSeen": "2026-10-10T21:31:18.899Z",
+  "alt": [
+   "nico:sm46843617"
+  ]
  },
  {
   "id": "yt:GPr_cM7Nyzk",
@@ -12005,7 +12052,8 @@
   "p": "いよわ",
   "v": "足立レイ",
   "a": "niconico:78166728",
-  "firstSeen": "2026-10-10T07:34:06.753Z"
+  "firstSeen": "2026-10-10T07:34:06.753Z",
+  "dup": "yt:hL9W5TSUfwM"
  },
  {
   "id": "nico:sm46867629",
@@ -12099,7 +12147,8 @@
   "v": "初音ミク",
   "a": "niconico:118925004",
   "firstSeen": "2026-10-10T07:34:06.759Z",
-  "pFilled": true
+  "pFilled": true,
+  "dup": "yt:cYEfHXGm9bs"
  },
  {
   "id": "nico:sm46903813",
@@ -14442,7 +14491,10 @@
   "p": "黒鯖",
   "v": "初音ミク",
   "a": "youtube:UC_pTrsnaZ9gwJxMw6dtaHGw",
-  "firstSeen": "2026-10-13T21:45:27.807Z"
+  "firstSeen": "2026-10-13T21:45:27.807Z",
+  "alt": [
+   "nico:sm46896153"
+  ]
  },
  {
   "id": "yt:yeaZagOwWjk",
@@ -14518,7 +14570,8 @@
   "p": "黒鯖",
   "v": "初音ミク",
   "a": "niconico:124668556",
-  "firstSeen": "2026-10-09T11:31:51.968Z"
+  "firstSeen": "2026-10-09T11:31:51.968Z",
+  "dup": "yt:0x1Tfj1rkzY"
  },
  {
   "id": "nico:sm46899983",
@@ -15700,7 +15753,10 @@
   "p": "ゆきち",
   "v": "初音ミク",
   "a": "youtube:UC3yEB4lwkgEN551lbiYK8sA",
-  "firstSeen": "2026-10-09T15:55:27.683Z"
+  "firstSeen": "2026-10-09T15:55:27.683Z",
+  "alt": [
+   "nico:sm46893168"
+  ]
  },
  {
   "id": "yt:Oi6vHmUDJEE",
@@ -15979,7 +16035,8 @@
   "p": "ゆきち",
   "v": "初音ミク",
   "a": "niconico:48704959",
-  "firstSeen": "2026-10-09T11:31:51.966Z"
+  "firstSeen": "2026-10-09T11:31:51.966Z",
+  "dup": "yt:9Bt6lPYFDCA"
  },
  {
   "id": "nico:sm46896364",
@@ -16357,7 +16414,8 @@
   "p": "二七",
   "v": "初音ミク",
   "a": "niconico:145599013",
-  "firstSeen": "2026-10-09T11:31:51.966Z"
+  "firstSeen": "2026-10-09T11:31:51.966Z",
+  "dup": "yt:dGLQffMrWdI"
  },
  {
   "id": "yt:YM9nTzZOrKY",
@@ -16969,7 +17027,10 @@
   "p": "ますだデストロイ",
   "v": "重音テト",
   "a": "youtube:UCV3n0sOVK-koZ1brDjWjn1g",
-  "firstSeen": "2026-10-09T15:55:27.682Z"
+  "firstSeen": "2026-10-09T15:55:27.682Z",
+  "alt": [
+   "nico:sm46891792"
+  ]
  },
  {
   "id": "yt:SBbo2Ve1sRA",
@@ -17053,7 +17114,8 @@
   "v": "重音テト",
   "a": "niconico:145050949",
   "firstSeen": "2026-10-08T14:32:41.477Z",
-  "pFilled": true
+  "pFilled": true,
+  "dup": "yt:B-q8fH0SorI"
  },
  {
   "id": "nico:sm46895298",
@@ -17150,7 +17212,10 @@
   "p": "二七",
   "v": "初音ミク",
   "a": "youtube:UCAMP2VxHgRR5I0953uJK6kQ",
-  "firstSeen": "2026-10-12T11:09:17.864Z"
+  "firstSeen": "2026-10-12T11:09:17.864Z",
+  "alt": [
+   "nico:sm46895961"
+  ]
  },
  {
   "id": "yt:l17w14oPzoM",
@@ -18385,7 +18450,10 @@
   "p": "はるまきごはん",
   "v": "初音ミク",
   "a": "youtube:UCgbTJ0Qb1OpA0GEocaJ7qrw",
-  "firstSeen": "2026-10-09T11:31:52.077Z"
+  "firstSeen": "2026-10-09T11:31:52.077Z",
+  "alt": [
+   "nico:sm46887855"
+  ]
  },
  {
   "id": "nico:sm46887855",
@@ -18416,7 +18484,8 @@
   "p": "はるまきごはん",
   "v": "初音ミク",
   "a": "niconico:33802565",
-  "firstSeen": "2026-10-08T14:30:41.045Z"
+  "firstSeen": "2026-10-08T14:30:41.045Z",
+  "dup": "yt:BBCRBlHT_Go"
  },
  {
   "id": "nico:sm46891022",
@@ -21631,7 +21700,8 @@
   "v": "初音ミク",
   "a": "niconico:133167443",
   "firstSeen": "2026-10-09T11:31:51.986Z",
-  "pFilled": true
+  "pFilled": true,
+  "dup": "yt:58TbfRY2R8Y"
  },
  {
   "id": "yt:RVcZLGkEihI",
@@ -21928,7 +21998,10 @@
   "p": "キタニタツヤ",
   "v": "初音ミク",
   "a": "youtube:UCgP3GbgbuVzAhlctGU5yuPA",
-  "firstSeen": "2026-10-08T21:32:58.793Z"
+  "firstSeen": "2026-10-08T21:32:58.793Z",
+  "alt": [
+   "nico:sm46879354"
+  ]
  },
  {
   "id": "yt:Mi_f-q451zs",
@@ -22641,7 +22714,10 @@
   "p": "芳田 yoshida",
   "v": "初音ミク",
   "a": "youtube:UClwRw8ar3c58joj2WY1WYrA",
-  "firstSeen": "2026-10-09T15:55:27.682Z"
+  "firstSeen": "2026-10-09T15:55:27.682Z",
+  "alt": [
+   "nico:sm46874020"
+  ]
  },
  {
   "id": "nico:sm46878140",
@@ -22699,7 +22775,8 @@
   "v": "初音ミク",
   "a": "niconico:1604442",
   "firstSeen": "2026-10-09T11:31:51.990Z",
-  "pFilled": true
+  "pFilled": true,
+  "dup": "yt:7JfQKTMlKhI"
  },
  {
   "id": "nico:sm46877939",
@@ -38158,7 +38235,10 @@
   "v": "初音ミク",
   "a": "youtube:UCjuAuVO76nZ0mjYzdz3961Q",
   "firstSeen": "2026-10-09T12:20:22.324Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm45739389"
+  ]
  },
  {
   "id": "nico:sm45739389",
@@ -38191,7 +38271,8 @@
   "v": "初音ミク",
   "a": "niconico:96543791",
   "firstSeen": "2026-10-08T14:36:47.385Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:icBDYkfxpMs"
  },
  {
   "id": "nico:sm45705344",
@@ -39295,7 +39376,10 @@
   "v": "初音ミク",
   "a": "youtube:UC7d3Y_v5O202eo006uvvPzw",
   "firstSeen": "2026-10-09T12:20:22.323Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm45241713"
+  ]
  },
  {
   "id": "nico:sm45241713",
@@ -39330,7 +39414,8 @@
   "firstSeen": "2026-10-08T14:36:47.357Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:3iUgKH8c7p4"
  },
  {
   "id": "yt:BI9Ue6JwJic",
@@ -39352,7 +39437,10 @@
   "v": "初音ミク",
   "a": "youtube:UCGmO0S4S-AunjRdmxA6TQYg",
   "firstSeen": "2026-10-09T12:20:22.331Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm45176104"
+  ]
  },
  {
   "id": "nico:sm45176104",
@@ -39384,7 +39472,8 @@
   "v": "初音ミク",
   "a": "niconico:811012",
   "firstSeen": "2026-10-08T14:36:47.415Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:BI9Ue6JwJic"
  },
  {
   "id": "yt:s7FgdaGOw9s",
@@ -40622,7 +40711,10 @@
   "v": "初音ミク",
   "a": "youtube:UCGmO0S4S-AunjRdmxA6TQYg",
   "firstSeen": "2026-10-09T12:20:22.326Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm44661043"
+  ]
  },
  {
   "id": "nico:sm44661043",
@@ -40652,7 +40744,8 @@
   "v": "初音ミク",
   "a": "niconico:811012",
   "firstSeen": "2026-10-08T14:36:47.356Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:c56TpxfO9q0"
  },
  {
   "id": "yt:UexbDmxHW0U",
@@ -40912,7 +41005,8 @@
   "v": "GUMI",
   "a": "youtube:UCZjp-rfop5Y4Mx5JPlwAutA",
   "firstSeen": "2026-10-09T12:20:22.411Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm13304052"
  },
  {
   "id": "nico:sm44397533",
@@ -41016,7 +41110,10 @@
   "v": "初音ミク",
   "a": "youtube:UCGmO0S4S-AunjRdmxA6TQYg",
   "firstSeen": "2026-10-09T12:20:22.321Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm44317852"
+  ]
  },
  {
   "id": "nico:sm44317852",
@@ -41049,7 +41146,8 @@
   "v": "初音ミク",
   "a": "niconico:811012",
   "firstSeen": "2026-10-08T14:36:47.330Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:kbNdx0yqbZE"
  },
  {
   "id": "yt:w7FtS1LFK_0",
@@ -41106,7 +41204,8 @@
   "firstSeen": "2026-10-08T14:36:47.329Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:Soy4jGPHr3g"
  },
  {
   "id": "yt:Soy4jGPHr3g",
@@ -41134,7 +41233,10 @@
   "v": "重音テト",
   "a": "youtube:UCFXkDxCa_XVcNC7oOEw7U5g",
   "firstSeen": "2026-10-09T12:20:22.364Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm44301514"
+  ]
  },
  {
   "id": "yt:HkTihNKCWFA",
@@ -43243,7 +43345,8 @@
   "v": "初音ミク",
   "a": "niconico:811012",
   "firstSeen": "2026-10-08T14:36:47.425Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:C-7TIDIKc98"
  },
  {
   "id": "yt:LLjfal8jCYI",
@@ -43469,7 +43572,10 @@
   "v": "ずんだもん",
   "a": "youtube:UC80ttKvARb7Gslo7AgPOZeA",
   "firstSeen": "2026-10-09T12:20:22.402Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm42983761"
+  ]
  },
  {
   "id": "nico:sm42983761",
@@ -43504,7 +43610,8 @@
   "firstSeen": "2026-10-08T14:36:47.334Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:vY8iwpN3GXQ"
  },
  {
   "id": "nico:sm42967279",
@@ -43632,7 +43739,10 @@
   "v": "初音ミク",
   "a": "youtube:UCGmO0S4S-AunjRdmxA6TQYg",
   "firstSeen": "2026-10-09T12:20:22.330Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm43084181"
+  ]
  },
  {
   "id": "yt:vVGa8I0Atcg",
@@ -43781,7 +43891,10 @@
   "v": "可不",
   "a": "youtube:UCENRrmGuopCcwwi2jW00LDQ",
   "firstSeen": "2026-10-09T12:20:22.322Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm42682989"
+  ]
  },
  {
   "id": "nico:sm42682989",
@@ -43814,7 +43927,8 @@
   "v": "初音ミク",
   "a": "niconico:24776290",
   "firstSeen": "2026-10-08T14:36:47.331Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:1Swg-aBO9eY"
  },
  {
   "id": "yt:PFjBXaTSpRg",
@@ -43967,7 +44081,8 @@
   "v": "鏡音リン",
   "a": "youtube:UCAyiAlNizx-GtWVp7453XzA",
   "firstSeen": "2026-10-09T12:20:22.342Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm42590716"
  },
  {
   "id": "yt:HTxwOxFt5d4",
@@ -44036,7 +44151,10 @@
   "a": "niconico:95879335",
   "firstSeen": "2026-10-09T21:44:36.809Z",
   "seed": true,
-  "pFilled": true
+  "pFilled": true,
+  "alt": [
+   "yt:qTHXXlnfdwA"
+  ]
  },
  {
   "id": "nico:sm42585649",
@@ -44289,7 +44407,8 @@
   "firstSeen": "2026-10-08T14:36:47.399Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:R_g0M5Zmqhg"
  },
  {
   "id": "yt:R_g0M5Zmqhg",
@@ -44311,7 +44430,10 @@
   "v": "初音ミク",
   "a": "youtube:UCmj0YkPwo47bPoBt9ma-bxg",
   "firstSeen": "2026-10-09T12:20:22.402Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm42540632"
+  ]
  },
  {
   "id": "yt:ArqagB9P1Qs",
@@ -44566,7 +44688,8 @@
   "v": "flower",
   "a": "youtube:UCfyzrRchEuYWpbWnXNRwNLw",
   "firstSeen": "2026-10-09T12:20:22.400Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm29822304"
  },
  {
   "id": "yt:iBbNpywXb9k",
@@ -44687,7 +44810,10 @@
   "v": "初音ミク",
   "a": "youtube:UCGmO0S4S-AunjRdmxA6TQYg",
   "firstSeen": "2026-10-09T12:20:22.321Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm42224358"
+  ]
  },
  {
   "id": "nico:sm42224358",
@@ -44720,7 +44846,8 @@
   "v": "初音ミク",
   "a": "niconico:811012",
   "firstSeen": "2026-10-08T14:36:47.326Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:eSW2LVbPThw"
  },
  {
   "id": "nico:sm42210134",
@@ -44803,7 +44930,10 @@
   "v": "重音テト",
   "a": "youtube:UCLz6MG2kx_0xeaW0LowYnMQ",
   "firstSeen": "2026-10-09T12:20:22.368Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm42147038"
+  ]
  },
  {
   "id": "nico:sm42147038",
@@ -44836,7 +44966,8 @@
   "v": "重音テト",
   "a": "niconico:78166728",
   "firstSeen": "2026-10-08T14:36:47.420Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:zSKwxQqrac0"
  },
  {
   "id": "nico:sm42118418",
@@ -44991,7 +45122,8 @@
   "v": "初音ミク",
   "a": "niconico:5272155",
   "firstSeen": "2026-10-08T14:36:47.338Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:q90SFMi8aUg"
  },
  {
   "id": "nico:sm42045349",
@@ -45051,7 +45183,10 @@
   "v": "初音ミク",
   "a": "youtube:UCQAdXyrF2fYcqdXUUW3YxUg",
   "firstSeen": "2026-10-09T12:20:22.332Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm42047041"
+  ]
  },
  {
   "id": "yt:f6TytcA47rI",
@@ -45073,7 +45208,8 @@
   "v": "初音ミク",
   "a": "youtube:UCam3IAA-nyfxRL8_wDQ35VA",
   "firstSeen": "2026-10-09T12:20:22.378Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm39889004"
  },
  {
   "id": "yt:m4vjI6InDJM",
@@ -45247,7 +45383,8 @@
   "v": "鏡音リン",
   "a": "youtube:UCcvLSRIWJIAGFDyWtzkbiHA",
   "firstSeen": "2026-10-09T12:20:22.349Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm41943266"
  },
  {
   "id": "nico:sm41951611",
@@ -45315,7 +45452,10 @@
   "v": "鏡音リン",
   "a": "niconico:2765486",
   "firstSeen": "2026-10-08T14:36:47.367Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "yt:rKdwNw-d3MQ"
+  ]
  },
  {
   "id": "nico:sm41926207",
@@ -46338,7 +46478,10 @@
   "v": "可不",
   "a": "youtube:UCam3IAA-nyfxRL8_wDQ35VA",
   "firstSeen": "2026-10-09T12:20:22.377Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm41383081"
+  ]
  },
  {
   "id": "nico:sm41383081",
@@ -46372,7 +46515,8 @@
   "a": "niconico:42004123",
   "firstSeen": "2026-10-08T14:36:47.343Z",
   "seed": true,
-  "pFilled": true
+  "pFilled": true,
+  "dup": "yt:7xht3kQO_TM"
  },
  {
   "id": "yt:O9Jlgmn6stg",
@@ -46525,7 +46669,10 @@
   "v": "鏡音レン",
   "a": "youtube:UCHGKS3VDKxu3N1u9naM0XYA",
   "firstSeen": "2026-10-09T12:20:22.336Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm41295783"
+  ]
  },
  {
   "id": "nico:sm41295783",
@@ -46558,7 +46705,8 @@
   "v": "鏡音レン",
   "a": "niconico:78655994",
   "firstSeen": "2026-10-08T14:36:47.325Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:mq88yUFdVng"
  },
  {
   "id": "yt:M2cckDmNLMI",
@@ -47127,7 +47275,8 @@
   "firstSeen": "2026-10-08T14:36:47.335Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:KFCaSz_yYCM"
  },
  {
   "id": "yt:KFCaSz_yYCM",
@@ -47157,7 +47306,10 @@
   "v": "GUMI",
   "a": "youtube:UC10BM9XdLdrvB8japwmRUvA",
   "firstSeen": "2026-10-09T12:20:22.355Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm40881707"
+  ]
  },
  {
   "id": "nico:sm40853323",
@@ -47632,7 +47784,8 @@
   "v": "初音ミク",
   "a": "niconico:21990565",
   "firstSeen": "2026-10-08T14:36:47.327Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:FkO8ub83wss"
  },
  {
   "id": "yt:FkO8ub83wss",
@@ -47665,7 +47818,10 @@
   "v": "初音ミク",
   "a": "youtube:UCp13SxKXbhCS0lb6Ty774iQ",
   "firstSeen": "2026-10-09T12:20:22.328Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm40676162"
+  ]
  },
  {
   "id": "yt:v2jLhjJ7E7s",
@@ -47974,7 +48130,10 @@
   "v": "初音ミク",
   "a": "youtube:UCMMBGMjrrWcRZmG_lW4jC-Q",
   "firstSeen": "2026-10-09T12:20:22.326Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm40554570"
+  ]
  },
  {
   "id": "nico:sm40554570",
@@ -48009,7 +48168,8 @@
   "firstSeen": "2026-10-08T14:36:47.331Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:LYWP8HtgeLQ"
  },
  {
   "id": "nico:sm40545552",
@@ -48086,7 +48246,10 @@
   "v": "初音ミク",
   "a": "youtube:UCGmO0S4S-AunjRdmxA6TQYg",
   "firstSeen": "2026-10-09T12:20:22.335Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm40510213"
+  ]
  },
  {
   "id": "nico:sm40510213",
@@ -48119,7 +48282,8 @@
   "v": "初音ミク",
   "a": "niconico:811012",
   "firstSeen": "2026-10-08T14:36:47.422Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:aHNWL7MBXoc"
  },
  {
   "id": "yt:62Lm5VbOL_k",
@@ -48217,7 +48381,8 @@
   "firstSeen": "2026-10-08T14:36:47.327Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:vB8sxY_PJ_w"
  },
  {
   "id": "yt:vB8sxY_PJ_w",
@@ -48247,7 +48412,10 @@
   "v": "GUMI",
   "a": "youtube:UC10BM9XdLdrvB8japwmRUvA",
   "firstSeen": "2026-10-09T12:20:22.355Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm40408445"
+  ]
  },
  {
   "id": "yt:St7slZIVRHk",
@@ -49079,7 +49247,10 @@
   "v": "初音ミク",
   "a": "youtube:UCMMBGMjrrWcRZmG_lW4jC-Q",
   "firstSeen": "2026-10-09T12:20:22.327Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm40089113"
+  ]
  },
  {
   "id": "nico:sm40089113",
@@ -49114,7 +49285,8 @@
   "firstSeen": "2026-10-08T14:36:47.329Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:T2kS1gAbxhc"
  },
  {
   "id": "yt:Xx40aKzKmjc",
@@ -49279,7 +49451,10 @@
   "v": "初音ミク",
   "a": "youtube:UCGmO0S4S-AunjRdmxA6TQYg",
   "firstSeen": "2026-10-09T12:20:22.331Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm39978904"
+  ]
  },
  {
   "id": "nico:sm39978904",
@@ -49312,7 +49487,8 @@
   "v": "初音ミク",
   "a": "niconico:811012",
   "firstSeen": "2026-10-08T14:36:47.362Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:agcoHM2CJ3s"
  },
  {
   "id": "yt:2FBqS72WkfI",
@@ -49716,7 +49892,10 @@
   "a": "niconico:42004123",
   "firstSeen": "2026-10-08T14:36:47.375Z",
   "seed": true,
-  "pFilled": true
+  "pFilled": true,
+  "alt": [
+   "yt:f6TytcA47rI"
+  ]
  },
  {
   "id": "yt:qknDI1k39Ic",
@@ -49798,7 +49977,8 @@
   "firstSeen": "2026-10-08T14:36:47.329Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:M9moY0hEJRE"
  },
  {
   "id": "yt:M9moY0hEJRE",
@@ -49832,7 +50012,10 @@
   "v": "初音ミク",
   "a": "youtube:UC10BM9XdLdrvB8japwmRUvA",
   "firstSeen": "2026-10-09T12:20:22.328Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm39875801"
+  ]
  },
  {
   "id": "yt:eYh7prKmMio",
@@ -49906,7 +50089,10 @@
   "v": "初音ミク",
   "a": "youtube:UCGmO0S4S-AunjRdmxA6TQYg",
   "firstSeen": "2026-10-09T12:20:22.331Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm39853779"
+  ]
  },
  {
   "id": "yt:-iPh3Vuhp80",
@@ -49967,7 +50153,8 @@
   "v": "初音ミク",
   "a": "niconico:811012",
   "firstSeen": "2026-10-08T14:36:47.351Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:-H2PCK7DJsQ"
  },
  {
   "id": "nico:sm39865190",
@@ -50169,7 +50356,8 @@
   "firstSeen": "2026-10-08T14:36:47.398Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:nXNeufhq_nw"
  },
  {
   "id": "yt:nXNeufhq_nw",
@@ -50191,7 +50379,10 @@
   "v": "初音ミク",
   "a": "youtube:UCmj0YkPwo47bPoBt9ma-bxg",
   "firstSeen": "2026-10-09T12:20:22.330Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm39813844"
+  ]
  },
  {
   "id": "yt:dN020llYLQU",
@@ -50269,7 +50460,8 @@
   "v": "可不",
   "a": "niconico:4845576",
   "firstSeen": "2026-10-08T14:36:47.358Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:LbO4pg_LHUI"
  },
  {
   "id": "yt:LbO4pg_LHUI",
@@ -50295,7 +50487,10 @@
   "v": "可不",
   "a": "youtube:UCvq3kUGY5Dbsdkr3DZx25Sw",
   "firstSeen": "2026-10-09T12:20:22.378Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm39804594"
+  ]
  },
  {
   "id": "yt:UtQ6cEuoSoA",
@@ -50445,7 +50640,10 @@
   "v": "初音ミク",
   "a": "youtube:UCGmO0S4S-AunjRdmxA6TQYg",
   "firstSeen": "2026-10-09T12:20:22.330Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm39722490"
+  ]
  },
  {
   "id": "nico:sm39722490",
@@ -50478,7 +50676,8 @@
   "v": "初音ミク",
   "a": "niconico:811012",
   "firstSeen": "2026-10-08T14:36:47.351Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:HtBqK6xsQ9k"
  },
  {
   "id": "nico:sm39759311",
@@ -50539,7 +50738,10 @@
   "v": "初音ミク",
   "a": "youtube:UCLz6MG2kx_0xeaW0LowYnMQ",
   "firstSeen": "2026-10-09T12:20:22.334Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm39746081"
+  ]
  },
  {
   "id": "nico:sm39746081",
@@ -50572,7 +50774,8 @@
   "v": "初音ミク",
   "a": "niconico:78166728",
   "firstSeen": "2026-10-08T14:36:47.369Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:_uMDEIPgmFI"
  },
  {
   "id": "yt:ADy8Xlj0mBc",
@@ -51106,7 +51309,8 @@
   "v": "鏡音リン",
   "a": "youtube:UCmuuQIQFoRoJG1exKlfFCSA",
   "firstSeen": "2026-10-09T12:20:22.337Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm8089993"
  },
  {
   "id": "nico:sm39504285",
@@ -51495,7 +51699,8 @@
   "v": "可不",
   "a": "niconico:57749103",
   "firstSeen": "2026-10-08T14:36:47.362Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:UE9C8wc2MgA"
  },
  {
   "id": "yt:UE9C8wc2MgA",
@@ -51526,7 +51731,10 @@
   "v": "可不",
   "a": "youtube:UCSxCyYHtPzn-23kNT-RgWqw",
   "firstSeen": "2026-10-09T12:20:22.385Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm39428081"
+  ]
  },
  {
   "id": "yt:UgZFpO_Y6qo",
@@ -51548,7 +51756,10 @@
   "v": "初音ミク",
   "a": "youtube:UC9AYHlE2OLcMlZJo3MBlfkQ",
   "firstSeen": "2026-10-09T12:20:22.333Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm39426624"
+  ]
  },
  {
   "id": "nico:sm39426624",
@@ -51581,7 +51792,8 @@
   "v": "初音ミク",
   "a": "niconico:1091989",
   "firstSeen": "2026-10-08T14:36:47.388Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:UgZFpO_Y6qo"
  },
  {
   "id": "nico:sm39411572",
@@ -51825,7 +52037,10 @@
   "v": "初音ミク",
   "a": "youtube:UCMMBGMjrrWcRZmG_lW4jC-Q",
   "firstSeen": "2026-10-09T12:20:22.322Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm39334235"
+  ]
  },
  {
   "id": "nico:sm39334235",
@@ -51860,7 +52075,8 @@
   "firstSeen": "2026-10-08T14:36:47.318Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:EHBFKhLUVig"
  },
  {
   "id": "nico:sm39336579",
@@ -52038,7 +52254,10 @@
   "v": "可不",
   "a": "youtube:UCLz6MG2kx_0xeaW0LowYnMQ",
   "firstSeen": "2026-10-09T12:20:22.377Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm39257413"
+  ]
  },
  {
   "id": "nico:sm39257413",
@@ -52071,7 +52290,8 @@
   "v": "可不",
   "a": "niconico:78166728",
   "firstSeen": "2026-10-08T14:36:47.317Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:2b1IexhKPz4"
  },
  {
   "id": "yt:j_jYGrm0USQ",
@@ -52147,7 +52367,8 @@
   "v": "初音ミク",
   "a": "niconico:32260190",
   "firstSeen": "2026-10-08T14:36:47.360Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:rkaNKAvksDE"
  },
  {
   "id": "yt:rkaNKAvksDE",
@@ -52175,7 +52396,10 @@
   "v": "IA",
   "a": "youtube:UCgBPuTX7crv_2jKAkH5z7bA",
   "firstSeen": "2026-10-09T12:20:22.332Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm39227588"
+  ]
  },
  {
   "id": "nico:sm39217773",
@@ -52208,7 +52432,8 @@
   "v": "可不",
   "a": "niconico:99293918",
   "firstSeen": "2026-10-08T14:36:47.320Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:jMKPYg0uhCI"
  },
  {
   "id": "yt:jMKPYg0uhCI",
@@ -52235,7 +52460,10 @@
   "v": "可不",
   "a": "youtube:UCFXkDxCa_XVcNC7oOEw7U5g",
   "firstSeen": "2026-10-09T12:20:22.377Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm39217773"
+  ]
  },
  {
   "id": "yt:zOmCdi_P954",
@@ -52538,7 +52766,10 @@
   "v": "鏡音リン",
   "a": "youtube:UCMMBGMjrrWcRZmG_lW4jC-Q",
   "firstSeen": "2026-10-09T12:20:22.327Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm39131047"
+  ]
  },
  {
   "id": "nico:sm39053581",
@@ -52571,7 +52802,8 @@
   "v": "初音ミク",
   "a": "niconico:811012",
   "firstSeen": "2026-10-08T14:36:47.374Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:adGhT_-JbZI"
  },
  {
   "id": "nico:sm39131047",
@@ -52606,7 +52838,8 @@
   "firstSeen": "2026-10-08T14:36:47.385Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:w8yweCungCE"
  },
  {
   "id": "yt:adGhT_-JbZI",
@@ -52628,7 +52861,10 @@
   "v": "初音ミク",
   "a": "youtube:UCGmO0S4S-AunjRdmxA6TQYg",
   "firstSeen": "2026-10-09T12:20:22.332Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm39053581"
+  ]
  },
  {
   "id": "nico:sm39082282",
@@ -52753,7 +52989,8 @@
   "a": "niconico:89278204",
   "firstSeen": "2026-10-08T14:36:47.411Z",
   "seed": true,
-  "pFilled": true
+  "pFilled": true,
+  "dup": "yt:91R2hdV_-aQ"
  },
  {
   "id": "yt:91R2hdV_-aQ",
@@ -52779,7 +53016,10 @@
   "v": "可不",
   "a": "youtube:UCBn41FlxHaINjQuaIfzRZbQ",
   "firstSeen": "2026-10-09T12:20:22.377Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm39067316"
+  ]
  },
  {
   "id": "yt:_3oqwklUSQ4",
@@ -52893,7 +53133,10 @@
   "v": "可不",
   "a": "youtube:UC9_8AXpxjjNl62HPhF5IAyg",
   "firstSeen": "2026-10-09T12:20:22.377Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm39034813"
+  ]
  },
  {
   "id": "nico:sm39034813",
@@ -52926,7 +53169,8 @@
   "v": "可不",
   "a": "niconico:86944362",
   "firstSeen": "2026-10-08T14:36:47.348Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:7gwvBrlUiww"
  },
  {
   "id": "nico:sm39038660",
@@ -53254,7 +53498,10 @@
   "v": "初音ミク",
   "a": "youtube:UCLz6MG2kx_0xeaW0LowYnMQ",
   "firstSeen": "2026-10-09T12:20:22.335Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm38914370"
+  ]
  },
  {
   "id": "nico:sm38914370",
@@ -53287,7 +53534,8 @@
   "v": "初音ミク",
   "a": "niconico:78166728",
   "firstSeen": "2026-10-08T14:36:47.364Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:Wr-2xcQkke4"
  },
  {
   "id": "yt:dBQg24mx45Y",
@@ -53576,7 +53824,10 @@
   "v": "初音ミク",
   "a": "youtube:UCMMBGMjrrWcRZmG_lW4jC-Q",
   "firstSeen": "2026-10-09T12:20:22.327Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm38824626"
+  ]
  },
  {
   "id": "yt:_rTtO-AVRxI",
@@ -53637,7 +53888,8 @@
   "firstSeen": "2026-10-08T14:36:47.335Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:lw7pcm1W5tw"
  },
  {
   "id": "yt:5fcwhilps3U",
@@ -53957,7 +54209,10 @@
   "v": "初音ミク",
   "a": "youtube:UCEoSVgHlCKPVEHDIve3K7NA",
   "firstSeen": "2026-10-09T12:20:22.347Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm38667465"
+  ]
  },
  {
   "id": "nico:sm38667465",
@@ -53990,7 +54245,8 @@
   "v": "初音ミク",
   "a": "niconico:32047444",
   "firstSeen": "2026-10-08T14:36:47.388Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:X_6EPkvIAGg"
  },
  {
   "id": "yt:XqKbuEDvaf8",
@@ -54531,7 +54787,10 @@
   "v": "初音ミク",
   "a": "youtube:UCGmO0S4S-AunjRdmxA6TQYg",
   "firstSeen": "2026-10-09T12:20:22.322Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm38387707"
+  ]
  },
  {
   "id": "nico:sm38387707",
@@ -54564,7 +54823,8 @@
   "v": "初音ミク",
   "a": "niconico:811012",
   "firstSeen": "2026-10-08T14:36:47.322Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:e1xCOsgWG0M"
  },
  {
   "id": "nico:sm38387144",
@@ -54786,7 +55046,10 @@
   "v": "鏡音レン",
   "a": "youtube:UCHGKS3VDKxu3N1u9naM0XYA",
   "firstSeen": "2026-10-09T12:20:22.338Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm38335870"
+  ]
  },
  {
   "id": "nico:sm38335870",
@@ -54818,7 +55081,8 @@
   "v": "鏡音レン",
   "a": "niconico:78655994",
   "firstSeen": "2026-10-08T14:36:47.357Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:cwLlHFMlBNQ"
  },
  {
   "id": "nico:sm38300091",
@@ -54882,7 +55146,10 @@
   "v": "GUMI",
   "a": "youtube:UC10BM9XdLdrvB8japwmRUvA",
   "firstSeen": "2026-10-09T12:20:22.355Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm38268550"
+  ]
  },
  {
   "id": "nico:sm38268550",
@@ -54917,7 +55184,8 @@
   "firstSeen": "2026-10-08T14:36:47.325Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:dgS6HvEohsw"
  },
  {
   "id": "nico:sm38244178",
@@ -55338,7 +55606,10 @@
   "v": "初音ミク",
   "a": "youtube:UCLz6MG2kx_0xeaW0LowYnMQ",
   "firstSeen": "2026-10-09T12:20:22.328Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm37944844"
+  ]
  },
  {
   "id": "nico:sm37944844",
@@ -55371,7 +55642,8 @@
   "v": "初音ミク",
   "a": "niconico:78166728",
   "firstSeen": "2026-10-08T14:36:47.326Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:3em-J9yYPAo"
  },
  {
   "id": "yt:H_WXMJ6dUGY",
@@ -55429,7 +55701,10 @@
   "v": "flower",
   "a": "youtube:UCgf4ASaUXSl960o8wXWHGdQ",
   "firstSeen": "2026-10-09T12:20:22.396Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm37928776"
+  ]
  },
  {
   "id": "nico:sm37928776",
@@ -55462,7 +55737,8 @@
   "v": "flower",
   "a": "niconico:87208347",
   "firstSeen": "2026-10-08T14:36:47.361Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:1Esz9ONM9X8"
  },
  {
   "id": "nico:sm37946837",
@@ -55634,7 +55910,10 @@
   "v": "flower",
   "a": "youtube:UCgf4ASaUXSl960o8wXWHGdQ",
   "firstSeen": "2026-10-09T12:20:22.396Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm37872936"
+  ]
  },
  {
   "id": "nico:sm37872936",
@@ -55667,7 +55946,8 @@
   "v": "flower",
   "a": "niconico:87208347",
   "firstSeen": "2026-10-08T14:36:47.385Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:hunqo6DgjD8"
  },
  {
   "id": "yt:1tk1pqwrOys",
@@ -55858,7 +56138,8 @@
   "firstSeen": "2026-10-08T14:36:47.373Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:--41OGPMurU"
  },
  {
   "id": "yt:--41OGPMurU",
@@ -55907,7 +56188,10 @@
   "v": "初音ミク",
   "a": "youtube:UCMMBGMjrrWcRZmG_lW4jC-Q",
   "firstSeen": "2026-10-09T12:20:22.328Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm37674814"
+  ]
  },
  {
   "id": "yt:4DxL6IKmXx4",
@@ -56054,7 +56338,8 @@
   "v": "初音ミク",
   "a": "niconico:4845576",
   "firstSeen": "2026-10-08T14:36:47.349Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:XAg1jDDG49Y"
  },
  {
   "id": "yt:XAg1jDDG49Y",
@@ -56081,7 +56366,10 @@
   "v": "初音ミク",
   "a": "youtube:UCvq3kUGY5Dbsdkr3DZx25Sw",
   "firstSeen": "2026-10-09T12:20:22.332Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm37601066"
+  ]
  },
  {
   "id": "nico:sm37583954",
@@ -56267,7 +56555,10 @@
   "v": "flower",
   "a": "youtube:UCft5HulDeuKloukyShxyOZA",
   "firstSeen": "2026-10-09T12:20:22.396Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm37511248"
+  ]
  },
  {
   "id": "nico:sm37511248",
@@ -56299,7 +56590,8 @@
   "v": "flower",
   "a": "niconico:55005244",
   "firstSeen": "2026-10-08T14:36:47.436Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:dH4b59syDYs"
  },
  {
   "id": "nico:sm37507315",
@@ -56629,7 +56921,10 @@
   "v": "初音ミク",
   "a": "youtube:UCp13SxKXbhCS0lb6Ty774iQ",
   "firstSeen": "2026-10-09T12:20:22.326Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm37441963"
+  ]
  },
  {
   "id": "nico:sm37441963",
@@ -56662,7 +56957,8 @@
   "v": "初音ミク",
   "a": "niconico:21990565",
   "firstSeen": "2026-10-08T14:36:47.321Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:Rkrm5foi188"
  },
  {
   "id": "yt:YdPzENopl3s",
@@ -56998,7 +57294,10 @@
   "v": "GUMI",
   "a": "youtube:UC10BM9XdLdrvB8japwmRUvA",
   "firstSeen": "2026-10-09T12:20:22.355Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm37287661"
+  ]
  },
  {
   "id": "nico:sm37287661",
@@ -57033,7 +57332,8 @@
   "firstSeen": "2026-10-08T14:36:47.320Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:cm-l2h6GB8Q"
  },
  {
   "id": "nico:sm37255725",
@@ -57228,7 +57528,10 @@
   "v": "鏡音リン",
   "a": "youtube:UCp13SxKXbhCS0lb6Ty774iQ",
   "firstSeen": "2026-10-09T12:20:22.341Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm37081741"
+  ]
  },
  {
   "id": "nico:sm37081741",
@@ -57263,7 +57566,8 @@
   "firstSeen": "2026-10-08T14:36:47.355Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:eEuIHatfgkE"
  },
  {
   "id": "yt:USoPV_a4q1o",
@@ -57463,7 +57767,8 @@
   "a": "niconico:49968483",
   "firstSeen": "2026-10-09T21:44:36.808Z",
   "seed": true,
-  "pFilled": true
+  "pFilled": true,
+  "dup": "yt:vU3oF90WKpw"
  },
  {
   "id": "nico:sm36966835",
@@ -57516,7 +57821,10 @@
   "v": "flower",
   "a": "youtube:UC4NcaT-fSUNcC-p0iGa5CqA",
   "firstSeen": "2026-10-09T12:20:22.396Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm36943926"
+  ]
  },
  {
   "id": "nico:sm36943926",
@@ -57550,7 +57858,8 @@
   "a": "niconico:63367816",
   "firstSeen": "2026-10-08T14:36:47.385Z",
   "seed": true,
-  "pFilled": true
+  "pFilled": true,
+  "dup": "yt:AKQWRnZ_Fc0"
  },
  {
   "id": "yt:Scpu6fB4waA",
@@ -57818,7 +58127,10 @@
   "v": "flower",
   "a": "youtube:UCgf4ASaUXSl960o8wXWHGdQ",
   "firstSeen": "2026-10-09T12:20:22.395Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm36731216"
+  ]
  },
  {
   "id": "nico:sm36731216",
@@ -57851,7 +58163,8 @@
   "v": "flower",
   "a": "niconico:87208347",
   "firstSeen": "2026-10-08T14:36:47.335Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:wp9Z2wZ-2bs"
  },
  {
   "id": "nico:sm36723917",
@@ -58052,7 +58365,10 @@
   "v": "flower",
   "a": "youtube:UCft5HulDeuKloukyShxyOZA",
   "firstSeen": "2026-10-09T12:20:22.394Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm36668789"
+  ]
  },
  {
   "id": "nico:sm36668789",
@@ -58085,7 +58401,8 @@
   "v": "flower",
   "a": "niconico:55005244",
   "firstSeen": "2026-10-08T14:36:47.327Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:dHXC_ahjtEE"
  },
  {
   "id": "yt:2Od7QCsyqkE",
@@ -58191,7 +58508,8 @@
   "v": "GUMI",
   "a": "youtube:UCUBHMmBbOjOXMpkaB8KRgVw",
   "firstSeen": "2026-10-09T12:20:22.359Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm17720979"
  },
  {
   "id": "nico:sm36600149",
@@ -58271,7 +58589,10 @@
   "v": "鏡音リン",
   "a": "youtube:UClxXuM2m0rIL9VCA1ds9HqA",
   "firstSeen": "2026-10-09T12:20:22.338Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm36594334"
+  ]
  },
  {
   "id": "nico:sm36594334",
@@ -58304,7 +58625,8 @@
   "v": "鏡音リン",
   "a": "niconico:112798",
   "firstSeen": "2026-10-08T14:36:47.357Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:Dun11cIEo9s"
  },
  {
   "id": "nico:sm36572789",
@@ -58564,7 +58886,8 @@
   "firstSeen": "2026-10-08T14:36:47.332Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:p9FJXfGHtDA"
  },
  {
   "id": "yt:p9FJXfGHtDA",
@@ -58586,7 +58909,10 @@
   "v": "flower",
   "a": "youtube:UCQAdXyrF2fYcqdXUUW3YxUg",
   "firstSeen": "2026-10-09T12:20:22.395Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm36332327"
+  ]
  },
  {
   "id": "nico:sm36314325",
@@ -58722,7 +59048,8 @@
   "a": "niconico:37960285",
   "firstSeen": "2026-10-09T21:44:36.810Z",
   "seed": true,
-  "pFilled": true
+  "pFilled": true,
+  "dup": "yt:Orb6mvWMyAs"
  },
  {
   "id": "yt:Orb6mvWMyAs",
@@ -58750,7 +59077,10 @@
   "v": "初音ミク",
   "a": "youtube:UCpKgRpioJ1pMvIC9vqLzuGw",
   "firstSeen": "2026-10-09T12:20:22.353Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm36273543"
+  ]
  },
  {
   "id": "nico:sm36235479",
@@ -58968,7 +59298,10 @@
   "v": "flower",
   "a": "youtube:UCgf4ASaUXSl960o8wXWHGdQ",
   "firstSeen": "2026-10-09T12:20:22.396Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm36165193"
+  ]
  },
  {
   "id": "nico:sm36165193",
@@ -59001,7 +59334,8 @@
   "v": "flower",
   "a": "niconico:87208347",
   "firstSeen": "2026-10-08T14:36:47.367Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:z_RmuScgWOQ"
  },
  {
   "id": "yt:utjRONiBIOk",
@@ -59270,7 +59604,10 @@
   "v": "鏡音レン",
   "a": "youtube:UCHGKS3VDKxu3N1u9naM0XYA",
   "firstSeen": "2026-10-09T12:20:22.337Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm36109943"
+  ]
  },
  {
   "id": "nico:sm36109943",
@@ -59302,7 +59639,8 @@
   "v": "鏡音レン",
   "a": "niconico:78655994",
   "firstSeen": "2026-10-08T14:36:47.346Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:E1PGiyRjqkU"
  },
  {
   "id": "yt:Uc4NBh_kCL4",
@@ -59326,7 +59664,10 @@
   "v": "GUMI",
   "a": "youtube:UC5dj1pFnPO3gWy-KBYWtUPQ",
   "firstSeen": "2026-10-09T12:20:22.356Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm36106155"
+  ]
  },
  {
   "id": "nico:sm36106155",
@@ -59360,7 +59701,8 @@
   "a": "niconico:24455542",
   "firstSeen": "2026-10-08T14:36:47.367Z",
   "seed": true,
-  "pFilled": true
+  "pFilled": true,
+  "dup": "yt:Uc4NBh_kCL4"
  },
  {
   "id": "nico:sm36084057",
@@ -59422,7 +59764,8 @@
   "a": "niconico:88786564",
   "firstSeen": "2026-10-08T14:36:47.319Z",
   "seed": true,
-  "pFilled": true
+  "pFilled": true,
+  "dup": "yt:pUH9vCsvq08"
  },
  {
   "id": "yt:pUH9vCsvq08",
@@ -59475,7 +59818,10 @@
   "v": "初音ミク",
   "a": "youtube:UC9rPALOT-ZVc7VEXATYSNCA",
   "firstSeen": "2026-10-09T12:20:22.325Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm36053074"
+  ]
  },
  {
   "id": "nico:sm36049105",
@@ -59604,7 +59950,10 @@
   "v": "初音ミク",
   "a": "youtube:UCp13SxKXbhCS0lb6Ty774iQ",
   "firstSeen": "2026-10-09T12:20:22.328Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm35992766"
+  ]
  },
  {
   "id": "nico:sm35992766",
@@ -59639,7 +59988,8 @@
   "firstSeen": "2026-10-08T14:36:47.338Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:XfUao0_54yM"
  },
  {
   "id": "nico:sm35992625",
@@ -59829,7 +60179,10 @@
   "v": "初音ミク",
   "a": "youtube:UCLz6MG2kx_0xeaW0LowYnMQ",
   "firstSeen": "2026-10-09T12:20:22.328Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm35933131"
+  ]
  },
  {
   "id": "nico:sm35933131",
@@ -59861,7 +60214,8 @@
   "v": "初音ミク",
   "a": "niconico:78166728",
   "firstSeen": "2026-10-08T14:36:47.343Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:OVwCr2MESfo"
  },
  {
   "id": "nico:sm35928733",
@@ -59896,7 +60250,8 @@
   "firstSeen": "2026-10-08T14:36:47.380Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:LCOItseOsFE"
  },
  {
   "id": "yt:LCOItseOsFE",
@@ -59918,7 +60273,10 @@
   "v": "初音ミク",
   "a": "youtube:UCmj0YkPwo47bPoBt9ma-bxg",
   "firstSeen": "2026-10-09T12:20:22.328Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm35928733"
+  ]
  },
  {
   "id": "nico:sm35908691",
@@ -59986,7 +60344,8 @@
   "firstSeen": "2026-10-08T14:36:47.436Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:JCZCz0XQfRk"
  },
  {
   "id": "yt:JCZCz0XQfRk",
@@ -60031,7 +60390,10 @@
   "v": "音街ウナ",
   "a": "youtube:UCvy_1uRgNNu-h3JJCJOGfpw",
   "firstSeen": "2026-10-09T12:20:22.339Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm35880454"
+  ]
  },
  {
   "id": "yt:ERo-sPa1a5g",
@@ -60205,7 +60567,8 @@
   "firstSeen": "2026-10-08T14:36:47.371Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:MnJq5kSn-GY"
  },
  {
   "id": "yt:MnJq5kSn-GY",
@@ -60233,7 +60596,10 @@
   "v": "初音ミク",
   "a": "youtube:UCMMBGMjrrWcRZmG_lW4jC-Q",
   "firstSeen": "2026-10-09T12:20:22.332Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm35818693"
+  ]
  },
  {
   "id": "yt:NDKwiNTPhEw",
@@ -60357,7 +60723,8 @@
   "v": "GUMI",
   "a": "youtube:UCBR4N5DkgDt3PLTcfJB1iiw",
   "firstSeen": "2026-10-09T12:20:22.355Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm18623327"
  },
  {
   "id": "nico:sm35761194",
@@ -60660,7 +61027,10 @@
   "v": "flower",
   "a": "youtube:UCkltfvjVoojq0BGRt4pmlig",
   "firstSeen": "2026-10-09T12:20:22.396Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm35586514"
+  ]
  },
  {
   "id": "nico:sm35586514",
@@ -60693,7 +61063,8 @@
   "v": "flower",
   "a": "niconico:32646403",
   "firstSeen": "2026-10-08T14:36:47.368Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:oUevY6uH4Qg"
  },
  {
   "id": "nico:sm35584107",
@@ -60820,7 +61191,10 @@
   "v": "flower",
   "a": "youtube:UCgf4ASaUXSl960o8wXWHGdQ",
   "firstSeen": "2026-10-09T12:20:22.396Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm35562199"
+  ]
  },
  {
   "id": "nico:sm35562199",
@@ -60853,7 +61227,8 @@
   "v": "flower",
   "a": "niconico:87208347",
   "firstSeen": "2026-10-08T14:36:47.357Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:iBFa98VMh2A"
  },
  {
   "id": "yt:waKONiYYouU",
@@ -61064,7 +61439,10 @@
   "v": "初音ミク",
   "a": "youtube:UC8c-dBnOuvKsoxSOUihQi0Q",
   "firstSeen": "2026-10-09T12:20:22.334Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm35546354"
+  ]
  },
  {
   "id": "nico:sm35546354",
@@ -61098,7 +61476,8 @@
   "a": "niconico:45395036",
   "firstSeen": "2026-10-08T14:36:47.383Z",
   "seed": true,
-  "pFilled": true
+  "pFilled": true,
+  "dup": "yt:DlIREQyaxu8"
  },
  {
   "id": "nico:sm35513173",
@@ -61198,7 +61577,10 @@
   "v": "初音ミク",
   "a": "youtube:UChl7kAxzdXCUQDQzk5Qm30g",
   "firstSeen": "2026-10-09T12:20:22.328Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm35507640"
+  ]
  },
  {
   "id": "nico:sm35507640",
@@ -61231,7 +61613,8 @@
   "v": "初音ミク",
   "a": "niconico:11942559",
   "firstSeen": "2026-10-08T14:36:47.327Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:7Y9sJvLI3Po"
  },
  {
   "id": "nico:sm35513238",
@@ -61576,7 +61959,8 @@
   "v": "GUMI",
   "a": "youtube:UClkc2M0xPFhoOzzHlgZDMfw",
   "firstSeen": "2026-10-09T12:20:22.361Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm7610111"
  },
  {
   "id": "yt:ucJCBFl9r9Y",
@@ -61985,7 +62369,8 @@
   "v": "初音ミク",
   "a": "niconico:811012",
   "firstSeen": "2026-10-08T14:36:47.370Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:uFRPeiAEO0M"
  },
  {
   "id": "yt:uFRPeiAEO0M",
@@ -62033,7 +62418,10 @@
   "v": "初音ミク",
   "a": "youtube:UCGmO0S4S-AunjRdmxA6TQYg",
   "firstSeen": "2026-10-09T12:20:22.333Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm35070488"
+  ]
  },
  {
   "id": "nico:sm35051597",
@@ -62270,7 +62658,10 @@
   "v": "flower",
   "a": "youtube:UChOF_ryuu0huXTPeyxlpfSQ",
   "firstSeen": "2026-10-10T07:32:06.231Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm34932948"
+  ]
  },
  {
   "id": "nico:sm34932948",
@@ -62300,7 +62691,8 @@
   "v": "flower",
   "a": "niconico:8211134",
   "firstSeen": "2026-10-08T14:36:47.419Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:romqp_SB4tU"
  },
  {
   "id": "nico:sm34931260",
@@ -62334,7 +62726,10 @@
   "a": "niconico:1135289",
   "firstSeen": "2026-10-10T07:39:24.120Z",
   "seed": true,
-  "pFilled": true
+  "pFilled": true,
+  "alt": [
+   "yt:zlH3jWGQ8sY"
+  ]
  },
  {
   "id": "yt:VHgiGuVdLEA",
@@ -62944,7 +63339,8 @@
   "firstSeen": "2026-10-08T14:36:47.393Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:GSpwTvYgFrM"
  },
  {
   "id": "yt:GSpwTvYgFrM",
@@ -62972,7 +63368,10 @@
   "v": "初音ミク",
   "a": "youtube:UCMMBGMjrrWcRZmG_lW4jC-Q",
   "firstSeen": "2026-10-09T12:20:22.333Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm34509853"
+  ]
  },
  {
   "id": "yt:k9BqIXtyI0E",
@@ -63029,7 +63428,8 @@
   "v": "初音ミク",
   "a": "niconico:811012",
   "firstSeen": "2026-10-08T14:36:47.320Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:7zwCIz-Ohn4"
  },
  {
   "id": "yt:7zwCIz-Ohn4",
@@ -63070,7 +63470,10 @@
   "v": "初音ミク",
   "a": "youtube:UCGmO0S4S-AunjRdmxA6TQYg",
   "firstSeen": "2026-10-09T12:20:22.326Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm34470195"
+  ]
  },
  {
   "id": "nico:sm34457656",
@@ -63139,7 +63542,8 @@
   "firstSeen": "2026-10-08T14:36:47.321Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:XCyKJD6uQyg"
  },
  {
   "id": "yt:XCyKJD6uQyg",
@@ -63173,7 +63577,10 @@
   "v": "初音ミク",
   "a": "youtube:UCraC7460yGQF4GDmSjCecpQ",
   "firstSeen": "2026-10-09T12:20:22.326Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm34425299"
+  ]
  },
  {
   "id": "yt:gy_uVLgFsQQ",
@@ -63631,7 +64038,10 @@
   "v": "初音ミク",
   "a": "youtube:UCyjJeg0_pfsPzUJsqCv15WA",
   "firstSeen": "2026-10-09T12:20:22.404Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm34294264"
+  ]
  },
  {
   "id": "nico:sm34294264",
@@ -63665,7 +64075,8 @@
   "a": "niconico:23068914",
   "firstSeen": "2026-10-08T14:36:47.345Z",
   "seed": true,
-  "pFilled": true
+  "pFilled": true,
+  "dup": "yt:sB1e_0jkvE8"
  },
  {
   "id": "nico:sm34286751",
@@ -64390,7 +64801,10 @@
   "v": "初音ミク",
   "a": "youtube:UCGmO0S4S-AunjRdmxA6TQYg",
   "firstSeen": "2026-10-09T12:20:22.333Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm33965071"
+  ]
  },
  {
   "id": "nico:sm33965071",
@@ -64423,7 +64837,8 @@
   "v": "初音ミク",
   "a": "niconico:811012",
   "firstSeen": "2026-10-08T14:36:47.355Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:WptXk39wiIQ"
  },
  {
   "id": "yt:tQWMArNo9F0",
@@ -64468,7 +64883,10 @@
   "v": "flower",
   "a": "youtube:UCkltfvjVoojq0BGRt4pmlig",
   "firstSeen": "2026-10-09T12:20:22.395Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm33974546"
+  ]
  },
  {
   "id": "nico:sm33974546",
@@ -64501,7 +64919,8 @@
   "v": "flower",
   "a": "niconico:32646403",
   "firstSeen": "2026-10-08T14:36:47.373Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:tQWMArNo9F0"
  },
  {
   "id": "yt:DB4YUI_QqUU",
@@ -64752,7 +65171,10 @@
   "v": "flower",
   "a": "youtube:UCiOOc3UicP_PG1_F2NPs2Ig",
   "firstSeen": "2026-10-09T12:20:22.395Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm33844537"
+  ]
  },
  {
   "id": "nico:sm33844537",
@@ -64786,7 +65208,8 @@
   "a": "niconico:61786845",
   "firstSeen": "2026-10-08T14:36:47.387Z",
   "seed": true,
-  "pFilled": true
+  "pFilled": true,
+  "dup": "yt:QprnVxCveSY"
  },
  {
   "id": "yt:T7-AXotDMDE",
@@ -65241,7 +65664,10 @@
   "v": "鏡音リン",
   "a": "youtube:UCrGzu0MPKQpYF2AV2oG-VpQ",
   "firstSeen": "2026-10-09T12:20:22.337Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm33639476"
+  ]
  },
  {
   "id": "nico:sm33639476",
@@ -65273,7 +65699,8 @@
   "v": "鏡音リン",
   "a": "niconico:30201787",
   "firstSeen": "2026-10-08T14:36:47.357Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:5kIeUb5AE4s"
  },
  {
   "id": "yt:oRJBwaZ59fQ",
@@ -65307,7 +65734,10 @@
   "v": "flower",
   "a": "youtube:UCp13SxKXbhCS0lb6Ty774iQ",
   "firstSeen": "2026-10-09T12:20:22.394Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm33624822"
+  ]
  },
  {
   "id": "nico:sm33624822",
@@ -65341,7 +65771,8 @@
   "firstSeen": "2026-10-08T14:36:47.318Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:oRJBwaZ59fQ"
  },
  {
   "id": "yt:xG0eyljq0eA",
@@ -65803,7 +66234,8 @@
   "firstSeen": "2026-10-08T14:36:47.432Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:_xXenYRkbKs"
  },
  {
   "id": "yt:_xXenYRkbKs",
@@ -65831,7 +66263,10 @@
   "v": "flower",
   "a": "youtube:UCAwt148qKLXzPF3LHfN76Bw",
   "firstSeen": "2026-10-09T12:20:22.398Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm33536770"
+  ]
  },
  {
   "id": "yt:oEkGC2HV7rc",
@@ -65858,7 +66293,10 @@
   "v": "鏡音リン",
   "a": "youtube:UCvq3kUGY5Dbsdkr3DZx25Sw",
   "firstSeen": "2026-10-09T12:20:22.336Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm33510542"
+  ]
  },
  {
   "id": "nico:sm33510542",
@@ -65891,7 +66329,8 @@
   "v": "鏡音リン",
   "a": "niconico:4845576",
   "firstSeen": "2026-10-08T14:36:47.321Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:oEkGC2HV7rc"
  },
  {
   "id": "yt:T9R-NPhRi1M",
@@ -65968,7 +66407,10 @@
   "v": "flower",
   "a": "youtube:UCGGY3oTOQ9g9FCu9hLFJsqw",
   "firstSeen": "2026-10-09T12:20:22.400Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm33485782"
+  ]
  },
  {
   "id": "nico:sm33477835",
@@ -66034,7 +66476,8 @@
   "v": "flower",
   "a": "niconico:25646141",
   "firstSeen": "2026-10-08T14:36:47.412Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:rpEObcGvxP4"
  },
  {
   "id": "yt:kcOyfATM5Do",
@@ -66612,7 +67055,8 @@
   "v": "鏡音リン",
   "a": "youtube:UCOTR1tcOAhjgi6YukrPpZxg",
   "firstSeen": "2026-10-09T12:20:22.340Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm33260180"
  },
  {
   "id": "nico:sm33260180",
@@ -66645,7 +67089,10 @@
   "v": "鏡音リン",
   "a": "niconico:18874531",
   "firstSeen": "2026-10-08T14:36:47.364Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "yt:ye2J__KE9Yg"
+  ]
  },
  {
   "id": "nico:sm33250247",
@@ -67143,7 +67590,8 @@
   "v": "鏡音リン",
   "a": "youtube:UCDcL8RXDlhxvKDHVkb_nFzg",
   "firstSeen": "2026-10-09T12:20:22.354Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm33115376"
  },
  {
   "id": "nico:sm33115376",
@@ -67176,7 +67624,10 @@
   "v": "鏡音リン",
   "a": "niconico:40480256",
   "firstSeen": "2026-10-08T14:36:47.399Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "yt:IfL-bmSrueE"
+  ]
  },
  {
   "id": "nico:sm33080536",
@@ -68089,7 +68540,10 @@
   "v": "初音ミク",
   "a": "youtube:UCID4elKLzUCZVIVtXiXKA-w",
   "firstSeen": "2026-10-09T12:20:22.334Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm32852412"
+  ]
  },
  {
   "id": "nico:sm32852412",
@@ -68122,7 +68576,8 @@
   "firstSeen": "2026-10-08T14:36:47.370Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:bUbOc97FpUA"
  },
  {
   "id": "nico:sm32845556",
@@ -68272,7 +68727,10 @@
   "v": "鏡音リン",
   "a": "youtube:UCBR4N5DkgDt3PLTcfJB1iiw",
   "firstSeen": "2026-10-09T12:20:22.335Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm32798041"
+  ]
  },
  {
   "id": "nico:sm32798041",
@@ -68305,7 +68763,8 @@
   "v": "鏡音リン",
   "a": "niconico:276638",
   "firstSeen": "2026-10-08T14:36:47.318Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:Xg-qfsKN2_E"
  },
  {
   "id": "nico:sm32801250",
@@ -68878,7 +69337,10 @@
   "v": "初音ミク",
   "a": "youtube:UCSwShVpWrdSAV9PYpH5ojBQ",
   "firstSeen": "2026-10-09T12:20:22.397Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm32688081"
+  ]
  },
  {
   "id": "nico:sm32688081",
@@ -68912,7 +69374,8 @@
   "firstSeen": "2026-10-08T14:36:47.371Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:wM4phGebR4o"
  },
  {
   "id": "nico:sm32673722",
@@ -69063,7 +69526,10 @@
   "v": "初音ミク",
   "a": "youtube:UCMMBGMjrrWcRZmG_lW4jC-Q",
   "firstSeen": "2026-10-09T12:20:22.335Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm32659903"
+  ]
  },
  {
   "id": "nico:sm32659903",
@@ -69097,7 +69563,8 @@
   "firstSeen": "2026-10-08T14:36:47.413Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:M92c6pl10u0"
  },
  {
   "id": "nico:sm32658759",
@@ -69313,7 +69780,8 @@
   "v": "flower",
   "a": "youtube:UCp13SxKXbhCS0lb6Ty774iQ",
   "firstSeen": "2026-10-09T12:20:22.399Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm32592371"
  },
  {
   "id": "nico:sm32592371",
@@ -69346,7 +69814,10 @@
   "firstSeen": "2026-10-08T14:36:47.429Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:gF9vwjSinsU"
+  ]
  },
  {
   "id": "nico:sm32576768",
@@ -69481,7 +69952,10 @@
   "v": "初音ミク",
   "a": "youtube:UCam3IAA-nyfxRL8_wDQ35VA",
   "firstSeen": "2026-10-09T12:20:22.335Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm32528864"
+  ]
  },
  {
   "id": "nico:sm32528864",
@@ -69512,7 +69986,8 @@
   "a": "niconico:42004123",
   "firstSeen": "2026-10-08T14:36:47.394Z",
   "seed": true,
-  "pFilled": true
+  "pFilled": true,
+  "dup": "yt:qtuX4cHk-vE"
  },
  {
   "id": "nico:sm32525816",
@@ -69640,7 +70115,10 @@
   "v": "鏡音リン",
   "a": "youtube:UClxXuM2m0rIL9VCA1ds9HqA",
   "firstSeen": "2026-10-10T07:32:06.030Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm32498233"
+  ]
  },
  {
   "id": "nico:sm32498233",
@@ -69673,7 +70151,8 @@
   "v": "鏡音リン",
   "a": "niconico:112798",
   "firstSeen": "2026-10-08T14:36:47.399Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:jJirzFqSp-A"
  },
  {
   "id": "nico:sm32492001",
@@ -69926,7 +70405,8 @@
   "v": "鏡音リン",
   "a": "youtube:UClxXuM2m0rIL9VCA1ds9HqA",
   "firstSeen": "2026-10-09T12:20:22.335Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm20244918"
  },
  {
   "id": "yt:HdC2cB_DZok",
@@ -69963,7 +70443,8 @@
   "v": "鏡音リン",
   "a": "youtube:UClxXuM2m0rIL9VCA1ds9HqA",
   "firstSeen": "2026-10-09T12:20:22.341Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm20286605"
  },
  {
   "id": "nico:sm32442835",
@@ -70031,7 +70512,8 @@
   "v": "鏡音リン",
   "a": "youtube:UClxXuM2m0rIL9VCA1ds9HqA",
   "firstSeen": "2026-10-09T12:20:22.350Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm18783356"
  },
  {
   "id": "yt:eSI7RsjZy1E",
@@ -70066,7 +70548,8 @@
   "v": "鏡音リン",
   "a": "youtube:UClxXuM2m0rIL9VCA1ds9HqA",
   "firstSeen": "2026-10-09T12:20:22.336Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm15308214"
  },
  {
   "id": "yt:EjSvChCF9_M",
@@ -70103,7 +70586,8 @@
   "v": "鏡音リン",
   "a": "youtube:UClxXuM2m0rIL9VCA1ds9HqA",
   "firstSeen": "2026-10-09T12:20:22.347Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm14375135"
  },
  {
   "id": "nico:sm32425000",
@@ -70985,7 +71469,8 @@
   "v": "flower",
   "a": "youtube:UCp13SxKXbhCS0lb6Ty774iQ",
   "firstSeen": "2026-10-09T12:20:22.398Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm32195871"
  },
  {
   "id": "nico:sm32195871",
@@ -71019,7 +71504,10 @@
   "firstSeen": "2026-10-08T14:36:47.356Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:4oCuGeHWzCo"
+  ]
  },
  {
   "id": "nico:sm32196775",
@@ -71350,7 +71838,10 @@
   "v": "音街ウナ",
   "a": "youtube:UCvy_1uRgNNu-h3JJCJOGfpw",
   "firstSeen": "2026-10-09T12:20:22.338Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm32087162"
+  ]
  },
  {
   "id": "nico:sm32087162",
@@ -71385,7 +71876,8 @@
   "firstSeen": "2026-10-08T14:36:47.345Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:FT91CrPPAqc"
  },
  {
   "id": "nico:sm32086575",
@@ -71653,7 +72145,10 @@
   "v": "初音ミク",
   "a": "youtube:UCOTR1tcOAhjgi6YukrPpZxg",
   "firstSeen": "2026-10-09T12:20:22.403Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm36987825"
+  ]
  },
  {
   "id": "nico:sm32016153",
@@ -71764,7 +72259,10 @@
   "v": "初音ミク",
   "a": "youtube:UCmj0YkPwo47bPoBt9ma-bxg",
   "firstSeen": "2026-10-09T12:20:22.329Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm32012728"
+  ]
  },
  {
   "id": "nico:sm32012728",
@@ -71797,7 +72295,8 @@
   "firstSeen": "2026-10-08T14:36:47.330Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:YFg48Ai1SSo"
  },
  {
   "id": "nico:sm32012542",
@@ -72343,7 +72842,8 @@
   "v": "初音ミク",
   "a": "youtube:UCapHt19p6IJE_06CsVOYixw",
   "firstSeen": "2026-10-09T12:20:22.327Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm9714351"
  },
  {
   "id": "yt:b_cuMcDWwsI",
@@ -72396,7 +72896,8 @@
   "v": "初音ミク",
   "a": "youtube:UCapHt19p6IJE_06CsVOYixw",
   "firstSeen": "2026-10-09T12:20:22.330Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm8082467"
  },
  {
   "id": "yt:uMlv9VWAxko",
@@ -72449,7 +72950,8 @@
   "v": "初音ミク",
   "a": "youtube:UCapHt19p6IJE_06CsVOYixw",
   "firstSeen": "2026-10-10T07:32:06.018Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm14330479"
  },
  {
   "id": "nico:sm31865931",
@@ -72958,7 +73460,8 @@
   "v": "GUMI",
   "a": "youtube:UChFmH8dTXNPYCY3XeF9xtSA",
   "firstSeen": "2026-10-09T12:20:22.360Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm30274883"
  },
  {
   "id": "yt:P_CSdxSGfaA",
@@ -73011,7 +73514,10 @@
   "v": "初音ミク",
   "a": "youtube:UCapHt19p6IJE_06CsVOYixw",
   "firstSeen": "2026-10-09T12:20:22.324Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm31791630"
+  ]
  },
  {
   "id": "nico:sm31791630",
@@ -73044,7 +73550,8 @@
   "v": "初音ミク",
   "a": "niconico:11912389",
   "firstSeen": "2026-10-08T14:36:47.313Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:P_CSdxSGfaA"
  },
  {
   "id": "yt:SiqjnFhLq2U",
@@ -73078,7 +73585,8 @@
   "v": "初音ミク",
   "a": "youtube:UCSwShVpWrdSAV9PYpH5ojBQ",
   "firstSeen": "2026-10-09T12:20:22.395Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm31775813"
  },
  {
   "id": "nico:sm31775813",
@@ -73112,7 +73620,10 @@
   "firstSeen": "2026-10-08T14:36:47.337Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:SiqjnFhLq2U"
+  ]
  },
  {
   "id": "nico:sm31767226",
@@ -73629,7 +74140,10 @@
   "v": "初音ミク",
   "a": "youtube:UCGmO0S4S-AunjRdmxA6TQYg",
   "firstSeen": "2026-10-09T12:20:22.323Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm31685272"
+  ]
  },
  {
   "id": "nico:sm31685272",
@@ -73662,7 +74176,8 @@
   "v": "初音ミク",
   "a": "niconico:811012",
   "firstSeen": "2026-10-08T14:36:47.317Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:hxSg2Ioz3LM"
  },
  {
   "id": "nico:sm31680050",
@@ -73899,7 +74414,10 @@
   "v": "初音ミク",
   "a": "youtube:UCUCeZaZeJbEYAAzvMgrKOPQ",
   "firstSeen": "2026-10-09T12:20:22.322Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm31606995"
+  ]
  },
  {
   "id": "nico:sm31606995",
@@ -73932,7 +74450,8 @@
   "v": "初音ミク",
   "a": "niconico:380847",
   "firstSeen": "2026-10-08T14:36:47.315Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:AS4q9yaWJkI"
  },
  {
   "id": "nico:sm31597999",
@@ -76041,7 +76560,10 @@
   "v": "初音ミク",
   "a": "youtube:UCqlAKJQ0KjpyKuvGOkJCKfQ",
   "firstSeen": "2026-10-09T12:20:22.405Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm30960061"
+  ]
  },
  {
   "id": "nico:sm30960061",
@@ -76076,7 +76598,8 @@
   "firstSeen": "2026-10-08T14:36:47.342Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:hghTIJEF8dk"
  },
  {
   "id": "nico:sm30964600",
@@ -76847,7 +77370,8 @@
   "firstSeen": "2026-10-08T14:36:47.327Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:hUaVxNUCbc4"
  },
  {
   "id": "yt:hUaVxNUCbc4",
@@ -76875,7 +77399,10 @@
   "v": "初音ミク",
   "a": "youtube:UCID4elKLzUCZVIVtXiXKA-w",
   "firstSeen": "2026-10-09T12:20:22.328Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm30788596"
+  ]
  },
  {
   "id": "nico:sm30746418",
@@ -78006,7 +78533,8 @@
   "firstSeen": "2026-10-08T14:36:47.375Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:iP0Pi-JdJyM"
  },
  {
   "id": "nico:sm30376326",
@@ -78367,7 +78895,10 @@
   "v": "GUMI",
   "a": "niconico:582229",
   "firstSeen": "2026-10-08T14:36:47.365Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "yt:Eoj9UcNv3Eo"
+  ]
  },
  {
   "id": "nico:sm30267609",
@@ -79178,7 +79709,10 @@
   "v": "初音ミク",
   "a": "youtube:UCp13SxKXbhCS0lb6Ty774iQ",
   "firstSeen": "2026-10-09T12:20:22.330Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm30105817"
+  ]
  },
  {
   "id": "nico:sm30105817",
@@ -79213,7 +79747,8 @@
   "firstSeen": "2026-10-08T14:36:47.323Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:zLmopbS97aY"
  },
  {
   "id": "nico:sm30107114",
@@ -79401,7 +79936,8 @@
   "v": "初音ミク",
   "a": "niconico:811012",
   "firstSeen": "2026-10-08T14:36:47.321Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:8pGRdRhjX3o"
  },
  {
   "id": "yt:8pGRdRhjX3o",
@@ -79436,7 +79972,10 @@
   "v": "初音ミク",
   "a": "youtube:UCGmO0S4S-AunjRdmxA6TQYg",
   "firstSeen": "2026-10-09T12:20:22.324Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm30067009"
+  ]
  },
  {
   "id": "nico:sm30062739",
@@ -80134,7 +80673,10 @@
   "firstSeen": "2026-10-08T14:36:47.319Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:FMSkVQdVYtI"
+  ]
  },
  {
   "id": "nico:sm29813450",
@@ -82014,7 +82556,10 @@
   "v": "鏡音レン",
   "a": "youtube:UClxXuM2m0rIL9VCA1ds9HqA",
   "firstSeen": "2026-10-09T12:20:22.336Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm29081909"
+  ]
  },
  {
   "id": "nico:sm29081909",
@@ -82047,7 +82592,8 @@
   "v": "鏡音レン",
   "a": "niconico:112798",
   "firstSeen": "2026-10-08T14:36:47.323Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:u5mHVUwDf_0"
  },
  {
   "id": "nico:sm29073811",
@@ -82351,7 +82897,10 @@
   "v": "初音ミク",
   "a": "youtube:UCD7pKXtQ-ZFixYZp8NYAY1Q",
   "firstSeen": "2026-10-09T12:20:22.327Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm28974414"
+  ]
  },
  {
   "id": "nico:sm28974414",
@@ -82386,7 +82935,8 @@
   "firstSeen": "2026-10-08T14:36:47.327Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:o1iz4L-5zkQ"
  },
  {
   "id": "nico:sm28969932",
@@ -83036,7 +83586,10 @@
   "v": "鏡音リン",
   "a": "youtube:UClxXuM2m0rIL9VCA1ds9HqA",
   "firstSeen": "2026-10-09T12:20:22.345Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm28751658"
+  ]
  },
  {
   "id": "nico:sm28751658",
@@ -83069,7 +83622,8 @@
   "v": "鏡音リン",
   "a": "niconico:112798",
   "firstSeen": "2026-10-08T14:36:47.365Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:nEJ-m6KNddI"
  },
  {
   "id": "yt:mYHJPb9PuUM",
@@ -83096,7 +83650,10 @@
   "v": "初音ミク",
   "a": "youtube:UCMMBGMjrrWcRZmG_lW4jC-Q",
   "firstSeen": "2026-10-09T12:20:22.333Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm28749432"
+  ]
  },
  {
   "id": "nico:sm28749432",
@@ -83131,7 +83688,8 @@
   "firstSeen": "2026-10-08T14:36:47.339Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:mYHJPb9PuUM"
  },
  {
   "id": "nico:sm28729285",
@@ -84075,7 +84633,8 @@
   "v": "GUMI",
   "a": "youtube:UCK93VH8Pf23BV3H3sZmEbaA",
   "firstSeen": "2026-10-09T12:20:22.360Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm20973557"
  },
  {
   "id": "nico:sm28218037",
@@ -84353,7 +84912,10 @@
   "v": "flower",
   "a": "youtube:UCp13SxKXbhCS0lb6Ty774iQ",
   "firstSeen": "2026-10-09T12:20:22.398Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm28108489"
+  ]
  },
  {
   "id": "nico:sm28108489",
@@ -84387,7 +84949,8 @@
   "firstSeen": "2026-10-08T14:36:47.389Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:lEGG_JPE3UQ"
  },
  {
   "id": "nico:sm28067804",
@@ -84609,7 +85172,8 @@
   "v": "初音ミク",
   "a": "niconico:811012",
   "firstSeen": "2026-10-08T14:36:47.315Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:KushW6zvazM"
  },
  {
   "id": "nico:sm27966373",
@@ -84701,7 +85265,10 @@
   "v": "初音ミク",
   "a": "youtube:UCGmO0S4S-AunjRdmxA6TQYg",
   "firstSeen": "2026-10-09T12:20:22.326Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm27965309"
+  ]
  },
  {
   "id": "nico:sm27962865",
@@ -85634,7 +86201,10 @@
   "v": "GUMI",
   "a": "youtube:UCfdFNsR_tvF8bwp0KhMaJZQ",
   "firstSeen": "2026-10-09T12:20:22.359Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm27529228"
+  ]
  },
  {
   "id": "nico:sm27529228",
@@ -85667,7 +86237,8 @@
   "v": "GUMI",
   "a": "niconico:11450042",
   "firstSeen": "2026-10-08T14:36:47.435Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:dDK8fk17MqQ"
  },
  {
   "id": "yt:ZeDGODkAoxU",
@@ -85706,7 +86277,8 @@
   "v": "初音ミク",
   "a": "youtube:UCOTR1tcOAhjgi6YukrPpZxg",
   "firstSeen": "2026-10-09T12:20:22.404Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm27485100"
  },
  {
   "id": "nico:sm27501932",
@@ -85783,7 +86355,10 @@
   "p": "まふまふ",
   "a": "niconico:18874531",
   "firstSeen": "2026-10-08T15:10:08.653Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "yt:ZeDGODkAoxU"
+  ]
  },
  {
   "id": "yt:CAKi_pTzEIs",
@@ -91538,7 +92113,8 @@
   "v": "GUMI",
   "a": "youtube:UCCejN_rqhLnQt2uEM6v-uug",
   "firstSeen": "2026-10-09T12:20:22.358Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm22608740"
  },
  {
   "id": "nico:sm25034487",
@@ -91967,7 +92543,8 @@
   "v": "GUMI",
   "a": "youtube:UChFmH8dTXNPYCY3XeF9xtSA",
   "firstSeen": "2026-10-09T12:20:22.355Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm14583646"
  },
  {
   "id": "nico:sm24855716",
@@ -93437,7 +94014,10 @@
   "v": "GUMI",
   "a": "youtube:UCp13SxKXbhCS0lb6Ty774iQ",
   "firstSeen": "2026-10-09T12:20:22.354Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm30379034"
+  ]
  },
  {
   "id": "nico:sm24288200",
@@ -94576,7 +95156,10 @@
   "v": "初音ミク",
   "a": "youtube:UCEoSVgHlCKPVEHDIve3K7NA",
   "firstSeen": "2026-10-09T12:20:22.332Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm23762151"
+  ]
  },
  {
   "id": "nico:sm23762151",
@@ -94609,7 +95192,8 @@
   "v": "初音ミク",
   "a": "niconico:32047444",
   "firstSeen": "2026-10-08T14:36:47.330Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:p2Irc9NPCtk"
  },
  {
   "id": "yt:TXzfQ0cP1P0",
@@ -95046,7 +95630,10 @@
   "v": "GUMI",
   "a": "youtube:UCtGmulznR7e0KxpEdKu_nqw",
   "firstSeen": "2026-10-09T12:20:22.358Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm23668734"
+  ]
  },
  {
   "id": "nico:sm23668734",
@@ -95079,7 +95666,8 @@
   "v": "GUMI",
   "a": "niconico:811012",
   "firstSeen": "2026-10-08T14:36:47.418Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:Ak9S5ibCuyk"
  },
  {
   "id": "nico:sm23665267",
@@ -95181,7 +95769,10 @@
   "v": "初音ミク",
   "a": "youtube:UCMMBGMjrrWcRZmG_lW4jC-Q",
   "firstSeen": "2026-10-09T12:20:22.329Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm23648996"
+  ]
  },
  {
   "id": "nico:sm23648996",
@@ -95215,7 +95806,8 @@
   "firstSeen": "2026-10-08T14:36:47.330Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:ARt2fVT33Lw"
  },
  {
   "id": "nico:sm23628719",
@@ -96018,7 +96610,10 @@
   "v": "KAITO",
   "a": "youtube:UC-cGs-5HqIutyUrPa8mmDUA",
   "firstSeen": "2026-10-09T12:20:22.338Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm23304692"
+  ]
  },
  {
   "id": "nico:sm23304692",
@@ -96051,7 +96646,8 @@
   "a": "niconico:1101042",
   "firstSeen": "2026-10-08T14:36:47.341Z",
   "seed": true,
-  "pFilled": true
+  "pFilled": true,
+  "dup": "yt:E4tIHBx7bqc"
  },
  {
   "id": "nico:sm23240681",
@@ -96231,7 +96827,10 @@
   "v": "GUMI",
   "a": "youtube:UCfdFNsR_tvF8bwp0KhMaJZQ",
   "firstSeen": "2026-10-09T12:20:22.358Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm23189603"
+  ]
  },
  {
   "id": "nico:sm23189603",
@@ -96264,7 +96863,8 @@
   "v": "GUMI",
   "a": "niconico:11450042",
   "firstSeen": "2026-10-08T14:36:47.334Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:sFhKP57Nk1U"
  },
  {
   "id": "nico:sm23171530",
@@ -96571,7 +97171,8 @@
   "v": "巡音ルカ",
   "a": "youtube:UCDIcnP-mnl4OE8AO8Dbs-HQ",
   "firstSeen": "2026-10-09T12:20:22.357Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm12825985"
  },
  {
   "id": "yt:wDIUyyQqQ_M",
@@ -97776,7 +98377,8 @@
   "v": "GUMI",
   "a": "youtube:UCtGmulznR7e0KxpEdKu_nqw",
   "firstSeen": "2026-10-09T12:20:22.357Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm11398357"
  },
  {
   "id": "yt:B-A2eYlbrwQ",
@@ -97810,7 +98412,8 @@
   "v": "GUMI",
   "a": "youtube:UCtGmulznR7e0KxpEdKu_nqw",
   "firstSeen": "2026-10-09T12:20:22.356Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm10393864"
  },
  {
   "id": "yt:RLZez82cp4w",
@@ -97899,7 +98502,8 @@
   "v": "初音ミク",
   "a": "youtube:UCMMBGMjrrWcRZmG_lW4jC-Q",
   "firstSeen": "2026-10-09T12:20:22.333Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm18131841"
  },
  {
   "id": "nico:sm22639584",
@@ -98051,7 +98655,10 @@
   "firstSeen": "2026-10-08T14:36:47.381Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:3SkNrZnoK5w"
+  ]
  },
  {
   "id": "yt:5l_Uv5VtY9g",
@@ -98766,7 +99373,8 @@
   "v": "初音ミク",
   "a": "youtube:UCAEytT-UTImfk47pUbH_Paw",
   "firstSeen": "2026-10-09T12:20:22.406Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm22307037"
  },
  {
   "id": "yt:6kkSexCUzeA",
@@ -98793,7 +99401,8 @@
   "v": "GUMI",
   "a": "youtube:UCAEytT-UTImfk47pUbH_Paw",
   "firstSeen": "2026-10-09T12:20:22.407Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm19595505"
  },
  {
   "id": "yt:clPjNKWe6N0",
@@ -98822,7 +99431,8 @@
   "v": "初音ミク",
   "a": "youtube:UCAEytT-UTImfk47pUbH_Paw",
   "firstSeen": "2026-10-09T12:20:22.405Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm17910036"
  },
  {
   "id": "nico:sm22307037",
@@ -98857,7 +99467,10 @@
   "firstSeen": "2026-10-08T14:36:47.426Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:cPVD9tdxS0I"
+  ]
  },
  {
   "id": "nico:sm22287692",
@@ -99508,7 +100121,10 @@
   "v": "初音ミク",
   "a": "youtube:UCtGmulznR7e0KxpEdKu_nqw",
   "firstSeen": "2026-10-09T12:20:22.335Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm22061366"
+  ]
  },
  {
   "id": "nico:sm22061366",
@@ -99541,7 +100157,8 @@
   "v": "鏡音リン",
   "a": "niconico:5619789",
   "firstSeen": "2026-10-08T14:36:47.376Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:AqI97zHMoQw"
  },
  {
   "id": "nico:sm22042557",
@@ -99909,7 +100526,8 @@
   "v": "GUMI",
   "a": "youtube:UCUCeZaZeJbEYAAzvMgrKOPQ",
   "firstSeen": "2026-10-10T07:32:06.227Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm11809611"
  },
  {
   "id": "nico:sm21920703",
@@ -100371,7 +100989,10 @@
   "v": "初音ミク",
   "a": "youtube:UCtGmulznR7e0KxpEdKu_nqw",
   "firstSeen": "2026-10-09T12:20:22.331Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm21764582"
+  ]
  },
  {
   "id": "nico:sm21764582",
@@ -100404,7 +101025,8 @@
   "v": "初音ミク",
   "a": "niconico:811012",
   "firstSeen": "2026-10-08T14:36:47.328Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:sWvZfwY8beg"
  },
  {
   "id": "nico:sm21766184",
@@ -102399,7 +103021,10 @@
   "firstSeen": "2026-10-08T14:36:47.433Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:bcLYdxMusHc"
+  ]
  },
  {
   "id": "nico:sm20973193",
@@ -103962,7 +104587,10 @@
   "firstSeen": "2026-10-08T14:36:47.335Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:HdC2cB_DZok"
+  ]
  },
  {
   "id": "nico:sm20284832",
@@ -104153,7 +104781,10 @@
   "firstSeen": "2026-10-08T14:36:47.318Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:8oBV3jPTW4s"
+  ]
  },
  {
   "id": "yt:QgrEYyDZ1xU",
@@ -105546,7 +106177,10 @@
   "firstSeen": "2026-10-08T14:36:47.368Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:6kkSexCUzeA"
+  ]
  },
  {
   "id": "nico:sm19578845",
@@ -106026,7 +106660,10 @@
   "v": "GUMI",
   "a": "youtube:UCSs-Z9ZYxxe6TiAZRPtSGHg",
   "firstSeen": "2026-10-10T07:32:06.045Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm19361252"
+  ]
  },
  {
   "id": "nico:sm19361252",
@@ -106060,7 +106697,8 @@
   "a": "niconico:8559678",
   "firstSeen": "2026-10-08T14:36:47.369Z",
   "seed": true,
-  "pFilled": true
+  "pFilled": true,
+  "dup": "yt:eRa90TjoMZs"
  },
  {
   "id": "nico:sm19335770",
@@ -107630,7 +108268,10 @@
   "firstSeen": "2026-10-08T14:36:47.346Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:xauTD6nRMio"
+  ]
  },
  {
   "id": "nico:sm18773389",
@@ -108111,7 +108752,10 @@
   "firstSeen": "2026-10-08T14:36:47.321Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:oBgADhsOoog"
+  ]
  },
  {
   "id": "nico:sm18620807",
@@ -108358,7 +109002,8 @@
   "v": "GUMI",
   "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w",
   "firstSeen": "2026-10-10T07:32:06.050Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm16205143"
  },
  {
   "id": "nico:sm18494086",
@@ -109081,7 +109726,10 @@
   "firstSeen": "2026-10-08T14:36:47.340Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:8Z3TbMBfDM0"
+  ]
  },
  {
   "id": "nico:sm18112226",
@@ -109530,7 +110178,10 @@
   "firstSeen": "2026-10-08T14:36:47.340Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:clPjNKWe6N0"
+  ]
  },
  {
   "id": "yt:Nn7aQYyKsQM",
@@ -109905,7 +110556,10 @@
   "firstSeen": "2026-10-08T14:36:47.323Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:EBd1dk0kLTs"
+  ]
  },
  {
   "id": "nico:sm17699740",
@@ -111422,7 +112076,10 @@
   "v": "初音ミク",
   "a": "youtube:UCK4L0MQD-5HBDcJbD1yI8KQ",
   "firstSeen": "2026-10-09T12:20:22.334Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm16866804"
+  ]
  },
  {
   "id": "nico:sm16866804",
@@ -111455,7 +112112,8 @@
   "v": "初音ミク",
   "a": "niconico:1741662",
   "firstSeen": "2026-10-08T14:36:47.429Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:tktcOUi-x-A"
  },
  {
   "id": "nico:sm16866078",
@@ -113114,7 +113772,10 @@
   "v": "GUMI",
   "a": "niconico:1646151",
   "firstSeen": "2026-10-08T14:36:47.431Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "yt:0ciRrkoK5PA"
+  ]
  },
  {
   "id": "nico:sm16179659",
@@ -114510,7 +115171,10 @@
   "firstSeen": "2026-10-08T14:36:47.325Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:eSI7RsjZy1E"
+  ]
  },
  {
   "id": "nico:nm15300298",
@@ -115692,7 +116356,10 @@
   "v": "GUMI",
   "a": "niconico:582229",
   "firstSeen": "2026-10-08T14:36:47.316Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "yt:2-zPY0vrpjQ"
+  ]
  },
  {
   "id": "nico:sm14460202",
@@ -115820,7 +116487,10 @@
   "firstSeen": "2026-10-08T14:36:47.385Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:EjSvChCF9_M"
+  ]
  },
  {
   "id": "nico:sm14365789",
@@ -116018,7 +116688,10 @@
   "firstSeen": "2026-10-08T14:36:47.322Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:uMlv9VWAxko"
+  ]
  },
  {
   "id": "nico:sm14319655",
@@ -117284,7 +117957,10 @@
   "firstSeen": "2026-10-08T14:36:47.339Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:OKlZjKSP8PQ"
+  ]
  },
  {
   "id": "nico:sm13299882",
@@ -118076,7 +118752,10 @@
   "v": "巡音ルカ",
   "a": "niconico:2423537",
   "firstSeen": "2026-10-08T14:36:47.321Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "yt:xOKplMgHxxA"
+  ]
  },
  {
   "id": "nico:sm12821199",
@@ -119329,7 +120008,10 @@
   "firstSeen": "2026-10-08T14:36:47.313Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:HOz-9FzIDf0"
+  ]
  },
  {
   "id": "nico:sm11729204",
@@ -119879,7 +120561,10 @@
   "v": "GUMI",
   "a": "niconico:811012",
   "firstSeen": "2026-10-08T14:36:47.314Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "yt:DnLFVUi3oOU"
+  ]
  },
  {
   "id": "nico:sm11345448",
@@ -121334,7 +122019,10 @@
   "v": "GUMI",
   "a": "niconico:811012",
   "firstSeen": "2026-10-08T14:36:47.322Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "yt:B-A2eYlbrwQ"
+  ]
  },
  {
   "id": "nico:sm10385613",
@@ -122249,7 +122937,10 @@
   "firstSeen": "2026-10-08T14:36:47.313Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:vnw8zURAxkU"
+  ]
  },
  {
   "id": "nico:sm9711503",
@@ -124362,7 +125053,10 @@
   "a": "niconico:562367",
   "firstSeen": "2026-10-08T14:36:47.318Z",
   "seed": true,
-  "pFilled": true
+  "pFilled": true,
+  "alt": [
+   "yt:dSw8CucthGc"
+  ]
  },
  {
   "id": "nico:sm8082467",
@@ -124396,7 +125090,10 @@
   "firstSeen": "2026-10-08T14:36:47.318Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:b_cuMcDWwsI"
+  ]
  },
  {
   "id": "nico:sm8061508",
@@ -125082,7 +125779,10 @@
   "firstSeen": "2026-10-08T14:36:47.338Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:XKTDNQ2sTvM"
+  ]
  },
  {
   "id": "nico:sm7564289",
@@ -128385,7 +129085,8 @@
   "v": "鏡音レン",
   "a": "youtube:UC-cGs-5HqIutyUrPa8mmDUA",
   "firstSeen": "2026-10-09T12:20:22.352Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm4153727"
  },
  {
   "id": "nico:sm4153727",
@@ -128419,7 +129120,10 @@
   "a": "niconico:1101042",
   "firstSeen": "2026-10-08T14:36:47.343Z",
   "seed": true,
-  "pFilled": true
+  "pFilled": true,
+  "alt": [
+   "yt:myEsj-qf73A"
+  ]
  },
  {
   "id": "nico:sm4144858",
