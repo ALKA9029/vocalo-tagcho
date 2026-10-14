@@ -1817,6 +1817,13 @@
   "lastHit": "2026-10-12T09:00:07Z"
  },
  {
+  "id": "UC61K1rlTcu3whbzjlHIa2dA",
+  "added": "2026-10-14T23:23:48.922Z",
+  "name": "さんど。【よろずや】",
+  "genre": "J-POP",
+  "lastHit": "2026-10-12T03:00:29Z"
+ },
+ {
   "id": "UCansw_9voCUl4K_EkT-wjGQ",
   "added": "2026-10-12T11:09:58.604Z",
   "name": "MsCREW",
@@ -3012,14 +3019,6 @@
   "name": "Nightcord at 25:00 - Topic",
   "genre": "J-POP",
   "lastHit": "2022-01-18T10:06:04Z",
-  "pinned": true
- },
- {
-  "id": "UCm0qsuAG6RN2FYKZ_r1nPyg",
-  "added": "2026-10-09T12:23:27.151Z",
-  "name": "羊文学",
-  "genre": "アニソン",
-  "lastHit": "2022-01-11T15:00:33Z",
   "pinned": true
  }
 ]
