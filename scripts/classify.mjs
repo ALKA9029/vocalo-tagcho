@@ -340,17 +340,22 @@ export function fixSinger(by, title) {
 // 動画1件 → サイトで使う形
 export function classify(video, { fallbackGenre = "その他" } = {}) {
   const tags = video.tags || [];
+  // YouTube のタグは検索よけに「VOCALOID」「初音ミク」などを何でも入れているチャンネルが多いので、
+  // 歌声とボカロの判定には使わない（タイトルと説明文で判定する）
+  // （タグと同じ言葉がタイトルか説明文にもあるときだけ、そのタグを使う）
+  const hayYT = video.src === "youtube" ? normalize(`${video.title} ${(video.desc || video.descHead || "").slice(0, 600)}`) : "";
+  const vtags = video.src === "youtube" ? tags.filter(t => normalize(t).length >= 2 && hayYT.includes(normalize(t))) : tags;
   const kind = detectKind(video.title, tags, video.src);
   const parsed = video.src === "youtube" ? parseYouTube(video.title, video.uploader) : parseTitle(video.title);
   // 歌声は、登録済みの歌声名に当てはまるものだけを使う（「feat. じん」「feat. まふまふ」のような人の名前は歌声にしない）
   const pickVoice = x => { if (!x) return null; if (isVoice(x)) return canonicalVoice(x); const v = splitNames(x).voices[0]; return v ? canonicalVoice(v) : null; };
-  const rawVoice = pickVoice(parsed.voice) || pickVoice(detectVoice(video.title, tags));
+  const rawVoice = pickVoice(parsed.voice) || pickVoice(detectVoice(video.title, vtags));
   const voice = rawVoice;
   const desc = video.desc || video.descHead || "";
   // YouTubeで「ボカロ」として集めた動画でも、歌声やボカロの手がかりがなければボカロにしない
-  const vocaloHint = !!rawVoice || hasTag(tags, VOCALO_TAGS) || /VOCALOID|ボカロ|ボーカロイド|初音ミク|重音テト|可不|Synthesizer ?V|UTAU|CeVIO|보컬로이드|보카로/i.test(`${video.title} ${desc.slice(0, 300)}`);
+  const vocaloHint = !!rawVoice || hasTag(vtags, VOCALO_TAGS) || /VOCALOID|ボカロ|ボーカロイド|初音ミク|重音テト|可不|Synthesizer ?V|UTAU|CeVIO|보컬로이드|보카로/i.test(`${video.title} ${desc.slice(0, 300)}`);
   const fb = video.src === "youtube" && fallbackGenre === "ボカロ" && !vocaloHint ? "J-POP" : fallbackGenre;
-  let g = detectGenre(video.title, tags, fb, desc);
+  let g = detectGenre(video.title, vtags, fb, desc);
   // タイトルの【】などから歌声が見つかっていれば、ボカロ（アニソン判定は残す）
   if (rawVoice && isVoice(rawVoice) && (g === "J-POP" || g === "その他")) g = "ボカロ";
   // 「一体いつから - 重音テトSV カバー」のように、曲名の位置に歌声名が入ってしまったら、「 - 」の前を曲名にする
@@ -544,6 +549,12 @@ export function guessCoverGenre(items) {
 }
 
 // YouTubeで、ボカロの本家をよく出しているチャンネルの曲は、歌声の手がかりがなくてもボカロにする（Kikuo「愛して愛して愛して」など）
+// ニコニコにボカロの本家がある作者（ボカロP）の YouTube の本家は、タイトルや説明文に歌声名がなくてもボカロとみなす
+export function vocaloByCreator(items) {
+  const ps = new Set(items.filter(i => i.src === "niconico" && i.kind === "本家" && i.g === "ボカロ" && i.p).map(i => normalize(i.p)).filter(n => n.length >= 2));
+  for (const i of items) if (i.src === "youtube" && i.kind === "本家" && (i.g === "J-POP" || i.g === "その他") && i.p && ps.has(normalize(i.p))) i.g = "ボカロ";
+}
+
 export function guessChannelGenre(items) {
   const tally = new Map();
   for (const i of items) if (i.src === "youtube" && i.kind === "本家" && i.uploaderId) {
@@ -594,6 +605,9 @@ export function mergeSources(items) {
     const picked = [...best.values()].sort((a, b) => (a.date || "").localeCompare(b.date || "") || (a.src === "niconico" ? -1 : 1));
     const [main, ...rest] = picked;
     main.alt = rest.map(r => r.id);
+    // どちらかのサイトでボカロと分かっていればボカロ。歌声も分かっているほうから
+    if (picked.some(r => r.g === "ボカロ")) main.g = "ボカロ";
+    if (!main.v) main.v = picked.find(r => r.v)?.v;
     for (const r of rest) { r.dup = main.id; dupOf.set(r.id, main.id); }
   }
   // まとめた側に紐づいていた歌ってみたは、代表の曲に付け替える
@@ -605,6 +619,7 @@ export function linkCovers(items) {
   inferNamesFromTags(items);
   guessChannelGenre(items);
   fillCreators(items);
+  vocaloByCreator(items);
   const originals = new Map();
   for (const i of items.filter(x => x.kind === "本家").sort((a, b) => (a.date || "").localeCompare(b.date || ""))) {
     const k = normalize(i.t);
@@ -629,6 +644,14 @@ export function linkCovers(items) {
       }
     }
     if (o) { c.of = o.id; c.p = o.p || c.p; c.a = o.p ? o.a : (c.a || o.a); if (o.g !== "その他") c.g = o.g; else if (c.g === "その他") c.g = o.g; }
+  }
+  // 「歌ってみた」タグが付いていても、原曲（オリジナル曲）の作者本人がもう片方のサイトに出した同じ曲は本家（あとで1曲にまとめる）
+  const byIdLC = new Map(items.map(i => [i.id, i]));
+  for (const c of items) {
+    const o = c.kind === "歌ってみた" && c.of ? byIdLC.get(c.of) : null;
+    if (!o || o.src === c.src || !ORIGINAL_RE.test(o.title || "") || VERSION_RE.test(c.title || "")) continue;
+    if (!c.by || normalize(c.by) !== normalize(o.p || "")) continue;
+    c.kind = "本家"; c.p = o.p; c.a = o.a; c.g = o.g; delete c.of; delete c.by; delete c.self;
   }
   mergeSources(items);
   markSelfCovers(items);
