@@ -1646,6 +1646,13 @@
   "lastHit": "2026-10-13T08:12:02Z"
  },
  {
+  "id": "UCmr9bYmymcBmQ1p2tLBRvwg",
+  "name": "櫻坂46 OFFICIAL YouTube CHANNEL",
+  "added": "2026-10-09T12:06:54.468Z",
+  "genre": "J-POP",
+  "lastHit": "2026-10-13T05:11:59Z"
+ },
+ {
   "id": "UCWU3QKablvVEK6JcEyEC58w",
   "added": "2026-10-13T21:45:48.810Z",
   "name": "メガテラゼロ",
@@ -1871,6 +1878,13 @@
   "lastHit": "2026-10-10T12:00:14Z"
  },
  {
+  "id": "UCv0hpsgpGWYdBsotEA3_5fQ",
+  "added": "2026-10-14T11:30:04.768Z",
+  "name": "あかつき るき / Akatsuki Luci",
+  "genre": "J-POP",
+  "lastHit": "2026-10-10T11:00:10Z"
+ },
+ {
   "id": "UC_4tXjqecqox5Uc05ncxpxg",
   "name": "椎名唯華 / Shiina Yuika",
   "added": "2026-10-09T12:06:54.468Z",
@@ -2027,13 +2041,6 @@
   "name": "RADWIMPS",
   "genre": "J-POP",
   "lastHit": "2026-10-09T12:00:09Z"
- },
- {
-  "id": "UCmr9bYmymcBmQ1p2tLBRvwg",
-  "name": "櫻坂46 OFFICIAL YouTube CHANNEL",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "J-POP",
-  "lastHit": "2026-10-09T12:00:08Z"
  },
  {
   "id": "UCkHCieVhC_HXVRmnWGWcB1A",
@@ -3015,14 +3022,6 @@
   "name": "藍井エイル Official YouTube Channel",
   "genre": "アニソン",
   "lastHit": "2021-10-19T03:00:23Z",
-  "pinned": true
- },
- {
-  "id": "UCntvqJUV00agueCf5h-y-Sw",
-  "added": "2026-10-09T12:23:27.151Z",
-  "name": "Belle  Official  YouTube Channel",
-  "genre": "アニソン",
-  "lastHit": "2021-08-18T05:07:32Z",
   "pinned": true
  }
 ]
