@@ -398,6 +398,7 @@ async function lookupOriginalsYouTube(items) {
     .filter(i => { const k = "yt|" + normalize(i.t); if (seen.has(k)) return false; seen.add(k); const c = cache[k]; return !c || (!c.id && c.checked < recheck); })
     .slice(0, cfg.maxPerRun || 30);
   const out = [];
+  let checked = 0;
   for (const c of todo) {
     const ck = "yt|" + normalize(c.t);
     // 「アーティスト名」の手がかり：歌ってみたのタイトルの「曲名 / アーティスト」「アーティスト - 曲名」から
@@ -406,9 +407,10 @@ async function lookupOriginalsYouTube(items) {
       part: "id", type: "video", q: [c.t, artist].filter(Boolean).join(" "), regionCode: "JP", relevanceLanguage: "ja",
       videoCategoryId: "10", maxResults: "10", key,
     });
-    await sleep(1000);
+    await sleep(3000);
     const res = await ytFetch("https://www.googleapis.com/youtube/v3/search?" + params);
-    if (!res.ok) { console.warn(`原曲さがし（YouTube）: HTTP ${res.status}、今日はここまで`); break; }
+    if (!res.ok) { console.warn(`原曲さがし（YouTube）: HTTP ${res.status} ${(await res.text()).slice(0, 300).replace(/\s+/g, " ")}、今日はここまで`); break; }
+    checked++;
     const ids = ((await res.json()).items || []).map(it => it.id?.videoId).filter(Boolean);
     const vids = (await ytVideos(ids, key)).filter(v => isJapanese(v) && !isNoise(v));
     let hit = null;
@@ -427,7 +429,7 @@ async function lookupOriginalsYouTube(items) {
     console.log(`原曲さがし（YouTube）「${c.t}」→ ${hit ? `${hit.title}（${hit.uploader}）` : "見つからず"}`);
   }
   await writeFile(path("data/original-lookup.json"), JSON.stringify(cache) + "\n");
-  console.log(`原曲さがし（YouTube）: ${todo.length}曲を調べて、原曲を${out.length}曲見つけた`);
+  console.log(`原曲さがし（YouTube）: ${checked}曲を調べて、原曲を${out.length}曲見つけた`);
   return out;
 }
 
