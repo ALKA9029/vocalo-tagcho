@@ -77,7 +77,8 @@ input[type=search]{flex:1 1 200px}
 .title{font-weight:700;font-size:17px;margin:0;line-height:1.35;min-width:0}
 .title a{color:inherit;text-decoration:none}
 .title a:hover{color:var(--accent);text-decoration:underline}
-.title .ext{font-size:12px;color:var(--muted);margin-left:4px}
+.title .ext{font-size:12px;color:var(--muted);margin-left:6px;text-decoration:none;padding:2px 4px}
+.title a.ext:hover{color:var(--accent);text-decoration:none}
 .more{font:inherit;font-size:12px;flex:none;background:none;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:2px 10px;cursor:pointer;white-space:nowrap}
 .more[aria-expanded="true"]{color:var(--ink);border-color:var(--ink)}
 .meta{font-size:13px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
@@ -258,6 +259,13 @@ const original = i => i.of ? ITEM[i.of] : null;
 // 曲ページ・作者ページ（scripts/pages.mjs が書き出す）へのURL
 let CREATOR_PAGE = {};
 const songPage = i => i && i.kind === "本家" ? "song/" + i.id.replace(/^nico:/, "nico-").replace(/^yt:/, "yt-") + "/" : null;
+const pageSlug = id => id.replace(/^nico:/, "nico-").replace(/^yt:/, "yt-");
+// 曲名を押したときの行き先：本家は曲ページ、歌ってみたは原曲のページのその行。ページがなければ null
+function detailUrl(i){
+  if (i.kind === "本家") return songPage(i);
+  const o = original(i);
+  return o && o.kind === "本家" ? songPage(o) + "#c-" + pageSlug(i.id) : null;
+}
 const creatorPage = a => a && CREATOR_PAGE[a] ? CREATOR_PAGE[a].replace(/^\//, "") : null;
 
 function creditText(i){
@@ -267,10 +275,10 @@ function creditText(i){
 
 const who = (label, title, person) => el("button",{class:"who", title, onclick:e=>{ e.stopPropagation(); applyFilter(()=>state.person=person); }}, label);
 function creditEls(i){
-  const artist = i.p ? who(i.p, `${i.p}の曲を表示`, {label:`作者：${i.p}`, match:x=>x.a===i.a, a:i.a}) : null;
-  const voice = i.v ? who(i.v, `${i.v}が歌う曲を表示`, {label:`歌声：${i.v}`, match:x=>x.v===i.v}) : null;
+  const artist = i.p ? who(i.p, `${i.p}の曲を表示`, {label:`作者：${i.p}`, match:x=>x.a===i.a, a:i.a, key:"a:"+i.a}) : null;
+  const voice = i.v ? who(i.v, `${i.v}が歌う曲を表示`, {label:`歌声：${i.v}`, match:x=>x.v===i.v, key:"v:"+i.v}) : null;
   if (i.kind === "歌ってみた"){
-    const singer = i.by ? who(i.by, `${i.by}の歌ってみたを表示`, {label:`歌い手：${i.by}`, match:x=>x.by===i.by}) : el("span",{class:"unknown"},"歌い手不明");
+    const singer = i.by ? who(i.by, `${i.by}の歌ってみたを表示`, {label:`歌い手：${i.by}`, match:x=>x.by===i.by, key:"b:"+i.by}) : el("span",{class:"unknown"},"歌い手不明");
     return [el("span",{}, singer, artist ? "（原曲：" : null, artist, artist ? "）" : null)];
   }
   if (!artist && !voice) return [el("span",{class:"unknown"},"作者不明")];
@@ -401,6 +409,7 @@ function render(){
 
   const items = visibleItems();
   $("#count").textContent = ITEMS.length ? `${items.length.toLocaleString("ja-JP")}曲` : "";
+  syncUrl();
   updateFoldInfo();
   const list = $("#list");
   list.style.minHeight = list.offsetHeight + "px";
@@ -485,7 +494,10 @@ function buildItem(i, n, c){
     thumbEl(i),
     el("div",{class:"body"},
       el("div",{class:"head"},
-        el("h2",{class:"title"}, el("a",{href:i.url,target:"_blank",rel:"noopener", title:i.title, onclick:e=>e.stopPropagation()}, i.t, el("span",{class:"ext"},"↗"))),
+        el("h2",{class:"title"}, ...(detailUrl(i)
+          ? [el("a",{href:detailUrl(i), title:`${i.title}（曲のページを開く）`, onclick:e=>{ e.stopPropagation(); saveView(); }}, i.t),
+             el("a",{class:"ext", href:i.url, target:"_blank", rel:"noopener", title:`${i.src==="youtube"?"YouTube":"ニコニコ動画"}で開く`, "aria-label":`${i.src==="youtube"?"YouTube":"ニコニコ動画"}で開く`, onclick:e=>e.stopPropagation()}, "↗")]
+          : [el("a",{href:i.url,target:"_blank",rel:"noopener", title:i.title, onclick:e=>e.stopPropagation()}, i.t, el("span",{class:"ext"},"↗"))])),
         el("button",{class:"more","data-k":`${i.id}|rel`,"aria-expanded":String(isRel), onclick:e=>{ e.stopPropagation(); toggleRel(); }}, isRel?"関連を閉じる":"関連 ▾")),
       el("div",{class:"meta"},
         el("button",{class:"badge genre", title:`${i.g}だけ表示`, onclick:e=>{ e.stopPropagation(); applyFilter(()=>state.genre=i.g); }}, i.g),
@@ -603,15 +615,53 @@ $("#sort").addEventListener("change", e=>{ state.sort = e.target.value; state.sh
 $("#period").addEventListener("change", e=>{ state.period = e.target.value; state.shown = PAGE; render(); });
 $("#more").addEventListener("click", ()=>{ state.shown += PAGE; render(); });
 
-// 曲ページ・タグページからのリンク（?id=曲 / ?tag=タグ / ?q=検索語）で開いたとき
+// ---------- URL と表示状態 ----------
+// 絞り込みをURLに入れておく（曲ページから「戻る」で帰ってきたときや、URLを人に送ったときに同じ絞り込みになる）
+// 曲ページ・タグページからのリンク（?id=曲 / ?tag=タグ / ?q=検索語）にも対応
 let pendingId = null;
+function personFromKey(key){
+  const kind = key.slice(0, 2), v = key.slice(2);
+  if (kind === "a:") { const x = ITEMS.find(i=>i.a===v && i.p); return x ? {label:`作者：${x.p}`, match:i=>i.a===v, a:v, key} : null; }
+  if (kind === "v:") return {label:`歌声：${v}`, match:i=>i.v===v, key};
+  if (kind === "b:") return {label:`歌い手：${v}`, match:i=>i.by===v, key};
+  return null;
+}
 function applyUrlParams(){
   const P = new URLSearchParams(location.search);
-  const q = P.get("q"), tag = P.get("tag"), id = P.get("id");
+  const q = P.get("q"), id = P.get("id");
   if (q) { state.q = q; $("#q").value = q; }
-  if (tag && TAGS.includes(tag)) state.filter.add(tag);
+  for (const t of (P.get("tag") || "").split(",")) if (TAGS.includes(t)) state.filter.add(t);
+  if (["ボカロ","J-POP","アニソン","その他"].includes(P.get("g"))) state.genre = P.get("g");
+  if (["本家","歌ってみた"].includes(P.get("k"))) state.kind = P.get("k");
+  if (["1","7","30","182","365"].includes(P.get("period"))) { state.period = P.get("period"); $("#period").value = state.period; }
+  if (["new","votes"].includes(P.get("sort"))) { state.sort = P.get("sort"); $("#sort").value = state.sort; }
+  if (P.get("who")) state.person = personFromKey(P.get("who"));
   if (id) pendingId = id;
 }
+function syncUrl(){
+  if (!ITEMS.length) return;
+  const P = new URLSearchParams();
+  if (state.q) P.set("q", state.q);
+  if (state.genre) P.set("g", state.genre);
+  if (state.kind) P.set("k", state.kind);
+  if (state.period) P.set("period", state.period);
+  if (state.sort !== "views") P.set("sort", state.sort);
+  if (state.filter.size) P.set("tag", [...state.filter].join(","));
+  if (state.person?.key) P.set("who", state.person.key);
+  const qs = P.toString();
+  const next = qs ? "?" + qs : location.pathname;
+  if (location.search !== (qs ? "?" + qs : "")) history.replaceState(null, "", next);
+}
+// 曲ページへ移る前に、スクロール位置・表示件数・開いていた関連を覚えておく（戻ってきたら元の場所に）
+const VIEW_KEY = "tagtune:view";
+function saveView(){
+  try { sessionStorage.setItem(VIEW_KEY, JSON.stringify({ search: location.search, y: Math.round(window.scrollY), shown: state.shown, rel: state.rel })); } catch {}
+}
+function loadView(){
+  try { const v = JSON.parse(sessionStorage.getItem(VIEW_KEY) || "null"); return v && v.search === location.search ? v : null; } catch { return null; }
+}
+window.addEventListener("pagehide", saveView);
+if ("scrollRestoration" in history) history.scrollRestoration = "manual";
 try { if (localStorage.getItem(FOLD_KEY) === "1") $(".bar").classList.add("folded"); } catch {}
 setFold($(".bar").classList.contains("folded"), false);
 render();
@@ -622,13 +672,20 @@ render();
     CREATOR_PAGE = pages?.creators || {};
     for (const i of songs) i._t = Date.parse(i.date) || 0;
     ITEMS = songs; ITEM = Object.fromEntries(ITEMS.map(i=>[i.id,i]));
-    baseNote = `${ITEMS.length.toLocaleString("ja-JP")}曲を収録${meta ? `（${fmtDate(meta.updatedAt)}時点）` : ""}。サムネの▶でこのページで再生、曲名の↗で動画サイトを開く、名前やバッジで絞り込み、行を押すと関連曲。作者名が空の曲は、読み取りを改善中。${sb ? "「＋ タグをつける」から、聴いた印象を投票してね。みんなの票で3票以上集まったタグが定着するよ。" : "タグの投票は今はこの端末にだけ保存されるよ（みんなの集計は準備中）。"}`;
+    baseNote = `${ITEMS.length.toLocaleString("ja-JP")}曲を収録${meta ? `（${fmtDate(meta.updatedAt)}時点）` : ""}。サムネの▶でこのページで再生、曲名で曲のページ、↗で動画サイトを開く、名前やバッジで絞り込み、行を押すと関連曲。作者名が空の曲は、読み取りを改善中。${sb ? "「＋ タグをつける」から、聴いた印象を投票してね。みんなの票で3票以上集まったタグが定着するよ。" : "タグの投票は今はこの端末にだけ保存されるよ（みんなの集計は準備中）。"}`;
     setStatus(baseNote);
     applyUrlParams();
+    const view = pendingId ? null : loadView();
+    if (view) { state.shown = Math.max(PAGE, view.shown || PAGE); state.rel = view.rel && ITEM[view.rel] ? view.rel : null; }
     render();
+    if (view) window.scrollTo(0, view.y || 0);
     if (pendingId && ITEM[pendingId]) jump(pendingId);
-    // 票を読み込んだあとに一覧を描き直すので、リンクで開いた曲の位置にもう一度合わせる
-    startVotes().finally(()=>{ if (pendingId && window.scrollY < 50) { const n = document.getElementById("item-"+pendingId); if (n) scrollToItem(n, false); } });
+    // 票を読み込んだあとに一覧を描き直すので、リンクで開いた曲・戻ってきたときの位置にもう一度合わせる
+    const y0 = window.scrollY;
+    startVotes().finally(()=>{
+      if (pendingId && window.scrollY < 50) { const n = document.getElementById("item-"+pendingId); if (n) scrollToItem(n, false); }
+      else if (view && Math.abs(window.scrollY - y0) < 5) window.scrollTo(0, view.y || 0);
+    });
   } catch {
     setStatus("曲データを読み込めなかったよ。ページを開き直してみて。");
   }

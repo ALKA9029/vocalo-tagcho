@@ -52,6 +52,14 @@ const creatorSlug = a => /^(youtube|nico|niconico):/.test(a)
 const fmtDate = d => d ? d.slice(0, 10).replace(/-/g, "/") : "";
 const srcName = i => i.src === "youtube" ? "YouTube" : "ニコニコ動画";
 const playUrl = id => `/?id=${encodeURIComponent(id)}`;
+// ページ内で再生する公式埋め込みプレイヤーのURL（埋め込み禁止の動画は null）
+function embedUrl(i) {
+  const vid = i.id.slice(i.id.indexOf(":") + 1);
+  if (i.src === "youtube" && !i.ne) return `https://www.youtube.com/embed/${encodeURIComponent(vid)}?autoplay=1&playsinline=1&rel=0`;
+  if (i.src === "niconico" && /^(sm|so|nm)\d+$/.test(vid)) return `https://embed.nicovideo.jp/watch/${vid}?autoplay=1`;
+  return null;
+}
+const playAttrs = (i, label) => `data-embed="${esc(embedUrl(i))}" data-title="${esc(label)}" data-src="${esc(srcName(i))}" data-url="${esc(i.url)}"`;
 const tagUrl = t => `/tag/${TAG_SLUG[t]}/`;
 const byNewest = (a, b) => (Date.parse(b.date) || 0) - (Date.parse(a.date) || 0);
 const credit = i => [i.p, i.v && `feat. ${i.v}`].filter(Boolean).join(" ");
@@ -109,6 +117,8 @@ ${body}
   <a href="/about.html#contact">お問い合わせ・掲載の取り下げ</a>
 </footer>
 </div>
+<aside id="player" hidden aria-label="再生中の曲"></aside>
+<script src="/assets/page.js" defer></script>
 </body>
 </html>
 `;
@@ -120,7 +130,7 @@ const tagChips = (id, emptyText) => {
   return `<div class="tags">${t.map(([tag, n]) => `<a class="tag${n >= FIXED_AT ? " fixed" : ""}" href="${tagUrl(tag)}">${esc(tag)}<span class="n">${n}</span></a>`).join("")}</div>`;
 };
 const thumbImg = i => i.thumb ? `<img src="${esc(i.thumb)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">` : "";
-const li = (i, name, sub) => `<li${i.thumb ? "" : ' class="nothumb"'}>${thumbImg(i)}<div><div class="name">${name}</div><div class="sub">${sub}</div></div></li>`;
+const li = (i, name, sub, id) => `<li${id ? ` id="${id}"` : ""}${i.thumb ? "" : ' class="nothumb"'}>${thumbImg(i)}<div><div class="name">${name}</div><div class="sub">${sub}</div></div></li>`;
 const creatorLink = i => { const c = creators.get(i.a); return c ? `<a href="${c.url}">${esc(i.p)}</a>` : esc(i.p); };
 
 // ---------- 曲ページ ----------
@@ -139,14 +149,17 @@ function songPage(i) {
   const others = c ? c.songs.filter(x => x.id !== i.id).slice(0, 12) : [];
   const body = `
 <header class="hero">
-  ${i.thumb ? `<img class="thumb" src="${esc(i.thumb)}" alt="「${esc(i.t)}」のサムネイル" referrerpolicy="no-referrer">` : ""}
+  ${i.thumb ? (embedUrl(i)
+    ? `<button type="button" class="thumbbtn" ${playAttrs(i, i.t)} aria-label="「${esc(i.t)}」をこのページで再生"><img class="thumb" src="${esc(i.thumb)}" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>`
+    : `<img class="thumb" src="${esc(i.thumb)}" alt="「${esc(i.t)}」のサムネイル" referrerpolicy="no-referrer">`) : ""}
   <div>
     <h1>${esc(i.t)}</h1>
     <p class="credit">${creditLine}</p>
     <p class="meta"><span class="badge genre">${esc(i.g)}</span><span class="badge">本家</span><span>${srcName(i)}</span><span>${fmtDate(i.date)} 投稿</span></p>
     <p class="actions">
-      <a class="btn primary" href="${playUrl(i.id)}">▶ TagTuneで聴く</a>
-      <a class="btn" href="${esc(i.url)}" target="_blank" rel="noopener">${srcName(i)}で見る ↗</a>
+      ${embedUrl(i) ? `<button type="button" class="btn primary" ${playAttrs(i, i.t)}>▶ ここで聴く</button>` : ""}
+      <a class="btn${embedUrl(i) ? "" : " primary"}" href="${esc(i.url)}" target="_blank" rel="noopener">${srcName(i)}で見る ↗</a>
+      <a class="btn" href="${playUrl(i.id)}">TagTuneでタグをつける</a>
     </p>
   </div>
 </header>
@@ -160,8 +173,9 @@ function songPage(i) {
 <section>
   <h2>「${esc(i.t)}」の歌ってみた${covers.length ? `（${covers.length}件）` : ""}</h2>
   ${covers.length ? `<ul class="list">${covers.map(x => li(x,
-      `<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.by || "歌い手不明")}</a>`,
-      `${x.self ? '<span class="badge self">セルフカバー</span>' : ""}<span>${srcName(x)}</span><span>${fmtDate(x.date)}</span><a href="${playUrl(x.id)}">▶ TagTuneで聴く</a>${tagsOf(x.id).slice(0, 3).map(([t]) => `<a href="${tagUrl(t)}">#${esc(t)}</a>`).join("")}`
+      `${esc(x.by || "歌い手不明")}`,
+      `${x.self ? '<span class="badge self">セルフカバー</span>' : ""}${embedUrl(x) ? `<button type="button" class="mini" ${playAttrs(x, `${i.t}（${x.by || "歌ってみた"}）`)}>▶ ここで聴く</button>` : ""}<a href="${esc(x.url)}" target="_blank" rel="noopener">${srcName(x)} ↗</a><span>${fmtDate(x.date)}</span>${tagsOf(x.id).slice(0, 3).map(([t]) => `<a href="${tagUrl(t)}">#${esc(t)}</a>`).join("")}`,
+      `c-${songSlug(x.id)}`
     )).join("")}</ul>` : `<p class="note">TagTuneではまだ見つかっていません。</p>`}
 </section>
 ${others.length ? `

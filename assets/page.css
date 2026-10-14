@@ -63,3 +63,22 @@ section{display:flex;flex-direction:column;gap:10px}
 .chips{display:flex;gap:8px;flex-wrap:wrap}
 footer{border-top:1px solid var(--line);padding-top:16px;font-size:13px;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap}
 footer a{color:var(--muted)}
+
+/* ページ内再生（曲ページの ▶ ここで聴く） */
+button.btn{font:inherit;font-size:14px;cursor:pointer}
+.thumbbtn{position:relative;display:block;width:100%;border:0;padding:0;background:none;cursor:pointer;border-radius:10px}
+.thumbbtn .play{position:absolute;left:10px;bottom:10px;width:40px;height:40px;border-radius:50%;background:rgba(0,0,0,.62);color:#fff;display:grid;place-items:center;font-size:16px;padding-left:3px}
+.thumbbtn:hover .play,.thumbbtn.playing .play{background:var(--accent)}
+.thumbbtn.playing{outline:2px solid var(--accent);outline-offset:3px}
+.mini{font:inherit;font-size:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:1px 10px;cursor:pointer}
+.mini:hover,.mini.playing{border-color:var(--accent);color:var(--accent)}
+.mini.playing::after{content:"（再生中）"}
+.list li:target{background:var(--accent-soft);border-radius:8px;padding-inline:8px;margin-inline:-8px;scroll-margin-top:16px}
+#player{position:fixed;z-index:5;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:400px;max-width:calc(100vw - 32px);background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.28);overflow:hidden}
+#player .ph{display:flex;align-items:center;gap:8px;padding:8px 8px 8px 12px;font-size:13px}
+#player .ph a{flex:1;min-width:0;color:var(--ink);font-weight:700;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#player .ph a:hover{color:var(--accent)}
+#player .ph button{font:inherit;flex:none;background:var(--bg);border:1px solid var(--line);color:var(--muted);border-radius:999px;width:28px;height:28px;cursor:pointer;padding:0;line-height:1}
+#player iframe{display:block;width:100%;aspect-ratio:16/9;border:0;background:#000}
+body.has-player .wrap{padding-bottom:320px}
+@media (max-width:520px){#player{right:0;left:0;bottom:0;width:auto;max-width:none;border-radius:14px 14px 0 0;border-inline:0;border-bottom:0;padding-bottom:env(safe-area-inset-bottom,0px)}body.has-player .wrap{padding-bottom:calc(56.25vw + 64px)}}
