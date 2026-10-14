@@ -52,7 +52,7 @@ h1 span{color:var(--accent)}
 .bar{display:flex;flex-direction:column;gap:10px;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding-block:8px;z-index:2}
 .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 input[type=search],select{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px 12px;min-width:0}
-input[type=search]{flex:1 1 200px}
+input[type=search]{flex:1 1 140px}
 .label{font-size:11px;letter-spacing:.12em;color:var(--muted);font-family:var(--f-mono);text-transform:uppercase}
 .seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface)}
 .seg button{font:inherit;font-size:13px;background:none;border:0;color:var(--ink);padding:6px 12px;cursor:pointer}
@@ -140,6 +140,14 @@ button.thumb:hover .play{background:var(--accent)}
 #player iframe{display:block;width:100%;aspect-ratio:16/9;border:0;background:#000}
 body.has-player .wrap{padding-bottom:320px}
 @media (max-width:520px){#player{right:0;left:0;bottom:0;width:auto;max-width:none;border-radius:14px 14px 0 0;border-inline:0;border-bottom:0;padding-bottom:env(safe-area-inset-bottom,0px)}body.has-player .wrap{padding-bottom:calc(56.25vw + 64px)}}
+.shuffle{font:inherit;font-size:13px;flex:none;background:var(--accent);color:var(--accent-ink);border:1px solid var(--accent);border-radius:10px;padding:8px 12px;cursor:pointer;white-space:nowrap}
+.shuffle:hover{filter:brightness(1.08)}
+@media (max-width:420px){.shuffle .txt{display:none}}
+#player .ph .mode{flex:none;font-size:15px}
+#player .ph .pg{flex:none;font-size:12px;font-weight:500;color:var(--hot);text-decoration:none;white-space:nowrap}
+#player .ph .pg:hover{text-decoration:underline}
+#player .ph button.next{font-size:13px}
+#player .from{margin:0;padding:0 12px 8px;font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .fold{font:inherit;font-size:13px;flex:none;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:8px 12px;cursor:pointer;white-space:nowrap}
 .fold:hover{border-color:var(--accent)}
 .fold .n{display:inline-block;min-width:18px;margin-left:2px;padding:0 5px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-size:11px;font-family:var(--f-mono);text-align:center}
@@ -163,6 +171,7 @@ footer a:hover{color:var(--accent)}
   <div class="bar">
     <div class="row">
       <input type="search" id="q" placeholder="曲名・作者・歌声・歌い手で検索" aria-label="検索">
+      <button type="button" class="shuffle" id="shuffle" title="今の絞り込みの中から、ランダムに曲を流す（1曲終わると次の曲へ）">🎲<span class="txt"> おまかせ</span></button>
       <button type="button" class="fold" id="fold" aria-expanded="true" aria-controls="filters">絞り込み <span class="arrow" aria-hidden="true">▴</span></button>
     </div>
     <p class="summary" id="summary" hidden></p>
@@ -225,7 +234,7 @@ const FIXED_AT = 3;
 const PAGE = 40;
 
 let ITEMS = [], ITEM = {};
-const state = { serverCounts:{}, serverMine:{}, mine:{}, open:null, rel:null, play:null, q:"", genre:"", kind:"", sort:"views", period:"", person:null, filter:new Set(), shown:PAGE, canWrite:true, uid:null, db:null };
+const state = { serverCounts:{}, serverMine:{}, mine:{}, open:null, rel:null, play:null, shuffle:null, q:"", genre:"", kind:"", sort:"views", period:"", person:null, filter:new Set(), shown:PAGE, canWrite:true, uid:null, db:null };
 const $ = s => document.querySelector(s);
 
 // 表示する票数 = みんなの票数（最後に読み込んだ時点）から自分の分を引いて、今の自分の票を足したもの
@@ -444,8 +453,9 @@ const sources = i => [i, ...(i.alt || [])];
 const srcLabel = src => src === "youtube" ? "YouTube" : "ニコニコ";
 function embedOf(v){
   const vid = v.id.slice(v.id.indexOf(":") + 1);
-  if (v.src === "youtube" && !v.ne) return `https://www.youtube.com/embed/${encodeURIComponent(vid)}?autoplay=1&playsinline=1&rel=0`;
-  if (v.src === "niconico" && /^(sm|so|nm)\d+$/.test(vid)) return `https://embed.nicovideo.jp/watch/${vid}?autoplay=1`;
+  // enablejsapi / jsapi：曲が終わったことを知らせてもらう（おまかせ再生で次の曲へ進むため）
+  if (v.src === "youtube" && !v.ne) return `https://www.youtube.com/embed/${encodeURIComponent(vid)}?autoplay=1&playsinline=1&rel=0&enablejsapi=1&origin=${encodeURIComponent(location.origin)}`;
+  if (v.src === "niconico" && /^(sm|so|nm)\d+$/.test(vid)) return `https://embed.nicovideo.jp/watch/${vid}?autoplay=1&jsapi=1&playerId=tagtune`;
   return null;
 }
 // ページ内で再生する投稿（両方あるときは YouTube を優先）
@@ -460,17 +470,30 @@ function thumbEl(i){
     onclick:e=>{ e.stopPropagation(); playing ? closePlayer() : play(i.id); }},
     img, el("span",{class:"play","aria-hidden":"true"}, playing ? "再生中" : "▶"));
 }
-function play(id){
+function play(id, opts={}){
   const i = ITEM[id], url = embedUrl(i), ps = playSource(i);
   if (!url) return;
+  if (!opts.shuffle) state.shuffle = null;   // 曲を自分で選んだら、おまかせ再生はおしまい
   const prev = state.play;
   state.play = id;
+  const sh = state.shuffle;
+  const frame = el("iframe",{src:url, title:`${i.t}（${ps.src==="youtube"?"YouTube":"ニコニコ動画"}のプレイヤー）`,
+      allow:"autoplay; encrypted-media; picture-in-picture; fullscreen", allowfullscreen:"", referrerpolicy:"strict-origin-when-cross-origin"});
+  // YouTube に「再生状態を教えて」と頼む（曲の終わりを知るため）
+  frame.addEventListener("load", ()=>{
+    if (ps.src !== "youtube") return;
+    for (const m of [{event:"listening", id:1, channel:"widget"}, {event:"command", func:"addEventListener", args:["onStateChange"], id:1, channel:"widget"}])
+      frame.contentWindow?.postMessage(JSON.stringify(m), "https://www.youtube.com");
+  });
   $("#player").replaceChildren(
     el("div",{class:"ph"},
+      sh ? el("span",{class:"mode", title: sh.label}, "🎲") : null,
       el("a",{href:ps.url, target:"_blank", rel:"noopener", title:`${ps.src==="youtube"?"YouTube":"ニコニコ動画"}で開く`}, i.t, " ↗"),
+      detailUrl(i) ? el("a",{class:"pg", href:detailUrl(i), onclick:saveView, title:"曲のページ"}, "ページ") : null,
+      sh ? el("button",{class:"next", "aria-label":"次の曲へ", title:"次の曲へ", onclick:()=>nextShuffle()}, "⏭") : null,
       el("button",{"aria-label":"プレイヤーを閉じる", onclick:closePlayer}, "×")),
-    el("iframe",{src:url, title:`${i.t}（${ps.src==="youtube"?"YouTube":"ニコニコ動画"}のプレイヤー）`,
-      allow:"autoplay; encrypted-media; picture-in-picture; fullscreen", allowfullscreen:"", referrerpolicy:"strict-origin-when-cross-origin"}));
+    sh ? el("p",{class:"from"}, `おまかせ再生中：${sh.label}（${sh.count.toLocaleString("ja-JP")}曲から）`) : null,
+    frame);
   $("#player").hidden = false;
   document.body.classList.add("has-player");
   if (narrow.matches && !$(".bar").classList.contains("folded")) setFold(true, false);
@@ -479,12 +502,55 @@ function play(id){
 function closePlayer(){
   const prev = state.play;
   state.play = null;
+  state.shuffle = null;
   $("#player").replaceChildren();   // iframeを消すと再生も止まる
   $("#player").hidden = true;
   document.body.classList.remove("has-player");
   refresh(prev);
 }
 document.addEventListener("keydown", e=>{ if (e.key === "Escape" && state.play && !e.target.closest?.("input,select")) closePlayer(); });
+
+// ---------- おまかせ再生（🎲） ----------
+// 今の絞り込みの中から、ページ内で再生できる曲をランダムに選んで流す。再生数に関係なく同じ確率で選ぶ（埋もれた曲にも出会えるように）。
+// 1曲終わると次の曲へ。一度流れた曲は、その絞り込みの曲を一通り流すまで出さない
+const played = new Set();
+let lastNext = 0;
+function shuffleLabel(){
+  const opt = id => $(id).selectedOptions[0]?.textContent || "";
+  const parts = [state.genre, state.kind, state.person?.label, state.period && opt("#period"), ...state.filter, state.q && `「${state.q}」`].filter(Boolean);
+  return parts.length ? parts.join("・") : "すべての曲";
+}
+function nextShuffle(){
+  const now = Date.now();
+  if (now - lastNext < 800) return;   // 終わりの合図が続けて来たときに2曲飛ばさないように
+  lastNext = now;
+  const pool = visibleItems().filter(i=>embedUrl(i));
+  if (!pool.length) { setStatus("今の絞り込みには、このページで再生できる曲がないよ。絞り込みを変えてみてね。"); closePlayer(); return; }
+  let fresh = pool.filter(i=>!played.has(i.id) && i.id !== state.play);
+  if (!fresh.length) { played.clear(); fresh = pool.filter(i=>i.id !== state.play); if (!fresh.length) fresh = pool; }
+  const pick = fresh[Math.floor(Math.random() * fresh.length)];
+  played.add(pick.id);
+  state.shuffle = { label: shuffleLabel(), count: pool.length };
+  play(pick.id, { shuffle:true });
+  const node = document.getElementById("item-"+pick.id);
+  if (node){ node.classList.remove("flash"); void node.offsetWidth; node.classList.add("flash"); }
+}
+$("#shuffle").addEventListener("click", ()=>{ lastNext = 0; nextShuffle(); });
+// 曲が終わったら次の曲へ（YouTube：状態 0 が「終了」、ニコニコ：playerStatus 4 が「終了」）
+window.addEventListener("message", e=>{
+  if (!state.shuffle || !state.play) return;
+  // 今流れているプレイヤーからの合図だけを見る（閉じた前のプレイヤーの合図は無視）
+  if (e.source !== $("#player iframe")?.contentWindow) return;
+  let d = e.data;
+  if (typeof d === "string") { try { d = JSON.parse(d); } catch { return; } }
+  if (!d || typeof d !== "object") return;
+  let host = "";
+  try { host = new URL(e.origin).hostname; } catch { return; }
+  const ended = /(^|\.)youtube\.com$/.test(host)
+    ? (d.event === "onStateChange" && d.info === 0) || (d.event === "infoDelivery" && d.info?.playerState === 0)
+    : /(^|\.)nicovideo\.jp$/.test(host) && d.eventName === "playerStatusChange" && d.data?.playerStatus === 4;
+  if (ended) nextShuffle();
+});
 
 function buildItem(i, n, c){
   const sc = c[i.id] || {};
@@ -683,7 +749,7 @@ render();
     ITEMS = songs; ITEM = Object.fromEntries(ITEMS.map(i=>[i.id,i]));
     // まとめた曲のもう片方のID → 代表のID（前に別々に入った票やリンクも同じ曲として扱う）
     for (const i of ITEMS) for (const v of i.alt || []) { ALIAS[v.id] = i.id; ITEM[v.id] = i; }
-    baseNote = `${ITEMS.length.toLocaleString("ja-JP")}曲を収録${meta ? `（${fmtDate(meta.updatedAt)}時点）` : ""}。サムネの▶でこのページで再生、曲名で曲のページ、↗で動画サイトを開く、名前やバッジで絞り込み、行を押すと関連曲。作者名が空の曲は、読み取りを改善中。${sb ? "「＋ タグをつける」から、聴いた印象を投票してね。みんなの票で3票以上集まったタグが定着するよ。" : "タグの投票は今はこの端末にだけ保存されるよ（みんなの集計は準備中）。"}`;
+    baseNote = `${ITEMS.length.toLocaleString("ja-JP")}曲を収録${meta ? `（${fmtDate(meta.updatedAt)}時点）` : ""}。🎲で今の絞り込みからおまかせ再生、サムネの▶でこのページで再生、曲名で曲のページ、↗で動画サイトを開く、名前やバッジで絞り込み、行を押すと関連曲。作者名が空の曲は、読み取りを改善中。${sb ? "「＋ タグをつける」から、聴いた印象を投票してね。みんなの票で3票以上集まったタグが定着するよ。" : "タグの投票は今はこの端末にだけ保存されるよ（みんなの集計は準備中）。"}`;
     setStatus(baseNote);
     applyUrlParams();
     if (pendingId && ALIAS[pendingId]) pendingId = ALIAS[pendingId];
