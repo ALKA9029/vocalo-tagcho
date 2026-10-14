@@ -538,7 +538,7 @@ function nextShuffle(){
 $("#shuffle").addEventListener("click", ()=>{ lastNext = 0; nextShuffle(); });
 // 曲が終わったら次の曲へ（YouTube：状態 0 が「終了」、ニコニコ：playerStatus 4 が「終了」）
 window.addEventListener("message", e=>{
-  if (!state.shuffle || !state.play) return;
+  if (!state.play) return;
   // 今流れているプレイヤーからの合図だけを見る（閉じた前のプレイヤーの合図は無視）
   if (e.source !== $("#player iframe")?.contentWindow) return;
   let d = e.data;
@@ -546,10 +546,15 @@ window.addEventListener("message", e=>{
   if (!d || typeof d !== "object") return;
   let host = "";
   try { host = new URL(e.origin).hostname; } catch { return; }
+  // ニコニコは準備ができたら（loadComplete）こちらから「再生」を送る（autoplay だけでは始まらないことがあるため）
+  if (/(^|\.)nicovideo\.jp$/.test(host) && d.eventName === "loadComplete") {
+    e.source.postMessage({ sourceConnectorType: 1, playerId: "tagtune", eventName: "play" }, e.origin);
+    return;
+  }
   const ended = /(^|\.)youtube\.com$/.test(host)
     ? (d.event === "onStateChange" && d.info === 0) || (d.event === "infoDelivery" && d.info?.playerState === 0)
     : /(^|\.)nicovideo\.jp$/.test(host) && d.eventName === "playerStatusChange" && d.data?.playerStatus === 4;
-  if (ended) nextShuffle();
+  if (ended && state.shuffle) nextShuffle();
 });
 
 function buildItem(i, n, c){

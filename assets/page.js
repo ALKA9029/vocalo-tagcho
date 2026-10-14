@@ -47,4 +47,10 @@
     if (btn) { e.preventDefault(); play(btn); }
   });
   document.addEventListener("keydown", e => { if (e.key === "Escape" && current) close(); });
+  // ニコニコは準備ができたら（loadComplete）こちらから「再生」を送る（autoplay だけでは始まらないことがあるため）
+  window.addEventListener("message", e => {
+    const f = player.querySelector("iframe");
+    if (!f || e.source !== f.contentWindow || !/(^|\.)nicovideo\.jp$/.test(new URL(e.origin).hostname)) return;
+    if (e.data && e.data.eventName === "loadComplete") e.source.postMessage({ sourceConnectorType: 1, playerId: "tagtune", eventName: "play" }, e.origin);
+  });
 })();

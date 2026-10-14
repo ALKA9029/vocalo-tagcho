@@ -66,7 +66,7 @@ const playUrl = id => `/?id=${encodeURIComponent(id)}`;
 function embedUrl(i) {
   const vid = i.id.slice(i.id.indexOf(":") + 1);
   if (i.src === "youtube" && !i.ne) return `https://www.youtube.com/embed/${encodeURIComponent(vid)}?autoplay=1&playsinline=1&rel=0`;
-  if (i.src === "niconico" && /^(sm|so|nm)\d+$/.test(vid)) return `https://embed.nicovideo.jp/watch/${vid}?autoplay=1`;
+  if (i.src === "niconico" && /^(sm|so|nm)\d+$/.test(vid)) return `https://embed.nicovideo.jp/watch/${vid}?autoplay=1&jsapi=1&playerId=tagtune`;
   return null;
 }
 const playAttrs = (i, label) => `data-embed="${esc(embedUrl(i))}" data-title="${esc(label)}" data-src="${esc(srcName(i))}" data-url="${esc(i.url)}"`;
