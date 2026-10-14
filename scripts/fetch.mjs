@@ -379,6 +379,58 @@ async function lookupOriginals(items) {
   return out;
 }
 
+// ---------- 原曲さがし（YouTube）：原曲がサイトにないアニソン・J-POPの歌ってみたについて、公式の原曲MVを探す ----------
+// 検索は1回100ユニットなので、1日 maxPerRun 曲まで（再生数の多い歌ってみたから順に）。
+// 公式っぽいチャンネル（アーティスト名入り・Official・公式・- Topic・レーベル・アニメ公式）の、同じ曲名の本家だけを採用する
+const OFFICIAL_CH = /official|公式|オフィシャル|vevo|- topic$|records|recordings|レコード|label|entertainment|animation|アニメ|anime|lantis|ランティス|aniplex|アニプレックス|flying ?dog|ポニーキャニオン|pony ?canyon|avex|sony music|king ?records|キングレコード|victor|ビクター|toy'?s ?factory|warner|ワーナー|universal|ユニバーサル|bandai|バンダイ|kadokawa|カドカワ|toho|東宝|columbia|コロムビア|tbs|フジテレビ|テレビ東京|nhk/i;
+async function lookupOriginalsYouTube(items) {
+  const cfg = config.youtube.originalLookup;
+  const key = process.env.YOUTUBE_API_KEY;
+  if (!cfg?.enabled || !key) return [];
+  const cache = await readJson("data/original-lookup.json", {});
+  const genres = new Set(cfg.genres || ["アニソン", "J-POP"]);
+  const have = new Set(items.filter(i => i.kind === "本家").map(i => normalize(i.t)));
+  const recheck = new Date(Date.now() - (cfg.recheckDays || 60) * 864e5).toISOString();
+  const seen = new Set();
+  const todo = items
+    .filter(i => i.kind === "歌ってみた" && !i.of && genres.has(i.g) && i.t && normalize(i.t).length >= 2 && !have.has(normalize(i.t)))
+    .sort((a, b) => (b.views || 0) - (a.views || 0))
+    .filter(i => { const k = "yt|" + normalize(i.t); if (seen.has(k)) return false; seen.add(k); const c = cache[k]; return !c || (!c.id && c.checked < recheck); })
+    .slice(0, cfg.maxPerRun || 30);
+  const out = [];
+  for (const c of todo) {
+    const ck = "yt|" + normalize(c.t);
+    // 「アーティスト名」の手がかり：歌ってみたのタイトルの「曲名 / アーティスト」「アーティスト - 曲名」から
+    const artist = (c.p && normalize(c.p) !== normalize(c.t) && !/cover|歌ってみ/i.test(c.p) && !(c.by && normalize(c.by).includes(normalize(c.p)))) ? c.p.replace(/[（(].*$/, "").trim() : "";
+    const params = new URLSearchParams({
+      part: "id", type: "video", q: [c.t, artist].filter(Boolean).join(" "), regionCode: "JP", relevanceLanguage: "ja",
+      videoCategoryId: "10", maxResults: "10", key,
+    });
+    await sleep(1000);
+    const res = await ytFetch("https://www.googleapis.com/youtube/v3/search?" + params);
+    if (!res.ok) { console.warn(`原曲さがし（YouTube）: HTTP ${res.status}、今日はここまで`); break; }
+    const ids = ((await res.json()).items || []).map(it => it.id?.videoId).filter(Boolean);
+    const vids = (await ytVideos(ids, key)).filter(v => isJapanese(v) && !isNoise(v));
+    let hit = null;
+    for (const v of vids.sort((a, b) => Number(b.statistics?.viewCount || 0) - Number(a.statistics?.viewCount || 0))) {
+      const ch = v.snippet?.channelTitle || "";
+      if (c.uploaderId && v.snippet?.channelId === c.uploaderId) continue;   // 歌ってみた本人のチャンネルは除く
+      const official = OFFICIAL_CH.test(ch) || (artist && normalize(ch).includes(normalize(artist)));
+      if (!official || Number(v.statistics?.viewCount || 0) < (cfg.minViews || 30000)) continue;
+      const item = ytItem(v, c.g);
+      if (isKaraoke(item.title)) continue;
+      const it = classify(item, { fallbackGenre: c.g });
+      if (it.kind === "本家" && normalize(it.t) === normalize(c.t)) { hit = { ...item, seed: true }; break; }
+    }
+    cache[ck] = { id: hit?.id || null, checked: new Date().toISOString() };
+    if (hit && !items.some(i => i.id === hit.id) && !out.some(o => o.id === hit.id)) out.push(hit);
+    console.log(`原曲さがし（YouTube）「${c.t}」→ ${hit ? `${hit.title}（${hit.uploader}）` : "見つからず"}`);
+  }
+  await writeFile(path("data/original-lookup.json"), JSON.stringify(cache) + "\n");
+  console.log(`原曲さがし（YouTube）: ${todo.length}曲を調べて、原曲を${out.length}曲見つけた`);
+  return out;
+}
+
 // ---------- まとめて保存 ----------
 const fixtureArg = process.argv.indexOf("--fixture");
 const SEED = process.argv.includes("--seed");
@@ -419,6 +471,9 @@ if (fixtureArg < 0 && !SEED) {
   // 原曲がサイトにない歌ってみたの原曲を探して、見つかった本家を追加する
   const found = await lookupOriginals(items).catch(e => (console.warn("原曲さがしに失敗:", e.message), []));
   for (const v of found) items.push({ ...classify(v, { fallbackGenre: "ボカロ" }), seed: true, firstSeen: new Date().toISOString() });
+  // アニソン・J-POPの原曲は YouTube の公式MVから探す
+  const foundYT = await lookupOriginalsYouTube(items).catch(e => (console.warn("原曲さがし（YouTube）に失敗:", e.message), []));
+  for (const v of foundYT) items.push({ ...classify(v, { fallbackGenre: v.channelGenre }), seed: true, firstSeen: new Date().toISOString() });
 }
 if (fixtureArg < 0 && !SEED) {
   // 今回の取得で更新されなかった最近のYouTube曲だけ、再生数を取り直す

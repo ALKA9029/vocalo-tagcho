@@ -217,6 +217,17 @@
           "relevanceLanguage": "ko"
         }
       ]
+    },
+    "originalLookup": {
+      "comment": "原曲がサイトにないアニソン・J-POPの歌ってみたについて、YouTubeで公式の原曲MVを探して本家として追加する（検索1回100ユニット。1回の取得で調べる最大の曲数）",
+      "enabled": true,
+      "genres": [
+        "アニソン",
+        "J-POP"
+      ],
+      "maxPerRun": 30,
+      "minViews": 30000,
+      "recheckDays": 60
     }
   }
 }
