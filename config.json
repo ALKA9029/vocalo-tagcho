@@ -225,7 +225,7 @@
         "アニソン",
         "J-POP"
       ],
-      "maxPerRun": 30,
+      "maxPerRun": 20,
       "minViews": 30000,
       "recheckDays": 60
     }
