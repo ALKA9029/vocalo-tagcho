@@ -67,6 +67,8 @@ export function detectVoice(title, tags) {
 
 // アニメのタイアップらしい言葉（「アニメMV」はボカロでもよく使うので除く）
 const ANIME_RE = /TVアニメ|アニメ[「『]|劇場版|主題歌|オープニング(テーマ)?|エンディング(テーマ)?|ノンクレジット|(?<![A-Za-z])(OP|ED)(?![A-Za-z])|\banime\b/i;
+// アニメ・ゲームの曲の手がかり（歌ってみたのジャンル用）。ゲームの曲もアニソンとして扱う
+const animeOrGame = (title, tags) => tags.some(t => /アニソン|^アニメ(ソング)?$|_?The_Animation|ゲーソン|ゲーム(音楽|ソング|BGM)|^(ゲーム|アニメ)(OP|ED|主題歌)/i.test(t)) || ANIME_RE.test(title);
 const ANIME_TAGS = ["アニソン", "アニメ", "アニメソング", "anime"];
 
 export function detectGenre(title, tags, fallback = "その他", desc = "") {
@@ -354,8 +356,13 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
   // 「一体いつから - 重音テトSV カバー」のように、曲名の位置に歌声名が入ってしまったら、「 - 」の前を曲名にする
   const dashParts = video.title.match(/^(.+?)\s+[-–—]\s+(.+)$/);
   if (kind === "歌ってみた" && dashParts && isVoice(String(parsed.song || "").split(/[\s|｜]/)[0])) parsed.song = cleanSong(dashParts[1]).trim() || parsed.song;
-  // アニメの曲の歌ってみた（歌声に歌わせたもの・替え歌も）は、ボカロのタグがあってもアニソン（原曲が見つかればそちらのジャンルになる）
-  if (kind === "歌ってみた" && g === "ボカロ" && (tags.some(t => /^(アニソン|アニメ(ソング)?)|アニソン/.test(t)) || ANIME_RE.test(video.title))) g = "アニソン";
+  // 歌ってみたのジャンルは「元の曲」で決める（原曲が見つかれば、あとで原曲のジャンルに置きかわる）
+  if (kind === "歌ってみた") {
+    if (animeOrGame(video.title, tags)) g = "アニソン";   // アニメ・ゲームの曲（替え歌も）
+    // 初音ミクなどの歌声に歌わせたカバーは、歌声の名前やVOCALOIDタグではボカロにしない
+    // （「神威がくぽオリジナル曲」のように、歌声のオリジナル曲だとタイトルにあればボカロのまま）
+    else if (rawVoice && g === "ボカロ" && !/オリジナル曲/.test(video.title)) g = tags.some(t => /ボカロ曲|ボーカロイド曲|VOCALOID(オリジナル|曲)/.test(t)) ? "ボカロ" : hasTag(tags, JPOP_TAGS) ? "J-POP" : "その他";
+  }
   const item = {
     id: video.id,
     src: video.src,
@@ -500,8 +507,8 @@ export function inferNamesFromTags(items) {
 //   ・「ボカロオリジナルを歌ってみた」のようなタグがある
 //   ・タグかタイトルに、サイトに載っているボカロPの名前（2曲以上ある人）が出てくる（「洗脳(DECO*27)」「/ syudou」など）
 // 原曲が見つかっていない歌ってみたは、同じ曲名どうしでジャンルをそろえる。
-// どれか1つでもアニメの曲の手がかり（「アニソン」タグ、「血界戦線ED」のようなタイトル）があればアニソン
-const animeHint = c => (c.tags || []).some(t => /アニソン|^アニメ(ソング)?$/.test(t)) || ANIME_RE.test(c.title || "");
+// どれか1つでもアニメ・ゲームの曲の手がかり（「アニソン」タグ、「血界戦線ED」のようなタイトル）があればアニソン
+const animeHint = c => animeOrGame(c.title || "", c.tags || []);
 export function alignCoverGenres(items) {
   // 「シュガーソングとビターステップ」と「シュガーソングとビターステップ まるぐり」のように、後ろに余計な語が付いたものも同じ曲とみなす
   const covers = items.filter(c => c.kind === "歌ってみた" && !c.of && c.t && normalize(c.t).length >= 2);
