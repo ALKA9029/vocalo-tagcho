@@ -35,9 +35,13 @@ export const isKaraoke = title => /ニコカラ|off ?vocal|カラオケ|instrume
 // タイトルに「オリジナル曲」「【オリジナル】」「[original]」とある動画は本家（「オリジナルMV」「オリジナル振付」は除く）
 const ORIGINAL_RE = /オリジナル(曲|楽曲|ソング)|[【\[（(]\s*(オリジナル|original(\s*song)?)\s*[】\]）)]/i;
 
+// 「初音ミクが7人掛かりで『〜』をアカペラしてくれた」のように、歌声に既存の曲を歌わせた動画（タイトルに「オリジナル」がないときだけ）
+const WEAK_COVER_RE = /(アカペラ|カバー)し?て(くれ|もらっ)た|アカペラ/;
+
 export function detectKind(title, tags, src) {
   if (COVER_RE.test(title)) return "歌ってみた";
   if (ORIGINAL_RE.test(title)) return "本家";
+  if (WEAK_COVER_RE.test(title)) return "歌ってみた";
   // YouTubeのタグは検索よけに「歌ってみた」を入れている本家（作者本人のMVなど）が多いので使わない
   if (src !== "youtube" && tags.some(t => /^歌ってみた/.test(t))) return "歌ってみた";
   return "本家";
@@ -344,6 +348,8 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
   let g = detectGenre(video.title, tags, fb, desc);
   // タイトルの【】などから歌声が見つかっていれば、ボカロ（アニソン判定は残す）
   if (rawVoice && isVoice(rawVoice) && (g === "J-POP" || g === "その他")) g = "ボカロ";
+  // アニメの曲の歌ってみた（歌声に歌わせたもの・替え歌も）は、ボカロのタグがあってもアニソン（原曲が見つかればそちらのジャンルになる）
+  if (kind === "歌ってみた" && g === "ボカロ" && (tags.some(t => /^(アニソン|アニメ(ソング)?)/.test(t)) || ANIME_RE.test(video.title))) g = "アニソン";
   const item = {
     id: video.id,
     src: video.src,
@@ -574,6 +580,7 @@ export function linkCovers(items) {
     let o = originals.get(normalize(c.t));
     // 曲名が読み取れなくても、ニコニコの歌ってみたにはたいてい曲名のタグが付いているので、タグから原曲を探す
     if (!o) for (const t of c.tags || []) {
+      if (isVoice(t) || hasTag([t], VOCALO_TAGS)) continue;   // 「初音ミク」「VOCALOID」のようなタグは曲名ではない
       const hit = originals.get(normalize(t));
       if (hit && normalize(t).length >= 2 && normalize(c.title).includes(normalize(t))) { o = hit; c.t = hit.t; break; }
     }

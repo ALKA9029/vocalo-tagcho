@@ -10,7 +10,9 @@ const overrides = JSON.parse(await readFile(path("data/overrides.json"), "utf8")
 const out = items.map(old => {
   const uploaderId = old.uploaderId ?? ((old.a || "").includes(":") ? old.a.split(":")[1] : undefined);
   const fresh = classify({ ...old, uploaderId },
-    { fallbackGenre: old.g === "その他" ? "その他" : old.g });
+    // YouTube はどの検索から来たか（ジャンルの手がかり）を保存していないので、前のジャンルを手がかりにする。
+    // ニコニコはタグで判定できるので、前のジャンルは引き継がない（一度ボカロになると直らなくなるため）
+    { fallbackGenre: old.src === "youtube" && old.g !== "その他" ? old.g : "その他" });
   const keep = { firstSeen: old.firstSeen, seed: old.seed };
   // 「歌ってみた」チャンネルとして手動登録したチャンネルの動画は、タイトルに関係なく歌ってみたのまま
   if (old.chCover) { fresh.kind = "歌ってみた"; fresh.chCover = true; }
