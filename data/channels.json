@@ -1,5 +1,12 @@
 [
  {
+  "id": "UCv8RNvQgk2zJHIkgh24O1TQ",
+  "added": "2026-10-15T21:48:53.889Z",
+  "name": "ビッグリーン",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-15T11:00:17Z"
+ },
+ {
   "id": "UCAaGaynFpku5cAx6OOSrW-w",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "HoneyWorks OFFICIAL",
@@ -14,6 +21,13 @@
   "genre": "ボカロ",
   "lastHit": "2026-10-15T10:00:09Z",
   "pinned": true
+ },
+ {
+  "id": "UCY9ZKu8LK6limM7aH-BXBag",
+  "added": "2026-10-15T21:36:51.148Z",
+  "name": "葵羽美 - Aoi Umi",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-15T09:00:34Z"
  },
  {
   "id": "UCfyzrRchEuYWpbWnXNRwNLw",
@@ -114,13 +128,6 @@
   "genre": "ボカロ",
   "lastHit": "2026-10-11T10:00:11Z",
   "pinned": true
- },
- {
-  "id": "UCY9ZKu8LK6limM7aH-BXBag",
-  "added": "2026-10-15T21:36:51.148Z",
-  "name": "葵羽美 - Aoi Umi",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-11T09:30:25Z"
  },
  {
   "id": "UCkv_bAMJEoNJWThutrtlUQQ",
@@ -1563,14 +1570,6 @@
   "pinned": true
  },
  {
-  "id": "UCQlj7cVNN9_gg6XUKj-coJg",
-  "added": "2026-10-15T10:31:17.302Z",
-  "name": "薄塩指数Usushioshisuu",
-  "genre": "ボカロ",
-  "lastHit": "2019-10-09T09:00:05Z",
-  "pinned": true
- },
- {
   "id": "UCi_AquB9uaI3-9xXkuWG7IQ",
   "name": "BE:FIRST Official",
   "added": "2026-10-09T12:06:54.468Z",
@@ -1602,12 +1601,26 @@
   "lastHit": "2026-10-15T11:00:08Z"
  },
  {
+  "id": "UCMIGjOcoNHGP6lqzkqkOssA",
+  "added": "2026-10-15T21:48:53.889Z",
+  "name": "JIL【EL6】",
+  "genre": "J-POP",
+  "lastHit": "2026-10-15T10:30:23Z"
+ },
+ {
   "id": "UCLakaKEelmUdqQISLjwIRmg",
   "name": "FLOW Official YouTube Channel",
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "アニソン",
   "lastHit": "2026-10-15T10:00:14Z",
   "pinned": true
+ },
+ {
+  "id": "UCs9_O1tRPMQTHQ-N_L6FU2g",
+  "added": "2026-10-15T21:48:53.889Z",
+  "name": "Lui ch. 鷹嶺ルイ - holoX -",
+  "genre": "アニソン",
+  "lastHit": "2026-10-15T09:00:10Z"
  },
  {
   "id": "UCFiXJX4xRhM-4ZNojxTq8aQ",
@@ -1660,6 +1673,13 @@
   "lastHit": "2026-10-14T11:25:12Z"
  },
  {
+  "id": "UCpEEcJhBig2GqUFxcXjqiLg",
+  "added": "2026-10-15T21:48:53.889Z",
+  "name": "Bz",
+  "genre": "J-POP",
+  "lastHit": "2026-10-14T11:00:36Z"
+ },
+ {
   "id": "UCmovZ2th3Sqpd00F5RdeigQ",
   "name": "加賀美 ハヤト/Hayato Kagami",
   "added": "2026-10-09T12:06:54.468Z",
@@ -1681,6 +1701,13 @@
   "lastHit": "2026-10-14T10:00:38Z"
  },
  {
+  "id": "UCY5awjaUtGODz47sDimHDHQ",
+  "added": "2026-10-15T21:48:53.889Z",
+  "name": "derakun",
+  "genre": "アニソン",
+  "lastHit": "2026-10-14T10:00:10Z"
+ },
+ {
   "id": "UCDpX_q4mlkbuPJbY6h62eHQ",
   "added": "2026-10-11T21:32:47.826Z",
   "name": "妃那子 / HINAKO",
@@ -1691,8 +1718,9 @@
   "id": "UCZ9ucKgIRGiueo6xaIwv_UQ",
   "added": "2026-10-15T21:36:51.148Z",
   "name": "ちゃんみな [CHANMINA]",
-  "genre": "J-POP",
-  "lastHit": "2026-10-14T10:00:07Z"
+  "genre": "アニソン",
+  "lastHit": "2026-10-14T10:00:07Z",
+  "pinned": true
  },
  {
   "id": "UCPrjycK4eiQhUw2PnVIq7Gg",
@@ -1843,6 +1871,13 @@
   "lastHit": "2026-10-12T12:00:00Z"
  },
  {
+  "id": "UCSI4hIhSvBgSjU4dQbYbx-w",
+  "added": "2026-10-15T21:48:53.889Z",
+  "name": "もるてん",
+  "genre": "J-POP",
+  "lastHit": "2026-10-12T11:00:09Z"
+ },
+ {
   "id": "UCFzXU6-djdXlDvXI3-2Appw",
   "added": "2026-10-13T21:45:48.810Z",
   "name": "Hey! Say! JUMP",
@@ -1908,6 +1943,13 @@
   "genre": "アニソン",
   "lastHit": "2026-10-11T15:00:06Z",
   "pinned": true
+ },
+ {
+  "id": "UCMTfP-48IFILqDyhq_nFTcw",
+  "added": "2026-10-15T21:48:53.889Z",
+  "name": "Rustic",
+  "genre": "アニソン",
+  "lastHit": "2026-10-11T14:24:37Z"
  },
  {
   "id": "UCyWEVH8tkJcJVO7IiQ1DGEg",
@@ -2196,6 +2238,13 @@
   "genre": "アニソン",
   "lastHit": "2026-10-09T12:00:09Z",
   "pinned": true
+ },
+ {
+  "id": "UC91MXa0yGe6dVf50Mrs9jeg",
+  "added": "2026-10-15T21:48:53.889Z",
+  "name": "とた",
+  "genre": "J-POP",
+  "lastHit": "2026-10-09T12:00:09Z"
  },
  {
   "id": "UClYYoOqJXgrtkzYFTwcGvNA",
@@ -3004,62 +3053,6 @@
   "name": "Momoiro Clover Z Channel",
   "genre": "アニソン",
   "lastHit": "2025-06-29T11:00:07Z",
-  "pinned": true
- },
- {
-  "id": "UC1aOxPe_LKL6GvK-nwaTO6Q",
-  "added": "2026-10-15T10:11:14.946Z",
-  "name": "fhána Official Channel",
-  "genre": "アニソン",
-  "lastHit": "2025-06-27T12:00:07Z",
-  "pinned": true
- },
- {
-  "id": "UCvpredjG93ifbCP1Y77JyFA",
-  "added": "2026-10-09T12:23:27.151Z",
-  "name": "YOASOBI",
-  "genre": "アニソン",
-  "lastHit": "2025-05-18T08:30:07Z",
-  "pinned": true
- },
- {
-  "id": "UCGteuPMOJgrJ1ZiVmtfqwFA",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "yasai31",
-  "genre": "J-POP",
-  "lastHit": "2025-04-26T15:01:31Z",
-  "pinned": true
- },
- {
-  "id": "UC9ZL7yTyfA41JPUcL07NxZA",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "タカオカミズキ - takaokamizuki -",
-  "genre": "J-POP",
-  "lastHit": "2025-03-28T11:00:07Z",
-  "pinned": true
- },
- {
-  "id": "UCPFQ7ao1TbzJUuITXsG0oww",
-  "added": "2026-10-15T10:11:14.946Z",
-  "name": "I Don't Like Mondays.",
-  "genre": "アニソン",
-  "lastHit": "2024-10-14T12:45:27Z",
-  "pinned": true
- },
- {
-  "id": "UCCFzL2ZhgofuDS70FpG2SlA",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "Teto Kasane-Chan",
-  "genre": "J-POP",
-  "lastHit": "2024-09-10T02:50:53Z",
-  "pinned": true
- },
- {
-  "id": "UCOkd9KtXLE0KXigHY5nIvkw",
-  "added": "2026-10-09T12:23:27.151Z",
-  "name": "Yuuri - Topic",
-  "genre": "アニソン",
-  "lastHit": "2024-07-18T15:00:42Z",
   "pinned": true
  }
 ]
