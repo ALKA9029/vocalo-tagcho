@@ -478,15 +478,20 @@ function play(id, opts={}){
   const prev = state.play;
   state.play = id;
   const sh = state.shuffle;
-  const frame = el("iframe",{src:url, title:`${i.t}（${ps.src==="youtube"?"YouTube":"ニコニコ動画"}のプレイヤー）`,
+  // おまかせ再生で YouTube → YouTube と続くときは、プレイヤーを作り直さずに次の動画を読み込ませる
+  // （スマホは、タップせずに新しく作ったプレイヤーでは音つきで自動再生できないため。同じプレイヤーなら続けて流れる）
+  const old = $("#player iframe");
+  const reuse = opts.shuffle && ps.src === "youtube" && old?.dataset.src === "youtube" && old.dataset.ready === "1";
+  const frame = reuse ? old : el("iframe",{src:url, "data-src":ps.src, title:`${i.t}（${ps.src==="youtube"?"YouTube":"ニコニコ動画"}のプレイヤー）`,
       allow:"autoplay; encrypted-media; picture-in-picture; fullscreen", allowfullscreen:"", referrerpolicy:"strict-origin-when-cross-origin"});
   // YouTube に「再生状態を教えて」と頼む（曲の終わりを知るため）
-  frame.addEventListener("load", ()=>{
+  if (!reuse) frame.addEventListener("load", ()=>{
     if (ps.src !== "youtube") return;
+    frame.dataset.ready = "1";
     for (const m of [{event:"listening", id:1, channel:"widget"}, {event:"command", func:"addEventListener", args:["onStateChange"], id:1, channel:"widget"}, {event:"command", func:"addEventListener", args:["onError"], id:1, channel:"widget"}])
       frame.contentWindow?.postMessage(JSON.stringify(m), "https://www.youtube.com");
   });
-  $("#player").replaceChildren(
+  const head = [
     el("div",{class:"ph"},
       sh ? el("span",{class:"mode", title: sh.label}, "🎲") : null,
       el("a",{href:ps.url, target:"_blank", rel:"noopener", title:`${ps.src==="youtube"?"YouTube":"ニコニコ動画"}で開く`}, i.t, " ↗"),
@@ -494,8 +499,14 @@ function play(id, opts={}){
         : el("button",{class:"pg", type:"button", title:"一覧のこの曲の行へ", onclick:()=>showInList(id)}, "一覧で見る"),
       sh ? el("button",{class:"next", "aria-label":"次の曲へ", title:"次の曲へ", onclick:()=>nextShuffle()}, "⏭") : null,
       el("button",{"aria-label":"プレイヤーを閉じる", onclick:closePlayer}, "×")),
-    sh ? el("p",{class:"from"}, `おまかせ再生中：${sh.label}（${sh.count.toLocaleString("ja-JP")}曲から）`) : null,
-    frame);
+    sh ? el("p",{class:"from"}, `おまかせ再生中：${sh.label}（${sh.count.toLocaleString("ja-JP")}曲から）`) : null].filter(Boolean);
+  if (reuse) {
+    // iframe を動かすと読み込み直しになるので、iframe はそのままで上の見出しだけ入れかえる
+    for (const n of [...$("#player").children]) if (n !== frame) n.remove();
+    frame.before(...head);
+    frame.title = `${i.t}（YouTubeのプレイヤー）`;
+    frame.contentWindow?.postMessage(JSON.stringify({event:"command", func:"loadVideoById", args:[ps.id.slice(3)], id:1, channel:"widget"}), "https://www.youtube.com");
+  } else $("#player").replaceChildren(...head, frame);
   $("#player").hidden = false;
   document.body.classList.add("has-player");
   if (narrow.matches && !$(".bar").classList.contains("folded")) setFold(true, false);
@@ -503,7 +514,12 @@ function play(id, opts={}){
   // おまかせ再生：しばらくたっても再生が始まらない（投稿者が埋め込みを許可していない動画など）ときは次の曲へ
   clearTimeout(stuckTimer);
   started = false;
-  if (sh) stuckTimer = setTimeout(()=>{ if (state.play === id && state.shuffle && !started) skipStuck(); }, 12000);
+  // スマホでは、自動再生がブロックされただけのこともあるので、飛ばさずに「▶ を押してね」と知らせる（再生できない動画は YouTube のエラーで飛ばす）
+  if (sh) stuckTimer = setTimeout(()=>{
+    if (state.play !== id || !state.shuffle || started) return;
+    if (touchOnly.matches) { const f = $("#player .from"); if (f) f.textContent = "再生が始まらないときは、動画の ▶ を押してね（そのあとは続けて流れるよ）"; }
+    else skipStuck();
+  }, 12000);
 }
 let stuckTimer = 0, started = false, skipped = 0;
 function skipStuck(){
