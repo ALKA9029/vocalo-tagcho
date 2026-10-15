@@ -457,6 +457,9 @@ async function fetchCatalogs(items) {
     .sort((a, b) => b[1].max - a[1].max).slice(0, cfg.maxChannelsPerRun || 50);
   const known = new Set(items.map(i => i.id));
   const haveT = new Set(items.filter(i => i.kind === "本家").map(i => normalize(i.t) + "|" + normalize(i.p || "")));
+  const otherT = new Map();
+  for (const i of items) if (i.kind === "本家" && normalize(i.t)) (otherT.get(normalize(i.t)) || otherT.set(normalize(i.t), new Set()).get(normalize(i.t))).add(normalize(i.p || ""));
+  const sameP = it => otherT.get(normalize(it.t))?.has(normalize(it.p || ""));
   const out = [];
   for (const [id, c] of todo) {
     const ids = [];
@@ -477,7 +480,8 @@ async function fetchCatalogs(items) {
       .filter(v => Number(v.statistics?.viewCount || 0) >= (cfg.minViews || 300000))
       .map(v => ({ ...ytItem(v, genre), seed: true }))
       .map(v => ({ v, it: classify(v, { fallbackGenre: genre }) }))
-      .filter(({ v, it }) => !isKaraoke(v.title) && it.kind === "本家" && normalize(it.t) && !haveT.has(normalize(it.t) + "|" + normalize(it.p || "")))
+      // ほかの人の曲としてすでにある曲名は、歌い手のチャンネルのカバーかもしれないので入れない
+      .filter(({ v, it }) => !isKaraoke(v.title) && it.kind === "本家" && normalize(it.t) && !haveT.has(normalize(it.t) + "|" + normalize(it.p || "")) && !(otherT.has(normalize(it.t)) && !sameP(it)))
       .sort((a, b) => (b.v.views || 0) - (a.v.views || 0))
       // 同じ曲の別の動画（Official Audio・Lyric Video・ダンス版など）は1本だけ
       .filter(({ it }) => { const k = normalize(it.t); if (seenT.has(k)) return false; seenT.add(k); return true; })

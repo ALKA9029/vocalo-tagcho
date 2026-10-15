@@ -365,7 +365,10 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
   const desc = video.desc || video.descHead || "";
   // YouTubeで「ボカロ」として集めた動画でも、歌声やボカロの手がかりがなければボカロにしない
   const vocaloHint = !!rawVoice || hasTag(vtags, VOCALO_TAGS) || /VOCALOID|ボカロ|ボーカロイド|初音ミク|重音テト|可不|Synthesizer ?V|UTAU|CeVIO|보컬로이드|보카로/i.test(`${video.title} ${desc.slice(0, 300)}`);
-  const fb = video.src === "youtube" && fallbackGenre === "ボカロ" && !vocaloHint ? "J-POP" : fallbackGenre;
+  // 「アニメ主題歌」の検索で見つけた動画やアニソン寄りのチャンネルの動画でも、アニメ・ゲームの手がかりがなければアニソンにしない
+  const animeHint = animeOrGame(video.title, vtags) || ANIME_RE.test(desc.slice(0, 600));
+  const fb = video.src === "youtube" && fallbackGenre === "ボカロ" && !vocaloHint ? "J-POP"
+    : video.src === "youtube" && fallbackGenre === "アニソン" && !animeHint ? "J-POP" : fallbackGenre;
   let g = detectGenre(video.title, vtags, fb, desc);
   // タイトルの【】などから歌声が見つかっていれば、ボカロ（アニソン判定は残す）
   if (rawVoice && isVoice(rawVoice) && (g === "J-POP" || g === "その他")) g = "ボカロ";
@@ -570,7 +573,13 @@ export function guessCoverGenre(items) {
 // ニコニコにボカロの本家がある作者（ボカロP）の YouTube の本家は、タイトルや説明文に歌声名がなくてもボカロとみなす
 export function vocaloByCreator(items) {
   const ps = new Set(items.filter(i => i.src === "niconico" && i.kind === "本家" && i.g === "ボカロ" && i.p).map(i => normalize(i.p)).filter(n => n.length >= 2));
-  for (const i of items) if (i.src === "youtube" && i.kind === "本家" && (i.g === "J-POP" || i.g === "その他") && i.p && ps.has(normalize(i.p))) i.g = "ボカロ";
+  // ただし、そのYouTubeチャンネルに歌声（初音ミクなど）が分かる本家が1曲もないときはしない
+  // （ニコニコで誰かが「Eve の曲 / 初音ミク」のように投稿したせいで、YOASOBI や Eve の公式チャンネルの曲がボカロになるのを防ぐ）
+  //  （チャンネルの本家のうち3割以上で歌声が分かるときだけ。キタニタツヤや HoneyWorks のように、ボカロ曲もたまに出す公式チャンネルは除く）
+  const chTally = new Map();
+  for (const i of items) if (i.src === "youtube" && i.kind === "本家" && i.uploaderId) { const t = chTally.get(i.uploaderId) || [0, 0]; t[1]++; if (i.v) t[0]++; chTally.set(i.uploaderId, t); }
+  const vocaloCh = new Set([...chTally].filter(([, t]) => t[0] >= 1 && t[0] / t[1] >= 0.3).map(([id]) => id));
+  for (const i of items) if (i.src === "youtube" && i.kind === "本家" && (i.g === "J-POP" || i.g === "その他") && i.p && ps.has(normalize(i.p)) && vocaloCh.has(i.uploaderId)) i.g = "ボカロ";
 }
 
 export function guessChannelGenre(items) {
@@ -706,6 +715,8 @@ export function linkCovers(items) {
     c.kind = "本家"; c.p = o.p; c.a = o.a; c.g = o.g; delete c.of; delete c.by; delete c.self;
   }
   mergeSources(items);
+  // まとめたことで原曲のジャンルが変わった（YouTube版がニコニコ版に合わせてボカロになった など）ら、歌ってみたにも反映
+  { const byIdM = new Map(items.map(i => [i.id, i])); for (const c of items) { const o = c.of && byIdM.get(c.of); if (o && c.kind === "歌ってみた" && o.g !== "その他") c.g = o.g; } }
   markSelfCovers(items);
   guessCoverGenre(items);
   alignCoverGenres(items);
