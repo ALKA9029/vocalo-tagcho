@@ -2,7 +2,7 @@
 //   node scripts/fetch.mjs                      … ニコニコとYouTubeから取得
 //   node scripts/fetch.mjs --fixture FILE.json  … ネットにつながず、テスト用データで動かす
 import { readFile, writeFile, mkdir } from "node:fs/promises";
-import { classify, linkCovers, toSite, isKaraoke, normalize } from "./classify.mjs";
+import { classify, linkCovers, toSite, isKaraoke, normalize, ANIME_DESC_RE } from "./classify.mjs";
 
 // 実行の記録を data/last-run.txt にも残す（GitHubの画面を開かなくても、何件取れたか確認できるように）
 const RUNLOG = [];
@@ -158,6 +158,7 @@ function ytItem(v, genre) {
     channelGenre: genre || "J-POP",
     // ページ内で再生できない（埋め込み禁止の）動画には印をつける。サイトではリンクで飛ぶだけにする
     ...(v.status?.embeddable === false ? { ne: 1 } : {}),
+    ...(ANIME_DESC_RE.test((sn.description || "").slice(0, 1500)) ? { animeDesc: 1 } : {}),
   };
 }
 
@@ -218,6 +219,7 @@ async function refreshYouTubeStats(items) {
     const i = byId.get(v.id);
     if (!isJapanese(v) || (isNoise(v) && !i.seed)) { drop.add(i.id); continue; }
     i.descHead = (v.snippet?.description || "").slice(0, 300);
+    if (ANIME_DESC_RE.test((v.snippet?.description || "").slice(0, 1500))) i.animeDesc = 1; else delete i.animeDesc;
     if (v.status?.embeddable === false) i.ne = 1; else delete i.ne;
     if (v.statistics?.viewCount != null) i.views = Number(v.statistics.viewCount);
     if (v.statistics?.likeCount != null) i.likes = Number(v.statistics.likeCount);

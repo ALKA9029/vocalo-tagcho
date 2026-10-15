@@ -83,6 +83,8 @@ export function detectVoice(title, tags) {
 // アニメのタイアップらしい言葉（「アニメMV」はボカロでもよく使うので除く）
 const ANIME_RE = /TVアニメ|アニメ[「『]|劇場版|主題歌|オープニング(テーマ)?|エンディング(テーマ)?|ノンクレジット|(?<![A-Za-z])(OP|ED)(?![A-Za-z])|\banime\b/i;
 // アニメ・ゲームの曲の手がかり（歌ってみたのジャンル用）。ゲームの曲もアニソンとして扱う
+// YouTube の説明文（長め）にアニメ・ゲームの主題歌だと書いてあるか。取得したときに animeDesc として覚えておく
+export const ANIME_DESC_RE = /TVアニメ|テレビアニメ|アニメ[「『]|劇場版|アニメーション映画|アニメ映画|アニメ(主題歌|OP|ED|オープニング|エンディング)|(オープニング|エンディング)(テーマ|主題歌)|ノンクレジット|ゲーム[「『][^」』]*[」』].{0,12}(主題歌|テーマ)/;
 const animeOrGame = (title, tags) => tags.some(t => /アニソン|^アニメ(ソング)?$|_?The_Animation|ゲーソン|ゲーム(音楽|ソング|BGM)|^(ゲーム|アニメ)(OP|ED|主題歌)/i.test(t)) || ANIME_RE.test(title);
 const ANIME_TAGS = ["アニソン", "アニメ", "アニメソング", "anime"];
 
@@ -375,7 +377,7 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
   // YouTubeで「ボカロ」として集めた動画でも、歌声やボカロの手がかりがなければボカロにしない
   const vocaloHint = !!rawVoice || hasTag(vtags, VOCALO_TAGS) || /VOCALOID|ボカロ|ボーカロイド|初音ミク|重音テト|可不|Synthesizer ?V|UTAU|CeVIO|보컬로이드|보카로/i.test(`${video.title} ${desc.slice(0, 300)}`);
   // 「アニメ主題歌」の検索で見つけた動画やアニソン寄りのチャンネルの動画でも、アニメ・ゲームの手がかりがなければアニソンにしない
-  const animeHint = animeOrGame(video.title, vtags) || ANIME_RE.test(desc.slice(0, 600));
+  const animeHint = animeOrGame(video.title, vtags) || ANIME_RE.test(desc.slice(0, 600)) || !!video.animeDesc;
   const fb = video.src === "youtube" && fallbackGenre === "ボカロ" && !vocaloHint ? "J-POP"
     : video.src === "youtube" && fallbackGenre === "アニソン" && !animeHint ? "J-POP" : fallbackGenre;
   let g = detectGenre(video.title, vtags, fb, desc);
@@ -448,6 +450,11 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     const m = d.match(/(?:nicovideo\.jp\/watch\/|nico\.ms\/)(sm\d+)/);
     if (m) item.nicoSrc = "nico:" + m[1]; else if (video.nicoSrc) item.nicoSrc = video.nicoSrc;
     if (REPRINT_RE.test(d)) item.reprint = 1;
+  }
+  // 説明文の後ろのほうに「TVアニメ『〇〇』オープニングテーマ」とある YouTube の本家はアニソン
+  if (video.animeDesc) {
+    item.animeDesc = 1;
+    if (video.src === "youtube" && item.kind === "本家" && (item.g === "J-POP" || item.g === "その他")) item.g = "アニソン";
   }
   return item;
 }

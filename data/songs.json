@@ -83845,7 +83845,7 @@
   "title": "ヨルシカ - 花に亡霊（OFFICIAL VIDEO）",
   "t": "花に亡霊",
   "kind": "本家",
-  "g": "J-POP",
+  "g": "アニソン",
   "date": "2020-04-22T09:00:02Z",
   "views": 168930728,
   "likes": 1337991,
@@ -83857,7 +83857,8 @@
   "p": "ヨルシカ",
   "a": "youtube:UCRIgIJQWuBJ0Cv_VlU3USNA",
   "firstSeen": "2026-10-15T10:07:04.192Z",
-  "seed": true
+  "seed": true,
+  "gFixed": "アニソン"
  },
  {
   "id": "nico:sm36723146",
