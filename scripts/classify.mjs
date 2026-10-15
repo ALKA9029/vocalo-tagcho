@@ -351,7 +351,12 @@ export function fixSinger(by, title) {
 }
 
 // 動画1件 → サイトで使う形
+// HoneyWorks のトレードマークの埴輪「┗|∵|┓」のような、タイトルの飾りの顔文字（曲名の読み取りのじゃまになるので外す）
+const DECO_RE = /[┗┏└][|｜l]?[∵・][|｜l]?[┓┛┘]/g;
+
 export function classify(video, { fallbackGenre = "その他" } = {}) {
+  const shownTitle = video.title;
+  if (DECO_RE.test(video.title || "")) video = { ...video, title: video.title.replace(DECO_RE, " ").replace(/【\s*】/g, "").trim() };
   const tags = video.tags || [];
   // YouTube のタグは検索よけに「VOCALOID」「初音ミク」などを何でも入れているチャンネルが多いので、
   // 歌声とボカロの判定には使わない（タイトルと説明文で判定する）
@@ -388,7 +393,7 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     id: video.id,
     src: video.src,
     url: video.url,
-    title: video.title,
+    title: shownTitle,
     t: parsed.song,
     kind,
     g,

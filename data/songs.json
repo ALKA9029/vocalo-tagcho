@@ -29077,7 +29077,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm46835956",
   "title": "【HALKA REMIX】竹取オーバーナイトセンセーション - てきてき & 芽々子 -【 #歌ってみた 】",
-  "t": "てきてき & 芽々子 -",
+  "t": "竹取オーバーナイトセンセーション",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-09-25T21:00:00+09:00",
@@ -29098,7 +29098,10 @@
   "uploaderId": 123656874,
   "uploader": null,
   "by": "竹取オーバーナイトセンセーション",
-  "firstSeen": "2026-10-09T11:31:52.028Z"
+  "firstSeen": "2026-10-09T11:31:52.028Z",
+  "of": "yt:GDwe44pTV-Q",
+  "p": "HoneyWorks",
+  "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w"
  },
  {
   "id": "nico:sm46841210",
@@ -90800,7 +90803,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=2LPb7XZsfvo",
   "title": "┗|∵|┓生意気ハニー／HoneyWorks feat.GUMI",
-  "t": "┗",
+  "t": "生意気ハニー",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2019-05-24T09:00:01Z",
@@ -90820,8 +90823,7 @@
   "v": "GUMI",
   "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w",
   "firstSeen": "2026-10-09T12:20:22.358Z",
-  "seed": true,
-  "dup": "yt:9zlh7h76tK8"
+  "seed": true
  },
  {
   "id": "yt:BjI0HIn46l0",
@@ -109833,7 +109835,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=KQF7_PduR4E",
   "title": "┗|∵|┓僕が名前を呼ぶ日／HoneyWorks feat.GUMI",
-  "t": "┗",
+  "t": "僕が名前を呼ぶ日",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2017-01-29T07:16:32Z",
@@ -109848,8 +109850,7 @@
   "v": "GUMI",
   "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w",
   "firstSeen": "2026-10-09T12:20:22.361Z",
-  "seed": true,
-  "dup": "yt:9zlh7h76tK8"
+  "seed": true
  },
  {
   "id": "nico:sm30519970",
@@ -110165,8 +110166,9 @@
   "by": "HoneyWorks",
   "firstSeen": "2026-10-08T15:10:08.856Z",
   "seed": true,
-  "of": "nico:sm29163312",
-  "a": "niconico:31476535"
+  "of": "yt:q0T7Ex7MkLM",
+  "p": "HoneyWorks",
+  "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w"
  },
  {
   "id": "nico:sm30469574",
@@ -113151,8 +113153,9 @@
   "by": "96猫&天月",
   "firstSeen": "2026-10-08T15:10:08.675Z",
   "seed": true,
-  "of": "nico:sm29163312",
-  "a": "niconico:31476535"
+  "of": "yt:q0T7Ex7MkLM",
+  "p": "HoneyWorks",
+  "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w"
  },
  {
   "id": "yt:AhIPLdltlbY",
@@ -113269,7 +113272,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=wknPFKHjJGI",
   "title": "┗|∵|┓ウルフ／HoneyWorks feat.GUMI",
-  "t": "┗",
+  "t": "ウルフ",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2016-09-16T13:37:41Z",
@@ -113284,8 +113287,7 @@
   "v": "GUMI",
   "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w",
   "firstSeen": "2026-10-09T12:20:22.360Z",
-  "seed": true,
-  "dup": "yt:9zlh7h76tK8"
+  "seed": true
  },
  {
   "id": "nico:sm29654974",
@@ -114692,11 +114694,13 @@
   ],
   "uploaderId": 31476535,
   "uploader": null,
-  "p": "",
+  "p": "HoneyWorks",
   "v": "GUMI",
   "a": "niconico:31476535",
   "firstSeen": "2026-10-11T01:21:31.103Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true,
+  "dup": "yt:q0T7Ex7MkLM"
  },
  {
   "id": "nico:sm29159219",
@@ -118303,8 +118307,9 @@
   "by": "詩人",
   "firstSeen": "2026-10-08T15:10:08.902Z",
   "seed": true,
-  "of": "nico:sm29163312",
-  "a": "niconico:31476535"
+  "of": "yt:q0T7Ex7MkLM",
+  "p": "HoneyWorks",
+  "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w"
  },
  {
   "id": "nico:sm27874345",
@@ -121296,7 +121301,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=q0T7Ex7MkLM",
   "title": "┗|∵|┓東京サマーセッション／HoneyWorks feat.GUMI×flower",
-  "t": "┗",
+  "t": "東京サマーセッション",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2015-07-24T09:00:03Z",
@@ -121318,7 +121323,9 @@
   "nicoSrc": "nico:sm26776262",
   "firstSeen": "2026-10-09T12:20:22.356Z",
   "seed": true,
-  "dup": "yt:9zlh7h76tK8"
+  "alt": [
+   "nico:sm29163312"
+  ]
  },
  {
   "id": "nico:sm26745370",
@@ -121746,7 +121753,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=bDKWkleZoxI",
   "title": "┗|∵|┓イジワルな出会い／HoneyWorks feat.初音ミク",
-  "t": "┓イジワルな出会い",
+  "t": "イジワルな出会い",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2015-07-03T09:00:01Z",
@@ -121876,7 +121883,10 @@
   "uploader": null,
   "by": "まふまふ×天月",
   "firstSeen": "2026-10-08T15:10:08.788Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:GDwe44pTV-Q",
+  "p": "HoneyWorks",
+  "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w"
  },
  {
   "id": "nico:sm26515642",
@@ -122188,7 +122198,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=b1ygYIbu8hQ",
   "title": "┗|∵|┓暁月夜-アカツキヅクヨ-／HoneyWorks feat.鏡音リン",
-  "t": "┓暁月夜-アカツキヅクヨ",
+  "t": "暁月夜-アカツキヅクヨ",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2015-06-03T13:32:05Z",
@@ -122393,7 +122403,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=seClBi2BOh4",
   "title": "┗|∵|┓言葉のいらない約束／HoneyWorks feat.GUMI",
-  "t": "┗",
+  "t": "言葉のいらない約束",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2015-05-14T11:00:05Z",
@@ -122408,8 +122418,7 @@
   "v": "GUMI",
   "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w",
   "firstSeen": "2026-10-09T12:20:22.357Z",
-  "seed": true,
-  "dup": "yt:9zlh7h76tK8"
+  "seed": true
  },
  {
   "id": "yt:Jak2qiq_jJo",
@@ -125310,7 +125319,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=N2sc7WZdn1M",
   "title": "┗|∵|┓今好きになる。-triangle story- feat.GUMI",
-  "t": "┗",
+  "t": "今好きになる。-triangle story",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2014-12-29T12:21:20Z",
@@ -125325,8 +125334,7 @@
   "v": "GUMI",
   "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w",
   "firstSeen": "2026-10-09T12:20:22.360Z",
-  "seed": true,
-  "dup": "yt:9zlh7h76tK8"
+  "seed": true
  },
  {
   "id": "yt:quoNsQ0d-C4",
@@ -125848,7 +125856,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=WqlpuarOvq8",
   "title": "┗|∵|┓今好きになる。／HoneyWorks feat.初音ミク",
-  "t": "┓今好きになる。",
+  "t": "今好きになる。",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2014-11-25T10:45:16Z",
@@ -125863,14 +125871,17 @@
   "v": "初音ミク",
   "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w",
   "firstSeen": "2026-10-09T12:20:22.330Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm24990461"
+  ]
  },
  {
   "id": "nico:sm24990461",
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm24990461",
   "title": "┗|∵|┓今好きになる。／HoneyWorks feat.初音ミク",
-  "t": "┗|∵|┓今好きになる",
+  "t": "今好きになる",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2014-11-25T19:34:17+09:00",
@@ -125896,7 +125907,8 @@
   "v": "初音ミク",
   "a": "niconico:1646151",
   "firstSeen": "2026-10-08T14:36:47.387Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:WqlpuarOvq8"
  },
  {
   "id": "nico:sm24948843",
@@ -126549,7 +126561,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=hNEVPxh0c-I",
   "title": "┗|∵|┓さよなら両片想／HoneyWorks feat.GUMI",
-  "t": "┗",
+  "t": "さよなら両片想",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2014-10-20T15:45:01Z",
@@ -126570,8 +126582,7 @@
   "v": "GUMI",
   "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w",
   "firstSeen": "2026-10-09T12:20:22.358Z",
-  "seed": true,
-  "dup": "yt:9zlh7h76tK8"
+  "seed": true
  },
  {
   "id": "nico:sm24709937",
@@ -127033,7 +127044,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm24555945",
   "title": "┗|∵|┓金曜日のおはよう-another story-／HoneyWorks feat.初音ミク",
-  "t": "┗|∵|┓金曜日のおはよう-another story-",
+  "t": "金曜日のおはよう-another story-",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2014-09-26T20:01:15+09:00",
@@ -128765,7 +128776,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=LMj9_tDSZkA",
   "title": "┗|∵|┓金曜日のおはよう／HoneyWorks feat.GUMI",
-  "t": "┗",
+  "t": "金曜日のおはよう",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2014-07-02T10:00:05Z",
@@ -128781,14 +128792,16 @@
   "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w",
   "firstSeen": "2026-10-09T12:20:22.356Z",
   "seed": true,
-  "dup": "yt:9zlh7h76tK8"
+  "alt": [
+   "nico:sm23910729"
+  ]
  },
  {
   "id": "nico:sm23910729",
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm23910729",
   "title": "┗|∵|┓金曜日のおはよう／HoneyWorks feat.GUMI",
-  "t": "┗|∵|┓金曜日のおはよう",
+  "t": "金曜日のおはよう",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2014-07-02T19:00:00+09:00",
@@ -128814,14 +128827,15 @@
   "v": "GUMI",
   "a": "niconico:1646151",
   "firstSeen": "2026-10-08T14:36:47.396Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:LMj9_tDSZkA"
  },
  {
   "id": "nico:sm23911169",
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm23911169",
   "title": "┗|∵|┓金曜日のおはよう／HoneyWorks feat.Gero",
-  "t": "┗|∵|┓金曜日のおはよう",
+  "t": "金曜日のおはよう",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2014-07-02T19:00:00+09:00",
@@ -128846,9 +128860,9 @@
   "by": "HoneyWorks",
   "firstSeen": "2026-10-08T15:10:08.709Z",
   "seed": true,
-  "of": "nico:sm23910729",
+  "of": "yt:LMj9_tDSZkA",
   "p": "HoneyWorks",
-  "a": "niconico:1646151"
+  "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w"
  },
  {
   "id": "nico:sm23879522",
@@ -130531,7 +130545,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=BkzVOKqTcBo",
   "title": "┗|∵|┓イノコリ先生／HoneyWorks feat.flower",
-  "t": "┗",
+  "t": "イノコリ先生",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2014-04-17T10:55:22Z",
@@ -130552,7 +130566,9 @@
   "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w",
   "firstSeen": "2026-10-09T12:20:22.397Z",
   "seed": true,
-  "dup": "yt:9zlh7h76tK8"
+  "alt": [
+   "nico:sm23348919"
+  ]
  },
  {
   "id": "nico:sm23348992",
@@ -130592,7 +130608,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm23348919",
   "title": "┗|∵|┓イノコリ先生／HoneyWorks feat.flower",
-  "t": "┗|∵|┓イノコリ先生",
+  "t": "イノコリ先生",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2014-04-17T19:09:26+09:00",
@@ -130618,7 +130634,8 @@
   "v": "flower",
   "a": "niconico:59387",
   "firstSeen": "2026-10-08T14:36:47.392Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:BkzVOKqTcBo"
  },
  {
   "id": "nico:sm23348371",
@@ -131863,7 +131880,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=9zlh7h76tK8",
   "title": "┗|∵|┓告白ライバル宣言／HoneyWorks feat.GUMI",
-  "t": "┗",
+  "t": "告白ライバル宣言",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2014-02-14T09:08:22Z",
@@ -131878,14 +131895,17 @@
   "v": "GUMI",
   "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w",
   "firstSeen": "2026-10-09T12:20:22.355Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm22885875"
+  ]
  },
  {
   "id": "nico:sm22885875",
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm22885875",
   "title": "┗|∵|┓告白ライバル宣言／HoneyWorks feat.GUMI",
-  "t": "┗|∵|┓告白ライバル宣言",
+  "t": "告白ライバル宣言",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2014-02-14T18:00:00+09:00",
@@ -131910,7 +131930,8 @@
   "v": "GUMI",
   "a": "niconico:1646151",
   "firstSeen": "2026-10-08T14:36:47.373Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:9zlh7h76tK8"
  },
  {
   "id": "nico:sm22880189",
@@ -133234,7 +133255,7 @@
   "title": "病名恋ワズライ　歌ってみた　ver.鎖那",
   "t": "病名恋ワズライ",
   "kind": "歌ってみた",
-  "g": "その他",
+  "g": "ボカロ",
   "date": "2013-12-19T20:00:00+09:00",
   "views": 1843034,
   "likes": 374,
@@ -133248,7 +133269,10 @@
   "uploader": null,
   "by": "鎖那",
   "firstSeen": "2026-10-08T15:10:08.842Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:mwBGD2WT70I",
+  "p": "HoneyWorks",
+  "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w"
  },
  {
   "id": "nico:sm22478322",
@@ -133288,7 +133312,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=mwBGD2WT70I",
   "title": "┗|∵|┓病名恋ワズライ／HoneyWorks feat.GUMI",
-  "t": "┗",
+  "t": "病名恋ワズライ",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2013-12-17T13:33:18Z",
@@ -133304,14 +133328,16 @@
   "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w",
   "firstSeen": "2026-10-09T12:20:22.356Z",
   "seed": true,
-  "dup": "yt:9zlh7h76tK8"
+  "alt": [
+   "nico:sm22474644"
+  ]
  },
  {
   "id": "nico:sm22474644",
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm22474644",
   "title": "┗|∵|┓病名恋ワズライ／HoneyWorks feat.GUMI",
-  "t": "┗|∵|┓病名恋ワズライ",
+  "t": "病名恋ワズライ",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2013-12-17T22:24:26+09:00",
@@ -133337,7 +133363,8 @@
   "v": "GUMI",
   "a": "niconico:1646151",
   "firstSeen": "2026-10-08T14:36:47.420Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:mwBGD2WT70I"
  },
  {
   "id": "nico:sm22441261",
@@ -133358,7 +133385,7 @@
   ],
   "uploaderId": 59387,
   "uploader": null,
-  "p": "┗|∵|┓",
+  "p": "アフレコ企画",
   "a": "niconico:59387",
   "firstSeen": "2026-10-08T14:36:47.427Z",
   "seed": true
@@ -134403,7 +134430,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm22122720",
   "title": "┗|∵|┓テレカクシ思春期／HoneyWorks feat.鏡音レン",
-  "t": "┗|∵|┓テレカクシ思春期",
+  "t": "テレカクシ思春期",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2013-10-26T17:00:00+09:00",
@@ -137622,7 +137649,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm21051219",
   "title": "┗|∵|┓ラズベリー＊モンスター／HoneyWorks feat.初音ミク",
-  "t": "┗|∵|┓ラズベリー*モンスター",
+  "t": "ラズベリー*モンスター",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2013-06-06T19:40:00+09:00",
@@ -137655,9 +137682,9 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm21051211",
   "title": "✿ ラズベリー＊モンスター 歌ってみた ver花たん",
-  "t": "ラズベリー",
+  "t": "ラズベリー*モンスター",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2013-06-06T19:40:00+09:00",
   "views": 1755774,
   "likes": 390,
@@ -137677,9 +137704,9 @@
   "by": "花たん",
   "firstSeen": "2026-10-08T15:10:08.867Z",
   "seed": true,
-  "of": "yt:7Pk-9_fZHdg",
-  "p": "マルシィ",
-  "a": "youtube:UCANYCOJGI5ak1F0aH7YFs7g"
+  "of": "nico:sm21051219",
+  "p": "HoneyWorks",
+  "a": "niconico:59387"
  },
  {
   "id": "nico:sm21036288",
@@ -138241,7 +138268,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=-T2u8uRgik0",
   "title": "┗|∵|┓初恋の絵本-arrangement-／HoneyWorks feat.GUMI",
-  "t": "┗",
+  "t": "初恋の絵本-arrangement",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2013-05-01T08:45:17Z",
@@ -138948,7 +138975,7 @@
   "title": "☪『ヤキモチの答え』 を歌って㋯㋟。by天月",
   "t": "ヤキモチの答え",
   "kind": "歌ってみた",
-  "g": "その他",
+  "g": "ボカロ",
   "date": "2013-03-20T16:10:00+09:00",
   "views": 1650762,
   "likes": 190,
@@ -138962,7 +138989,10 @@
   "uploader": null,
   "by": "天月",
   "firstSeen": "2026-10-08T15:10:08.891Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:-b8h94sHfuQ",
+  "p": "HoneyWorks",
+  "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w"
  },
  {
   "id": "nico:sm20377698",
@@ -139123,7 +139153,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=-b8h94sHfuQ",
   "title": "┗|∵|┓ヤキモチの答え／HoneyWorks feat.GUMI",
-  "t": "┗",
+  "t": "ヤキモチの答え",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2013-03-14T11:19:50Z",
@@ -139139,7 +139169,9 @@
   "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w",
   "firstSeen": "2026-10-09T12:20:22.356Z",
   "seed": true,
-  "dup": "yt:9zlh7h76tK8"
+  "alt": [
+   "nico:sm20332495"
+  ]
  },
  {
   "id": "nico:sm20331479",
@@ -139181,7 +139213,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm20332495",
   "title": "┗|∵|┓ヤキモチの答え／HoneyWorks feat.GUMI",
-  "t": "┗|∵|┓ヤキモチの答え",
+  "t": "ヤキモチの答え",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2013-03-14T19:48:41+09:00",
@@ -139207,7 +139239,8 @@
   "v": "GUMI",
   "a": "niconico:1646151",
   "firstSeen": "2026-10-08T14:36:47.379Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:-b8h94sHfuQ"
  },
  {
   "id": "nico:sm20328363",
@@ -142062,7 +142095,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=YNkL6A1WRY8",
   "title": "┗|∵|┓告白予行練習／HoneyWorks feat.GUMI",
-  "t": "┗",
+  "t": "告白予行練習",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2012-10-27T18:50:23Z",
@@ -142080,14 +142113,16 @@
   "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w",
   "firstSeen": "2026-10-09T12:20:22.358Z",
   "seed": true,
-  "dup": "yt:9zlh7h76tK8"
+  "alt": [
+   "nico:sm19218102"
+  ]
  },
  {
   "id": "nico:sm19218102",
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm19218102",
   "title": "┗|∵|┓告白予行練習／HoneyWorks feat.GUMI",
-  "t": "┗|∵|┓告白予行練習",
+  "t": "告白予行練習",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2012-10-27T23:05:51+09:00",
@@ -142113,7 +142148,8 @@
   "v": "GUMI",
   "a": "niconico:1646151",
   "firstSeen": "2026-10-08T14:36:47.367Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:YNkL6A1WRY8"
  },
  {
   "id": "nico:sm19213211",
@@ -142782,14 +142818,17 @@
   "uploader": null,
   "by": "ろん",
   "firstSeen": "2026-10-08T15:10:08.709Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:GDwe44pTV-Q",
+  "p": "HoneyWorks",
+  "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w"
  },
  {
   "id": "yt:GDwe44pTV-Q",
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=GDwe44pTV-Q",
   "title": "┗|∵|┓竹取オーバーナイトセンセーション／HoneyWorks feat.鏡音リン、レン",
-  "t": "┓竹取オーバーナイトセンセーション",
+  "t": "竹取オーバーナイトセンセーション",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2012-09-27T16:46:15Z",
@@ -142806,14 +142845,17 @@
   "v": "鏡音リン",
   "a": "youtube:UCAaGaynFpku5cAx6OOSrW-w",
   "firstSeen": "2026-10-09T12:20:22.353Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm18991041"
+  ]
  },
  {
   "id": "nico:sm18991041",
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm18991041",
   "title": "┗|∵|┓竹取オーバーナイトセンセーション／HoneyWorks feat.鏡音リン、レン",
-  "t": "┗|∵|┓竹取オーバーナイトセンセーション",
+  "t": "竹取オーバーナイトセンセーション",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2012-09-28T01:21:26+09:00",
@@ -142839,7 +142881,8 @@
   "v": "鏡音リン",
   "a": "niconico:59387",
   "firstSeen": "2026-10-08T14:36:47.410Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:GDwe44pTV-Q"
  },
  {
   "id": "nico:sm18979318",
