@@ -466,7 +466,7 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
 // 歌い手のチャンネル名から名前だけを取り出す：「ころんの実況【すとぷり】」→「ころん」、「成人男性三人組 Official」→「成人男性三人組」
 export function singerCore(name) {
   const c = cleanChannel(name);
-  return c.replace(/【[^】]*】|\[[^\]]*\]|［[^］]*］/g, "").replace(/の(ゲーム)?(実況|チャンネル|歌|うた)$/, "").trim() || c;
+  return cleanChannel(c.replace(/【[^】]*】|\[[^\]]*\]|［[^］]*］/g, "").replace(/の(ゲーム)?(実況|チャンネル|歌|うた)$/, "").trim()) || c;
 }
 
 export function cleanChannel(name) {
