@@ -89,12 +89,17 @@ const ANIME_RE = /TVアニメ|アニメ[「『]|劇場版|主題歌|オープニ
 export const ANIME_DESC_RE = /TVアニメ|テレビアニメ|アニメ[「『]|劇場版|アニメーション映画|アニメ映画|アニメ(主題歌|OP|ED|オープニング|エンディング)|(オープニング|エンディング)(テーマ|主題歌)|ノンクレジット|ゲーム[「『][^」』]*[」』].{0,12}(主題歌|テーマ)/;
 // 説明文の最初のほう（500文字）で、収録曲リスト（「01. 〜」「・〜」）ではない行にアニメ・ゲームの主題歌と書いてあるか
 export const animeInDesc = (desc = "") => desc.slice(0, 500).split(/\n/).some(l => !/^\s*(\d+\s*[.)．]|M\d|[・\-−–#＃])/.test(l) && ANIME_DESC_RE.test(l));
-const animeOrGame = (title, tags) => tags.some(t => /アニソン|^アニメ(ソング)?$|_?The_Animation|ゲーソン|ゲーム(音楽|ソング|BGM)|^(ゲーム|アニメ)(OP|ED|主題歌)/i.test(t)) || ANIME_RE.test(title);
+// タイトルの「主題歌」「オープニング」は、ドラマ・テレビ番組・CMのものならアニソンではない
+function animeTitle(title = "") {
+  if (!ANIME_RE.test(title)) return false;
+  return !(/ドラマ|番組|\bCM\b|テレビ系|TV系|日テレ|フジテレビ|テレビ朝日|TBS|NHK|リアリティ|プロ野球|サッカー|甲子園/i.test(title) && !/アニメ|anime|劇場版/i.test(title));
+}
+const animeOrGame = (title, tags) => tags.some(t => /アニソン|^アニメ(ソング)?$|_?The_Animation|ゲーソン|ゲーム(音楽|ソング|BGM)|^(ゲーム|アニメ)(OP|ED|主題歌)/i.test(t)) || animeTitle(title);
 const ANIME_TAGS = ["アニソン", "アニメ", "アニメソング", "anime"];
 
 export function detectGenre(title, tags, fallback = "その他", desc = "") {
   if (hasTag(tags, VOCALO_TAGS) || (detectVoice(title, tags) && !hasTag(tags, JPOP_TAGS))) return "ボカロ";
-  if (hasTag(tags, ANIME_TAGS) || ANIME_RE.test(title) || ANIME_RE.test(desc.slice(0, 300))) return "アニソン";
+  if (hasTag(tags, ANIME_TAGS) || animeTitle(title) || ANIME_DESC_RE.test(desc.slice(0, 300))) return "アニソン";
   if (hasTag(tags, JPOP_TAGS)) return "J-POP";
   return fallback;
 }
@@ -360,6 +365,8 @@ export function fixSinger(by, title) {
 
 // 動画1件 → サイトで使う形
 const LABEL_RE = /^(Sony Music|UNIVERSAL MUSIC|KING RECORDS|キングレコード|VAP|avex|ポニーキャニオン|PONY CANYON|Lantis|ランティス|Aniplex|アニプレックス|TOHO|東宝|Warner|ワーナー|Victor|ビクター|日本コロムビア|COLUMBIA|徳間|FlyingDog|フライングドッグ)/i;
+// 「革命道中 - On The Way × TVアニメ『ダンダダン』」のようなコラボ表記も作品名なので外す
+const COLLAB_RE = /\s*[×✕]\s*(TVアニメ|テレビアニメ|アニメ|映画|劇場版)?\s*[『「][^』」]+[』」]/g;
 const TIEIN_RE = /[『「][^』」]{2,}[』」]\s*(?:の)?(?:主題歌|オープニング|エンディング|挿入歌|OP|ED|イメージソング|テーマソング|タイアップ)[^\s　]*/g;
 // HoneyWorks のトレードマークの埴輪「┗|∵|┓」のような、タイトルの飾りの顔文字（曲名の読み取りのじゃまになるので外す）
 const DECO_RE = /[┗┏└][|｜l]?[∵・][|｜l]?[┓┛┘]/g;
@@ -377,7 +384,7 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
   // 「『機動戦士ガンダム 閃光のハサウェイ』主題歌」「(TVアニメ『〇〇』OP)」のようなタイアップ先の作品名は、曲名と取りちがえないように外してから読む
   const ytTitle = video.src === "youtube" ? (video.title
     .replace(/[（(\[［【<＜][^()（）\[\]［］【】<>＜＞]*[』」][^()（）\[\]［］【】<>＜＞]*[)）\]］】>＞]/g, " ")   // かっこの中の「(TVアニメ『〇〇』OP)」
-    .replace(TIEIN_RE, " ").replace(/\s*※.*$/, "").replace(/\s*[｜|\/／]\s*(TVアニメ|テレビアニメ|映画|ドラマ|フジテレビ系|TBS系|テレビ朝日系|日本テレビ系|NHK)?\s*$/, "")
+    .replace(COLLAB_RE, " ").replace(TIEIN_RE, " ").replace(/\s*※.*$/, "").replace(/\s*[｜|\/／]\s*(TVアニメ|テレビアニメ|映画|ドラマ|フジテレビ系|TBS系|テレビ朝日系|日本テレビ系|NHK)?\s*$/, "")
     .replace(/[\s　]+(映画|TVアニメ|テレビアニメ|アニメ|ドラマ|劇場版)\s*$/, "")
     .replace(/\s+/g, " ").trim() || video.title) : video.title;
   const parsed = video.src === "youtube" ? parseYouTube(ytTitle, video.uploader) : parseTitle(video.title);
@@ -389,7 +396,7 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
   // YouTubeで「ボカロ」として集めた動画でも、歌声やボカロの手がかりがなければボカロにしない
   const vocaloHint = !!rawVoice || hasTag(vtags, VOCALO_TAGS) || /VOCALOID|ボカロ|ボーカロイド|初音ミク|重音テト|可不|Synthesizer ?V|UTAU|CeVIO|보컬로이드|보카로/i.test(`${video.title} ${desc.slice(0, 300)}`);
   // 「アニメ主題歌」の検索で見つけた動画やアニソン寄りのチャンネルの動画でも、アニメ・ゲームの手がかりがなければアニソンにしない
-  const animeHint = animeOrGame(video.title, vtags) || ANIME_RE.test(desc.slice(0, 600)) || !!video.animeDesc;
+  const animeHint = animeOrGame(video.title, vtags) || ANIME_DESC_RE.test(desc.slice(0, 600)) || !!video.animeDesc;
   const fb = video.src === "youtube" && fallbackGenre === "ボカロ" && !vocaloHint ? "J-POP"
     : video.src === "youtube" && fallbackGenre === "アニソン" && !animeHint ? "J-POP" : fallbackGenre;
   let g = detectGenre(video.title, vtags, fb, desc);
