@@ -661,10 +661,15 @@ export function mergeSources(items) {
   return items;
 }
 
+// 同じ人の作者名の表記ゆれを、本人の名乗り（X などの表記）にそろえる
+const CREATOR_NAMES = { "黒うさP": "黒うさP/WhiteFlame", "WhiteFlame": "黒うさP/WhiteFlame" };
+const fixCreatorNames = items => { for (const i of items) if (i.p && CREATOR_NAMES[i.p]) i.p = CREATOR_NAMES[i.p]; };
+
 export function linkCovers(items) {
   inferNamesFromTags(items);
   guessChannelGenre(items);
   fillCreators(items);
+  fixCreatorNames(items);
   vocaloByCreator(items);
   const originals = new Map();
   for (const i of items.filter(x => x.kind === "本家").sort((a, b) => (a.date || "").localeCompare(b.date || ""))) {
@@ -707,6 +712,7 @@ export function linkCovers(items) {
   const byIdF = new Map(items.map(i => [i.id, i]));
   for (const i of items) if (i.gFixed) i.g = i.gFixed;
   for (const c of items) { const o = c.of && byIdF.get(c.of); if (o && o.gFixed && !c.gFixed) c.g = o.g; }
+  fixCreatorNames(items);
   return items;
 }
 
