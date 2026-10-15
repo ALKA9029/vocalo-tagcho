@@ -639,7 +639,7 @@ export function markSelfCovers(items) {
     if (c.kind !== "歌ってみた") continue;
     const o = c.of ? byId.get(c.of) : null;
     const sameUploader = o && c.uploaderId && c.uploaderId === o.uploaderId && c.src === o.src;
-    if (SELF_RE.test(c.title || "") || sameUploader) c.self = 1;
+    if (SELF_RE.test(c.title || "") || sameUploader || c.selfCover) c.self = 1;
   }
 }
 
@@ -651,7 +651,7 @@ const VERSION_RE = /remix|リミックス|\bver\b|ver\.|version|バージョン|
 const REPRINT_RE = /許諾を得て転載|転載(させて|して(い|お)ります|しています|許可)|reprint(s|ed)? from|permission (was |has been )?(obtained|granted|given)/i;
 
 export function mergeSources(items) {
-  for (const i of items) { delete i.dup; delete i.alt; }
+  for (const i of items) { delete i.dup; delete i.alt; delete i.selfCover; }
   // YouTube の本家で、説明文にニコニコ版へのリンクがある（または転載と書いてある）ものは、
   // 同じ曲名のニコニコの本家と同じ作者にそろえて、1曲にまとめられるようにする（転載チャンネル名を作者にしない）
   const nicoByT = new Map();
@@ -682,8 +682,17 @@ export function mergeSources(items) {
     (groups.get(k) || groups.set(k, []).get(k)).push(i);
   }
   const dupOf = new Map();
-  for (const list of groups.values()) {
+  for (let list of groups.values()) {
     if (list.length < 2) continue;
+    // ニコニコの歌声つきの本家が先に投稿されていて、YouTube 側があとから出た本人の歌うMV（歌声の曲がないチャンネル）なら、
+    // ニコニコ版がボカロの原曲で、YouTube 版は本人のセルフカバー（Eve の「ドラマツルギー」など）
+    const nicoV = list.find(r => r.src === "niconico" && r.v);
+    const selfYT = nicoV ? list.filter(r => r.src === "youtube" && !r.v && (r.g === "J-POP" || r.g === "アニソン") && !voiceCh.has(r.uploaderId)) : [];
+    if (selfYT.length && selfYT.every(h => (Date.parse(h.date) || 0) > (Date.parse(nicoV.date) || 0))) {
+      for (const h of selfYT) { h.kind = "歌ってみた"; h.of = nicoV.id; h.by = h.p; h.selfCover = 1; dupOf.set(h.id, nicoV.id); }
+      list = list.filter(r => !selfYT.includes(r));
+      if (list.length < 2) continue;
+    }
     // サイトごとに一番再生されている投稿を1つずつ選ぶ。同じサイトの残り（Official Audio・Lyric Video・ダンス版など同じ曲の別の動画）は、
     // 別の曲として並べずに代表の曲の中に隠す（再生数は合計に足す）
     const best = new Map();

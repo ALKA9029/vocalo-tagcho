@@ -2021,8 +2021,8 @@
   "url": "https://www.youtube.com/watch?v=XoxFd8Z3DUg",
   "title": "咲き誇れ",
   "t": "咲き誇れ",
-  "kind": "本家",
-  "g": "J-POP",
+  "kind": "歌ってみた",
+  "g": "ボカロ",
   "date": "2026-10-13T10:00:15Z",
   "views": 445388,
   "likes": 12032,
@@ -2038,7 +2038,10 @@
   "p": "YOASOBI",
   "a": "youtube:UCI6B8NkZKqlFWoiC_xE-hzA",
   "firstSeen": "2026-10-14T14:14:53.150Z",
-  "dup": "nico:sm34931260"
+  "of": "nico:sm34931260",
+  "by": "YOASOBI",
+  "selfCover": 1,
+  "self": 1
  },
  {
   "id": "yt:Nincy9liybE",
@@ -20714,7 +20717,7 @@
   "title": "YOASOBI 『咲き誇れ』/ NHK 朝ドラ [ブラッサム] 主題歌 INSPIRED JAZZ PIANO COVER by roiro",
   "t": "咲き誇れ",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2026-10-04T21:00:23Z",
   "views": 7024,
   "likes": 14,
@@ -23374,7 +23377,7 @@
   "title": "【ブラッサム】主題歌「咲き誇れ」YOASOBI | 朝ドラ | NHK 【歌詞・コード付】 cover by 小倉悠吾",
   "t": "咲き誇れ",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2026-10-03T08:22:08Z",
   "views": 35656,
   "likes": 125,
@@ -30200,7 +30203,7 @@
   "title": "【爽やかに】アウトサイダー/Eve 歌ってみた ver.ha-ku",
   "t": "アウトサイダー",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2026-09-25T18:00:00+09:00",
   "views": 3330,
   "likes": 369,
@@ -90140,7 +90143,7 @@
   "title": "【初音ミク】咲き誇れ！【オリジナル/MV】",
   "t": "咲き誇れ!",
   "kind": "本家",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2019-04-08T00:31:02+09:00",
   "views": 3721,
   "likes": 2,
@@ -90161,12 +90164,13 @@
   "uploaderId": 1135289,
   "uploader": null,
   "p": "YOASOBI",
+  "v": "初音ミク",
   "a": "niconico:1135289",
   "firstSeen": "2026-10-10T07:39:24.120Z",
   "seed": true,
   "pFilled": true,
   "alt": [
-   "yt:XoxFd8Z3DUg"
+   "yt:zlH3jWGQ8sY"
   ]
  },
  {
@@ -95167,8 +95171,8 @@
   "url": "https://www.youtube.com/watch?v=PvzBWFGEz8M",
   "title": "トーキョーゲットー - Eve MV",
   "t": "トーキョーゲットー",
-  "kind": "本家",
-  "g": "J-POP",
+  "kind": "歌ってみた",
+  "g": "ボカロ",
   "date": "2018-07-06T10:00:02Z",
   "views": 66355881,
   "likes": 646559,
@@ -95192,7 +95196,10 @@
   "a": "youtube:UCUXfRsEIJ9xO1DT7TbEWksw",
   "firstSeen": "2026-10-15T10:07:04.144Z",
   "seed": true,
-  "dup": "nico:sm33475587"
+  "of": "nico:sm33475587",
+  "by": "Eve",
+  "selfCover": 1,
+  "self": 1
  },
  {
   "id": "nico:sm33480697",
@@ -95234,7 +95241,7 @@
   "title": "トーキョーゲットー / 初音ミク",
   "t": "トーキョーゲットー",
   "kind": "本家",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2018-07-05T19:00:00+09:00",
   "views": 1431370,
   "likes": 1394,
@@ -95255,14 +95262,12 @@
   "uploaderId": 10103681,
   "uploader": null,
   "p": "Eve",
+  "v": "初音ミク",
   "a": "niconico:10103681",
   "firstSeen": "2026-10-08T14:36:47.405Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true,
-  "alt": [
-   "yt:PvzBWFGEz8M"
-  ]
+  "pFromTag": true
  },
  {
   "id": "nico:sm33458816",
@@ -96740,7 +96745,7 @@
   "title": "アウトサイダー／まふまふ×天月【歌ってみた】",
   "t": "アウトサイダー",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2018-04-17T18:00:00+09:00",
   "views": 1827463,
   "likes": 531,
@@ -96865,7 +96870,7 @@
   "title": "アウトサイダー　歌ってみた【そらる】",
   "t": "アウトサイダー",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2018-04-14T18:00:00+09:00",
   "views": 2234023,
   "likes": 480,
@@ -97001,7 +97006,7 @@
   "title": "【爽快に】アウトサイダー 歌ってみた ver.Sou",
   "t": "アウトサイダー",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2018-04-10T20:00:00+09:00",
   "views": 1813091,
   "likes": 438,
@@ -97030,8 +97035,8 @@
   "url": "https://www.youtube.com/watch?v=GMPjNA_fCj4",
   "title": "アウトサイダー - Eve MV",
   "t": "アウトサイダー",
-  "kind": "本家",
-  "g": "J-POP",
+  "kind": "歌ってみた",
+  "g": "ボカロ",
   "date": "2018-04-07T10:01:42Z",
   "views": 69901728,
   "likes": 672960,
@@ -97056,7 +97061,10 @@
   "a": "youtube:UCUXfRsEIJ9xO1DT7TbEWksw",
   "firstSeen": "2026-10-15T10:07:04.144Z",
   "seed": true,
-  "dup": "nico:sm33009959"
+  "of": "nico:sm33009959",
+  "by": "Eve",
+  "selfCover": 1,
+  "self": 1
  },
  {
   "id": "nico:sm33013085",
@@ -97098,7 +97106,7 @@
   "title": "アウトサイダー / 初音ミク",
   "t": "アウトサイダー",
   "kind": "本家",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2018-04-06T19:00:00+09:00",
   "views": 3212835,
   "likes": 4517,
@@ -97119,14 +97127,12 @@
   "uploaderId": 10103681,
   "uploader": null,
   "p": "Eve",
+  "v": "初音ミク",
   "a": "niconico:10103681",
   "firstSeen": "2026-10-08T14:36:47.347Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true,
-  "alt": [
-   "yt:GMPjNA_fCj4"
-  ]
+  "pFromTag": true
  },
  {
   "id": "yt:OVKKtwDReEA",
@@ -100207,7 +100213,7 @@
   "title": "【ウォルピス社】ドラマツルギーを歌ってみました【提供】",
   "t": "ドラマツルギー",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2017-12-10T19:30:00+09:00",
   "views": 2043496,
   "likes": 1671,
@@ -100417,7 +100423,7 @@
   "title": "【爽快に】お気に召すまま 歌ってみた ver.Sou",
   "t": "お気に召すまま",
   "kind": "歌ってみた",
-  "g": "アニソン",
+  "g": "ボカロ",
   "date": "2017-12-01T20:00:00+09:00",
   "views": 3246798,
   "likes": 1130,
@@ -100475,8 +100481,8 @@
   "url": "https://www.youtube.com/watch?v=nROvY9uiYYk",
   "title": "お気に召すまま - Eve MV",
   "t": "お気に召すまま",
-  "kind": "本家",
-  "g": "アニソン",
+  "kind": "歌ってみた",
+  "g": "ボカロ",
   "date": "2017-11-29T10:00:02Z",
   "views": 153495211,
   "likes": 1253034,
@@ -100501,7 +100507,10 @@
   "animeDesc": 1,
   "firstSeen": "2026-10-15T10:07:04.141Z",
   "seed": true,
-  "dup": "nico:sm32338124"
+  "of": "nico:sm32338124",
+  "by": "Eve",
+  "selfCover": 1,
+  "self": 1
  },
  {
   "id": "yt:fey-Kn6WROs",
@@ -100563,7 +100572,7 @@
   "title": "お気に召すまま / 初音ミク",
   "t": "お気に召すまま",
   "kind": "本家",
-  "g": "アニソン",
+  "g": "ボカロ",
   "date": "2017-11-28T19:00:21+09:00",
   "views": 2884543,
   "likes": 5062,
@@ -100584,14 +100593,12 @@
   "uploaderId": 10103681,
   "uploader": null,
   "p": "Eve",
+  "v": "初音ミク",
   "a": "niconico:10103681",
   "firstSeen": "2026-10-08T14:36:47.354Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true,
-  "alt": [
-   "yt:nROvY9uiYYk"
-  ]
+  "pFromTag": true
  },
  {
   "id": "nico:sm32338004",
@@ -101507,7 +101514,7 @@
   "title": "ドラマツルギー 歌ってみた【りぶ】",
   "t": "ドラマツルギー",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2017-10-15T20:00:00+09:00",
   "views": 12287084,
   "likes": 4947,
@@ -101538,7 +101545,7 @@
   "title": "【爽快に】ドラマツルギー 歌ってみた ver.Sou",
   "t": "ドラマツルギー",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2017-10-14T20:00:00+09:00",
   "views": 1359139,
   "likes": 435,
@@ -101705,8 +101712,8 @@
   "url": "https://www.youtube.com/watch?v=jJzw1h5CR-I",
   "title": "ドラマツルギー - Eve  MV",
   "t": "ドラマツルギー",
-  "kind": "本家",
-  "g": "J-POP",
+  "kind": "歌ってみた",
+  "g": "ボカロ",
   "date": "2017-10-11T10:00:04Z",
   "views": 224664270,
   "likes": 1703696,
@@ -101730,7 +101737,10 @@
   "a": "youtube:UCUXfRsEIJ9xO1DT7TbEWksw",
   "firstSeen": "2026-10-15T10:07:04.141Z",
   "seed": true,
-  "dup": "nico:sm32076378"
+  "of": "nico:sm32076378",
+  "by": "Eve",
+  "selfCover": 1,
+  "self": 1
  },
  {
   "id": "nico:sm32076235",
@@ -101795,7 +101805,7 @@
   "title": "ドラマツルギー / 初音ミク",
   "t": "ドラマツルギー",
   "kind": "本家",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2017-10-10T19:00:00+09:00",
   "views": 5788719,
   "likes": 12753,
@@ -101816,14 +101826,12 @@
   "uploaderId": 10103681,
   "uploader": null,
   "p": "Eve",
+  "v": "初音ミク",
   "a": "niconico:10103681",
   "firstSeen": "2026-10-08T14:36:47.327Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true,
-  "alt": [
-   "yt:jJzw1h5CR-I"
-  ]
+  "pFromTag": true
  },
  {
   "id": "nico:sm32075381",
@@ -104626,7 +104634,7 @@
   "title": "【爽快に】あの娘シークレット 歌ってみた ver.Sou",
   "t": "あの娘シークレット",
   "kind": "歌ってみた",
-  "g": "アニソン",
+  "g": "ボカロ",
   "date": "2017-07-19T20:00:00+09:00",
   "views": 2320156,
   "likes": 340,
@@ -104750,8 +104758,8 @@
   "url": "https://www.youtube.com/watch?v=sgdPlDG1-8k",
   "title": "あの娘シークレット - Eve MV",
   "t": "あの娘シークレット",
-  "kind": "本家",
-  "g": "アニソン",
+  "kind": "歌ってみた",
+  "g": "ボカロ",
   "date": "2017-07-15T07:29:15Z",
   "views": 91834294,
   "likes": 1031365,
@@ -104773,7 +104781,10 @@
   "animeDesc": 1,
   "firstSeen": "2026-10-15T10:07:04.142Z",
   "seed": true,
-  "dup": "nico:sm31562175"
+  "of": "nico:sm31562175",
+  "by": "Eve",
+  "selfCover": 1,
+  "self": 1
  },
  {
   "id": "nico:sm31562175",
@@ -104782,7 +104793,7 @@
   "title": "あの娘シークレット / 初音ミク",
   "t": "あの娘シークレット",
   "kind": "本家",
-  "g": "アニソン",
+  "g": "ボカロ",
   "date": "2017-07-13T19:00:00+09:00",
   "views": 1205051,
   "likes": 1569,
@@ -104803,14 +104814,12 @@
   "uploaderId": 10103681,
   "uploader": null,
   "p": "Eve",
+  "v": "初音ミク",
   "a": "niconico:10103681",
   "firstSeen": "2026-10-08T14:36:47.424Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true,
-  "alt": [
-   "yt:sgdPlDG1-8k"
-  ]
+  "pFromTag": true
  },
  {
   "id": "nico:sm31550568",
@@ -105476,7 +105485,7 @@
   "title": "ナンセンス文学　歌ってみた【そらる×まふまふ】",
   "t": "ナンセンス文学",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2017-06-16T18:00:00+09:00",
   "views": 2319799,
   "likes": 897,
@@ -105839,7 +105848,7 @@
   "title": "【爽快に】ナンセンス文学 歌ってみた ver.Sou",
   "t": "ナンセンス文学",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2017-05-23T20:00:21+09:00",
   "views": 6364119,
   "likes": 1352,
@@ -105869,8 +105878,8 @@
   "url": "https://www.youtube.com/watch?v=OskXF3s0UT8",
   "title": "ナンセンス文学 - Eve  MV",
   "t": "ナンセンス文学",
-  "kind": "本家",
-  "g": "J-POP",
+  "kind": "歌ってみた",
+  "g": "ボカロ",
   "date": "2017-05-20T10:00:03Z",
   "views": 85032959,
   "likes": 721017,
@@ -105893,7 +105902,10 @@
   "a": "youtube:UCUXfRsEIJ9xO1DT7TbEWksw",
   "firstSeen": "2026-10-15T10:07:04.143Z",
   "seed": true,
-  "dup": "nico:sm31241401"
+  "of": "nico:sm31241401",
+  "by": "Eve",
+  "selfCover": 1,
+  "self": 1
  },
  {
   "id": "nico:sm31241401",
@@ -105902,7 +105914,7 @@
   "title": "ナンセンス文学 / 初音ミク",
   "t": "ナンセンス文学",
   "kind": "本家",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2017-05-19T19:00:00+09:00",
   "views": 4459737,
   "likes": 6212,
@@ -105923,14 +105935,12 @@
   "uploaderId": 10103681,
   "uploader": null,
   "p": "Eve",
+  "v": "初音ミク",
   "a": "niconico:10103681",
   "firstSeen": "2026-10-08T14:36:47.334Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true,
-  "alt": [
-   "yt:OskXF3s0UT8"
-  ]
+  "pFromTag": true
  },
  {
   "id": "nico:sm31236768",
