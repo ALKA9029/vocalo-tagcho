@@ -91338,7 +91338,7 @@
   "title": "ラストダンス 歌ってみた【りぶ】",
   "t": "ラストダンス",
   "kind": "歌ってみた",
-  "g": "アニソン",
+  "g": "ボカロ",
   "date": "2018-12-31T18:30:00+09:00",
   "views": 2637883,
   "likes": 867,
@@ -91357,7 +91357,7 @@
   "by": "りぶ",
   "firstSeen": "2026-10-08T15:10:08.737Z",
   "seed": true,
-  "of": "yt:CLdeykXCZX4",
+  "of": "nico:sm34317927",
   "p": "Eve",
   "a": "youtube:UCUXfRsEIJ9xO1DT7TbEWksw"
  },
@@ -91674,8 +91674,7 @@
   "firstSeen": "2026-10-08T14:36:47.387Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true,
-  "dup": "yt:CLdeykXCZX4"
+  "pFromTag": true
  },
  {
   "id": "yt:CLdeykXCZX4",
@@ -91683,8 +91682,8 @@
   "url": "https://www.youtube.com/watch?v=CLdeykXCZX4",
   "title": "ラストダンス - Eve MV",
   "t": "ラストダンス",
-  "kind": "本家",
-  "g": "アニソン",
+  "kind": "歌ってみた",
+  "g": "ボカロ",
   "date": "2018-12-14T10:10:15Z",
   "views": 98651167,
   "likes": 759080,
@@ -91710,9 +91709,10 @@
   "animeDesc": 1,
   "firstSeen": "2026-10-15T10:07:04.142Z",
   "seed": true,
-  "alt": [
-   "nico:sm34317927"
-  ]
+  "of": "nico:sm34317927",
+  "by": "Eve",
+  "selfCover": 1,
+  "self": 1
  },
  {
   "id": "nico:sm34312814",

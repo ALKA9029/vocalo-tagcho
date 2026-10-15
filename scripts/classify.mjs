@@ -688,7 +688,8 @@ export function mergeSources(items) {
     // ニコニコ版がボカロの原曲で、YouTube 版は本人のセルフカバー（Eve の「ドラマツルギー」など）
     const nicoV = list.find(r => r.src === "niconico" && r.v);
     const selfYT = nicoV ? list.filter(r => r.src === "youtube" && !r.v && (r.g === "J-POP" || r.g === "アニソン") && !voiceCh.has(r.uploaderId)) : [];
-    if (selfYT.length && selfYT.every(h => (Date.parse(h.date) || 0) > (Date.parse(nicoV.date) || 0))) {
+    //  （同じ日の公開でどちらが先か分からないことがあるので、YouTube 版が1日以上先に出ていなければ、ニコニコ版を原曲にする）
+    if (selfYT.length && selfYT.every(h => (Date.parse(h.date) || 0) > (Date.parse(nicoV.date) || 0) - 864e5)) {
       for (const h of selfYT) { h.kind = "歌ってみた"; h.of = nicoV.id; h.by = h.p; h.selfCover = 1; dupOf.set(h.id, nicoV.id); }
       list = list.filter(r => !selfYT.includes(r));
       if (list.length < 2) continue;
