@@ -673,6 +673,7 @@ export function mergeSources(items) {
     if (!i.v && target.v) i.v = target.v;
     i.reprintOf = target.id;
   }
+  const voiceCh = new Set(items.filter(i => i.src === "youtube" && i.v && i.uploaderId).map(i => i.uploaderId));
   const groups = new Map();
   for (const i of items) {
     if (i.kind !== "本家" || !i.p || !i.t || VERSION_RE.test(i.title || "")) continue;
@@ -693,8 +694,15 @@ export function mergeSources(items) {
     const [main, ...rest] = picked;
     main.alt = rest.map(r => r.id);
     // どちらかのサイトでボカロと分かっていればボカロ。歌声も分かっているほうから
-    if (picked.some(r => r.g === "ボカロ")) main.g = "ボカロ";
-    if (!main.v) main.v = picked.find(r => r.v)?.v;
+    // ただし YouTube 側が歌声の分からない J-POP・アニソンのMV（作者本人が歌っている）なら、そちらに合わせる
+    //（Eve の「ドラマツルギー」のように、ニコニコ側のタイトルにだけ「初音ミク」とある場合）
+    //  （そのYouTubeチャンネルに歌声の分かる曲が1曲もないときだけ。みきとP の「ロキ」のようなボカロPのチャンネルは除く）
+    const human = picked.find(r => r.src === "youtube" && !r.v && (r.g === "J-POP" || r.g === "アニソン") && !voiceCh.has(r.uploaderId));
+    if (human) { main.g = human.g; delete main.v; }
+    else {
+      if (picked.some(r => r.g === "ボカロ")) main.g = "ボカロ";
+      if (!main.v) main.v = picked.find(r => r.v)?.v;
+    }
     for (const r of rest) { r.dup = main.id; dupOf.set(r.id, main.id); }
     for (const r of list) if (!r.dup && r !== main) { r.dup = main.id; dupOf.set(r.id, main.id); }
     if (!main.alt.length) delete main.alt;
