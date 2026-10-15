@@ -1,5 +1,5 @@
-2026-10-14T23:31:26.416Z
-ニコニコ「ボカロ新曲」1ページ目: 44件
+2026-10-15T10:07:18.139Z
+ニコニコ「ボカロ新曲」1ページ目: 34件
 ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」1ページ目: 100件
 ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」2ページ目: 100件
 ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」3ページ目: 100件
@@ -20,58 +20,69 @@
 ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」18ページ目: 100件
 ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」19ページ目: 100件
 ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」20ページ目: 100件
-ニコニコ「歌ってみた新着」1ページ目: 4件
+ニコニコ「歌ってみた新着」1ページ目: 2件
 ニコニコ「歌ってみた 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」1ページ目: 100件
 ニコニコ「歌ってみた 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」2ページ目: 100件
 ニコニコ「歌ってみた 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」3ページ目: 100件
 ニコニコ「歌ってみた 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」4ページ目: 100件
 ニコニコ「歌ってみた 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」5ページ目: 42件
 YouTube急上昇 1ページ目: 30件
-⚠ YouTube新着検索「MV」: HTTP 429 {
-  "error": {
-    "code": 429,
-    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
-⚠ YouTube新着検索「Music Video」: HTTP 429 {
-  "error": {
-    "code": 429,
-    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
-⚠ YouTube新着検索「アニメ主題歌」: HTTP 429 {
-  "error": {
-    "code": 429,
-    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
-⚠ YouTube新着検索「歌ってみた」: HTTP 429 {
-  "error": {
-    "code": 429,
-    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
-⚠ YouTube新着検索「cover」: HTTP 429 {
-  "error": {
-    "code": 429,
-    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
-⚠ YouTube新着検索「ボカロ」: HTTP 429 {
-  "error": {
-    "code": 429,
-    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
-⚠ YouTube新着検索「オリジナル曲」: HTTP 429 {
-  "error": {
-    "code": 429,
-    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
-⚠ YouTube新着検索「ボカロ feat.」: HTTP 429 {
-  "error": {
-    "code": 429,
-    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
-⚠ YouTube新着検索「ボカロオリジナル」: HTTP 429 {
-  "error": {
-    "code": 429,
-    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
-⚠ YouTube新着検索「韓国語のボカロ」: HTTP 429 {
-  "error": {
-    "code": 429,
-    "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908
-自動フォロー: 400チャンネル中 34件を確認、新着 42本のうち曲として追加 0本
+YouTube新着検索: 手動の実行なので飛ばします（検索回数の節約）
+自動フォロー: 400チャンネル中 400件を確認、新着 767本のうち曲として追加 21本
+公式チャンネルの人気曲「daoko_jp」: 32本のうち 10曲を追加（DAOKO × 岡村靖幸『ステップアップLOVE』MUSIC／DAOKO 『水星』 Music Video［HD］／DAOKO『ダイスキ with TeddyLoid』Musi…）
+公式チャンネルの人気曲「YOASOBI」: 300本のうち 10曲を追加（YOASOBI「アイドル」(Idol) from 『YOAS／YOASOBI / Idol (「アイドル」English ／YOASOBI「セブンティーン」Official Music…）
+公式チャンネルの人気曲「Eve」: 234本のうち 10曲を追加（ドラマツルギー - Eve  MV／お気に召すまま - Eve MV／いのちの食べ方 - Eve MV…）
+公式チャンネルの人気曲「imase」: 300本のうち 10曲を追加（【imase & なとり】メトロシティ（MV）／【imase】Dried Flower（MV）／【imase】名前のない日々（MV）…）
+公式チャンネルの人気曲「Mrs. GREEN APPLE」: 300本のうち 10曲を追加（Mrs. GREEN APPLE「Brand New」Off／Mrs. GREEN APPLE「GOOD DAY」Offi／Mrs. GREEN APPLE「風と町」Official …）
+公式チャンネルの人気曲「LiSA Official YouTube」: 300本のうち 10曲を追加（LiSA『ReawakeR (feat. Felix of ／LiSA『残酷な夜に輝け』MUSiC CLiP／LiSA｢QUEEN｣ × TVアニメ『シャングリラ・フロン…）
+公式チャンネルの人気曲「Kenshi Yonezu  米津玄師」: 300本のうち 10曲を追加（米津玄師 - さよーならまたいつか！ Kenshi Yone／米津玄師, 宇多田ヒカル Kenshi Yonezu, Hi／米津玄師  - 地球儀　Kenshi Yonezu - Sp…）
+公式チャンネルの人気曲「美波」: 14本のうち 10曲を追加（美波「アメヲマツ、」MV／美波「ライラック」MV／美波「ホロネス」MV…）
+公式チャンネルの人気曲「ヒグチアイ」: 300本のうち 7曲を追加（ヒグチアイ / いってらっしゃい【Official Vide／ヒグチアイ / ひと匙 【Official Music Vi／ヒグチアイ / 恋の色 【Official Video】 |…）
+公式チャンネルの人気曲「Official髭男dism」: 300本のうち 10曲を追加（Official髭男dism - I LOVE...［Off／Official髭男dism - Subtitle [Off／Official髭男dism - Laughter［Offi…）
+公式チャンネルの人気曲「Ado」: 300本のうち 10曲を追加（【Ado】ビバリウム (Vivarium)／【Ado】アイ・アイ・ア（AiAiA）／【Ado】ロックスター…）
+公式チャンネルの人気曲「King & Prince」: 300本のうち 10曲を追加（King & Prince「Theater」MV／King & Prince 「WOW」MV／King & Prince「moooove!! 」MV…）
+公式チャンネルの人気曲「King Gnu official YouTube channel」: 155本のうち 10曲を追加（King Gnu - 白日／King Gnu - SPECIALZ／King Gnu - 一途…）
+公式チャンネルの人気曲「KING RECORDS」: 300本のうち 2曲を追加（市川由紀乃「ちりぬるを」Music Video／神野美伽「紫煙」Music Video…）
+公式チャンネルの人気曲「『ユイカ』」: 300本のうち 10曲を追加（すないぱー。 / 『ユイカ』【MV】／運命の人 / 『ユイカ』【MV】／好きだから。（Re-Recording）/ 『ユイカ』【M…）
+公式チャンネルの人気曲「VAP OFFICIAL MUSIC CHANNEL」: 300本のうち 4曲を追加（DEAR FRIENDS (2026_Ver.) - PER／Shocking Lemon - Inner Light［O／Shocking Lemon - Under Star［OF…）
+公式チャンネルの人気曲「10-FEET」: 112本のうち 10曲を追加（10-FEET - 第ゼロ感 (映画『THE FIRST S／10-FEET - その向こうへ／10-FEET - Re方程式（TBS系金曜ドラマ『フェルマ…）
+公式チャンネルの人気曲「SEKAI NO OWARI」: 239本のうち 10曲を追加（SEKAI NO OWARI「RPG」／SEKAI NO OWARI「Habit」／SEKAI NO OWARI「炎と森のカーニバル」…）
+公式チャンネルの人気曲「Sony Music (Japan)」: 300本のうち 7曲を追加（岡村靖幸・中島健人「瞬発的に恋しよう」Official Mu／#あの日の春の歌 フルムービー  離婚伝説「ファーストキス」／#あの日の春の歌 フルムービー jo0ji「不屈に花」篇 /…）
+公式チャンネルの人気曲「ヨルシカ / n-buna Official」: 133本のうち 10曲を追加（ヨルシカ - ただ君に晴れ (MUSIC VIDEO)／ヨルシカ - だから僕は音楽を辞めた (Music Vide／ヨルシカ - 言って。(Music Video)…）
+公式チャンネルの人気曲「サカナクション sakanaction」: 300本のうち 4曲を追加（サカナクション / いらない　-Music Video-／サカナクション / 新宝島　-Music Video 振付サ／サカナクション「怪獣」×アニメ『チ。 ―地球の運動について―…）
+公式チャンネルの人気曲「yuzuofficial」: 258本のうち 10曲を追加（ゆず「栄光の架橋」Music Video／ゆず「友　〜旅立ちの時〜」／ゆず「OLA!!」…）
+公式チャンネルの人気曲「DisneyMusicJapanVEVO」: 300本のうち 10曲を追加（松たか子 - レット・イット・ゴー～ありのままで～（From／石橋陽彩 - 音楽はいつまでも（From『リメンバー・ミー』／神田沙也加、稲葉菜月、諸星すみれ - 雪だるまつくろう（Fr…）
+公式チャンネルの人気曲「キタニタツヤ / Tatsuya Kitani」: 300本のうち 10曲を追加（青のすみか / キタニタツヤ - Where Our Blu／ずうっといっしょ！ / キタニタツヤ - ALWAYS BE／悪魔の踊り方 / キタニタツヤ - Devil's Mann…）
+公式チャンネルの人気曲「unisonsgofficial」: 149本のうち 10曲を追加（UNISON SQUARE GARDEN「シュガーソングとビ／UNISON SQUARE GARDEN「君の瞳に恋してない／UNISON SQUARE GARDEN「オリオンをなぞる」…）
+公式チャンネルの人気曲「須田景凪 バルーン」: 300本のうち 10曲を追加（須田景凪 – ラストルック / Keina Suda – L／須田景凪 – ミーム / Keina Suda – meme／高畑充希 - 雨とペトラ Prod. by 東京スカパラダイ…）
+公式チャンネルの人気曲「ALEXANDROSchannel」: 300本のうち 5曲を追加（[Alexandros] - 超える (MV) (アニメ『ウ／[Alexandros] - 金字塔 (MV)／[Alexandros] - ENDROLL feat. S…）
+公式チャンネルの人気曲「Snow Man」: 300本のうち 10曲を追加（Snow Man 'STARS' Music Video／Snow Man 'BANG!!' Music Video／Snow Man 'オドロウゼ！' Music Video…）
+公式チャンネルの人気曲「まふまふちゃんねる」: 300本のうち 10曲を追加（【MV】女の子になりたい／まふまふ／[ポケットモンスターOP]１・２・３／After the R／【MV】サクリファイス／まふまふ　かつて神だった獣たちへOP…）
+公式チャンネルの人気曲「アイナ・ジ・エンド Official」: 300本のうち 10曲を追加（AiNA THE END / Luminous [Offic／アイナ・ジ・エンド - Frail [Official Mu／AiNA THE END - Love Sick [Offi…）
+公式チャンネルの人気曲「Vaundy」: 9本のうち 3曲を追加（CHAINSAW BLOOD / Vaundy：MUSIC ／走れSAKAMOTO / Vaundy：MUSIC VIDE／HERO / Vaundy：MUSIC VIDEO…）
+公式チャンネルの人気曲「MILLENNIUM PARADE Official YouTube Channel」: 52本のうち 6曲を追加（ꉈꀧ꒒꒒ꁄꍈꍈꀧ꒦ꉈ ꉣꅔꎡꅔꁕꁄ × 椎名林檎 - Ｗ●Ｒ／ꉈꀧ꒒꒒ꁄꍈꍈꀧ꒦ꉈ ꉣꅔꎡꅔꁕꁄ - FAMILIA／ꉈꀧ꒒꒒ꁄꍈꍈꀧ꒦ꉈ ꉣꅔꎡꅔꁕꁄ - Trepanatio…）
+公式チャンネルの人気曲「SPYAIR Official YouTube Channel」: 300本のうち 10曲を追加（SPYAIR 『現状ディストラクション』／SPYAIR『サムライハート(Some Like It Ho／SPYAIR 『轍～Wadachi～』Music Video…）
+公式チャンネルの人気曲「amazarashi Official YouTube Channel」: 219本のうち 10曲を追加（amazarashi『空に歌えば』“Singin' to t／amazarashi 『スピードと摩擦』“Speed and／amazarashi『月曜日』“Monday” Music …）
+公式チャンネルの人気曲「UNIVERSAL MUSIC JAPAN」: 300本のうち 10曲を追加（suis from ヨルシカ 「若者のすべて」 Music ／GReeeeN（GRe4N BOYZ）/「愛唄」／【Jax Jones × Ado】Stay Gold〈『BE…）
+公式チャンネルの人気曲「ずっと真夜中でいいのに。 ZUTOMAYO」: 300本のうち 10曲を追加（ずっと真夜中でいいのに。『メディアノーチェ』MV (ZUTO／ずっと真夜中でいいのに。『嘘じゃない』MV (ZUTOMAY／ずっと真夜中でいいのに。『よもすがら』MV (ZUTOMAY…）
+公式チャンネルの人気曲「SixTONES」: 300本のうち 7曲を追加（SixTONES – マイオンリー／SixTONES – Dance Forever／SixTONES – Rebellion [YouTube …）
+公式チャンネルの人気曲「HoneyWorks OFFICIAL」: 300本のうち 10曲を追加（可愛くてごめん feat. ちゅーたん（CV：早見沙織）／H／すきっちゅーの！feat. ちゅーたん（CV：早見沙織）／H／同担☆拒否 feat. ちゅーたん（CV：早見沙織）／Hon…）
+公式チャンネルの人気曲「BLUE ENCOUNT Official YouTube Channel」: 170本のうち 10曲を追加（BLUE ENCOUNT 『バッドパラドックス』Music ／BLUE ENCOUNT 『Survivor』Music V／BLUE ENCOUNT 『VS』Music Video 【…）
+公式チャンネルの人気曲「幽閉サテライト・少女フラクタル・幽閉カタルシス 公式チャンネル」: 300本のうち 10曲を追加（【公式】【東方Vocal】色は匂へど散りぬるを(2026年v／【公式】【東方Vocal】幽閉サテライト / 零れ桜（原曲：／【公式】【東方Vocal】幽閉サテライト / ヒトリシズカ（…）
+公式チャンネルの人気曲「DOES Official YouTube Channel」: 46本のうち 10曲を追加（DOES　『バクチ・ダンサー(映画「劇場版 銀魂 新訳紅桜篇／DOES　『「修羅」（テレビ東京系アニメ「銀魂」エンディング／DOES 『KNOW KNOW KNOW』(テレビ東京系アニ…）
+公式チャンネルの人気曲「フレデリック FREDERIC official」: 300本のうち 9曲を追加（フレデリック「CYAN」Music Video / fred／フレデリック「悪魔」Music Video / freder／フレデリック「ナンセンスナンセンス」Music Video …）
+公式チャンネルの人気曲「Yuuri - Topic」: 155本のうち 10曲を追加（ベテルギウス／ドライフラワー／かくれんぼ…）
+公式チャンネルの人気曲「澤野弘之 / SawanoHiroyuki[nZk]」: 300本のうち 10曲を追加（SawanoHiroyuki[nZk]:XAI 『DARK ／SawanoHiroyuki[nZk]:Laco「Hands／SawanoHiroyuki[nZk]:Laco「FAKEi…）
+公式チャンネルの人気曲「Belle  Official  YouTube Channel」: 13本のうち 4曲を追加（Belle「心のそばに」MV／Belle「はなればなれの君へ」MV／Belle「歌よ」MV…）
+公式チャンネルの人気曲「mao - Topic」: 140本のうち 2曲を追加（君ノ記憶／茜空に願ふ…）
+公式チャンネルの人気曲「Official髭男dism」: 78本のうち 10曲を追加（Official髭男dism - Subtitle [Off／Official髭男dism - ホワイトノイズ [Offi／Official髭男dism - TATTOO [Offic…）
+公式チャンネルの人気曲「yama」: 300本のうち 10曲を追加（yama『偽顔』Music Video（3rd ALBUM「／yama × ぼっちぼろまる『ハロ』lyric Video（／yama × キタニタツヤ『憧れのままに』 KONA Col…）
+公式チャンネルの人気曲「EGOIST Official YouTube Channel」: 30本のうち 10曲を追加（EGOIST『名前のない怪物』Music Video（テレビ／EGOIST『Departures 〜あなたにおくるアイの歌／EGOIST『Planetes』Music Video（OV…）
+公式チャンネルの人気曲「Shoko Nakagawa OFFICIAL YouTube CHANNEL」: 126本のうち 10曲を追加（中川翔子『空色デイズ』music video／中川翔子 『タイプ：ワイルド』 ※アニメ『ポケットモンスター／小林幸子&中川翔子 『風といっしょに』※映画『ミュウツーの逆…）
+公式チャンネルの人気曲: 50チャンネルを見て、440曲を追加
 ニコニコの再生数を更新: 54件
-原曲さがし: 0曲を調べて、原曲を0曲見つけた
-⚠ 原曲さがし（YouTube）: HTTP 429 { "error": { "code": 429, "message": "Quota exceeded for quota metric 'Search Queries' and limit 'Search Queries per day' of service 'youtube.googleapis.com' for consumer 'project_number:908092212459'.", "errors": [ { "message": "Quota exceeded for quota metric 'Search Qu、今日はここまで
-原曲さがし（YouTube）: 0曲を調べて、原曲を0曲見つけた
-YouTubeの再生数を更新: 1264件（日本の曲ではないので外す: 0件）
+原曲さがし: 5曲を調べて、原曲を1曲見つけた
+原曲さがし（YouTube）: 手動の実行なので飛ばします（検索回数の節約）
+YouTubeの再生数を更新: 1266件（日本の曲ではないので外す: 2件）
 自動フォローのチャンネル: 400件（ボカロの本家 200件・その他 200件）
-保存しました: data/songs.json（全4290件、うち歌ってみたの原曲ひもづけ 1016件）
+保存しました: data/songs.json（全4739件、うち歌ってみたの原曲ひもづけ 1038件）
