@@ -768,7 +768,7 @@ render();
     for (const i of songs) i._t = Date.parse(i.date) || 0;
     ITEMS = songs; ITEM = Object.fromEntries(ITEMS.map(i=>[i.id,i]));
     // まとめた曲のもう片方のID → 代表のID（前に別々に入った票やリンクも同じ曲として扱う）
-    for (const i of ITEMS) for (const v of i.alt || []) { ALIAS[v.id] = i.id; ITEM[v.id] = i; }
+    for (const i of ITEMS) { for (const v of i.alt || []) { ALIAS[v.id] = i.id; ITEM[v.id] = i; } for (const id of i.al || []) { ALIAS[id] = i.id; ITEM[id] = i; } }
     baseNote = `${ITEMS.length.toLocaleString("ja-JP")}曲を収録${meta ? `（${fmtDate(meta.updatedAt)}時点）` : ""}。🎲で今の絞り込みからおまかせ再生、サムネの▶でこのページで再生、曲名で曲のページ、↗で動画サイトを開く、名前やバッジで絞り込み、行を押すと関連曲。作者名が空の曲は、読み取りを改善中。${sb ? "「＋ タグをつける」から、聴いた印象を投票してね。みんなの票で3票以上集まったタグが定着するよ。" : "タグの投票は今はこの端末にだけ保存されるよ（みんなの集計は準備中）。"}`;
     setStatus(baseNote);
     applyUrlParams();

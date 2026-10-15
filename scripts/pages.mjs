@@ -41,7 +41,7 @@ async function loadVotes() {
 }
 // YouTube とニコニコの両方にある曲は1曲にまとめてある（alt がもう片方の投稿）。前に別々に入った票も足し合わせる
 const ALIAS = {};
-for (const i of items) for (const v of i.alt || []) ALIAS[v.id] = i.id;
+for (const i of items) { for (const v of i.alt || []) ALIAS[v.id] = i.id; for (const id of i.al || []) ALIAS[id] = i.id; }
 const votes = {};
 for (const [id, tags] of Object.entries(await loadVotes())) {
   const k = ALIAS[id] || id;
@@ -282,7 +282,7 @@ const urls = ["/", "/tag/", "/about.html"];
 const songs = items.filter(i => i.kind === "本家");
 for (const i of songs) { await put(`song/${songSlug(i.id)}/index.html`, songPage(i)); urls.push(songUrl(i.id)); }
 // まとめた曲のもう片方のページ（前に作ったURL）は、代表の曲のページへ移動させる
-for (const i of songs) for (const v of i.alt || []) {
+for (const i of songs) for (const v of [...(i.alt || []), ...(i.al || []).map(id => ({ id }))]) {
   const to = songUrl(i.id);
   await put(`song/${songSlug(v.id)}/index.html`, `<!doctype html><html lang="ja"><head><meta charset="utf-8"><title>${esc(i.t)} - TagTune</title><link rel="canonical" href="${SITE}${to}"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url=${to}"></head><body><p><a href="${to}">「${esc(i.t)}」のページへ</a></p></body></html>\n`);
 }

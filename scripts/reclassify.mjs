@@ -13,7 +13,7 @@ const out = items.map(old => {
     // YouTube はどの検索から来たか（ジャンルの手がかり）を保存していないので、前のジャンルを手がかりにする。
     // ニコニコはタグで判定できるので、前のジャンルは引き継がない（一度ボカロになると直らなくなるため）
     { fallbackGenre: old.src === "youtube" && old.g !== "その他" ? old.g : "その他" });
-  const keep = { firstSeen: old.firstSeen, seed: old.seed };
+  const keep = { firstSeen: old.firstSeen, seed: old.seed, ...(old.nicoSrc && !fresh.nicoSrc ? { nicoSrc: old.nicoSrc } : {}) };
   // 「歌ってみた」チャンネルとして手動登録したチャンネルの動画は、タイトルに関係なく歌ってみたのまま
   if (old.chCover) { fresh.kind = "歌ってみた"; fresh.chCover = true; }
   const merged = { ...fresh, ...keep };

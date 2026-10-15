@@ -430,6 +430,13 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     // 原曲の作者が分かれば表示用に入れておく（原曲が見つかればそちらで上書きされる）
     if (item.pHint) { item.p = item.pHint; item.a = normalize(item.pHint); }
   }
+  // YouTube の説明文にニコニコの動画へのリンクがあれば覚えておく（転載や、作者自身の再投稿をニコニコ版とまとめるため）
+  if (video.src === "youtube") {
+    const d = video.desc || video.descHead || "";
+    const m = d.match(/(?:nicovideo\.jp\/watch\/|nico\.ms\/)(sm\d+)/);
+    if (m) item.nicoSrc = "nico:" + m[1]; else if (video.nicoSrc) item.nicoSrc = video.nicoSrc;
+    if (REPRINT_RE.test(d)) item.reprint = 1;
+  }
   return item;
 }
 
@@ -598,8 +605,32 @@ export function markSelfCovers(items) {
 // 一番古い投稿を代表にして、もう片方には dup（代表のID）を付ける。サイトには代表だけを出し、もう片方は alt として持たせる。
 // Remix・ver.・アレンジなどの別バージョンはまとめない。同じサイトどうし（再投稿など）もまとめない
 const VERSION_RE = /remix|リミックス|\bver\b|ver\.|version|バージョン|アレンジ|arrange|short|ショート|full|フル|instrumental|inst\b|off ?vocal|self ?cover|セルフカバー|リメイク|remake|再投稿|piano|ピアノ|acoustic|アコースティック|live|ライブ|mv2|edit\b/i;
+// 「ニコニコ動画より作者様の許諾を得て転載」のような、ほかの人のチャンネルに転載された動画
+const REPRINT_RE = /許諾を得て転載|転載(させて|して(い|お)ります|しています|許可)|reprint(s|ed)? from|permission (was |has been )?(obtained|granted|given)/i;
+
 export function mergeSources(items) {
   for (const i of items) { delete i.dup; delete i.alt; }
+  // YouTube の本家で、説明文にニコニコ版へのリンクがある（または転載と書いてある）ものは、
+  // 同じ曲名のニコニコの本家と同じ作者にそろえて、1曲にまとめられるようにする（転載チャンネル名を作者にしない）
+  const nicoByT = new Map();
+  for (const i of items) if (i.src === "niconico" && i.kind === "本家" && i.p && normalize(i.t)) {
+    const k = normalize(i.t); if (!nicoByT.has(k) || (i.views || 0) > (nicoByT.get(k).views || 0)) nicoByT.set(k, i);
+  }
+  const byId = new Map(items.map(i => [i.id, i]));
+  for (const i of items) {
+    if (i.src !== "youtube" || i.kind !== "本家" || !(i.nicoSrc || i.reprint)) continue;
+    const linked = i.nicoSrc && byId.get(i.nicoSrc);
+    const target = linked && linked.kind === "本家" && normalize(linked.t) === normalize(i.t) ? linked : i.reprint ? nicoByT.get(normalize(i.t)) : null;
+    if (!target?.p) continue;
+    // 作者名はどちらかを選んで両方にそろえる。YouTube 側の作者名がタイトルに書いてあり、ニコニコ側はタイトルにない
+    // （タグなどから推測した）ときは YouTube 側を信じる。それ以外（転載チャンネルの名前など）はニコニコ側
+    const inTitle = (x, title) => normalize(x).length >= 2 && normalize(title || "").includes(normalize(x));
+    const ytOk = !i.reprint && i.p && !/オリジナル|ボカロ|vocaloid|\bPV\b/i.test(i.p) && !isVoice(i.p) && inTitle(i.p, i.title) && (!inTitle(target.p, target.title) || (normalize(target.p) !== normalize(i.p) && normalize(target.p).includes(normalize(i.p))));
+    if (ytOk) target.p = i.p; else i.p = target.p;
+    i.a = target.a;
+    if (!i.v && target.v) i.v = target.v;
+    i.reprintOf = target.id;
+  }
   const groups = new Map();
   for (const i of items) {
     if (i.kind !== "本家" || !i.p || !i.t || VERSION_RE.test(i.title || "")) continue;
@@ -612,7 +643,9 @@ export function mergeSources(items) {
     if (new Set(list.map(i => i.src)).size < 2) continue;
     // サイトごとに一番再生されている投稿を1つずつ選ぶ（同じサイトの残りは今まで通り別の曲）
     const best = new Map();
-    for (const i of list) { const b = best.get(i.src); if (!b || (i.views || 0) > (b.views || 0)) best.set(i.src, i); }
+    // 作者本人の投稿を転載より優先する（どちらも同じなら再生数の多いほう）
+    const rank = i => (i.reprint ? 0 : 1e12) + (i.views || 0);
+    for (const i of list) { const b = best.get(i.src); if (!b || rank(i) > rank(b)) best.set(i.src, i); }
     const picked = [...best.values()].sort((a, b) => (a.date || "").localeCompare(b.date || "") || (a.src === "niconico" ? -1 : 1));
     const [main, ...rest] = picked;
     main.alt = rest.map(r => r.id);
@@ -620,6 +653,8 @@ export function mergeSources(items) {
     if (picked.some(r => r.g === "ボカロ")) main.g = "ボカロ";
     if (!main.v) main.v = picked.find(r => r.v)?.v;
     for (const r of rest) { r.dup = main.id; dupOf.set(r.id, main.id); }
+    // 選ばれなかった転載は、別の曲として並べずにまとめた曲の中に隠す
+    for (const r of list) if (r.reprintOf && !r.dup && r !== main && !main.alt.includes(r.id)) { r.dup = main.id; dupOf.set(r.id, main.id); }
   }
   // まとめた側に紐づいていた歌ってみたは、代表の曲に付け替える
   for (const c of items) if (c.of && dupOf.has(c.of)) c.of = dupOf.get(c.of);
@@ -682,6 +717,9 @@ const ALT_KEEP = ["id", "src", "url", "views", "thumb", "ne", "date"];
 // サイト用：まとめた曲（dup）は出さず、代表の曲に alt（もう片方のサイトの投稿）として持たせる。再生数は合計にする
 export const toSite = items => {
   const byId = new Map(items.map(i => [i.id, i]));
+  // alt にならなかった転載（同じサイトの2本目以降）：前のIDの票やページを代表の曲に寄せるため、IDだけ持たせる
+  const hidden = new Map();
+  for (const i of items) if (i.dup && !(byId.get(i.dup)?.alt || []).includes(i.id)) (hidden.get(i.dup) || hidden.set(i.dup, []).get(i.dup)).push(i);
   return items.filter(i => !i.dup).map(i => {
     const o = Object.fromEntries(KEEP.filter(k => i[k] != null && i[k] !== "").map(k => [k, unent(i[k])]));
     const alts = (i.alt || []).map(id => byId.get(id)).filter(Boolean);
@@ -689,6 +727,8 @@ export const toSite = items => {
       o.alt = alts.map(a => Object.fromEntries(ALT_KEEP.filter(k => a[k] != null && a[k] !== "").map(k => [k, a[k]])));
       o.views = (i.views || 0) + alts.reduce((n, a) => n + (a.views || 0), 0);
     }
+    const hid = hidden.get(i.id);
+    if (hid) { o.al = hid.map(h => h.id); o.views = (o.views || 0) + hid.reduce((n, h) => n + (h.views || 0), 0); }
     return o;
   });
 };
