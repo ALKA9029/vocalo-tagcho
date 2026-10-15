@@ -85,6 +85,8 @@ const ANIME_RE = /TVアニメ|アニメ[「『]|劇場版|主題歌|オープニ
 // アニメ・ゲームの曲の手がかり（歌ってみたのジャンル用）。ゲームの曲もアニソンとして扱う
 // YouTube の説明文（長め）にアニメ・ゲームの主題歌だと書いてあるか。取得したときに animeDesc として覚えておく
 export const ANIME_DESC_RE = /TVアニメ|テレビアニメ|アニメ[「『]|劇場版|アニメーション映画|アニメ映画|アニメ(主題歌|OP|ED|オープニング|エンディング)|(オープニング|エンディング)(テーマ|主題歌)|ノンクレジット|ゲーム[「『][^」』]*[」』].{0,12}(主題歌|テーマ)/;
+// 説明文の最初のほう（500文字）で、収録曲リスト（「01. 〜」「・〜」）ではない行にアニメ・ゲームの主題歌と書いてあるか
+export const animeInDesc = (desc = "") => desc.slice(0, 500).split(/\n/).some(l => !/^\s*(\d+\s*[.)．]|M\d|[・\-−–#＃])/.test(l) && ANIME_DESC_RE.test(l));
 const animeOrGame = (title, tags) => tags.some(t => /アニソン|^アニメ(ソング)?$|_?The_Animation|ゲーソン|ゲーム(音楽|ソング|BGM)|^(ゲーム|アニメ)(OP|ED|主題歌)/i.test(t)) || ANIME_RE.test(title);
 const ANIME_TAGS = ["アニソン", "アニメ", "アニメソング", "anime"];
 
