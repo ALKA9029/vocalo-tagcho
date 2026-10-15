@@ -37,6 +37,8 @@ export const isKaraoke = title => /ニコカラ|off ?vocal|カラオケ|instrume
 const SING_RE = /コラボ|ラップ|歌r|歌っ|歌い|歌う|唄っ|弾いてみ|演奏|cover|カバー|バンド|band|feat|ft\.|MV|PV|主題歌|オリジナル/i;
 export function isNotSong(title = "") {
   if (/#shorts?\b/i.test(title)) return true;
+  // MMD（3Dモデルが既存の曲で踊る動画）は曲そのものではない
+  if (/MMD/i.test(title)) return true;
   if (/\bteaser\b|ティザー|\btrailer\b|behind the scenes|メイキング|\bmaking\b|【ご報告】|【お知らせ】|大切なお知らせ|\bstation\b|24\/7|practice (video|ver)|dance practice|grand championship/i.test(title)) return true;
   const main = title.split(/\s#/)[0];
   if (SING_RE.test(main)) return false;
@@ -313,7 +315,7 @@ export function parseYouTube(raw, channel = "") {
 // 歌い手名の後片付け。「〜歌ってみたのはメガテラ・ゼロ」「『曲』を歌ってみた【ぱなまん】」「を歌わせて頂きました。灯油」
 // のように、タイトルの文の切れ端が歌い手名に残ったものを直す。名前が読めなければタイトルの【】の中から探す
 const SING_VERB = /(?:歌ってみ(?:た|ました)った?|歌わせて(?:頂|いただ)きました|歌わせてみた|歌いました|歌いたかった|歌った|してみた)[。.]?/g;
-const NOT_SINGER = /歌ってみ|歌わせ|cover|カバー|\bMV\b|\bPV\b|フル|キー|ショート|再投稿|アカペラ|替え歌|爆音|推奨|合唱|オリジナル|リレー|提供|ボカロ|VOCALOID|MMD|声真似|remix|edition|コラボ|で$|OP$|ED$|部門|配布|付き|\bfull\b|arrange|^ver\.?$/i;
+const NOT_SINGER = /歌ってみ|歌わせ|cover|カバー|\bMV\b|\bPV\b|フル|キー|ショート|再投稿|アカペラ|替え歌|爆音|推奨|合唱|オリジナル|リレー|提供|ボカロ|VOCALOID|MMD|声真似|remix|edition|コラボ|で$|OP$|ED$|部門|配布|付き|\bfull\b|arrange|^ver\.?$|歌枠|生放送|ニコ生|配信|切り抜き|弾き語り/i;
 const isJunkName = n => !n || /w{3,}|ｗ{2,}|だった(から)?$|てみた$|^[。.、\s★☆@＠!！]*$/.test(n) || n.length > 30;
 function singerFromBrackets(title) {
   const t = title.normalize("NFKC");
