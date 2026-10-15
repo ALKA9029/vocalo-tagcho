@@ -797,7 +797,27 @@ export function linkCovers(items) {
   for (const i of items) if (i.gFixed) i.g = i.gFixed;
   for (const c of items) { const o = c.of && byIdF.get(c.of); if (o && o.gFixed && !c.gFixed) c.g = o.g; }
   fixCreatorNames(items);
+  fixCreatorKeys(items);
   return items;
+}
+
+// 作者ページは投稿者（チャンネル）ごとにまとめているが、レコード会社などのチャンネルには別の作者の曲もある
+// （DECO*27 の曲が多いチャンネルの「椎名もた - 少女A」など）。チャンネルでいちばん多い作者名とちがう曲は、
+// ニコニコの同じ名前の作者、なければ名前でまとめる
+function fixCreatorKeys(items) {
+  const nicoA = new Map();
+  for (const i of items) if (i.src === "niconico" && i.kind === "本家" && i.p && i.a && !nicoA.has(normalize(i.p))) nicoA.set(normalize(i.p), i.a);
+  const byCh = new Map();
+  for (const i of items) if (i.src === "youtube" && i.kind === "本家" && i.p && i.a && i.a.startsWith("youtube:")) {
+    const m = byCh.get(i.a) || new Map(); m.set(normalize(i.p), (m.get(normalize(i.p)) || 0) + 1); byCh.set(i.a, m);
+  }
+  const main = new Map([...byCh].map(([a, m]) => [a, [...m].sort((x, y) => y[1] - x[1])[0][0]]));
+  for (const i of items) {
+    if (i.src !== "youtube" || i.kind !== "本家" || !i.p || !main.has(i.a)) continue;
+    const top = main.get(i.a), me = normalize(i.p);
+    if (!me || me === top || me.includes(top) || top.includes(me)) continue;
+    i.a = nicoA.get(me) || "name:" + me;
+  }
 }
 
 // サイト表示用：必要な項目だけにした軽いデータ
