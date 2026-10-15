@@ -189,6 +189,21 @@ function songPage(i) {
       `${x.self ? '<span class="badge self">セルフカバー</span>' : ""}${embedUrl(x) ? `<button type="button" class="mini" ${playAttrs(x, `${i.t}（${x.by || "歌ってみた"}）`)}>▶ ここで聴く</button>` : ""}<a href="${esc(x.url)}" target="_blank" rel="noopener">${srcName(x)} ↗</a><span>${fmtDate(x.date)}</span>${tagsOf(x.id).slice(0, 3).map(([t]) => `<a href="${tagUrl(t)}">#${esc(t)}</a>`).join("")}`,
       `c-${songSlug(x.id)}`
     )).join("")}</ul>` : `<p class="note">TagTuneではまだ見つかっていません。</p>`}
+  <div class="find">
+    <p class="find-h">ほかの歌ってみたを探す</p>
+    <div class="chips">
+      <a class="btn" href="https://www.youtube.com/results?search_query=${encodeURIComponent(`${i.t} 歌ってみた`)}" target="_blank" rel="noopener">YouTubeで探す ↗</a>
+      <a class="btn" href="https://www.nicovideo.jp/search/${encodeURIComponent(`${i.t} 歌ってみた`)}" target="_blank" rel="noopener">ニコニコ動画で探す ↗</a>
+    </div>
+    <form class="req" data-song="${esc(i.id)}" data-title="${esc(i.t)}">
+      <label for="req-url">いい歌ってみたを見つけたら教えてね（YouTube・ニコニコ動画のURL）</label>
+      <div class="req-row">
+        <input id="req-url" name="url" type="url" inputmode="url" placeholder="https://www.youtube.com/watch?v=…" required>
+        <button type="submit" class="btn primary">送る</button>
+      </div>
+      <p class="note req-msg" aria-live="polite"></p>
+    </form>
+  </div>
 </section>
 ${others.length ? `
 <section>

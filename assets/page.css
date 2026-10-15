@@ -82,3 +82,14 @@ button.btn{font:inherit;font-size:14px;cursor:pointer}
 #player iframe{display:block;width:100%;aspect-ratio:16/9;border:0;background:#000}
 body.has-player .wrap{padding-bottom:320px}
 @media (max-width:520px){#player{right:0;left:0;bottom:0;width:auto;max-width:none;border-radius:14px 14px 0 0;border-inline:0;border-bottom:0;padding-bottom:env(safe-area-inset-bottom,0px)}body.has-player .wrap{padding-bottom:calc(56.25vw + 64px)}}
+
+/* ほかの歌ってみたを探す・教える */
+.find{display:flex;flex-direction:column;gap:10px;margin-top:6px;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.find-h{font-weight:700;font-size:14px}
+.req{display:flex;flex-direction:column;gap:6px}
+.req label{font-size:13px;color:var(--muted)}
+.req-row{display:flex;gap:8px}
+.req input{flex:1;min-width:0;font:inherit;font-size:14px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:7px 14px}
+.req input:focus-visible{outline:2px solid var(--hot);outline-offset:1px}
+.req button{flex:none}
+.req button:disabled{opacity:.6}

@@ -54,3 +54,31 @@
     if (e.data && e.data.eventName === "loadComplete") e.source.postMessage({ sourceConnectorType: 1, playerId: "tagtune", eventName: "play" }, e.origin);
   });
 })();
+
+// 曲ページの「歌ってみたを教えてね」：URLを Supabase の cover_requests に送る。毎朝の更新で確認して、歌ってみたとして載せる
+(() => {
+  const form = document.querySelector("form.req");
+  if (!form) return;
+  const SUPABASE_URL = "https://qfepllrtalfvyhsezjwc.supabase.co";
+  const SUPABASE_KEY = "sb_publishable_DIFM6mVEbJaB0OYSkY74Hw_1oF_6eaU";   // 公開用の鍵
+  const OK = /^https:\/\/((www|m|music)\.)?(youtube\.com\/(watch\?|shorts\/)|youtu\.be\/|nicovideo\.jp\/watch\/|nico\.ms\/)/i;
+  const msg = form.querySelector(".req-msg"), input = form.querySelector("input"), btn = form.querySelector("button");
+  form.addEventListener("submit", async e => {
+    e.preventDefault();
+    const url = input.value.trim();
+    if (!OK.test(url)) { msg.textContent = "YouTube かニコニコ動画の動画のURLを入れてね。"; return; }
+    btn.disabled = true; msg.textContent = "送っています…";
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/cover_requests`, {
+        method: "POST",
+        headers: { apikey: SUPABASE_KEY, "Content-Type": "application/json", Prefer: "return=minimal" },
+        body: JSON.stringify({ song_id: form.dataset.song, url }),
+      });
+      if (res.ok || res.status === 409) {
+        msg.textContent = "ありがとう！毎朝の更新で確認して、「" + form.dataset.title + "」の歌ってみただったらここに載せるね。";
+        input.value = "";
+      } else msg.textContent = "うまく送れなかったよ。時間をおいてもう一度ためしてね。";
+    } catch { msg.textContent = "うまく送れなかったよ。時間をおいてもう一度ためしてね。"; }
+    btn.disabled = false;
+  });
+})();

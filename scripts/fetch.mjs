@@ -497,6 +497,75 @@ async function fetchCatalogs(items) {
   return out;
 }
 
+// ---------- 歌ってみたのリクエスト：曲ページから送られたURLを確認して、その曲の歌ってみたとして追加 ----------
+// Supabase の get_cover_requests() で読む。動画のタイトルに曲名が入っているものだけを載せる。確認した結果は data/requests-done.json に
+const SUPABASE_URL = "https://qfepllrtalfvyhsezjwc.supabase.co";
+const SUPABASE_KEY = "sb_publishable_DIFM6mVEbJaB0OYSkY74Hw_1oF_6eaU";   // 公開用の鍵
+function videoIdOf(url) {
+  const yt = url.match(/(?:youtube\.com\/(?:watch\?(?:.*&)?v=|shorts\/)|youtu\.be\/)([\w-]{11})/);
+  if (yt) return "yt:" + yt[1];
+  const nico = url.match(/(?:nicovideo\.jp\/watch\/|nico\.ms\/)((?:sm|nm|so)\d+)/);
+  return nico ? "nico:" + nico[1] : null;
+}
+// ニコニコの動画1本の情報（getthumbinfo。XML）
+async function nicoThumb(cid) {
+  const res = await fetch("https://ext.nicovideo.jp/api/getthumbinfo/" + cid, { headers: { "User-Agent": config.userAgent } });
+  if (!res.ok) return null;
+  const x = await res.text();
+  if (!/status="ok"/.test(x)) return null;
+  const g = tag => unxml((x.match(new RegExp(`<${tag}>([\\s\\S]*?)</${tag}>`)) || [])[1] || "");
+  return {
+    src: "niconico", id: "nico:" + cid, url: "https://www.nicovideo.jp/watch/" + cid,
+    title: g("title"), tags: [...x.matchAll(/<tag[^>]*>([^<]+)<\/tag>/g)].map(m => unxml(m[1])),
+    date: g("first_retrieve"), views: Number(g("view_counter")) || 0, likes: null,
+    thumb: g("thumbnail_url") || null, uploaderId: g("user_id") || g("ch_id") || null, uploader: g("user_nickname") || g("ch_name") || "",
+  };
+}
+async function fetchRequests(items) {
+  const cfg = config.requests || {};
+  if (cfg.enabled === false) return [];
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/rpc/get_cover_requests`, { method: "POST", headers: { apikey: SUPABASE_KEY, "Content-Type": "application/json" }, body: "{}" });
+  if (!res.ok) { console.log(`歌ってみたのリクエスト: 読めませんでした（HTTP ${res.status}）`); return []; }
+  const rows = await res.json();
+  const done = await readJson("data/requests-done.json", {});
+  const byId = new Map(items.map(i => [i.id, i]));
+  const key = process.env.YOUTUBE_API_KEY;
+  const out = [];
+  const todo = rows.filter(r => !done[r.song_id + " " + r.url]).slice(0, cfg.maxPerRun || 100);
+  for (const r of todo) {
+    const k = r.song_id + " " + r.url;
+    const song = byId.get(r.song_id);
+    const vid = videoIdOf(r.url);
+    const result = reason => { done[k] = { r: reason, at: new Date().toISOString() }; console.log(`歌ってみたのリクエスト「${song?.t || r.song_id}」${r.url} → ${reason}`); };
+    if (!song || song.kind !== "本家") { result("曲が見つからない"); continue; }
+    if (!vid) { result("URLが読めない"); continue; }
+    if (byId.has(vid)) {
+      const have = byId.get(vid);
+      if (have.kind === "歌ってみた" && !have.of && normalize(have.title).includes(normalize(song.t))) { out.push({ id: vid, linkOnly: true, req: song.id }); result("サイトにある歌ってみたを原曲につないだ"); }
+      else result("もうサイトにある");
+      continue;
+    }
+    let v = null;
+    if (vid.startsWith("yt:")) {
+      if (!key) { continue; }
+      const d = (await ytVideos([vid.slice(3)], key))[0];
+      if (d && !isNoise(d)) v = ytItem(d, song.g);
+    } else {
+      v = await nicoThumb(vid.slice(5)).catch(() => null);
+      await sleep(1000);
+    }
+    if (!v) { result("動画が見つからない・長さが合わない"); continue; }
+    // タイトルに曲名（記号・空白を除いて）が入っているものだけ
+    if (!normalize(v.title).includes(normalize(song.t))) { result("タイトルに曲名がない"); continue; }
+    if (isKaraoke(v.title)) { result("曲の動画ではない"); continue; }
+    out.push({ ...v, req: song.id });
+    result("追加した");
+  }
+  await writeFile(path("data/requests-done.json"), JSON.stringify(done) + "\n");
+  if (rows.length) console.log(`歌ってみたのリクエスト: 全${rows.length}件、今回確認${todo.length}件、追加${out.length}件`);
+  return out;
+}
+
 // ---------- まとめて保存 ----------
 const fixtureArg = process.argv.indexOf("--fixture");
 const SEED = process.argv.includes("--seed");
@@ -508,7 +577,8 @@ const videos = fixtureArg > -1
      ...(SEED ? [] : await fetchYouTubeSearch().catch(e => (console.warn("YouTube新着検索の取得失敗:", e.message), []))),
      ...(SEED ? await fetchYouTubeSeedSearch().catch(e => (console.warn("YouTube人気ボカロ検索の取得失敗:", e.message), [])) : []),
      ...(SEED ? [] : await fetchFollowed(new Set((await readJson("data/songs.json", [])).map(i => i.id))).catch(e => (console.warn("自動フォローの取得失敗:", e.message), []))),
-     ...(SEED ? [] : await fetchCatalogs(await readJson("data/songs.json", [])).catch(e => (console.warn("公式チャンネルの人気曲の取得失敗:", e.message), [])))];
+     ...(SEED ? [] : await fetchCatalogs(await readJson("data/songs.json", [])).catch(e => (console.warn("公式チャンネルの人気曲の取得失敗:", e.message), []))),
+     ...(SEED ? [] : await fetchRequests(await readJson("data/songs.json", [])).catch(e => (console.warn("歌ってみたのリクエストの確認に失敗:", e.message), [])))];
 
 const outFile = fixtureArg > -1 ? "data/songs.sample.json" : "data/songs.json";
 const existing = new Map((await readJson(outFile, [])).map(i => [i.id, i]));
@@ -516,6 +586,7 @@ const overrides = await readJson("data/overrides.json", {});
 
 let statsOnly = 0;
 for (const v of videos) {
+  if (v.linkOnly) { const prev = existing.get(v.id); if (prev) { prev.req = v.req; prev.of = v.req; prev.ofLocked = true; } continue; }
   if (isKaraoke(v.title)) continue;
   if (v.updateOnly) {
     const prev = existing.get(v.id);
@@ -526,6 +597,8 @@ for (const v of videos) {
   const item = classify(v, { fallbackGenre: fallback });
   if (v.seed) item.seed = true;
   if (v.channelGenre === "歌ってみた") { item.kind = "歌ってみた"; item.chCover = true; item.by ||= v.uploader; delete item.p; delete item.v; }
+  // 曲ページからリクエストされた歌ってみた：その曲の歌ってみたとして固定する
+  if (v.req) { item.kind = "歌ってみた"; item.req = v.req; item.of = v.req; item.ofLocked = true; item.seed = true; item.by ||= v.uploader; }
   const prev = existing.get(item.id);
   existing.set(item.id, prev ? { ...prev, ...item, seed: prev.seed || item.seed, firstSeen: prev.firstSeen } : { ...item, firstSeen: new Date().toISOString() });
 }
