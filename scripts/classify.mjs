@@ -588,9 +588,10 @@ export function vocaloByCreator(items) {
   const chTally = new Map();
   for (const i of items) if (i.src === "youtube" && i.kind === "本家" && i.uploaderId) { const t = chTally.get(i.uploaderId) || [0, 0]; t[1]++; if (i.v) t[0]++; chTally.set(i.uploaderId, t); }
   const vocaloCh = new Set([...chTally].filter(([, t]) => t[0] >= 1 && t[0] / t[1] >= 0.3).map(([id]) => id));
-  for (const i of items) if (i.src === "youtube" && i.kind === "本家" && (i.g === "J-POP" || i.g === "その他") && i.p && ps.has(normalize(i.p)) && vocaloCh.has(i.uploaderId)) i.g = "ボカロ";
+  for (const i of items) if (i.src === "youtube" && i.kind === "本家" && (i.g === "J-POP" || i.g === "その他") && i.p && ps.has(normalize(i.p)) && vocaloCh.has(i.uploaderId) && !HUMAN_VO_RE.test(i.title || "")) i.g = "ボカロ";
 }
 
+const HUMAN_VO_RE = /[（(]\s*CV\s*[：:]|[（(]\s*Vo\s*[：:.]/i;
 export function guessChannelGenre(items) {
   const tally = new Map();
   for (const i of items) if (i.src === "youtube" && i.kind === "本家" && i.uploaderId) {
@@ -600,7 +601,8 @@ export function guessChannelGenre(items) {
   }
   for (const i of items) {
     const t = tally.get(i.uploaderId);
-    if (i.src === "youtube" && i.kind === "本家" && i.g === "J-POP" && t && t.v >= 1 && t.v / t.n >= 0.5) i.g = "ボカロ";
+    // 「feat. ちゅーたん（CV：早見沙織）」のように声優・人が歌っている曲は除く
+    if (i.src === "youtube" && i.kind === "本家" && i.g === "J-POP" && t && t.v >= 1 && t.v / t.n >= 0.5 && !HUMAN_VO_RE.test(i.title || "")) i.g = "ボカロ";
   }
 }
 
