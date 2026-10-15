@@ -179,6 +179,7 @@ async function fetchYouTubeSearch() {
   const key = process.env.YOUTUBE_API_KEY;
   const s = config.youtube.search;
   if (!key || !s?.enabled) { console.log("YouTube新着検索: APIキーがないので飛ばします"); return []; }
+  if (process.env.NO_SEARCH) { console.log("YouTube新着検索: 手動の実行なので飛ばします（検索回数の節約）"); return []; }
   const publishedAfter = new Date(Date.now() - (s.lookbackDays || 7) * 864e5).toISOString().replace(/\.\d+Z$/, "Z");
   const found = new Map();   // videoId -> ジャンルの手がかり
   for (const q of s.queries) {
@@ -387,6 +388,7 @@ async function lookupOriginalsYouTube(items) {
   const cfg = config.youtube.originalLookup;
   const key = process.env.YOUTUBE_API_KEY;
   if (!cfg?.enabled || !key) return [];
+  if (process.env.NO_SEARCH) { console.log("原曲さがし（YouTube）: 手動の実行なので飛ばします（検索回数の節約）"); return []; }
   const cache = await readJson("data/original-lookup.json", {});
   const genres = new Set(cfg.genres || ["アニソン", "J-POP"]);
   const have = new Set(items.filter(i => i.kind === "本家").map(i => normalize(i.t)));
@@ -433,6 +435,56 @@ async function lookupOriginalsYouTube(items) {
   return out;
 }
 
+// ---------- 公式チャンネルの過去の人気曲：J-POP・アニソンの本家を出しているチャンネルの全動画から、よく再生された曲を本家として追加 ----------
+// 検索は使わない（動画一覧は50本で1ユニット）。1回の取得で maxChannelsPerRun チャンネルずつ、recheckDays たったら見直す
+const CATALOG_SKIP = /THE FIRST TAKE|\blive\b|ライブ|acoustic|アコースティック|弾き語り|remix|リミックス|instrumental|teaser|trailer|short ver|dance practice|ダンス(練習|プラクティス)|behind|making|メイキング|interview|インタビュー|コメント|告知|\bspot\b|\bcm\b|ダイジェスト|digest|#shorts/i;
+async function fetchCatalogs(items) {
+  const cfg = config.youtube.catalog;
+  const key = process.env.YOUTUBE_API_KEY;
+  if (!cfg?.enabled || !key) return [];
+  const done = await readJson("data/catalog-done.json", {});
+  const recheck = new Date(Date.now() - (cfg.recheckDays || 180) * 864e5).toISOString();
+  const skipCh = new RegExp(cfg.skipChannels || "THE FIRST TAKE", "i");
+  // チャンネルごとに、サイトにある本家と歌ってみたの数を数える
+  const chs = new Map();
+  for (const i of items) {
+    if (i.src !== "youtube" || !i.uploaderId) continue;
+    const c = chs.get(i.uploaderId) || { name: i.uploader || "", orig: 0, cov: 0, jp: 0, anime: 0, max: 0 };
+    if (i.kind === "本家" && !i.reprint) { c.orig++; if (i.g === "J-POP") c.jp++; if (i.g === "アニソン") c.anime++; c.max = Math.max(c.max, i.views || 0); } else c.cov++;
+    chs.set(i.uploaderId, c);
+  }
+  const todo = [...chs].filter(([id, c]) => c.orig >= c.cov && c.jp + c.anime >= 1 && c.max >= (cfg.channelMinViews || 100000) && !skipCh.test(c.name) && !(done[id] > recheck))
+    .sort((a, b) => b[1].max - a[1].max).slice(0, cfg.maxChannelsPerRun || 50);
+  const known = new Set(items.map(i => i.id));
+  const out = [];
+  for (const [id, c] of todo) {
+    const ids = [];
+    let pageToken = "";
+    for (let page = 0; page < (cfg.maxPages || 6); page++) {
+      const params = new URLSearchParams({ part: "contentDetails", playlistId: "UU" + id.slice(2), maxResults: "50", key, ...(pageToken ? { pageToken } : {}) });
+      const res = await ytFetch("https://www.googleapis.com/youtube/v3/playlistItems?" + params);
+      if (!res.ok) break;
+      const body = await res.json();
+      for (const it of body.items || []) if (it.contentDetails?.videoId) ids.push(it.contentDetails.videoId);
+      pageToken = body.nextPageToken;
+      if (!pageToken) break;
+    }
+    const genre = c.anime > c.jp ? "アニソン" : "J-POP";
+    const got = (await ytVideos(ids.filter(v => !known.has("yt:" + v)), key))
+      .filter(v => v.snippet?.categoryId === "10" && isJapanese(v) && !isNoise(v) && !CATALOG_SKIP.test(v.snippet?.title || ""))
+      .filter(v => Number(v.statistics?.viewCount || 0) >= (cfg.minViews || 300000))
+      .map(v => ({ ...ytItem(v, genre), seed: true }))
+      .filter(v => !isKaraoke(v.title) && classify(v, { fallbackGenre: genre }).kind === "本家")
+      .sort((a, b) => (b.views || 0) - (a.views || 0)).slice(0, cfg.topPerChannel || 10);
+    out.push(...got);
+    done[id] = new Date().toISOString();
+    console.log(`公式チャンネルの人気曲「${c.name}」: ${ids.length}本のうち ${got.length}曲を追加${got.length ? `（${got.slice(0, 3).map(v => v.title.slice(0, 30)).join("／")}…）` : ""}`);
+  }
+  await writeFile(path("data/catalog-done.json"), JSON.stringify(done) + "\n");
+  console.log(`公式チャンネルの人気曲: ${todo.length}チャンネルを見て、${out.length}曲を追加`);
+  return out;
+}
+
 // ---------- まとめて保存 ----------
 const fixtureArg = process.argv.indexOf("--fixture");
 const SEED = process.argv.includes("--seed");
@@ -443,7 +495,8 @@ const videos = fixtureArg > -1
      ...(SEED ? [] : await fetchYouTubeTrending().catch(e => (console.warn("YouTube急上昇の取得失敗:", e.message), []))),
      ...(SEED ? [] : await fetchYouTubeSearch().catch(e => (console.warn("YouTube新着検索の取得失敗:", e.message), []))),
      ...(SEED ? await fetchYouTubeSeedSearch().catch(e => (console.warn("YouTube人気ボカロ検索の取得失敗:", e.message), [])) : []),
-     ...(SEED ? [] : await fetchFollowed(new Set((await readJson("data/songs.json", [])).map(i => i.id))).catch(e => (console.warn("自動フォローの取得失敗:", e.message), [])))];
+     ...(SEED ? [] : await fetchFollowed(new Set((await readJson("data/songs.json", [])).map(i => i.id))).catch(e => (console.warn("自動フォローの取得失敗:", e.message), []))),
+     ...(SEED ? [] : await fetchCatalogs(await readJson("data/songs.json", [])).catch(e => (console.warn("公式チャンネルの人気曲の取得失敗:", e.message), [])))];
 
 const outFile = fixtureArg > -1 ? "data/songs.sample.json" : "data/songs.json";
 const existing = new Map((await readJson(outFile, [])).map(i => [i.id, i]));

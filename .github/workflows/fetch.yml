@@ -10,6 +10,10 @@ on:
         description: "昔からの人気曲（原曲の土台）をまとめて取り込む"
         type: boolean
         default: false
+      search:
+        description: "YouTube検索も使う（1日の検索回数に上限があるので、ふだんは朝の自動更新だけで使う）"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -30,6 +34,7 @@ jobs:
       - name: 曲データを取得
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          NO_SEARCH: ${{ github.event_name == 'workflow_dispatch' && !inputs.search && '1' || '' }}
         run: node scripts/fetch.mjs ${{ inputs.seed && '--seed' || '' }}
       - name: 保存済みの曲を今のルールで読み直す
         run: node scripts/reclassify.mjs

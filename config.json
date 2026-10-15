@@ -228,6 +228,17 @@
       "maxPerRun": 20,
       "minViews": 30000,
       "recheckDays": 60
+    },
+    "catalog": {
+      "comment": "J-POP・アニソンの本家を出している公式チャンネルの全動画から、よく再生された曲を本家として追加する（検索は使わない。動画一覧50本で1ユニット）。1回の取得で見るチャンネル数、1チャンネルで見るページ数（50本/ページ）、1チャンネルから追加する最大曲数",
+      "enabled": true,
+      "maxChannelsPerRun": 50,
+      "maxPages": 6,
+      "topPerChannel": 10,
+      "minViews": 300000,
+      "channelMinViews": 100000,
+      "recheckDays": 180,
+      "skipChannels": "THE FIRST TAKE|シアーミュージック|吹奏楽部|ジュニアCHANNEL"
     }
   }
 }
