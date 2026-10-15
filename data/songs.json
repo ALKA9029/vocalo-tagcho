@@ -28175,7 +28175,7 @@
   "by": "",
   "firstSeen": "2026-10-09T11:31:52.003Z",
   "of": "nico:sm31314079",
-  "p": "kemu",
+  "p": "KEMU VOXX",
   "a": "niconico:24550889"
  },
  {
@@ -30902,7 +30902,7 @@
   "uploader": null,
   "by": "HASYU",
   "pHint": "kemu",
-  "p": "kemu",
+  "p": "KEMU VOXX",
   "a": "niconico:24550889",
   "firstSeen": "2026-10-09T11:31:52.032Z",
   "of": "nico:sm17520775"
@@ -76340,7 +76340,7 @@
   "firstSeen": "2026-10-08T15:10:08.899Z",
   "seed": true,
   "of": "nico:sm31314079",
-  "p": "kemu",
+  "p": "KEMU VOXX",
   "a": "niconico:24550889"
  },
  {
@@ -76626,7 +76626,7 @@
   "firstSeen": "2026-10-08T15:10:08.702Z",
   "seed": true,
   "of": "nico:sm31314079",
-  "p": "kemu",
+  "p": "KEMU VOXX",
   "a": "niconico:24550889"
  },
  {
@@ -76656,7 +76656,7 @@
   ],
   "uploaderId": 24550889,
   "uploader": null,
-  "p": "kemu",
+  "p": "KEMU VOXX",
   "v": "GUMI",
   "a": "niconico:24550889",
   "firstSeen": "2026-10-08T14:36:47.335Z",
@@ -105237,7 +105237,7 @@
   ],
   "uploaderId": 24550889,
   "uploader": null,
-  "p": "kemu",
+  "p": "KEMU VOXX",
   "v": "GUMI",
   "a": "niconico:24550889",
   "firstSeen": "2026-10-08T14:36:47.348Z",
@@ -108641,7 +108641,7 @@
   "firstSeen": "2026-10-08T15:10:08.787Z",
   "seed": true,
   "of": "nico:sm17520775",
-  "p": "kemu",
+  "p": "KEMU VOXX",
   "a": "niconico:24550889"
  },
  {
@@ -109349,7 +109349,7 @@
   "firstSeen": "2026-10-08T15:10:08.907Z",
   "seed": true,
   "of": "nico:sm18198019",
-  "p": "kemu",
+  "p": "KEMU VOXX",
   "a": "niconico:24550889"
  },
  {
@@ -110195,7 +110195,8 @@
   "v": "GUMI",
   "a": "youtube:UCedZ1Nz4ZcBy6fb2YVyB0CQ",
   "firstSeen": "2026-10-09T12:20:22.356Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm16110005"
  },
  {
   "id": "nico:sm18511216",
@@ -110224,7 +110225,7 @@
   ],
   "uploaderId": 24550889,
   "uploader": null,
-  "p": "kemu",
+  "p": "KEMU VOXX",
   "v": "GUMI",
   "a": "niconico:24550889",
   "firstSeen": "2026-10-08T14:36:47.345Z",
@@ -110810,7 +110811,7 @@
   ],
   "uploaderId": 24550889,
   "uploader": null,
-  "p": "kemu",
+  "p": "KEMU VOXX",
   "v": "GUMI",
   "a": "niconico:24550889",
   "firstSeen": "2026-10-08T14:36:47.328Z",
@@ -112319,7 +112320,7 @@
   "firstSeen": "2026-10-08T15:10:08.789Z",
   "seed": true,
   "of": "nico:sm16474954",
-  "p": "kemu",
+  "p": "KEMU VOXX",
   "a": "niconico:24550889"
  },
  {
@@ -114411,7 +114412,7 @@
   "firstSeen": "2026-10-08T15:10:08.926Z",
   "seed": true,
   "of": "nico:sm16474954",
-  "p": "kemu",
+  "p": "KEMU VOXX",
   "a": "niconico:24550889"
  },
  {
@@ -115231,13 +115232,16 @@
   ],
   "uploaderId": 24550889,
   "uploader": null,
-  "p": "kemu",
+  "p": "KEMU VOXX",
   "v": "GUMI",
   "a": "niconico:24550889",
   "firstSeen": "2026-10-08T14:36:47.332Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:IN3kbST908c"
+  ]
  },
  {
   "id": "nico:sm16094995",
@@ -126502,7 +126506,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm7992704",
   "title": "『ミク×ルカ×カイト』ACUTE『オリジナル曲PV』",
-  "t": "ミク×ルカ×カイト",
+  "t": "ACUTE",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2009-08-21T00:01:46+09:00",
