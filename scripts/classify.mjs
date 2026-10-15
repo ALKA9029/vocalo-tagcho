@@ -39,6 +39,8 @@ export function isNotSong(title = "") {
   if (/#shorts?\b/i.test(title)) return true;
   // MMD（3Dモデルが既存の曲で踊る動画）は曲そのものではない
   if (/MMD/i.test(title)) return true;
+  // テレビの歌番組の映像や、アニメのオープニング映像、曲の分解動画も曲そのものではない
+  if (/紅白歌合戦|オープニングムービー|deconstruction/i.test(title)) return true;
   if (/\bteaser\b|ティザー|\btrailer\b|behind the scenes|メイキング|\bmaking\b|【ご報告】|【お知らせ】|大切なお知らせ|\bstation\b|24\/7|practice (video|ver)|dance practice|grand championship/i.test(title)) return true;
   const main = title.split(/\s#/)[0];
   if (SING_RE.test(main)) return false;
@@ -452,6 +454,17 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     const m = d.match(/(?:nicovideo\.jp\/watch\/|nico\.ms\/)(sm\d+)/);
     if (m) item.nicoSrc = "nico:" + m[1]; else if (video.nicoSrc) item.nicoSrc = video.nicoSrc;
     if (REPRINT_RE.test(d)) item.reprint = 1;
+  }
+  if (video.src === "youtube" && item.t) {
+    // 「米津玄師 - 烏　Kenshi Yonezu - Karasu」のように、曲名のうしろに英語の作者名がくっついたら外す
+    const m = item.t.match(/^(.*(?:[^\x00-\x7F]|[!?]))[\s　]+([A-Za-z][A-Za-z .'&]*[A-Za-z])$/);
+    if (m && new RegExp(`${m[2].replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\s+[-–—]\\s`).test(video.title)) item.t = m[1];
+    // 「SixTONES - NEW ERA - [YouTube Ver.]」のように、曲名が作者名や「〜ver.」になってしまったら、ダッシュで区切ったほかの部分を曲名に
+    if (item.kind === "本家" && normalize(item.t) === normalize(item.p || "")) {
+      const parts = video.title.split(/\s+[-–—]\s+/).map(x => x.replace(/^[\[【(（]|[\]】)）]$/g, "").trim());
+      const alt = parts.length >= 2 && parts.find(x => x && normalize(x) !== normalize(item.p || "") && !/ver\b|ver\.|[｜|]|^(MV|PV|music video|official)/i.test(x) && normalize(x) !== normalize(item.t));
+      if (alt) item.t = cleanSong(alt).trim() || item.t;
+    }
   }
   // 説明文の後ろのほうに「TVアニメ『〇〇』オープニングテーマ」とある YouTube の本家はアニソン
   if (video.animeDesc) {
