@@ -473,7 +473,7 @@ export function cleanChannel(name) {
   name = name || "";
   return name.replace(/\s*[|｜].*$/, "").replace(/\s+-[^-]+-\s*$/, "").replace(/\s+-\s+[A-Za-z][A-Za-z .]*-?\s*$/, "")
     .replace(/\s*(ch\.?|channel)\s*$/i, "").replace(/\s*-\s*Topic$/i, "").replace(/\s*(official\s*)?(youtube\s*)?(channel|チャンネル)$/i, "")
-    .replace(/\s*(official|公式)$/i, "").replace(/\s*\/\s*.*$/, "").trim();
+    .replace(/\s*(official|公式)$/i, "").replace(/\s*(archives?|アーカイブ|切り抜き|clips?)$/i, "").replace(/\s*\/\s*.*$/, "").trim();
 }
 
 // 同じ投稿者の曲で一番よく使われている作者名を、名前のない曲にも入れる

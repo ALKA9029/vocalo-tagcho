@@ -2,7 +2,7 @@
 //   node scripts/fetch.mjs                      … ニコニコとYouTubeから取得
 //   node scripts/fetch.mjs --fixture FILE.json  … ネットにつながず、テスト用データで動かす
 import { readFile, writeFile, mkdir } from "node:fs/promises";
-import { classify, linkCovers, toSite, isKaraoke, normalize, animeInDesc } from "./classify.mjs";
+import { classify, linkCovers, toSite, isKaraoke, normalize, animeInDesc, singerCore } from "./classify.mjs";
 
 // 実行の記録を data/last-run.txt にも残す（GitHubの画面を開かなくても、何件取れたか確認できるように）
 const RUNLOG = [];
@@ -598,7 +598,7 @@ for (const v of videos) {
   if (v.seed) item.seed = true;
   if (v.channelGenre === "歌ってみた") { item.kind = "歌ってみた"; item.chCover = true; item.by ||= v.uploader; delete item.p; delete item.v; }
   // 曲ページからリクエストされた歌ってみた：その曲の歌ってみたとして固定する
-  if (v.req) { item.kind = "歌ってみた"; item.req = v.req; item.of = v.req; item.ofLocked = true; item.seed = true; item.by ||= v.uploader; }
+  if (v.req) { item.kind = "歌ってみた"; item.req = v.req; item.of = v.req; item.ofLocked = true; item.seed = true; item.by ||= singerCore(v.uploader); }
   const prev = existing.get(item.id);
   existing.set(item.id, prev ? { ...prev, ...item, seed: prev.seed || item.seed, firstSeen: prev.firstSeen } : { ...item, firstSeen: new Date().toISOString() });
 }
