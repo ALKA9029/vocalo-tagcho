@@ -483,7 +483,7 @@ function play(id, opts={}){
   // YouTube に「再生状態を教えて」と頼む（曲の終わりを知るため）
   frame.addEventListener("load", ()=>{
     if (ps.src !== "youtube") return;
-    for (const m of [{event:"listening", id:1, channel:"widget"}, {event:"command", func:"addEventListener", args:["onStateChange"], id:1, channel:"widget"}])
+    for (const m of [{event:"listening", id:1, channel:"widget"}, {event:"command", func:"addEventListener", args:["onStateChange"], id:1, channel:"widget"}, {event:"command", func:"addEventListener", args:["onError"], id:1, channel:"widget"}])
       frame.contentWindow?.postMessage(JSON.stringify(m), "https://www.youtube.com");
   });
   $("#player").replaceChildren(
@@ -500,6 +500,18 @@ function play(id, opts={}){
   document.body.classList.add("has-player");
   if (narrow.matches && !$(".bar").classList.contains("folded")) setFold(true, false);
   refresh(prev, id);
+  // おまかせ再生：しばらくたっても再生が始まらない（投稿者が埋め込みを許可していない動画など）ときは次の曲へ
+  clearTimeout(stuckTimer);
+  started = false;
+  if (sh) stuckTimer = setTimeout(()=>{ if (state.play === id && state.shuffle && !started) skipStuck(); }, 12000);
+}
+let stuckTimer = 0, started = false, skipped = 0;
+function skipStuck(){
+  clearTimeout(stuckTimer);
+  if (++skipped > 5) { skipped = 0; setStatus("再生できない曲が続いたので、おまかせ再生を止めたよ。もう一度 🎲 を押してみてね。"); return; }
+  setStatus("このページでは再生できない動画だったので、次の曲へ進んだよ。");
+  lastNext = 0;
+  nextShuffle();
 }
 // 絞り込みはそのままで、一覧の中のその曲の行まで移動して関連を開く（曲ページがない曲用）
 function showInList(id){
@@ -515,6 +527,7 @@ function showInList(id){
   if (node) { scrollToItem(node, true); node.classList.remove("flash"); void node.offsetWidth; node.classList.add("flash"); }
 }
 function closePlayer(){
+  clearTimeout(stuckTimer);
   const prev = state.play;
   state.play = null;
   state.shuffle = null;
@@ -566,6 +579,13 @@ window.addEventListener("message", e=>{
     e.source.postMessage({ sourceConnectorType: 1, playerId: "tagtune", eventName: "play" }, e.origin);
     return;
   }
+  // 再生が始まった（YouTube：状態 1、ニコニコ：playerStatus 2）
+  const isYT = /(^|\.)youtube\.com$/.test(host), isNico = /(^|\.)nicovideo\.jp$/.test(host);
+  if ((isYT && ((d.event === "onStateChange" && d.info === 1) || (d.event === "infoDelivery" && d.info?.playerState === 1)))
+    || (isNico && d.eventName === "playerStatusChange" && d.data?.playerStatus === 2)) { started = true; skipped = 0; clearTimeout(stuckTimer); }
+  // YouTube の「この動画は再生できません」（埋め込み不可・削除済みなど）は、すぐ次の曲へ
+  if (isYT && d.event === "onError" && state.shuffle) { skipStuck(); return; }
+  if ((isNico && d.eventName === "error") && state.shuffle) { skipStuck(); return; }
   const ended = /(^|\.)youtube\.com$/.test(host)
     ? (d.event === "onStateChange" && d.info === 0) || (d.event === "infoDelivery" && d.info?.playerState === 0)
     : /(^|\.)nicovideo\.jp$/.test(host) && d.eventName === "playerStatusChange" && d.data?.playerStatus === 4;
