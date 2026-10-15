@@ -542,6 +542,7 @@ document.addEventListener("keydown", e=>{ if (e.key === "Escape" && state.play &
 // 今の絞り込みの中から、ページ内で再生できる曲をランダムに選んで流す。再生数に関係なく同じ確率で選ぶ（埋もれた曲にも出会えるように）。
 // 1曲終わると次の曲へ。一度流れた曲は、その絞り込みの曲を一通り流すまで出さない
 const played = new Set();
+const touchOnly = matchMedia("(hover: none) and (pointer: coarse)");
 let lastNext = 0;
 function shuffleLabel(){
   const opt = id => $(id).selectedOptions[0]?.textContent || "";
@@ -552,13 +553,15 @@ function nextShuffle(){
   const now = Date.now();
   if (now - lastNext < 800) return;   // 終わりの合図が続けて来たときに2曲飛ばさないように
   lastNext = now;
-  const pool = visibleItems().filter(i=>embedUrl(i));
+  // スマホでは、ニコニコの埋め込みプレイヤーが自動で再生を始められず読み込み中のまま止まるので、YouTube で聴ける曲だけを流す
+  const all = visibleItems().filter(i=>embedUrl(i));
+  const pool = touchOnly.matches ? all.filter(i=>playSource(i)?.src === "youtube") : all;
   if (!pool.length) { setStatus("今の絞り込みには、このページで再生できる曲がないよ。絞り込みを変えてみてね。"); closePlayer(); return; }
   let fresh = pool.filter(i=>!played.has(i.id) && i.id !== state.play);
   if (!fresh.length) { played.clear(); fresh = pool.filter(i=>i.id !== state.play); if (!fresh.length) fresh = pool; }
   const pick = fresh[Math.floor(Math.random() * fresh.length)];
   played.add(pick.id);
-  state.shuffle = { label: shuffleLabel(), count: pool.length };
+  state.shuffle = { label: shuffleLabel() + (pool.length < all.length ? "・YouTubeの曲だけ" : ""), count: pool.length };
   play(pick.id, { shuffle:true });
   const node = document.getElementById("item-"+pick.id);
   if (node){ node.classList.remove("flash"); void node.offsetWidth; node.classList.add("flash"); }
