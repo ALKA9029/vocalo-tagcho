@@ -37,9 +37,11 @@ export const isKaraoke = title => /ニコカラ|off ?vocal|カラオケ|instrume
 const SING_RE = /コラボ|ラップ|歌r|歌っ|歌い|歌う|唄っ|弾いてみ|演奏|cover|カバー|バンド|band|feat|ft\.|MV|PV|主題歌|オリジナル/i;
 export function isNotSong(title = "") {
   if (/#shorts?\b/i.test(title)) return true;
-  if (/\bteaser\b|ティザー|\btrailer\b|behind the scenes|メイキング|\bmaking\b|【ご報告】|【お知らせ】|大切なお知らせ/i.test(title)) return true;
+  if (/\bteaser\b|ティザー|\btrailer\b|behind the scenes|メイキング|\bmaking\b|【ご報告】|【お知らせ】|大切なお知らせ|\bstation\b|24\/7|practice (video|ver)|dance practice|grand championship/i.test(title)) return true;
   const main = title.split(/\s#/)[0];
   if (SING_RE.test(main)) return false;
+  // 「#z世代 #平成ソング」のようにハッシュタグが並んでいて、曲名らしい「」／ - がない動画
+  if ((title.match(/[#＃]/g) || []).length >= 2 && !SING_RE.test(title) && !/[「『\/／]|\s[-–]\s/.test(main)) return true;
   return /やってみた|練習してみた|[wｗ]{3,}\s*$|【[^】]*(語録|企画|チャレンジ|検証|ドッキリ|密着|vlog|一写入魂)[^】]*】/i.test(main.trim());
 }
 
