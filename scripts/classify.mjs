@@ -40,7 +40,7 @@ export function isNotSong(title = "") {
   // MMD（3Dモデルが既存の曲で踊る動画）は曲そのものではない
   if (/MMD/i.test(title)) return true;
   // テレビの歌番組の映像や、アニメのオープニング映像、曲の分解動画も曲そのものではない
-  if (/紅白歌合戦|オープニングムービー|deconstruction/i.test(title)) return true;
+  if (/紅白歌合戦|オープニング(ムービー|映像)|エンディング映像|deconstruction|ハイライト】|highlight\b/i.test(title)) return true;
   if (/\bteaser\b|ティザー|\btrailer\b|behind the scenes|メイキング|\bmaking\b|【ご報告】|【お知らせ】|大切なお知らせ|\bstation\b|24\/7|practice (video|ver)|dance practice|grand championship/i.test(title)) return true;
   const main = title.split(/\s#/)[0];
   if (SING_RE.test(main)) return false;
@@ -359,6 +359,8 @@ export function fixSinger(by, title) {
 }
 
 // 動画1件 → サイトで使う形
+const LABEL_RE = /^(Sony Music|UNIVERSAL MUSIC|KING RECORDS|キングレコード|VAP|avex|ポニーキャニオン|PONY CANYON|Lantis|ランティス|Aniplex|アニプレックス|TOHO|東宝|Warner|ワーナー|Victor|ビクター|日本コロムビア|COLUMBIA|徳間|FlyingDog|フライングドッグ)/i;
+const TIEIN_RE = /[『「][^』」]{2,}[』」]\s*(?:の)?(?:主題歌|オープニング|エンディング|挿入歌|OP|ED|イメージソング|テーマソング|タイアップ)[^\s　]*/g;
 // HoneyWorks のトレードマークの埴輪「┗|∵|┓」のような、タイトルの飾りの顔文字（曲名の読み取りのじゃまになるので外す）
 const DECO_RE = /[┗┏└][|｜l]?[∵・][|｜l]?[┓┛┘]/g;
 
@@ -372,7 +374,13 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
   const hayYT = video.src === "youtube" ? normalize(`${video.title} ${(video.desc || video.descHead || "").slice(0, 600)}`) : "";
   const vtags = video.src === "youtube" ? tags.filter(t => normalize(t).length >= 2 && hayYT.includes(normalize(t))) : tags;
   const kind = detectKind(video.title, tags, video.src);
-  const parsed = video.src === "youtube" ? parseYouTube(video.title, video.uploader) : parseTitle(video.title);
+  // 「『機動戦士ガンダム 閃光のハサウェイ』主題歌」「(TVアニメ『〇〇』OP)」のようなタイアップ先の作品名は、曲名と取りちがえないように外してから読む
+  const ytTitle = video.src === "youtube" ? (video.title
+    .replace(/[（(\[［【<＜][^()（）\[\]［］【】<>＜＞]*[』」][^()（）\[\]［］【】<>＜＞]*[)）\]］】>＞]/g, " ")   // かっこの中の「(TVアニメ『〇〇』OP)」
+    .replace(TIEIN_RE, " ").replace(/\s*※.*$/, "").replace(/\s*[｜|\/／]\s*(TVアニメ|テレビアニメ|映画|ドラマ|フジテレビ系|TBS系|テレビ朝日系|日本テレビ系|NHK)?\s*$/, "")
+    .replace(/[\s　]+(映画|TVアニメ|テレビアニメ|アニメ|ドラマ|劇場版)\s*$/, "")
+    .replace(/\s+/g, " ").trim() || video.title) : video.title;
+  const parsed = video.src === "youtube" ? parseYouTube(ytTitle, video.uploader) : parseTitle(video.title);
   // 歌声は、登録済みの歌声名に当てはまるものだけを使う（「feat. じん」「feat. まふまふ」のような人の名前は歌声にしない）
   const pickVoice = x => { if (!x) return null; if (isVoice(x)) return canonicalVoice(x); const v = splitNames(x).voices[0]; return v ? canonicalVoice(v) : null; };
   const rawVoice = pickVoice(parsed.voice) || pickVoice(detectVoice(video.title, vtags));
@@ -466,6 +474,12 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
       if (alt) item.t = cleanSong(alt).trim() || item.t;
     }
   }
+  // レコード会社のチャンネルの「プライド革命／CHiCO with HoneyWorks」は、レコード会社名ではなく ／ のうしろを作者に
+  if (video.src === "youtube" && item.kind === "本家" && LABEL_RE.test(item.p || "")) {
+    const m = video.title.match(/^(.+?)\s*[／\/]\s*([^／\/【\[(（]+)/);
+    if (m && normalize(cleanSong(m[1])) === normalize(item.t)) item.p = m[2].trim();
+  }
+  if (item.kind === "本家" && /\bwith HoneyWorks$/i.test(item.p || "")) item.p = "HoneyWorks";   // 「CHiCO with HoneyWorks」なども作者は HoneyWorks
   // 説明文の後ろのほうに「TVアニメ『〇〇』オープニングテーマ」とある YouTube の本家はアニソン
   if (video.animeDesc) {
     item.animeDesc = 1;
@@ -723,7 +737,7 @@ export function mergeSources(items) {
 }
 
 // 同じ人の作者名の表記ゆれを、本人の名乗り（X などの表記）にそろえる
-const CREATOR_NAMES = { "黒うさP": "黒うさP/WhiteFlame", "WhiteFlame": "黒うさP/WhiteFlame", "kemu": "KEMU VOXX" };
+const CREATOR_NAMES = { "黒うさP": "黒うさP/WhiteFlame", "WhiteFlame": "黒うさP/WhiteFlame", "kemu": "KEMU VOXX", "ALEXANDROS": "[Alexandros]", "DISH": "DISH//" };
 const fixCreatorNames = items => { for (const i of items) if (i.p && CREATOR_NAMES[i.p]) i.p = CREATOR_NAMES[i.p]; };
 
 export function linkCovers(items) {
