@@ -640,8 +640,9 @@ export function mergeSources(items) {
   }
   const dupOf = new Map();
   for (const list of groups.values()) {
-    if (new Set(list.map(i => i.src)).size < 2) continue;
-    // サイトごとに一番再生されている投稿を1つずつ選ぶ（同じサイトの残りは今まで通り別の曲）
+    if (list.length < 2) continue;
+    // サイトごとに一番再生されている投稿を1つずつ選ぶ。同じサイトの残り（Official Audio・Lyric Video・ダンス版など同じ曲の別の動画）は、
+    // 別の曲として並べずに代表の曲の中に隠す（再生数は合計に足す）
     const best = new Map();
     // 作者本人の投稿を転載より優先する（どちらも同じなら再生数の多いほう）
     const rank = i => (i.reprint ? 0 : 1e12) + (i.views || 0);
@@ -653,8 +654,8 @@ export function mergeSources(items) {
     if (picked.some(r => r.g === "ボカロ")) main.g = "ボカロ";
     if (!main.v) main.v = picked.find(r => r.v)?.v;
     for (const r of rest) { r.dup = main.id; dupOf.set(r.id, main.id); }
-    // 選ばれなかった転載は、別の曲として並べずにまとめた曲の中に隠す
-    for (const r of list) if (r.reprintOf && !r.dup && r !== main && !main.alt.includes(r.id)) { r.dup = main.id; dupOf.set(r.id, main.id); }
+    for (const r of list) if (!r.dup && r !== main) { r.dup = main.id; dupOf.set(r.id, main.id); }
+    if (!main.alt.length) delete main.alt;
   }
   // まとめた側に紐づいていた歌ってみたは、代表の曲に付け替える
   for (const c of items) if (c.of && dupOf.has(c.of)) c.of = dupOf.get(c.of);

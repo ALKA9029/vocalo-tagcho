@@ -456,6 +456,7 @@ async function fetchCatalogs(items) {
   const todo = [...chs].filter(([id, c]) => c.orig >= c.cov && c.jp + c.anime >= 1 && c.max >= (cfg.channelMinViews || 100000) && !skipCh.test(c.name) && !(done[id] > recheck))
     .sort((a, b) => b[1].max - a[1].max).slice(0, cfg.maxChannelsPerRun || 50);
   const known = new Set(items.map(i => i.id));
+  const haveT = new Set(items.filter(i => i.kind === "本家").map(i => normalize(i.t) + "|" + normalize(i.p || "")));
   const out = [];
   for (const [id, c] of todo) {
     const ids = [];
@@ -470,12 +471,17 @@ async function fetchCatalogs(items) {
       if (!pageToken) break;
     }
     const genre = c.anime > c.jp ? "アニソン" : "J-POP";
+    const seenT = new Set();
     const got = (await ytVideos(ids.filter(v => !known.has("yt:" + v)), key))
       .filter(v => v.snippet?.categoryId === "10" && isJapanese(v) && !isNoise(v) && !CATALOG_SKIP.test(v.snippet?.title || ""))
       .filter(v => Number(v.statistics?.viewCount || 0) >= (cfg.minViews || 300000))
       .map(v => ({ ...ytItem(v, genre), seed: true }))
-      .filter(v => !isKaraoke(v.title) && classify(v, { fallbackGenre: genre }).kind === "本家")
-      .sort((a, b) => (b.views || 0) - (a.views || 0)).slice(0, cfg.topPerChannel || 10);
+      .map(v => ({ v, it: classify(v, { fallbackGenre: genre }) }))
+      .filter(({ v, it }) => !isKaraoke(v.title) && it.kind === "本家" && normalize(it.t) && !haveT.has(normalize(it.t) + "|" + normalize(it.p || "")))
+      .sort((a, b) => (b.v.views || 0) - (a.v.views || 0))
+      // 同じ曲の別の動画（Official Audio・Lyric Video・ダンス版など）は1本だけ
+      .filter(({ it }) => { const k = normalize(it.t); if (seenT.has(k)) return false; seenT.add(k); return true; })
+      .map(({ v }) => v).slice(0, cfg.topPerChannel || 10);
     out.push(...got);
     done[id] = new Date().toISOString();
     console.log(`公式チャンネルの人気曲「${c.name}」: ${ids.length}本のうち ${got.length}曲を追加${got.length ? `（${got.slice(0, 3).map(v => v.title.slice(0, 30)).join("／")}…）` : ""}`);
