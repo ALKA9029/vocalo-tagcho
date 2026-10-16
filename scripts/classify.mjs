@@ -39,6 +39,8 @@ export function isNotSong(title = "") {
   if (/#shorts?\b/i.test(title)) return true;
   // MMD（3Dモデルが既存の曲で踊る動画）は曲そのものではない
   if (/MMD/i.test(title)) return true;
+  // ファンが作った非公式のPV（音は原曲のまま）も、曲として別に並べない
+  if (/fan ?made|ファンメイド/i.test(title)) return true;
   // テレビの歌番組の映像や、アニメのオープニング映像、曲の分解動画も曲そのものではない
   if (/紅白歌合戦|オープニング(ムービー|映像)|エンディング映像|deconstruction|ハイライト】|highlight\b/i.test(title)) return true;
   if (/\bteaser\b|ティザー|\btrailer\b|behind the scenes|メイキング|\bmaking\b|【ご報告】|【お知らせ】|大切なお知らせ|\bstation\b|24\/7|practice (video|ver)|dance practice|grand championship/i.test(title)) return true;
