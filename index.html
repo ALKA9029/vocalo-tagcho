@@ -123,7 +123,7 @@ button.badge:hover{border-color:var(--accent);outline:1px solid var(--accent)}
 .badge.src{background:none;color:var(--muted);text-decoration:none}
 a.badge.src:hover{color:var(--accent);border-color:var(--accent)}
 .unknown{font-size:13px;color:var(--muted);font-style:italic}
-.count{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.count{font-size:13px;color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums;margin-left:auto}
 .loadmore{font:inherit;align-self:center;margin-top:16px;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:8px 20px;cursor:pointer}
 .loadmore:hover{border-color:var(--accent)}
 /* ページ内再生：サムネの▶と、画面下に浮かぶプレイヤー（1曲だけ） */
@@ -424,7 +424,9 @@ function render(){
     el("button",{class:"chip","aria-pressed":String(state.filter.has(t)), onclick:()=>applyFilter(()=>{ state.filter.has(t)?state.filter.delete(t):state.filter.add(t); })}, t)));
 
   const items = visibleItems();
-  $("#count").textContent = ITEMS.length ? `${items.length.toLocaleString("ja-JP")}曲` : "";
+  // 凡例（タグの色の説明）とまちがえないように「表示中」と書く。絞り込みなしなら「全◯曲」
+  const filtered = items.length !== ITEMS.length;
+  $("#count").textContent = ITEMS.length ? (filtered ? `表示中：${items.length.toLocaleString("ja-JP")}曲（全${ITEMS.length.toLocaleString("ja-JP")}曲）` : `全${ITEMS.length.toLocaleString("ja-JP")}曲`) : "";
   syncUrl();
   updateFoldInfo();
   const list = $("#list");
