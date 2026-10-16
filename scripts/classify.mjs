@@ -759,7 +759,7 @@ export function mergeSources(items) {
 }
 
 // 同じ人の作者名の表記ゆれを、本人の名乗り（X などの表記）にそろえる
-const CREATOR_NAMES = { "黒うさP": "黒うさP/WhiteFlame", "WhiteFlame": "黒うさP/WhiteFlame", "kemu": "KEMU VOXX", "ALEXANDROS": "[Alexandros]", "DISH": "DISH//" };
+const CREATOR_NAMES = { "黒うさP": "黒うさP/WhiteFlame", "WhiteFlame": "黒うさP/WhiteFlame", "kemu": "KEMU VOXX", "ALEXANDROS": "[Alexandros]", "DISH": "DISH//", "40meterP": "40mP" };
 const fixCreatorNames = items => { for (const i of items) if (i.p && CREATOR_NAMES[i.p]) i.p = CREATOR_NAMES[i.p]; };
 
 // 「恋愛裁判 Love Trial」「トリノコシティ Torinoko City」のように曲名のうしろに英語名が付いていて、

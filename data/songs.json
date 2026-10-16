@@ -120947,7 +120947,7 @@
   "firstSeen": "2026-10-08T15:10:08.785Z",
   "seed": true,
   "of": "yt:TXzfQ0cP1P0",
-  "p": "40meterP",
+  "p": "40mP",
   "a": "youtube:UCG09qajPDZdPtLsTkW7mJQA"
  },
  {
@@ -128299,11 +128299,14 @@
   "uploaderId": "UCG09qajPDZdPtLsTkW7mJQA",
   "uploader": "40meterP",
   "descHead": "終身刑で償う覚悟。\n\n\nボーカル：初音ミク\n作詞、作曲、編曲：40mP（@40mP）\n動画、イラスト：たま（@tamak0）\n\nピアノ：事務員G（@ZimuinG）\nベース：mao（@mao_alpaca_love）\nギター(EG & AG)：[TEST]（@hiroki_test）\nドラム、パーカッション：ショボン（@Shobon_mint）\n\nエンジニア(REC & MIX)：Takashi Nemoto(Soundcrew studio)\n\n\nメイキング動画 ⇒ https://youtu.be/S-kKUObAxB8\nカラオケ音源 ⇒ https://drive.google.com/",
-  "p": "40meterP",
+  "p": "40mP",
   "v": "初音ミク",
   "a": "youtube:UCG09qajPDZdPtLsTkW7mJQA",
   "firstSeen": "2026-10-09T12:20:22.324Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm23750267"
+  ]
  },
  {
   "id": "nico:sm23750267",
@@ -128338,7 +128341,8 @@
   "firstSeen": "2026-10-08T14:36:47.331Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:TXzfQ0cP1P0"
  },
  {
   "id": "nico:sm23743672",
