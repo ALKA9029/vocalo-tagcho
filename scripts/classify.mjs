@@ -41,6 +41,8 @@ export function isNotSong(title = "") {
   if (/MMD/i.test(title)) return true;
   // ファンが作った非公式のPV（音は原曲のまま）も、曲として別に並べない
   if (/fan ?made ?PV|ファンメイドPV/i.test(title)) return true;
+  // Project DIVA の映像の録画・エディットPV（ゲームの画面に原曲をのせたもの）も同じ
+  if (/(エディット|EDIT|合作編集|譜面なし)\s*PV|(60fps|1080P)[^\]]*\].*\bDIVA\b|\bDIVA\b.*(English|Romaji)/i.test(title)) return true;
   // テレビの歌番組の映像や、アニメのオープニング映像、曲の分解動画も曲そのものではない
   if (/ダイジェスト|\bdigest\b|公式切り抜き|アフターレポート|after movie|プライムデー|Kindle Unlimited|紅白歌合戦|オープニング(ムービー|映像)|エンディング映像|deconstruction|ハイライト】|highlight\b/i.test(title)) return true;
   if (/\bteaser\b|ティザー|\btrailer\b|behind the scenes|メイキング|\bmaking\b|【ご報告】|【お知らせ】|大切なお知らせ|\bstation\b|24\/7|practice (video|ver)|dance practice|grand championship/i.test(title)) return true;
