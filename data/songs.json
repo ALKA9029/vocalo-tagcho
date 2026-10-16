@@ -4509,7 +4509,7 @@
   "title": "近年流行りの｢お散歩MV｣作ってみた",
   "t": "お散歩",
   "kind": "本家",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2026-10-12T10:00:32Z",
   "views": 1917,
   "likes": 107,
@@ -20936,6 +20936,30 @@
   "p": "まちぶせ",
   "a": "まちぶせ",
   "firstSeen": "2026-10-10T21:31:18.887Z"
+ },
+ {
+  "id": "yt:jyc3UcRSBe8",
+  "src": "youtube",
+  "url": "https://www.youtube.com/watch?v=jyc3UcRSBe8",
+  "title": "狭間の苦楽は軸一重 / feat. 初音ミク【遷移圏見聞録 ファンメイドソング】",
+  "t": "狭間の苦楽は軸一重",
+  "kind": "本家",
+  "g": "ボカロ",
+  "date": "2026-10-05T12:00:18Z",
+  "views": 21667,
+  "likes": 1099,
+  "thumb": "https://i.ytimg.com/vi/jyc3UcRSBe8/mqdefault.jpg",
+  "tags": [
+   "遷移圏見聞録",
+   "せんいらいふ"
+  ],
+  "uploaderId": "UC14nZliZk05IaL2V8qZ6FRg",
+  "uploader": "弱虫",
+  "descHead": "遷移圏見聞録3周年おめでとうございます！\nこの度ファンメイドソング｢狭間の苦楽は軸一重｣を制作しました。いつも素敵な世界を垣間見せてくださり、ありがとうございます。これからの活動も応援しています！\n\n\n▼メロディ引用→｢Voice of the Earth｣\nhttps://youtu.be/1Uvi5HO6Y5A?si=D3x-3AL1RRZsY9NO\n\n▼遷移圏見聞録　公式Youtubeチャンネル\nhttps://www.youtube.com/@seni.kenbun\n\n▼遷移圏見聞録　公式X\nhttps://x.com/seni_kenbun\n\n\n【各クレジット】敬称略\n▼Mix→HÅ",
+  "p": "弱虫",
+  "v": "初音ミク",
+  "a": "name:弱虫",
+  "firstSeen": "2026-10-09T15:55:27.682Z"
  },
  {
   "id": "yt:smFp0sksH84",
@@ -94362,7 +94386,8 @@
   "firstSeen": "2026-10-10T07:32:06.229Z",
   "seed": true,
   "ofLocked": true,
-  "gFixed": "ボカロ"
+  "gFixed": "ボカロ",
+  "of": "nico:sm3133304"
  },
  {
   "id": "yt:tvwc7KT-I3U",

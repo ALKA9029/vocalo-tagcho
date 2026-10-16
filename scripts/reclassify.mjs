@@ -24,6 +24,7 @@ const out = items.map(old => {
   if (o) { Object.assign(merged, o); if ("of" in o) merged.ofLocked = true; if ("g" in o) merged.gFixed = o.g; }
   delete merged.of;
   if (merged.req) { merged.of = merged.req; merged.ofLocked = true; }
+  if (o && "of" in o) merged.of = o.of;   // 管理人が手で決めた原曲（overrides.json）
   return merged;
 });
 linkCovers(out);
