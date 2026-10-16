@@ -167477,5 +167477,59 @@
   "by": "",
   "firstSeen": "2026-10-09T21:44:36.813Z",
   "seed": true
+ },
+ {
+  "id": "nico:sm15064904",
+  "src": "niconico",
+  "url": "https://www.nicovideo.jp/watch/sm15064904",
+  "title": "ヒャダインのじょーじょーゆーじょーで、PVを作ってみた【ヒャダイン】",
+  "t": "ヒャダインのじょーじょーゆーじょー",
+  "kind": "本家",
+  "g": "アニソン",
+  "date": "2011-07-20T00:37:24+09:00",
+  "views": 2852128,
+  "likes": 826,
+  "thumb": "https://nicovideo.cdn.nimg.jp/thumbnails/15064904/15064904",
+  "tags": [
+   "音楽",
+   "歌ってみた",
+   "ヒャダイン",
+   "ヒャダインのじょーじょーゆーじょー",
+   "日常"
+  ],
+  "uploaderId": 1374465,
+  "uploader": null,
+  "by": null,
+  "firstSeen": "2026-10-08T15:10:08.713Z",
+  "seed": true,
+  "p": "ヒャダイン",
+  "gFixed": "アニソン"
+ },
+ {
+  "id": "nico:sm14207559",
+  "src": "niconico",
+  "url": "https://www.nicovideo.jp/watch/sm14207559",
+  "title": "ヒャダインのカカカタ☆カタオモイ-Cで、PV作ってみた　【ヒャダイン】",
+  "t": "ヒャダインのカカカタ☆カタオモイ-C",
+  "kind": "本家",
+  "g": "アニソン",
+  "date": "2011-04-20T00:00:42+09:00",
+  "views": 3824665,
+  "likes": 954,
+  "thumb": "https://nicovideo.cdn.nimg.jp/thumbnails/14207559/14207559",
+  "tags": [
+   "歌ってみた",
+   "ヒャダイン",
+   "ヒャダル子",
+   "ヒャダインのカカカタ☆カタオモイ-C",
+   "日常"
+  ],
+  "uploaderId": 1374465,
+  "uploader": null,
+  "by": null,
+  "firstSeen": "2026-10-08T15:10:08.662Z",
+  "seed": true,
+  "p": "ヒャダイン",
+  "gFixed": "アニソン"
  }
 ]
