@@ -439,6 +439,8 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     const isVoiceName = isVoice(parsed.creator);
     item.p = (!isVoiceName && parsed.creator) || cleanChannel(video.uploader) || "";
     if (isVoice(item.p)) item.p = "";
+    // 「鏡音レン・リン」のように歌声の名前だけが作者の位置に入ったら、チャンネル名を作者に
+    if (item.p && item.p.split(/[・&＆,、×]/).every(x => isVoice(x.trim()) || ["リン", "レン", "ミク", "ルカ"].includes(x.trim()))) item.p = cleanChannel(video.uploader) || "";
     if (voice) item.v = voice;
     // 同じ投稿者なら同じ作者とみなす（名前の書き方がばらばらでもまとまる）。投稿者が分からないときだけ名前でまとめる
     item.a = video.uploaderId ? `${video.src}:${video.uploaderId}` : normalize(item.p);
@@ -718,8 +720,8 @@ export function mergeSources(items) {
   const voiceCh = new Set(items.filter(i => i.src === "youtube" && i.v && i.uploaderId).map(i => i.uploaderId));
   const groups = new Map();
   for (const i of items) {
-    if (i.kind !== "本家" || !i.p || !i.t || VERSION_RE.test(i.title || "")) continue;
-    const k = normalize(i.t) + "|" + normalize(i.p);
+    if (i.kind !== "本家" || !i.p || !i.t || (VERSION_RE.test(i.title || "") && !i.rm)) continue;
+    const k = normalize(i.t) + "|" + normalize(i.p) + (i.rm ? "|" + i.rm : "");
     if (!normalize(i.t) || !normalize(i.p)) continue;
     (groups.get(k) || groups.set(k, []).get(k)).push(i);
   }
@@ -780,12 +782,35 @@ function dropEnglishTail(items) {
   }
 }
 
+// 作者本人が昔の曲をアレンジして出し直したもの（「ドーナツホール 2024」「アンチクロロベンゼン ver.2025」「〇〇 リメイク」など）。
+// 元の曲とは別の曲のまま、曲名は元の曲にそろえて rm（元の曲のID）と rv（「2024」など）を付ける
+const REMAKE_RE = /(?:19|20)\d\d\s*(?:ver|version|バージョン)|(?:ver|version)\.?\s*(?:19|20)\d\d|リメイク|remake|再録|re-?arrange|リアレンジ|re-?recording/i;
+const REMAKE_TAIL_RE = /[\s　]*[-~～(（\[［]*\s*(?:(?:19|20)\d\d\s*(?:ver(?:sion)?\.?)?|ver(?:sion)?\.?\s*(?:19|20)\d\d|remake|リメイク|re-?arrange|リアレンジ|再録|re-?recording)\s*[-~～)）\]］]*\.?$/i;
+function markRemakes(items) {
+  for (const i of items) { delete i.rm; delete i.rv; }
+  const byT = new Map();
+  for (const i of items) if (i.kind === "本家" && normalize(i.t)) (byT.get(normalize(i.t)) || byT.set(normalize(i.t), []).get(normalize(i.t))).push(i);
+  for (const i of items) {
+    if (i.kind !== "本家" || !i.t) continue;
+    const yearTail = /[\s　](?:19|20)\d\d$/.test(i.t);
+    if (!REMAKE_RE.test(i.title || "") && !yearTail) continue;
+    const base = i.t.replace(REMAKE_TAIL_RE, "").trim() || i.t;
+    const cands = (byT.get(normalize(base)) || []).filter(o => o !== i && !REMAKE_RE.test(o.title || "") && (o.date || "") < (i.date || "") &&
+      (normalize(o.p || "") === normalize(i.p || "") || (o.a && o.a === i.a) || (normalize(o.p || "").length >= 2 && normalize(i.title || "").includes(normalize(o.p)))));
+    if (!cands.length) continue;
+    const o = cands.sort((a, b) => (a.date || "").localeCompare(b.date || ""))[0];
+    const y = (i.title || "").match(/(?:19|20)\d\d/);
+    i.t = o.t; i.rm = o.id; i.rv = y ? y[0] : "リメイク"; i.p = o.p; i.a = o.a;
+  }
+}
+
 export function linkCovers(items) {
   dropEnglishTail(items);
   inferNamesFromTags(items);
   guessChannelGenre(items);
   fillCreators(items);
   fixCreatorNames(items);
+  markRemakes(items);
   vocaloByCreator(items);
   const originals = new Map();
   for (const i of items.filter(x => x.kind === "本家").sort((a, b) => (a.date || "").localeCompare(b.date || ""))) {
@@ -856,7 +881,7 @@ function fixCreatorKeys(items) {
 
 // サイト表示用：必要な項目だけにした軽いデータ
 const unent = s => typeof s === "string" ? s.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'") : s;
-const KEEP = ["id", "src", "url", "title", "t", "kind", "g", "p", "v", "by", "of", "a", "date", "views", "thumb", "ne", "self"];
+const KEEP = ["id", "src", "url", "title", "t", "kind", "g", "p", "v", "by", "of", "a", "date", "views", "thumb", "ne", "self", "rm", "rv"];
 const ALT_KEEP = ["id", "src", "url", "views", "thumb", "ne", "date"];
 // サイト用：まとめた曲（dup）は出さず、代表の曲に alt（もう片方のサイトの投稿）として持たせる。再生数は合計にする
 export const toSite = items => {

@@ -6404,7 +6404,7 @@
   "uploader": "カンザキイオリ",
   "descHead": "カンザキイオリです。\n君と僕のこと\n\n==============================\n\n「禁忌になっていく」\n作詞・作曲・編曲・歌唱：カンザキイオリ\nInst→https://piapro.jp/t/6NwM\n\n曖昧なフレーズで罠にかかっていく\n理想的人生のフリしてる怪物\nは？　（君のことだよ）　\n\n簡単な一言で脳を抉っていく\n背徳的損得勘定\n酸いも甘いもギブアンドテイク\n\n敷かれたレールみたいな迷宮\n自愛と悲哀がスクランブル\n「君が好きです」\n未読の魅惑\n届かない方が飼い慣らせますから\n\nようやく気づいたんだ\nこの愛ってやつは\n君の人生を脱線させる\n\n君の禁忌になっていく\n\n曖",
   "p": "カンザキイオリ",
-  "a": "niconico:41144290",
+  "a": "youtube:UCv1KOiaRusvqOR4BrT9Sh8w",
   "firstSeen": "2026-10-11T21:32:19.192Z"
  },
  {
@@ -25042,7 +25042,7 @@
   "by": "カンザキイオリ",
   "firstSeen": "2026-10-09T11:31:52.000Z",
   "of": "yt:mKaRxty1j7g",
-  "p": "鏡音レン・リン",
+  "p": "カンザキイオリ",
   "a": "youtube:UCv1KOiaRusvqOR4BrT9Sh8w"
  },
  {
@@ -32397,7 +32397,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=nDBBRqztZV8",
   "title": "[official]アンチクロロベンゼン ver.2025 feat.オワタP(鏡音リン、鏡音レン)",
-  "t": "アンチクロロベンゼン ver.2025",
+  "t": "アンチクロロベンゼン",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2026-09-19T10:00:06Z",
@@ -32410,11 +32410,16 @@
   "uploaderId": "UCfVQDynjGGBJQDpdbGy0ffQ",
   "uploader": "ガルナ(オワタP)",
   "descHead": "ガルナ(オワタP)です。\n2010年に投稿したあの歌を、2025年にリメイクしていたものを、お裾分けします。\nボクたちは、救われますか？\n\nmusic:ガルナ(オワタP)\nillustrator:縣\nmovie:三重の人\nmastering:Dios/シグナルP\nvocal:鏡音リン、鏡音レン\n\n※がるなん.com - https://garunan.com/\n※オフボーカル - https://garunan.fanbox.cc/posts/12621796\n※KARENT - https://karent.jp/album/4990",
-  "p": "ガルナ",
+  "p": "オワタP",
   "v": "鏡音リン",
-  "a": "youtube:UCfVQDynjGGBJQDpdbGy0ffQ",
+  "a": "niconico:1320776",
   "firstSeen": "2026-10-15T10:11:04.216Z",
-  "seed": true
+  "seed": true,
+  "rm": "nico:sm12154467",
+  "rv": "2025",
+  "alt": [
+   "nico:sm46817376"
+  ]
  },
  {
   "id": "nico:sm46817376",
@@ -32448,7 +32453,10 @@
   "a": "niconico:1320776",
   "firstSeen": "2026-10-09T11:31:51.973Z",
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "rm": "nico:sm12154467",
+  "rv": "2025",
+  "dup": "yt:nDBBRqztZV8"
  },
  {
   "id": "nico:sm46806940",
@@ -44928,7 +44936,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=LdzLgfiIZI8",
   "title": "[official]リンちゃんなう！ ver.2025 feat.オワタP(初音ミク、巡音ルカ、鏡音リン)",
-  "t": "リンちゃんなう! ver.2025",
+  "t": "リンちゃんなう!",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2025-12-26T15:00:07Z",
@@ -44941,11 +44949,13 @@
   "uploaderId": "UCfVQDynjGGBJQDpdbGy0ffQ",
   "uploader": "ガルナ(オワタP)",
   "descHead": "ガルナ(オワタP)です。\n鏡音誕生祭ということで、2011年に公開したあの楽曲がよりパワーアップして帰ってきました。\n\nmusic,movie:ガルナ(オワタP)\nillust:田村ヒロ\nwords:sezu\nmastering:Dios/シグナルP\nvocal:初音ミク、巡音ルカ、鏡音リン\n\n※がるなん.com - https://garunan.com/\n※オフボーカル - https://garunan.fanbox.cc/posts/11130850\n※KARENT - https://karent.jp/album/4990",
-  "p": "ガルナ",
+  "p": "オワタP",
   "v": "初音ミク",
-  "a": "youtube:UCfVQDynjGGBJQDpdbGy0ffQ",
+  "a": "niconico:1320776",
   "firstSeen": "2026-10-15T10:11:04.216Z",
-  "seed": true
+  "seed": true,
+  "rm": "nico:sm16539814",
+  "rv": "2025"
  },
  {
   "id": "yt:3WUFfuH9tYY",
@@ -47159,7 +47169,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=0gUsfig2Gzw",
   "title": "[official]パラジクロロベンゼン ver.2025 feat.オワタP(鏡音レン、鏡音リン)",
-  "t": "パラジクロロベンゼン ver.2025",
+  "t": "パラジクロロベンゼン",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2025-09-19T10:00:06Z",
@@ -47172,11 +47182,13 @@
   "uploaderId": "UCfVQDynjGGBJQDpdbGy0ffQ",
   "uploader": "ガルナ(オワタP)",
   "descHead": "ガルナ(オワタP)です。\n2009年に投稿したあの歌を、2025年にリメイクしました。\nまだ、この歌に意味はあるの？\n\nmusic:ガルナ(オワタP)\nillustrator:縣\nmovie:三重の人\nmastering:Dios/シグナルP\nvocal:鏡音レン、鏡音リン\n\n※がるなん.com - https://garunan.com/\n※オフボーカル - https://garunan.fanbox.cc/posts/10595670\n※KARENT - https://karent.jp/album/4990",
-  "p": "ガルナ",
+  "p": "オワタP",
   "v": "鏡音リン",
-  "a": "youtube:UCfVQDynjGGBJQDpdbGy0ffQ",
+  "a": "niconico:1320776",
   "firstSeen": "2026-10-15T10:11:04.216Z",
-  "seed": true
+  "seed": true,
+  "rm": "nico:sm8269164",
+  "rv": "2025"
  },
  {
   "id": "yt:CWZ0lTUs5Mk",
@@ -50068,7 +50080,8 @@
   "a": "youtube:UC2iRI4qf-H_BdpsS8mMEjZQ",
   "firstSeen": "2026-10-15T10:07:04.180Z",
   "seed": true,
-  "dup": "yt:eYAd4uDotF0"
+  "rm": "yt:eYAd4uDotF0",
+  "rv": "リメイク"
  },
  {
   "id": "yt:1j_TV7-UGyA",
@@ -54359,7 +54372,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=y7fu_nNQAEQ",
   "title": "ハチ - ドーナツホール 2024 , HACHI - DONUT HOLE 2024",
-  "t": "ドーナツホール 2024",
+  "t": "ドーナツホール",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2024-09-30T01:00:33Z",
@@ -54382,6 +54395,8 @@
   "a": "niconico:380847",
   "firstSeen": "2026-10-15T10:07:04.153Z",
   "seed": true,
+  "rm": "nico:sm22138447",
+  "rv": "2024",
   "alt": [
    "nico:sm44158937"
   ],
@@ -54392,7 +54407,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm44158937",
   "title": "ハチ MV 「ドーナツホール 2024」",
-  "t": "ドーナツホール 2024",
+  "t": "ドーナツホール",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2024-09-30T10:00:00+09:00",
@@ -54418,6 +54433,8 @@
   "a": "niconico:380847",
   "firstSeen": "2026-10-08T14:36:47.419Z",
   "seed": true,
+  "rm": "nico:sm22138447",
+  "rv": "2024",
   "dup": "yt:y7fu_nNQAEQ"
  },
  {
@@ -82254,7 +82271,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=2hz0lhAs0Kg",
   "title": "あの夏が飽和する。2020ver. / 鏡音レン・リン",
-  "t": "あの夏が飽和する。2020ver.",
+  "t": "あの夏が飽和する。",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2020-09-18T11:00:11Z",
@@ -82268,11 +82285,13 @@
   "uploaderId": "UCv1KOiaRusvqOR4BrT9Sh8w",
   "uploader": "カンザキイオリ",
   "descHead": "カンザキイオリです。\n\n「あの夏が飽和する。2020ver.」\n作詞・作曲：カンザキイオリ（@kurogaki0311）\n編曲：カンザキイオリ/ハナムラサトシ\n\nGuitar・Bass：ハナムラサトシ（@hanamura_sts）\nDrums：イノウエケンイチ（@dwellrain）\n\n監督：朝倉すぐる\nイラスト：orie\nタイポデザイン：岩佐知昂\n制作：根岸秀幸\n\n==============================\n\n■カンザキイオリのCDやグッズ購入はこちら\nhttps://kanzakiiori.com/products\n\n■各種配信サイト\n配信シングル「25時の情熱」(202",
-  "p": "鏡音レン・リン",
+  "p": "カンザキイオリ",
   "v": "鏡音レン",
   "a": "youtube:UCv1KOiaRusvqOR4BrT9Sh8w",
   "firstSeen": "2026-10-09T12:20:22.342Z",
-  "seed": true
+  "seed": true,
+  "rm": "yt:mKaRxty1j7g",
+  "rv": "2020"
  },
  {
   "id": "yt:ReNM4_if5CE",
@@ -94268,7 +94287,7 @@
   "firstSeen": "2026-10-08T15:10:08.809Z",
   "seed": true,
   "of": "yt:mKaRxty1j7g",
-  "p": "鏡音レン・リン",
+  "p": "カンザキイオリ",
   "a": "youtube:UCv1KOiaRusvqOR4BrT9Sh8w"
  },
  {
@@ -94910,11 +94929,14 @@
   ],
   "uploaderId": 41144290,
   "uploader": null,
-  "p": "リン",
+  "p": "カンザキイオリ",
   "v": "鏡音レン",
   "a": "niconico:41144290",
   "firstSeen": "2026-10-08T14:36:47.373Z",
-  "seed": true
+  "seed": true,
+  "pFilled": false,
+  "pFromTag": true,
+  "dup": "yt:mKaRxty1j7g"
  },
  {
   "id": "yt:mKaRxty1j7g",
@@ -94938,11 +94960,14 @@
   "uploaderId": "UCv1KOiaRusvqOR4BrT9Sh8w",
   "uploader": "カンザキイオリ",
   "descHead": "精一杯生きている。\nカンザキイオリです。\n\n「あの夏が飽和する。」\n作詞・作曲・編曲：カンザキイオリ\n\noff.vocal\n→https://piapro.jp/kanzakiiori2020\n\n＜歌詞＞\nあの夏が飽和する。\n\n「昨日人を殺したんだ」\n君はそう言っていた。\n梅雨時ずぶ濡れのまんま、部屋の前で泣いていた。\n夏が始まったばかりというのに、\n君はひどく震えていた。\nそんな話で始まる、あの夏の日の記憶だ。\n\n「殺したのは隣の席の、いつも虐めてくるアイツ。\n　もう嫌になって、肩を突き飛ばして、\n　打ち所が悪かったんだ。\n　もうここには居られないと思うし、どっか遠いとこで死んでくるよ」\nそ",
-  "p": "鏡音レン・リン",
+  "p": "カンザキイオリ",
   "v": "鏡音レン",
   "a": "youtube:UCv1KOiaRusvqOR4BrT9Sh8w",
   "firstSeen": "2026-10-09T12:20:22.351Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm33677965"
+  ]
  },
  {
   "id": "yt:rnSsptZaYsM",

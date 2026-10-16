@@ -93,3 +93,4 @@ body.has-player .wrap{padding-bottom:320px}
 .req input:focus-visible{outline:2px solid var(--hot);outline-offset:1px}
 .req button{flex:none}
 .req button:disabled{opacity:.6}
+h1 .rv{font-family:var(--f-body);font-size:.45em;font-weight:700;color:var(--cover);vertical-align:middle}

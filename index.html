@@ -302,12 +302,16 @@ function seg(container, key, options){
     el("button",{"aria-pressed":String(state[key]===val), onclick:()=>applyFilter(()=>state[key]=val)}, label)));
 }
 
+const remakeLabel = i => /^\d{4}$/.test(i.rv || "") ? `${i.rv}年版` : "リメイク";
 function related(i){
   const groups = [];
+  // 作者本人の出し直し（リメイク）と元の曲を、おたがいに見つけられるように
+  if (i.kind === "本家" && i.rm && ITEM[i.rm]) groups.push(["元の曲", [ITEM[i.rm]], x=>`${creditText(x)}・${fmtDate(x.date)}`]);
+  if (i.kind === "本家") { const rs = ITEMS.filter(x=>x.rm===i.id); if (rs.length) groups.push(["新しいバージョン", rs, x=>remakeLabel(x)]); }
   const notSelf = arr => arr.filter(x=>x.id!==i.id);
   const cap = (arr, n=8) => arr.sort((a,b)=>(b.views||0)-(a.views||0)).slice(0,n);
   if (i.kind === "本家"){
-    const covers = ITEMS.filter(x=>x.kind==="歌ってみた" && x.of===i.id);
+    const covers = ITEMS.filter(x=>x.kind==="歌ってみた" && x.of===(i.rm && ITEM[i.rm] ? i.rm : i.id));   // リメイクは元の曲の歌ってみたを見せる
     const selfs = covers.filter(x=>x.self);
     if (selfs.length) groups.push(["作者本人のセルフカバー", cap(selfs), x=>x.by || ""]);
     groups.push(["この曲の歌ってみた", cap(covers.filter(x=>!x.self)), x=>x.by || "歌い手不明"]);
@@ -637,6 +641,7 @@ function buildItem(i, n, c){
         el("button",{class:"badge genre", title:`${i.g}だけ表示`, onclick:e=>{ e.stopPropagation(); applyFilter(()=>state.genre=i.g); }}, i.g),
         el("button",{class:"badge kind"+(i.kind==="歌ってみた"?" cover":""), title:`${i.kind}だけ表示`, onclick:e=>{ e.stopPropagation(); applyFilter(()=>state.kind=i.kind); }}, i.kind),
         i.self ? el("span",{class:"badge self", title:"作曲した本人が歌っている歌ってみた"}, "セルフカバー") : null,
+        i.rm ? el("span",{class:"badge self", title:"作者本人が昔の曲をアレンジして出し直した新しいバージョン"}, remakeLabel(i)) : null,
         ...creditEls(i),
         ...sources(i).map(v=>el("a",{class:"badge src", href:v.url, target:"_blank", rel:"noopener", title:`${srcLabel(v.src)}で開く${i.alt ? `（${fmtViews(v.views)}）` : ""}`, onclick:e=>e.stopPropagation()}, srcLabel(v.src))),
         el("span",{title: i.alt ? sources(i).map(v=>`${srcLabel(v.src)} ${fmtViews(v.views)}`).join("・") : null}, (i.alt ? "合計 " : "") + fmtViews(i.views)),
