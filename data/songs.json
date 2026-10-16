@@ -10433,7 +10433,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm46907423",
   "title": "初音ミク　海外のホテルで　オリジナル曲　FULL",
-  "t": "初音ミク 海外のホテルで FULL",
+  "t": "初音ミク 海外のホテルで",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2026-10-10T12:08:31+09:00",
@@ -36956,7 +36956,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm46778128",
   "title": "リ_ヴァース-咲く名もなく(feat.初音ミク)official Video",
-  "t": "リ_ヴァース-咲く名もなく official Video",
+  "t": "リ_ヴァース-咲く名もなく",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2026-09-08T23:23:16+09:00",
@@ -66667,7 +66667,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=v6ddeotX7K0",
   "title": "10-FEET - 第ゼロ感 (映画『THE FIRST SLAM DUNK』エンディング主題歌) Audio Movie",
-  "t": "第ゼロ感 Audio Movie",
+  "t": "第ゼロ感",
   "kind": "本家",
   "g": "アニソン",
   "date": "2022-11-09T12:35:47Z",
@@ -66698,7 +66698,8 @@
   "a": "youtube:UCmQakL41jbAhpQhqhyszF2g",
   "animeDesc": 1,
   "firstSeen": "2026-10-15T10:07:04.182Z",
-  "seed": true
+  "seed": true,
+  "dup": "yt:EsJGbHJyXYc"
  },
  {
   "id": "yt:8_FMADkQcXc",
@@ -92279,7 +92280,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=k9BqIXtyI0E",
   "title": "【鏡音リン】レコード・レド【オリジナル曲】kagamine rin",
-  "t": "レコード・レド kagamine rin",
+  "t": "レコード・レド",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2019-01-18T14:36:13Z",
@@ -92294,10 +92295,12 @@
   "descHead": "オリジナルvocaloid song　コンピCDに収録したものです。\n\nニコニコ：http://www.nicovideo.jp/watch/sm17598383\n作者twitter：https://twitter.com/es_achi_ar",
   "p": "shr VOCALOID",
   "v": "鏡音リン",
-  "a": "youtube:UCkOVPuNbnnbuVfuOqkPsvuw",
+  "a": "niconico:16850744",
   "nicoSrc": "nico:sm17598383",
   "firstSeen": "2026-10-10T07:32:06.121Z",
-  "seed": true
+  "seed": true,
+  "reprintOf": "nico:sm17598383",
+  "dup": "nico:sm17598383"
  },
  {
   "id": "nico:sm34470195",
@@ -120943,9 +120946,9 @@
   "by": "伊東歌詞太郎",
   "firstSeen": "2026-10-08T15:10:08.785Z",
   "seed": true,
-  "of": "nico:sm23750267",
-  "p": "40mP",
-  "a": "niconico:3343223"
+  "of": "yt:TXzfQ0cP1P0",
+  "p": "40meterP",
+  "a": "youtube:UCG09qajPDZdPtLsTkW7mJQA"
  },
  {
   "id": "nico:sm26630089",
@@ -123840,7 +123843,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm25476202",
   "title": "妄想税 Big Room House Remix Spacelectro",
-  "t": "妄想税 Big Room House Remix Spacelectro",
+  "t": "妄想税",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2015-02-01T21:01:17+09:00",
@@ -128278,7 +128281,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=TXzfQ0cP1P0",
   "title": "【初音ミク】 恋愛裁判 Love Trial 【オリジナルMV】",
-  "t": "恋愛裁判 Love Trial",
+  "t": "恋愛裁判",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2014-06-10T11:45:48Z",
@@ -132003,7 +132006,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=P0WdM9qwNNQ",
   "title": "【SeeU / シユ】각개전투(Individual Battle)【Vocaloid3】Original Song MV",
-  "t": "각개전투 Original Song",
+  "t": "각개전투",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2014-01-08T05:03:44Z",
@@ -142453,7 +142456,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=KpCHdbhHI-0",
   "title": "SeeU Original - 딸기(Strawberry) Full version",
-  "t": "딸기 Full version",
+  "t": "딸기",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2012-08-28T12:23:08Z",
@@ -144663,7 +144666,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=CWlvjBaCh8E",
   "title": "【GUMI】セツナトリップ【オリジナル】HD",
-  "t": "セツナトリップ HD",
+  "t": "セツナトリップ",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2012-05-05T22:48:31Z",
@@ -145104,11 +145107,15 @@
   ],
   "uploaderId": 16850744,
   "uploader": null,
-  "p": "",
+  "p": "shr VOCALOID",
   "v": "鏡音リン",
   "a": "niconico:16850744",
   "firstSeen": "2026-10-08T14:36:47.394Z",
-  "seed": true
+  "seed": true,
+  "pFilled": true,
+  "alt": [
+   "yt:k9BqIXtyI0E"
+  ]
  },
  {
   "id": "yt:oidKy7khp8o",
@@ -147620,7 +147627,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=aB-pIUzPB-I",
   "title": "【GUMI(40㍍)】 シリョクケンサ Eye Examination【オリジナル】",
-  "t": "シリョクケンサ Eye Examination",
+  "t": "シリョクケンサ",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2011-12-02T14:04:35Z",
@@ -147638,12 +147645,14 @@
   "uploaderId": "UCG09qajPDZdPtLsTkW7mJQA",
   "uploader": "40meterP",
   "descHead": "ニコニコ動画：http://www.nicovideo.jp/watch/sm15230821\nNicoVideo : http://www.nicovideo.jp/watch/sm15230821\n\n詩、曲：40mP\n絵、動画：たま\n\n■blog : http://40meter.blog125.fc2.com/　\n■twitter : http://twitter.com/40mP\n\nLyric & Music：40mP\nIllustration & Movie：たま",
-  "p": "40meterP",
+  "p": "40mP",
   "v": "GUMI",
-  "a": "youtube:UCG09qajPDZdPtLsTkW7mJQA",
+  "a": "niconico:3343223",
   "nicoSrc": "nico:sm15230821",
   "firstSeen": "2026-10-09T12:20:22.357Z",
-  "seed": true
+  "seed": true,
+  "reprintOf": "nico:sm15230821",
+  "dup": "nico:sm15230821"
  },
  {
   "id": "yt:EjYwEoZHKvQ",
@@ -147705,7 +147714,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=yIQDGwyJpSo",
   "title": "【初音ミク(40㍍)】 トリノコシティ Torinoko City【オリジナル】",
-  "t": "トリノコシティ Torinoko City",
+  "t": "トリノコシティ",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2011-12-02T13:20:50Z",
@@ -147725,12 +147734,14 @@
   "uploaderId": "UCG09qajPDZdPtLsTkW7mJQA",
   "uploader": "40meterP",
   "descHead": "ニコニコ動画：http://www.nicovideo.jp/watch/sm11559163\nNicoVideo : http://www.nicovideo.jp/watch/sm11559163\n\nカラオケ音源 ⇒\nhttps://drive.google.com/drive/folders/1BcUvCFTvnwby1QTX89wVU0GONe3cAfso?usp=share_link\n\n詩、曲、絵：40mP\nMusic, Lyric, Illustration : 40mP \n\n■blog : http://40meter.blog125.fc2.com/　\n■twitter : h",
-  "p": "40meterP",
+  "p": "40mP",
   "v": "初音ミク",
-  "a": "youtube:UCG09qajPDZdPtLsTkW7mJQA",
+  "a": "niconico:3343223",
   "nicoSrc": "nico:sm11559163",
   "firstSeen": "2026-10-09T12:20:22.405Z",
-  "seed": true
+  "seed": true,
+  "reprintOf": "nico:sm11559163",
+  "dup": "nico:sm11559163"
  },
  {
   "id": "yt:yWyzYlvYqHk",
@@ -149466,7 +149477,10 @@
   "firstSeen": "2026-10-08T14:36:47.342Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:aB-pIUzPB-I"
+  ]
  },
  {
   "id": "nico:sm15172108",
@@ -153806,7 +153820,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=YjOzaIXEoPA",
   "title": "【初音ミク】ブラック★ロックシューター【オリジナル曲】　PV",
-  "t": "ブラック★ロックシューター PV",
+  "t": "ブラック★ロックシューター",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2010-10-16T11:49:17Z",
@@ -154990,7 +155004,10 @@
   "firstSeen": "2026-10-08T14:36:47.336Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:yIQDGwyJpSo"
+  ]
  },
  {
   "id": "nico:sm11548576",

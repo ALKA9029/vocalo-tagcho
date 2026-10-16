@@ -476,6 +476,8 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     if (m) item.nicoSrc = "nico:" + m[1]; else if (video.nicoSrc) item.nicoSrc = video.nicoSrc;
     if (REPRINT_RE.test(d)) item.reprint = 1;
   }
+  // 曲名のうしろの「HD」「PV」「FULL」などは曲名ではない
+  if (item.t) item.t = item.t.replace(/[\s　]+(HD|PV|FULL|full ?ver(sion)?|official ?video|original ?song)$/i, "").trim() || item.t;
   if (video.src === "youtube" && item.t) {
     // 「米津玄師 - 烏　Kenshi Yonezu - Karasu」のように、曲名のうしろに英語の作者名がくっついたら外す
     const m = item.t.match(/^(.*(?:[^\x00-\x7F]|[!?]))[\s　]+([A-Za-z][A-Za-z .'&]*[A-Za-z])$/);
@@ -760,7 +762,20 @@ export function mergeSources(items) {
 const CREATOR_NAMES = { "黒うさP": "黒うさP/WhiteFlame", "WhiteFlame": "黒うさP/WhiteFlame", "kemu": "KEMU VOXX", "ALEXANDROS": "[Alexandros]", "DISH": "DISH//" };
 const fixCreatorNames = items => { for (const i of items) if (i.p && CREATOR_NAMES[i.p]) i.p = CREATOR_NAMES[i.p]; };
 
+// 「恋愛裁判 Love Trial」「トリノコシティ Torinoko City」のように曲名のうしろに英語名が付いていて、
+// 日本語の部分だけの曲名がサイトにほかにもあるときは、日本語の部分を曲名にする（ローマ字・英訳はそろえない）
+const EN_TAIL_RE = /^(.*[^\x00-\x7F])[\s　]+([A-Za-z][A-Za-z'’.,!?&-]*(?:\s+[A-Za-z'’.,!?&-]+)*)$/;
+function dropEnglishTail(items) {
+  const known = new Set(items.map(i => normalize(i.t || "")).filter(Boolean));
+  for (const i of items) {
+    if (i.ofLocked && i.kind !== "本家") continue;
+    const m = (i.t || "").match(EN_TAIL_RE);
+    if (m && normalize(m[1]).length >= 2 && known.has(normalize(m[1]))) i.t = m[1].trim();
+  }
+}
+
 export function linkCovers(items) {
+  dropEnglishTail(items);
   inferNamesFromTags(items);
   guessChannelGenre(items);
   fillCreators(items);
