@@ -489,6 +489,13 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     if (m && normalize(cleanSong(m[1])) === normalize(item.t)) item.p = m[2].trim();
   }
   if (item.kind === "本家" && /\bwith HoneyWorks$/i.test(item.p || "")) item.p = "HoneyWorks";   // 「CHiCO with HoneyWorks」なども作者は HoneyWorks
+  // 「ヒャダインのじょーじょーゆーじょーで、PVを作ってみた」のように曲名のうしろに「で」「を」などが残ったら、
+  // 曲名タグ（ヒャダインのじょーじょーゆーじょー）に合わせる
+  if (item.t && !tags.some(x => normalize(x) === normalize(item.t))) {
+    const nt = normalize(item.t);
+    const tag = tags.find(x => { const n = normalize(x); return n.length >= 3 && nt.startsWith(n) && nt.length - n.length <= 2 && /^[でをにがはとの]+$/.test(nt.slice(n.length)); });
+    if (tag) item.t = tag;
+  }
   // 説明文の後ろのほうに「TVアニメ『〇〇』オープニングテーマ」とある YouTube の本家はアニソン
   if (video.animeDesc) {
     item.animeDesc = 1;
