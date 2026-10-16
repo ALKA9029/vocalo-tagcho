@@ -1,5 +1,29 @@
 [
  {
+  "id": "UCOTR1tcOAhjgi6YukrPpZxg",
+  "added": "2026-10-15T10:07:18.046Z",
+  "name": "まふまふちゃんねる",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-16T10:00:36Z",
+  "pinned": true
+ },
+ {
+  "id": "UCW5xxEBTK0lebkTbQMNZJBw",
+  "name": "Fake Beat Japan",
+  "added": "2026-10-09T12:06:54.468Z",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-16T10:00:28Z",
+  "pinned": true
+ },
+ {
+  "id": "UCeBuESc6vN_IiFR3je4NYTg",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "雨良 Amala",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-16T10:00:09Z",
+  "pinned": true
+ },
+ {
   "id": "UCv8RNvQgk2zJHIkgh24O1TQ",
   "added": "2026-10-15T21:48:53.889Z",
   "name": "ビッグリーン",
@@ -12,14 +36,6 @@
   "name": "HoneyWorks OFFICIAL",
   "genre": "ボカロ",
   "lastHit": "2026-10-15T11:00:08Z",
-  "pinned": true
- },
- {
-  "id": "UCW5xxEBTK0lebkTbQMNZJBw",
-  "name": "Fake Beat Japan",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-15T10:00:09Z",
   "pinned": true
  },
  {
@@ -706,14 +722,6 @@
   "pinned": true
  },
  {
-  "id": "UCeBuESc6vN_IiFR3je4NYTg",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "雨良 Amala",
-  "genre": "ボカロ",
-  "lastHit": "2026-03-15T03:00:06Z",
-  "pinned": true
- },
- {
   "id": "UCOD2pj9gjQvgJX6bbhj0xlQ",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "えいぷ",
@@ -1290,14 +1298,6 @@
   "pinned": true
  },
  {
-  "id": "UCOTR1tcOAhjgi6YukrPpZxg",
-  "added": "2026-10-15T10:07:18.046Z",
-  "name": "まふまふちゃんねる",
-  "genre": "ボカロ",
-  "lastHit": "2022-02-18T09:02:00Z",
-  "pinned": true
- },
- {
   "id": "UCpJgF7I5iSL5_a3xtXgQJvw",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "WONDERFUL★OPPORTUNITY!",
@@ -1570,6 +1570,43 @@
   "pinned": true
  },
  {
+  "id": "UCFzXU6-djdXlDvXI3-2Appw",
+  "added": "2026-10-13T21:45:48.810Z",
+  "name": "Hey! Say! JUMP",
+  "genre": "アニソン",
+  "lastHit": "2026-10-16T12:00:23Z",
+  "pinned": true
+ },
+ {
+  "id": "UCVpaaZ-p7GTTFEDR_NCnfNg",
+  "added": "2026-10-09T16:13:05.586Z",
+  "name": "成人男性三人組 Official",
+  "genre": "J-POP",
+  "lastHit": "2026-10-16T11:00:11Z"
+ },
+ {
+  "id": "UCNMbL86u5LBeO_BWHp5pJ5g",
+  "added": "2026-10-13T21:45:48.810Z",
+  "name": "Element Sicks【EL6】",
+  "genre": "J-POP",
+  "lastHit": "2026-10-16T10:01:29Z"
+ },
+ {
+  "id": "UCpEEcJhBig2GqUFxcXjqiLg",
+  "added": "2026-10-15T21:48:53.889Z",
+  "name": "Bz",
+  "genre": "J-POP",
+  "lastHit": "2026-10-16T10:00:03Z"
+ },
+ {
+  "id": "UCXN-ZRdGnFtLiJ8EY1i_alg",
+  "added": "2026-10-14T11:01:30.035Z",
+  "name": "Itsuki Natsume / 棗いつき",
+  "genre": "アニソン",
+  "lastHit": "2026-10-16T10:00:03Z",
+  "pinned": true
+ },
+ {
   "id": "UCi_AquB9uaI3-9xXkuWG7IQ",
   "name": "BE:FIRST Official",
   "added": "2026-10-09T12:06:54.468Z",
@@ -1673,13 +1710,6 @@
   "lastHit": "2026-10-14T11:25:12Z"
  },
  {
-  "id": "UCpEEcJhBig2GqUFxcXjqiLg",
-  "added": "2026-10-15T21:48:53.889Z",
-  "name": "Bz",
-  "genre": "J-POP",
-  "lastHit": "2026-10-14T11:00:36Z"
- },
- {
   "id": "UCmovZ2th3Sqpd00F5RdeigQ",
   "name": "加賀美 ハヤト/Hayato Kagami",
   "added": "2026-10-09T12:06:54.468Z",
@@ -1705,7 +1735,8 @@
   "added": "2026-10-15T21:48:53.889Z",
   "name": "derakun",
   "genre": "アニソン",
-  "lastHit": "2026-10-14T10:00:10Z"
+  "lastHit": "2026-10-14T10:00:10Z",
+  "pinned": true
  },
  {
   "id": "UCDpX_q4mlkbuPJbY6h62eHQ",
@@ -1749,6 +1780,13 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "アニソン",
   "lastHit": "2026-10-14T08:18:11Z"
+ },
+ {
+  "id": "UCqtGK-xDHyC_3WWBB0cVC5A",
+  "name": "デカ文字衛門",
+  "added": "2026-10-09T12:06:54.468Z",
+  "genre": "アニソン",
+  "lastHit": "2026-10-13T21:45:30Z"
  },
  {
   "id": "UC1o4SbQvLYpqYZlUKPRWaRQ",
@@ -1800,13 +1838,6 @@
   "name": "あほの坂田。",
   "genre": "J-POP",
   "lastHit": "2026-10-13T10:02:31Z"
- },
- {
-  "id": "UCNMbL86u5LBeO_BWHp5pJ5g",
-  "added": "2026-10-13T21:45:48.810Z",
-  "name": "Element Sicks【EL6】",
-  "genre": "J-POP",
-  "lastHit": "2026-10-13T10:00:36Z"
  },
  {
   "id": "UCabLXblrQG4cO8F9qdd4Xsw",
@@ -1878,14 +1909,6 @@
   "lastHit": "2026-10-12T11:00:09Z"
  },
  {
-  "id": "UCFzXU6-djdXlDvXI3-2Appw",
-  "added": "2026-10-13T21:45:48.810Z",
-  "name": "Hey! Say! JUMP",
-  "genre": "アニソン",
-  "lastHit": "2026-10-12T10:30:27Z",
-  "pinned": true
- },
- {
   "id": "UCFvSFbT8okMrpuFxBEIB2lg",
   "name": "M!LK",
   "added": "2026-10-09T12:06:54.468Z",
@@ -1949,7 +1972,7 @@
   "added": "2026-10-15T21:48:53.889Z",
   "name": "Rustic",
   "genre": "アニソン",
-  "lastHit": "2026-10-11T14:24:37Z"
+  "lastHit": "2026-10-11T14:31:21Z"
  },
  {
   "id": "UCyWEVH8tkJcJVO7IiQ1DGEg",
@@ -2149,14 +2172,6 @@
   "pinned": true
  },
  {
-  "id": "UCXN-ZRdGnFtLiJ8EY1i_alg",
-  "added": "2026-10-14T11:01:30.035Z",
-  "name": "Itsuki Natsume / 棗いつき",
-  "genre": "アニソン",
-  "lastHit": "2026-10-10T10:00:08Z",
-  "pinned": true
- },
- {
   "id": "UCwO9rz-7dKqEDI0yIgTRUqQ",
   "added": "2026-10-09T15:55:32.664Z",
   "name": "大阪桐蔭高等学校吹奏楽部OB会",
@@ -2232,6 +2247,13 @@
   "pinned": true
  },
  {
+  "id": "UC6tIt6kTcMPI0t-Mml0jE1g",
+  "added": "2026-10-16T13:01:03.616Z",
+  "name": "箱乃なかみ / Hakono Nakami",
+  "genre": "J-POP",
+  "lastHit": "2026-10-09T12:00:11Z"
+ },
+ {
   "id": "UCIVqvhyo8ttjYOmMJuhq_YQ",
   "added": "2026-10-10T21:31:46.969Z",
   "name": "RADWIMPS",
@@ -2244,7 +2266,8 @@
   "added": "2026-10-15T21:48:53.889Z",
   "name": "とた",
   "genre": "J-POP",
-  "lastHit": "2026-10-09T12:00:09Z"
+  "lastHit": "2026-10-09T12:00:09Z",
+  "pinned": true
  },
  {
   "id": "UClYYoOqJXgrtkzYFTwcGvNA",
@@ -2275,13 +2298,6 @@
   "genre": "アニソン",
   "lastHit": "2026-10-09T11:00:10Z",
   "pinned": true
- },
- {
-  "id": "UCVpaaZ-p7GTTFEDR_NCnfNg",
-  "added": "2026-10-09T16:13:05.586Z",
-  "name": "成人男性三人組 Official",
-  "genre": "J-POP",
-  "lastHit": "2026-10-09T11:00:10Z"
  },
  {
   "id": "UCGIhu5fy0Q8GJ5FfMSDeshA",
@@ -2843,13 +2859,6 @@
   "lastHit": "2026-10-03T08:22:08Z"
  },
  {
-  "id": "UCqtGK-xDHyC_3WWBB0cVC5A",
-  "name": "デカ文字衛門",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "アニソン",
-  "lastHit": "2026-10-03T06:20:05Z"
- },
- {
   "id": "UC6FadPgGviUcq6VQ0CEJqdQ",
   "name": "Juice=Juice",
   "added": "2026-10-09T12:06:54.468Z",
@@ -2896,6 +2905,13 @@
   "pinned": true
  },
  {
+  "id": "UCFB0qxwNwayGQ4Ksj8QpCXg",
+  "added": "2026-10-16T13:01:03.616Z",
+  "name": "Mrs. GREEN APPLE - Topic",
+  "genre": "J-POP",
+  "lastHit": "2026-09-28T15:00:13Z"
+ },
+ {
   "id": "UCln9P4Qm3-EAY4aiEPmRwEA",
   "added": "2026-10-09T12:23:27.151Z",
   "name": "Ado",
@@ -2933,6 +2949,14 @@
   "name": "Vaundy",
   "genre": "アニソン",
   "lastHit": "2026-05-30T11:00:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UC_A_w2KhC3emxNZWQ3pYpfQ",
+  "added": "2026-10-16T13:01:03.616Z",
+  "name": "FlyingDog",
+  "genre": "アニソン",
+  "lastHit": "2026-05-25T03:00:34Z",
   "pinned": true
  },
  {
@@ -3029,30 +3053,6 @@
   "name": "Ayumu Imazu 今津渉",
   "genre": "アニソン",
   "lastHit": "2025-11-18T10:00:47Z",
-  "pinned": true
- },
- {
-  "id": "UCm0qsuAG6RN2FYKZ_r1nPyg",
-  "added": "2026-10-15T10:11:14.946Z",
-  "name": "羊文学",
-  "genre": "アニソン",
-  "lastHit": "2025-07-11T12:00:06Z",
-  "pinned": true
- },
- {
-  "id": "UCwXXyRNSV6nduBHj_s1_0vQ",
-  "added": "2026-10-10T07:32:06.370Z",
-  "name": "Naisho no Pierced Earrings - Topic",
-  "genre": "J-POP",
-  "lastHit": "2025-07-03T10:02:08Z",
-  "pinned": true
- },
- {
-  "id": "UC6YNWTm6zuMFsjqd0PO3G-Q",
-  "added": "2026-10-15T10:11:14.946Z",
-  "name": "Momoiro Clover Z Channel",
-  "genre": "アニソン",
-  "lastHit": "2025-06-29T11:00:07Z",
   "pinned": true
  }
 ]
