@@ -45,6 +45,8 @@ export function isNotSong(title = "") {
   if (/紅白歌合戦|オープニング(ムービー|映像)|エンディング映像|deconstruction|ハイライト】|highlight\b/i.test(title)) return true;
   if (/\bteaser\b|ティザー|\btrailer\b|behind the scenes|メイキング|\bmaking\b|【ご報告】|【お知らせ】|大切なお知らせ|\bstation\b|24\/7|practice (video|ver)|dance practice|grand championship/i.test(title)) return true;
   const main = title.split(/\s#/)[0];
+  // 既存の曲に「PVを作ってみた」動画（音は原曲のまま）も曲として別に並べない（歌ってもいるものは残す）
+  if (/(PV|MV|ＰＶ|ＭＶ|ミュージックビデオ)を?作ってみ/.test(main) && !/歌っ|歌い|唄っ|cover|カバー/i.test(main)) return true;
   if (SING_RE.test(main)) return false;
   // 「#z世代 #平成ソング」のようにハッシュタグが並んでいて、曲名らしい「」／ - がない動画
   if ((title.match(/[#＃]/g) || []).length >= 2 && !SING_RE.test(title) && !/[「『\/／]|\s[-–]\s/.test(main)) return true;

@@ -114846,36 +114846,6 @@
   "pFromTag": true
  },
  {
-  "id": "nico:sm29036897",
-  "src": "niconico",
-  "url": "https://www.nicovideo.jp/watch/sm29036897",
-  "title": "【なるが100万再生されるミュージックビデオ作ってみた】only my railgun",
-  "t": "only my railgun",
-  "kind": "歌ってみた",
-  "g": "アニソン",
-  "date": "2016-06-12T19:00:56+09:00",
-  "views": 1364893,
-  "likes": 47,
-  "thumb": "https://nicovideo.cdn.nimg.jp/thumbnails/29036897/29036897",
-  "tags": [
-   "歌ってみた",
-   "とある科学の超電磁砲",
-   "MMD",
-   "アニソン",
-   "MikuMikuDance",
-   "100万再生",
-   "作ってみた",
-   "MikuMikuDance殿堂入り",
-   "MMDミリオン達成作品",
-   "MMD-PV"
-  ],
-  "uploaderId": 29672776,
-  "uploader": null,
-  "by": "",
-  "firstSeen": "2026-10-08T15:10:08.986Z",
-  "seed": true
- },
- {
   "id": "nico:sm29021785",
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm29021785",
@@ -149758,32 +149728,6 @@
   "a": "youtube:UC1uqZRoWiEwtPqK4bhWFjPA"
  },
  {
-  "id": "nico:sm15064904",
-  "src": "niconico",
-  "url": "https://www.nicovideo.jp/watch/sm15064904",
-  "title": "ヒャダインのじょーじょーゆーじょーで、PVを作ってみた【ヒャダイン】",
-  "t": "ヒャダインのじょーじょーゆーじょー",
-  "kind": "歌ってみた",
-  "g": "アニソン",
-  "date": "2011-07-20T00:37:24+09:00",
-  "views": 2852128,
-  "likes": 826,
-  "thumb": "https://nicovideo.cdn.nimg.jp/thumbnails/15064904/15064904",
-  "tags": [
-   "音楽",
-   "歌ってみた",
-   "ヒャダイン",
-   "ヒャダインのじょーじょーゆーじょー",
-   "日常"
-  ],
-  "uploaderId": 1374465,
-  "uploader": null,
-  "by": "ヒャダイン",
-  "firstSeen": "2026-10-08T15:10:08.713Z",
-  "seed": true,
-  "gFixed": "アニソン"
- },
- {
   "id": "nico:sm15022913",
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm15022913",
@@ -150862,31 +150806,6 @@
   "of": "nico:sm11809611",
   "p": "ハチ",
   "a": "niconico:380847"
- },
- {
-  "id": "nico:sm14207559",
-  "src": "niconico",
-  "url": "https://www.nicovideo.jp/watch/sm14207559",
-  "title": "ヒャダインのカカカタ☆カタオモイ-Cで、PV作ってみた　【ヒャダイン】",
-  "t": "ヒャダインのカカカタ☆カタオモイ-C",
-  "kind": "歌ってみた",
-  "g": "その他",
-  "date": "2011-04-20T00:00:42+09:00",
-  "views": 3824665,
-  "likes": 954,
-  "thumb": "https://nicovideo.cdn.nimg.jp/thumbnails/14207559/14207559",
-  "tags": [
-   "歌ってみた",
-   "ヒャダイン",
-   "ヒャダル子",
-   "ヒャダインのカカカタ☆カタオモイ-C",
-   "日常"
-  ],
-  "uploaderId": 1374465,
-  "uploader": null,
-  "by": "ヒャダイン",
-  "firstSeen": "2026-10-08T15:10:08.662Z",
-  "seed": true
  },
  {
   "id": "nico:sm14141189",
