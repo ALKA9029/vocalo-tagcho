@@ -42,7 +42,7 @@ export function isNotSong(title = "") {
   // ファンが作った非公式のPV（音は原曲のまま）も、曲として別に並べない
   if (/fan ?made ?PV|ファンメイドPV/i.test(title)) return true;
   // テレビの歌番組の映像や、アニメのオープニング映像、曲の分解動画も曲そのものではない
-  if (/紅白歌合戦|オープニング(ムービー|映像)|エンディング映像|deconstruction|ハイライト】|highlight\b/i.test(title)) return true;
+  if (/ダイジェスト|\bdigest\b|公式切り抜き|アフターレポート|after movie|プライムデー|Kindle Unlimited|紅白歌合戦|オープニング(ムービー|映像)|エンディング映像|deconstruction|ハイライト】|highlight\b/i.test(title)) return true;
   if (/\bteaser\b|ティザー|\btrailer\b|behind the scenes|メイキング|\bmaking\b|【ご報告】|【お知らせ】|大切なお知らせ|\bstation\b|24\/7|practice (video|ver)|dance practice|grand championship/i.test(title)) return true;
   const main = title.split(/\s#/)[0];
   // 既存の曲に「PVを作ってみた」動画（音は原曲のまま）も曲として別に並べない（歌ってもいるものは残す）
@@ -475,6 +475,8 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     const m = d.match(/(?:nicovideo\.jp\/watch\/|nico\.ms\/)(sm\d+)/);
     if (m) item.nicoSrc = "nico:" + m[1]; else if (video.nicoSrc) item.nicoSrc = video.nicoSrc;
     if (REPRINT_RE.test(d)) item.reprint = 1;
+    // 「【初音ミク】愛言葉【オリジナル曲】中文字幕」のような字幕つきの転載も転載あつかい（曲名から「中文字幕」などを外す）
+    if (SUB_RE.test(video.title)) { item.reprint = 1; if (item.t) item.t = item.t.replace(SUB_RE, "").replace(/[\[［【(（]\s*[\]］】)）]/g, "").trim() || item.t; }
   }
   // 曲名のうしろの「HD」「PV」「FULL」などは曲名ではない
   if (item.t) item.t = item.t.replace(/[\s　]+(HD|PV|FULL|full ?ver(sion)?|official ?video|original ?song)$/i, "").trim() || item.t;
@@ -684,6 +686,7 @@ export function markSelfCovers(items) {
 // Remix・ver.・アレンジなどの別バージョンはまとめない。同じサイトどうし（再投稿など）もまとめない
 const VERSION_RE = /remix|リミックス|\bver\b|ver\.|version|バージョン|アレンジ|arrange|short|ショート|full|フル|instrumental|inst\b|off ?vocal|self ?cover|セルフカバー|リメイク|remake|再投稿|piano|ピアノ|acoustic|アコースティック|live|ライブ|mv2|edit\b/i;
 // 「ニコニコ動画より作者様の許諾を得て転載」のような、ほかの人のチャンネルに転載された動画
+const SUB_RE = /[\s　]*[\[［【(（]?\s*(中文字幕|中字|繁中字幕|简中字幕|中文翻譯|English\s*sub(title)?s?|Eng\s*sub|\bsubbed\b|한글\s*자막|한국어\s*자막)\s*[\]］】)）]?/gi;
 const REPRINT_RE = /許諾を得て転載|転載(させて|して(い|お)ります|しています|許可)|reprint(s|ed)? from|permission (was |has been )?(obtained|granted|given)/i;
 
 export function mergeSources(items) {
@@ -695,10 +698,13 @@ export function mergeSources(items) {
     const k = normalize(i.t); if (!nicoByT.has(k) || (i.views || 0) > (nicoByT.get(k).views || 0)) nicoByT.set(k, i);
   }
   const byId = new Map(items.map(i => [i.id, i]));
+  // ニコニコにない曲の転載は、YouTube にある本人の投稿（転載ではない、いちばん古いもの）に合わせる
+  const ytByT = new Map();
+  for (const i of [...items].sort((a, b) => (a.date || "").localeCompare(b.date || ""))) if (i.src === "youtube" && i.kind === "本家" && !i.reprint && i.p && normalize(i.t) && !ytByT.has(normalize(i.t))) ytByT.set(normalize(i.t), i);
   for (const i of items) {
     if (i.src !== "youtube" || i.kind !== "本家" || !(i.nicoSrc || i.reprint)) continue;
     const linked = i.nicoSrc && byId.get(i.nicoSrc);
-    const target = linked && linked.kind === "本家" && normalize(linked.t) === normalize(i.t) ? linked : i.reprint ? nicoByT.get(normalize(i.t)) : null;
+    const target = linked && linked.kind === "本家" && normalize(linked.t) === normalize(i.t) ? linked : i.reprint ? (nicoByT.get(normalize(i.t)) || ytByT.get(normalize(i.t))) : null;
     if (!target?.p) continue;
     // 作者名はどちらかを選んで両方にそろえる。YouTube 側の作者名がタイトルに書いてあり、ニコニコ側はタイトルにない
     // （タグなどから推測した）ときは YouTube 側を信じる。それ以外（転載チャンネルの名前など）はニコニコ側
