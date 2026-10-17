@@ -45,7 +45,7 @@ export function isNotSong(title = "") {
   if (/(エディット|EDIT|合作編集|譜面なし)\s*PV|(60fps|1080P)[^\]]*\].*\bDIVA\b|\bDIVA\b.*(English|Romaji)/i.test(title)) return true;
   // テレビの歌番組の映像や、アニメのオープニング映像、曲の分解動画も曲そのものではない
   // テレビの音楽番組・授賞式での披露（MUSIC AWARDS、FNS歌謡祭、「-from TBS系 〇〇」など）
-  if (/MUSIC AWARDS|歌謡祭|[-–]\s*from\s*(フジテレビ|TBS|日本テレビ|日テレ|テレビ朝日|テレ朝|テレビ東京|NHK)|ミュージックステーション|\bCDTV\b|THE MUSIC DAY/i.test(title)) return true;
+  if (/presents\s*『[^』]+』|MUSIC AWARDS|歌謡祭|[-–]\s*from\s*(フジテレビ|TBS|日本テレビ|日テレ|テレビ朝日|テレ朝|テレビ東京|NHK)|ミュージックステーション|\bCDTV\b|THE MUSIC DAY/i.test(title)) return true;
   if (/ダイジェスト|\bdigest\b|公式切り抜き|アフターレポート|after movie|プライムデー|Kindle Unlimited|紅白歌合戦|オープニング(ムービー|映像)|エンディング映像|deconstruction|ハイライト】|highlight\b/i.test(title)) return true;
   if (/\bteaser\b|ティザー|\btrailer\b|behind the scenes|メイキング|\bmaking\b|【ご報告】|【お知らせ】|大切なお知らせ|\bstation\b|24\/7|practice (video|ver)|dance practice|grand championship/i.test(title)) return true;
   const main = title.split(/\s#/)[0];
