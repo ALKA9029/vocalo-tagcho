@@ -445,7 +445,7 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     if (video.src === "youtube") {
       const tail = (video.title.match(/[\/／]\s*([^\/／【\[(（]+?)\s*$/) || [])[1];
       const ch = cleanChannel(video.uploader || "");
-      if (tail && ch && normalize(tail) === normalize(ch) && normalize(item.p) !== normalize(tail) && !(item.p && normalize(video.title).startsWith(normalize(item.p))) && !/THE FIRST TAKE/i.test(tail)) item.p = tail.trim();
+      if (tail && ch && normalize(tail) === normalize(ch) && normalize(item.p) !== normalize(tail) && !(item.p && new RegExp(`^\\s*${item.p.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\s*[-–—]`).test(video.title)) && !/THE FIRST TAKE/i.test(tail)) item.p = tail.trim();
     }
     // 「PV付」の「付」のような1文字だけの作者名は読みちがい
     if (item.p && [...item.p.trim()].length <= 1) item.p = "";

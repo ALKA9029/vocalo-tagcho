@@ -19348,8 +19348,8 @@
   "uploaderId": "UC9zY_E8mcAo_Oq772LEZq8Q",
   "uploader": "THE FIRST TAKE",
   "descHead": "「THE FIRST TAKE」は、一発撮りのパフォーマンスを鮮明に切り取るYouTubeチャンネル。\n\n第713回は、HANAから初のソロデビューを果たしたLEE JISOOが再登場。\n今回披露するのは、「いち髪 PREMIER」のCMソングに起用された楽曲「Movie Star」。\n愛を通じて自分自身を肯定し、本当の自分を見つけていく過程を綴ったラブソングを、彼女らしい素直で自然体な一発撮りにてパフォーマンス。\n\nDrum: Masaki Hori\nGuitar: Natsuhiko Okamura\nGuitar: Kei Koganemaru\nChorus: elley / Hiyori",
-  "p": "LEE JISOO",
-  "a": "name:leejisoo",
+  "p": "THE FIRST TAKE",
+  "a": "name:thefirsttake",
   "firstSeen": "2026-10-09T12:09:04.727Z"
  },
  {
@@ -136243,7 +136243,7 @@
   "firstSeen": "2026-10-08T15:10:08.953Z",
   "seed": true,
   "of": "yt:WiUjG9fF3zw",
-  "p": "初音ミクが声優のようにしゃべってラップする曲",
+  "p": "Mitchie M",
   "a": "youtube:UCE0uNSkGhhsNMwAZcIQY7rw"
  },
  {
@@ -138940,7 +138940,8 @@
   "firstSeen": "2026-10-08T14:36:47.330Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "dup": "yt:WiUjG9fF3zw"
  },
  {
   "id": "yt:WiUjG9fF3zw",
@@ -138975,11 +138976,14 @@
   "uploaderId": "UCE0uNSkGhhsNMwAZcIQY7rw",
   "uploader": "Mitchie M",
   "descHead": "🎧 Spotify:\nhttps://open.spotify.com/intl-ja/track/4P0f1HTaA2UwtLJGryNgJZ\n\n🎧 All music platforms:\nhttps://song.link/s/4P0f1HTaA2UwtLJGryNgJZ\n\n初音ミクを声優（中の人の藤田咲さん）っぽく調教し、台詞とラップのある楽曲を作ってみました！楽しんでもらえたら幸いです。ニコ動はこちら⇒ [http://goo.gl/a6I3fZ]\n▶︎ 最新曲 [https://goo.gl/UkmHRK]　▶︎ 前作 [http://goo.gl/x0c3aQ]\n\n◆ オフボ",
-  "p": "初音ミクが声優のようにしゃべってラップする曲",
+  "p": "Mitchie M",
   "v": "初音ミク",
-  "a": "name:初音ミクが声優のようにしゃべってラップする曲",
+  "a": "youtube:UCE0uNSkGhhsNMwAZcIQY7rw",
   "firstSeen": "2026-10-09T12:20:22.331Z",
-  "seed": true
+  "seed": true,
+  "alt": [
+   "nico:sm21443197"
+  ]
  },
  {
   "id": "nico:sm21436114",
