@@ -761,7 +761,7 @@ const VERSION_RE = /remix|リミックス|\bver\b|ver\.|version|バージョン|
 const SUB_RE = /[\s　]*[\[［【(（]?\s*(中文字幕|中字|繁中字幕|简中字幕|中文翻譯|English\s*sub(title)?s?|Eng\s*sub|\bsubbed\b|한글\s*자막|한국어\s*자막)\s*[\]］】)）]?/gi;
 const REPRINT_RE = /許諾を得て転載|転載(させて|して(い|お)ります|しています|許可)|reprint(s|ed)? from|permission (was |has been )?(obtained|granted|given)/i;
 
-const SHORT_VER_RE = /short\s*ver|ショート\s*ver|ショートバージョン|short\s*version|tv\s*size|tvサイズ|テレビサイズ/i;
+const SHORT_VER_RE = /short\s*ver|ショート\s*ver|ショートバージョン|short\s*version|tv\s*size|tvサイズ|テレビサイズ|アニメ[^\s]*[』」]\s*ver\.?/i;   // 「TVアニメ『忘却バッテリー』Ver.」のようなタイアップ版MVも同じ曲として隠す
 export function mergeSources(items) {
   for (const i of items) { delete i.dup; delete i.alt; delete i.selfCover; }
   // YouTube の本家で、説明文にニコニコ版へのリンクがある（または転載と書いてある）ものは、
