@@ -447,6 +447,11 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
       const ch = cleanChannel(video.uploader || "");
       if (tail && ch && normalize(tail) === normalize(ch) && normalize(item.p) !== normalize(tail) && !(item.p && new RegExp(`^\\s*${item.p.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\s*[-–—]`).test(video.title)) && !/THE FIRST TAKE/i.test(tail)) item.p = tail.trim();
     }
+    // 「" どりーみんチュチュ / Dreamin Chuchu " by emon」「インタビュア by クワガタP」の「by 名前」は作者
+    {
+      const m = video.title.match(/(?<!\b(?:prod\.?|produced|remixed|remix|arranged|arrange|original|stand|side|mixed|mastered|illust(?:rated)?|movie|video|lyrics|付き))\s+by\s+([^\s【\[(（「『"][^【】\[(（「『"|｜/]*?)\s*(?:feat\.?.*)?(?:【|\[|\(|（|$)/i);
+      if (m && !/^(you|me|side|the)\b/i.test(m[1])) item.p = m[1].replace(/\(.*$/, "").trim();
+    }
     // 「PV付」の「付」のような1文字だけの作者名は読みちがい
     if (item.p && [...item.p.trim()].length <= 1) item.p = "";
     // 「鏡音レン・リン」のように歌声の名前だけが作者の位置に入ったら、チャンネル名を作者に
@@ -499,6 +504,8 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
       if (normalize(item.p || "") === normalize(m[1])) item.p = "";   // 作者はタグやニコニコ版からあとで補う
     }
   }
+  // 「" どりーみんチュチュ / Dreamin Chuchu "」の片方だけ残った引用符を外す
+  if (item.t) { const q = (item.t.match(/["“”]/g) || []).length; if (q % 2 === 1) item.t = item.t.replace(/^\s*["“”]\s*|\s*["“”]\s*$/g, "").trim() || item.t; }
   // 曲名のうしろの「HD」「PV」「FULL」などは曲名ではない
   if (item.t) item.t = item.t.replace(/[\s　]+(HD|PV|FULL|full ?ver(sion)?|official ?video|original ?song)$/i, "").trim() || item.t;
   if (video.src === "youtube" && item.t) {
