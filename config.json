@@ -242,7 +242,7 @@
       "full": [
         {
           "channel": "^Mrs\\. GREEN APPLE$",
-          "title": "^Mrs\\. GREEN APPLE「[^」]+」\\s*Official Music Video"
+          "title": "Official Music Video|Music Video|\\bMV\\b"
         }
       ]
     }
