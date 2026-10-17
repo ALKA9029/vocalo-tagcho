@@ -243,6 +243,102 @@
         {
           "channel": "^Mrs\\. GREEN APPLE$",
           "title": "Official Music Video|Music Video|\\bMV\\b"
+        },
+        {
+          "channel": "^幾田りら / Lilas Official$",
+          "title": "^幾田りら(\\s*feat\\.[^「]+)?\\s*「[^」]+」\\s*Official Music Video"
+        },
+        {
+          "channel": "^ヨルシカ / n-buna Official$",
+          "title": "^ヨルシカ\\s*-\\s*.+[（(](OFFICIAL VIDEO|Music Video)[）)]"
+        },
+        {
+          "channel": "^Official髭男dism$",
+          "title": "^Official髭男dism\\s*-\\s*.+[\\[［]Official Video[\\]］]"
+        },
+        {
+          "channel": "^SUPER BEAVER official YouTube channel$",
+          "title": "^SUPER BEAVER\\s*[「『][^」』]+[」』]\\s*MV"
+        },
+        {
+          "channel": "^オーイシマサヨシ$",
+          "title": "^オーイシマサヨシ\\s*[–-]\\s*.+\\[Official Video\\]"
+        },
+        {
+          "channel": "^ロクデナシ$",
+          "title": "^ロクデナシ\\s*「[^」]+」.*Official Music Video"
+        },
+        {
+          "channel": "^ファントムシータ$",
+          "title": "^ファントムシータ\\s*『[^』]+』\\s*[（(]OFFICIAL MUSIC VIDEO[）)]"
+        },
+        {
+          "channel": "^aikoOfficial$",
+          "title": "^aiko\\s*-?\\s*『[^』]+』\\s*music video"
+        },
+        {
+          "channel": "^BLUE ENCOUNT Official YouTube Channel$",
+          "title": "^BLUE ENCOUNT\\s*『[^』]+』\\s*Music Video"
+        },
+        {
+          "channel": "^ClariS Official YouTube Channel$",
+          "title": "^ClariS\\s*[「『][^」』]+[」』]\\s*Music Video"
+        },
+        {
+          "channel": "^SPYAIR Official YouTube Channel$",
+          "title": "^SPYAIR\\s*『[^』]+』\\s*Music Video"
+        },
+        {
+          "channel": "^EGOIST Official YouTube Channel$",
+          "title": "^EGOIST\\s*『[^』]+』\\s*(Music Video|Original Movie)"
+        },
+        {
+          "channel": "^マルシィ$",
+          "title": "^マルシィ\\s*[–-]\\s*.+[（(]Official Music Video[）)]"
+        },
+        {
+          "channel": "^羊文学$",
+          "title": "^羊文学\\s*[–-]\\s*.+[（(]Official Music Video[）)]"
+        },
+        {
+          "channel": "^初星学園$",
+          "title": "^初星学園\\s*「[^」]+」\\s*Official Music Video"
+        },
+        {
+          "channel": "^Vaundy$",
+          "title": "/\\s*Vaundy\\s*[：:]\\s*MUSIC VIDEO"
+        },
+        {
+          "channel": "^ずっと真夜中でいいのに。 ZUTOMAYO$",
+          "title": "ずっと真夜中でいいのに。\\s*『[^』]+』\\s*MV"
+        },
+        {
+          "channel": "^unisonsgofficial$",
+          "title": "^UNISON SQUARE GARDEN\\s*「[^」]+」\\s*MV"
+        },
+        {
+          "channel": "^LiSA Official YouTube$",
+          "title": "^LiSA\\s*『[^』]+』\\s*MUSiC CLiP"
+        },
+        {
+          "channel": "^櫻坂46 OFFICIAL YouTube CHANNEL$",
+          "title": "^櫻坂46\\s*『[^』]+』\\s*MUSIC VIDEO"
+        },
+        {
+          "channel": "^DISH// official YouTube channel$",
+          "title": "^DISH//\\s*-\\s*.+\\[Official Video\\]"
+        },
+        {
+          "channel": "^アイナ・ジ・エンド Official$",
+          "title": "^アイナ・ジ・エンド\\s*[/-]\\s*.+\\[Official Music Video\\]"
+        },
+        {
+          "channel": "^藍井エイル Official YouTube Channel$",
+          "title": "^藍井エイル\\s*[「『][^」』]+[」』]\\s*Music Video"
+        },
+        {
+          "channel": "^Buono!$",
+          "title": "^Buono!\\s*『[^』]+』\\s*\\(MV\\)"
         }
       ]
     }

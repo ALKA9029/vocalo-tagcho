@@ -491,7 +491,7 @@ async function fetchCatalogs(items) {
     const seenT = new Set();
     const got = (await ytVideos(ids.filter(v => !known.has("yt:" + v)), key))
       .filter(v => v.snippet?.categoryId === "10" && isJapanese(v) && !isNoise(v) && !CATALOG_SKIP.test(v.snippet?.title || ""))
-      .filter(v => f ? f.title.test(v.snippet?.localized?.title || v.snippet?.title || "") : Number(v.statistics?.viewCount || 0) >= (cfg.minViews || 300000))
+      .filter(v => f ? f.title.test((v.snippet?.localized?.title || v.snippet?.title || "").normalize("NFC").replace(/\s+/g, " ")) : Number(v.statistics?.viewCount || 0) >= (cfg.minViews || 300000))
       .map(v => ({ ...ytItem(v, genre), seed: true }))
       .map(v => ({ v, it: classify(v, { fallbackGenre: genre }) }))
       // ほかの人の曲としてすでにある曲名は、歌い手のチャンネルのカバーかもしれないので入れない
