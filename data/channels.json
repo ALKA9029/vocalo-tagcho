@@ -1097,6 +1097,14 @@
   "pinned": true
  },
  {
+  "id": "UClhYI7CVVOGXeC57qOhJElg",
+  "added": "2026-10-17T01:47:21.626Z",
+  "name": "すよ",
+  "genre": "ボカロ",
+  "lastHit": "2023-11-21T17:30:04Z",
+  "pinned": true
+ },
+ {
   "id": "UC80ttKvARb7Gslo7AgPOZeA",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "大漠波新",
@@ -1558,14 +1566,6 @@
   "name": "キノシタ/kinoshita",
   "genre": "ボカロ",
   "lastHit": "2019-10-29T09:59:02Z",
-  "pinned": true
- },
- {
-  "id": "UCD7pKXtQ-ZFixYZp8NYAY1Q",
-  "added": "2026-10-17T01:33:15.979Z",
-  "name": "八王子P",
-  "genre": "ボカロ",
-  "lastHit": "2019-10-26T09:00:03Z",
   "pinned": true
  },
  {
@@ -2652,7 +2652,7 @@
   "id": "UCBLGjbYv6-xxju1i44RjnnA",
   "name": "明透 -ᴀsᴜ-",
   "added": "2026-10-09T12:06:54.468Z",
-  "genre": "J-POP",
+  "genre": "アニソン",
   "lastHit": "2026-10-07T10:00:39Z"
  },
  {
