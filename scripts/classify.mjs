@@ -446,6 +446,7 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     tags: tags.slice(0, 30),
     uploaderId: video.uploaderId ?? null,
     uploader: video.uploader ?? null,
+    ...(video.ne ? { ne: 1 } : {}),   // 埋め込みで再生できない動画の印（読み直しでも消さない）
     ...(video.src === "youtube" && (video.descHead || video.desc) ? { descHead: (video.descHead || video.desc).slice(0, 300) } : {}),
   };
   if (kind === "本家") {
