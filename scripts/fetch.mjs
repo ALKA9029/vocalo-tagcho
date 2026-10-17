@@ -157,7 +157,8 @@ function ytItem(v, genre) {
     uploader: sn.channelTitle || "", uploaderId: sn.channelId || null,
     channelGenre: genre || "J-POP",
     // ページ内で再生できない（埋め込み禁止の）動画には印をつける。サイトではリンクで飛ぶだけにする
-    ...(v.status?.embeddable === false ? { ne: 1 } : {}),
+    // 「〇〇 - Topic」チャンネルの自動生成の音源は、埋め込みでは再生できないことが多いので、動画サイトを開くだけにする
+    ...(v.status?.embeddable === false || / - Topic$/.test(sn.channelTitle || "") ? { ne: 1 } : {}),
     ...(animeInDesc(sn.description || "") ? { animeDesc: 1 } : {}),
   };
 }
@@ -220,7 +221,7 @@ async function refreshYouTubeStats(items) {
     if (!isJapanese(v) || (isNoise(v) && !i.seed)) { drop.add(i.id); continue; }
     i.descHead = (v.snippet?.description || "").slice(0, 300);
     if (animeInDesc(v.snippet?.description || "")) i.animeDesc = 1; else delete i.animeDesc;
-    if (v.status?.embeddable === false) i.ne = 1; else delete i.ne;
+    if (v.status?.embeddable === false || / - Topic$/.test(v.snippet?.channelTitle || "")) i.ne = 1; else delete i.ne;
     if (v.statistics?.viewCount != null) i.views = Number(v.statistics.viewCount);
     if (v.statistics?.likeCount != null) i.likes = Number(v.statistics.likeCount);
   }
