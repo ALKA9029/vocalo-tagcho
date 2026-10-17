@@ -537,6 +537,14 @@
   "lastHit": "2026-10-03T10:00:07Z"
  },
  {
+  "id": "UC2dXx-3RXeeP8hA5AGt8vuw",
+  "name": "初星学園",
+  "added": "2026-10-09T12:06:54.468Z",
+  "genre": "ボカロ",
+  "lastHit": "2026-09-30T13:00:06Z",
+  "pinned": true
+ },
+ {
   "id": "UC10BM9XdLdrvB8japwmRUvA",
   "name": "Kanaria",
   "added": "2026-10-09T12:06:54.468Z",
@@ -1558,14 +1566,6 @@
   "name": "john / TOOBOE",
   "genre": "ボカロ",
   "lastHit": "2019-12-07T03:00:08Z",
-  "pinned": true
- },
- {
-  "id": "UCvy_1uRgNNu-h3JJCJOGfpw",
-  "added": "2026-10-10T21:31:46.969Z",
-  "name": "キノシタ/kinoshita",
-  "genre": "ボカロ",
-  "lastHit": "2019-10-29T09:59:02Z",
   "pinned": true
  },
  {
@@ -2961,14 +2961,6 @@
   "lastHit": "2026-10-02T12:00:09Z"
  },
  {
-  "id": "UC2dXx-3RXeeP8hA5AGt8vuw",
-  "name": "初星学園",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "J-POP",
-  "lastHit": "2026-09-30T13:00:06Z",
-  "pinned": true
- },
- {
   "id": "UChMOQ1DOaMPHX_KtFhRQszw",
   "name": "Tatsuya Kitani - Topic",
   "added": "2026-10-09T12:06:54.468Z",
@@ -2993,6 +2985,14 @@
   "pinned": true
  },
  {
+  "id": "UCN1YNkQdGzJTtHZAQO7uxcQ",
+  "added": "2026-10-17T02:21:08.615Z",
+  "name": "BLUE ENCOUNT Official YouTube Channel",
+  "genre": "アニソン",
+  "lastHit": "2026-09-10T11:00:07Z",
+  "pinned": true
+ },
+ {
   "id": "UCln9P4Qm3-EAY4aiEPmRwEA",
   "added": "2026-10-09T12:23:27.151Z",
   "name": "Ado",
@@ -3006,6 +3006,14 @@
   "name": "ClariS Official YouTube Channel",
   "genre": "アニソン",
   "lastHit": "2026-07-11T11:00:20Z",
+  "pinned": true
+ },
+ {
+  "id": "UCvkOJJ9uFi9hto95bD3XO7Q",
+  "added": "2026-10-17T02:21:08.615Z",
+  "name": "SPYAIR Official YouTube Channel",
+  "genre": "アニソン",
+  "lastHit": "2026-07-11T11:00:06Z",
   "pinned": true
  },
  {
@@ -3038,14 +3046,6 @@
   "name": "FlyingDog",
   "genre": "アニソン",
   "lastHit": "2026-05-25T03:00:34Z",
-  "pinned": true
- },
- {
-  "id": "UCmzieQGdu7fTXaPqi2AuXyg",
-  "added": "2026-10-15T10:07:18.046Z",
-  "name": "幽閉サテライト・少女フラクタル・幽閉カタルシス 公式チャンネル",
-  "genre": "アニソン",
-  "lastHit": "2026-05-15T10:00:06Z",
   "pinned": true
  }
 ]

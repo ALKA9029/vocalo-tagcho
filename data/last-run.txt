@@ -1,4 +1,4 @@
-2026-10-17T01:54:21.773Z
+2026-10-17T02:21:08.715Z
 ニコニコ「ボカロ新曲」1ページ目: 53件
 ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」1ページ目: 100件
 ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」2ページ目: 100件
@@ -29,12 +29,38 @@
 YouTube急上昇 1ページ目: 30件
 YouTube新着検索: 手動の実行なので飛ばします（検索回数の節約）
 自動フォロー: 400チャンネル中 0件を確認、新着 0本のうち曲として追加 0本
-公式チャンネルの人気曲「Mrs. GREEN APPLE」: 930本のうち 0曲を追加
-公式チャンネルの人気曲: 1チャンネルを見て、0曲を追加
+公式チャンネルの人気曲「LiSA Official YouTube」: 558本のうち 4曲を追加（LiSA『HELLO WORLD』MUSiC CLiP／LiSA 『ハルシネイト』 MUSiC CLiP／LiSA『MAKE A MiRACLE』MUSiC CLiP…）
+公式チャンネルの人気曲「ヨルシカ / n-buna Official」: 134本のうち 26曲を追加（ヨルシカ - あぶく（OFFICIAL VIDEO）／ヨルシカ - 忘れてください（OFFICIAL VIDEO）／ヨルシカ - 左右盲（OFFICIAL VIDEO）…）
+公式チャンネルの人気曲「Official髭男dism」: 343本のうち 23曲を追加（Official髭男dism - Pretender［Off／Official髭男dism - 宿命［Official V／Official髭男dism - ノーダウト［Officia…）
+公式チャンネルの人気曲「Official髭男dism」: 78本のうち 5曲を追加（Official髭男dism - 50% [Official／Official髭男dism - Sanitizer [Of／Official髭男dism - スターダスト [Offic…）
+公式チャンネルの人気曲「羊文学」: 168本のうち 7曲を追加（羊文学 – mild days (Official Musi／羊文学 - 砂漠のきみへ (Official Music V／羊文学 - くだらない (Official Music Vi…）
+公式チャンネルの人気曲「unisonsgofficial」: 149本のうち 18曲を追加（UNISON SQUARE GARDEN「傍若のカリスマ」M／UNISON SQUARE GARDEN「世界はファンシー」／UNISON SQUARE GARDEN「kaleido p…）
+公式チャンネルの人気曲「アイナ・ジ・エンド Official」: 378本のうち 11曲を追加（アイナ・ジ・エンド - 宝者 [Official Music／アイナ・ジ・エンド - 死にたい夜にかぎって [Offici／アイナ・ジ・エンド - スイカ [Official Musi…）
+公式チャンネルの人気曲「Vaundy」: 9本のうち 0曲を追加
+公式チャンネルの人気曲「SPYAIR Official YouTube Channel」: 305本のうち 9曲を追加（SPYAIR『Kill the Noise』Music Vi／SPYAIR『青』Music Video（TVアニメ『青のミ／SPYAIR『Awake』Music Video（アニメ『追…）
+公式チャンネルの人気曲「ずっと真夜中でいいのに。 ZUTOMAYO」: 453本のうち 30曲を追加（ずっと真夜中でいいのに。『秒針を噛む』MV (ZUTOMAY／ずっと真夜中でいいのに。『お勉強しといてよ』MV (ZUTO／ずっと真夜中でいいのに。『暗く黒く』MV（ZUTOMAYO …）
+公式チャンネルの人気曲「Vaundy」: 389本のうち 27曲を追加（不可幸力 / Vaundy ：MUSIC VIDEO／東京フラッシュ / Vaundy ：MUSIC VIDEO／花占い / Vaundy：MUSIC VIDEO…）
+公式チャンネルの人気曲「DISH// official YouTube channel」: 316本のうち 20曲を追加（DISH// - サイショの恋～モテたくて～ [Offici／DISH// - Replay [Official Vide／DISH// - ごはん [Official Video]…）
+公式チャンネルの人気曲「BLUE ENCOUNT Official YouTube Channel」: 171本のうち 18曲を追加（BLUE ENCOUNT 『MEMENTO』Music Vi／BLUE ENCOUNT『囮囚』Music Video／BLUE ENCOUNT『ユメミグサ』Music Video…）
+公式チャンネルの人気曲「幾田りら / Lilas Official」: 62本のうち 2曲を追加（幾田りら「Midnight Talk」Official Mu／幾田りら「Voyage」Official Music Vid…）
+公式チャンネルの人気曲「aikoOfficial」: 424本のうち 55曲を追加（aiko- 『花火』music video／aiko- 『カブトムシ』music video／aiko- 『ボーイフレンド』music video…）
+公式チャンネルの人気曲「EGOIST Official YouTube Channel」: 30本のうち 6曲を追加（EGOIST『絶体絶命』Music Video（スマートフォ／EGOIST『The Everlasting Guilty ／EGOIST『Ghost of a smile』Music …）
+公式チャンネルの人気曲「マルシィ」: 188本のうち 15曲を追加（マルシィ – 隣で（Official Music Video／マルシィ – 君中心に揺れる世界は（Official Mus／マルシィ - 雫 (Official Music Video…）
+公式チャンネルの人気曲「SUPER BEAVER official YouTube channel」: 329本のうち 20曲を追加（SUPER BEAVER「主人公」MV  (フジテレビ系『め／SUPER BEAVER「涙の正体」MV (NHK夜ドラ『バ／SUPER BEAVER「切望」MV…）
+公式チャンネルの人気曲「ロクデナシ」: 318本のうち 16曲を追加（ロクデナシ「ただ声一つ」/ Rokudenashi - On／ロクデナシ「愛が灯る」/ Rokudenashi - The／ロクデナシ「三時のキス」/ Rokudenashi - 3 …）
+公式チャンネルの人気曲「初星学園」: 176本のうち 46曲を追加（初星学園 「ガラクタロード」Official Music V／初星学園 「Star-mine」Official Music／初星学園 「一体いつから」Official Music Vi…）
+公式チャンネルの人気曲「オーイシマサヨシ」: 393本のうち 3曲を追加（オーイシマサヨシ - ギャンブリングホール [Officia／オーイシマサヨシ - ハイメンテナンスガール [Offici／オーイシマサヨシ - 僕らの箱庭 [Official Vid…）
+公式チャンネルの人気曲「藍井エイル Official YouTube Channel」: 131本のうち 22曲を追加（藍井エイル「アイリス」 Music Video／藍井エイル「月を追う真夜中」Music Video（TVアニ／藍井エイル「春～spring～」Music Video…）
+公式チャンネルの人気曲「ClariS Official YouTube Channel」: 459本のうち 21曲を追加（ClariS『ヒトリゴト』Music Video 【TVアニ／ClariS 『ひらひら ひらら』Music Video／ClariS 『アリシア』Music Video 【TVアニ…）
+公式チャンネルの人気曲「SUPER BEAVER Official YouTube Channel」: 68本のうち 6曲を追加（SUPER BEAVER「ひなた」MV／SUPER BEAVER 「ハイライト」 MV／SUPER BEAVER 「歓びの明日に」 MV…）
+公式チャンネルの人気曲「Buono!」: 50本のうち 5曲を追加（Buono! 『ガチンコでいこう！』 (MV)／Buono! 『DEEP MIND』 (MV)／Buono! 『Our Songs』 (MV)…）
+公式チャンネルの人気曲「櫻坂46 OFFICIAL YouTube CHANNEL」: 652本のうち 11曲を追加（櫻坂46『港区パセリ』MUSIC VIDEO／櫻坂46『Nightmare症候群』MUSIC VIDEO／櫻坂46『死んだふり』MUSIC VIDEO…）
+公式チャンネルの人気曲「ファントムシータ」: 551本のうち 6曲を追加（ファントムシータ『キミと✕✕✕✕したいだけ』（OFFICIA／ファントムシータ『おともだち』（OFFICIAL MUSIC／ファントムシータ『ゾクゾク』（OFFICIAL MUSIC …）
+公式チャンネルの人気曲: 27チャンネルを見て、432曲を追加
 歌ってみたのリクエスト: 全1件、今回確認0件、追加0件
 ニコニコの再生数を更新: 64件
 原曲さがし: 0曲を調べて、原曲を0曲見つけた
 原曲さがし（YouTube）: 手動の実行なので飛ばします（検索回数の節約）
 YouTubeの再生数を更新: 2478件（日本の曲ではないので外す: 0件）
 自動フォローのチャンネル: 400件（ボカロの本家 200件・その他 200件）
-保存しました: data/songs.json（全5488件、うち歌ってみたの原曲ひもづけ 1086件）
+保存しました: data/songs.json（全5909件、うち歌ってみたの原曲ひもづけ 1098件）
