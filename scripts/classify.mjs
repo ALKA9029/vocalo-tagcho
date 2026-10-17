@@ -84,9 +84,9 @@ export function detectVoice(title, tags) {
   // 韓国語の歌声名はタイトルの中からも探す
   const nt = normalize(title);
   for (const [k, v] of Object.entries(VOICE_ALIASES)) if (/[\uac00-\ud7af]/.test(k) && k.length >= 2 && nt.includes(k)) return v;
-  // 英字の名前（ONE、IA など）は単語として出てきたときだけ（「SixTONES」「ONE N' ONLY」を誤判定しないため）
+  // 英字の名前（ONE、IA など）は単語として出てきたときだけ（「SixTONES」「ONE N' ONLY」を誤判定しないため）。flower は英単語の後ろ（「Wildest Flower」）では歌声にしない
   for (const v of byLen) {
-    if (/^[\x00-\x7F ]+$/.test(v)) { if (v.length >= 4 && new RegExp(`(^|[^A-Za-z])${v}(?![A-Za-z'])`, "i").test(title) && v !== "ONE") return v; }
+    if (/^[\x00-\x7F ]+$/.test(v)) { if (v.length >= 4 && new RegExp(`(^|[^A-Za-z])${v}(?![A-Za-z'])`, "i").test(title) && v !== "ONE" && !(v === "flower" && /(^|[^A-Za-z])(?!(v4?|ci|feat|ft)\s)[A-Za-z]+\s+flower/i.test(title))) return v; }
     else if (v.length >= 3 && title.includes(v)) return v;
   }
   return null;
