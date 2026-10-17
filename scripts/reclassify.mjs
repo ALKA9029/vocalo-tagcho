@@ -1,7 +1,7 @@
 // ネットにつながずに、保存済みのデータ（タイトルとタグ）を今の判定ルールで読み直す。
 //   node scripts/reclassify.mjs
 import { readFile, writeFile } from "node:fs/promises";
-import { classify, linkCovers, toSite, isKaraoke, singerCore } from "./classify.mjs";
+import { classify, linkCovers, toSite, isKaraoke, singerCore, normalize } from "./classify.mjs";
 
 const path = p => new URL("../" + p, import.meta.url);
 const items = JSON.parse(await readFile(path("data/songs.json"), "utf8")).filter(i => !isKaraoke(i.title));
@@ -19,7 +19,7 @@ const out = items.map(old => {
   // 曲ページからリクエストされた歌ってみたは、リクエストされた曲につないだまま
   if (old.req) { fresh.kind = "歌ってみた"; fresh.req = old.req; fresh.by ||= singerCore(old.uploader || "") || old.by; }
   const merged = { ...fresh, ...keep };
-  if (!merged.p && old.p && old.src === "youtube") merged.p = old.p;
+  if (!merged.p && old.p && old.src === "youtube" && normalize(old.p) !== normalize(merged.t || "")) merged.p = old.p;
   const o = overrides[merged.id];
   if (o) { Object.assign(merged, o); if ("of" in o) merged.ofLocked = true; if ("g" in o) merged.gFixed = o.g; }
   delete merged.of;

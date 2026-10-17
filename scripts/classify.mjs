@@ -490,6 +490,15 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     // 「【初音ミク】愛言葉【オリジナル曲】中文字幕」のような字幕つきの転載も転載あつかい（曲名から「中文字幕」などを外す）
     if (SUB_RE.test(video.title)) { item.reprint = 1; if (item.t) item.t = item.t.replace(SUB_RE, "").replace(/[\[［【(（]\s*[\]］】)）]/g, "").trim() || item.t; }
   }
+  // 「細菌汚染 - Bacterial Contamination -」のように「日本語の曲名 - 英語の曲名 -」と両側をダッシュではさんだ書き方は、
+  // 左が作者名ではなく曲名（英語は曲名の訳）
+  {
+    const m = video.title.replace(/【[^】]*】|\[[^\]]*\]/g, " ").match(/^\s*([^-–—]*[^\x00-\x7F][^-–—]*?)\s+[-–—]\s+([A-Za-z][^-–—]*?)\s+[-–—](?:\s|$)/);
+    if (m && /[\u3040-\u30ff\u4e00-\u9fff]/.test(m[1]) && item.kind === "本家" && (normalize(item.p || "") === normalize(m[1]) || normalize(item.t || "").startsWith(normalize(m[2]).slice(0, 6)))) {
+      item.t = m[1].trim();
+      if (normalize(item.p || "") === normalize(m[1])) item.p = "";   // 作者はタグやニコニコ版からあとで補う
+    }
+  }
   // 曲名のうしろの「HD」「PV」「FULL」などは曲名ではない
   if (item.t) item.t = item.t.replace(/[\s　]+(HD|PV|FULL|full ?ver(sion)?|official ?video|original ?song)$/i, "").trim() || item.t;
   if (video.src === "youtube" && item.t) {
@@ -714,9 +723,10 @@ export function mergeSources(items) {
   const ytByT = new Map();
   for (const i of [...items].sort((a, b) => (a.date || "").localeCompare(b.date || ""))) if (i.src === "youtube" && i.kind === "本家" && !i.reprint && i.p && normalize(i.t) && !ytByT.has(normalize(i.t))) ytByT.set(normalize(i.t), i);
   for (const i of items) {
-    if (i.src !== "youtube" || i.kind !== "本家" || !(i.nicoSrc || i.reprint)) continue;
+    if (i.src !== "youtube" || i.kind !== "本家" || !(i.nicoSrc || i.reprint || !i.p)) continue;
     const linked = i.nicoSrc && byId.get(i.nicoSrc);
-    const target = linked && linked.kind === "本家" && normalize(linked.t) === normalize(i.t) ? linked : i.reprint ? (nicoByT.get(normalize(i.t)) || ytByT.get(normalize(i.t))) : null;
+    // 作者が分からない YouTube の本家は、同じ曲名のニコニコの本家の作者に合わせる
+    const target = linked && linked.kind === "本家" && normalize(linked.t) === normalize(i.t) ? linked : i.reprint ? (nicoByT.get(normalize(i.t)) || ytByT.get(normalize(i.t))) : !i.p ? nicoByT.get(normalize(i.t)) : null;
     if (!target?.p) continue;
     // 作者名はどちらかを選んで両方にそろえる。YouTube 側の作者名がタイトルに書いてあり、ニコニコ側はタイトルにない
     // （タグなどから推測した）ときは YouTube 側を信じる。それ以外（転載チャンネルの名前など）はニコニコ側
