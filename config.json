@@ -238,7 +238,7 @@
       "minViews": 300000,
       "channelMinViews": 100000,
       "recheckDays": 180,
-      "skipChannels": "THE FIRST TAKE|シアーミュージック|吹奏楽部|ジュニアCHANNEL|Fake Beat Japan|KING OF KINGS"
+      "skipChannels": "THE FIRST TAKE|シアーミュージック|吹奏楽部|ジュニアCHANNEL|Fake Beat Japan|KING OF KINGS| - Topic$"
     }
   }
 }

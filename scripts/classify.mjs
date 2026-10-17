@@ -802,7 +802,7 @@ export function mergeSources(items) {
   const groups = new Map();
   for (const i of items) {
     // 「ショートVer.」「TVサイズ」は同じ曲として、フルの動画の中に隠す（ほかの別バージョンは別の曲のまま）
-    if (i.kind !== "本家" || !i.p || !i.t || (VERSION_RE.test(i.title || "") && !i.rm && !SHORT_VER_RE.test(i.title || ""))) continue;
+    if (i.kind !== "本家" || i.topicHidden || !i.p || !i.t || (VERSION_RE.test(i.title || "") && !i.rm && !SHORT_VER_RE.test(i.title || ""))) continue;
     const k = normalize(i.t) + "|" + normalize(i.p) + (i.rm ? "|" + i.rm : "");
     if (!normalize(i.t) || !normalize(i.p)) continue;
     (groups.get(k) || groups.set(k, []).get(k)).push(i);
@@ -886,6 +886,20 @@ function markRemakes(items) {
   }
 }
 
+// 「〇〇 - Topic」の自動生成音源（埋め込みで再生できず、曲名もローマ字のことが多い）は、そのアーティストの公式チャンネルの曲がサイトにあれば出さない
+// （同じ曲の公式動画は毎日の Topic の差しかえ・公式チャンネルの取り込みで入る）
+function hideTopicWithOfficial(items) {
+  const chNames = new Set();
+  for (const i of items) if (i.src === "youtube" && i.kind === "本家" && i.uploader && !/ - Topic$/.test(i.uploader)) chNames.add(normalize(i.uploader));
+  const names = [...chNames];
+  for (const i of items) {
+    delete i.topicHidden;
+    if (i.src !== "youtube" || i.kind !== "本家" || !/ - Topic$/.test(i.uploader || "")) continue;
+    const artist = normalize(i.uploader.replace(/ - Topic$/, ""));
+    if (artist.length >= 3 && names.some(n => n.includes(artist))) i.topicHidden = 1;
+  }
+}
+
 export function linkCovers(items) {
   dropEnglishTail(items);
   inferNamesFromTags(items);
@@ -894,8 +908,9 @@ export function linkCovers(items) {
   fixCreatorNames(items);
   markRemakes(items);
   vocaloByCreator(items);
+  hideTopicWithOfficial(items);
   const originals = new Map();
-  for (const i of items.filter(x => x.kind === "本家").sort((a, b) => (a.date || "").localeCompare(b.date || ""))) {
+  for (const i of items.filter(x => x.kind === "本家" && !x.topicHidden).sort((a, b) => (a.date || "").localeCompare(b.date || ""))) {
     const k = normalize(i.t);
     if (k && !isVoice(i.t) && !originals.has(k)) originals.set(k, i);   // 曲名が「KAITO」「重音テトSV」のような歌声名のものは原曲の候補にしない
   }
@@ -972,7 +987,7 @@ export const toSite = items => {
   // alt にならなかった転載（同じサイトの2本目以降）：前のIDの票やページを代表の曲に寄せるため、IDだけ持たせる
   const hidden = new Map();
   for (const i of items) if (i.dup && !(byId.get(i.dup)?.alt || []).includes(i.id)) (hidden.get(i.dup) || hidden.set(i.dup, []).get(i.dup)).push(i);
-  return items.filter(i => !i.dup).map(i => {
+  return items.filter(i => !i.dup && !i.topicHidden).map(i => {
     const o = Object.fromEntries(KEEP.filter(k => i[k] != null && i[k] !== "").map(k => [k, unent(i[k])]));
     const alts = (i.alt || []).map(id => byId.get(id)).filter(Boolean);
     if (alts.length) {
