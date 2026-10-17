@@ -546,6 +546,11 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     item.animeDesc = 1;
     if (video.src === "youtube" && item.kind === "本家" && (item.g === "J-POP" || item.g === "その他")) item.g = "アニソン";
   }
+  // 説明文の最初に「〇〇書き下ろし楽曲のセルフカバーです」とある YouTube の動画（ゲームなどに提供した曲を作者本人が歌ったもの）。
+  // 原曲（ゲーム内のボカロ版）は取り込まず、この動画を本家のままにして「セルフカバー」の印だけ付ける。歌っているのは本人なので歌声は外す
+  if (video.src === "youtube" && item.kind === "本家" && /(書き下ろし|提供)\S{0,8}セルフカバー|セルフカバーです/.test((video.desc || video.descHead || "").slice(0, 300)) && !ORIGINAL_RE.test(video.title)) {
+    item.selfDesc = 1; delete item.v;
+  }
   return item;
 }
 
@@ -711,6 +716,7 @@ export function markSelfCovers(items) {
   const byId = new Map(items.map(i => [i.id, i]));
   for (const c of items) {
     delete c.self;
+    if (c.selfDesc) { c.self = 1; continue; }   // 提供曲を作者本人が歌った本家（悔やむと書いてミライ など）
     if (c.kind !== "歌ってみた") continue;
     const o = c.of ? byId.get(c.of) : null;
     const sameUploader = o && c.uploaderId && c.uploaderId === o.uploaderId && c.src === o.src;

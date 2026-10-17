@@ -4,8 +4,9 @@ import { readFile, writeFile } from "node:fs/promises";
 import { classify, linkCovers, toSite, isKaraoke, singerCore, normalize } from "./classify.mjs";
 
 const path = p => new URL("../" + p, import.meta.url);
-const items = JSON.parse(await readFile(path("data/songs.json"), "utf8")).filter(i => !isKaraoke(i.title));
 const overrides = JSON.parse(await readFile(path("data/overrides.json"), "utf8").catch(() => "{}"));
+// overrides.json で "skip": 1 にした動画（取り込まないと決めたもの）も外す
+const items = JSON.parse(await readFile(path("data/songs.json"), "utf8")).filter(i => !isKaraoke(i.title) && !overrides[i.id]?.skip);
 
 const out = items.map(old => {
   const uploaderId = old.uploaderId ?? ((old.a || "").includes(":") ? old.a.split(":")[1] : undefined);

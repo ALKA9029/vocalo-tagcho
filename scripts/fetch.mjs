@@ -587,7 +587,7 @@ const overrides = await readJson("data/overrides.json", {});
 let statsOnly = 0;
 for (const v of videos) {
   if (v.linkOnly) { const prev = existing.get(v.id); if (prev) { prev.req = v.req; prev.of = v.req; prev.ofLocked = true; } continue; }
-  if (isKaraoke(v.title)) continue;
+  if (isKaraoke(v.title) || overrides[v.id]?.skip) continue;
   if (v.updateOnly) {
     const prev = existing.get(v.id);
     if (prev) { prev.views = v.views ?? prev.views; prev.likes = v.likes ?? prev.likes; statsOnly++; }
@@ -621,6 +621,7 @@ if (fixtureArg < 0 && !SEED) {
   const drop = await refreshYouTubeStats(items.filter(i => !fresh.has(i.id))).catch(e => (console.warn("再生数の更新に失敗:", e.message), new Set()));
   items = items.filter(i => !drop.has(i.id));
 }
+items = items.filter(i => !overrides[i.id]?.skip);   // 取り込まないと決めた動画
 for (const i of items) {
   const o = overrides[i.id];
   if (o) { Object.assign(i, o); if ("of" in o) i.ofLocked = true; if ("g" in o) i.gFixed = o.g; }
