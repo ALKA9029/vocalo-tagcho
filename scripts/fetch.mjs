@@ -463,8 +463,11 @@ async function fetchCatalogs(items) {
     if (i.kind === "本家" && !i.reprint) { c.orig++; if (i.g === "J-POP") c.jp++; if (i.g === "アニソン") c.anime++; c.max = Math.max(c.max, i.views || 0); } else c.cov++;
     chs.set(i.uploaderId, c);
   }
-  const todo = [...chs].filter(([id, c]) => c.orig >= c.cov && c.jp + c.anime >= 1 && c.max >= (cfg.channelMinViews || 100000) && !skipCh.test(c.name) && !(done[id] > recheck))
-    .sort((a, b) => b[1].max - a[1].max).slice(0, cfg.maxChannelsPerRun || 50);
+  // 全部取り込むチャンネル（config の catalog.full：チャンネル名と、取り込む動画タイトルの形）。一度ずつ、決めた形のタイトルの動画を数の制限なしで
+  const full = (cfg.full || []).map(f => ({ ch: new RegExp(f.channel, "i"), title: new RegExp(f.title, "i"), key: "full:" + f.channel + "|" + f.title }));
+  const fullOf = c => full.find(f => f.ch.test(c.name));
+  const todo = [...chs].filter(([id, c]) => { const f = fullOf(c); return f ? !done[f.key + "|" + id] : (c.orig >= c.cov && c.jp + c.anime >= 1 && c.max >= (cfg.channelMinViews || 100000) && !skipCh.test(c.name) && !(done[id] > recheck)); })
+    .sort((a, b) => (fullOf(b[1]) ? 1 : 0) - (fullOf(a[1]) ? 1 : 0) || b[1].max - a[1].max).slice(0, cfg.maxChannelsPerRun || 50);
   const known = new Set(items.map(i => i.id));
   const haveT = new Set(items.filter(i => i.kind === "本家").map(i => normalize(i.t) + "|" + normalize(i.p || "")));
   const otherT = new Map();
@@ -474,7 +477,8 @@ async function fetchCatalogs(items) {
   for (const [id, c] of todo) {
     const ids = [];
     let pageToken = "";
-    for (let page = 0; page < (cfg.maxPages || 6); page++) {
+    const f = fullOf(c);
+    for (let page = 0; page < (f ? 20 : (cfg.maxPages || 6)); page++) {
       const params = new URLSearchParams({ part: "contentDetails", playlistId: "UU" + id.slice(2), maxResults: "50", key, ...(pageToken ? { pageToken } : {}) });
       const res = await ytFetch("https://www.googleapis.com/youtube/v3/playlistItems?" + params);
       if (!res.ok) break;
@@ -487,7 +491,7 @@ async function fetchCatalogs(items) {
     const seenT = new Set();
     const got = (await ytVideos(ids.filter(v => !known.has("yt:" + v)), key))
       .filter(v => v.snippet?.categoryId === "10" && isJapanese(v) && !isNoise(v) && !CATALOG_SKIP.test(v.snippet?.title || ""))
-      .filter(v => Number(v.statistics?.viewCount || 0) >= (cfg.minViews || 300000))
+      .filter(v => f ? f.title.test(v.snippet?.localized?.title || v.snippet?.title || "") : Number(v.statistics?.viewCount || 0) >= (cfg.minViews || 300000))
       .map(v => ({ ...ytItem(v, genre), seed: true }))
       .map(v => ({ v, it: classify(v, { fallbackGenre: genre }) }))
       // ほかの人の曲としてすでにある曲名は、歌い手のチャンネルのカバーかもしれないので入れない
@@ -495,9 +499,9 @@ async function fetchCatalogs(items) {
       .sort((a, b) => (b.v.views || 0) - (a.v.views || 0))
       // 同じ曲の別の動画（Official Audio・Lyric Video・ダンス版など）は1本だけ
       .filter(({ it }) => { const k = normalize(it.t); if (seenT.has(k)) return false; seenT.add(k); return true; })
-      .map(({ v }) => v).slice(0, cfg.topPerChannel || 10);
+      .map(({ v }) => v).slice(0, f ? 1000 : (cfg.topPerChannel || 10));
     out.push(...got);
-    done[id] = new Date().toISOString();
+    done[f ? f.key + "|" + id : id] = new Date().toISOString();
     console.log(`公式チャンネルの人気曲「${c.name}」: ${ids.length}本のうち ${got.length}曲を追加${got.length ? `（${got.slice(0, 3).map(v => v.title.slice(0, 30)).join("／")}…）` : ""}`);
   }
   await writeFile(path("data/catalog-done.json"), JSON.stringify(done) + "\n");
