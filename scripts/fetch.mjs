@@ -566,6 +566,17 @@ async function fetchRequests(items) {
   return out;
 }
 
+// ---------- 手で追加する動画（data/add.json）：自動では見つからない・選ばれない公式動画を本家として入れる ----------
+async function fetchManual(knownIds) {
+  const key = process.env.YOUTUBE_API_KEY;
+  const list = await readJson("data/add.json", []);
+  const yt = list.map(x => x.id).filter(id => id?.startsWith("yt:") && !knownIds.has(id)).map(id => id.slice(3));
+  if (!key || !yt.length) return [];
+  const got = (await ytVideos(yt, key)).map(v => ({ ...ytItem(v, "J-POP"), seed: true }));
+  console.log(`手で追加する動画: ${got.length}本`);
+  return got;
+}
+
 // ---------- まとめて保存 ----------
 const fixtureArg = process.argv.indexOf("--fixture");
 const SEED = process.argv.includes("--seed");
@@ -578,6 +589,7 @@ const videos = fixtureArg > -1
      ...(SEED ? await fetchYouTubeSeedSearch().catch(e => (console.warn("YouTube人気ボカロ検索の取得失敗:", e.message), [])) : []),
      ...(SEED ? [] : await fetchFollowed(new Set((await readJson("data/songs.json", [])).map(i => i.id))).catch(e => (console.warn("自動フォローの取得失敗:", e.message), []))),
      ...(SEED ? [] : await fetchCatalogs(await readJson("data/songs.json", [])).catch(e => (console.warn("公式チャンネルの人気曲の取得失敗:", e.message), []))),
+     ...(SEED ? [] : await fetchManual(new Set((await readJson("data/songs.json", [])).map(i => i.id))).catch(e => (console.warn("手で追加する動画の取得失敗:", e.message), []))),
      ...(SEED ? [] : await fetchRequests(await readJson("data/songs.json", [])).catch(e => (console.warn("歌ってみたのリクエストの確認に失敗:", e.message), [])))];
 
 const outFile = fixtureArg > -1 ? "data/songs.sample.json" : "data/songs.json";
