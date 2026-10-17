@@ -578,6 +578,57 @@ async function fetchManual(knownIds) {
   return got;
 }
 
+// ---------- Topic の差しかえ：「〇〇 - Topic」の自動生成音源（埋め込みで再生できない）の曲を、同じアーティストの公式チャンネルの動画から探す ----------
+// 公式チャンネル＝サイトにある YouTube の本家のうち、チャンネル名にそのアーティスト名が入っているもの。動画一覧（50本で1ユニット）だけを使う
+async function fetchTopicReplacements(items) {
+  const key = process.env.YOUTUBE_API_KEY;
+  const cfg = config.youtube.topicReplace || {};
+  if (!key || cfg.enabled === false) return [];
+  const done = await readJson("data/topic-done.json", {});
+  const recheck = new Date(Date.now() - (cfg.recheckDays || 30) * 864e5).toISOString();
+  const topics = items.filter(i => i.src === "youtube" && i.kind === "本家" && !i.dup && / - Topic$/.test(i.uploader || ""));
+  const known = new Set(items.map(i => i.id));
+  // アーティスト名 → 公式チャンネル（Topic 以外で、チャンネル名にアーティスト名が入っている。いちばん曲の多いもの）
+  const chans = new Map();
+  for (const i of items) if (i.src === "youtube" && i.uploaderId && !/ - Topic$/.test(i.uploader || "")) { const c = chans.get(i.uploaderId) || { name: i.uploader || "", n: 0 }; c.n++; chans.set(i.uploaderId, c); }
+  const byArtist = new Map();
+  for (const t of topics) {
+    const artist = normalize(t.uploader.replace(/ - Topic$/, ""));
+    if (artist.length < 2 || byArtist.has(artist)) continue;
+    const hit = [...chans].filter(([, c]) => normalize(c.name).includes(artist)).sort((a, b) => b[1].n - a[1].n)[0];
+    if (hit) byArtist.set(artist, hit[0]);
+  }
+  const out = [];
+  let looked = 0;
+  for (const [artist, chId] of byArtist) {
+    if (done[chId] > recheck || looked >= (cfg.maxChannelsPerRun || 30)) continue;
+    looked++;
+    const want = topics.filter(t => normalize(t.uploader.replace(/ - Topic$/, "")) === artist).map(t => normalize(t.t)).filter(Boolean);
+    const found = new Map();
+    let pageToken = "";
+    for (let page = 0; page < (cfg.maxPages || 8); page++) {
+      const params = new URLSearchParams({ part: "snippet", playlistId: "UU" + chId.slice(2), maxResults: "50", key, ...(pageToken ? { pageToken } : {}) });
+      const res = await ytFetch("https://www.googleapis.com/youtube/v3/playlistItems?" + params);
+      if (!res.ok) break;
+      const body = await res.json();
+      for (const it of body.items || []) {
+        const vid = it.snippet?.resourceId?.videoId, title = it.snippet?.title || "";
+        if (!vid || known.has("yt:" + vid) || isKaraoke(title) || /live|ライブ|short|ショート|teaser|trailer|lyric|リリック|tv\s*size/i.test(title)) continue;
+        const w = want.find(t => normalize(title).includes(t));
+        if (w && !found.has(w)) found.set(w, vid);
+      }
+      pageToken = body.nextPageToken;
+      if (!pageToken || found.size >= want.length) break;
+    }
+    const got = (await ytVideos([...found.values()], key)).filter(v => isJapanese(v) && !isNoise(v)).map(v => ({ ...ytItem(v, "J-POP"), seed: true }));
+    out.push(...got);
+    done[chId] = new Date().toISOString();
+    console.log(`Topicの差しかえ「${artist}」: ${want.length}曲中 ${got.length}曲の公式動画を見つけた`);
+  }
+  await writeFile(path("data/topic-done.json"), JSON.stringify(done) + "\n");
+  return out;
+}
+
 // ---------- まとめて保存 ----------
 const fixtureArg = process.argv.indexOf("--fixture");
 const SEED = process.argv.includes("--seed");
@@ -590,6 +641,7 @@ const videos = fixtureArg > -1
      ...(SEED ? await fetchYouTubeSeedSearch().catch(e => (console.warn("YouTube人気ボカロ検索の取得失敗:", e.message), [])) : []),
      ...(SEED ? [] : await fetchFollowed(new Set((await readJson("data/songs.json", [])).map(i => i.id))).catch(e => (console.warn("自動フォローの取得失敗:", e.message), []))),
      ...(SEED ? [] : await fetchCatalogs(await readJson("data/songs.json", [])).catch(e => (console.warn("公式チャンネルの人気曲の取得失敗:", e.message), []))),
+     ...(SEED ? [] : await fetchTopicReplacements(await readJson("data/songs.json", [])).catch(e => (console.warn("Topicの差しかえに失敗:", e.message), []))),
      ...(SEED ? [] : await fetchManual(new Set((await readJson("data/songs.json", [])).map(i => i.id))).catch(e => (console.warn("手で追加する動画の取得失敗:", e.message), []))),
      ...(SEED ? [] : await fetchRequests(await readJson("data/songs.json", [])).catch(e => (console.warn("歌ってみたのリクエストの確認に失敗:", e.message), [])))];
 

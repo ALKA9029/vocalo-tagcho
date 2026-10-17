@@ -761,6 +761,7 @@ const VERSION_RE = /remix|リミックス|\bver\b|ver\.|version|バージョン|
 const SUB_RE = /[\s　]*[\[［【(（]?\s*(中文字幕|中字|繁中字幕|简中字幕|中文翻譯|English\s*sub(title)?s?|Eng\s*sub|\bsubbed\b|한글\s*자막|한국어\s*자막)\s*[\]］】)）]?/gi;
 const REPRINT_RE = /許諾を得て転載|転載(させて|して(い|お)ります|しています|許可)|reprint(s|ed)? from|permission (was |has been )?(obtained|granted|given)/i;
 
+const SHORT_VER_RE = /short\s*ver|ショート\s*ver|ショートバージョン|short\s*version|tv\s*size|tvサイズ|テレビサイズ/i;
 export function mergeSources(items) {
   for (const i of items) { delete i.dup; delete i.alt; delete i.selfCover; }
   // YouTube の本家で、説明文にニコニコ版へのリンクがある（または転載と書いてある）ものは、
@@ -788,10 +789,20 @@ export function mergeSources(items) {
     if (!i.v && target.v) i.v = target.v;
     i.reprintOf = target.id;
   }
+  // 「〇〇 - Topic」の自動生成音源（作者名がローマ字のことが多い）は、同じ曲名の公式動画があればその作者にそろえて、公式動画の中に隠す
+  const officialByT = new Map();
+  for (const i of items) if (i.src === "youtube" && i.kind === "本家" && i.p && !/ - Topic$/.test(i.uploader || "") && normalize(i.t) && !officialByT.has(normalize(i.t))) officialByT.set(normalize(i.t), i);
+  for (const i of items) {
+    if (i.src !== "youtube" || i.kind !== "本家" || !/ - Topic$/.test(i.uploader || "")) continue;
+    const o = officialByT.get(normalize(i.t));
+    const artist = normalize(i.uploader.replace(/ - Topic$/, ""));
+    if (o && (normalize(o.p).includes(artist) || artist.includes(normalize(o.p)) || normalize(o.uploader || "").includes(artist) || normalize(i.p) === normalize(o.p))) { i.p = o.p; i.a = o.a; }
+  }
   const voiceCh = new Set(items.filter(i => i.src === "youtube" && i.v && i.uploaderId).map(i => i.uploaderId));
   const groups = new Map();
   for (const i of items) {
-    if (i.kind !== "本家" || !i.p || !i.t || (VERSION_RE.test(i.title || "") && !i.rm)) continue;
+    // 「ショートVer.」「TVサイズ」は同じ曲として、フルの動画の中に隠す（ほかの別バージョンは別の曲のまま）
+    if (i.kind !== "本家" || !i.p || !i.t || (VERSION_RE.test(i.title || "") && !i.rm && !SHORT_VER_RE.test(i.title || ""))) continue;
     const k = normalize(i.t) + "|" + normalize(i.p) + (i.rm ? "|" + i.rm : "");
     if (!normalize(i.t) || !normalize(i.p)) continue;
     (groups.get(k) || groups.set(k, []).get(k)).push(i);
@@ -813,7 +824,7 @@ export function mergeSources(items) {
     // 別の曲として並べずに代表の曲の中に隠す（再生数は合計に足す）
     const best = new Map();
     // 作者本人の投稿を転載より優先する（どちらも同じなら再生数の多いほう）
-    const rank = i => (i.reprint ? 0 : 1e12) + (i.views || 0);
+    const rank = i => (i.reprint ? 0 : 1e12) + (i.ne ? 0 : 5e11) + (SHORT_VER_RE.test(i.title || "") ? 0 : 2e11) + (i.views || 0);   // 転載より本人、埋め込めない動画より埋め込める動画
     for (const i of list) { const b = best.get(i.src); if (!b || rank(i) > rank(b)) best.set(i.src, i); }
     const picked = [...best.values()].sort((a, b) => (a.date || "").localeCompare(b.date || "") || (a.src === "niconico" ? -1 : 1));
     const [main, ...rest] = picked;
