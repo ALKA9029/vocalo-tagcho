@@ -151,7 +151,7 @@ function ytItem(v, genre) {
   const sn = v.snippet || {}, st = v.statistics || {};
   return {
     src: "youtube", id: "yt:" + v.id, url: "https://www.youtube.com/watch?v=" + v.id,
-    title: sn.title || "", tags: sn.tags || [], desc: sn.description || "", descHead: (sn.description || "").slice(0, 300),
+    title: sn.localized?.title || sn.title || "", tags: sn.tags || [], desc: sn.description || "", descHead: (sn.description || "").slice(0, 300),
     date: sn.publishedAt, views: st.viewCount != null ? Number(st.viewCount) : null, likes: st.likeCount != null ? Number(st.likeCount) : null,
     thumb: sn.thumbnails?.medium?.url || sn.thumbnails?.default?.url || null,
     uploader: sn.channelTitle || "", uploaderId: sn.channelId || null,
@@ -167,7 +167,8 @@ function ytItem(v, genre) {
 async function ytVideos(ids, key) {
   const out = [];
   for (let i = 0; i < ids.length; i += 50) {
-    const params = new URLSearchParams({ part: "snippet,statistics,contentDetails,status", id: ids.slice(i, i + 50).join(","), key });
+    // hl=ja：日本語のタイトルが登録されていれば snippet.localized にそれが入る（Topic の「KUSUSHIKI」→「クスシキ」など）
+    const params = new URLSearchParams({ part: "snippet,statistics,contentDetails,status", id: ids.slice(i, i + 50).join(","), hl: "ja", key });
     const res = await ytFetch("https://www.googleapis.com/youtube/v3/videos?" + params);
     if (!res.ok) { console.warn(`YouTube詳細: HTTP ${res.status} ${(await res.text()).slice(0, 200)}`); break; }
     out.push(...((await res.json()).items || []));
@@ -220,6 +221,9 @@ async function refreshYouTubeStats(items) {
     const i = byId.get(v.id);
     if (!isJapanese(v) || (isNoise(v) && !i.seed)) { drop.add(i.id); continue; }
     i.descHead = (v.snippet?.description || "").slice(0, 300);
+    // 日本語のタイトルがあればそちらに（もともと英語の曲名は、日本語版がないのでそのまま）
+    const lt = v.snippet?.localized?.title;
+    if (lt && lt !== i.title) { console.log(`日本語のタイトルに: ${i.title} → ${lt}`); i.title = lt; }
     if (animeInDesc(v.snippet?.description || "")) i.animeDesc = 1; else delete i.animeDesc;
     if (v.status?.embeddable === false || / - Topic$/.test(v.snippet?.channelTitle || "")) i.ne = 1; else delete i.ne;
     if (v.statistics?.viewCount != null) i.views = Number(v.statistics.viewCount);
