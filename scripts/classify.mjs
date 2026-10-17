@@ -573,6 +573,8 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     item.animeDesc = 1;
     if (video.src === "youtube" && item.kind === "本家" && (item.g === "J-POP" || item.g === "その他")) item.g = "アニソン";
   }
+  // ディズニー公式チャンネルの映画の曲（「(From『アナと雪の女王』)」など）はアニソン
+  if (video.src === "youtube" && item.kind === "本家" && /disney/i.test(video.uploader || "") && /From\s*[『「]|アナと雪の女王/i.test(video.title)) item.g = "アニソン";
   // 説明文の最初に「〇〇書き下ろし楽曲のセルフカバーです」とある YouTube の動画（ゲームなどに提供した曲を作者本人が歌ったもの）。
   // 原曲（ゲーム内のボカロ版）は取り込まず、この動画を本家のままにして「セルフカバー」の印だけ付ける。歌っているのは本人なので歌声は外す
   if (video.src === "youtube" && item.kind === "本家" && /(書き下ろし|提供)\S{0,8}セルフカバー|セルフカバーです/.test((video.desc || video.descHead || "").slice(0, 300)) && !ORIGINAL_RE.test(video.title)) {
