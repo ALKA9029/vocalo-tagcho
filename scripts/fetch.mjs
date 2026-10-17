@@ -146,12 +146,15 @@ async function ytFetch(url) {
   }
 }
 
+// タイトル：日本語版があればそちら。ただし韓国語の曲（元のタイトルにハングルがある）は原題のまま
+const pickTitle = sn => /[\uac00-\ud7a3]/.test(sn.title || "") ? (sn.title || "") : (sn.localized?.title || sn.title || "");
+
 // videos.list の1件をサイト用の形に（共通）
 function ytItem(v, genre) {
   const sn = v.snippet || {}, st = v.statistics || {};
   return {
     src: "youtube", id: "yt:" + v.id, url: "https://www.youtube.com/watch?v=" + v.id,
-    title: sn.localized?.title || sn.title || "", tags: sn.tags || [], desc: sn.description || "", descHead: (sn.description || "").slice(0, 300),
+    title: pickTitle(sn), tags: sn.tags || [], desc: sn.description || "", descHead: (sn.description || "").slice(0, 300),
     date: sn.publishedAt, views: st.viewCount != null ? Number(st.viewCount) : null, likes: st.likeCount != null ? Number(st.likeCount) : null,
     thumb: sn.thumbnails?.medium?.url || sn.thumbnails?.default?.url || null,
     uploader: sn.channelTitle || "", uploaderId: sn.channelId || null,
@@ -222,8 +225,8 @@ async function refreshYouTubeStats(items) {
     if (!isJapanese(v) || (isNoise(v) && !i.seed)) { drop.add(i.id); continue; }
     i.descHead = (v.snippet?.description || "").slice(0, 300);
     // 日本語のタイトルがあればそちらに（もともと英語の曲名は、日本語版がないのでそのまま）
-    const lt = v.snippet?.localized?.title;
-    if (lt && lt !== i.title) { console.log(`日本語のタイトルに: ${i.title} → ${lt}`); i.title = lt; }
+    const lt = pickTitle(v.snippet || {});
+    if (lt && lt !== i.title) { console.log(`タイトルを更新: ${i.title} → ${lt}`); i.title = lt; }
     if (animeInDesc(v.snippet?.description || "")) i.animeDesc = 1; else delete i.animeDesc;
     if (v.status?.embeddable === false || / - Topic$/.test(v.snippet?.channelTitle || "")) i.ne = 1; else delete i.ne;
     if (v.statistics?.viewCount != null) i.views = Number(v.statistics.viewCount);
