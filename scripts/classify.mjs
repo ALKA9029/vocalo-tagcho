@@ -441,6 +441,14 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     const isVoiceName = isVoice(parsed.creator);
     item.p = (!isVoiceName && parsed.creator) || cleanChannel(video.uploader) || "";
     if (isVoice(item.p)) item.p = "";
+    // 「〇〇『ビバハピ』/ Mitchie M」のように、最後の「/ 名前」がチャンネル名と同じなら、それが作者
+    if (video.src === "youtube") {
+      const tail = (video.title.match(/[\/／]\s*([^\/／【\[(（]+?)\s*$/) || [])[1];
+      const ch = cleanChannel(video.uploader || "");
+      if (tail && ch && normalize(tail) === normalize(ch) && normalize(item.p) !== normalize(tail) && !(item.p && normalize(video.title).startsWith(normalize(item.p))) && !/THE FIRST TAKE/i.test(tail)) item.p = tail.trim();
+    }
+    // 「PV付」の「付」のような1文字だけの作者名は読みちがい
+    if (item.p && [...item.p.trim()].length <= 1) item.p = "";
     // 「鏡音レン・リン」のように歌声の名前だけが作者の位置に入ったら、チャンネル名を作者に
     if (item.p && item.p.split(/[・&＆,、×]/).every(x => isVoice(x.trim()) || ["リン", "レン", "ミク", "ルカ"].includes(x.trim()))) item.p = cleanChannel(video.uploader) || "";
     if (voice) item.v = voice;
@@ -769,7 +777,7 @@ export function mergeSources(items) {
 }
 
 // 同じ人の作者名の表記ゆれを、本人の名乗り（X などの表記）にそろえる
-const CREATOR_NAMES = { "黒うさP": "黒うさP/WhiteFlame", "WhiteFlame": "黒うさP/WhiteFlame", "kemu": "KEMU VOXX", "ALEXANDROS": "[Alexandros]", "DISH": "DISH//", "40meterP": "40mP" };
+const CREATOR_NAMES = { "黒うさP": "黒うさP/WhiteFlame", "WhiteFlame": "黒うさP/WhiteFlame", "kemu": "KEMU VOXX", "ALEXANDROS": "[Alexandros]", "DISH": "DISH//", "40meterP": "40mP", "Mitchie_M": "Mitchie M" };
 const fixCreatorNames = items => { for (const i of items) if (i.p && CREATOR_NAMES[i.p]) i.p = CREATOR_NAMES[i.p]; };
 
 // 「恋愛裁判 Love Trial」「トリノコシティ Torinoko City」のように曲名のうしろに英語名が付いていて、
