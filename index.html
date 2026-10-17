@@ -286,11 +286,23 @@ function creditText(i){
 }
 
 const who = (label, title, person) => el("button",{class:"who", title, onclick:e=>{ e.stopPropagation(); applyFilter(()=>state.person=person); }}, label);
+// 「ころん×あっきぃ」「さんど。&みぬた」のような複数人の名前を1人ずつに分ける（本家の作者は × だけで分ける。「King & Prince」などのため）
+const splitSingers = s => String(s || "").split(/\s*(?:×|✕|＆|&|、|，|,|\s+x\s+|\s+with\s+)\s*/i).map(t=>t.trim()).filter(t=>t.length >= 1);
+const splitCreators = s => String(s || "").split(/\s*(?:×|✕|\s+x\s+)\s*/i).map(t=>t.trim()).filter(Boolean);
+const singerPerson = n => ({label:`歌い手：${n}`, match:x=>x.kind==="歌ってみた" && splitSingers(x.by).includes(n), key:"b:"+n});
+const creatorNamePerson = n => ({label:`作者：${n}`, match:x=>x.kind==="本家" && splitCreators(x.p).includes(n), key:"n:"+n});
+// 名前ボタンを「×」でつないで並べる
+const joinWho = (names, make) => names.flatMap((n, k) => k ? [" × ", make(n)] : [make(n)]);
 function creditEls(i){
-  const artist = i.p ? who(i.p, `${i.p}の曲を表示`, {label:`作者：${i.p}`, match:x=>x.a===i.a, a:i.a, key:"a:"+i.a}) : null;
+  const pn = splitCreators(i.p);
+  const artist = !i.p ? null
+    : pn.length > 1 ? el("span",{}, ...joinWho(pn, n=>who(n, `${n}の曲を表示`, creatorNamePerson(n))))
+    : who(i.p, `${i.p}の曲を表示`, {label:`作者：${i.p}`, match:x=>x.a===i.a, a:i.a, key:"a:"+i.a});
   const voice = i.v ? who(i.v, `${i.v}が歌う曲を表示`, {label:`歌声：${i.v}`, match:x=>x.v===i.v, key:"v:"+i.v}) : null;
   if (i.kind === "歌ってみた"){
-    const singer = i.by ? who(i.by, `${i.by}の歌ってみたを表示`, {label:`歌い手：${i.by}`, match:x=>x.by===i.by, key:"b:"+i.by}) : el("span",{class:"unknown"},"歌い手不明");
+    // 複数人で歌っているときは1人ずつ押せるように（押すと、その人がほかの人と歌ったものも含めて表示）
+    const names = splitSingers(i.by);
+    const singer = names.length ? el("span",{}, ...joinWho(names, n=>who(n, `${n}の歌ってみたを表示`, singerPerson(n)))) : el("span",{class:"unknown"},"歌い手不明");
     return [el("span",{}, singer, artist ? "（原曲：" : null, artist, artist ? "）" : null)];
   }
   if (!artist && !voice) return [el("span",{class:"unknown"},"作者不明")];
@@ -319,7 +331,7 @@ function related(i){
     const o = original(i);
     groups.push(["原曲", o ? [o] : [], x=>creditText(x)]);
     if (o) groups.push(["ほかの人の歌ってみた", cap(notSelf(ITEMS.filter(x=>x.kind==="歌ってみた" && x.of===o.id))), x=>x.by || "歌い手不明"]);
-    if (i.by) groups.push([`${i.by} のほかの歌ってみた`, cap(notSelf(ITEMS.filter(x=>x.kind==="歌ってみた" && x.by===i.by))), x=>x.t]);
+    for (const n of splitSingers(i.by).slice(0, 4)) groups.push([`${n} のほかの歌ってみた`, cap(notSelf(ITEMS.filter(x=>x.kind==="歌ってみた" && splitSingers(x.by).includes(n)))), x=>x.t]);
   }
   const src = i.kind === "本家" ? i : original(i);
   if (src && realKey(src.a)){
@@ -419,7 +431,7 @@ function render(){
   const personPage = state.person?.a ? creatorPage(state.person.a) : null;
   $("#personBox").replaceChildren(...(state.person ? [el("span",{class:"active"}, state.person.label,
     el("button",{"aria-label":"絞り込みを解除", onclick:()=>applyFilter(()=>state.person=null)}, "×")),
-    personPage ? el("a",{class:"pagelink", href:personPage}, "作者ページ →") : null] : []));
+    personPage ? el("a",{class:"pagelink", href:personPage}, "作者ページ →") : null].filter(Boolean) : []));
   $("#tagFilter").replaceChildren(...TAGS.map(t=>
     el("button",{class:"chip","aria-pressed":String(state.filter.has(t)), onclick:()=>applyFilter(()=>{ state.filter.has(t)?state.filter.delete(t):state.filter.add(t); })}, t)));
 
@@ -764,7 +776,8 @@ function personFromKey(key){
   const kind = key.slice(0, 2), v = key.slice(2);
   if (kind === "a:") { const x = ITEMS.find(i=>i.a===v && i.p); return x ? {label:`作者：${x.p}`, match:i=>i.a===v, a:v, key} : null; }
   if (kind === "v:") return {label:`歌声：${v}`, match:i=>i.v===v, key};
-  if (kind === "b:") return {label:`歌い手：${v}`, match:i=>i.by===v, key};
+  if (kind === "b:") return singerPerson(v);
+  if (kind === "n:") return creatorNamePerson(v);
   return null;
 }
 function applyUrlParams(){
