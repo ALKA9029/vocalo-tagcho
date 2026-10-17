@@ -1743,8 +1743,9 @@
   "id": "UCsgebXKWsxjX216BtZwLdzQ",
   "added": "2026-10-17T01:11:46.812Z",
   "name": "Da-iCE - Topic",
-  "genre": "J-POP",
-  "lastHit": "2026-10-15T10:00:39Z"
+  "genre": "アニソン",
+  "lastHit": "2026-10-15T10:00:39Z",
+  "pinned": true
  },
  {
   "id": "UCLakaKEelmUdqQISLjwIRmg",
@@ -1994,6 +1995,13 @@
   "name": "もるてん",
   "genre": "J-POP",
   "lastHit": "2026-10-12T11:00:09Z"
+ },
+ {
+  "id": "UCSkg7Vl7_7hbJjLwnjA-6sg",
+  "added": "2026-10-17T01:15:03.872Z",
+  "name": "Ryo Higuchi",
+  "genre": "J-POP",
+  "lastHit": "2026-10-12T10:00:38Z"
  },
  {
   "id": "UCFvSFbT8okMrpuFxBEIB2lg",
@@ -3038,14 +3046,6 @@
   "name": "幽閉サテライト・少女フラクタル・幽閉カタルシス 公式チャンネル",
   "genre": "アニソン",
   "lastHit": "2026-05-15T10:00:06Z",
-  "pinned": true
- },
- {
-  "id": "UCLLrOsGIMTOVN8pbXvMGz4g",
-  "added": "2026-10-16T21:47:12.648Z",
-  "name": "μ's - Topic",
-  "genre": "J-POP",
-  "lastHit": "2026-05-06T10:01:36Z",
   "pinned": true
  }
 ]
