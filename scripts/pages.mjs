@@ -193,7 +193,7 @@ ${remakeNote(i)}
 <section>
   <h2>「${esc(i.t)}」の歌ってみた${covers.length ? `（${covers.length}件）` : ""}</h2>
   ${covers.length ? `<ul class="list">${covers.map(x => li(x,
-      `${esc(x.by || "歌い手不明")}`,
+      `${esc(x.vr ? `${x.vr}${x.by ? `（${x.by}）` : ""}` : (x.by || "歌い手不明"))}`,
       `${x.self ? '<span class="badge self">セルフカバー</span>' : ""}${embedUrl(x) ? `<button type="button" class="mini" ${playAttrs(x, `${i.t}（${x.by || "歌ってみた"}）`)}>▶ ここで聴く</button>` : ""}<a href="${esc(x.url)}" target="_blank" rel="noopener">${srcName(x)} ↗</a><span>${fmtDate(x.date)}</span>${tagsOf(x.id).slice(0, 3).map(([t]) => `<a href="${tagUrl(t)}">#${esc(t)}</a>`).join("")}`,
       `c-${songSlug(x.id)}`
     )).join("")}</ul>` : `<p class="note">TagTuneではまだ見つかっていません。</p>`}
@@ -266,7 +266,7 @@ function tagPage(tag) {
     const o = x.kind === "歌ってみた" && x.of ? byId.get(x.of) : null;
     const name = x.kind === "本家" ? `<a href="${songUrl(x.id)}">${esc(x.t)}</a>`
       : o ? `<a href="${songUrl(o.id)}">${esc(x.t)}</a>` : `<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.t)}</a>`;
-    const who = x.kind === "歌ってみた" ? `歌ってみた：${esc(x.by || "歌い手不明")}` : esc(credit(x) || "");
+    const who = x.kind === "歌ってみた" ? `歌ってみた：${esc(x.vr ? `${x.vr}${x.by ? `（${x.by}）` : ""}` : (x.by || "歌い手不明"))}` : esc(credit(x) || "");
     return li(x, name, `<span class="badge genre">${esc(x.g)}</span><span>${who}</span><span>${n}票</span><a href="${playUrl(x.id)}">▶ 聴く</a>`);
   }).join("")}</ul>` : `<p class="note">まだこのタグがついた曲はありません。<a href="/">TagTune</a>で曲を聴いて、印象タグをつけてみよう。</p>`}
 </section>

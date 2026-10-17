@@ -375,6 +375,16 @@ export function fixSinger(by, title) {
 const LABEL_RE = /^(Sony Music|UNIVERSAL MUSIC|KING RECORDS|キングレコード|VAP|avex|ポニーキャニオン|PONY CANYON|Lantis|ランティス|Aniplex|アニプレックス|TOHO|東宝|Warner|ワーナー|Victor|ビクター|日本コロムビア|COLUMBIA|徳間|FlyingDog|フライングドッグ)/i;
 // 「革命道中 - On The Way × TVアニメ『ダンダダン』」のようなコラボ表記も作品名なので外す
 const COLLAB_RE = /\s*[×✕]\s*(TVアニメ|テレビアニメ|アニメ|映画|劇場版)?\s*[『「][^』」]+[』」]/g;
+// 文の中の歌声の名前を、うしろの「SV」「V4X」などもつけたまま取り出す（「重音テトSV」）
+function voiceInText(text, canon) {
+  const t = text.normalize("NFKC");
+  const names = [canon, ...Object.entries(VOICE_ALIASES).filter(([, v]) => v === canon).map(([k]) => k)];
+  for (const n of names) {
+    const m = t.match(new RegExp(n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\s?(SV|AI|NT|V4X|V[2-6]|Append|English)?", "i"));
+    if (m) return (m[0].replace(/\s+/g, "")).replace(new RegExp("^" + n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i"), canon);
+  }
+  return null;
+}
 const pickVoiceName = x => { const n = String(x || "").trim(); if (isVoice(n)) return canonicalVoice(n); return null; };
 const TIEIN_RE = /[『「][^』」]{2,}[』」]\s*(?:の)?(?:主題歌|オープニング|エンディング|挿入歌|OP|ED|イメージソング|テーマソング|タイアップ)[^\s　]*/g;
 // HoneyWorks のトレードマークの埴輪「┗|∵|┓」のような、タイトルの飾りの顔文字（曲名の読み取りのじゃまになるので外す）
@@ -486,6 +496,22 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     else if (parsed.coverSinger && parsed.voice) item.v = parsed.voice;
     // 原曲の作者が分かれば表示用に入れておく（原曲が見つかればそちらで上書きされる）
     if (item.pHint) { item.p = item.pHint; item.a = normalize(item.pHint); }
+    // 歌声（重音テトSV など）に歌わせたカバー：歌い手は「重音テトSV（にす）」のように歌声と作った人の両方を出す
+    //  （人が歌った歌ってみたのタイトルにある「feat.初音ミク」は原曲の歌声なので数えない）
+    const tNoFeat = video.title.replace(/(?:feat\.?|ft\.)\s*[^【\[(（/／|｜]*/gi, " ");
+    const humanSung = /歌ってみ|歌いました|歌った|歌って/.test(video.title) && !/歌わせ/.test(video.title);
+    const vName = rawVoice && !humanSung ? voiceInText(tNoFeat, rawVoice) : null;
+    if (vName && (isVoice(item.by) || /cover|カバー|歌わせ|synthesizer ?v|synthv|vocaloid|cevio|utau|\bust\b|svp|voisona|neutrino/i.test(video.title))) {
+      item.v = rawVoice; item.vr = vName;
+      // 作った人：YouTube はチャンネル名。ニコニコはタイトル末尾の【〇〇】や「by 〇〇」に書いてある名前だけ（原曲の作者名とまちがえないように）
+      if (video.src === "youtube") item.by = video.uploader ? singerCore(video.uploader) : "";
+      else {
+        const tailName = (video.title.match(/【([^】]+)】\s*$/) || video.title.match(/\bby\s+([^\s【\[(（]+)\s*$/i) || [])[1] || "";
+        item.by = tailName && !voiceInText(tailName, rawVoice) && !VOICES.some(x => tailName.includes(x)) && !/cover|カバー|vocaloid|synthesizer|ust|svp|ver\b|ver\.|voicevox|neutrino|cevio|utau|short|full|mix|配布|調声/i.test(tailName) ? tailName.trim() : "";
+      }
+      if (item.by && VOICES.some(x => normalize(item.by).includes(normalize(x)))) item.by = "";
+      if (item.by && item.by.split(/\s*(?:×|✕|&|＆|、|,)\s*/).every(x => isVoice(x) || voiceInText(x, rawVoice))) item.by = "";
+    }
   }
   // YouTube の説明文にニコニコの動画へのリンクがあれば覚えておく（転載や、作者自身の再投稿をニコニコ版とまとめるため）
   if (video.src === "youtube") {
@@ -895,6 +921,7 @@ export function linkCovers(items) {
   alignCoverGenres(items);
   // 管理人の手直し（overrides.json の g）は、自動の判定より優先する。原曲を手直ししたら、その歌ってみたも同じジャンルに
   const byIdF = new Map(items.map(i => [i.id, i]));
+  for (const i of items) if (i.kind === "歌ってみた" && i.vr) i.g = "ボカロ";   // 歌声に歌わせたカバーはボカロ
   for (const i of items) if (i.gFixed) i.g = i.gFixed;
   for (const c of items) { const o = c.of && byIdF.get(c.of); if (o && o.gFixed && !c.gFixed) c.g = o.g; }
   fixCreatorNames(items);
@@ -923,7 +950,7 @@ function fixCreatorKeys(items) {
 
 // サイト表示用：必要な項目だけにした軽いデータ
 const unent = s => typeof s === "string" ? s.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'") : s;
-const KEEP = ["id", "src", "url", "title", "t", "kind", "g", "p", "v", "by", "of", "a", "date", "views", "thumb", "ne", "self", "rm", "rv"];
+const KEEP = ["id", "src", "url", "title", "t", "kind", "g", "p", "v", "by", "of", "a", "date", "views", "thumb", "ne", "self", "rm", "rv", "vr"];
 const ALT_KEEP = ["id", "src", "url", "views", "thumb", "ne", "date"];
 // サイト用：まとめた曲（dup）は出さず、代表の曲に alt（もう片方のサイトの投稿）として持たせる。再生数は合計にする
 export const toSite = items => {

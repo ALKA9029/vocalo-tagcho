@@ -302,7 +302,11 @@ function creditEls(i){
   if (i.kind === "歌ってみた"){
     // 複数人で歌っているときは1人ずつ押せるように（押すと、その人がほかの人と歌ったものも含めて表示）
     const names = splitSingers(i.by);
-    const singer = names.length ? el("span",{}, ...joinWho(names, n=>who(n, `${n}の歌ってみたを表示`, singerPerson(n)))) : el("span",{class:"unknown"},"歌い手不明");
+    const people = names.length ? el("span",{}, ...joinWho(names, n=>who(n, `${n}の歌ってみたを表示`, singerPerson(n)))) : null;
+    // 歌声に歌わせたカバーは「重音テトSV（にす）」：歌声（押すとその歌声の曲）と、作った人
+    const singer = i.vr
+      ? el("span",{}, who(i.vr, `${i.v}が歌う曲を表示`, {label:`歌声：${i.v}`, match:x=>x.v===i.v, key:"v:"+i.v}), people ? "（" : null, people, people ? "）" : null)
+      : people || el("span",{class:"unknown"},"歌い手不明");
     return [el("span",{}, singer, artist ? "（原曲：" : null, artist, artist ? "）" : null)];
   }
   if (!artist && !voice) return [el("span",{class:"unknown"},"作者不明")];
@@ -314,6 +318,7 @@ function seg(container, key, options){
     el("button",{"aria-pressed":String(state[key]===val), onclick:()=>applyFilter(()=>state[key]=val)}, label)));
 }
 
+const singerText = x => x.vr ? `${x.vr}${x.by ? `（${x.by}）` : ""}` : (x.by || "歌い手不明");
 const remakeLabel = i => /^\d{4}$/.test(i.rv || "") ? `${i.rv}年版` : "リメイク";
 function related(i){
   const groups = [];
@@ -326,11 +331,11 @@ function related(i){
     const covers = ITEMS.filter(x=>x.kind==="歌ってみた" && x.of===(i.rm && ITEM[i.rm] ? i.rm : i.id));   // リメイクは元の曲の歌ってみたを見せる
     const selfs = covers.filter(x=>x.self);
     if (selfs.length) groups.push(["作者本人のセルフカバー", cap(selfs), x=>x.by || ""]);
-    groups.push(["この曲の歌ってみた", cap(covers.filter(x=>!x.self)), x=>x.by || "歌い手不明"]);
+    groups.push(["この曲の歌ってみた", cap(covers.filter(x=>!x.self)), singerText]);
   } else {
     const o = original(i);
     groups.push(["原曲", o ? [o] : [], x=>creditText(x)]);
-    if (o) groups.push(["ほかの人の歌ってみた", cap(notSelf(ITEMS.filter(x=>x.kind==="歌ってみた" && x.of===o.id))), x=>x.by || "歌い手不明"]);
+    if (o) groups.push(["ほかの人の歌ってみた", cap(notSelf(ITEMS.filter(x=>x.kind==="歌ってみた" && x.of===o.id))), singerText]);
     for (const n of splitSingers(i.by).slice(0, 4)) groups.push([`${n} のほかの歌ってみた`, cap(notSelf(ITEMS.filter(x=>x.kind==="歌ってみた" && splitSingers(x.by).includes(n)))), x=>x.t]);
   }
   const src = i.kind === "本家" ? i : original(i);
