@@ -117545,7 +117545,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=GhRe642nPQs",
   "title": "難聴系男子が倒せない- 鏡音リン for LamazeP",
-  "t": "難聴系男子が倒せない- 鏡音リン for",
+  "t": "難聴系男子が倒せない",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2016-07-04T21:00:01Z",
@@ -136589,7 +136589,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm22151787",
   "title": "愛の詩（V3）-初音ミク for LamazeP",
-  "t": "愛の詩 -初音ミク for LamazeP",
+  "t": "愛の詩",
   "kind": "本家",
   "g": "ボカロ",
   "date": "2013-10-31T00:00:00+09:00",
@@ -136611,12 +136611,11 @@
   ],
   "uploaderId": 2523470,
   "uploader": null,
-  "p": "fullver.",
+  "p": "LamazeP",
   "v": "初音ミク",
   "a": "niconico:2523470",
   "firstSeen": "2026-10-08T14:36:47.416Z",
-  "seed": true,
-  "pFilled": true
+  "seed": true
  },
  {
   "id": "nico:sm22149613",

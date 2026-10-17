@@ -375,6 +375,7 @@ export function fixSinger(by, title) {
 const LABEL_RE = /^(Sony Music|UNIVERSAL MUSIC|KING RECORDS|キングレコード|VAP|avex|ポニーキャニオン|PONY CANYON|Lantis|ランティス|Aniplex|アニプレックス|TOHO|東宝|Warner|ワーナー|Victor|ビクター|日本コロムビア|COLUMBIA|徳間|FlyingDog|フライングドッグ)/i;
 // 「革命道中 - On The Way × TVアニメ『ダンダダン』」のようなコラボ表記も作品名なので外す
 const COLLAB_RE = /\s*[×✕]\s*(TVアニメ|テレビアニメ|アニメ|映画|劇場版)?\s*[『「][^』」]+[』」]/g;
+const pickVoiceName = x => { const n = String(x || "").trim(); if (isVoice(n)) return canonicalVoice(n); return null; };
 const TIEIN_RE = /[『「][^』」]{2,}[』」]\s*(?:の)?(?:主題歌|オープニング|エンディング|挿入歌|OP|ED|イメージソング|テーマソング|タイアップ)[^\s　]*/g;
 // HoneyWorks のトレードマークの埴輪「┗|∵|┓」のような、タイトルの飾りの顔文字（曲名の読み取りのじゃまになるので外す）
 const DECO_RE = /[┗┏└][|｜l]?[∵・][|｜l]?[┓┛┘]/g;
@@ -502,6 +503,14 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     if (m && /[\u3040-\u30ff\u4e00-\u9fff]/.test(m[1]) && item.kind === "本家" && (normalize(item.p || "") === normalize(m[1]) || normalize(item.t || "").startsWith(normalize(m[2]).slice(0, 6)))) {
       item.t = m[1].trim();
       if (normalize(item.p || "") === normalize(m[1])) item.p = "";   // 作者はタグやニコニコ版からあとで補う
+    }
+  }
+  // 「難聴系男子が倒せない- 鏡音リン for LamazeP」の形：「曲名 - 歌声 for 作者」
+  {
+    const m = video.title.match(/^(.+?)\s*[-–—]\s*([^-–—]+?)\s+for\s+(\S[^【\[(（]*?)\s*$/i);
+    if (m && pickVoiceName(m[2])) {
+      item.t = cleanSong(m[1].replace(/[（(][^)）]*[)）]\s*$/, "")).trim() || item.t;
+      if (item.kind === "本家") { item.p = m[3].trim(); if (!item.v) item.v = pickVoiceName(m[2]); }
     }
   }
   // 「" どりーみんチュチュ / Dreamin Chuchu "」の片方だけ残った引用符を外す
