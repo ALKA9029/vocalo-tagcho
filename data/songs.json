@@ -2040,7 +2040,7 @@
   "title": "君の知らない物語 【歌ってみた】JIL / 2026生誕記念",
   "t": "君の知らない物語",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "アニソン",
   "date": "2026-10-15T10:30:23Z",
   "views": 58707,
   "likes": 6131,
@@ -2066,10 +2066,9 @@
   "descHead": "「今夜星を見に行こう」\n\nご本家様：supercell様\nhttps://youtu.be/jpV5jeFlt_E?si=b2fujZKw8Nwt--Bv\nVocal：JIL\n【X】https://x.com/EL6_JIL_\n\nIllustration：飛喃草 様\n【X】https://x.com/hinakusa17\n\nMovie：iu 様\n【X】https://x.com/Iuiu0Iu?s=20\n\nMix：けったろ 様\n【X】https://x.com/kettar0\n\nInst：Gassy 様\n【X】https://x.com/BOOOST_Gassy?s=20\n\n💎 2027年ラ",
   "by": "JIL",
   "pHint": "2026生誕記念",
-  "p": "96neko",
-  "a": "youtube:UC5esQZ48EdT4O6AXrVrkzhA",
-  "firstSeen": "2026-10-15T21:47:28.378Z",
-  "of": "yt:Ll3svdFRyQA"
+  "p": "2026生誕記念",
+  "a": "2026生誕記念",
+  "firstSeen": "2026-10-15T21:47:28.378Z"
  },
  {
   "id": "nico:sm46928595",
@@ -5302,7 +5301,8 @@
   "descHead": "Provided to YouTube by Universal Music Group\n\nBeyond the Clouds, Only Me Downwind · Yorushika\n\nBeyond the Clouds, Only Me Downwind\n\n℗ 2026 UNIVERSAL MUSIC LLC\n\nReleased on: 2026-10-14\n\nProgrammer, Producer, Recordingarranger, Background Vocalist, Composer, Lyricist: N-buna\nVocalist: Suis\nMastering E",
   "p": "Yorushika",
   "a": "youtube:UCabLXblrQG4cO8F9qdd4Xsw",
-  "firstSeen": "2026-10-14T14:14:53.150Z"
+  "firstSeen": "2026-10-14T14:14:53.150Z",
+  "topicHidden": 1
  },
  {
   "id": "yt:XoxFd8Z3DUg",
@@ -19969,7 +19969,7 @@
   "title": "supercell「君の知らない物語」MsCREW | Cinematic AOR Rock Cover by紅櫻/BeniZakulla 化物語エンディングテーマ",
   "t": "君の知らない物語",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "アニソン",
   "date": "2026-10-07T20:47:02Z",
   "views": 9840,
   "likes": 73,
@@ -20011,10 +20011,9 @@
   "descHead": "supercell「君の知らない物語」を\n紅櫻 - Benizakulla が Cinematic AOR Rock でカバー。\n\n静寂に近い夜の空気から始まり、\n深くスモーキーな女性ボーカル、\nメロディックなベース、力強い生ドラム、\n泣くようなギターと煌めくシンセを重ねながら、\n最後の巨大なクライマックスへ。\n\n言えなかった想い。\n届かなかった気持ち。\nそれでも消えない、あの夏の記憶。\n\n原曲の美しいメロディと切なさを大切にしながら、\n紅櫻らしい夜のAOR Rockに仕上げました。\n\n後半の「大好きでした。」から\n最後のリ・エントリーまで、ぜひ聴いてみてください。\n\nVocal : Beni",
   "by": "紅櫻",
   "pHint": "Cinematic AOR Rock",
-  "p": "96neko",
-  "a": "youtube:UC5esQZ48EdT4O6AXrVrkzhA",
-  "firstSeen": "2026-10-11T21:32:19.161Z",
-  "of": "yt:Ll3svdFRyQA"
+  "p": "Cinematic AOR Rock",
+  "a": "cinematicaorrock",
+  "firstSeen": "2026-10-11T21:32:19.161Z"
  },
  {
   "id": "yt:DH-kIFFVKAg",
@@ -53092,7 +53091,8 @@
   "p": "Masayoshi Oishi",
   "a": "youtube:UCyDjbU5RDfEWFyFEtY9Rj4w",
   "firstSeen": "2026-10-16T13:00:38.141Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "yt:bc-jzpMFkIY",
@@ -57371,7 +57371,8 @@
   "p": "Masayoshi Oishi",
   "a": "youtube:UCyDjbU5RDfEWFyFEtY9Rj4w",
   "firstSeen": "2026-10-16T13:00:38.142Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "nico:sm44469704",
@@ -65400,7 +65401,8 @@
   "a": "youtube:UCyDjbU5RDfEWFyFEtY9Rj4w",
   "animeDesc": 1,
   "firstSeen": "2026-10-16T13:00:38.141Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "yt:2eKcgyBLPqE",
@@ -65427,7 +65429,8 @@
   "a": "youtube:UCyDjbU5RDfEWFyFEtY9Rj4w",
   "animeDesc": 1,
   "firstSeen": "2026-10-16T13:00:38.142Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "yt:J4hdiW-V5no",
@@ -68532,7 +68535,8 @@
   "p": "96neko",
   "a": "youtube:UC5esQZ48EdT4O6AXrVrkzhA",
   "firstSeen": "2026-10-15T21:48:42.004Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "yt:NOJGsfygdhE",
@@ -68560,7 +68564,8 @@
   "p": "96neko",
   "a": "youtube:UC5esQZ48EdT4O6AXrVrkzhA",
   "firstSeen": "2026-10-16T13:00:38.145Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "yt:ye8f0sv5ow0",
@@ -69557,7 +69562,7 @@
   "title": "ようこそジャパリパークへ【小春六花・夏色花梨・花隈千冬】",
   "t": "ようこそジャパリパークへ",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "アニソン",
   "date": "2023-04-06T21:31:03+09:00",
   "views": 391975,
   "likes": 4542,
@@ -69579,10 +69584,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-09T17:21:46.700Z",
-  "seed": true,
-  "of": "yt:89JvGZT4MMc",
-  "p": "Masayoshi Oishi",
-  "a": "youtube:UCyDjbU5RDfEWFyFEtY9Rj4w"
+  "seed": true
  },
  {
   "id": "yt:q90SFMi8aUg",
@@ -69640,7 +69642,8 @@
   "p": "Masayoshi Oishi",
   "a": "youtube:UCyDjbU5RDfEWFyFEtY9Rj4w",
   "firstSeen": "2026-10-16T13:00:38.141Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "yt:CPZtZZNr_Ac",
@@ -71225,7 +71228,8 @@
   "p": "Masayoshi Oishi",
   "a": "youtube:UCyDjbU5RDfEWFyFEtY9Rj4w",
   "firstSeen": "2026-10-16T13:00:38.141Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "nico:sm41588089",
@@ -73585,7 +73589,8 @@
   "p": "Masayoshi Oishi",
   "a": "youtube:UCyDjbU5RDfEWFyFEtY9Rj4w",
   "firstSeen": "2026-10-16T13:00:38.142Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "yt:kagoEGKHZvU",
@@ -75941,7 +75946,8 @@
   "p": "Masayoshi Oishi",
   "a": "youtube:UCyDjbU5RDfEWFyFEtY9Rj4w",
   "firstSeen": "2026-10-16T13:00:38.142Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "yt:h1_rC9_A8Pc",
@@ -82348,7 +82354,8 @@
   "p": "Masayoshi Oishi",
   "a": "youtube:UCyDjbU5RDfEWFyFEtY9Rj4w",
   "firstSeen": "2026-10-16T13:00:38.141Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "yt:teaV2O6gTLU",
@@ -82375,7 +82382,8 @@
   "p": "Masayoshi Oishi",
   "a": "youtube:UCyDjbU5RDfEWFyFEtY9Rj4w",
   "firstSeen": "2026-10-16T13:00:38.142Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "yt:W4TOXpA7ktI",
@@ -85747,7 +85755,8 @@
   "a": "youtube:UC5esQZ48EdT4O6AXrVrkzhA",
   "animeDesc": 1,
   "firstSeen": "2026-10-16T13:00:38.146Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "nico:sm38300091",
@@ -98202,7 +98211,8 @@
   "p": "Yorushika",
   "a": "youtube:UCabLXblrQG4cO8F9qdd4Xsw",
   "firstSeen": "2026-10-15T10:16:02.782Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "yt:oplDWPrtOOI",
@@ -98228,7 +98238,8 @@
   "p": "Yorushika",
   "a": "youtube:UCabLXblrQG4cO8F9qdd4Xsw",
   "firstSeen": "2026-10-15T10:16:02.781Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "yt:6fmSl15SCOM",
@@ -98254,7 +98265,8 @@
   "p": "Yorushika",
   "a": "youtube:UCabLXblrQG4cO8F9qdd4Xsw",
   "firstSeen": "2026-10-15T10:16:02.782Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "yt:romqp_SB4tU",
@@ -100999,7 +101011,8 @@
   "p": "Yorushika",
   "a": "youtube:UCabLXblrQG4cO8F9qdd4Xsw",
   "firstSeen": "2026-10-15T10:16:02.781Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "yt:iC3pkl1nUVM",
@@ -101025,7 +101038,8 @@
   "p": "Yorushika",
   "a": "youtube:UCabLXblrQG4cO8F9qdd4Xsw",
   "firstSeen": "2026-10-15T10:16:02.782Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "yt:p0_udWUi1HA",
@@ -101051,7 +101065,8 @@
   "p": "Yorushika",
   "a": "youtube:UCabLXblrQG4cO8F9qdd4Xsw",
   "firstSeen": "2026-10-15T10:16:02.781Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "yt:JxiCAEvcF5s",
@@ -101077,7 +101092,8 @@
   "p": "Yorushika",
   "a": "youtube:UCabLXblrQG4cO8F9qdd4Xsw",
   "firstSeen": "2026-10-15T10:16:02.782Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "yt:s4vJjGFMUxE",
@@ -101103,7 +101119,8 @@
   "p": "Yorushika",
   "a": "youtube:UCabLXblrQG4cO8F9qdd4Xsw",
   "firstSeen": "2026-10-15T10:16:02.782Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "yt:CpAUv-DMTd0",
@@ -101128,7 +101145,8 @@
   "p": "Yorushika",
   "a": "youtube:UCabLXblrQG4cO8F9qdd4Xsw",
   "firstSeen": "2026-10-15T10:16:02.781Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "yt:JvDVIpf8OCQ",
@@ -101154,7 +101172,8 @@
   "p": "Yorushika",
   "a": "youtube:UCabLXblrQG4cO8F9qdd4Xsw",
   "firstSeen": "2026-10-15T10:16:02.782Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "yt:E6iZ-xZ8x50",
@@ -101207,7 +101226,8 @@
   "p": "Masayoshi Oishi",
   "a": "youtube:UCyDjbU5RDfEWFyFEtY9Rj4w",
   "firstSeen": "2026-10-15T21:48:42.005Z",
-  "seed": true
+  "seed": true,
+  "topicHidden": 1
  },
  {
   "id": "nico:sm33986985",
@@ -114735,7 +114755,7 @@
   "title": "【ウォルピス社】ようこそジャパリパークへを歌ってみた【提供】",
   "t": "ようこそジャパリパークへ",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "アニソン",
   "date": "2017-04-24T19:30:00+09:00",
   "views": 2263262,
   "likes": 1110,
@@ -114753,10 +114773,7 @@
   "uploader": null,
   "by": "ウォルピス社",
   "firstSeen": "2026-10-08T15:10:08.775Z",
-  "seed": true,
-  "of": "yt:89JvGZT4MMc",
-  "p": "Masayoshi Oishi",
-  "a": "youtube:UCyDjbU5RDfEWFyFEtY9Rj4w"
+  "seed": true
  },
  {
   "id": "nico:sm31082554",
@@ -164657,7 +164674,7 @@
   "title": "【おりひめ☆】合唱「君の知らない物語」【ぱわーーー】",
   "t": "君の知らない物語",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "アニソン",
   "date": "2010-02-13T00:21:12+09:00",
   "views": 53986,
   "likes": 6,
@@ -164678,10 +164695,7 @@
   "uploader": null,
   "by": "ぱわーーー",
   "firstSeen": "2026-10-09T17:21:46.699Z",
-  "seed": true,
-  "of": "yt:Ll3svdFRyQA",
-  "p": "96neko",
-  "a": "youtube:UC5esQZ48EdT4O6AXrVrkzhA"
+  "seed": true
  },
  {
   "id": "nico:sm9639869",
@@ -166138,7 +166152,7 @@
   "title": "君の知らない物語　　歌ってみた（vip店長）",
   "t": "君の知らない物語",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "アニソン",
   "date": "2009-09-25T20:03:37+09:00",
   "views": 2540816,
   "likes": 580,
@@ -166158,10 +166172,7 @@
   "uploader": null,
   "by": "(vip店長)",
   "firstSeen": "2026-10-08T15:10:08.746Z",
-  "seed": true,
-  "of": "yt:Ll3svdFRyQA",
-  "p": "96neko",
-  "a": "youtube:UC5esQZ48EdT4O6AXrVrkzhA"
+  "seed": true
  },
  {
   "id": "yt:0GLSJHTZDuM",

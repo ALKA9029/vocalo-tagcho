@@ -888,6 +888,8 @@ function markRemakes(items) {
 
 // 「〇〇 - Topic」の自動生成音源（埋め込みで再生できず、曲名もローマ字のことが多い）は、そのアーティストの公式チャンネルの曲がサイトにあれば出さない
 // （同じ曲の公式動画は毎日の Topic の差しかえ・公式チャンネルの取り込みで入る）
+// Topic チャンネルのローマ字のアーティスト名 → 公式チャンネル名
+const TOPIC_ALIAS = { "yorushika": "ヨルシカ", "masayoshioishi": "オーイシマサヨシ", "96neko": "96猫", "chotokkyu": "超特急", "yuuri": "優里" };
 function hideTopicWithOfficial(items) {
   const chNames = new Set();
   for (const i of items) if (i.src === "youtube" && i.kind === "本家" && i.uploader && !/ - Topic$/.test(i.uploader)) chNames.add(normalize(i.uploader));
@@ -896,7 +898,8 @@ function hideTopicWithOfficial(items) {
     delete i.topicHidden;
     if (i.src !== "youtube" || i.kind !== "本家" || !/ - Topic$/.test(i.uploader || "")) continue;
     const artist = normalize(i.uploader.replace(/ - Topic$/, ""));
-    if (artist.length >= 3 && names.some(n => n.includes(artist))) i.topicHidden = 1;
+    const alias = normalize(TOPIC_ALIAS[artist] || "");
+    if ((artist.length >= 3 && names.some(n => n.includes(artist))) || (alias && names.some(n => n.includes(alias)))) i.topicHidden = 1;
   }
 }
 
