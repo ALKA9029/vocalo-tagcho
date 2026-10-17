@@ -54878,8 +54878,8 @@
   "url": "https://www.nicovideo.jp/watch/sm44889295",
   "title": "【駅名替え歌】楠志紀 (駅名で「クスシキ」)",
   "t": "クスシキ",
-  "kind": "本家",
-  "g": "ボカロ",
+  "kind": "歌ってみた",
+  "g": "アニソン",
   "date": "2025-04-18T18:06:04+09:00",
   "views": 237,
   "likes": 4,
@@ -54899,12 +54899,14 @@
   ],
   "uploaderId": 3942398,
   "uploader": null,
-  "p": "駅名替え歌",
+  "p": "Mrs. GREEN APPLE",
   "a": "niconico:3942398",
   "firstSeen": "2026-10-10T07:39:24.120Z",
   "seed": true,
-  "pFilled": false,
-  "pFromTag": true
+  "ofLocked": true,
+  "gFixed": "アニソン",
+  "of": "yt:RCaTLn4qoz4",
+  "by": "駅名替え歌"
  },
  {
   "id": "yt:gWMzr7jNmak",
