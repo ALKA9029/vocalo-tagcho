@@ -1699,7 +1699,8 @@
   "added": "2026-10-16T21:47:12.648Z",
   "name": "Radwimps - Topic",
   "genre": "J-POP",
-  "lastHit": "2026-10-15T15:00:00Z"
+  "lastHit": "2026-10-15T15:00:00Z",
+  "pinned": true
  },
  {
   "id": "UCi_AquB9uaI3-9xXkuWG7IQ",
@@ -2094,7 +2095,8 @@
   "added": "2026-10-16T21:47:12.648Z",
   "name": "ファントムシータ",
   "genre": "J-POP",
-  "lastHit": "2026-10-11T10:00:10Z"
+  "lastHit": "2026-10-11T10:00:10Z",
+  "pinned": true
  },
  {
   "id": "UC8eq3M3Yft3FUgxEX6lOZMg",
@@ -3036,7 +3038,7 @@
   "added": "2026-10-16T21:47:12.648Z",
   "name": "μ's - Topic",
   "genre": "J-POP",
-  "lastHit": "2026-05-06T10:00:49Z",
+  "lastHit": "2026-05-06T10:01:36Z",
   "pinned": true
  },
  {
