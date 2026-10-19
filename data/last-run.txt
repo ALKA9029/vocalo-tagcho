@@ -1,5 +1,5 @@
-2026-10-18T21:45:48.916Z
-ニコニコ「ボカロ新曲」1ページ目: 73件
+2026-10-19T13:19:55.257Z
+ニコニコ「ボカロ新曲」1ページ目: 95件
 ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」1ページ目: 100件
 ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」2ページ目: 100件
 ニコニコ「ボカロ 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」3ページ目: 100件
@@ -27,52 +27,18 @@
 ニコニコ「歌ってみた 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」4ページ目: 100件
 ニコニコ「歌ってみた 直近6か月の人気（再生数の更新用。1か月以内の曲は追加もする）」5ページ目: 42件
 YouTube急上昇 1ページ目: 30件
-YouTube新着検索「MV」1ページ目: 50件
-YouTube新着検索「Music Video」1ページ目: 50件
-YouTube新着検索「アニメ主題歌」1ページ目: 50件
-YouTube新着検索「歌ってみた」1ページ目: 50件
-YouTube新着検索「cover」1ページ目: 50件
-YouTube新着検索「ボカロ」1ページ目: 50件
-YouTube新着検索「オリジナル曲」1ページ目: 50件
-YouTube新着検索「ボカロ feat.」1ページ目: 50件
-YouTube新着検索「ボカロオリジナル」1ページ目: 50件
-YouTube新着検索「韓国語のボカロ」1ページ目: 34件
-自動フォロー: 400チャンネル中 400件を確認、新着 852本のうち曲として追加 50本
-公式チャンネルの人気曲「Aimer Official YouTube Channel」: 215本のうち 10曲を追加（Aimer 『I beg you』（主演：浜辺美波 / 劇場／Aimer 『茜さす』MUSIC VIDEO（FULL ve／Aimer 『Ref:rain』MUSIC VIDEO(5t…）
-公式チャンネルの人気曲「Reol」: 75本のうち 10曲を追加（[MV] Reol - 'サイサキ / Saisaki' M／[MV] Reol - 'ゆーれいずみー / Phanto(／[MV] Reol - '激白 / Gekihaku' Mu…）
-公式チャンネルの人気曲「中島美嘉 Official YouTube Channel」: 194本のうち 10曲を追加（中島美嘉「雪の華」Music Video／中島美嘉 「ORION」Music Video／中島美嘉「GLAMOROUS SKY」Music Video…）
-公式チャンネルの人気曲「EBiDAN」: 82本のうち 8曲を追加（EBiDAN(恵比寿学園男子部) 「好きだから走れ！！！！！／"Everyday, EBiDAN" 超特急 - My Bu／"Everyday, EBiDAN" 原因は自分にある。 -…）
-公式チャンネルの人気曲「NMB48」: 300本のうち 1曲を追加（NMB48 - チューストライク Official MV…）
-公式チャンネルの人気曲「Bz」: 281本のうち 10曲を追加（B'z / LOVE PHANTOM／稲葉浩志 / タッチ／B'z / 愛のままにわがままに 僕は君だけを傷つけない…）
-公式チャンネルの人気曲「TOOBOE」: 251本のうち 10曲を追加（痛いの痛いの飛んでいけ / TOOBOE／錠剤 / TOOBOE／あなたはかいぶつ / TOOBOE…）
-公式チャンネルの人気曲「加賀美 ハヤト/Hayato Kagami」: 300本のうち 3曲を追加（加賀美ハヤト – キャリィ（1st Mini Album「U／加賀美ハヤト – フメツフハイ（1st Mini Album／加賀美ハヤト – Luminous（1st Mini Alb…）
-公式チャンネルの人気曲: 8チャンネルを見て、62曲を追加
+YouTube新着検索: 手動の実行なので飛ばします（検索回数の節約）
+自動フォロー: 400チャンネル中 400件を確認、新着 840本のうち曲として追加 45本
+公式チャンネルの人気曲「DreamsComeTrueVEVO」: 176本のうち 10曲を追加（DREAMS COME TRUE - 「大阪LOVER」／DREAMS COME TRUE - 「何度でも」／DREAMS COME TRUE - 「やさしいキスをして」…）
+公式チャンネルの人気曲「Victor Entertainment」: 300本のうち 5曲を追加（sympathy - さよなら王子様 (Official M／ラブリーサマーちゃん「あなたは煙草　私はシャボン」Music／杉本彩「Snake Eyes ダンス編｜スネーク・アイズ」…）
+公式チャンネルの人気曲「WHITE JAM Official」: 300本のうち 1曲を追加（I Miss You - WHITE JAM (Offici…）
+公式チャンネルの人気曲「Kawaguchi Yurina Official」: 145本のうち 2曲を追加（Kawaguchi Yurina - "Look At Me／Kawaguchi Yurina - "Cherish" M…）
+公式チャンネルの人気曲「センラ / SENRA」: 300本のうち 10曲を追加（オランジェット / センラ - Orangette / SE／Werewolf  / センラ - Werewolf / S／【MV】ティラミスユー/ センラ【halyosy】…）
+公式チャンネルの人気曲: 5チャンネルを見て、28曲を追加
 歌ってみたのリクエスト: 全1件、今回確認0件、追加0件
-ニコニコの再生数を更新: 68件
-原曲さがし: 15曲を調べて、原曲を3曲見つけた
-原曲さがし（YouTube）「ロボットさん」→ 見つからず
-原曲さがし（YouTube）「女のまごころ」→ 見つからず
-原曲さがし（YouTube）「セレナーデ」→ 見つからず
-原曲さがし（YouTube）「サクラメイキュウ」→ サクラメイキュウ（Kanon Wakeshima - Topic）
-原曲さがし（YouTube）「III」→ I I I（Houshou Marine - Topic）
-原曲さがし（YouTube）「なとり」→ 見つからず
-原曲さがし（YouTube）「未来予想図II」→ DREAMS COME TRUE - 未来予想図Ⅱ(from DWL2007 Live Ver.)（DreamsComeTrueVEVO）
-原曲さがし（YouTube）「StarRingChild」→ Aimer 『StarRingChild』MUSIC VIDEO（FULL ver.）（Aimer Official YouTube Channel）
-原曲さがし（YouTube）「ぼくのフレンド」→ みゆはん「ぼくのフレンド」-TVサイズ-（TVアニメ『けものフレンズ』EDテーマ）　MV（Victor Entertainment）
-原曲さがし（YouTube）「太陽がくれた季節」→ 見つからず
-原曲さがし（YouTube）「キューティーハニー歌いました」→ 見つからず
-原曲さがし（YouTube）「COMPLEX JURI」→ 見つからず
-原曲さがし（YouTube）「ロメオ」→ 見つからず
-原曲さがし（YouTube）「TOKIO JURI」→ 見つからず
-原曲さがし（YouTube）「雪、無音、窓辺にて」→ 見つからず
-原曲さがし（YouTube）「点描の唄/Mrs. GREEN APPLE」→ 見つからず
-原曲さがし（YouTube）「INMANAI KING」→ 見つからず
-原曲さがし（YouTube）「接吻」→ 接吻（Original Love - Topic）
-原曲さがし（YouTube）「. 悠佑」→ 見つからず
-原曲さがし（YouTube）「SNS総再生3000万回突破の話題の中学生歌姫! 紡ぐ」→ 見つからず
-原曲さがし（YouTube）: 20曲を調べて、原曲を6曲見つけた
-タイトルを更新: The Beginning ／ 騎士X - Knight X - 【歌ってみた】 → The Beginning ／ 騎士X - Knight X -  （しゆん×タケヤキ翔）【歌ってみた】
-タイトルを更新: 【12時過ぎても帰らないシンデレラ】うみろ feat.可不 → 【12時過ぎても帰らないシンデレラ】うみろ feat. KAFU
-YouTubeの再生数を更新: 2893件（日本の曲ではないので外す: 0件）
+ニコニコの再生数を更新: 87件
+原曲さがし: 12曲を調べて、原曲を2曲見つけた
+原曲さがし（YouTube）: 手動の実行なので飛ばします（検索回数の節約）
+YouTubeの再生数を更新: 3085件（日本の曲ではないので外す: 0件）
 自動フォローのチャンネル: 400件（ボカロの本家 200件・その他 200件）
-保存しました: data/songs.json（全6159件、うち歌ってみたの原曲ひもづけ 1152件）
+保存しました: data/songs.json（全6261件、うち歌ってみたの原曲ひもづけ 1158件）

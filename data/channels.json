@@ -8,6 +8,14 @@
   "pinned": true
  },
  {
+  "id": "UCAOhUv73jM5iCpOhuJOQzxA",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "KAMITSUBAKI STUDIO",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-18T10:00:07Z",
+  "pinned": true
+ },
+ {
   "id": "UCOTR1tcOAhjgi6YukrPpZxg",
   "added": "2026-10-15T10:07:18.046Z",
   "name": "まふまふちゃんねる",
@@ -111,6 +119,13 @@
   "lastHit": "2026-10-15T11:00:17Z"
  },
  {
+  "id": "UCwAMSiM12qwneXp3cjGQCPg",
+  "added": "2026-10-19T13:19:55.145Z",
+  "name": "しーらかんす🐟",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-15T11:00:14Z"
+ },
+ {
   "id": "UCAaGaynFpku5cAx6OOSrW-w",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "HoneyWorks OFFICIAL",
@@ -154,6 +169,14 @@
   "name": "すずみや",
   "genre": "ボカロ",
   "lastHit": "2026-10-13T10:15:48Z"
+ },
+ {
+  "id": "UCMMv7Nh_cjUnsz6nsdJtqlw",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "廃原メモリ / Haibara memory",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-13T10:00:36Z",
+  "pinned": true
  },
  {
   "id": "UC7hXVHFmyaDT3SNAiQJ4j7Q",
@@ -386,14 +409,6 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "ボカロ",
   "lastHit": "2026-10-09T09:00:31Z",
-  "pinned": true
- },
- {
-  "id": "UCAOhUv73jM5iCpOhuJOQzxA",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "KAMITSUBAKI STUDIO",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-09T09:00:29Z",
   "pinned": true
  },
  {
@@ -968,14 +983,6 @@
   "name": "시청자",
   "genre": "ボカロ",
   "lastHit": "2025-03-09T10:24:42Z",
-  "pinned": true
- },
- {
-  "id": "UCMMv7Nh_cjUnsz6nsdJtqlw",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "廃原メモリ / Haibara memory",
-  "genre": "ボカロ",
-  "lastHit": "2025-02-25T10:00:06Z",
   "pinned": true
  },
  {
@@ -1555,11 +1562,25 @@
   "pinned": true
  },
  {
-  "id": "UCq6ENGh23SO0wWD67eRTGUw",
-  "added": "2026-10-10T07:39:29.506Z",
-  "name": "Mikito-P - Topic",
-  "genre": "ボカロ",
-  "lastHit": "2020-04-15T00:41:33Z",
+  "id": "UCNMbL86u5LBeO_BWHp5pJ5g",
+  "added": "2026-10-13T21:45:48.810Z",
+  "name": "Element Sicks【EL6】",
+  "genre": "J-POP",
+  "lastHit": "2026-10-19T10:01:26Z"
+ },
+ {
+  "id": "UCApV075i5Vc6aUg9j8WV2oQ",
+  "added": "2026-10-19T13:19:55.145Z",
+  "name": "GNJB - Topic",
+  "genre": "J-POP",
+  "lastHit": "2026-10-18T15:00:16Z"
+ },
+ {
+  "id": "UCsSUATrnXqj4lI71ABdJ7_w",
+  "name": "ブラフラ【公式】 - BLACK FLAP -",
+  "added": "2026-10-09T12:06:54.468Z",
+  "genre": "J-POP",
+  "lastHit": "2026-10-18T14:27:10Z",
   "pinned": true
  },
  {
@@ -1584,6 +1605,20 @@
   "name": "QuonTama Ch. 久遠たま",
   "genre": "アニソン",
   "lastHit": "2026-10-18T11:00:09Z"
+ },
+ {
+  "id": "UC6qVAJzxF5kSN_UUFSdODiQ",
+  "added": "2026-10-19T13:19:55.145Z",
+  "name": "MAZZEL - Topic",
+  "genre": "J-POP",
+  "lastHit": "2026-10-18T10:00:37Z"
+ },
+ {
+  "id": "UCSkg7Vl7_7hbJjLwnjA-6sg",
+  "added": "2026-10-17T01:15:03.872Z",
+  "name": "Ryo Higuchi",
+  "genre": "J-POP",
+  "lastHit": "2026-10-18T09:00:10Z"
  },
  {
   "id": "UC9DsUroR0zageG7qFxHT68Q",
@@ -1635,7 +1670,8 @@
   "added": "2026-10-18T21:45:48.802Z",
   "name": "WHITE JAM Official",
   "genre": "J-POP",
-  "lastHit": "2026-10-17T12:00:04Z"
+  "lastHit": "2026-10-17T12:00:04Z",
+  "pinned": true
  },
  {
   "id": "UCV8slsLG3_GKRxjpg8NVqXg",
@@ -1651,6 +1687,13 @@
   "name": "夕凪機 -YUNAGI- / 罪十罰 from 少女革命計画",
   "genre": "J-POP",
   "lastHit": "2026-10-17T11:00:15Z"
+ },
+ {
+  "id": "UCUoh-YtyEGCUNEFzBJp5sFA",
+  "added": "2026-10-17T21:45:11.252Z",
+  "name": "シータピアノ",
+  "genre": "アニソン",
+  "lastHit": "2026-10-17T11:00:12Z"
  },
  {
   "id": "UCpfwRncr8S0S3YosR52PX2w",
@@ -1687,13 +1730,6 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "アニソン",
   "lastHit": "2026-10-17T10:00:23Z"
- },
- {
-  "id": "UCNMbL86u5LBeO_BWHp5pJ5g",
-  "added": "2026-10-13T21:45:48.810Z",
-  "name": "Element Sicks【EL6】",
-  "genre": "J-POP",
-  "lastHit": "2026-10-17T10:00:01Z"
  },
  {
   "id": "UChsqu8g9SRU9GDvw4EExTyQ",
@@ -1833,7 +1869,8 @@
   "added": "2026-10-12T21:33:25.769Z",
   "name": "センラ / SENRA",
   "genre": "J-POP",
-  "lastHit": "2026-10-16T10:00:35Z"
+  "lastHit": "2026-10-16T10:00:35Z",
+  "pinned": true
  },
  {
   "id": "UCa7NqDn9JjAaxSvLbWE3tZg",
@@ -1871,6 +1908,13 @@
   "name": "親子ユニット ドラゴンエンジェル(ドラエン)",
   "genre": "J-POP",
   "lastHit": "2026-10-16T08:01:27Z"
+ },
+ {
+  "id": "UCfICTP3ps3JNVkdqzI7J8HA",
+  "added": "2026-10-19T13:19:55.145Z",
+  "name": "TsukishiroYashiro Ch. つきしろ やしろ。【とぅるりぷ】",
+  "genre": "J-POP",
+  "lastHit": "2026-10-16T08:00:35Z"
  },
  {
   "id": "UCTh7ytsDGf0ev5S1YyDRHCA",
@@ -1932,13 +1976,6 @@
   "lastHit": "2026-10-15T11:00:08Z"
  },
  {
-  "id": "UCUoh-YtyEGCUNEFzBJp5sFA",
-  "added": "2026-10-17T21:45:11.252Z",
-  "name": "シータピアノ",
-  "genre": "J-POP",
-  "lastHit": "2026-10-15T11:00:00Z"
- },
- {
   "id": "UCMIGjOcoNHGP6lqzkqkOssA",
   "added": "2026-10-15T21:48:53.889Z",
   "name": "JIL【EL6】",
@@ -1987,7 +2024,8 @@
   "added": "2026-10-18T21:45:48.802Z",
   "name": "Kawaguchi Yurina Official",
   "genre": "J-POP",
-  "lastHit": "2026-10-14T15:00:25Z"
+  "lastHit": "2026-10-14T15:00:25Z",
+  "pinned": true
  },
  {
   "id": "UCdNE9sEPDrLYhz4OoE8_20A",
@@ -2217,13 +2255,6 @@
   "name": "ひろのぶ",
   "genre": "アニソン",
   "lastHit": "2026-10-12T10:00:54Z"
- },
- {
-  "id": "UCSkg7Vl7_7hbJjLwnjA-6sg",
-  "added": "2026-10-17T01:15:03.872Z",
-  "name": "Ryo Higuchi",
-  "genre": "J-POP",
-  "lastHit": "2026-10-12T10:00:38Z"
  },
  {
   "id": "UCFvSFbT8okMrpuFxBEIB2lg",
@@ -2503,6 +2534,14 @@
   "name": "雨乃こさめ【シクフォニ】",
   "genre": "J-POP",
   "lastHit": "2026-10-10T08:00:11Z"
+ },
+ {
+  "id": "UCGGJd1m4lzDzYAqjVYLI8MA",
+  "added": "2026-10-19T13:19:55.145Z",
+  "name": "Rika Chan",
+  "genre": "J-POP",
+  "lastHit": "2026-10-10T04:55:20Z",
+  "pinned": true
  },
  {
   "id": "UCgUCsArNN7sOklsjh0turRQ",
@@ -2811,14 +2850,6 @@
   "lastHit": "2026-10-07T11:00:07Z"
  },
  {
-  "id": "UCsSUATrnXqj4lI71ABdJ7_w",
-  "name": "ブラフラ【公式】 - BLACK FLAP -",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "J-POP",
-  "lastHit": "2026-10-07T10:30:30Z",
-  "pinned": true
- },
- {
   "id": "UC1vawzfbCnRpHT9SJ5pHlHw",
   "name": "赤城ウェン / Akagi Wen【にじさんじ】",
   "added": "2026-10-09T12:06:54.468Z",
@@ -3007,33 +3038,5 @@
   "name": "美古途 -MIKOTO- / 罪十罰 from 少女革命計画",
   "genre": "J-POP",
   "lastHit": "2026-10-04T11:14:55Z"
- },
- {
-  "id": "UCE43wCNYRrIaxsxc0Fhi0CQ",
-  "name": "ぶいみく / 444ppi",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "J-POP",
-  "lastHit": "2026-10-04T10:39:37Z"
- },
- {
-  "id": "UChd0HOPtnawoLdlDwA6HpAQ",
-  "name": "🎧イケメン彼氏研究所",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "J-POP",
-  "lastHit": "2026-10-04T10:00:30Z"
- },
- {
-  "id": "UCjooy4G0O8D-4KkE1SWr5Jg",
-  "added": "2026-10-10T07:39:29.506Z",
-  "name": "ファム・ファタル - (f)EMME FATALE music-channel",
-  "genre": "J-POP",
-  "lastHit": "2026-10-04T10:00:18Z"
- },
- {
-  "id": "UCCyBj7kgaiw_jWQ0uQOUDJQ",
-  "added": "2026-10-12T11:09:58.604Z",
-  "name": "カラオケキー検索",
-  "genre": "J-POP",
-  "lastHit": "2026-10-04T10:00:09Z"
  }
 ]
