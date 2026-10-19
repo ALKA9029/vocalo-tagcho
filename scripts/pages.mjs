@@ -92,6 +92,22 @@ const coversOf = new Map();
 for (const i of items) if (i.kind === "歌ってみた" && i.of && byId.has(i.of)) (coversOf.get(i.of) || coversOf.set(i.of, []).get(i.of)).push(i);
 for (const list of coversOf.values()) list.sort((a, b) => (b.self || 0) - (a.self || 0) || byNewest(a, b));
 
+// ---------- シェア用の画像とボタン ----------
+// XなどでURLを貼ったときの画像。YouTubeは大きめのサムネ、ニコニコは小さいサムネなので小さいカード、画像がないページはサイト共通の画像
+const OG_DEFAULT = SITE + "/assets/og.png";
+function ogImage(src) {
+  const yt = String(src || "").match(/^https:\/\/i\.ytimg\.com\/vi\/([\w-]{11})\//);
+  return yt ? `https://i.ytimg.com/vi/${yt[1]}/hqdefault.jpg` : src || "";
+}
+function ogMeta(image) {
+  const img = ogImage(image) || OG_DEFAULT;
+  const big = img === OG_DEFAULT || /i\.ytimg\.com/.test(img);
+  return `<meta property="og:image" content="${esc(img)}">${img === OG_DEFAULT ? `\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">` : ""}
+<meta name="twitter:card" content="${big ? "summary_large_image" : "summary"}">`;
+}
+// Xでシェア・リンクをコピー（スマホでは共有メニュー）のボタン
+const shareRow = (text, url) => `<p class="share"><a class="btn" href="https://x.com/intent/post?text=${encodeURIComponent(text)}&amp;url=${encodeURIComponent(SITE + url)}&amp;hashtags=TagTune" target="_blank" rel="noopener">𝕏 でシェア</a><button type="button" class="btn" data-share="${esc(SITE + url)}" data-text="${esc(text)}">🔗 リンクをコピー</button></p>`;
+
 // ---------- ページの外枠 ----------
 function page({ title, description, url, image, body, jsonld, crumbs = [] }) {
   return `<!doctype html>
@@ -107,7 +123,7 @@ function page({ title, description, url, image, body, jsonld, crumbs = [] }) {
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${SITE}${url}">
-${image ? `<meta property="og:image" content="${esc(image)}">\n<meta name="twitter:card" content="summary_large_image">` : `<meta name="twitter:card" content="summary">`}
+${ogMeta(image)}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;700&family=DM+Mono&display=swap">
 <link rel="stylesheet" href="/assets/page.css">
@@ -179,6 +195,7 @@ function songPage(i) {
       ${i.alt ? "" : `<a class="btn${firstPlay ? "" : " primary"}" href="${esc(i.url)}" target="_blank" rel="noopener">${srcName(i)}で見る ↗</a>`}
       <a class="btn" href="${playUrl(i.id)}">TagTuneでタグをつける</a>
     </p>
+    ${shareRow(`「${i.t}」${i.p ? ` / ${i.p}` : ""}${covers.length ? `｜歌ってみた${covers.length}件と` : "｜"}みんなの印象タグ`, songUrl(i.id))}
     ${i.alt ? `<p class="meta">動画サイトで開く：${sourcesOf(i).map(v => `<a href="${esc(v.url)}" target="_blank" rel="noopener">${srcName(v)} ↗</a>`).join("　")}</p>` : ""}
   </div>
 </header>
@@ -223,7 +240,7 @@ ${others.length ? `
   const jsonld = { "@context": "https://schema.org", "@type": "MusicRecording", name: i.t, url: SITE + songUrl(i.id),
     ...(i.p ? { byArtist: { "@type": "MusicGroup", name: i.p } } : {}), ...(i.date ? { datePublished: i.date.slice(0, 10) } : {}),
     ...(thumbOf(i) ? { image: thumbOf(i) } : {}), genre: i.g };
-  return page({ title, description, url: songUrl(i.id), image: thumbOf(i), body, jsonld,
+  return page({ title, description, url: songUrl(i.id), image: sourcesOf(i).find(v => /i\.ytimg\.com/.test(v.thumb || ""))?.thumb || thumbOf(i), body, jsonld,
     crumbs: [...(c ? [[c.name, c.url]] : []), [i.t]] });
 }
 
@@ -236,6 +253,7 @@ function creatorPage(a, c) {
 <header>
   <h1>${esc(c.name)}</h1>
   <p class="meta"><span>${c.songs.length}曲</span>${nCovers ? `<span>歌ってみた${nCovers}件</span>` : ""}</p>
+  ${shareRow(`${c.name}の曲一覧（${c.songs.length}曲）`, c.url)}
 </header>
 <section>
   <h2>曲一覧（新しい順）</h2>
@@ -259,6 +277,7 @@ function tagPage(tag) {
   <h1>「${esc(tag)}」な曲</h1>
   <p class="note">聴いた人が「${esc(tag)}」のタグをつけた曲を、票の多い順に並べています。</p>
   <p class="actions"><a class="btn primary" href="/?tag=${encodeURIComponent(tag)}">TagTuneで「${esc(tag)}」の曲を聴く</a></p>
+  ${shareRow(`みんなが「${tag}」と感じた曲の一覧`, tagUrl(tag))}
 </header>
 <section>
   <h2>曲一覧${list.length ? `（${list.length}曲）` : ""}</h2>

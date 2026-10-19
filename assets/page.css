@@ -41,6 +41,8 @@ section{display:flex;flex-direction:column;gap:10px}
 .badge.genre{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .badge.self{border-color:var(--cover);color:var(--cover)}
 .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.share{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.share .btn{font-size:13px;padding:5px 14px}
 .btn{display:inline-flex;align-items:center;gap:6px;font-size:14px;text-decoration:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 16px}
 .btn:hover{border-color:var(--accent);color:var(--accent)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}

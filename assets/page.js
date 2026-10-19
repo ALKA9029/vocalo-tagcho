@@ -82,3 +82,18 @@
     btn.disabled = false;
   });
 })();
+
+// 「リンクをコピー」：スマホなどの共有メニューが使えるときはそれを開き、使えないときはURLをコピー
+document.addEventListener("click", async e => {
+  const b = e.target.closest("[data-share]");
+  if (!b) return;
+  const url = b.dataset.share, text = b.dataset.text || document.title;
+  if (navigator.share && matchMedia("(pointer: coarse)").matches) {
+    try { await navigator.share({ title: document.title, text, url }); } catch {}
+    return;
+  }
+  const label = b.textContent;
+  try { await navigator.clipboard.writeText(url); b.textContent = "✓ コピーしたよ"; }
+  catch { window.prompt("このURLをコピーしてね", url); }
+  setTimeout(() => { b.textContent = label; }, 1800);
+});
