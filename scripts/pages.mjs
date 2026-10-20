@@ -327,7 +327,7 @@ for (const i of songs) { await put(`song/${songSlug(i.id)}/index.html`, songPage
 // まとめた曲のもう片方のページ（前に作ったURL）は、代表の曲のページへ移動させる
 for (const i of songs) for (const v of [...(i.alt || []), ...(i.al || []).map(id => ({ id }))]) {
   const to = songUrl(i.id);
-  await put(`song/${songSlug(v.id)}/index.html`, `<!doctype html><html lang="ja"><head><meta charset="utf-8"><title>${esc(i.t)} - TagTune</title><link rel="canonical" href="${SITE}${to}"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0; url=${to}"></head><body><p><a href="${to}">「${esc(i.t)}」のページへ</a></p></body></html>\n`);
+  await put(`song/${songSlug(v.id)}/index.html`, `<!doctype html><html lang="ja"><head><meta charset="utf-8"><title>${esc(i.t)} - TagTune</title><link rel="canonical" href="${SITE}${to}"><meta name="robots" content="noindex"><meta property="og:title" content="${esc(i.t)}${i.p ? ` / ${esc(i.p)}` : ""} - TagTune"><meta property="og:url" content="${SITE}${to}">${ogMeta(sourcesOf(i).find(x => /i\.ytimg\.com/.test(x.thumb || ""))?.thumb || thumbOf(i)).replace(/\n/g, "")}<meta http-equiv="refresh" content="0; url=${to}"></head><body><p><a href="${to}">「${esc(i.t)}」のページへ</a></p></body></html>\n`);
 }
 for (const [a, c] of creators) { await put(`p/${creatorSlug(a)}/index.html`, creatorPage(a, c)); urls.push(c.url); }
 for (const t of TAGS) { await put(`tag/${TAG_SLUG[t]}/index.html`, tagPage(t)); urls.push(tagUrl(t)); }
@@ -363,24 +363,28 @@ await put("tag/index.html", tagIndex());
     return fit([head, "", `「${i.t}」${who(i)}`, `${head.startsWith("📅") ? "" : `${(i.date || "").slice(0, 4)}年の曲・`}${fmtViews(i.views)}回再生${n ? `・歌ってみた${n}件` : ""}`, tagLine(i.id), "", SITE + songUrl(i.id), tags]);
   };
   const taken = new Set();
+  // その日のネタを一度作ったら、曲データが変わっても（まとめ直しなどがあっても）同じ曲のままにする
+  const fromPrev = k => { const l = (hist[today]?.[k]?.ids || []).map(id => byId.get(ALIAS[id] || id)).filter(i => i && i.kind === "本家"); return l.length ? l : null; };
   const slot = (label, time, list) => { list.forEach(x => taken.add(x.i.id)); return { label, time, ids: list.map(x => x.i.id), list }; };
   const orig = items.filter(i => i.kind === "本家");
   // 朝：ボカロ
-  const morning = slot("朝：今日のボカロ曲", "8:00", take(orig.filter(i => i.g === "ボカロ"), 3, taken)
+  const morning = slot("朝：今日のボカロ曲", "8:00", (fromPrev(0) || take(orig.filter(i => i.g === "ボカロ"), 3, taken))
     .map(i => ({ i, text: songText("🌅 今日のボカロ曲", i, `#TagTune #ボカロ${i.v ? ` #${hashtag(i.v)}` : ""}`) })));
   // 昼：J-POP とアニソンを1日ごとに交代
   const g = Math.floor(Date.parse(today) / 864e5) % 2 ? "アニソン" : "J-POP";
-  const noon = slot(`昼：今日の${g}`, "12:30", take(orig.filter(i => i.g === g), 3, taken)
+  const noon = slot(`昼：今日の${g}`, "12:30", (fromPrev(1) || take(orig.filter(i => i.g === g), 3, taken))
     .map(i => ({ i, text: songText(`🎧 今日の${g}`, i, `#TagTune #${g === "J-POP" ? "JPOP" : "アニソン"}${hashtag(i.p) && hashtag(i.p).length <= 15 ? ` #${hashtag(i.p)}` : ""}`) })));
   // 夜：○年前の今日に投稿された曲があれば1つ目に。あとは歌ってみたが多い曲の聴きくらべ
   const md = today.slice(5);
-  const anniv = take(orig.filter(i => (i.date || "").slice(5, 10) === md && (i.date || "").slice(0, 4) < today.slice(0, 4) && (i.views || 0) >= 100000), 1, taken)
-    .map(i => { const y = Number(today.slice(0, 4)) - Number(i.date.slice(0, 4));
-      return { i, text: songText(`📅 ${y}年前の今日（${fmtDate(i.date)}）に投稿された曲`, i, `#TagTune #${{ "ボカロ": "ボカロ", "J-POP": "JPOP", "アニソン": "アニソン" }[i.g] || "音楽"}`) }; });
+  const isAnniv = i => (i.date || "").slice(5, 10) === md && (i.date || "").slice(0, 4) < today.slice(0, 4);
+  const annivOf = i => { const y = Number(today.slice(0, 4)) - Number(i.date.slice(0, 4));
+      return { i, text: songText(`📅 ${y}年前の今日（${fmtDate(i.date)}）に投稿された曲`, i, `#TagTune #${{ "ボカロ": "ボカロ", "J-POP": "JPOP", "アニソン": "アニソン" }[i.g] || "音楽"}`) }; };
+  const prevNight = fromPrev(2);
+  const anniv = prevNight ? [] : take(orig.filter(i => isAnniv(i) && (i.views || 0) >= 100000), 1, taken).map(annivOf);
   anniv.forEach(x => taken.add(x.i.id));
   const coverText = i => { const cs = coversOf.get(i.id) || []; const names = [...new Set(cs.map(x => x.vr || x.by).filter(Boolean))].slice(0, 3);
     return fit(["🎤 歌ってみた聴きくらべ", "", `「${i.t}」${who(i)}`, `TagTuneに歌ってみたが${cs.length}件！`, names.length ? `${names.join("、")}などが歌ってます` : null, "", SITE + songUrl(i.id), "#TagTune #歌ってみた"]); };
-  const night = slot("夜：歌ってみた・○年前の今日", "20:00", [...anniv, ...take(orig.filter(i => (coversOf.get(i.id) || []).length >= 3), 3 - anniv.length, taken).map(i => ({ i, text: coverText(i) }))]);
+  const night = slot("夜：歌ってみた・○年前の今日", "20:00", prevNight ? prevNight.map(i => isAnniv(i) ? annivOf(i) : { i, text: coverText(i) }) : [...anniv, ...take(orig.filter(i => (coversOf.get(i.id) || []).length >= 3), 3 - anniv.length, taken).map(i => ({ i, text: coverText(i) }))]);
   const slots = [morning, noon, night];
   hist[today] = slots.map(s => ({ label: s.label, ids: s.ids }));
   await writeFile(path("data/picks.json"), JSON.stringify(Object.fromEntries(Object.entries(hist).sort())) + "\n");
