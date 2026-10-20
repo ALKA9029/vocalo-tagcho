@@ -798,14 +798,6 @@
   "pinned": true
  },
  {
-  "id": "UCSxwcQnzA5K6DvofvBn6ATA",
-  "added": "2026-10-09T12:23:27.151Z",
-  "name": "King & Prince",
-  "genre": "ボカロ",
-  "lastHit": "2026-03-23T11:00:06Z",
-  "pinned": true
- },
- {
   "id": "UChd8ppH2SUAVNeBnd8BxplA",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "ぴーなた",
@@ -1555,6 +1547,14 @@
   "name": "一六 ",
   "genre": "ボカロ",
   "lastHit": "2021-02-27T11:00:16Z",
+  "pinned": true
+ },
+ {
+  "id": "UCt7UI5X6ARXiqDxFrgg0IUA",
+  "added": "2026-10-20T02:58:35.261Z",
+  "name": "RuLu",
+  "genre": "ボカロ",
+  "lastHit": "2021-01-23T11:00:03Z",
   "pinned": true
  },
  {
