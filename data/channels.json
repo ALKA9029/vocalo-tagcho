@@ -4,7 +4,7 @@
   "added": "2026-10-10T07:39:29.506Z",
   "name": "프세카 지박령",
   "genre": "ボカロ",
-  "lastHit": "2026-10-19T07:51:45Z"
+  "lastHit": "2026-10-19T16:49:26Z"
  },
  {
   "id": "UC1QMBbHe2AgLC4ozI-jdXJQ",
@@ -1562,7 +1562,7 @@
   "added": "2026-10-16T21:47:12.648Z",
   "name": "ファントムシータ",
   "genre": "J-POP",
-  "lastHit": "2026-10-19T15:00:34Z",
+  "lastHit": "2026-10-20T10:00:07Z",
   "pinned": true
  },
  {
@@ -2008,14 +2008,6 @@
   "name": "音楽の話しかしないチャンネル",
   "genre": "J-POP",
   "lastHit": "2026-10-16T02:30:28Z"
- },
- {
-  "id": "UCT418-ChE6rgGuQlqzFsKZA",
-  "added": "2026-10-16T21:47:12.648Z",
-  "name": "Radwimps - Topic",
-  "genre": "J-POP",
-  "lastHit": "2026-10-15T15:00:39Z",
-  "pinned": true
  },
  {
   "id": "UCqUeHBA-AU10dbEB4F44F-A",
@@ -3035,5 +3027,12 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "J-POP",
   "lastHit": "2026-10-05T11:00:49Z"
+ },
+ {
+  "id": "UCcZ7le992dvK7H7ad_Vms8A",
+  "added": "2026-10-20T10:46:24.342Z",
+  "name": "もしも主題歌ラボ",
+  "genre": "アニソン",
+  "lastHit": "2026-10-05T11:00:29Z"
  }
 ]
