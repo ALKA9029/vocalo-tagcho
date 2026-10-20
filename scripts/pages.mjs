@@ -347,7 +347,8 @@ await put("tag/index.html", tagIndex());
   let seed = [...today].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
   const rnd = () => ((seed = (seed * 1103515245 + 12345) >>> 0) / 2 ** 32);
   const shuffle = a => { const b = [...a]; for (let k = b.length - 1; k > 0; k--) { const j = Math.floor(rnd() * (k + 1)); [b[k], b[j]] = [b[j], b[k]]; } return b; };
-  const ok = i => i.thumb && !used.has(i.id) && !i.topicHidden && i.t;
+  const playable = i => sourcesOf(i).some(v => !v.ne);   // Topicの自動生成音源（埋め込み不可・スマホではPremium限定）だけの曲は出さない
+  const ok = i => i.thumb && !used.has(i.id) && !i.topicHidden && i.t && playable(i);
   // よく聴かれている上のほう（再生数の上位40%）から選ぶ
   const popular = list => { const s2 = [...list].sort((a, b) => (b.views || 0) - (a.views || 0)); return s2.slice(0, Math.max(10, Math.ceil(s2.length * 0.4))); };
   const take = (list, n, taken) => shuffle(popular(list.filter(ok))).filter(i => !taken.has(i.id)).slice(0, n);
@@ -372,7 +373,7 @@ await put("tag/index.html", tagIndex());
   };
   const taken = new Set();
   // その日のネタを一度作ったら、曲データが変わっても（まとめ直しなどがあっても）同じ曲のままにする
-  const fromPrev = k => { const l = (hist[today]?.[k]?.ids || []).map(id => byId.get(ALIAS[id] || id)).filter(i => i && i.kind === "本家"); return l.length ? l : null; };
+  const fromPrev = k => { const l = (hist[today]?.[k]?.ids || []).map(id => byId.get(ALIAS[id] || id)).filter(i => i && i.kind === "本家" && playable(i)); return l.length ? l : null; };
   const slot = (label, time, list) => { list.forEach(x => taken.add(x.i.id)); return { label, time, ids: list.map(x => x.i.id), list }; };
   const orig = items.filter(i => i.kind === "本家");
   // 朝：ボカロ
@@ -404,7 +405,7 @@ await put("tag/index.html", tagIndex());
       const r2 = () => ((sd = (sd * 1103515245 + 12345) >>> 0) / 2 ** 32);
       const sh2 = a => { const b = [...a]; for (let k = b.length - 1; k > 0; k--) { const j = Math.floor(r2() * (k + 1)); [b[k], b[j]] = [b[j], b[k]]; } return b; };
       const tk = new Set();
-      const take2 = (list, n) => { const out = sh2(popular(list.filter(i => i.thumb && !usedD.has(i.id) && !i.topicHidden && i.t))).filter(i => !tk.has(i.id)).slice(0, n); out.forEach(i => tk.add(i.id)); return out; };
+      const take2 = (list, n) => { const out = sh2(popular(list.filter(i => i.thumb && !usedD.has(i.id) && !i.topicHidden && i.t && playable(i)))).filter(i => !tk.has(i.id)).slice(0, n); out.forEach(i => tk.add(i.id)); return out; };
       const g2 = Math.floor(Date.parse(day) / 864e5) % 2 ? "アニソン" : "J-POP";
       const m = take2(orig.filter(i => i.g === "ボカロ"), 3);
       const nn = take2(orig.filter(i => i.g === g2), 3);

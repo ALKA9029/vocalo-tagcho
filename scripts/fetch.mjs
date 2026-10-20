@@ -464,14 +464,26 @@ async function fetchCatalogs(items) {
     chs.set(i.uploaderId, c);
   }
   // 全部取り込むチャンネル（config の catalog.full：チャンネル名と、取り込む動画タイトルの形）。一度ずつ、決めた形のタイトルの動画を数の制限なしで
-  const full = (cfg.full || []).map(f => ({ ch: new RegExp(f.channel, "i"), title: new RegExp(f.title, "i"), key: "full:" + f.channel + "|" + f.title }));
-  const fullOf = c => full.find(f => f.ch.test(c.name));
+  const full = (cfg.full || []).map(f => ({ ch: new RegExp(f.channel || "^$", "i"), title: new RegExp(f.title, "i"), handle: f.handle, key: "full:" + (f.channel || "@" + f.handle) + "|" + f.title }));
+  // サイトにまだ動画がないチャンネルは、@ハンドルからチャンネルを調べて加える（channels.list は1ユニット）
+  for (const f of full.filter(f => f.handle)) {
+    let id = done["handle:" + f.handle];
+    if (!id) {
+      const res = await ytFetch("https://www.googleapis.com/youtube/v3/channels?" + new URLSearchParams({ part: "id", forHandle: f.handle, key }));
+      id = res.ok ? (await res.json()).items?.[0]?.id : null;
+      if (id) done["handle:" + f.handle] = id; else { console.warn(`公式チャンネル @${f.handle} が見つからない`); continue; }
+    }
+    if (!chs.has(id)) chs.set(id, { name: "@" + f.handle, orig: 0, cov: 0, jp: 1, anime: 0, max: 0 });
+    chs.get(id).full = f;
+  }
+  const fullOf = c => c.full || full.find(f => f.ch.test(c.name));
   const todo = [...chs].filter(([id, c]) => { const f = fullOf(c); return f ? !done[f.key + "|" + id] : (c.orig >= c.cov && c.jp + c.anime >= 1 && c.max >= (cfg.channelMinViews || 100000) && !skipCh.test(c.name) && !(done[id] > recheck)); })
     .sort((a, b) => (fullOf(b[1]) ? 1 : 0) - (fullOf(a[1]) ? 1 : 0) || b[1].max - a[1].max).slice(0, cfg.maxChannelsPerRun || 50);
   const known = new Set(items.map(i => i.id));
-  const haveT = new Set(items.filter(i => i.kind === "本家").map(i => normalize(i.t) + "|" + normalize(i.p || "")));
+  const notTopic = i => !/ - Topic$/.test(i.uploader || "");   // Topicの自動生成音源は、公式の動画で置きかえたいので「もうある曲」に数えない
+  const haveT = new Set(items.filter(i => i.kind === "本家" && notTopic(i)).map(i => normalize(i.t) + "|" + normalize(i.p || "")));
   const otherT = new Map();
-  for (const i of items) if (i.kind === "本家" && normalize(i.t)) (otherT.get(normalize(i.t)) || otherT.set(normalize(i.t), new Set()).get(normalize(i.t))).add(normalize(i.p || ""));
+  for (const i of items) if (i.kind === "本家" && notTopic(i) && normalize(i.t)) (otherT.get(normalize(i.t)) || otherT.set(normalize(i.t), new Set()).get(normalize(i.t))).add(normalize(i.p || ""));
   const sameP = it => otherT.get(normalize(it.t))?.has(normalize(it.p || ""));
   const out = [];
   for (const [id, c] of todo) {

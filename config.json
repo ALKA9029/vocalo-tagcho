@@ -339,6 +339,10 @@
         {
           "channel": "^Buono!$",
           "title": "^Buono!\\s*『[^』]+』\\s*\\(MV\\)"
+        },
+        {
+          "handle": "YUURI_OFFICIAL",
+          "title": "Official Music Video|Music Video|\\bMV\\b|Official Video|Lyric Video|Visualizer"
         }
       ]
     }
