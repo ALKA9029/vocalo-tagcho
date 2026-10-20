@@ -1,5 +1,13 @@
 [
  {
+  "id": "UCcvLSRIWJIAGFDyWtzkbiHA",
+  "name": "marasy8",
+  "added": "2026-10-09T12:06:54.468Z",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-20T10:00:07Z",
+  "pinned": true
+ },
+ {
   "id": "UCrTE7xqEqkbK170VRbcJMfA",
   "added": "2026-10-10T07:39:29.506Z",
   "name": "프세카 지박령",
@@ -474,14 +482,6 @@
   "name": "Guiano",
   "genre": "ボカロ",
   "lastHit": "2026-10-08T10:00:11Z",
-  "pinned": true
- },
- {
-  "id": "UCcvLSRIWJIAGFDyWtzkbiHA",
-  "name": "marasy8",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-08T10:00:00Z",
   "pinned": true
  },
  {
