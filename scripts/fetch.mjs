@@ -589,6 +589,68 @@ async function fetchManual(knownIds) {
   return got;
 }
 
+// ---------- 今日の投稿ネタの曲の歌ってみた：data/picks.json の今日の曲（前の日に決めてある）について、 ----------
+// ニコニコとYouTubeで「曲名 歌ってみた」を探して、よく聴かれているものを数件ずつその曲の歌ってみたとして追加する。調べた曲は data/pick-covers-done.json に
+const COVER_WORD = /歌ってみた|歌わせていただきました|\bcover\b|カバー/i;
+async function fetchPickCovers(items) {
+  const cfg = config.pickCovers || {};
+  if (cfg.enabled === false) return [];
+  const today = new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 10);
+  const picks = (await readJson("data/picks.json", {}))[today];
+  if (!picks) { console.log("投稿ネタの歌ってみた: 今日のネタがまだ決まっていないので飛ばします"); return []; }
+  const done = await readJson("data/pick-covers-done.json", {});
+  const byId = new Map(items.map(i => [i.id, i]));
+  const known = new Set(items.map(i => i.id));
+  const perSong = cfg.perSong || 4, minViews = cfg.minViews ?? 1000;
+  const key = process.env.YOUTUBE_API_KEY;
+  let ytLeft = key && !process.env.NO_SEARCH ? (cfg.youtubeSearches ?? 9) : 0;
+  const out = [];
+  for (const id of [...new Set(picks.flatMap(p => p.ids))]) {
+    const song = byId.get(id);
+    if (!song || song.kind !== "本家" || done[id]) continue;
+    const nt = normalize(song.t);
+    if (nt.length < 2) { done[id] = today; continue; }
+    // タイトルに曲名が入っていて、歌ってみたらしいもの（曲名が2文字以下なら「」『』で囲まれているものだけ）
+    const okTitle = t => normalize(t).includes(nt) && COVER_WORD.test(t) && !isKaraoke(t) && (nt.length > 2 || new RegExp(`[「『]${song.t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}[」』]`).test(t));
+    const got = [];
+    // ニコニコ
+    try {
+      const params = new URLSearchParams({ q: `${song.t} 歌ってみた`, targets: "title,tags",
+        fields: "contentId,title,tags,startTime,viewCounter,likeCounter,thumbnailUrl,userId,channelId",
+        "filters[viewCounter][gte]": String(minViews), _sort: "-viewCounter", _limit: "30", _context: "vocalo-tagcho" });
+      const started = Date.now();
+      const res = await fetch("https://snapshot.search.nicovideo.jp/api/v2/snapshot/video/contents/search?" + params, { headers: { "User-Agent": config.userAgent } });
+      if (res.ok) {
+        const rows = ((await res.json()).data || []).filter(r => !known.has("nico:" + r.contentId) && okTitle(unxml(r.title || ""))).slice(0, perSong);
+        for (const r of rows) got.push({ src: "niconico", id: "nico:" + r.contentId, url: "https://www.nicovideo.jp/watch/" + r.contentId,
+          title: unxml(r.title || ""), tags: (r.tags || "").split(" ").filter(Boolean).map(unxml), date: r.startTime, views: r.viewCounter, likes: r.likeCounter,
+          thumb: r.thumbnailUrl, uploaderId: r.userId ?? r.channelId ?? null, req: song.id });
+      }
+      await sleep(Math.max(1000, Date.now() - started));
+    } catch (e) { console.warn(`投稿ネタの歌ってみた（ニコニコ）「${song.t}」: ${e.message}`); }
+    // YouTube（検索は1回100ユニットなので回数を決めておく）
+    const ytTried = ytLeft > 0;
+    if (ytLeft > 0) {
+      ytLeft--;
+      const params = new URLSearchParams({ part: "id", type: "video", q: `${song.t} 歌ってみた`, order: "viewCount", maxResults: "15", regionCode: "JP", relevanceLanguage: "ja", key });
+      const res = await ytFetch("https://www.googleapis.com/youtube/v3/search?" + params);
+      if (res.ok) {
+        const ids = ((await res.json()).items || []).map(it => it.id?.videoId).filter(v => v && !known.has("yt:" + v));
+        const vs = (await ytVideos(ids, key)).filter(v => !isNoise(v) && Number(v.statistics?.viewCount || 0) >= minViews && okTitle(v.snippet?.title || ""))
+          .sort((a, b) => Number(b.statistics?.viewCount || 0) - Number(a.statistics?.viewCount || 0)).slice(0, perSong);
+        for (const v of vs) got.push({ ...ytItem(v, song.g), req: song.id });
+      } else console.warn(`投稿ネタの歌ってみた（YouTube）「${song.t}」: HTTP ${res.status}`);
+    }
+    for (const v of got) known.add(v.id);
+    out.push(...got);
+    // 手動の実行（YouTube検索なし）のときは、あとの毎朝の実行でYouTubeも探せるように記録しない
+    if (ytTried || !key) done[id] = today;
+    console.log(`投稿ネタの歌ってみた「${song.t}」: ${got.length}件${got.length ? `（${got.map(v => v.title.slice(0, 25)).join("／")}）` : ""}`);
+  }
+  await writeFile(path("data/pick-covers-done.json"), JSON.stringify(done) + "\n");
+  return out;
+}
+
 // ---------- Topic の差しかえ：「〇〇 - Topic」の自動生成音源（埋め込みで再生できない）の曲を、同じアーティストの公式チャンネルの動画から探す ----------
 // 公式チャンネル＝サイトにある YouTube の本家のうち、チャンネル名にそのアーティスト名が入っているもの。動画一覧（50本で1ユニット）だけを使う
 async function fetchTopicReplacements(items) {
@@ -654,7 +716,8 @@ const videos = fixtureArg > -1
      ...(SEED ? [] : await fetchCatalogs(await readJson("data/songs.json", [])).catch(e => (console.warn("公式チャンネルの人気曲の取得失敗:", e.message), []))),
      ...(SEED ? [] : await fetchTopicReplacements(await readJson("data/songs.json", [])).catch(e => (console.warn("Topicの差しかえに失敗:", e.message), []))),
      ...(SEED ? [] : await fetchManual(new Set((await readJson("data/songs.json", [])).map(i => i.id))).catch(e => (console.warn("手で追加する動画の取得失敗:", e.message), []))),
-     ...(SEED ? [] : await fetchRequests(await readJson("data/songs.json", [])).catch(e => (console.warn("歌ってみたのリクエストの確認に失敗:", e.message), [])))];
+     ...(SEED ? [] : await fetchRequests(await readJson("data/songs.json", [])).catch(e => (console.warn("歌ってみたのリクエストの確認に失敗:", e.message), []))),
+     ...(SEED ? [] : await fetchPickCovers(await readJson("data/songs.json", [])).catch(e => (console.warn("投稿ネタの歌ってみたの取得に失敗:", e.message), [])))];
 
 const outFile = fixtureArg > -1 ? "data/songs.sample.json" : "data/songs.json";
 const existing = new Map((await readJson(outFile, [])).map(i => [i.id, i]));

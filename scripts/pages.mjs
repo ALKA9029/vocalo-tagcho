@@ -395,6 +395,24 @@ await put("tag/index.html", tagIndex());
   const night = slot("夜：歌ってみた・○年前の今日", "20:00", prevNight ? prevNight.map(i => isAnniv(i) ? annivOf(i) : { i, text: coverText(i) }) : [...anniv, ...take(orig.filter(i => (coversOf.get(i.id) || []).length >= 3), 3 - anniv.length, taken).map(i => ({ i, text: coverText(i) }))]);
   const slots = [morning, noon, night];
   hist[today] = slots.map(s => ({ label: s.label, ids: s.ids }));
+  // あしたのネタも先に決めておく（あしたの朝の取得で、その曲の歌ってみたを先に集めておくため。fetch.mjs の fetchPickCovers）
+  {
+    const day = new Date(jst.getTime() + 864e5).toISOString().slice(0, 10);
+    if (!hist[day]) {
+      const usedD = new Set(Object.entries(hist).filter(([d]) => d !== day).flatMap(([, v]) => v.flatMap(s => s.ids)));
+      let sd = [...day].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
+      const r2 = () => ((sd = (sd * 1103515245 + 12345) >>> 0) / 2 ** 32);
+      const sh2 = a => { const b = [...a]; for (let k = b.length - 1; k > 0; k--) { const j = Math.floor(r2() * (k + 1)); [b[k], b[j]] = [b[j], b[k]]; } return b; };
+      const tk = new Set();
+      const take2 = (list, n) => { const out = sh2(popular(list.filter(i => i.thumb && !usedD.has(i.id) && !i.topicHidden && i.t))).filter(i => !tk.has(i.id)).slice(0, n); out.forEach(i => tk.add(i.id)); return out; };
+      const g2 = Math.floor(Date.parse(day) / 864e5) % 2 ? "アニソン" : "J-POP";
+      const m = take2(orig.filter(i => i.g === "ボカロ"), 3);
+      const nn = take2(orig.filter(i => i.g === g2), 3);
+      const an = take2(orig.filter(i => (i.date || "").slice(5, 10) === day.slice(5) && (i.date || "").slice(0, 4) < day.slice(0, 4) && (i.views || 0) >= 100000), 1);
+      const nt = [...an, ...take2(orig.filter(i => (coversOf.get(i.id) || []).length >= 3), 3 - an.length)];
+      hist[day] = [["朝：今日のボカロ曲", m], [`昼：今日の${g2}`, nn], ["夜：歌ってみた・○年前の今日", nt]].map(([label, l]) => ({ label, ids: l.map(i => i.id) }));
+    }
+  }
   await writeFile(path("data/picks.json"), JSON.stringify(Object.fromEntries(Object.entries(hist).sort())) + "\n");
 
   const card = ({ i, text }) => `<li class="pick">${thumbOf(i) ? `<img src="${esc(thumbOf(i))}" alt="" referrerpolicy="no-referrer">` : ""}<div>

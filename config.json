@@ -342,5 +342,12 @@
         }
       ]
     }
+  },
+  "pickCovers": {
+    "comment": "今日の投稿ネタ（/picks/）の曲について、ニコニコとYouTubeで「曲名 歌ってみた」を探し、よく聴かれている歌ってみたを1曲 perSong 件まで追加する。YouTube検索は1回100ユニットなので youtubeSearches 回まで",
+    "enabled": true,
+    "perSong": 4,
+    "minViews": 1000,
+    "youtubeSearches": 9
   }
 }
