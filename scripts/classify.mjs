@@ -914,6 +914,16 @@ export function linkCovers(items) {
   markRemakes(items);
   vocaloByCreator(items);
   hideTopicWithOfficial(items);
+  // 原曲を決めてある歌ってみた（リクエスト・投稿ネタ）の原曲が、隠したTopicの音源なら、同じ曲名の公式の動画につなぎかえる
+  {
+    const byId = new Map(items.map(i => [i.id, i]));
+    const official = new Map(items.filter(i => i.kind === "本家" && !i.topicHidden && i.src === "youtube").map(i => [normalize(i.t), i]));
+    for (const c of items) {
+      const o = c.ofLocked && byId.get(c.of);
+      const to = o?.topicHidden && official.get(normalize(o.t));
+      if (to) c.of = to.id;
+    }
+  }
   const originals = new Map();
   for (const i of items.filter(x => x.kind === "本家" && !x.topicHidden).sort((a, b) => (a.date || "").localeCompare(b.date || ""))) {
     const k = normalize(i.t);
