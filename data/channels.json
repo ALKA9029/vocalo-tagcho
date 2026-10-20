@@ -1577,7 +1577,8 @@
   "added": "2026-10-19T21:48:20.019Z",
   "name": "MAZZEL",
   "genre": "J-POP",
-  "lastHit": "2026-10-19T12:00:07Z"
+  "lastHit": "2026-10-19T12:00:07Z",
+  "pinned": true
  },
  {
   "id": "UCFPb0Vc0Cjd3MpDOlHPQoPQ",
@@ -1763,6 +1764,13 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "アニソン",
   "lastHit": "2026-10-17T10:00:23Z"
+ },
+ {
+  "id": "UCCyBj7kgaiw_jWQ0uQOUDJQ",
+  "added": "2026-10-20T02:56:39.883Z",
+  "name": "カラオケキー検索",
+  "genre": "J-POP",
+  "lastHit": "2026-10-17T10:00:04Z"
  },
  {
   "id": "UClsE5g08JALBB4Cn1tOIT8A",
@@ -1989,8 +1997,9 @@
   "id": "UCMMEwnArQWFNU1VrRlbIDtg",
   "added": "2026-10-19T21:48:20.019Z",
   "name": "Kyary Pamyu Pamyu ( きゃりーぱみゅぱみゅ )",
-  "genre": "J-POP",
-  "lastHit": "2026-10-16T03:00:07Z"
+  "genre": "アニソン",
+  "lastHit": "2026-10-16T03:00:07Z",
+  "pinned": true
  },
  {
   "id": "UCBxb4X-4Zl7K9FKgG-p7RBQ",
@@ -2211,7 +2220,8 @@
   "added": "2026-10-19T21:48:20.019Z",
   "name": "MATSURI",
   "genre": "J-POP",
-  "lastHit": "2026-10-13T15:00:15Z"
+  "lastHit": "2026-10-13T15:00:15Z",
+  "pinned": true
  },
  {
   "id": "UC1o4SbQvLYpqYZlUKPRWaRQ",
@@ -2257,17 +2267,17 @@
   "lastHit": "2026-10-13T10:00:35Z"
  },
  {
-  "id": "UCabLXblrQG4cO8F9qdd4Xsw",
+  "id": "UCI6B8NkZKqlFWoiC_xE-hzA",
   "added": "2026-10-14T14:15:01.773Z",
-  "name": "Yorushika - Topic",
+  "name": "YOASOBI - Topic",
   "genre": "J-POP",
   "lastHit": "2026-10-13T10:00:15Z",
   "pinned": true
  },
  {
-  "id": "UCI6B8NkZKqlFWoiC_xE-hzA",
+  "id": "UCabLXblrQG4cO8F9qdd4Xsw",
   "added": "2026-10-14T14:15:01.773Z",
-  "name": "YOASOBI - Topic",
+  "name": "Yorushika - Topic",
   "genre": "J-POP",
   "lastHit": "2026-10-13T10:00:15Z",
   "pinned": true
@@ -3024,13 +3034,5 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "アニソン",
   "lastHit": "2026-10-05T11:00:29Z"
- },
- {
-  "id": "UCmQakL41jbAhpQhqhyszF2g",
-  "name": "10-FEET",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "アニソン",
-  "lastHit": "2026-10-05T10:00:09Z",
-  "pinned": true
  }
 ]

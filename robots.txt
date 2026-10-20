@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /picks/
 
 Sitemap: https://tagtune.net/sitemap.xml
