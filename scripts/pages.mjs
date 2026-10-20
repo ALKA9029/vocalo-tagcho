@@ -356,11 +356,19 @@ await put("tag/index.html", tagIndex());
   const tagLine = id => { const t = tagsOf(id).slice(0, 3).map(([x]) => `#${x}`); return t.length ? `みんなの印象：${t.join(" ")}` : ""; };
   // Xの文字数（日本語は2文字分、URLは23文字分。上限280）
   const weight = s => { let n = 0; for (const c of s.replace(/https?:\/\/\S+/g, "x".repeat(23))) { const cp = c.codePointAt(0); n += (cp <= 0x10ff || (cp >= 0x2000 && cp <= 0x200d) || (cp >= 0x2010 && cp <= 0x201f) || (cp >= 0x2032 && cp <= 0x2037)) ? 1 : 2; } return n; };
-  const fit = lines => { let ls = lines.filter(l => l !== null); while (weight(ls.join("\n")) > 280 && ls.some(l => l.startsWith("みんなの印象"))) ls = ls.filter(l => !l.startsWith("みんなの印象")); return ls.join("\n").replace(/\n{3,}/g, "\n\n"); };
+  // 長すぎるときは「みんなの印象」→「タグのお願い」の順に外す
+  const fit = lines => { let ls = lines.filter(l => l !== null);
+    for (const drop of [l => l.startsWith("みんなの印象"), l => l.endsWith("🏷️")]) while (weight(ls.join("\n")) > 280 && ls.some(drop)) ls = ls.filter(l => !drop(l));
+    return ls.join("\n").replace(/\n{3,}/g, "\n\n"); };
+  // タグをつけてもらうお願い（曲ごとに言い方を変える。同じ曲ならいつも同じ）
+  const ASK = ["聴いた印象をタグで教えてね🏷️", "エモい？爽やか？あなたの印象をタグで投票してね🏷️", "この曲、どんな印象？タグで教えてね🏷️", "聴いたらぜひタグをつけてね🏷️"];
+  const ASK_VOTED = ["あなたも聴いた印象をタグで投票してね🏷️", "あなたはどう感じた？タグで投票してね🏷️"];
+  const pickOf = (list, id) => list[[...id].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 3) % list.length];
+  const askLine = id => tagsOf(id).length ? pickOf(ASK_VOTED, id) : pickOf(ASK, id);
   const who = i => i.p ? ` / ${i.p}${i.v ? `（${i.v}）` : ""}` : (i.v ? `（${i.v}）` : "");
   const songText = (head, i, tags) => {
     const n = (coversOf.get(i.id) || []).length;
-    return fit([head, "", `「${i.t}」${who(i)}`, `${head.startsWith("📅") ? "" : `${(i.date || "").slice(0, 4)}年の曲・`}${fmtViews(i.views)}回再生${n ? `・歌ってみた${n}件` : ""}`, tagLine(i.id), "", SITE + songUrl(i.id), tags]);
+    return fit([head, "", `「${i.t}」${who(i)}`, `${head.startsWith("📅") ? "" : `${(i.date || "").slice(0, 4)}年の曲・`}${fmtViews(i.views)}回再生${n ? `・歌ってみた${n}件` : ""}`, tagLine(i.id), "", askLine(i.id), SITE + songUrl(i.id), tags]);
   };
   const taken = new Set();
   // その日のネタを一度作ったら、曲データが変わっても（まとめ直しなどがあっても）同じ曲のままにする
@@ -383,7 +391,7 @@ await put("tag/index.html", tagIndex());
   const anniv = prevNight ? [] : take(orig.filter(i => isAnniv(i) && (i.views || 0) >= 100000), 1, taken).map(annivOf);
   anniv.forEach(x => taken.add(x.i.id));
   const coverText = i => { const cs = coversOf.get(i.id) || []; const names = [...new Set(cs.map(x => x.vr || x.by).filter(Boolean))].slice(0, 3);
-    return fit(["🎤 歌ってみた聴きくらべ", "", `「${i.t}」${who(i)}`, `TagTuneに歌ってみたが${cs.length}件！`, names.length ? `${names.join("、")}などが歌ってます` : null, "", SITE + songUrl(i.id), "#TagTune #歌ってみた"]); };
+    return fit(["🎤 歌ってみた聴きくらべ", "", `「${i.t}」${who(i)}`, `TagTuneに歌ってみたが${cs.length}件！`, names.length ? `${names.join("、")}などが歌ってます` : null, "", "どの歌ってみたが好き？聴きくらべてタグをつけてね🏷️", SITE + songUrl(i.id), "#TagTune #歌ってみた"]); };
   const night = slot("夜：歌ってみた・○年前の今日", "20:00", prevNight ? prevNight.map(i => isAnniv(i) ? annivOf(i) : { i, text: coverText(i) }) : [...anniv, ...take(orig.filter(i => (coversOf.get(i.id) || []).length >= 3), 3 - anniv.length, taken).map(i => ({ i, text: coverText(i) }))]);
   const slots = [morning, noon, night];
   hist[today] = slots.map(s => ({ label: s.label, ids: s.ids }));
