@@ -1690,7 +1690,8 @@
   "added": "2026-10-16T21:47:12.648Z",
   "name": "KMNZ",
   "genre": "J-POP",
-  "lastHit": "2026-10-17T12:00:07Z"
+  "lastHit": "2026-10-17T12:00:07Z",
+  "pinned": true
  },
  {
   "id": "UClM-RxoeCKN6ArtFfBp05Yw",
@@ -2244,6 +2245,13 @@
   "name": "甲斐田 晴 / Kaida Haru【にじさんじ】",
   "genre": "J-POP",
   "lastHit": "2026-10-13T12:00:10Z"
+ },
+ {
+  "id": "UC1QpNAV9xNS5P-yAwJLi07A",
+  "added": "2026-10-20T03:41:54.934Z",
+  "name": "桃寝ちのい / momone chinoi",
+  "genre": "J-POP",
+  "lastHit": "2026-10-13T11:00:09Z"
  },
  {
   "id": "UC4hGhbOxGKUgCD2eon4VJbQ",
@@ -3027,12 +3035,5 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "J-POP",
   "lastHit": "2026-10-05T11:00:49Z"
- },
- {
-  "id": "UCcZ7le992dvK7H7ad_Vms8A",
-  "name": "もしも主題歌ラボ",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "アニソン",
-  "lastHit": "2026-10-05T11:00:29Z"
  }
 ]
