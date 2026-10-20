@@ -1004,3 +1004,12 @@ export const toSite = items => {
     return o;
   });
 };
+
+// 曲を決めて取り込んだ歌ってみた（リクエスト・投稿ネタ）で、歌い手が原曲の作者になってしまったとき（「CleeNoah - ラグトレイン / 稲葉曇【歌ってみた】」）に、
+// タイトルの最後の【名前】や先頭の「名前 - 」、チャンネル名から歌い手を選び直す
+export function fixReqSinger(by, title = "", uploader = "", origP = "") {
+  if (!origP || !by || normalize(by) !== normalize(origP)) return by;
+  const tail = (title.match(/【([^】]+)】\s*$/) || [])[1];
+  const head = (title.match(/^([^-－「『【]+?)\s+[-－]\s+/) || [])[1];
+  return [tail, head, singerCore(uploader || "")].find(x => x && !/歌ってみた|cover|カバー|オリジナル/i.test(x) && normalize(x) !== normalize(origP))?.trim() || "";
+}

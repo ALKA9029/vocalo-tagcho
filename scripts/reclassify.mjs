@@ -1,13 +1,14 @@
 // ネットにつながずに、保存済みのデータ（タイトルとタグ）を今の判定ルールで読み直す。
 //   node scripts/reclassify.mjs
 import { readFile, writeFile } from "node:fs/promises";
-import { classify, linkCovers, toSite, isKaraoke, singerCore, normalize } from "./classify.mjs";
+import { classify, linkCovers, toSite, isKaraoke, singerCore, normalize, fixReqSinger } from "./classify.mjs";
 
 const path = p => new URL("../" + p, import.meta.url);
 const overrides = JSON.parse(await readFile(path("data/overrides.json"), "utf8").catch(() => "{}"));
 // overrides.json で "skip": 1 にした動画（取り込まないと決めたもの）も外す
 const items = JSON.parse(await readFile(path("data/songs.json"), "utf8")).filter(i => !isKaraoke(i.title) && !overrides[i.id]?.skip);
 
+const byIdOld = new Map(items.map(i => [i.id, i]));
 const out = items.map(old => {
   const uploaderId = old.uploaderId ?? ((old.a || "").includes(":") ? old.a.split(":")[1] : undefined);
   const fresh = classify({ ...old, uploaderId },
@@ -18,7 +19,7 @@ const out = items.map(old => {
   // 「歌ってみた」チャンネルとして手動登録したチャンネルの動画は、タイトルに関係なく歌ってみたのまま
   if (old.chCover) { fresh.kind = "歌ってみた"; fresh.chCover = true; }
   // 曲ページからリクエストされた歌ってみたは、リクエストされた曲につないだまま
-  if (old.req) { fresh.kind = "歌ってみた"; fresh.req = old.req; fresh.by ||= singerCore(old.uploader || "") || old.by; }
+  if (old.req) { fresh.kind = "歌ってみた"; fresh.req = old.req; fresh.by ||= singerCore(old.uploader || "") || old.by; fresh.by = fixReqSinger(fresh.by, old.title, old.uploader, byIdOld.get(old.req)?.p); }
   const merged = { ...fresh, ...keep };
   if (!merged.p && old.p && old.src === "youtube" && normalize(old.p) !== normalize(merged.t || "")) merged.p = old.p;
   const o = overrides[merged.id];

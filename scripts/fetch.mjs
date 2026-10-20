@@ -2,7 +2,7 @@
 //   node scripts/fetch.mjs                      … ニコニコとYouTubeから取得
 //   node scripts/fetch.mjs --fixture FILE.json  … ネットにつながず、テスト用データで動かす
 import { readFile, writeFile, mkdir } from "node:fs/promises";
-import { classify, linkCovers, toSite, isKaraoke, normalize, animeInDesc, singerCore } from "./classify.mjs";
+import { classify, linkCovers, toSite, isKaraoke, normalize, animeInDesc, singerCore, fixReqSinger } from "./classify.mjs";
 
 // 実行の記録を data/last-run.txt にも残す（GitHubの画面を開かなくても、何件取れたか確認できるように）
 const RUNLOG = [];
@@ -611,7 +611,7 @@ async function fetchPickCovers(items) {
     const nt = normalize(song.t);
     if (nt.length < 2) { done[id] = today; continue; }
     // タイトルに曲名が入っていて、歌ってみたらしいもの（曲名が2文字以下なら「」『』で囲まれているものだけ）
-    const okTitle = t => normalize(t).includes(nt) && COVER_WORD.test(t) && !isKaraoke(t) && (nt.length > 2 || new RegExp(`[「『]${song.t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}[」』]`).test(t));
+    const okTitle = t => normalize(t).includes(nt) && COVER_WORD.test(t) && !isKaraoke(t) && !/替え歌|パロディ|弾いてみた|演奏してみた|踊ってみた|叩いてみた|UST配布/.test(t) && (nt.length > 2 || new RegExp(`[「『]${song.t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}[」』]`).test(t));
     const got = [];
     // ニコニコ
     try {
@@ -737,7 +737,7 @@ for (const v of videos) {
   if (v.seed) item.seed = true;
   if (v.channelGenre === "歌ってみた") { item.kind = "歌ってみた"; item.chCover = true; item.by ||= v.uploader; delete item.p; delete item.v; }
   // 曲ページからリクエストされた歌ってみた：その曲の歌ってみたとして固定する
-  if (v.req) { item.kind = "歌ってみた"; item.req = v.req; item.of = v.req; item.ofLocked = true; item.seed = true; item.by ||= singerCore(v.uploader); }
+  if (v.req) { item.kind = "歌ってみた"; item.req = v.req; item.of = v.req; item.ofLocked = true; item.seed = true; item.by ||= singerCore(v.uploader); item.by = fixReqSinger(item.by, v.title, v.uploader, existing.get(v.req)?.p); }
   const prev = existing.get(item.id);
   existing.set(item.id, prev ? { ...prev, ...item, seed: prev.seed || item.seed, firstSeen: prev.firstSeen } : { ...item, firstSeen: new Date().toISOString() });
 }
