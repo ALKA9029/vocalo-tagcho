@@ -333,6 +333,87 @@ for (const [a, c] of creators) { await put(`p/${creatorSlug(a)}/index.html`, cre
 for (const t of TAGS) { await put(`tag/${TAG_SLUG[t]}/index.html`, tagPage(t)); urls.push(tagUrl(t)); }
 await put("tag/index.html", tagIndex());
 
+// ---------- Xに投稿する「今日の曲」のネタ（自分用のページ picks/。検索エンジンには載せない） ----------
+// 朝・昼・夜の3枠に、それぞれ候補を3曲ずつ。一度出した曲は1年間は出さない（data/picks.json に記録）
+// 同じ日に何回作り直しても、その日のネタは変わらない
+{
+  const jst = new Date(Date.now() + 9 * 3600e3);
+  const today = jst.toISOString().slice(0, 10);
+  const hist = JSON.parse(await readFile(path("data/picks.json"), "utf8").catch(() => "{}"));
+  const yearAgo = new Date(jst - 365 * 864e5).toISOString().slice(0, 10);
+  for (const d of Object.keys(hist)) if (d < yearAgo) delete hist[d];
+  const used = new Set(Object.entries(hist).filter(([d]) => d !== today).flatMap(([, v]) => v.flatMap(s => s.ids)));
+  // 日付から決まる乱数（同じ日は同じ結果）
+  let seed = [...today].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
+  const rnd = () => ((seed = (seed * 1103515245 + 12345) >>> 0) / 2 ** 32);
+  const shuffle = a => { const b = [...a]; for (let k = b.length - 1; k > 0; k--) { const j = Math.floor(rnd() * (k + 1)); [b[k], b[j]] = [b[j], b[k]]; } return b; };
+  const ok = i => i.thumb && !used.has(i.id) && !i.topicHidden && i.t;
+  // よく聴かれている上のほう（再生数の上位40%）から選ぶ
+  const popular = list => { const s2 = [...list].sort((a, b) => (b.views || 0) - (a.views || 0)); return s2.slice(0, Math.max(10, Math.ceil(s2.length * 0.4))); };
+  const take = (list, n, taken) => shuffle(popular(list.filter(ok))).filter(i => !taken.has(i.id)).slice(0, n);
+  const fmtViews = n => n >= 1e8 ? `${(n / 1e8).toFixed(1).replace(/\.0$/, "")}億` : n >= 1e4 ? `${Math.floor(n / 1e4).toLocaleString("ja-JP")}万` : `${n || 0}`;
+  const hashtag = s => String(s || "").replace(/[\s・／\/!！?？'’.,、。()（）「」『』\-–—*&+:]/g, "");
+  const tagLine = id => { const t = tagsOf(id).slice(0, 3).map(([x]) => `#${x}`); return t.length ? `みんなの印象：${t.join(" ")}` : ""; };
+  // Xの文字数（日本語は2文字分、URLは23文字分。上限280）
+  const weight = s => { let n = 0; for (const c of s.replace(/https?:\/\/\S+/g, "x".repeat(23))) { const cp = c.codePointAt(0); n += (cp <= 0x10ff || (cp >= 0x2000 && cp <= 0x200d) || (cp >= 0x2010 && cp <= 0x201f) || (cp >= 0x2032 && cp <= 0x2037)) ? 1 : 2; } return n; };
+  const fit = lines => { let ls = lines.filter(l => l !== null); while (weight(ls.join("\n")) > 280 && ls.some(l => l.startsWith("みんなの印象"))) ls = ls.filter(l => !l.startsWith("みんなの印象")); return ls.join("\n").replace(/\n{3,}/g, "\n\n"); };
+  const who = i => i.p ? ` / ${i.p}${i.v ? `（${i.v}）` : ""}` : (i.v ? `（${i.v}）` : "");
+  const songText = (head, i, tags) => {
+    const n = (coversOf.get(i.id) || []).length;
+    return fit([head, "", `「${i.t}」${who(i)}`, `${head.startsWith("📅") ? "" : `${(i.date || "").slice(0, 4)}年の曲・`}${fmtViews(i.views)}回再生${n ? `・歌ってみた${n}件` : ""}`, tagLine(i.id), "", SITE + songUrl(i.id), tags]);
+  };
+  const taken = new Set();
+  const slot = (label, time, list) => { list.forEach(x => taken.add(x.i.id)); return { label, time, ids: list.map(x => x.i.id), list }; };
+  const orig = items.filter(i => i.kind === "本家");
+  // 朝：ボカロ
+  const morning = slot("朝：今日のボカロ曲", "8:00", take(orig.filter(i => i.g === "ボカロ"), 3, taken)
+    .map(i => ({ i, text: songText("🌅 今日のボカロ曲", i, `#TagTune #ボカロ${i.v ? ` #${hashtag(i.v)}` : ""}`) })));
+  // 昼：J-POP とアニソンを1日ごとに交代
+  const g = Math.floor(Date.parse(today) / 864e5) % 2 ? "アニソン" : "J-POP";
+  const noon = slot(`昼：今日の${g}`, "12:30", take(orig.filter(i => i.g === g), 3, taken)
+    .map(i => ({ i, text: songText(`🎧 今日の${g}`, i, `#TagTune #${g === "J-POP" ? "JPOP" : "アニソン"}${hashtag(i.p) && hashtag(i.p).length <= 15 ? ` #${hashtag(i.p)}` : ""}`) })));
+  // 夜：○年前の今日に投稿された曲があれば1つ目に。あとは歌ってみたが多い曲の聴きくらべ
+  const md = today.slice(5);
+  const anniv = take(orig.filter(i => (i.date || "").slice(5, 10) === md && (i.date || "").slice(0, 4) < today.slice(0, 4) && (i.views || 0) >= 100000), 1, taken)
+    .map(i => { const y = Number(today.slice(0, 4)) - Number(i.date.slice(0, 4));
+      return { i, text: songText(`📅 ${y}年前の今日（${fmtDate(i.date)}）に投稿された曲`, i, `#TagTune #${{ "ボカロ": "ボカロ", "J-POP": "JPOP", "アニソン": "アニソン" }[i.g] || "音楽"}`) }; });
+  anniv.forEach(x => taken.add(x.i.id));
+  const coverText = i => { const cs = coversOf.get(i.id) || []; const names = [...new Set(cs.map(x => x.vr || x.by).filter(Boolean))].slice(0, 3);
+    return fit(["🎤 歌ってみた聴きくらべ", "", `「${i.t}」${who(i)}`, `TagTuneに歌ってみたが${cs.length}件！`, names.length ? `${names.join("、")}などが歌ってます` : null, "", SITE + songUrl(i.id), "#TagTune #歌ってみた"]); };
+  const night = slot("夜：歌ってみた・○年前の今日", "20:00", [...anniv, ...take(orig.filter(i => (coversOf.get(i.id) || []).length >= 3), 3 - anniv.length, taken).map(i => ({ i, text: coverText(i) }))]);
+  const slots = [morning, noon, night];
+  hist[today] = slots.map(s => ({ label: s.label, ids: s.ids }));
+  await writeFile(path("data/picks.json"), JSON.stringify(Object.fromEntries(Object.entries(hist).sort())) + "\n");
+
+  const card = ({ i, text }) => `<li class="pick">${thumbOf(i) ? `<img src="${esc(thumbOf(i))}" alt="" referrerpolicy="no-referrer">` : ""}<div>
+  <p class="name"><a href="${songUrl(i.id)}" target="_blank">${esc(i.t)}</a> <span class="note">${esc(credit(i))}・${esc(i.g)}</span></p>
+  <textarea rows="8">${esc(text)}</textarea>
+  <p class="share"><span class="cnt"></span><a class="btn primary post" href="#" target="_blank" rel="noopener">𝕏 で投稿</a><button type="button" class="btn copy">コピー</button></p>
+</div></li>`;
+  const body = `
+<header>
+  <h1>今日の投稿ネタ <small class="rv">${today.replace(/-/g, "/")}</small></h1>
+  <p class="note">毎朝の自動更新で作り直す、X（@tagtune_net）に投稿するためのネタ帳。各枠から好きな1曲を選んで「𝕏 で投稿」。文章はここで直してから投稿できます。昼と夜の分は、パソコン版Xの予約投稿（投稿画面のカレンダーのアイコン）で予約しておくと楽です。一度出た曲は1年間は出ません。</p>
+</header>
+${slots.map(s => `<section><h2>${esc(s.label)}<span class="note">　おすすめ ${s.time} ごろ</span></h2>${s.list.length ? `<ul class="picks">${s.list.map(card).join("")}</ul>` : `<p class="note">候補が見つかりませんでした。</p>`}</section>`).join("\n")}
+<style>.picks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:18px}.pick{display:grid;grid-template-columns:160px 1fr;gap:14px;align-items:start}.pick img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;background:var(--line)}@media (max-width:560px){.pick{grid-template-columns:1fr}}.pick textarea{width:100%;font:inherit;font-size:14px;line-height:1.6;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);resize:vertical}.pick .name{margin-bottom:6px}.cnt{font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-right:auto;align-self:center}.cnt.over{color:var(--accent);font-weight:700}h2 .note{font-weight:400}</style>
+<script>
+(() => {
+  const weight = s => { let n = 0; for (const c of s.replace(/https?:\\/\\/\\S+/g, "x".repeat(23))) { const cp = c.codePointAt(0); n += (cp <= 0x10ff || (cp >= 0x2000 && cp <= 0x200d) || (cp >= 0x2010 && cp <= 0x201f) || (cp >= 0x2032 && cp <= 0x2037)) ? 1 : 2; } return n; };
+  for (const li of document.querySelectorAll(".pick")) {
+    const ta = li.querySelector("textarea"), cnt = li.querySelector(".cnt"), post = li.querySelector(".post"), copy = li.querySelector(".copy");
+    const upd = () => { const w = weight(ta.value); cnt.textContent = w + " / 280"; cnt.classList.toggle("over", w > 280); post.href = "https://x.com/intent/post?text=" + encodeURIComponent(ta.value); };
+    ta.addEventListener("input", upd); upd();
+    copy.addEventListener("click", async () => { try { await navigator.clipboard.writeText(ta.value); copy.textContent = "✓ コピーしたよ"; } catch { ta.select(); } setTimeout(() => copy.textContent = "コピー", 1500); });
+  }
+})();
+</script>
+`;
+  await put("picks/index.html", page({ title: "今日の投稿ネタ - TagTune", description: "X投稿用のネタ帳", url: "/picks/", body, crumbs: [["今日の投稿ネタ"]] })
+    .replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<meta name="robots" content="noindex,nofollow">'));
+  console.log(`今日の投稿ネタ：${slots.map(s => `${s.label}（${s.list.map(x => x.i.t).join("／")}）`).join("　")}`);
+}
+
 // トップページから作者ページへリンクするための対応表（作者のキー → ページのURL）
 await writeFile(path("data/pages.json"), JSON.stringify({ creators: Object.fromEntries([...creators].map(([a, c]) => [a, c.url]).sort()) }) + "\n");
 await writeFile(path("sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>
@@ -340,5 +421,5 @@ await writeFile(path("sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>
 ${urls.map(u => `<url><loc>${SITE}${u}</loc></url>`).join("\n")}
 </urlset>
 `);
-await writeFile(path("robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
+await writeFile(path("robots.txt"), `User-agent: *\nAllow: /\nDisallow: /picks/\n\nSitemap: ${SITE}/sitemap.xml\n`);
 console.log(`ページを書き出しました：曲 ${songs.length}・作者 ${creators.size}・タグ ${TAGS.length}（票のある曲 ${Object.keys(votes).length}）`);
