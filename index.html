@@ -241,14 +241,15 @@ const FIXED_AT = 3;
 const PAGE = 40;
 
 let ITEMS = [], ITEM = {};
-const state = { serverCounts:{}, serverMine:{}, mine:{}, open:null, rel:null, play:null, shuffle:null, q:"", genre:"", kind:"", sort:"views", period:"", person:null, filter:new Set(), shown:PAGE, canWrite:true, uid:null, db:null };
+const state = { serverCounts:{}, serverMine:{}, serverMineN:{}, mine:{}, open:null, rel:null, play:null, shuffle:null, q:"", genre:"", kind:"", sort:"views", period:"", person:null, filter:new Set(), shown:PAGE, canWrite:true, uid:null, db:null };
 const $ = s => document.querySelector(s);
 
 // 表示する票数 = みんなの票数（最後に読み込んだ時点）から自分の分を引いて、今の自分の票を足したもの
 function counts(){
   const c = {};
   for (const [sid, tags] of Object.entries(state.serverCounts)) for (const [t, n] of Object.entries(tags)) {
-    const v = n - (state.serverMine[sid]?.includes(t) ? 1 : 0);
+    // 自分の票は、まとめる前の別のID（ニコニコ版とYouTube版など）に入っていても1票として数える
+    const v = n - (state.serverMineN[sid]?.[t] || 0);
     if (v > 0) { c[sid] ??= {}; c[sid][t] = v; }
   }
   for (const [sid, tags] of Object.entries(state.mine)) for (const t of tags) {
@@ -708,15 +709,30 @@ async function loadCounts(){
 }
 
 // 自分の票を読み込む
-async function loadMine(){
-  const mine = {};
+async function loadMine(fixed){
+  const mine = {}, n = {}, old = [];
   for (let from = 0; ; from += 1000) {
     const { data, error } = await sb.from("votes").select("song_id,tag").range(from, from + 999);
     if (error) throw error;
-    for (const r of data) { const id = ALIAS[r.song_id] || r.song_id; mine[id] ??= []; if (!mine[id].includes(r.tag)) mine[id].push(r.tag); }
+    for (const r of data) {
+      const id = ALIAS[r.song_id] || r.song_id;
+      mine[id] ??= []; if (!mine[id].includes(r.tag)) mine[id].push(r.tag);
+      n[id] ??= {}; n[id][r.tag] = (n[id][r.tag] || 0) + 1;
+      if (id !== r.song_id) old.push(r);
+    }
     if (data.length < 1000) break;
   }
+  // 曲をまとめる前の古いIDに入っている自分の票は、今の曲のIDに移す（同じ曲に2票入ったように見えないように）
+  if (old.length && !fixed) {
+    const up = await sb.from("votes").upsert(old.map(r => ({ song_id: ALIAS[r.song_id], tag: r.tag })), { onConflict: "user_id,song_id,tag", ignoreDuplicates: true });
+    if (!up.error) {
+      for (const r of old) await sb.from("votes").delete().eq("song_id", r.song_id).eq("tag", r.tag);
+      await loadCounts();
+      return loadMine(true);
+    }
+  }
   state.serverMine = structuredClone(mine);
+  state.serverMineN = n;
   state.mine = mine;
 }
 
