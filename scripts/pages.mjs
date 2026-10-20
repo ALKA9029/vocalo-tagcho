@@ -109,7 +109,7 @@ function ogMeta(image) {
 const shareRow = (text, url) => `<p class="share"><a class="btn" href="https://x.com/intent/post?text=${encodeURIComponent(text)}&amp;url=${encodeURIComponent(SITE + url)}&amp;hashtags=TagTune" target="_blank" rel="noopener">𝕏 でシェア</a><button type="button" class="btn" data-share="${esc(SITE + url)}" data-text="${esc(text)}">🔗 リンクをコピー</button></p>`;
 
 // ---------- ページの外枠 ----------
-function page({ title, description, url, image, body, jsonld, crumbs = [] }) {
+function page({ title, description, url, image, body, jsonld, crumbs = [], noAnalytics = false }) {
   return `<!doctype html>
 <html lang="ja">
 <head>
@@ -146,6 +146,7 @@ ${body}
 </div>
 <aside id="player" hidden aria-label="再生中の曲"></aside>
 <script src="/assets/page.js" defer></script>
+${noAnalytics ? "" : `<script data-goatcounter="https://tagtune.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>`}
 </body>
 </html>
 `;
@@ -441,7 +442,7 @@ ${slots.map(s => `<section><h2>${esc(s.label)}<span class="note">　おすすめ
 })();
 </script>
 `;
-  await put("picks/index.html", page({ title: "今日の投稿ネタ - TagTune", description: "X投稿用のネタ帳", url: "/picks/", body, crumbs: [["今日の投稿ネタ"]] })
+  await put("picks/index.html", page({ title: "今日の投稿ネタ - TagTune", description: "X投稿用のネタ帳", url: "/picks/", body, crumbs: [["今日の投稿ネタ"]], noAnalytics: true })
     .replace('<meta charset="utf-8">', '<meta charset="utf-8">\n<meta name="robots" content="noindex,nofollow">'));
   console.log(`今日の投稿ネタ：${slots.map(s => `${s.label}（${s.list.map(x => x.i.t).join("／")}）`).join("　")}`);
 }
