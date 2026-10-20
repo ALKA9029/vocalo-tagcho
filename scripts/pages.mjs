@@ -352,7 +352,7 @@ await put("tag/index.html", tagIndex());
   const popular = list => { const s2 = [...list].sort((a, b) => (b.views || 0) - (a.views || 0)); return s2.slice(0, Math.max(10, Math.ceil(s2.length * 0.4))); };
   const take = (list, n, taken) => shuffle(popular(list.filter(ok))).filter(i => !taken.has(i.id)).slice(0, n);
   const fmtViews = n => n >= 1e8 ? `${(n / 1e8).toFixed(1).replace(/\.0$/, "")}億` : n >= 1e4 ? `${Math.floor(n / 1e4).toLocaleString("ja-JP")}万` : `${n || 0}`;
-  const hashtag = s => String(s || "").replace(/[\s・／\/!！?？'’.,、。()（）「」『』\-–—*&+:]/g, "");
+  const hashtag = s => String(s || "").replace(/[^\p{L}\p{N}_]/gu, "");   // Xのハッシュタグに使えるのは文字・数字・_ だけ（「=」「!」などで切れる）
   const tagLine = id => { const t = tagsOf(id).slice(0, 3).map(([x]) => `#${x}`); return t.length ? `みんなの印象：${t.join(" ")}` : ""; };
   // Xの文字数（日本語は2文字分、URLは23文字分。上限280）
   const weight = s => { let n = 0; for (const c of s.replace(/https?:\/\/\S+/g, "x".repeat(23))) { const cp = c.codePointAt(0); n += (cp <= 0x10ff || (cp >= 0x2000 && cp <= 0x200d) || (cp >= 0x2010 && cp <= 0x201f) || (cp >= 0x2032 && cp <= 0x2037)) ? 1 : 2; } return n; };
