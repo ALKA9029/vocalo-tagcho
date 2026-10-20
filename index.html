@@ -426,9 +426,12 @@ function visibleItems(){
     return true;
   });
   const total = i => Object.values(c[i.id]||{}).reduce((a,b)=>a+b,0);
+  // タグで絞り込んでいるときの「タグが多い順」は、選んだタグの票の合計で並べる（同じなら全部のタグの合計、再生数の順）
+  const picked = i => [...state.filter].reduce((a,t)=>a+(c[i.id]?.[t]||0),0);
+  const vo = $('#sort option[value="votes"]'); if (vo) vo.textContent = state.filter.size ? "選んだタグの票が多い順" : "タグが多い順";
   // 投稿日時はニコニコが日本時間（+09:00）、YouTubeが世界標準時（Z）で書かれているので、文字のままではなく時刻に直して比べる
   const byDate = (a,b)=>(b._t||0)-(a._t||0);
-  items.sort(state.sort==="votes" ? (a,b)=>total(b)-total(a) || (b.views||0)-(a.views||0)
+  items.sort(state.sort==="votes" ? (a,b)=>picked(b)-picked(a) || total(b)-total(a) || (b.views||0)-(a.views||0)
     : state.sort==="new" ? byDate : (a,b)=>(b.views||0)-(a.views||0));
   return items;
 }
