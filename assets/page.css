@@ -96,3 +96,7 @@ body.has-player .wrap{padding-bottom:320px}
 .req button{flex:none}
 .req button:disabled{opacity:.6}
 h1 .rv{font-family:var(--f-body);font-size:.45em;font-weight:700;color:var(--cover);vertical-align:middle}
+#player .volw{flex:none;display:flex;align-items:center;gap:2px;cursor:pointer}
+#player .vi{font-size:14px;width:18px;text-align:center}
+#player .vol{width:84px;accent-color:var(--accent);cursor:pointer;margin:0}
+@media (hover:none) and (pointer:coarse){#player .volw{display:none}}

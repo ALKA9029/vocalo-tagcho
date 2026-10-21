@@ -155,6 +155,10 @@ body.has-player .wrap{padding-bottom:320px}
 #player .ph .pg:hover{text-decoration:underline}
 #player .ph button.next{font-size:13px}
 #player .from{margin:0;padding:0 12px 8px;font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#player .volw{flex:none;display:flex;align-items:center;gap:2px;cursor:pointer}
+#player .vi{font-size:14px;width:18px;text-align:center}
+#player .vol{width:84px;accent-color:var(--accent);cursor:pointer;margin:0}
+@media (hover:none) and (pointer:coarse){#player .volw{display:none}}
 .fold{font:inherit;font-size:13px;flex:none;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:8px 12px;cursor:pointer;white-space:nowrap}
 .fold:hover{border-color:var(--accent)}
 .fold .n{display:inline-block;min-width:18px;margin-left:2px;padding:0 5px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-size:11px;font-family:var(--f-mono);text-align:center}
@@ -505,6 +509,19 @@ function thumbEl(i){
     onclick:e=>{ e.stopPropagation(); playing ? closePlayer() : play(i.id); }},
     img, el("span",{class:"play","aria-hidden":"true"}, playing ? "再生中" : "▶"));
 }
+// 音量（YouTube・ニコニコのプレイヤーの音量バーは小さいプレイヤーだと使いにくいので、上の見出しにサイトの音量スライダーを置く。この端末に覚えておく）
+const VOL_KEY = "tagtune:vol";
+let vol = 100;
+try { const v = localStorage.getItem(VOL_KEY); if (v !== null && Number(v) >= 0 && Number(v) <= 100) vol = Number(v); } catch {}
+function applyVol(){
+  const f = $("#player iframe");
+  if (!f?.contentWindow) return;
+  if (f.dataset.src === "youtube") {
+    f.contentWindow.postMessage(JSON.stringify({event:"command", func:"setVolume", args:[vol], id:1, channel:"widget"}), "https://www.youtube.com");
+    f.contentWindow.postMessage(JSON.stringify({event:"command", func: vol > 0 ? "unMute" : "mute", args:[], id:1, channel:"widget"}), "https://www.youtube.com");
+  } else f.contentWindow.postMessage({ sourceConnectorType: 1, playerId: "tagtune", eventName: "volumeChange", data: { volume: vol / 100 } }, "https://embed.nicovideo.jp");
+}
+const volIcon = () => vol === 0 ? "🔇" : vol < 50 ? "🔉" : "🔊";
 function play(id, opts={}){
   const i = ITEM[id], url = embedUrl(i), ps = playSource(i);
   if (!url) return;
@@ -524,6 +541,7 @@ function play(id, opts={}){
     frame.dataset.ready = "1";
     for (const m of [{event:"listening", id:1, channel:"widget"}, {event:"command", func:"addEventListener", args:["onStateChange"], id:1, channel:"widget"}, {event:"command", func:"addEventListener", args:["onError"], id:1, channel:"widget"}])
       frame.contentWindow?.postMessage(JSON.stringify(m), "https://www.youtube.com");
+    applyVol(); setTimeout(applyVol, 1500);
   });
   const head = [
     el("div",{class:"ph"},
@@ -531,6 +549,9 @@ function play(id, opts={}){
       el("a",{href:ps.url, target:"_blank", rel:"noopener", title:`${ps.src==="youtube"?"YouTube":"ニコニコ動画"}で開く`}, i.t, " ↗"),
       detailUrl(i) ? el("a",{class:"pg", href:detailUrl(i), onclick:saveView, title:"曲のページ"}, "ページ")
         : el("button",{class:"pg", type:"button", title:"一覧のこの曲の行へ", onclick:()=>showInList(id)}, "一覧で見る"),
+      el("label",{class:"volw", title:"音量"}, el("span",{class:"vi","aria-hidden":"true"}, volIcon()),
+        el("input",{type:"range", class:"vol", min:"0", max:"100", step:"5", value:String(vol), "aria-label":"音量",
+          oninput:e=>{ vol = Number(e.target.value); e.target.previousSibling.textContent = volIcon(); try { localStorage.setItem(VOL_KEY, String(vol)); } catch {} applyVol(); }})),
       sh ? el("button",{class:"next", "aria-label":"次の曲へ", title:"次の曲へ", onclick:()=>nextShuffle()}, "⏭") : null,
       el("button",{"aria-label":"プレイヤーを閉じる", onclick:closePlayer}, "×")),
     sh ? el("p",{class:"from"}, `おまかせ再生中：${sh.label}（${sh.count.toLocaleString("ja-JP")}曲から）`) : null].filter(Boolean);
@@ -630,12 +651,13 @@ window.addEventListener("message", e=>{
   // ニコニコは準備ができたら（loadComplete）こちらから「再生」を送る（autoplay だけでは始まらないことがあるため）
   if (/(^|\.)nicovideo\.jp$/.test(host) && d.eventName === "loadComplete") {
     e.source.postMessage({ sourceConnectorType: 1, playerId: "tagtune", eventName: "play" }, e.origin);
+    applyVol();
     return;
   }
   // 再生が始まった（YouTube：状態 1、ニコニコ：playerStatus 2）
   const isYT = /(^|\.)youtube\.com$/.test(host), isNico = /(^|\.)nicovideo\.jp$/.test(host);
   if ((isYT && ((d.event === "onStateChange" && d.info === 1) || (d.event === "infoDelivery" && d.info?.playerState === 1)))
-    || (isNico && d.eventName === "playerStatusChange" && d.data?.playerStatus === 2)) { started = true; skipped = 0; clearTimeout(stuckTimer); }
+    || (isNico && d.eventName === "playerStatusChange" && d.data?.playerStatus === 2)) { if (!started) applyVol(); started = true; skipped = 0; clearTimeout(stuckTimer); }
   // YouTube の「この動画は再生できません」（埋め込み不可・削除済みなど）は、すぐ次の曲へ
   if (isYT && d.event === "onError" && state.shuffle) { skipStuck(); return; }
   if ((isNico && d.eventName === "error") && state.shuffle) { skipStuck(); return; }
