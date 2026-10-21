@@ -993,6 +993,7 @@ export function linkCovers(items) {
   // まとめたことで原曲のジャンルが変わった（YouTube版がニコニコ版に合わせてボカロになった など）ら、歌ってみたにも反映
   { const byIdM = new Map(items.map(i => [i.id, i])); for (const c of items) { const o = c.of && byIdM.get(c.of); if (o && c.kind === "歌ってみた" && o.g !== "その他") c.g = o.g; } }
   markSelfCovers(items);
+  fixCoverSingers(items);
   // 原曲につながった歌ってみたで、曲名に余計な言葉が残っているもの（「歌ってみた KING 葛葉」）は原曲の曲名にそろえる
   { const byIdT = new Map(items.map(i => [i.id, i]));
     for (const c of items) { const o = c.kind === "歌ってみた" && c.of && byIdT.get(c.of);
@@ -1001,7 +1002,6 @@ export function linkCovers(items) {
       const S = o.t.normalize("NFKC").toLowerCase(), R = c.t.normalize("NFKC").toLowerCase();
       const rest = normalize(R.replace(S, " ")).replace(/歌ってみた|うたってみた|歌わせていただきました|cover|カバー|tvedit|tvsize|fullver|ver/g, "");
       if (!rest || rest === normalize(c.by || "") || rest === normalize(o.p || "") || (c.by && rest.includes(normalize(c.by)))) c.t = o.t; } }
-  fixCoverSingers(items);
   guessCoverGenre(items);
   alignCoverGenres(items);
   // 管理人の手直し（overrides.json の g）は、自動の判定より優先する。原曲を手直ししたら、その歌ってみたも同じジャンルに
