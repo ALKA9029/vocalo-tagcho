@@ -936,7 +936,9 @@ function asToken(raw, sub) {
   return !(i > 0 && joined(R[i - 1], S[0])) && !(rest && joined(S[S.length - 1], rest[0]) && !COVER_TAIL.test(rest));
 }
 
+let CREATOR_SET = new Set();
 export function linkCovers(items) {
+  CREATOR_SET = new Set(items.filter(i => i.kind === "本家" && i.p).map(i => normalize(i.p)));
   dropEnglishTail(items);
   inferNamesFromTags(items);
   guessChannelGenre(items);
@@ -980,6 +982,22 @@ export function linkCovers(items) {
       }
     }
     if (o) { c.of = o.id; c.p = o.p || c.p; c.a = o.p ? o.a : (c.a || o.a); if (o.g !== "その他") c.g = o.g; else if (c.g === "その他") c.g = o.g; }
+    // 原曲が見つからない歌ってみたで、曲名に余計な言葉がついているもの（「VOCALOIDでニコニコ動画流星群」「ニコニコ動画流星群を漢らしく」）は、
+    // 曲名の中に入っているタグ（ニコニコの曲名タグ）のうち一番長いものにそろえる（原曲さがしもその曲名で探せるように）
+    else if (c.src === "niconico" && c.tags?.length) {   // YouTube のタグはばらばらなので使わない
+      const nt = normalize(c.t);
+      const who = [c.by, c.p, c.uploader].filter(Boolean).map(normalize);
+      // タグの前は何もないか「〜で」「〜ので」だけ、後ろは何もないか「を歌ってみた」「@歌い手」「-Arrange」などのときだけ（「松任谷由実 春よ、来い」の作者名タグは使わない）
+      const R = c.t.normalize("NFKC").toLowerCase();
+      const NOISE_AFTER = /^\s*($|を|歌|うた|@|＠|のは|[-－–]|\(|（|\[|【|ver|arrange|acoustic|rap|cover|full|edition|✽|・|、)/i;
+      const fits = t => { const S = t.replace(/_/g, " ").normalize("NFKC").toLowerCase(), i = R.indexOf(S);
+        return i >= 0 && (i === 0 || /(で|ので|が)\s*$/.test(R.slice(0, i))) && NOISE_AFTER.test(R.slice(i + S.length)); };
+      const tag = c.tags.filter(t => !isVoice(t) && !hasTag([t], VOCALO_TAGS) && !/歌ってみた|カバー|cover|音楽|VOCALOID|合唱|メドレー|演奏|弾いて|ランキング|部門|コラボ|歌コレ|\d{4}/i.test(t) && !who.includes(normalize(t)) && !CREATOR_SET.has(normalize(t)) && normalize(t).length >= 4 && normalize(t.replace(/_/g, " ")) !== nt && fits(t))
+        .sort((a, b) => b.length - a.length)[0];
+      // 大文字・小文字はタイトルの書き方のまま（タグは「shadow_shadow」のように小文字のことがある）
+      const pickT = t => { const N = c.t.normalize("NFKC"), S = t.replace(/_/g, " ").normalize("NFKC"), i = N.toLowerCase().indexOf(S.toLowerCase()); return i >= 0 ? N.slice(i, i + S.length) : S; };
+      if (tag) c.t = pickT(tag);
+    }
   }
   // 「歌ってみた」タグが付いていても、原曲（オリジナル曲）の作者本人がもう片方のサイトに出した同じ曲は本家（あとで1曲にまとめる）
   const byIdLC = new Map(items.map(i => [i.id, i]));
