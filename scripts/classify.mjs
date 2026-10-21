@@ -923,6 +923,19 @@ function fixCoverSingers(items) {
   }
 }
 
+// raw の中に sub が「ひとつの言葉として」入っているか（前後が文字・数字で続いていない。後ろが「歌ってみた」「cover」などなら続いていてもよい）
+// 見つからないときは null（記号の違いなどで比べられない）
+const COVER_TAIL = /^(を|歌ってみた|うたってみた|歌わせて|歌いました|うたいました|cover|カバー|ver|feat|弾き語り)/i;
+function asToken(raw, sub) {
+  const R = String(raw || "").normalize("NFKC").toLowerCase(), S = String(sub || "").normalize("NFKC").toLowerCase();
+  const i = R.indexOf(S);
+  if (!S || i < 0) return null;
+  const word = /[\p{L}\p{N}]/u, rest = R.slice(i + S.length);
+  const lat = ch => /[a-z0-9]/.test(ch);   // 英字と日本語の切りかわり（「あぶくBubble」）は言葉の切れ目とみなす
+  const joined = (a, b) => word.test(a) && word.test(b) && lat(a) === lat(b);
+  return !(i > 0 && joined(R[i - 1], S[0])) && !(rest && joined(S[S.length - 1], rest[0]) && !COVER_TAIL.test(rest));
+}
+
 export function linkCovers(items) {
   dropEnglishTail(items);
   inferNamesFromTags(items);
@@ -958,11 +971,12 @@ export function linkCovers(items) {
     }
     // 曲名の頭が原曲の曲名と同じ（「マトリョシカ vip店長」のように歌い手名が続いている）ときも原曲とみなす
     if (!o) {
-      const n = normalize(c.t);
+      // 先頭の「歌ってみた」「cover」は外して比べる（「【】歌ってみた KING 葛葉 【】」のように曲名の前に来ているもの）
+      const n = normalize(c.t).replace(/^(歌ってみた|うたってみた|歌わせていただきました|cover|カバー)+/, "");
       // 「Dear」と「Dearest」のように、英単語の途中で切れる一致は使わない
       for (let k = n.length - 1; k >= 3 && !o; k--) {
         if (/[a-z0-9]/.test(n[k - 1]) && /[a-z0-9]/.test(n[k])) continue;
-        const hit = originals.get(n.slice(0, k)); if (hit) { o = hit; c.t = hit.t; }
+        const hit = originals.get(n.slice(0, k)); if (hit && asToken(c.t, hit.t) !== false) { o = hit; c.t = hit.t; }   // 「アイロニックメタファー」を「アイロニック」にしない
       }
     }
     if (o) { c.of = o.id; c.p = o.p || c.p; c.a = o.p ? o.a : (c.a || o.a); if (o.g !== "その他") c.g = o.g; else if (c.g === "その他") c.g = o.g; }
@@ -979,6 +993,14 @@ export function linkCovers(items) {
   // まとめたことで原曲のジャンルが変わった（YouTube版がニコニコ版に合わせてボカロになった など）ら、歌ってみたにも反映
   { const byIdM = new Map(items.map(i => [i.id, i])); for (const c of items) { const o = c.of && byIdM.get(c.of); if (o && c.kind === "歌ってみた" && o.g !== "その他") c.g = o.g; } }
   markSelfCovers(items);
+  // 原曲につながった歌ってみたで、曲名に余計な言葉が残っているもの（「歌ってみた KING 葛葉」）は原曲の曲名にそろえる
+  { const byIdT = new Map(items.map(i => [i.id, i]));
+    for (const c of items) { const o = c.kind === "歌ってみた" && c.of && byIdT.get(c.of);
+      if (!o || normalize(o.t).length < 2 || normalize(c.t) === normalize(o.t) || !asToken(c.t, o.t)) continue;
+      // 曲名のほかに残っているのが「歌ってみた」などの言葉・歌い手名・原曲の作者名・記号だけのときだけ
+      const S = o.t.normalize("NFKC").toLowerCase(), R = c.t.normalize("NFKC").toLowerCase();
+      const rest = normalize(R.replace(S, " ")).replace(/歌ってみた|うたってみた|歌わせていただきました|cover|カバー|tvedit|tvsize|fullver|ver/g, "");
+      if (!rest || rest === normalize(c.by || "") || rest === normalize(o.p || "") || (c.by && rest.includes(normalize(c.by)))) c.t = o.t; } }
   fixCoverSingers(items);
   guessCoverGenre(items);
   alignCoverGenres(items);
