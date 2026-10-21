@@ -905,6 +905,24 @@ function hideTopicWithOfficial(items) {
   }
 }
 
+// 歌ってみたの歌い手名を直す
+// ・YouTubeのチャンネル名が英語で、歌い手名まで英語になったもの（「Suisei Channel」→ 星街すいせい）は対応表で
+// ・タイトルの「曲名 / 原曲の作者【歌い手】」の形で、歌い手が原曲の作者になったものは、タイトルの最後の【名前】か先頭の「名前 - 」で（セルフカバーは除く）
+const SINGER_NAMES = { "Suisei": "星街すいせい", "Kuzuha": "葛葉", "Chogakusei": "超学生", "Itsuki Natsume": "棗いつき" };
+function fixCoverSingers(items) {
+  const byId = new Map(items.map(i => [i.id, i]));
+  for (const c of items) {
+    if (c.kind !== "歌ってみた" || c.byFixed || !c.by) continue;
+    if (SINGER_NAMES[c.by]) { c.by = SINGER_NAMES[c.by]; continue; }
+    const o = c.of && byId.get(c.of);
+    if (!o?.p || c.self || normalize(c.by) !== normalize(o.p)) continue;
+    const tail = (c.title.match(/【([^】]+)】\s*$/) || [])[1];
+    const head = (c.title.match(/^([^-－「『【]+?)\s+[-－]\s+/) || [])[1];
+    const x = [tail, head].find(x => x && !/歌ってみた|cover|カバー|オリジナル|MV|ver|feat|配布|Synthesizer|ボカロ|VOCALOID|NEUTRINO|CeVIO|UTAU|VOICEVOX|AI/i.test(x) && !isVoice(x) && normalize(x) !== normalize(o.p) && normalize(x) !== normalize(o.t));
+    if (x) c.by = x.trim();
+  }
+}
+
 export function linkCovers(items) {
   dropEnglishTail(items);
   inferNamesFromTags(items);
@@ -961,6 +979,7 @@ export function linkCovers(items) {
   // まとめたことで原曲のジャンルが変わった（YouTube版がニコニコ版に合わせてボカロになった など）ら、歌ってみたにも反映
   { const byIdM = new Map(items.map(i => [i.id, i])); for (const c of items) { const o = c.of && byIdM.get(c.of); if (o && c.kind === "歌ってみた" && o.g !== "その他") c.g = o.g; } }
   markSelfCovers(items);
+  fixCoverSingers(items);
   guessCoverGenre(items);
   alignCoverGenres(items);
   // 管理人の手直し（overrides.json の g）は、自動の判定より優先する。原曲を手直ししたら、その歌ってみたも同じジャンルに
