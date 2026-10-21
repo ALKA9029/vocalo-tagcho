@@ -594,6 +594,25 @@ async function fetchRequests(items) {
 async function fetchManual(knownIds) {
   const key = process.env.YOUTUBE_API_KEY;
   const list = await readJson("data/add.json", []);
+  // { "q": "検索ことば", "channel": "チャンネル名（正規表現）", "t": "曲名", "p": "作者" } の形は、YouTubeを1回だけ検索してIDに置きかえる
+  // （1回100ユニット）。t・p があれば overrides.json に書いておく（ニコニコ版と同じ曲としてまとまるように）
+  const qs = list.filter(x => x.q && !x.id);
+  if (key && qs.length) {
+    const overrides = await readJson("data/overrides.json", {});
+    for (const x of qs) {
+      const res = await ytFetch("https://www.googleapis.com/youtube/v3/search?" + new URLSearchParams({ part: "snippet", type: "video", q: x.q, maxResults: "15", regionCode: "JP", key }));
+      if (!res.ok) { console.warn(`手で追加する動画「${x.q}」: 検索できなかった（HTTP ${res.status}）`); continue; }
+      const ch = new RegExp(x.channel || ".", "i");
+      const hit = ((await res.json()).items || []).find(it => it.id?.videoId && ch.test(it.snippet?.channelTitle || "") && (!x.t || normalize(unxml(it.snippet?.title || "")).includes(normalize(x.t))));
+      if (!hit) { console.log(`手で追加する動画「${x.q}」: 見つからなかった`); x.miss = new Date().toISOString().slice(0, 10); continue; }
+      x.id = "yt:" + hit.id.videoId;
+      x.note = `${x.note || x.q}（自動で見つけた：${unxml(hit.snippet.title)} / ${hit.snippet.channelTitle}）`;
+      if (x.t || x.p) overrides[x.id] = { ...(overrides[x.id] || {}), ...(x.t ? { t: x.t } : {}), ...(x.p ? { p: x.p } : {}) };
+      console.log(`手で追加する動画「${x.q}」→ ${x.id} ${unxml(hit.snippet.title)}（${hit.snippet.channelTitle}）`);
+    }
+    await writeFile(path("data/add.json"), JSON.stringify(list, null, 1) + "\n");
+    await writeFile(path("data/overrides.json"), JSON.stringify(overrides) + "\n");
+  }
   const yt = list.map(x => x.id).filter(id => id?.startsWith("yt:") && !knownIds.has(id)).map(id => id.slice(3));
   if (!key || !yt.length) return [];
   const got = (await ytVideos(yt, key)).map(v => ({ ...ytItem(v, "J-POP"), seed: true }));
