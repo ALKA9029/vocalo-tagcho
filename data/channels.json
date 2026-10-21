@@ -1558,6 +1558,13 @@
   "pinned": true
  },
  {
+  "id": "UCwO9rz-7dKqEDI0yIgTRUqQ",
+  "added": "2026-10-09T15:55:32.664Z",
+  "name": "大阪桐蔭高等学校吹奏楽部OB会",
+  "genre": "アニソン",
+  "lastHit": "2026-10-21T01:14:06Z"
+ },
+ {
   "id": "UCjv4bfP_67WLuPheS-Z8Ekg",
   "added": "2026-10-20T21:49:26.400Z",
   "name": "浠Mizuki Channel",
@@ -1572,18 +1579,18 @@
   "lastHit": "2026-10-20T13:00:39Z"
  },
  {
+  "id": "UCoYUFSKshMLgeGJb9NmcFtg",
+  "added": "2026-10-21T11:14:09.212Z",
+  "name": "na Relo",
+  "genre": "J-POP",
+  "lastHit": "2026-10-20T13:00:28Z"
+ },
+ {
   "id": "UCz89MGFBrAqwJ5xMr5weSuA",
   "added": "2026-10-20T21:49:26.400Z",
   "name": "伊波ライ / Inami Rai【にじさんじ】",
   "genre": "J-POP",
   "lastHit": "2026-10-20T13:00:08Z"
- },
- {
-  "id": "UCwO9rz-7dKqEDI0yIgTRUqQ",
-  "added": "2026-10-09T15:55:32.664Z",
-  "name": "大阪桐蔭高等学校吹奏楽部OB会",
-  "genre": "アニソン",
-  "lastHit": "2026-10-20T12:23:17Z"
  },
  {
   "id": "UCPrjycK4eiQhUw2PnVIq7Gg",
@@ -1672,7 +1679,8 @@
   "added": "2026-10-20T21:49:26.400Z",
   "name": "ONE OK ROCK",
   "genre": "J-POP",
-  "lastHit": "2026-10-18T12:00:35Z"
+  "lastHit": "2026-10-18T12:00:35Z",
+  "pinned": true
  },
  {
   "id": "UC1FQWQ3y3-e8l1pCtWhJt5A",
@@ -1857,6 +1865,13 @@
   "name": "KAITOストーリー",
   "genre": "J-POP",
   "lastHit": "2026-10-17T09:00:08Z"
+ },
+ {
+  "id": "UCDLKLRC-5u6w5QLAYawD2gg",
+  "added": "2026-10-18T21:45:48.802Z",
+  "name": "AIクリエイターあしゅ | AsYu",
+  "genre": "J-POP",
+  "lastHit": "2026-10-17T08:56:54Z"
  },
  {
   "id": "UCGGJd1m4lzDzYAqjVYLI8MA",
@@ -2480,13 +2495,6 @@
   "pinned": true
  },
  {
-  "id": "UCDLKLRC-5u6w5QLAYawD2gg",
-  "added": "2026-10-18T21:45:48.802Z",
-  "name": "AIクリエイターあしゅ | AsYu",
-  "genre": "J-POP",
-  "lastHit": "2026-10-12T07:40:22Z"
- },
- {
   "id": "UC61K1rlTcu3whbzjlHIa2dA",
   "added": "2026-10-14T23:23:48.922Z",
   "name": "さんど。【よろずや】",
@@ -3025,13 +3033,5 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "アニソン",
   "lastHit": "2026-10-07T09:30:09Z"
- },
- {
-  "id": "UCIEgmfyQSPwrjXt1QpmNv0w",
-  "name": "おらふくん / ドズル社",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "J-POP",
-  "lastHit": "2026-10-07T07:00:25Z",
-  "pinned": true
  }
 ]
