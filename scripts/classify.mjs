@@ -909,10 +909,32 @@ function hideTopicWithOfficial(items) {
 // ・YouTubeのチャンネル名が英語で、歌い手名まで英語になったもの（「Suisei Channel」→ 星街すいせい）は対応表で
 // ・タイトルの「曲名 / 原曲の作者【歌い手】」の形で、歌い手が原曲の作者になったものは、タイトルの最後の【名前】か先頭の「名前 - 」で（セルフカバーは除く）
 const SINGER_NAMES = { "Meychan": "めいちゃん", "96NEKO": "96猫", "Suisei": "星街すいせい", "Kuzuha": "葛葉", "Chogakusei": "超学生", "Itsuki Natsume": "棗いつき" };
+// タイトルの中の歌い手名（「ver.aoru」「【サンヌ cover】」「cover by X」「/ そらびび(cover)」、最後の【X】、最初の【X】の順に探す）
+const BAD_SINGER = /歌ってみた|うたってみた|みた|歌って|踊って|cover|カバー|オリジナル|^MV$|feat|配布|Synthesizer|SynthV|VOCALOID|NEUTRINO|CeVIO|UTAU|VOICEVOX|フル|full|ショート|弾き語り|リレー|メドレー|ミックス|MIX|作業用|歌踊|歌コレ|\d{4}|で$|[をにし]\S*て$|って$/i;
+function singerInTitle(title = "", t = "", strongOnly = false) {
+  const strong = [/ver\.?\s*([^\s【】\[\]()（）]+)\s*$/i, /cover(?:ed)?\s*by\s*([^【】\[\]()（）|｜]+?)\s*(?:[【\[(（|｜]|$)/i, /【([^】]+?)\s+cover\.?】/i,
+    /[\/／]\s*([^\/／【】()（）]+?)\s*[（(]\s*cover\s*[)）]/i];
+  const pats = strongOnly ? strong : [...strong, /【([^】]+)】\s*$/, /^【([^】]+)】/];
+  for (const re of pats) {
+    const x = title.match(re)?.[1]?.trim().replace(/^ver\.?\s*/i, "");
+    if (x && x.length >= 2 && !BAD_SINGER.test(x) && !isVoice(x) && normalize(x) !== normalize(t)) return x;
+  }
+  return null;
+}
 function fixCoverSingers(items) {
   const byId = new Map(items.map(i => [i.id, i]));
   for (const c of items) {
-    if (c.kind !== "歌ってみた" || c.byFixed || !c.by) continue;
+    if (c.kind !== "歌ってみた" || c.byFixed) continue;
+    // 歌い手名がない・曲名になっている・「Co」のように切れている・チャンネル名でタイトルの名前より長い（「そらびびの秘密基地」）ときは、タイトルの中の名前に
+    if (c.by && /^ver\.?\s*/i.test(c.by)) c.by = c.by.replace(/^ver\.?\s*/i, "");
+    if (c.by && BAD_SINGER.test(c.by) && !/^[\p{L}\p{N}._-]+$/u.test(c.by.replace(/[×＆&、 ]/g, "")) === false && /で$|[をにし]\S*て$|って$|歌って|踊って|みた/.test(c.by)) c.by = "";   // 「英語で」「超会議をかけて」は歌い手名ではない
+    { const o0 = c.of && byId.get(c.of);
+      // 歌い手名が曲名・「Co」になっているときは、タイトルの【】の名前まで使う。名前がない・チャンネル名のときは「ver.X」「cover by X」などの形だけ
+      const wrong = c.by && (normalize(c.by) === normalize(c.t) || (o0 && normalize(c.by) === normalize(o0.t)) || /^co(ver)?\.?$/i.test(c.by));
+      const strong = singerInTitle(c.title, c.t, true);
+      if (wrong) { const x = singerInTitle(c.title, c.t); if (x && (!o0 || normalize(x) !== normalize(o0.t))) c.by = x; }
+      else if (strong && (!c.by || (c.src === "youtube" && normalize(c.by) !== normalize(strong) && normalize(c.by).startsWith(normalize(strong))))) c.by = strong; }
+    if (!c.by) continue;
     if (SINGER_NAMES[c.by]) { c.by = SINGER_NAMES[c.by]; continue; }
     const o = c.of && byId.get(c.of);
     if (!o?.p || c.self || normalize(c.by) !== normalize(o.p)) continue;
