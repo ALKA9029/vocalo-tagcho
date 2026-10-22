@@ -447,7 +447,7 @@ await put("s/index.html", singerIndex()); urls.push("/s/");
   const who = i => i.p ? ` / ${i.p}${i.v ? `（${i.v}）` : ""}` : (i.v ? `（${i.v}）` : "");
   const songText = (head, i, tags) => {
     const n = (coversOf.get(i.id) || []).length;
-    return fit([head, "", `「${i.t}」${who(i)}`, `${head.startsWith("📅") ? "" : `${(i.date || "").slice(0, 4)}年の曲・`}${fmtViews(i.views)}回再生${n ? `・歌ってみた${n}件` : ""}`, tagLine(i.id), "", askLine(i.id), SITE + songUrl(i.id), tags]);
+    return fit([head, "", `「${i.t}」${who(i)}`, `${head.startsWith("📅") ? "" : `${(i.date || "").slice(0, 4)}年の曲・`}${fmtViews(i.views)}回再生${n ? `・歌ってみた${n}件` : ""}`, tagLine(i.id), SITE + songUrl(i.id), "", askLine(i.id), tags]);
   };
   const taken = new Set();
   // その日のネタを一度作ったら、曲データが変わっても（まとめ直しなどがあっても）同じ曲のままにする
@@ -471,7 +471,7 @@ await put("s/index.html", singerIndex()); urls.push("/s/");
   anniv.forEach(x => taken.add(x.i.id));
   const GENRE_TAG = { "ボカロ": "ボカロ", "J-POP": "JPOP", "アニソン": "アニソン" };
   const coverText = i => { const cs = coversOf.get(i.id) || []; const names = [...new Set(cs.map(x => x.vr || x.by).filter(Boolean))].slice(0, 3);
-    return fit(["🎤 歌ってみた聴きくらべ", "", `「${i.t}」${who(i)}`, `TagTuneに歌ってみたが${cs.length}件！`, names.length ? `${names.join("、")}などが歌ってます` : null, "", "どの歌ってみたが好き？聴きくらべてタグをつけてね🏷️", SITE + songUrl(i.id), `#TagTune #歌ってみた${GENRE_TAG[i.g] ? ` #${GENRE_TAG[i.g]}` : ""}`]); };
+    return fit(["🎤 歌ってみた聴きくらべ", "", `「${i.t}」${who(i)}`, `TagTuneに歌ってみたが${cs.length}件！`, names.length ? `${names.join("、")}などが歌ってます` : null, SITE + songUrl(i.id), "", "どの歌ってみたが好き？聴きくらべてタグをつけてね🏷️", `#TagTune #歌ってみた${GENRE_TAG[i.g] ? ` #${GENRE_TAG[i.g]}` : ""}`]); };
   const night = slot("夜：歌ってみた・○年前の今日", "20:00", prevNight ? prevNight.map(i => isAnniv(i) ? annivOf(i) : { i, text: coverText(i) }) : [...anniv, ...take(orig.filter(i => (coversOf.get(i.id) || []).length >= 3), 3 - anniv.length, taken).map(i => ({ i, text: coverText(i) }))]);
   const slots = [morning, noon, night];
   hist[today] = slots.map(s => ({ label: s.label, ids: s.ids }));
