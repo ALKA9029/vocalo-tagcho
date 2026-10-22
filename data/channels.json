@@ -16,6 +16,13 @@
   "pinned": true
  },
  {
+  "id": "UCWRGdxwtiOYnT2EM4JKtPdg",
+  "added": "2026-10-17T21:45:11.252Z",
+  "name": "RiraN",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-21T10:00:10Z"
+ },
+ {
   "id": "UCAfQ5CojppHVIiLwuRDBzTg",
   "name": "t+pazolite",
   "added": "2026-10-09T12:06:54.468Z",
@@ -175,13 +182,6 @@
   "genre": "ボカロ",
   "lastHit": "2026-10-15T11:00:08Z",
   "pinned": true
- },
- {
-  "id": "UCWRGdxwtiOYnT2EM4JKtPdg",
-  "added": "2026-10-17T21:45:11.252Z",
-  "name": "RiraN",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-15T10:00:08Z"
  },
  {
   "id": "UCY9ZKu8LK6limM7aH-BXBag",
@@ -1558,6 +1558,13 @@
   "pinned": true
  },
  {
+  "id": "UCIUIex6hsvxf-5Bw2r5oEnQ",
+  "added": "2026-10-17T21:45:11.252Z",
+  "name": "さばとP",
+  "genre": "J-POP",
+  "lastHit": "2026-10-21T15:26:05Z"
+ },
+ {
   "id": "UC9zY_E8mcAo_Oq772LEZq8Q",
   "name": "THE FIRST TAKE",
   "added": "2026-10-09T12:06:54.468Z",
@@ -1570,6 +1577,13 @@
   "name": "Ryoji Takarabe財部亮治",
   "genre": "アニソン",
   "lastHit": "2026-10-21T11:30:23Z"
+ },
+ {
+  "id": "UCfBkUgaJ6eqYA9_TX2cmq9A",
+  "added": "2026-10-21T21:52:15.808Z",
+  "name": "理芽 -RIM-",
+  "genre": "J-POP",
+  "lastHit": "2026-10-21T11:00:10Z"
  },
  {
   "id": "UCMMOL-C2nE45X3GZQCGJJ6w",
@@ -1634,6 +1648,14 @@
   "name": "伊波ライ / Inami Rai【にじさんじ】",
   "genre": "J-POP",
   "lastHit": "2026-10-20T13:00:08Z"
+ },
+ {
+  "id": "UC2dXx-3RXeeP8hA5AGt8vuw",
+  "added": "2026-10-22T11:06:32.999Z",
+  "name": "初星学園",
+  "genre": "J-POP",
+  "lastHit": "2026-10-20T13:00:08Z",
+  "pinned": true
  },
  {
   "id": "UCPrjycK4eiQhUw2PnVIq7Gg",
@@ -1749,11 +1771,11 @@
   "lastHit": "2026-10-18T11:00:09Z"
  },
  {
-  "id": "UC6qVAJzxF5kSN_UUFSdODiQ",
-  "added": "2026-10-19T13:19:55.145Z",
-  "name": "MAZZEL - Topic",
+  "id": "UCQQTmmtBldc68Jdb-ttQ-CQ",
+  "added": "2026-10-22T11:06:32.999Z",
+  "name": "NANAI 半田なない",
   "genre": "J-POP",
-  "lastHit": "2026-10-18T10:00:37Z"
+  "lastHit": "2026-10-18T10:30:08Z"
  },
  {
   "id": "UCSkg7Vl7_7hbJjLwnjA-6sg",
@@ -1945,13 +1967,6 @@
   "name": "MsCREW",
   "genre": "アニソン",
   "lastHit": "2026-10-17T00:52:45Z"
- },
- {
-  "id": "UCIUIex6hsvxf-5Bw2r5oEnQ",
-  "added": "2026-10-17T21:45:11.252Z",
-  "name": "さばとP",
-  "genre": "J-POP",
-  "lastHit": "2026-10-16T17:12:58Z"
  },
  {
   "id": "UCjXp3yT9CmSQynONc0OGrQg",
@@ -2255,13 +2270,6 @@
   "genre": "アニソン",
   "lastHit": "2026-10-15T10:00:39Z",
   "pinned": true
- },
- {
-  "id": "UCfBkUgaJ6eqYA9_TX2cmq9A",
-  "added": "2026-10-21T21:52:15.808Z",
-  "name": "理芽 -RIM-",
-  "genre": "J-POP",
-  "lastHit": "2026-10-15T10:00:17Z"
  },
  {
   "id": "UCLakaKEelmUdqQISLjwIRmg",
@@ -3024,14 +3032,6 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "アニソン",
   "lastHit": "2026-10-08T09:16:40Z",
-  "pinned": true
- },
- {
-  "id": "UCpFgmZm65yOU5X-hmWkWjuw",
-  "name": "Mrs. GREEN APPLE",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "アニソン",
-  "lastHit": "2026-10-08T01:21:15Z",
   "pinned": true
  }
 ]
