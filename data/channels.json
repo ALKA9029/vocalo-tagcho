@@ -23,6 +23,13 @@
   "lastHit": "2026-10-21T10:00:10Z"
  },
  {
+  "id": "UCReMH9KapHfHOtNQ4hIhhBA",
+  "added": "2026-10-11T21:32:47.826Z",
+  "name": "猫舘 こたつ / Nekotachi Kotatsu",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-20T14:31:17Z"
+ },
+ {
   "id": "UCAfQ5CojppHVIiLwuRDBzTg",
   "name": "t+pazolite",
   "added": "2026-10-09T12:06:54.468Z",
@@ -380,13 +387,6 @@
   "genre": "ボカロ",
   "lastHit": "2026-10-09T11:00:10Z",
   "pinned": true
- },
- {
-  "id": "UCReMH9KapHfHOtNQ4hIhhBA",
-  "added": "2026-10-11T21:32:47.826Z",
-  "name": "猫舘 こたつ / Nekotachi Kotatsu",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-09T11:00:09Z"
  },
  {
   "id": "UCZqbjLg2LTpHDNHBEdv7jBQ",
@@ -1558,6 +1558,21 @@
   "pinned": true
  },
  {
+  "id": "UCQbxh2ft3vw9M6Da_kuIa6A",
+  "added": "2026-10-10T07:39:29.506Z",
+  "name": "KING OF KINGS",
+  "genre": "J-POP",
+  "lastHit": "2026-10-22T12:00:10Z",
+  "pinned": true
+ },
+ {
+  "id": "UCz89MGFBrAqwJ5xMr5weSuA",
+  "added": "2026-10-20T21:49:26.400Z",
+  "name": "伊波ライ / Inami Rai【にじさんじ】",
+  "genre": "J-POP",
+  "lastHit": "2026-10-22T12:00:08Z"
+ },
+ {
   "id": "UCIUIex6hsvxf-5Bw2r5oEnQ",
   "added": "2026-10-17T21:45:11.252Z",
   "name": "さばとP",
@@ -1643,13 +1658,6 @@
   "lastHit": "2026-10-20T13:00:28Z"
  },
  {
-  "id": "UCz89MGFBrAqwJ5xMr5weSuA",
-  "added": "2026-10-20T21:49:26.400Z",
-  "name": "伊波ライ / Inami Rai【にじさんじ】",
-  "genre": "J-POP",
-  "lastHit": "2026-10-20T13:00:08Z"
- },
- {
   "id": "UC2dXx-3RXeeP8hA5AGt8vuw",
   "added": "2026-10-22T11:06:32.999Z",
   "name": "初星学園",
@@ -1723,6 +1731,13 @@
   "name": "AiM / Anti Image Machine",
   "genre": "J-POP",
   "lastHit": "2026-10-19T10:00:06Z"
+ },
+ {
+  "id": "UCi0W073dqdnC3FkYGHgyYsg",
+  "added": "2026-10-22T15:01:03.826Z",
+  "name": "MAX4592",
+  "genre": "J-POP",
+  "lastHit": "2026-10-19T03:00:20Z"
  },
  {
   "id": "UCApV075i5Vc6aUg9j8WV2oQ",
@@ -1917,6 +1932,13 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "アニソン",
   "lastHit": "2026-10-17T10:00:23Z"
+ },
+ {
+  "id": "UCkqTauzi2HEkxbqAzBD4EFg",
+  "added": "2026-10-22T15:01:03.826Z",
+  "name": "kAthrsIs",
+  "genre": "J-POP",
+  "lastHit": "2026-10-17T10:00:08Z"
  },
  {
   "id": "UCCyBj7kgaiw_jWQ0uQOUDJQ",
@@ -2517,14 +2539,6 @@
   "pinned": true
  },
  {
-  "id": "UCQbxh2ft3vw9M6Da_kuIa6A",
-  "added": "2026-10-10T07:39:29.506Z",
-  "name": "KING OF KINGS",
-  "genre": "J-POP",
-  "lastHit": "2026-10-12T12:00:00Z",
-  "pinned": true
- },
- {
   "id": "UCSI4hIhSvBgSjU4dQbYbx-w",
   "added": "2026-10-15T21:48:53.889Z",
   "name": "もるてん",
@@ -3018,21 +3032,5 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "J-POP",
   "lastHit": "2026-10-08T10:00:24Z"
- },
- {
-  "id": "UCqm3BQLlJfvkTsX_hvm0UmA",
-  "name": "Watame Ch. 角巻わため",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "アニソン",
-  "lastHit": "2026-10-08T10:00:01Z",
-  "pinned": true
- },
- {
-  "id": "UCrrNHoXQ1uTYsR6v41pDalQ",
-  "name": "ナナヲアカリ OFFICIAL",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "アニソン",
-  "lastHit": "2026-10-08T09:16:40Z",
-  "pinned": true
  }
 ]
