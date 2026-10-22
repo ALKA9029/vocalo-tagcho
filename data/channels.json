@@ -1591,6 +1591,13 @@
   "lastHit": "2026-10-22T11:00:22Z"
  },
  {
+  "id": "UCkHCieVhC_HXVRmnWGWcB1A",
+  "added": "2026-10-22T22:56:54.608Z",
+  "name": "Aぇ! group",
+  "genre": "J-POP",
+  "lastHit": "2026-10-22T10:00:07Z"
+ },
+ {
   "id": "UCKofJjNEmQ3LwERp3pRVxtw",
   "added": "2026-10-22T21:48:45.712Z",
   "name": "ゆにれいど !【公式】",
@@ -1603,6 +1610,13 @@
   "name": "NHK MUSIC",
   "genre": "アニソン",
   "lastHit": "2026-10-22T02:14:42Z"
+ },
+ {
+  "id": "UCrubey1wynXddSM6xLQYLGQ",
+  "added": "2026-10-22T21:48:45.712Z",
+  "name": "Universal Music Japan International",
+  "genre": "J-POP",
+  "lastHit": "2026-10-21T23:00:26Z"
  },
  {
   "id": "UCzRUSFIF_plgY0a7u7TulEQ",
@@ -1683,13 +1697,6 @@
   "lastHit": "2026-10-21T10:00:06Z"
  },
  {
-  "id": "UCrubey1wynXddSM6xLQYLGQ",
-  "added": "2026-10-22T21:48:45.712Z",
-  "name": "Universal Music Japan International",
-  "genre": "J-POP",
-  "lastHit": "2026-10-21T09:00:26Z"
- },
- {
   "id": "UCl2aT0nRejTCQO_LHZAftBw",
   "added": "2026-10-09T12:23:27.151Z",
   "name": "UNIVERSAL MUSIC JAPAN",
@@ -1710,6 +1717,14 @@
   "name": "大阪桐蔭高等学校吹奏楽部OB会",
   "genre": "アニソン",
   "lastHit": "2026-10-21T01:14:06Z"
+ },
+ {
+  "id": "UC5HwceAVbRH7sKrmucI5onQ",
+  "added": "2026-10-22T21:48:45.712Z",
+  "name": "Penthouse",
+  "genre": "アニソン",
+  "lastHit": "2026-10-20T15:00:07Z",
+  "pinned": true
  },
  {
   "id": "UCjv4bfP_67WLuPheS-Z8Ekg",
@@ -1859,7 +1874,8 @@
   "added": "2026-10-22T21:48:45.712Z",
   "name": "高取ヒデアキ",
   "genre": "アニソン",
-  "lastHit": "2026-10-18T09:31:02Z"
+  "lastHit": "2026-10-18T09:31:02Z",
+  "pinned": true
  },
  {
   "id": "UCSkg7Vl7_7hbJjLwnjA-6sg",
@@ -2058,7 +2074,8 @@
   "added": "2026-10-20T21:49:26.400Z",
   "name": "East Of Eden",
   "genre": "アニソン",
-  "lastHit": "2026-10-16T15:00:26Z"
+  "lastHit": "2026-10-16T15:00:26Z",
+  "pinned": true
  },
  {
   "id": "UCwjAKjycHHT1QzHrQN5Stww",
@@ -2119,13 +2136,6 @@
   "added": "2026-10-16T21:47:12.648Z",
   "name": "天帝フォルテ / Tentei Forte",
   "genre": "アニソン",
-  "lastHit": "2026-10-16T12:00:07Z"
- },
- {
-  "id": "UC5HwceAVbRH7sKrmucI5onQ",
-  "added": "2026-10-22T21:48:45.712Z",
-  "name": "Penthouse",
-  "genre": "J-POP",
   "lastHit": "2026-10-16T12:00:07Z"
  },
  {
@@ -3019,12 +3029,5 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "J-POP",
   "lastHit": "2026-10-09T04:59:07Z"
- },
- {
-  "id": "UCXE722tOwV64da9pFQE0Etg",
-  "added": "2026-10-09T15:55:32.664Z",
-  "name": "renée ノーベル平和P",
-  "genre": "J-POP",
-  "lastHit": "2026-10-08T15:00:32Z"
  }
 ]
