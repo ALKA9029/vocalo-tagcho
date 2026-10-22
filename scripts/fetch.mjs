@@ -603,7 +603,7 @@ async function fetchManual(knownIds) {
       const res = await ytFetch("https://www.googleapis.com/youtube/v3/search?" + new URLSearchParams({ part: "snippet", type: "video", q: x.q, maxResults: "15", regionCode: "JP", key }));
       if (!res.ok) { console.warn(`手で追加する動画「${x.q}」: 検索できなかった（HTTP ${res.status}）`); continue; }
       const ch = new RegExp(x.channel || ".", "i");
-      const hit = ((await res.json()).items || []).find(it => it.id?.videoId && ch.test(it.snippet?.channelTitle || "") && (!x.t || normalize(unxml(it.snippet?.title || "")).includes(normalize(x.t))));
+      const hit = ((await res.json()).items || []).find(it => it.id?.videoId && ch.test(it.snippet?.channelTitle || "") && !/ - Topic$/.test(it.snippet?.channelTitle || "") && (!x.t || normalize(unxml(it.snippet?.title || "")).includes(normalize(x.t))));
       if (!hit) { console.log(`手で追加する動画「${x.q}」: 見つからなかった`); x.miss = new Date().toISOString().slice(0, 10); continue; }
       x.id = "yt:" + hit.id.videoId;
       x.note = `${x.note || x.q}（自動で見つけた：${unxml(hit.snippet.title)} / ${hit.snippet.channelTitle}）`;
