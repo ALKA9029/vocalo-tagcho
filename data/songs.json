@@ -4384,7 +4384,10 @@
   "firstSeen": "2026-10-18T21:44:01.984Z",
   "p": "内緒のピアス",
   "of": "nico:sm42461482",
-  "a": "niconico:86199535"
+  "a": "niconico:86199535",
+  "alt": [
+   "nico:sm46939741"
+  ]
  },
  {
   "id": "nico:sm46939718",
@@ -4447,7 +4450,8 @@
   "firstSeen": "2026-10-19T13:19:18.737Z",
   "of": "nico:sm42461482",
   "p": "内緒のピアス",
-  "a": "niconico:86199535"
+  "a": "niconico:86199535",
+  "dup": "yt:POQhDdv603s"
  },
  {
   "id": "yt:4xcSMSelX-4",
@@ -10502,7 +10506,10 @@
   "a": "youtube:UCtGmulznR7e0KxpEdKu_nqw",
   "vr": "重音テトSV",
   "firstSeen": "2026-10-17T21:43:22.287Z",
-  "of": "yt:AqI97zHMoQw"
+  "of": "yt:AqI97zHMoQw",
+  "alt": [
+   "nico:sm46927915"
+  ]
  },
  {
   "id": "yt:KzejvVW0iQc",
@@ -10761,7 +10768,8 @@
   "a": "youtube:UCtGmulznR7e0KxpEdKu_nqw",
   "vr": "重音テトSV",
   "firstSeen": "2026-10-17T00:40:17.900Z",
-  "of": "yt:AqI97zHMoQw"
+  "of": "yt:AqI97zHMoQw",
+  "dup": "yt:HFp0BbUbdfs"
  },
  {
   "id": "nico:sm46930444",
@@ -24051,7 +24059,10 @@
   "firstSeen": "2026-10-10T21:31:18.951Z",
   "p": "MOONSTRAY",
   "of": "nico:sm9189786",
-  "a": "niconico:383390"
+  "a": "niconico:383390",
+  "alt": [
+   "nico:sm46908926"
+  ]
  },
  {
   "id": "yt:bKSXL4qGl4c",
@@ -24135,7 +24146,8 @@
   "firstSeen": "2026-10-11T00:52:52.331Z",
   "of": "nico:sm9189786",
   "p": "MOONSTRAY",
-  "a": "niconico:383390"
+  "a": "niconico:383390",
+  "dup": "yt:SY94XpxoyM0"
  },
  {
   "id": "yt:w579DZgAxPI",
@@ -39450,7 +39462,10 @@
   "nicoSrc": "nico:sm46716933",
   "firstSeen": "2026-10-09T11:31:52.151Z",
   "of": "nico:so28857561",
-  "a": "niconico:2577725"
+  "a": "niconico:2577725",
+  "alt": [
+   "nico:sm46877939"
+  ]
  },
  {
   "id": "yt:7JfQKTMlKhI",
@@ -39565,7 +39580,8 @@
   "by": "赤ティン",
   "firstSeen": "2026-10-09T11:31:52.024Z",
   "of": "nico:so28857561",
-  "a": "niconico:2577725"
+  "a": "niconico:2577725",
+  "dup": "yt:PamiOrQ-yKo"
  },
  {
   "id": "yt:DEhhvMsJiE0",
@@ -45715,7 +45731,8 @@
   "of": "yt:M9moY0hEJRE",
   "p": "Kanaria",
   "a": "youtube:UC10BM9XdLdrvB8japwmRUvA",
-  "self": 1
+  "self": 1,
+  "dup": "yt:bpHBIO-Ridc"
  },
  {
   "id": "nico:sm46845521",
@@ -45767,7 +45784,10 @@
   "p": "Kanaria",
   "of": "yt:M9moY0hEJRE",
   "a": "youtube:UC10BM9XdLdrvB8japwmRUvA",
-  "self": 1
+  "self": 1,
+  "alt": [
+   "nico:sm46845637"
+  ]
  },
  {
   "id": "nico:sm46834010",
@@ -84927,7 +84947,7 @@
   "uploaderId": "UCLkxbtUqIudgGSOl8XAdCfA",
   "uploader": "Meychan",
   "descHead": "一瞬でラクにしてよ\n\nのりぴー様の「右肩の蝶」を歌わせていただきました。\nhttps://youtu.be/HhOK1-whpsc?si=gFEH6E24qneqb51R\n\nストリーミング配信：https://linkco.re/SXSa3qPs\n\nVocal：めいちゃん\n\nIllust：天堂鷹（https://twitter.com/tendotaka/media）\nMovie：筆者（https://x.com/ohissya）\n\nMusic：のりぴー\nLyrics：水野悠良\n\nArrangement：清水\"カルロス\"宥人（https://twitter.com/yutos_74）\nBa :",
-  "by": "Meychan",
+  "by": "めいちゃん",
   "pHint": "めいちゃん",
   "p": "めいちゃん",
   "a": "めいちゃん",
@@ -98231,13 +98251,14 @@
   "uploaderId": "UCLkxbtUqIudgGSOl8XAdCfA",
   "uploader": "Meychan",
   "descHead": "ちょっと教えてくれないか？\n\n\nハチ様の「マトリョシカ」を歌わせていただきました。\nhttps://www.youtube.com/watch?v=HOz-9FzIDf0\n\n\nVocal：めいちゃん\nVocal：Gero\nIllustration：世津田スン https://twitter.com/cojp35176498\nMovie：Moeko Miyoshi https://twitter.com/mmmmoeko_\nArrangement：清水\"カルロス\"宥人 https://twitter.com/yutos_74\nMix：藤浪潤一郎 https://twitter.com/2273x",
-  "by": "Meychan",
+  "by": "めいちゃん×Gero",
   "pHint": "めいちゃん×Gero",
   "p": "めいちゃん×Gero",
   "a": "めいちゃん×gero",
   "req": "nico:sm11809611",
   "firstSeen": "2026-10-21T21:50:30.746Z",
   "seed": true,
+  "byFixed": true,
   "of": "nico:sm11809611",
   "ofLocked": true
  },
@@ -98471,7 +98492,8 @@
   "firstSeen": "2026-10-20T03:40:31.644Z",
   "seed": true,
   "of": "yt:02_46KCr04g",
-  "ofLocked": true
+  "ofLocked": true,
+  "dup": "yt:7s9-wlGJwxI"
  },
  {
   "id": "yt:7s9-wlGJwxI",
@@ -98498,7 +98520,10 @@
   "firstSeen": "2026-10-20T03:40:31.644Z",
   "seed": true,
   "of": "yt:02_46KCr04g",
-  "ofLocked": true
+  "ofLocked": true,
+  "alt": [
+   "nico:sm40546433"
+  ]
  },
  {
   "id": "nico:sm40545552",
@@ -171168,7 +171193,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=ELluzi0lMVE",
   "title": "【96猫＆vip店長】マトリョシカを歌ってみた",
-  "t": "マトリョシカを歌ってみた",
+  "t": "マトリョシカ",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2014-06-16T21:13:14Z",
@@ -171184,13 +171209,15 @@
   "uploaderId": "UCwu15I0KWOI6Xbe2Uziee4A",
   "uploader": "【MAIN】96NEKO-CHANNEL",
   "descHead": "ご本家：http://www.nicovideo.jp/watch/sm11809611\nニコニコver：http://www.nicovideo.jp/watch/sm14319655\nMusic：ハチ様\nVocal：96猫　vip店長\nIllust：  moco \n 　　　   pun2\n　　　  　rico　\n    砂糖イルノ　\n　　　氷室亮\n　　　　腹筋\n　　　　（敬称略）\nMovie：sunG様\n\n※他の方の動画で96猫・vip店長の名を出す（又はそれに関係する）\n発言はご遠慮くださいますようお願いします。",
-  "by": "96NEKO",
+  "by": "96猫＆vip店長",
   "nicoSrc": "nico:sm11809611",
   "req": "nico:sm11809611",
   "firstSeen": "2026-10-21T21:50:30.747Z",
   "seed": true,
+  "byFixed": true,
   "of": "nico:sm11809611",
-  "ofLocked": true
+  "ofLocked": true,
+  "dup": "nico:sm14319655"
  },
  {
   "id": "yt:10ULFMESG7k",
@@ -177611,10 +177638,11 @@
   ],
   "uploaderId": 1895769,
   "uploader": null,
-  "by": "(腐向け注意)",
+  "by": "石敢當×S!N×かんせる×調味料",
   "req": "nico:sm11809611",
   "firstSeen": "2026-10-21T21:50:30.744Z",
   "seed": true,
+  "byFixed": true,
   "of": "nico:sm11809611",
   "ofLocked": true
  },
@@ -193554,7 +193582,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm15350853",
   "title": "【まふまふ】マトリョシカ＠どんちゃん歌ってみた【(ﾉ)・ω・(ヾ)】",
-  "t": "マトリョシカ@どんちゃん",
+  "t": "マトリョシカ",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2011-08-19T06:04:54+09:00",
@@ -193569,10 +193597,11 @@
   ],
   "uploaderId": 18874531,
   "uploader": null,
-  "by": "(ノ)・ω・(ヾ)",
+  "by": "まふまふ",
   "req": "nico:sm11809611",
   "firstSeen": "2026-10-21T21:50:30.745Z",
   "seed": true,
+  "byFixed": true,
   "of": "nico:sm11809611",
   "ofLocked": true
  },
@@ -195231,12 +195260,16 @@
   ],
   "uploaderId": 9217369,
   "uploader": null,
-  "by": "96猫&vip店長",
+  "by": "96猫＆vip店長",
   "firstSeen": "2026-10-08T15:10:08.617Z",
   "seed": true,
+  "byFixed": true,
   "of": "nico:sm11809611",
   "p": "ハチ",
-  "a": "niconico:380847"
+  "a": "niconico:380847",
+  "alt": [
+   "yt:ELluzi0lMVE"
+  ]
  },
  {
   "id": "nico:sm14207559",
@@ -199193,7 +199226,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm11957103",
   "title": "マトリョシカを歌ってみたったver.みーちゃん",
-  "t": "マトリョシカ った",
+  "t": "マトリョシカ",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2010-09-01T13:47:12+09:00",

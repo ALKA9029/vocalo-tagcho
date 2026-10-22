@@ -213,7 +213,7 @@ ${remakeNote(i)}
   <h2>「${esc(i.t)}」の歌ってみた${covers.length ? `（${covers.length}件）` : ""}</h2>
   ${covers.length ? `<ul class="list">${covers.map(x => li(x,
       `${esc(x.vr ? `${x.vr}${x.by ? `（${x.by}）` : ""}` : (x.by || "歌い手不明"))}`,
-      `${x.self ? '<span class="badge self">セルフカバー</span>' : ""}${embedUrl(x) ? `<button type="button" class="mini" ${playAttrs(x, `${i.t}（${x.by || "歌ってみた"}）`)}>▶ ここで聴く</button>` : ""}<a href="${esc(x.url)}" target="_blank" rel="noopener">${srcName(x)} ↗</a><span>${fmtDate(x.date)}</span>${tagsOf(x.id).slice(0, 3).map(([t]) => `<a href="${tagUrl(t)}">#${esc(t)}</a>`).join("")}`,
+      `${x.self ? '<span class="badge self">セルフカバー</span>' : ""}${embedUrl(x) ? `<button type="button" class="mini" ${playAttrs(x, `${i.t}（${x.by || "歌ってみた"}）`)}>▶ ここで聴く</button>` : ""}<a href="${esc(x.url)}" target="_blank" rel="noopener">${srcName(x)} ↗</a>${(x.alt || []).map(a => `<a href="${esc(a.url)}" target="_blank" rel="noopener">${srcName(a)} ↗</a>`).join("")}<span>${fmtDate(x.date)}</span>${tagsOf(x.id).slice(0, 3).map(([t]) => `<a href="${tagUrl(t)}">#${esc(t)}</a>`).join("")}`,
       `c-${songSlug(x.id)}`
     )).join("")}</ul>` : `<p class="note">TagTuneではまだ見つかっていません。</p>`}
   <div class="find">

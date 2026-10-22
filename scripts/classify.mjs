@@ -908,7 +908,7 @@ function hideTopicWithOfficial(items) {
 // 歌ってみたの歌い手名を直す
 // ・YouTubeのチャンネル名が英語で、歌い手名まで英語になったもの（「Suisei Channel」→ 星街すいせい）は対応表で
 // ・タイトルの「曲名 / 原曲の作者【歌い手】」の形で、歌い手が原曲の作者になったものは、タイトルの最後の【名前】か先頭の「名前 - 」で（セルフカバーは除く）
-const SINGER_NAMES = { "Suisei": "星街すいせい", "Kuzuha": "葛葉", "Chogakusei": "超学生", "Itsuki Natsume": "棗いつき" };
+const SINGER_NAMES = { "Meychan": "めいちゃん", "96NEKO": "96猫", "Suisei": "星街すいせい", "Kuzuha": "葛葉", "Chogakusei": "超学生", "Itsuki Natsume": "棗いつき" };
 function fixCoverSingers(items) {
   const byId = new Map(items.map(i => [i.id, i]));
   for (const c of items) {
@@ -1027,6 +1027,19 @@ export function linkCovers(items) {
   for (const i of items) if (i.kind === "歌ってみた" && i.vr) i.g = "ボカロ";   // 歌声に歌わせたカバーはボカロ
   for (const i of items) if (i.gFixed) i.g = i.gFixed;
   for (const c of items) { const o = c.of && byIdF.get(c.of); if (o && o.gFixed && !c.gFixed) c.g = o.g; }
+  // 同じ歌い手が同じ曲の歌ってみたをニコニコとYouTubeの両方に出しているときは、1件にまとめる（ニコニコ版を代表に、YouTube版は「ほかのサイト」に）
+  { const groups = new Map();
+    for (const c of items) if (c.kind === "歌ってみた" && c.of && !c.dup && normalize(c.by || "").length >= 2) {
+      const k = c.of + "|" + normalize(c.by); (groups.get(k) || groups.set(k, []).get(k)).push(c); }
+    for (const list of groups.values()) {
+      const best = new Map();
+      for (const c of list) { const b = best.get(c.src); if (!b || (c.views || 0) > (b.views || 0)) best.set(c.src, c); }
+      if (best.size < 2) continue;
+      const [main, ...rest] = [...best.values()].sort((a, b) => (a.date || "").localeCompare(b.date || "") || (a.src === "niconico" ? -1 : 1));
+      main.alt = rest.map(r => r.id);
+      for (const r of rest) r.dup = main.id;
+    }
+  }
   fixCreatorNames(items);
   fixCreatorKeys(items);
   return items;
