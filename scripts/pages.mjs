@@ -314,7 +314,7 @@ function singerPage(g) {
   <ul class="list">${g.covers.map(x => {
     const o = x.of && byId.get(x.of);
     const name = o ? `<a href="${songUrl(o.id)}#c-${songSlug(x.id)}">${esc(x.t)}</a>` : `<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.t)}</a>`;
-    const with_ = splitSingers(x.by).length > 1 ? `<span>${singerLinks(x.by)}</span>` : "";
+    const with_ = splitSingers(x.by).length > 1 ? `<span>歌：${singerLinks(x.by)}</span>` : "";
     return li(x, name, `<span class="badge genre">${esc(x.g)}</span>${x.self ? '<span class="badge self">セルフカバー</span>' : ""}${o?.p ? `<span>原曲：${creatorLink(o)}</span>` : ""}${with_}${embedUrl(x) ? `<button type="button" class="mini" ${playAttrs(x, `${x.t}（${x.by}）`)}>▶ ここで聴く</button>` : ""}<a href="${esc(x.url)}" target="_blank" rel="noopener">${srcName(x)} ↗</a>${(x.alt || []).map(a => `<a href="${esc(a.url)}" target="_blank" rel="noopener">${srcName(a)} ↗</a>`).join("")}<span>${fmtDate(x.date)}</span>${tagsOf(x.id).slice(0, 3).map(([t]) => `<a href="${tagUrl(t)}">#${esc(t)}</a>`).join("")}`);
   }).join("")}</ul>
 </section>
