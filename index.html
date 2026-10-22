@@ -226,6 +226,7 @@ footer a:hover{color:var(--accent)}
 
   <footer>
     <a href="tag/">タグから探す</a>
+    <a href="s/">歌い手から探す</a>
     <a href="about.html">このサイトについて・プライバシーポリシー</a>
     <a href="about.html#contact">お問い合わせ・掲載の取り下げ</a>
     <a href="https://x.com/tagtune_net" target="_blank" rel="noopener">𝕏 @tagtune_net</a>
@@ -280,7 +281,7 @@ const fmtDate = d => d ? d.slice(0,10).replace(/-/g,"/") : "";
 const fmtViews = n => n == null ? "" : n >= 1e4 ? (n/1e4).toFixed(n >= 1e5 ? 0 : 1) + "万回" : n.toLocaleString("ja-JP") + "回";
 const original = i => i.of ? ITEM[i.of] : null;
 // 曲ページ・作者ページ（scripts/pages.mjs が書き出す）へのURL
-let CREATOR_PAGE = {};
+let CREATOR_PAGE = {}, SINGER_PAGE = {};
 const ALIAS = {};
 const songPage = i => i && i.kind === "本家" ? "song/" + i.id.replace(/^nico:/, "nico-").replace(/^yt:/, "yt-") + "/" : null;
 const pageSlug = id => id.replace(/^nico:/, "nico-").replace(/^yt:/, "yt-");
@@ -291,6 +292,10 @@ function detailUrl(i){
   return o && o.kind === "本家" ? songPage(o) + "#c-" + pageSlug(i.id) : null;
 }
 const creatorPage = a => a && CREATOR_PAGE[a] ? CREATOR_PAGE[a].replace(/^\//, "") : null;
+// 歌い手ページ（名前のまわりのカッコ・「ちゃんねる」などを外した名前で探す。scripts/pages.mjs の singerName と同じ）
+const singerKey = x => String(x || "").replace(/^[（(【\[]+|[）)】\]]+$/g, "").replace(/@転載NG$|\s*[（(][^）)]*$|ver\.?$|。$/i, "")
+  .replace(/\s*(ちゃんねる|チャンネル|channel|ch\.?)$/i, "").replace(/^(.+?)\s+Ch\.\s+(.+)$/i, "$2").replace(/^.+?\s+ch\.(.+)$/i, "$1").trim();
+const singerPage = n => { const u = SINGER_PAGE[singerKey(n)]; return u ? u.replace(/^\//, "") : null; };
 
 function creditText(i){
   if (i.kind === "歌ってみた") return `${i.by || "歌い手不明"}${i.p ? `（原曲：${i.p}）` : ""}`;
@@ -360,7 +365,8 @@ function related(i){
   return el("div",{class:"related", onclick:e=>e.stopPropagation()},
     sp ? el("a",{class:"pagelink", href:sp}, i.kind === "本家" ? "この曲のページ →" : "原曲のページ →") : null,
     ...groups.map(([h, list, sub])=>el("div",{class:"rgroup"},
-      el("h3",{},h, /同じ作者/.test(h) && cp ? el("a",{class:"pagelink", href:cp}, "作者ページ →") : null),
+      el("h3",{},h, /同じ作者/.test(h) && cp ? el("a",{class:"pagelink", href:cp}, "作者ページ →") : null,
+        / のほかの歌ってみた$/.test(h) && singerPage(h.replace(/ のほかの歌ってみた$/, "")) ? el("a",{class:"pagelink", href:singerPage(h.replace(/ のほかの歌ってみた$/, ""))}, "歌い手ページ →") : null),
       ...(list.length ? list.map(x=>el("div",{class:"ritem"},
         el("button",{onclick:()=>jump(x.id)}, x.t),
         el("span",{class:"badge kind"+(x.kind==="歌ってみた"?" cover":"")}, x.kind),
@@ -449,9 +455,11 @@ function render(){
   seg($("#genreSeg"), "genre", [["","すべて"], ...["ボカロ","J-POP","アニソン","その他"].filter(g=>genres.includes(g)).map(g=>[g,g])]);
   seg($("#kindSeg"), "kind", [["","すべて"],["本家","本家"],["歌ってみた","歌ってみた"]]);
   const personPage = state.person?.a ? creatorPage(state.person.a) : null;
+  const singerPg = state.person?.key?.startsWith("b:") ? singerPage(state.person.key.slice(2)) : null;
   $("#personBox").replaceChildren(...(state.person ? [el("span",{class:"active"}, state.person.label,
     el("button",{"aria-label":"絞り込みを解除", onclick:()=>applyFilter(()=>state.person=null)}, "×")),
-    personPage ? el("a",{class:"pagelink", href:personPage}, "作者ページ →") : null].filter(Boolean) : []));
+    personPage ? el("a",{class:"pagelink", href:personPage}, "作者ページ →") : null,
+    singerPg ? el("a",{class:"pagelink", href:singerPg}, "歌い手ページ →") : null].filter(Boolean) : []));
   $("#tagFilter").replaceChildren(...TAGS.map(t=>
     el("button",{class:"chip","aria-pressed":String(state.filter.has(t)), onclick:()=>applyFilter(()=>{ state.filter.has(t)?state.filter.delete(t):state.filter.add(t); })}, t)));
 
@@ -876,7 +884,7 @@ render();
 (async()=>{
   try {
     const [songs, meta, pages] = await Promise.all([fetch("data/site.json").then(r=>r.json()), fetch("data/meta.json").then(r=>r.json()).catch(()=>null), fetch("data/pages.json").then(r=>r.json()).catch(()=>null)]);
-    CREATOR_PAGE = pages?.creators || {};
+    CREATOR_PAGE = pages?.creators || {}; SINGER_PAGE = pages?.singers || {};
     for (const i of songs) i._t = Date.parse(i.date) || 0;
     ITEMS = songs; ITEM = Object.fromEntries(ITEMS.map(i=>[i.id,i]));
     // まとめた曲のもう片方のID → 代表のID（前に別々に入った票やリンクも同じ曲として扱う）

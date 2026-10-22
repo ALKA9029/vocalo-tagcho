@@ -92,6 +92,31 @@ const coversOf = new Map();
 for (const i of items) if (i.kind === "歌ってみた" && i.of && byId.has(i.of)) (coversOf.get(i.of) || coversOf.set(i.of, []).get(i.of)).push(i);
 for (const list of coversOf.values()) list.sort((a, b) => (b.self || 0) - (a.self || 0) || byNewest(a, b));
 
+// 歌い手ページ：歌ってみたが2件以上ある歌い手（「めいちゃん×Gero」のようなコラボは1人ずつに分けて、それぞれのページに入れる）
+const MIN_SINGER_COVERS = 2;
+const splitSingers = x => String(x || "").split(/\s*(?:×|✕|＆|&|、|，|,|\s+x\s+|\s+with\s+)\s*/i).map(t => t.trim()).filter(t => t.length >= 2 && !/歌い手不明|不明|unknown/i.test(t));
+// ページにする名前：まわりのカッコ・最後の「。」「ver.」「ちゃんねる」「Ch.」などを外す。歌い手名ではないもの（「主題歌」「〜に」など）はページにしない
+const singerName = x => String(x || "").replace(/^[（(【\[]+|[）)】\]]+$/g, "").replace(/@転載NG$|\s*[（(][^）)]*$|ver\.?$|。$/i, "")
+  .replace(/\s*(ちゃんねる|チャンネル|channel|ch\.?)$/i, "").replace(/^(.+?)\s+Ch\.\s+(.+)$/i, "$2").replace(/^.+?\s+ch\.(.+)$/i, "$1").trim();
+const NOT_SINGER = /主題歌|組曲|メドレー|忙しい人|艦これ|Songs Japanese|^WORKS$|【|】|_{2}|に$|^[^\p{L}]*$/u;
+const singers = new Map();   // 名前 -> { covers, url }
+for (const i of items) if (i.kind === "歌ってみた" && i.by) for (const raw of splitSingers(i.by)) {
+  const n = singerName(raw);
+  if (n.length < 2 || NOT_SINGER.test(n)) continue;
+  const g = singers.get(n) || singers.set(n, { name: n, covers: [] }).get(n);
+  if (!g.covers.includes(i)) g.covers.push(i);
+  (g.raw ||= new Set()).add(raw);
+}
+const singerOf = raw => singers.get(singerName(raw));
+for (const [n, g] of singers) {
+  if (g.covers.length < MIN_SINGER_COVERS) { singers.delete(n); continue; }
+  g.url = `/s/${createHash("sha1").update(n).digest("hex").slice(0, 12)}/`;
+  g.covers.sort(byNewest);
+}
+// 歌い手名を1人ずつ、歌い手ページへのリンクにする（ページがない人は文字のまま）
+const singerLinks = by => String(by || "").split(/(\s*(?:×|✕|＆|&|、|，|,|\s+x\s+|\s+with\s+)\s*)/i)
+  .map((part, k) => k % 2 ? esc(part) : singerOf(part.trim())?.url && singers.get(singerName(part.trim())) ? `<a href="${singerOf(part.trim()).url}">${esc(part)}</a>` : esc(part)).join("");
+
 // ---------- シェア用の画像とボタン ----------
 // XなどでURLを貼ったときの画像。YouTubeは大きめのサムネ、ニコニコは小さいサムネなので小さいカード、画像がないページはサイト共通の画像
 const OG_DEFAULT = SITE + "/assets/og.png";
@@ -139,6 +164,7 @@ ${body}
 <footer>
   <a href="/">TagTune トップ</a>
   <a href="/tag/">タグから探す</a>
+  <a href="/s/">歌い手から探す</a>
   <a href="/about.html">このサイトについて</a>
   <a href="/about.html#contact">お問い合わせ・掲載の取り下げ</a>
   <a href="https://x.com/tagtune_net" target="_blank" rel="noopener">𝕏 @tagtune_net</a>
@@ -212,7 +238,7 @@ ${remakeNote(i)}
 <section>
   <h2>「${esc(i.t)}」の歌ってみた${covers.length ? `（${covers.length}件）` : ""}</h2>
   ${covers.length ? `<ul class="list">${covers.map(x => li(x,
-      `${esc(x.vr ? `${x.vr}${x.by ? `（${x.by}）` : ""}` : (x.by || "歌い手不明"))}`,
+      x.vr ? `${esc(x.vr)}${x.by ? `（${singerLinks(x.by)}）` : ""}` : (x.by ? singerLinks(x.by) : "歌い手不明"),
       `${x.self ? '<span class="badge self">セルフカバー</span>' : ""}${embedUrl(x) ? `<button type="button" class="mini" ${playAttrs(x, `${i.t}（${x.by || "歌ってみた"}）`)}>▶ ここで聴く</button>` : ""}<a href="${esc(x.url)}" target="_blank" rel="noopener">${srcName(x)} ↗</a>${(x.alt || []).map(a => `<a href="${esc(a.url)}" target="_blank" rel="noopener">${srcName(a)} ↗</a>`).join("")}<span>${fmtDate(x.date)}</span>${tagsOf(x.id).slice(0, 3).map(([t]) => `<a href="${tagUrl(t)}">#${esc(t)}</a>`).join("")}`,
       `c-${songSlug(x.id)}`
     )).join("")}</ul>` : `<p class="note">TagTuneではまだ見つかっていません。</p>`}
@@ -268,6 +294,55 @@ function creatorPage(a, c) {
     jsonld: { "@context": "https://schema.org", "@type": "MusicGroup", name: c.name, url: SITE + c.url } });
 }
 
+// ---------- 歌い手ページ ----------
+function singerPage(g) {
+  const n = g.name;
+  const title = `${n}の歌ってみた一覧（${g.covers.length}曲）｜印象タグ - TagTune`;
+  const description = `${n}が歌った歌ってみた${g.covers.length}曲をまとめたページ。原曲へのリンクや、聴いた人がつけた印象タグで似た曲も探せます。`;
+  // いっしょに歌っている人
+  const partners = new Map();
+  for (const c of g.covers) for (const p of splitSingers(c.by).map(singerName)) if (p !== n && singers.get(p)?.url) partners.set(p, (partners.get(p) || 0) + 1);
+  const pts = [...partners].sort((a, b) => b[1] - a[1]).slice(0, 20);
+  const body = `
+<header>
+  <h1>${esc(n)}</h1>
+  <p class="meta"><span>歌ってみた ${g.covers.length}曲</span></p>
+  ${shareRow(`${n}の歌ってみた一覧（${g.covers.length}曲）`, g.url)}
+</header>
+<section>
+  <h2>歌ってみた一覧（新しい順）</h2>
+  <ul class="list">${g.covers.map(x => {
+    const o = x.of && byId.get(x.of);
+    const name = o ? `<a href="${songUrl(o.id)}#c-${songSlug(x.id)}">${esc(x.t)}</a>` : `<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.t)}</a>`;
+    const with_ = splitSingers(x.by).length > 1 ? `<span>${singerLinks(x.by)}</span>` : "";
+    return li(x, name, `<span class="badge genre">${esc(x.g)}</span>${x.self ? '<span class="badge self">セルフカバー</span>' : ""}${o?.p ? `<span>原曲：${creatorLink(o)}</span>` : ""}${with_}${embedUrl(x) ? `<button type="button" class="mini" ${playAttrs(x, `${x.t}（${x.by}）`)}>▶ ここで聴く</button>` : ""}<a href="${esc(x.url)}" target="_blank" rel="noopener">${srcName(x)} ↗</a>${(x.alt || []).map(a => `<a href="${esc(a.url)}" target="_blank" rel="noopener">${srcName(a)} ↗</a>`).join("")}<span>${fmtDate(x.date)}</span>${tagsOf(x.id).slice(0, 3).map(([t]) => `<a href="${tagUrl(t)}">#${esc(t)}</a>`).join("")}`);
+  }).join("")}</ul>
+</section>
+${pts.length ? `
+<section>
+  <h2>${esc(n)}といっしょに歌っている人</h2>
+  <div class="chips">${pts.map(([p, k]) => `<a class="tag" href="${singers.get(p).url}">${esc(p)}<span class="n">${k}曲</span></a>`).join("")}</div>
+</section>` : ""}
+<p class="note"><a href="/?who=${encodeURIComponent("b:" + [...g.raw][0])}">TagTuneで${esc(n)}の歌ってみたを聴く →</a></p>
+`;
+  return page({ title, description, url: g.url, image: g.covers.find(x => x.thumb)?.thumb, body, crumbs: [["歌い手", "/s/"], [n]],
+    jsonld: { "@context": "https://schema.org", "@type": "Person", name: n, url: SITE + g.url } });
+}
+
+function singerIndex() {
+  const list = [...singers.values()].sort((a, b) => b.covers.length - a.covers.length || a.name.localeCompare(b.name, "ja"));
+  const body = `
+<header>
+  <h1>歌い手から探す</h1>
+  <p class="note">TagTuneに歌ってみたが2曲以上ある歌い手（${list.length}人）。歌ってみたの多い順に並べています。</p>
+</header>
+<section>
+  <div class="chips">${list.map(g => `<a class="tag" href="${g.url}">${esc(g.name)}<span class="n">${g.covers.length}曲</span></a>`).join("")}</div>
+</section>
+`;
+  return page({ title: "歌い手から探す｜歌ってみた一覧 - TagTune", description: "歌い手ごとの歌ってみた一覧。原曲や、聴いた人がつけた印象タグもまとめて見られます。", url: "/s/", body, crumbs: [["歌い手"]] });
+}
+
 // ---------- タグページ ----------
 function tagPage(tag) {
   const list = items.map(i => [i, votes[i.id]?.[tag] || 0]).filter(([, n]) => n > 0)
@@ -320,7 +395,7 @@ async function put(rel, html) {
   await mkdir(path(rel.replace(/[^/]+$/, "")), { recursive: true });
   await writeFile(path(rel), html);
 }
-for (const dir of ["song", "p", "tag"]) await rm(path(dir), { recursive: true, force: true });
+for (const dir of ["song", "p", "tag", "s"]) await rm(path(dir), { recursive: true, force: true });
 
 const urls = ["/", "/tag/", "/about.html"];
 const songs = items.filter(i => i.kind === "本家");
@@ -333,6 +408,8 @@ for (const i of songs) for (const v of [...(i.alt || []), ...(i.al || []).map(id
 for (const [a, c] of creators) { await put(`p/${creatorSlug(a)}/index.html`, creatorPage(a, c)); urls.push(c.url); }
 for (const t of TAGS) { await put(`tag/${TAG_SLUG[t]}/index.html`, tagPage(t)); urls.push(tagUrl(t)); }
 await put("tag/index.html", tagIndex());
+for (const g of singers.values()) { await put(`s${g.url.slice(2)}index.html`, singerPage(g)); urls.push(g.url); }
+await put("s/index.html", singerIndex()); urls.push("/s/");
 
 // ---------- Xに投稿する「今日の曲」のネタ（自分用のページ picks/。検索エンジンには載せない） ----------
 // 朝・昼・夜の3枠に、それぞれ候補を3曲ずつ。一度出した曲は1年間は出さない（data/picks.json に記録）
@@ -448,11 +525,11 @@ ${slots.map(s => `<section><h2>${esc(s.label)}<span class="note">　おすすめ
 }
 
 // トップページから作者ページへリンクするための対応表（作者のキー → ページのURL）
-await writeFile(path("data/pages.json"), JSON.stringify({ creators: Object.fromEntries([...creators].map(([a, c]) => [a, c.url]).sort()) }) + "\n");
+await writeFile(path("data/pages.json"), JSON.stringify({ creators: Object.fromEntries([...creators].map(([a, c]) => [a, c.url]).sort()), singers: Object.fromEntries([...singers].map(([n, g]) => [n, g.url]).sort()) }) + "\n");
 await writeFile(path("sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map(u => `<url><loc>${SITE}${u}</loc></url>`).join("\n")}
 </urlset>
 `);
 await writeFile(path("robots.txt"), `User-agent: *\nAllow: /\nDisallow: /picks/\n\nSitemap: ${SITE}/sitemap.xml\n`);
-console.log(`ページを書き出しました：曲 ${songs.length}・作者 ${creators.size}・タグ ${TAGS.length}（票のある曲 ${Object.keys(votes).length}）`);
+console.log(`ページを書き出しました：歌い手 ${singers.size}・曲 ${songs.length}・作者 ${creators.size}・タグ ${TAGS.length}（票のある曲 ${Object.keys(votes).length}）`);
