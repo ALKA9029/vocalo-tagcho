@@ -1,5 +1,12 @@
 [
  {
+  "id": "UCgVoOtEHrVg4RFdD-35Pb3A",
+  "added": "2026-10-12T21:33:25.769Z",
+  "name": "Plus Music!! Channel",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-23T13:38:56Z"
+ },
+ {
   "id": "UCAaGaynFpku5cAx6OOSrW-w",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "HoneyWorks OFFICIAL",
@@ -383,13 +390,6 @@
   "name": "reinou",
   "genre": "ボカロ",
   "lastHit": "2026-10-10T11:00:34Z"
- },
- {
-  "id": "UCgVoOtEHrVg4RFdD-35Pb3A",
-  "added": "2026-10-12T21:33:25.769Z",
-  "name": "Plus Music!! Channel",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-10T10:15:43Z"
  },
  {
   "id": "UCtmi2O7lp0C_i53hFIExAaA",
@@ -1689,7 +1689,8 @@
   "added": "2026-10-23T21:49:42.946Z",
   "name": "YAO",
   "genre": "J-POP",
-  "lastHit": "2026-10-22T11:00:07Z"
+  "lastHit": "2026-10-22T11:00:07Z",
+  "pinned": true
  },
  {
   "id": "UCjfPoiKXx-ojL3cT5gxrBjA",
@@ -1787,8 +1788,9 @@
   "id": "UCaZgY1ysWvHFUVG8xp95PPA",
   "added": "2026-10-23T21:49:42.946Z",
   "name": "水槽",
-  "genre": "J-POP",
-  "lastHit": "2026-10-21T11:00:09Z"
+  "genre": "アニソン",
+  "lastHit": "2026-10-21T11:00:09Z",
+  "pinned": true
  },
  {
   "id": "UCMMOL-C2nE45X3GZQCGJJ6w",
@@ -2110,7 +2112,8 @@
   "added": "2026-10-23T21:49:42.946Z",
   "name": "SAYURI【滝さゆり】",
   "genre": "J-POP",
-  "lastHit": "2026-10-17T11:00:17Z"
+  "lastHit": "2026-10-17T11:00:17Z",
+  "pinned": true
  },
  {
   "id": "UCHT_vElA_6ERjOvRbww01dw",
