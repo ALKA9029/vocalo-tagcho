@@ -978,6 +978,11 @@ export function linkCovers(items) {
       const to = o?.topicHidden && official.get(normalize(o.t));
       if (to) c.of = to.id;
     }
+    // 自動で集めた歌ってみた（投稿ネタ・リクエスト）でも、原曲より30日以上前の投稿は別の曲なのでつながない
+    for (const c of items) {
+      const o = c.ofLocked && c.req && !c.byFixed && byId.get(c.of);
+      if (o && ((Date.parse(o.date) || 0) - (Date.parse(c.date) || 0)) / 864e5 > 30 && normalize(c.t) !== normalize(o.t)) { delete c.of; delete c.ofLocked; delete c.req; }
+    }
   }
   const originals = new Map();
   for (const i of items.filter(x => x.kind === "本家" && !x.topicHidden).sort((a, b) => (a.date || "").localeCompare(b.date || ""))) {
@@ -986,6 +991,7 @@ export function linkCovers(items) {
   }
   for (const c of items) {
     if (c.kind !== "歌ってみた" || c.ofLocked) continue;
+    const t0 = c.t;   // 原曲さがしの前の曲名（つながなかったときに戻す）
     let o = originals.get(normalize(c.t));
     // 曲名が読み取れなくても、ニコニコの歌ってみたにはたいてい曲名のタグが付いているので、タグから原曲を探す
     if (!o) for (const t of c.tags || []) {
@@ -1002,6 +1008,14 @@ export function linkCovers(items) {
         if (/[a-z0-9]/.test(n[k - 1]) && /[a-z0-9]/.test(n[k])) continue;
         const hit = originals.get(n.slice(0, k)); if (hit && asToken(c.t, hit.t) !== false) { o = hit; c.t = hit.t; }   // 「アイロニックメタファー」を「アイロニック」にしない
       }
+    }
+    // 原曲より前に投稿された「歌ってみた」は、その曲の歌ってみたではない（同じ名前・似た名前の別の曲）。
+    // 曲名が完全に同じでないときは30日以上前、ボカロの原曲（投稿日＝発表日）は完全に同じでも60日以上前ならつながない
+    // （J-POP・アニソンは、昔の曲の公式MVがあとからYouTubeに上がることがあるので、曲名が同じなら日付では外さない）
+    if (o) {
+      const early = ((Date.parse(o.date) || 0) - (Date.parse(c.date) || 0)) / 864e5;
+      const exact = normalize(t0) === normalize(o.t);
+      if ((!exact && early > 30) || (o.g === "ボカロ" && early > 60)) { c.t = t0; o = null; }
     }
     if (o) { c.of = o.id; c.p = o.p || c.p; c.a = o.p ? o.a : (c.a || o.a); if (o.g !== "その他") c.g = o.g; else if (c.g === "その他") c.g = o.g; }
     // 原曲が見つからない歌ってみたで、曲名に余計な言葉がついているもの（「VOCALOIDでニコニコ動画流星群」「ニコニコ動画流星群を漢らしく」）は、

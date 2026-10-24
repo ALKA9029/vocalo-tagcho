@@ -100157,11 +100157,8 @@
   "pHint": "なんてね 歌ってみた",
   "p": "なんてね 歌ってみた",
   "a": "なんてね歌ってみた",
-  "req": "yt:rDFUl2mHIW4",
   "firstSeen": "2026-10-21T21:50:30.736Z",
-  "seed": true,
-  "of": "yt:rDFUl2mHIW4",
-  "ofLocked": true
+  "seed": true
  },
  {
   "id": "yt:CaqHOvgAnO0",
@@ -104193,7 +104190,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm41299141",
   "title": "【SynthesizerV】Lemon/米津玄師【花隈千冬AI】",
-  "t": "米津玄師",
+  "t": "Lemon",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2022-10-29T23:30:00+09:00",
@@ -104218,10 +104215,7 @@
   "v": "花隈千冬",
   "vr": "花隈千冬AI",
   "firstSeen": "2026-10-11T00:54:29.195Z",
-  "seed": true,
-  "of": "yt:pwPpqgn-3lw",
-  "p": "RADWIMPS",
-  "a": "youtube:UCIVqvhyo8ttjYOmMJuhq_YQ"
+  "seed": true
  },
  {
   "id": "yt:mq88yUFdVng",
@@ -112655,8 +112649,7 @@
   "firstSeen": "2026-10-20T21:47:42.691Z",
   "seed": true,
   "of": "nico:sm39776265",
-  "ofLocked": true,
-  "dup": "nico:sm25317117"
+  "ofLocked": true
  },
  {
   "id": "yt:rH3PTqSLktc",
@@ -134991,10 +134984,7 @@
   "uploader": null,
   "by": "そらまふうらさか",
   "firstSeen": "2026-10-08T15:10:08.929Z",
-  "seed": true,
-  "of": "nico:sm42452310",
-  "p": "琴葉茜・琴葉葵",
-  "a": "niconico:90017389"
+  "seed": true
  },
  {
   "id": "yt:tjPQVvUHi3g",
@@ -137383,9 +137373,7 @@
   "uploader": null,
   "by": "XYZ",
   "firstSeen": "2026-10-08T15:10:08.758Z",
-  "seed": true,
-  "of": "nico:sm40681705",
-  "a": "niconico:18793034"
+  "seed": true
  },
  {
   "id": "yt:3mUXwYx1CQs",
@@ -138867,7 +138855,7 @@
   "title": "【MV】This Night / 天月×nqrse",
   "t": "This Night",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2019-06-26T18:00:00+09:00",
   "views": 1501491,
   "likes": 900,
@@ -138883,10 +138871,7 @@
   "uploader": null,
   "by": "天月×nqrse",
   "firstSeen": "2026-10-08T15:10:08.933Z",
-  "seed": true,
-  "of": "nico:sm45375042",
-  "p": "NONEZO",
-  "a": "niconico:140765890"
+  "seed": true
  },
  {
   "id": "yt:qDwO4_kMaTc",
@@ -141691,7 +141676,7 @@
   "title": "【火星人が】帝国少女 歌ってみた【てるとくん】",
   "t": "帝国少女",
   "kind": "歌ってみた",
-  "g": "アニソン",
+  "g": "ボカロ",
   "date": "2019-01-13T17:00:00+09:00",
   "views": 32438,
   "likes": 107,
@@ -141706,11 +141691,11 @@
   "uploaderId": 66782587,
   "uploader": null,
   "by": "てるとくん",
-  "req": "yt:OLRbIc8KZ_8",
   "firstSeen": "2026-10-23T21:48:15.840Z",
   "seed": true,
-  "of": "yt:OLRbIc8KZ_8",
-  "ofLocked": true
+  "of": "yt:hUaVxNUCbc4",
+  "p": "R Sound Design",
+  "a": "youtube:UCID4elKLzUCZVIVtXiXKA-w"
  },
  {
   "id": "nico:sm34457656",
@@ -142205,9 +142190,7 @@
   "uploader": null,
   "by": "After the Rain",
   "firstSeen": "2026-10-08T15:10:08.801Z",
-  "seed": true,
-  "of": "nico:sm38015927",
-  "a": "niconico:94941863"
+  "seed": true
  },
  {
   "id": "yt:EQF19szKfQg",
@@ -142847,7 +142830,7 @@
   "title": "【火星人が】ベノム 歌ってみた【てるとくん】",
   "t": "ベノム",
   "kind": "歌ってみた",
-  "g": "アニソン",
+  "g": "ボカロ",
   "date": "2018-11-30T18:00:00+09:00",
   "views": 73682,
   "likes": 233,
@@ -142865,11 +142848,11 @@
   "uploaderId": 66782587,
   "uploader": null,
   "by": "てるとくん",
-  "req": "yt:OLRbIc8KZ_8",
   "firstSeen": "2026-10-23T21:48:15.839Z",
   "seed": true,
-  "of": "yt:OLRbIc8KZ_8",
-  "ofLocked": true
+  "of": "yt:oRJBwaZ59fQ",
+  "p": "かいりきベア",
+  "a": "youtube:UCp13SxKXbhCS0lb6Ty774iQ"
  },
  {
   "id": "nico:sm34234381",
@@ -144237,7 +144220,7 @@
   "title": "【火星人が】愛言葉Ⅲ　歌ってみた【てると】",
   "t": "愛言葉III",
   "kind": "歌ってみた",
-  "g": "アニソン",
+  "g": "ボカロ",
   "date": "2018-10-20T18:00:00+09:00",
   "views": 48582,
   "likes": 113,
@@ -144253,11 +144236,11 @@
   "uploaderId": 66782587,
   "uploader": null,
   "by": "てると",
-  "req": "yt:OLRbIc8KZ_8",
   "firstSeen": "2026-10-23T21:48:15.840Z",
   "seed": true,
-  "of": "yt:OLRbIc8KZ_8",
-  "ofLocked": true
+  "of": "yt:WptXk39wiIQ",
+  "p": "DECO*27",
+  "a": "youtube:UCGmO0S4S-AunjRdmxA6TQYg"
  },
  {
   "id": "yt:sem3UU-EQJs",
@@ -149132,9 +149115,7 @@
   "uploader": null,
   "by": "まふまふ",
   "firstSeen": "2026-10-08T15:10:08.783Z",
-  "seed": true,
-  "of": "nico:so45525469",
-  "a": "niconico:2648319"
+  "seed": true
  },
  {
   "id": "yt:z-Ijqf0DRCo",
@@ -151520,10 +151501,7 @@
   "uploader": null,
   "by": "まふまふ",
   "firstSeen": "2026-10-08T15:10:08.780Z",
-  "seed": true,
-  "of": "yt:BNQKmjXUB54",
-  "p": "GaL",
-  "a": "youtube:UCVPqAY-udtbx4HCP_3oo0Aw"
+  "seed": true
  },
  {
   "id": "yt:gF9vwjSinsU",
@@ -151689,10 +151667,7 @@
   "uploader": null,
   "by": "XYZ",
   "firstSeen": "2026-10-08T15:10:08.638Z",
-  "seed": true,
-  "of": "nico:sm40461747",
-  "p": "BeatSea",
-  "a": "niconico:97927046"
+  "seed": true
  },
  {
   "id": "yt:S5XY-U1BpmA",
@@ -156117,7 +156092,7 @@
   "title": "カタオモイ　歌ってみたのはメガテラ・ゼロ",
   "t": "カタオモイ",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "その他",
   "date": "2017-08-26T19:00:00+09:00",
   "views": 1361767,
   "likes": 614,
@@ -156134,10 +156109,7 @@
   "uploader": null,
   "by": "メガテラ・ゼロ",
   "firstSeen": "2026-10-08T15:10:08.987Z",
-  "seed": true,
-  "of": "yt:kxs9Su_mbpU",
-  "p": "Aimer",
-  "a": "youtube:UCR1zT1s524Hbc85bdvno_8w"
+  "seed": true
  },
  {
   "id": "yt:ymtNhd_3CB8",
@@ -157615,7 +157587,7 @@
   "title": "#嘲笑ポラロイド　／志麻＆センラ",
   "t": "#嘲笑ポラロイド",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2017-07-22T20:00:00+09:00",
   "views": 1387912,
   "likes": 932,
@@ -157633,9 +157605,7 @@
   "uploader": null,
   "by": "志麻・センラ",
   "firstSeen": "2026-10-08T15:10:08.977Z",
-  "seed": true,
-  "of": "nico:sm43827272",
-  "a": "niconico:26164864"
+  "seed": true
  },
  {
   "id": "yt:AS4q9yaWJkI",
@@ -161672,7 +161642,7 @@
   "title": "JINGO JUNGLE　歌ってみた－遊",
   "t": "JINGO JUNGLE",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2017-02-17T20:00:00+09:00",
   "views": 1585436,
   "likes": 671,
@@ -161688,10 +161658,7 @@
   "uploader": null,
   "by": "遊",
   "firstSeen": "2026-10-08T15:10:08.908Z",
-  "seed": true,
-  "of": "nico:sm36378442",
-  "p": "バンブラP",
-  "a": "niconico:20701636"
+  "seed": true
  },
  {
   "id": "nico:sm30632800",
@@ -163121,10 +163088,7 @@
   "uploader": null,
   "by": "nqrse",
   "firstSeen": "2026-10-08T15:10:08.709Z",
-  "seed": true,
-  "of": "yt:agcoHM2CJ3s",
-  "p": "DECO*27",
-  "a": "youtube:UCGmO0S4S-AunjRdmxA6TQYg"
+  "seed": true
  },
  {
   "id": "nico:sm30281014",
@@ -164332,10 +164296,7 @@
   "uploader": null,
   "by": "ウォルピスカーター",
   "firstSeen": "2026-10-08T15:10:08.714Z",
-  "seed": true,
-  "of": "nico:sm46742396",
-  "p": "ヒロモトヒライシン",
-  "a": "niconico:88956260"
+  "seed": true
  },
  {
   "id": "nico:sm30067009",
@@ -165411,9 +165372,9 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm29743882",
   "title": "☪ 【君の名は。】 スパークル を歌ってみた。by天月",
-  "t": "スパークル",
+  "t": "☪ スパークル",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "その他",
   "date": "2016-09-30T18:00:00+09:00",
   "views": 1350021,
   "likes": 757,
@@ -165431,10 +165392,7 @@
   "uploader": null,
   "by": "天月",
   "firstSeen": "2026-10-08T15:10:08.992Z",
-  "seed": true,
-  "of": "yt:q4CbHfW3Ji8",
-  "p": "幾田りら",
-  "a": "youtube:UCztEY6czNyJKjRWMwuur9bg"
+  "seed": true
  },
  {
   "id": "nico:sm29703556",
@@ -165905,10 +165863,7 @@
   "uploader": null,
   "by": "まふまふ",
   "firstSeen": "2026-10-08T15:10:08.701Z",
-  "seed": true,
-  "of": "nico:sm38186918",
-  "p": "それ以上有名にならないでね",
-  "a": "niconico:22813034"
+  "seed": true
  },
  {
   "id": "nico:sm29558886",
@@ -165978,9 +165933,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=YToOWjLJvXc",
   "title": "【オリジナルMV】アイロニックメタファー 歌ってみた   pazi×syun",
-  "t": "アイロニックメタファー 歌ってみた ×syun",
+  "t": "アイロニックメタファー",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "J-POP",
   "date": "2016-08-28T04:13:27Z",
   "views": 63222,
   "likes": 748,
@@ -165991,11 +165946,8 @@
   "descHead": "本家様 sm24080543\n\n\n・movie:ギリンカ (mylist/39155089)(mylist/49968008) twitter：@leerinka_nico\n・illust:樹キキ (mylist/33723252) twitter：@coha_k\n・vocal:pazi (mylist/53551912) twitter：@_airops\n・vo/mix:syun (mylist/54585530)(mylist/54105985) twitter：@ps__s\n\nrap参考:かんせる様 sm25317117\n※参考許可を頂きました。本当にありがとうございました。\n\nnico",
   "by": "pazi",
   "nicoSrc": "nico:sm28885952",
-  "req": "nico:sm39776265",
   "firstSeen": "2026-10-20T21:47:42.691Z",
-  "seed": true,
-  "of": "nico:sm39776265",
-  "ofLocked": true
+  "seed": true
  },
  {
   "id": "nico:sm29520630",
@@ -166181,9 +166133,9 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm29438775",
   "title": "☪【君の名は。】 前前前世 を歌ってみた。by天月",
-  "t": "前前前世",
+  "t": "☪ 前前前世",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2016-08-13T18:30:00+09:00",
   "views": 2096348,
   "likes": 365,
@@ -166199,10 +166151,7 @@
   "uploader": null,
   "by": "天月",
   "firstSeen": "2026-10-08T15:10:08.796Z",
-  "seed": true,
-  "of": "nico:sm29960120",
-  "p": "駅名で",
-  "a": "niconico:3942398"
+  "seed": true
  },
  {
   "id": "nico:sm29425003",
@@ -166889,9 +166838,7 @@
   "uploader": null,
   "by": "まふまふ×あほの坂田",
   "firstSeen": "2026-10-08T15:10:08.767Z",
-  "seed": true,
-  "of": "nico:sm35160656",
-  "a": "niconico:83201101"
+  "seed": true
  },
  {
   "id": "nico:sm29197679",
@@ -166914,10 +166861,7 @@
   "uploader": null,
   "by": "あらき",
   "firstSeen": "2026-10-08T15:10:08.985Z",
-  "seed": true,
-  "of": "nico:sm31818521",
-  "p": "Crusher-P",
-  "a": "niconico:19241380"
+  "seed": true
  },
  {
   "id": "nico:sm29194344",
@@ -167827,7 +167771,7 @@
   "title": "【オリジナルPV】 ないものねだり 歌ってみた 【天月×あほの坂田】",
   "t": "ないものねだり",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2016-06-04T17:00:00+09:00",
   "views": 2211936,
   "likes": 440,
@@ -167846,10 +167790,7 @@
   "uploader": null,
   "by": "天月×あほの坂田",
   "firstSeen": "2026-10-08T15:10:08.783Z",
-  "seed": true,
-  "of": "nico:sm45164040",
-  "p": "傘村トータ",
-  "a": "niconico:52158359"
+  "seed": true
  },
  {
   "id": "yt:o1iz4L-5zkQ",
@@ -167950,7 +167891,7 @@
   "title": "NEWS/チャンカパーナ 浦島坂田船ver",
   "t": "NEWS",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2016-06-02T19:00:00+09:00",
   "views": 2126669,
   "likes": 1858,
@@ -167969,10 +167910,7 @@
   "uploader": null,
   "by": "うらたぬき",
   "firstSeen": "2026-10-08T15:10:08.792Z",
-  "seed": true,
-  "of": "nico:sm31664772",
-  "p": "クロスフェードデモ",
-  "a": "niconico:28178261"
+  "seed": true
  },
  {
   "id": "nico:sm28963426",
@@ -170428,7 +170366,7 @@
   "title": "【JubyPhonic】Toluthin Antenna (English Cover) lllトゥルティンアンテナlll",
   "t": "Toluthin Antenna lllトゥルティンアンテナlll",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "その他",
   "date": "2016-01-25T07:27:04+09:00",
   "views": 2045,
   "likes": 1,
@@ -170443,11 +170381,8 @@
   "uploaderId": 29933686,
   "uploader": null,
   "by": "JubyPhonic",
-  "req": "yt:XiSa_VIrGKE",
   "firstSeen": "2026-10-21T21:50:30.738Z",
-  "seed": true,
-  "of": "yt:XiSa_VIrGKE",
-  "ofLocked": true
+  "seed": true
  },
  {
   "id": "nico:sm28075464",
@@ -171773,9 +171708,9 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm27726846",
   "title": "クリスマスソングを歌ってもたverあほの坂田",
-  "t": "クリスマス",
+  "t": "クリスマスソング",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "その他",
   "date": "2015-12-05T00:00:00+09:00",
   "views": 2157341,
   "likes": 1592,
@@ -171791,10 +171726,7 @@
   "uploader": null,
   "by": "あほの坂田",
   "firstSeen": "2026-10-08T15:10:08.789Z",
-  "seed": true,
-  "of": "yt:Q4-VaZcZan0",
-  "p": "Judy & Mary",
-  "a": "youtube:UC87vWsP1Gqk_sGCFnnFM8ww"
+  "seed": true
  },
  {
   "id": "nico:sm27705633",
@@ -175732,7 +175664,7 @@
   "title": "リア充で流行りの「ないものねだり」を非リアがラップしてみたｗｗｗｗ",
   "t": "ないものねだり",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2015-05-06T19:00:00+09:00",
   "views": 1338676,
   "likes": 118,
@@ -175749,10 +175681,7 @@
   "uploader": null,
   "by": "リア充で流行りの",
   "firstSeen": "2026-10-08T15:10:08.996Z",
-  "seed": true,
-  "of": "nico:sm45164040",
-  "p": "傘村トータ",
-  "a": "niconico:52158359"
+  "seed": true
  },
  {
   "id": "nico:sm26194772",
@@ -178102,7 +178031,7 @@
   "title": "【50％GACKTさん入れて】鬼龍院翔 あったかいんだから【歌ってみた】",
   "t": "鬼龍院翔 あったかいんだから",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "その他",
   "date": "2015-01-27T04:16:10+09:00",
   "views": 4960,
   "likes": 0,
@@ -178118,11 +178047,8 @@
   "uploaderId": 802007,
   "uploader": null,
   "by": "",
-  "req": "yt:Vv2n31gL85I",
   "firstSeen": "2026-10-23T21:48:15.835Z",
-  "seed": true,
-  "of": "yt:Vv2n31gL85I",
-  "ofLocked": true
+  "seed": true
  },
  {
   "id": "yt:P_At3pIE5BU",
@@ -178460,7 +178386,7 @@
   "title": "『アイロニックメタファー』 歌ってみた",
   "t": "アイロニックメタファー",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "J-POP",
   "date": "2015-01-11T06:04:08Z",
   "views": 154367,
   "likes": 1160,
@@ -178476,11 +178402,8 @@
   "descHead": "http://www.nicovideo.jp/watch/sm25317117（ニコニコ転載）\n歌：かんせる\n\nイくのを手伝ってくれはしないか?\n\n【やべぇ本家様】⇒sm24080543\n\nvocal:かんせる mylist/26048328 Twitter：[@kanzentaicell]\nmix/encode:nqrse mylist/36400349 [@nqrse]\n\n前作『一心不乱』sm25024153",
   "by": "yue kurokawa",
   "nicoSrc": "nico:sm25317117",
-  "req": "nico:sm39776265",
   "firstSeen": "2026-10-20T21:47:42.691Z",
-  "seed": true,
-  "of": "nico:sm39776265",
-  "ofLocked": true
+  "seed": true
  },
  {
   "id": "nico:sm25317117",
@@ -178507,14 +178430,8 @@
   "uploaderId": 876482,
   "uploader": null,
   "by": "かんせる",
-  "req": "nico:sm39776265",
   "firstSeen": "2026-10-20T21:47:42.689Z",
-  "seed": true,
-  "of": "nico:sm39776265",
-  "ofLocked": true,
-  "alt": [
-   "yt:tBg8Owoy66Y"
-  ]
+  "seed": true
  },
  {
   "id": "nico:sm25311532",
@@ -181822,9 +181739,9 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm24347455",
   "title": "jewelをうたいました",
-  "t": "Jewel",
+  "t": "jewelをうたいました",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2014-08-29T14:59:16+09:00",
   "views": 1847298,
   "likes": 2201,
@@ -181841,10 +181758,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.842Z",
-  "seed": true,
-  "of": "yt:2OzgTndZLWw",
-  "p": "Kroi",
-  "a": "youtube:UCOBECp2BuroMCjEZhu_AK-Q"
+  "seed": true
  },
  {
   "id": "nico:sm24333080",
@@ -182819,7 +182733,7 @@
   "title": "『アイロニックメタファー』を 歌ってみた【ぱなまん】",
   "t": "アイロニックメタファー",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2014-08-01T19:00:00+09:00",
   "views": 889224,
   "likes": 683,
@@ -182834,11 +182748,8 @@
   "uploaderId": 4159483,
   "uploader": null,
   "by": "ぱなまん",
-  "req": "nico:sm39776265",
   "firstSeen": "2026-10-20T21:47:42.689Z",
-  "seed": true,
-  "of": "nico:sm39776265",
-  "ofLocked": true
+  "seed": true
  },
  {
   "id": "yt:CI9Gr9kxtJ0",
@@ -186786,9 +186697,9 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm22961119",
   "title": "5人と2匹でマジLOVE2000%歌ってみた",
-  "t": "マジLOVE2000%",
+  "t": "5人と2匹でマジLOVE2000%",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2014-02-24T20:08:09+09:00",
   "views": 1801917,
   "likes": 502,
@@ -186810,10 +186721,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.855Z",
-  "seed": true,
-  "of": "nico:sm23555579",
-  "p": "歌手音ピコ",
-  "a": "niconico:2927601"
+  "seed": true
  },
  {
   "id": "nico:sm22960446",
@@ -192916,7 +192824,7 @@
   "title": "マジLOVE2000% 歌ってみた 【歌天使亜勇弧魔】",
   "t": "マジLOVE2000%",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2013-06-21T19:00:00+09:00",
   "views": 2685747,
   "likes": 1068,
@@ -192938,10 +192846,7 @@
   "uploader": null,
   "by": "歌天使亜勇弧魔",
   "firstSeen": "2026-10-08T15:10:08.730Z",
-  "seed": true,
-  "of": "nico:sm23555579",
-  "p": "歌手音ピコ",
-  "a": "niconico:2927601"
+  "seed": true
  },
  {
   "id": "nico:sm21160675",
@@ -193011,7 +192916,7 @@
   "title": "【声真似】マジLOVE2000％の声優を総入れ替えしてみた【歌ってみた】",
   "t": "マジLOVE2000%",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2013-06-18T00:38:45+09:00",
   "views": 1751853,
   "likes": 828,
@@ -193027,10 +192932,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.867Z",
-  "seed": true,
-  "of": "nico:sm23555579",
-  "p": "歌手音ピコ",
-  "a": "niconico:2927601"
+  "seed": true
  },
  {
   "id": "nico:sm21107494",
@@ -193706,7 +193608,7 @@
   "title": "『マジLOVE2000％』をwwwwwwウザさMAXで歌ってみたったwwwwwwwwwwうぇwwwwwwwwwwwwwwww",
   "t": "マジLOVE2000%",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2013-05-04T19:00:00+09:00",
   "views": 2783370,
   "likes": 1459,
@@ -193725,10 +193627,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.718Z",
-  "seed": true,
-  "of": "nico:sm23555579",
-  "p": "歌手音ピコ",
-  "a": "niconico:2927601"
+  "seed": true
  },
  {
   "id": "nico:sm20766496",
@@ -193950,7 +193849,7 @@
   "title": "【爆音推奨】「マジLOVE2000%」が熱血ソングだったから歌ってみた",
   "t": "マジLOVE2000%",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2013-04-24T21:03:56+09:00",
   "views": 1518854,
   "likes": 495,
@@ -193972,10 +193871,7 @@
   "uploader": null,
   "by": "タイ焼き屋",
   "firstSeen": "2026-10-08T15:10:08.927Z",
-  "seed": true,
-  "of": "nico:sm23555579",
-  "p": "歌手音ピコ",
-  "a": "niconico:2927601"
+  "seed": true
  },
  {
   "id": "yt:Mi9uNu35Gmk",
@@ -199634,7 +199530,7 @@
   "title": "吉原ラメント歌ってみた　ver96猫　",
   "t": "吉原ラメント",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2012-08-17T22:16:52+09:00",
   "views": 4397971,
   "likes": 1509,
@@ -199653,10 +199549,7 @@
   "uploader": null,
   "by": "96猫",
   "firstSeen": "2026-10-08T15:10:08.647Z",
-  "seed": true,
-  "of": "yt:NKYqJ3UvjIk",
-  "p": "“亜沙” ASA",
-  "a": "youtube:UCRQsivtS8Cjj9-X6tOhInKw"
+  "seed": true
  },
  {
   "id": "nico:sm18637680",
@@ -201443,9 +201336,9 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm17852310",
   "title": "【Ib】　絵？あぁ、そう。歌ってみた ver96猫　【替え歌】",
-  "t": "Ib",
+  "t": "絵?あぁ、そう",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2012-05-18T04:20:32+09:00",
   "views": 3488722,
   "likes": 915,
@@ -201465,10 +201358,7 @@
   "uploader": null,
   "by": "96猫",
   "firstSeen": "2026-10-08T15:10:08.672Z",
-  "seed": true,
-  "of": "nico:sm18938918",
-  "p": "Diarays",
-  "a": "niconico:22711505"
+  "seed": true
  },
  {
   "id": "nico:sm17802813",
@@ -203804,9 +203694,9 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm16719480",
   "title": "VOCALOID3 鳥の詩(Ver.IA) full 製品版デモ",
-  "t": "鳥の詩",
+  "t": "VOCALOID3 鳥の詩 full 製品版デモ",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "アニソン",
   "date": "2012-01-17T19:27:48+09:00",
   "views": 1354224,
   "likes": 655,
@@ -203828,10 +203718,7 @@
   "uploader": null,
   "by": "神無月P",
   "firstSeen": "2026-10-08T14:36:47.411Z",
-  "seed": true,
-  "of": "yt:7mZlRSAUSsU",
-  "p": "Lia",
-  "a": "youtube:UCjS6XiAkog-sFKnVNNONPjw"
+  "seed": true
  },
  {
   "id": "nico:sm16718573",
@@ -204715,9 +204602,9 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm16439977",
   "title": "【＿＿】FREEDOMにクリスマス？なにそれ美味しいの？を歌ってみた【ナノ】",
-  "t": "FREEDOM",
+  "t": "FREEDOMにクリスマス?なにそれ美味しいの?",
   "kind": "歌ってみた",
-  "g": "アニソン",
+  "g": "その他",
   "date": "2011-12-16T18:00:18+09:00",
   "views": 2073018,
   "likes": 420,
@@ -204732,10 +204619,7 @@
   "uploader": null,
   "by": "ナノ",
   "firstSeen": "2026-10-08T15:10:08.801Z",
-  "seed": true,
-  "of": "yt:iBPbvfLKIf0",
-  "p": "BLUE ENCOUNT",
-  "a": "youtube:UCN1YNkQdGzJTtHZAQO7uxcQ"
+  "seed": true
  },
  {
   "id": "nico:sm16429826",
@@ -204835,9 +204719,9 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm16347777",
   "title": "【PONPONPON】歌ってみた　ver.Gero",
-  "t": "PONPONPON",
+  "t": "【PONPONPON】歌ってみた　ver.Gero",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2011-12-05T01:24:14+09:00",
   "views": 2049214,
   "likes": 746,
@@ -204859,9 +204743,7 @@
   "uploader": null,
   "by": "Gero",
   "firstSeen": "2026-10-08T15:10:08.806Z",
-  "seed": true,
-  "of": "nico:sm16630691",
-  "a": "niconico:10693107"
+  "seed": true
  },
  {
   "id": "nico:sm16334717",
@@ -205315,7 +205197,7 @@
   "title": "FF7　戦闘BGM　「更に闘う者達」　に歌詞を付けて歌ってみた",
   "t": "更に闘う者達",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2011-11-13T19:01:23+09:00",
   "views": 3172909,
   "likes": 1559,
@@ -205337,9 +205219,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.694Z",
-  "seed": true,
-  "of": "nico:sm40535202",
-  "a": "niconico:17198386"
+  "seed": true
  },
  {
   "id": "nico:sm16151841",
@@ -206265,9 +206145,9 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm15691840",
   "title": "【声真似】マジLOVE1000％の声優を総入れ替えしてみた【歌ってみた】",
-  "t": "マジLOVE1000%",
+  "t": "マジLOVE1000%の声優を総入れ替えしてみた",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "その他",
   "date": "2011-09-23T21:31:07+09:00",
   "views": 3152300,
   "likes": 1691,
@@ -206283,10 +206163,7 @@
   "uploader": null,
   "by": "あほの坂田",
   "firstSeen": "2026-10-08T15:10:08.696Z",
-  "seed": true,
-  "of": "yt:ein8in8zJro",
-  "p": "STARISH",
-  "a": "youtube:UC1uqZRoWiEwtPqK4bhWFjPA"
+  "seed": true
  },
  {
   "id": "nico:sm15671701",
@@ -206448,9 +206325,9 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm15516529",
   "title": "CRYING SURVIVORオリジナル歌詞で歌ってみた(樹)",
-  "t": "CRYING SURVIVOR 歌詞で",
+  "t": "CRYING SURVIVOR",
   "kind": "歌ってみた",
-  "g": "アニソン",
+  "g": "その他",
   "date": "2011-09-05T00:31:18+09:00",
   "views": 6089,
   "likes": 3,
@@ -206467,20 +206344,17 @@
   "uploaderId": 75268,
   "uploader": null,
   "by": "(樹)",
-  "req": "yt:-MnlFslr3Go",
   "firstSeen": "2026-10-20T21:47:42.700Z",
-  "seed": true,
-  "of": "yt:-MnlFslr3Go",
-  "ofLocked": true
+  "seed": true
  },
  {
   "id": "nico:sm15513379",
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm15513379",
   "title": "【替え歌】マジLOVE1000％の意味を根本的に履き違えてみた",
-  "t": "マジLOVE1000%",
+  "t": "マジLOVE1000%の意味を根本的に履き違えてみた",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "その他",
   "date": "2011-09-04T18:59:01+09:00",
   "views": 1728415,
   "likes": 697,
@@ -206497,10 +206371,7 @@
   "uploader": null,
   "by": "ふに",
   "firstSeen": "2026-10-08T15:10:08.874Z",
-  "seed": true,
-  "of": "yt:ein8in8zJro",
-  "p": "STARISH",
-  "a": "youtube:UC1uqZRoWiEwtPqK4bhWFjPA"
+  "seed": true
  },
  {
   "id": "nico:sm15495837",
@@ -206592,9 +206463,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T14:36:47.388Z",
-  "seed": true,
-  "of": "nico:sm16630691",
-  "a": "niconico:10693107"
+  "seed": true
  },
  {
   "id": "nico:sm15440067",
@@ -207292,9 +207161,9 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm15069217",
   "title": "マジLOVE1000%を英訳してもう一度日本語訳して歌ったらひどいことになった",
-  "t": "マジLOVE1000%",
+  "t": "マジLOVE1000%を英訳してもう一度日本語訳して らひどいことになった",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "その他",
   "date": "2011-07-20T16:48:54+09:00",
   "views": 3365117,
   "likes": 1925,
@@ -207310,10 +207179,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.680Z",
-  "seed": true,
-  "of": "yt:ein8in8zJro",
-  "p": "STARISH",
-  "a": "youtube:UC1uqZRoWiEwtPqK4bhWFjPA"
+  "seed": true
  },
  {
   "id": "nico:sm15064904",
@@ -208943,9 +208809,9 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm13679134",
   "title": "【RAINBOW GIRL(REMIX)】 歌ってみた　ver.Gero 【feat.ろん】",
-  "t": "RAINBOW GIRL",
+  "t": "【RAINBOW GIRL(REMIX)】 歌ってみた　ver.Gero 【feat.ろん】",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2011-02-22T22:27:56+09:00",
   "views": 3216172,
   "likes": 869,
@@ -208965,9 +208831,7 @@
   "uploader": null,
   "by": "Gero",
   "firstSeen": "2026-10-08T15:10:08.691Z",
-  "seed": true,
-  "of": "nico:sm39709517",
-  "a": "niconico:116907827"
+  "seed": true
  },
  {
   "id": "nico:sm13664704",
@@ -209167,7 +209031,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm13567247",
   "title": "【PV付き】愛迷エレジー　アレンジして歌ってみた",
-  "t": "愛迷エレジー",
+  "t": "愛迷エレジー アレンジして",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2011-02-11T21:20:09+09:00",
@@ -209187,10 +209051,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.929Z",
-  "seed": true,
-  "of": "nico:sm22478322",
-  "p": "DECO*27",
-  "a": "niconico:811012"
+  "seed": true
  },
  {
   "id": "nico:sm13560752",
@@ -209265,7 +209126,7 @@
   "title": "★「コネクト」歌ってみました Ver-irony",
   "t": "コネクト",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2011-02-05T05:37:22+09:00",
   "views": 3404668,
   "likes": 1112,
@@ -209286,9 +209147,7 @@
   "uploader": null,
   "by": "irony",
   "firstSeen": "2026-10-08T15:10:08.677Z",
-  "seed": true,
-  "of": "nico:sm41588089",
-  "a": "niconico:125313318"
+  "seed": true
  },
  {
   "id": "nico:sm13476300",
@@ -210148,11 +210007,8 @@
   "uploaderId": 1425289,
   "uploader": null,
   "by": "求めて泣いてる",
-  "req": "yt:-MnlFslr3Go",
   "firstSeen": "2026-10-20T21:47:42.701Z",
-  "seed": true,
-  "of": "yt:-MnlFslr3Go",
-  "ofLocked": true
+  "seed": true
  },
  {
   "id": "nico:sm13313111",
@@ -210763,9 +210619,9 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm13117054",
   "title": "Smiling ✽ Xmas edition ✽",
-  "t": "SMILING",
+  "t": "Smiling",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2010-12-24T21:43:48+09:00",
   "views": 1688579,
   "likes": 172,
@@ -210787,9 +210643,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.882Z",
-  "seed": true,
-  "of": "nico:sm16209459",
-  "a": "niconico:4443726"
+  "seed": true
  },
  {
   "id": "nico:sm13110535",
@@ -211116,9 +210970,9 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm12874906",
   "title": "【初音ミク】ジングルベル【クリスマスソング】",
-  "t": "クリスマス",
+  "t": "ジングルベル",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "その他",
   "date": "2010-11-27T22:48:31+09:00",
   "views": 14740,
   "likes": 59,
@@ -211140,10 +210994,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-11T00:54:29.196Z",
-  "seed": true,
-  "of": "yt:Q4-VaZcZan0",
-  "p": "Judy & Mary",
-  "a": "youtube:UC87vWsP1Gqk_sGCFnnFM8ww"
+  "seed": true
  },
  {
   "id": "nico:sm12850213",
@@ -212662,7 +212513,7 @@
   "title": "[いさじ] ライオンをうたってみた♂ [海斗]",
   "t": "ライオン",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "その他",
   "date": "2010-08-26T00:00:33+09:00",
   "views": 2653637,
   "likes": 2479,
@@ -212684,10 +212535,7 @@
   "uploader": null,
   "by": "いさじ",
   "firstSeen": "2026-10-08T15:10:08.734Z",
-  "seed": true,
-  "of": "yt:4sl8OiU9tLU",
-  "p": "10-FEET",
-  "a": "youtube:UCOZFzRrT9gRckF_Gd7uj_4w"
+  "seed": true
  },
  {
   "id": "nico:sm11864925",
@@ -213480,11 +213328,8 @@
   "uploaderId": 10039614,
   "uploader": null,
   "by": "",
-  "req": "yt:-MnlFslr3Go",
   "firstSeen": "2026-10-20T21:47:42.702Z",
-  "seed": true,
-  "of": "yt:-MnlFslr3Go",
-  "ofLocked": true
+  "seed": true
  },
  {
   "id": "nico:sm11468381",
@@ -215893,7 +215738,7 @@
   "title": "くにぃ【Super Survivor】魂込めて歌ってみた",
   "t": "くにぃ 魂込めて",
   "kind": "歌ってみた",
-  "g": "アニソン",
+  "g": "その他",
   "date": "2010-02-25T16:44:38+09:00",
   "views": 1719,
   "likes": 2,
@@ -215908,11 +215753,8 @@
   "uploaderId": 8625891,
   "uploader": null,
   "by": "",
-  "req": "yt:-MnlFslr3Go",
   "firstSeen": "2026-10-20T21:47:42.701Z",
-  "seed": true,
-  "of": "yt:-MnlFslr3Go",
-  "ofLocked": true
+  "seed": true
  },
  {
   "id": "nico:sm9810162",
@@ -216189,7 +216031,7 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm9537803",
   "title": "【clear】カンタレラを歌ってみた【nero】",
-  "t": "CLEAR",
+  "t": "カンタレラ",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2010-01-30T00:30:34+09:00",
@@ -216213,10 +216055,7 @@
   "uploader": null,
   "by": "nero",
   "firstSeen": "2026-10-08T15:10:08.770Z",
-  "seed": true,
-  "of": "nico:sm27263210",
-  "p": "仕事してP",
-  "a": "niconico:386666"
+  "seed": true
  },
  {
   "id": "nico:sm9533221",
@@ -216366,10 +216205,7 @@
   "uploader": null,
   "by": "roro",
   "firstSeen": "2026-10-08T15:10:08.796Z",
-  "seed": true,
-  "of": "nico:sm18258906",
-  "p": "ちくP",
-  "a": "niconico:4071365"
+  "seed": true
  },
  {
   "id": "nico:nm9410057",
@@ -217122,7 +216958,7 @@
   "title": "歌ってみた『Bad Apple !!』全部俺",
   "t": "Bad Apple !!",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2009-10-29T22:12:22+09:00",
   "views": 1475709,
   "likes": 181,
@@ -217138,10 +216974,7 @@
   "uploader": null,
   "by": "全部俺",
   "firstSeen": "2026-10-08T15:10:08.939Z",
-  "seed": true,
-  "of": "yt:o6j6ldDBuZo",
-  "p": "4696botanଓ",
-  "a": "youtube:UCO2scqsXB35UeOY7iEXrQdA"
+  "seed": true
  },
  {
   "id": "nico:sm8639738",
@@ -219107,7 +218940,7 @@
   "title": "[再うｐ]ニコニコ動画流星群を漢らしく歌いました [いさじ]（本家ver）",
   "t": "ニコニコ動画流星群",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2009-07-01T09:04:47+09:00",
   "views": 1528595,
   "likes": 818,
@@ -219129,10 +218962,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.923Z",
-  "seed": true,
-  "of": "nico:sm12660436",
-  "p": "年長組で",
-  "a": "niconico:2834140"
+  "seed": true
  },
  {
   "id": "nico:sm7470254",
@@ -219308,9 +219138,9 @@
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm7383307",
   "title": "【けいおん!】Don't say ”Lazy”- Band Edition-【Niconi☆school】",
-  "t": "Don't say \"lazy\"",
+  "t": "Don't say ”Lazy”- Band Edition-",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2009-06-19T02:25:41+09:00",
   "views": 3866462,
   "likes": 367,
@@ -219326,10 +219156,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.661Z",
-  "seed": true,
-  "of": "nico:sm46859810",
-  "p": "弾いてみた",
-  "a": "niconico:145516537"
+  "seed": true
  },
  {
   "id": "nico:sm7381552",
@@ -220513,7 +220340,7 @@
   "title": "アナザー：ロミオとシンデレラ 【あにま】",
   "t": "アナザー:ロミオとシンデレラ",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2009-04-11T00:16:33+09:00",
   "views": 1329814,
   "likes": 203,
@@ -220530,10 +220357,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:09.000Z",
-  "seed": true,
-  "of": "nico:sm7791075",
-  "p": "プフふP",
-  "a": "niconico:5822594"
+  "seed": true
  },
  {
   "id": "nico:sm6687213",
@@ -220729,7 +220553,7 @@
   "title": "炉心融解を歌ってみた　verよっぺい",
   "t": "炉心融解",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2009-03-26T02:42:38+09:00",
   "views": 6917414,
   "likes": 1560,
@@ -220747,10 +220571,7 @@
   "uploader": null,
   "by": "よっぺい",
   "firstSeen": "2026-10-08T15:10:08.619Z",
-  "seed": true,
-  "of": "nico:sm8089993",
-  "p": "iroha",
-  "a": "niconico:562367"
+  "seed": true
  },
  {
   "id": "nico:sm6529016",
@@ -220794,7 +220615,7 @@
   "title": "Final Fantasy 7『更に闘う者達』全部俺の声【+MP3】",
   "t": "更に闘う者達",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2009-03-14T07:11:04+09:00",
   "views": 2761362,
   "likes": 490,
@@ -220816,9 +220637,7 @@
   "uploader": null,
   "by": "全部俺の声",
   "firstSeen": "2026-10-08T15:10:08.721Z",
-  "seed": true,
-  "of": "nico:sm40535202",
-  "a": "niconico:17198386"
+  "seed": true
  },
  {
   "id": "nico:sm6328922",
@@ -221696,7 +221515,7 @@
   "title": "『炉心融解』　バイオリンで弾いてみました。",
   "t": "炉心融解",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2009-01-20T21:02:53+09:00",
   "views": 1542373,
   "likes": 240,
@@ -221718,10 +221537,7 @@
   "uploader": null,
   "by": "バイオリンで弾いてみました。",
   "firstSeen": "2026-10-08T15:10:08.918Z",
-  "seed": true,
-  "of": "nico:sm8089993",
-  "p": "iroha",
-  "a": "niconico:562367"
+  "seed": true
  },
  {
   "id": "nico:sm5865063",
@@ -221824,7 +221640,7 @@
   "title": "炉心融解　歌ってみた　【リツカ】",
   "t": "炉心融解",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2008-12-29T21:01:48+09:00",
   "views": 3908706,
   "likes": 620,
@@ -221843,10 +221659,7 @@
   "uploader": null,
   "by": "リツカ",
   "firstSeen": "2026-10-08T15:10:08.660Z",
-  "seed": true,
-  "of": "nico:sm8089993",
-  "p": "iroha",
-  "a": "niconico:562367"
+  "seed": true
  },
  {
   "id": "nico:sm5660854",
@@ -221874,10 +221687,7 @@
   "uploader": null,
   "by": "トゥライ",
   "firstSeen": "2026-10-08T15:10:08.824Z",
-  "seed": true,
-  "of": "nico:sm8089993",
-  "p": "iroha",
-  "a": "niconico:562367"
+  "seed": true
  },
  {
   "id": "nico:sm5567321",
@@ -222330,7 +222140,7 @@
   "title": "VOCALOIDでニコニコ動画流星群【完成版】",
   "t": "ニコニコ動画流星群",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2008-08-31T00:08:12+09:00",
   "views": 2139992,
   "likes": 1427,
@@ -222352,10 +222162,7 @@
   "uploader": null,
   "by": "awk",
   "firstSeen": "2026-10-08T14:36:47.371Z",
-  "seed": true,
-  "of": "nico:sm12660436",
-  "p": "年長組で",
-  "a": "niconico:2834140"
+  "seed": true
  },
  {
   "id": "nico:sm4467797",
@@ -222579,7 +222386,7 @@
   "title": "火星人Pのおぱい３兄弟を姉妹で歌ってみた【アイドルマスター】",
   "t": "火星人Pのおぱい3兄弟を姉妹で",
   "kind": "歌ってみた",
-  "g": "アニソン",
+  "g": "その他",
   "date": "2008-08-04T00:40:07+09:00",
   "views": 10917,
   "likes": 1,
@@ -222599,11 +222406,8 @@
   "uploaderId": 3750892,
   "uploader": null,
   "by": "アイドルマスター",
-  "req": "yt:OLRbIc8KZ_8",
   "firstSeen": "2026-10-23T21:48:15.841Z",
-  "seed": true,
-  "of": "yt:OLRbIc8KZ_8",
-  "ofLocked": true
+  "seed": true
  },
  {
   "id": "yt:myEsj-qf73A",
@@ -223329,7 +223133,7 @@
   "title": "歌いたくなったのでニコニコ動画流星群を歌ってみた",
   "t": "ニコニコ動画流星群",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2008-05-16T23:33:11+09:00",
   "views": 4436425,
   "likes": 1409,
@@ -223345,10 +223149,7 @@
   "uploader": null,
   "by": "nayuta",
   "firstSeen": "2026-10-08T15:10:08.646Z",
-  "seed": true,
-  "of": "nico:sm12660436",
-  "p": "年長組で",
-  "a": "niconico:2834140"
+  "seed": true
  },
  {
   "id": "nico:sm3225391",
@@ -223548,7 +223349,7 @@
   "title": "【hide】50% ＆ 50%（フィフティ・フィフティ）歌ってみた【田吾作】",
   "t": "50% & 50%",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "その他",
   "date": "2008-04-26T00:27:28+09:00",
   "views": 1565,
   "likes": 0,
@@ -223567,11 +223368,8 @@
   "uploaderId": 1556011,
   "uploader": null,
   "by": "田吾作",
-  "req": "yt:Vv2n31gL85I",
   "firstSeen": "2026-10-23T21:48:15.836Z",
-  "seed": true,
-  "of": "yt:Vv2n31gL85I",
-  "ofLocked": true
+  "seed": true
  },
  {
   "id": "yt:hnv_ljiIpDw",
@@ -224870,7 +224668,7 @@
   "title": "合唱 JAM Project 「未来への咆哮」",
   "t": "未来への咆哮",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2008-01-03T22:20:29+09:00",
   "views": 1547566,
   "likes": 247,
@@ -224889,10 +224687,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.916Z",
-  "seed": true,
-  "of": "nico:sm21405552",
-  "p": "脱力ジャパンP",
-  "a": "niconico:5990078"
+  "seed": true
  },
  {
   "id": "nico:sm1937053",
@@ -225457,7 +225252,7 @@
   "title": "『RAINBOW GIRL』歌ってみた",
   "t": "RAINBOW GIRL",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2007-11-26T05:28:39+09:00",
   "views": 1757922,
   "likes": 678,
@@ -225474,9 +225269,7 @@
   "uploader": null,
   "by": "",
   "firstSeen": "2026-10-08T15:10:08.866Z",
-  "seed": true,
-  "of": "nico:sm39709517",
-  "a": "niconico:116907827"
+  "seed": true
  },
  {
   "id": "nico:sm1588476",
@@ -225618,7 +225411,7 @@
   "title": "初音ミク 「粉雪」",
   "t": "粉雪",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2007-11-06T19:34:09+09:00",
   "views": 1650419,
   "likes": 949,
@@ -225638,10 +225431,7 @@
   "uploader": null,
   "by": "BinoP",
   "firstSeen": "2026-10-08T14:36:47.393Z",
-  "seed": true,
-  "of": "nico:sm3996235",
-  "p": "忙しい人のための",
-  "a": "niconico:1353089"
+  "seed": true
  },
  {
   "id": "nico:sm1427306",
@@ -226342,10 +226132,7 @@
   "v": "初音ミク",
   "vr": "初音ミク",
   "firstSeen": "2026-10-08T14:36:47.324Z",
-  "seed": true,
-  "of": "nico:sm2340405",
-  "p": "レンを",
-  "a": "niconico:2156637"
+  "seed": true
  },
  {
   "id": "nico:sm969310",
@@ -226387,7 +226174,7 @@
   "title": "組曲『涼宮ハルヒの憂鬱』を豪華キャストでお送りします",
   "t": "涼宮ハルヒの憂鬱",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2007-08-17T14:13:29+09:00",
   "views": 2468921,
   "likes": 532,
@@ -226409,9 +226196,7 @@
   "uploader": null,
   "by": "組曲",
   "firstSeen": "2026-10-08T15:10:08.752Z",
-  "seed": true,
-  "of": "nico:sm1805102",
-  "a": "niconico:329537"
+  "seed": true
  },
  {
   "id": "nico:sm809651",
@@ -226474,7 +226259,7 @@
   "title": "勢いで組曲『涼宮ハルヒの憂鬱』を歌ってしまった",
   "t": "涼宮ハルヒの憂鬱",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "その他",
   "date": "2007-07-29T16:24:29+09:00",
   "views": 3502165,
   "likes": 583,
@@ -226489,9 +226274,7 @@
   "uploader": null,
   "by": "勢いで組曲",
   "firstSeen": "2026-10-08T15:10:08.672Z",
-  "seed": true,
-  "of": "nico:sm1805102",
-  "a": "niconico:329537"
+  "seed": true
  },
  {
   "id": "nico:sm482877",

@@ -655,7 +655,8 @@ async function fetchPickCovers(items) {
       const started = Date.now();
       const res = await fetch("https://snapshot.search.nicovideo.jp/api/v2/snapshot/video/contents/search?" + params, { headers: { "User-Agent": config.userAgent } });
       if (res.ok) {
-        const rows = ((await res.json()).data || []).filter(r => !known.has("nico:" + r.contentId) && okTitle(unxml(r.title || ""))).slice(0, perSong);
+        const before = Date.parse(song.date) - 30 * 864e5;   // 原曲より30日以上前の動画は別の曲
+        const rows = ((await res.json()).data || []).filter(r => !known.has("nico:" + r.contentId) && okTitle(unxml(r.title || "")) && !(Date.parse(r.startTime) < before)).slice(0, perSong);
         for (const r of rows) got.push({ src: "niconico", id: "nico:" + r.contentId, url: "https://www.nicovideo.jp/watch/" + r.contentId,
           title: unxml(r.title || ""), tags: (r.tags || "").split(" ").filter(Boolean).map(unxml), date: r.startTime, views: r.viewCounter, likes: r.likeCounter,
           thumb: r.thumbnailUrl, uploaderId: r.userId ?? r.channelId ?? null, req: song.id });
@@ -670,7 +671,7 @@ async function fetchPickCovers(items) {
       const res = await ytFetch("https://www.googleapis.com/youtube/v3/search?" + params);
       if (res.ok) {
         const ids = ((await res.json()).items || []).map(it => it.id?.videoId).filter(v => v && !known.has("yt:" + v));
-        const vs = (await ytVideos(ids, key)).filter(v => !isNoise(v) && Number(v.statistics?.viewCount || 0) >= minViews && okTitle(v.snippet?.title || ""))
+        const vs = (await ytVideos(ids, key)).filter(v => !isNoise(v) && !(Date.parse(v.snippet?.publishedAt) < Date.parse(song.date) - 30 * 864e5) && Number(v.statistics?.viewCount || 0) >= minViews && okTitle(v.snippet?.title || ""))
           .sort((a, b) => Number(b.statistics?.viewCount || 0) - Number(a.statistics?.viewCount || 0)).slice(0, perSong);
         for (const v of vs) got.push({ ...ytItem(v, song.g), req: song.id });
       } else console.warn(`投稿ネタの歌ってみた（YouTube）「${song.t}」: HTTP ${res.status}`);
