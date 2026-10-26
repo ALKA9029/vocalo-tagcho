@@ -192,7 +192,8 @@
   "name": "t+pazolite",
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "ボカロ",
-  "lastHit": "2026-10-20T14:00:10Z"
+  "lastHit": "2026-10-20T14:00:10Z",
+  "pinned": true
  },
  {
   "id": "UCcvLSRIWJIAGFDyWtzkbiHA",
@@ -1595,7 +1596,8 @@
   "added": "2026-10-25T21:47:54.440Z",
   "name": "みそらくん",
   "genre": "J-POP",
-  "lastHit": "2026-10-25T09:00:11Z"
+  "lastHit": "2026-10-25T09:00:11Z",
+  "pinned": true
  },
  {
   "id": "UCQVZyePUGXv-6UCGeOovjCw",
@@ -1898,7 +1900,8 @@
   "added": "2026-10-26T10:57:28.012Z",
   "name": "なとり / natori",
   "genre": "J-POP",
-  "lastHit": "2026-10-22T12:00:09Z"
+  "lastHit": "2026-10-22T12:00:09Z",
+  "pinned": true
  },
  {
   "id": "UCz89MGFBrAqwJ5xMr5weSuA",
