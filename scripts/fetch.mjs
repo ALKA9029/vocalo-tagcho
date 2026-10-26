@@ -630,8 +630,10 @@ async function fetchPickCovers(items) {
   const cfg = config.pickCovers || {};
   if (cfg.enabled === false) return [];
   const today = new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 10);
-  const picks = (await readJson("data/picks.json", {}))[today];
-  if (!picks) { console.log("投稿ネタの歌ってみた: 今日のネタがまだ決まっていないので飛ばします"); return []; }
+  const picks = (await readJson("data/picks.json", {}))[today] || [];
+  // 手で頼んだ曲（data/cover-wanted.json：曲のIDの一覧）も同じように探す。こちらは手動の実行でもYouTubeを検索する（1曲1回）
+  const wanted = await readJson("data/cover-wanted.json", []);
+  if (!picks.length && !wanted.length) { console.log("投稿ネタの歌ってみた: 今日のネタがまだ決まっていないので飛ばします"); return []; }
   const done = await readJson("data/pick-covers-done.json", {});
   const byId = new Map(items.map(i => [i.id, i]));
   const known = new Set(items.map(i => i.id));
@@ -639,8 +641,9 @@ async function fetchPickCovers(items) {
   const key = process.env.YOUTUBE_API_KEY;
   let ytLeft = key && !process.env.NO_SEARCH ? (cfg.youtubeSearches ?? 9) : 0;
   const out = [];
-  for (const id of [...new Set(picks.flatMap(p => p.ids))]) {
+  for (const id of [...new Set([...wanted, ...picks.flatMap(p => p.ids)])]) {
     const song = byId.get(id);
+    if (wanted.includes(id) && key && !done[id]) ytLeft = Math.max(ytLeft, 1);
     if (!song || song.kind !== "本家" || done[id]) continue;
     const nt = normalize(song.t);
     if (nt.length < 2) { done[id] = today; continue; }
