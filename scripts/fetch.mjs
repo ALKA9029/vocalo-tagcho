@@ -670,14 +670,18 @@ async function fetchPickCovers(items) {
     const ytTried = ytLeft > 0;
     if (ytLeft > 0) {
       ytLeft--;
-      const params = new URLSearchParams({ part: "id", type: "video", q: `${song.t} 歌ってみた`, order: "viewCount", maxResults: "15", regionCode: "JP", relevanceLanguage: "ja", key });
-      const res = await ytFetch("https://www.googleapis.com/youtube/v3/search?" + params);
-      if (res.ok) {
-        const ids = ((await res.json()).items || []).map(it => it.id?.videoId).filter(v => v && !known.has("yt:" + v));
-        const vs = (await ytVideos(ids, key)).filter(v => !isNoise(v) && !(Date.parse(v.snippet?.publishedAt) < Date.parse(song.date) - 30 * 864e5) && Number(v.statistics?.viewCount || 0) >= minViews && okTitle(v.snippet?.title || ""))
-          .sort((a, b) => Number(b.statistics?.viewCount || 0) - Number(a.statistics?.viewCount || 0)).slice(0, perSong);
-        for (const v of vs) got.push({ ...ytItem(v, song.g), req: song.id });
-      } else console.warn(`投稿ネタの歌ってみた（YouTube）「${song.t}」: HTTP ${res.status}`);
+      // 手で頼んだ曲は「歌ってみた」と「cover」の2回探して、多めに入れる（転載・字幕つきの再アップロードは入れない）
+      const isWanted = wanted.includes(id);
+      const ytIds = [];
+      for (const q of isWanted ? [`${song.t} 歌ってみた`, `${song.t} cover`] : [`${song.t} 歌ってみた`]) {
+        const params = new URLSearchParams({ part: "id", type: "video", q, order: "viewCount", maxResults: isWanted ? "25" : "15", regionCode: "JP", relevanceLanguage: "ja", key });
+        const res = await ytFetch("https://www.googleapis.com/youtube/v3/search?" + params);
+        if (res.ok) ytIds.push(...((await res.json()).items || []).map(it => it.id?.videoId).filter(v => v && !known.has("yt:" + v) && !ytIds.includes(v)));
+        else console.warn(`投稿ネタの歌ってみた（YouTube）「${song.t}」: HTTP ${res.status}`);
+      }
+      const vs = (await ytVideos(ytIds, key)).filter(v => !isNoise(v) && !(Date.parse(v.snippet?.publishedAt) < Date.parse(song.date) - 30 * 864e5) && Number(v.statistics?.viewCount || 0) >= minViews && okTitle(v.snippet?.title || "") && !/字幕|転載|reupload|re-upload/i.test(v.snippet?.title || ""))
+        .sort((a, b) => Number(b.statistics?.viewCount || 0) - Number(a.statistics?.viewCount || 0)).slice(0, isWanted ? perSong * 2 : perSong);
+      for (const v of vs) got.push({ ...ytItem(v, song.g), req: song.id });
     }
     for (const v of got) known.add(v.id);
     out.push(...got);

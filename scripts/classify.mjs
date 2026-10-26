@@ -912,7 +912,7 @@ const SINGER_NAMES = { "Meychan": "めいちゃん", "96NEKO": "96猫", "Suisei"
 // タイトルの中の歌い手名（「ver.aoru」「【サンヌ cover】」「cover by X」「/ そらびび(cover)」、最後の【X】、最初の【X】の順に探す）
 const BAD_SINGER = /歌ってみた|うたってみた|みた|歌って|踊って|cover|カバー|オリジナル|^MV$|feat|配布|Synthesizer|SynthV|VOCALOID|NEUTRINO|CeVIO|UTAU|VOICEVOX|フル|full|ショート|弾き語り|リレー|メドレー|ミックス|MIX|作業用|歌踊|歌コレ|\d{4}|で$|[をにし]\S*て$|って$/i;
 function singerInTitle(title = "", t = "", strongOnly = false) {
-  const strong = [/ver\.?\s*([^\s【】\[\]()（）]+)\s*$/i, /cover(?:ed)?\s*by\s*([^【】\[\]()（）|｜]+?)\s*(?:[【\[(（|｜]|$)/i, /【([^】]+?)\s+cover\.?】/i,
+  const strong = [/ver\.?\s*([^\s【】\[\]()（）]+)\s*$/i, /by\s*([^\s【】\[\]()（）]+)\s*(?:中文字幕|字幕)?\s*$/i, /cover(?:ed)?\s*by\s*([^【】\[\]()（）|｜]+?)\s*(?:[【\[(（|｜]|$)/i, /【([^】]+?)\s+cover\.?】/i,
     /[\/／]\s*([^\/／【】()（）]+?)\s*[（(]\s*cover\s*[)）]/i];
   const pats = strongOnly ? strong : [...strong, /【([^】]+)】\s*$/, /^【([^】]+)】/];
   for (const re of pats) {
