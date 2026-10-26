@@ -1,10 +1,25 @@
 [
  {
+  "id": "UCv4rbHnDlWSHQypEFHtU1eA",
+  "added": "2026-10-26T21:49:00.972Z",
+  "name": "ko․yo / tokomodo",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-26T11:00:22Z"
+ },
+ {
   "id": "UCW5xxEBTK0lebkTbQMNZJBw",
   "name": "Fake Beat Japan",
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "ボカロ",
-  "lastHit": "2026-10-25T10:00:37Z",
+  "lastHit": "2026-10-26T10:00:17Z",
+  "pinned": true
+ },
+ {
+  "id": "UCAfQ5CojppHVIiLwuRDBzTg",
+  "name": "t+pazolite",
+  "added": "2026-10-09T12:06:54.468Z",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-26T10:00:00Z",
   "pinned": true
  },
  {
@@ -49,6 +64,13 @@
   "name": "シュリンP",
   "genre": "ボカロ",
   "lastHit": "2026-10-24T10:00:15Z"
+ },
+ {
+  "id": "UCqsI-C61cqveR5U3IJJOPJw",
+  "added": "2026-10-26T21:49:00.972Z",
+  "name": "ヤコスター",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-24T09:30:10Z"
  },
  {
   "id": "UCQ1U65-CQdIoZ2_NA4Z4F7A",
@@ -103,6 +125,13 @@
   "lastHit": "2026-10-23T11:00:06Z"
  },
  {
+  "id": "UCQDRqVAnNQR-XdxTA7128Ig",
+  "added": "2026-10-26T21:49:00.972Z",
+  "name": "音楽の巨匠 / KYOSHO",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-23T10:07:24Z"
+ },
+ {
   "id": "UC79W8jowl1hE-tuYBO2Ym2A",
   "added": "2026-10-25T21:47:54.440Z",
   "name": "あたたかい水族館",
@@ -115,6 +144,13 @@
   "name": "ryo (supercell)",
   "genre": "ボカロ",
   "lastHit": "2026-10-23T09:39:10Z"
+ },
+ {
+  "id": "UCHRUWjuzMPSoHih79X8D0pA",
+  "added": "2026-10-26T21:49:00.972Z",
+  "name": "Noa【ボカロP】",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-23T09:15:08Z"
  },
  {
   "id": "UC53I70eBu29T9rO1GvXdc_w",
@@ -186,14 +222,6 @@
   "name": "猫舘 こたつ / Nekotachi Kotatsu",
   "genre": "ボカロ",
   "lastHit": "2026-10-20T14:31:17Z"
- },
- {
-  "id": "UCAfQ5CojppHVIiLwuRDBzTg",
-  "name": "t+pazolite",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-20T14:00:10Z",
-  "pinned": true
  },
  {
   "id": "UCcvLSRIWJIAGFDyWtzkbiHA",
@@ -1503,36 +1531,27 @@
   "pinned": true
  },
  {
-  "id": "UCT5ZYc0Whk1NX_Fdvlm1baw",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "Aqu3ra",
-  "genre": "ボカロ",
-  "lastHit": "2022-06-23T11:00:27Z",
+  "id": "UCwjAKjycHHT1QzHrQN5Stww",
+  "name": "SixTONES",
+  "added": "2026-10-09T12:06:54.468Z",
+  "genre": "アニソン",
+  "lastHit": "2026-10-26T13:00:35Z",
   "pinned": true
  },
  {
-  "id": "UCDOTPjUW-NhQMDmYbgMvQKA",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "ポリスピカデリー / Police Piccadilly",
-  "genre": "ボカロ",
-  "lastHit": "2022-04-23T09:00:28Z",
+  "id": "UCsmXiDP8S40uBeJYxvyulmA",
+  "added": "2026-10-26T21:49:00.972Z",
+  "name": "JO1",
+  "genre": "アニソン",
+  "lastHit": "2026-10-26T11:59:04Z",
   "pinned": true
  },
  {
-  "id": "UCgf4ASaUXSl960o8wXWHGdQ",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "柊キライ",
-  "genre": "ボカロ",
-  "lastHit": "2022-03-25T10:00:22Z",
-  "pinned": true
- },
- {
-  "id": "UCBn41FlxHaINjQuaIfzRZbQ",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "水野あつ",
-  "genre": "ボカロ",
-  "lastHit": "2022-02-19T09:00:13Z",
-  "pinned": true
+  "id": "UCryG4vbVzknCNOSjrUfVoaw",
+  "added": "2026-10-26T21:49:00.972Z",
+  "name": "ていく【EL6】",
+  "genre": "J-POP",
+  "lastHit": "2026-10-26T10:01:51Z"
  },
  {
   "id": "UCKCb7zirdauYVUPokYvoNTQ",
@@ -1590,6 +1609,13 @@
   "name": "浦島坂田船公式チャンネル",
   "genre": "J-POP",
   "lastHit": "2026-10-25T10:00:01Z"
+ },
+ {
+  "id": "UC7Gow-kNHq21oejSIDg9PAg",
+  "added": "2026-10-26T21:49:00.972Z",
+  "name": "幸祜 - KOKO -",
+  "genre": "J-POP",
+  "lastHit": "2026-10-25T09:55:10Z"
  },
  {
   "id": "UCVZL24gsn601uz30FirXT5w",
@@ -1757,6 +1783,14 @@
   "pinned": true
  },
  {
+  "id": "UCFvSFbT8okMrpuFxBEIB2lg",
+  "name": "M!LK",
+  "added": "2026-10-09T12:06:54.468Z",
+  "genre": "J-POP",
+  "lastHit": "2026-10-24T04:02:41Z",
+  "pinned": true
+ },
+ {
   "id": "UCgjHnNGucWdtxufa4ZFuY4g",
   "added": "2026-10-24T21:46:48.750Z",
   "name": "HARAAO",
@@ -1787,6 +1821,13 @@
   "lastHit": "2026-10-23T13:00:11Z"
  },
  {
+  "id": "UCwAVKZKMkKNEMShMK68PuzA",
+  "added": "2026-10-26T21:49:00.972Z",
+  "name": "湘南乃風",
+  "genre": "アニソン",
+  "lastHit": "2026-10-23T13:00:07Z"
+ },
+ {
   "id": "UC9zY_E8mcAo_Oq772LEZq8Q",
   "name": "THE FIRST TAKE",
   "added": "2026-10-09T12:06:54.468Z",
@@ -1799,6 +1840,14 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "アニソン",
   "lastHit": "2026-10-23T12:00:11Z",
+  "pinned": true
+ },
+ {
+  "id": "UCV8slsLG3_GKRxjpg8NVqXg",
+  "added": "2026-10-11T21:32:47.826Z",
+  "name": "TOOBOE",
+  "genre": "アニソン",
+  "lastHit": "2026-10-23T12:00:02Z",
   "pinned": true
  },
  {
@@ -1911,6 +1960,13 @@
   "lastHit": "2026-10-22T12:00:08Z"
  },
  {
+  "id": "UCpRXCTyNNa-MnjhK6gisnRw",
+  "added": "2026-10-26T21:49:00.972Z",
+  "name": "가온 ガオン GAON 【にじさんじ】",
+  "genre": "J-POP",
+  "lastHit": "2026-10-22T11:45:10Z"
+ },
+ {
   "id": "UCypfL7H0xEW8vocZZAi3PAQ",
   "added": "2026-10-22T21:48:45.712Z",
   "name": "あらなるめい公式",
@@ -2018,7 +2074,8 @@
   "name": "Tokyo Street Live 4K",
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "J-POP",
-  "lastHit": "2026-10-21T12:00:08Z"
+  "lastHit": "2026-10-21T12:00:08Z",
+  "pinned": true
  },
  {
   "id": "UCfBkUgaJ6eqYA9_TX2cmq9A",
@@ -2069,7 +2126,7 @@
   "id": "UCi0W073dqdnC3FkYGHgyYsg",
   "added": "2026-10-22T15:01:03.826Z",
   "name": "MAX4592",
-  "genre": "J-POP",
+  "genre": "アニソン",
   "lastHit": "2026-10-21T03:00:11Z"
  },
  {
@@ -2365,14 +2422,6 @@
   "lastHit": "2026-10-17T11:00:36Z"
  },
  {
-  "id": "UCV8slsLG3_GKRxjpg8NVqXg",
-  "added": "2026-10-11T21:32:47.826Z",
-  "name": "TOOBOE",
-  "genre": "アニソン",
-  "lastHit": "2026-10-17T11:00:21Z",
-  "pinned": true
- },
- {
   "id": "UCnr0Il4yjtq5PcGtlHJw8Pg",
   "added": "2026-10-23T21:49:42.946Z",
   "name": "SAYURI【滝さゆり】",
@@ -2471,14 +2520,6 @@
   "name": "East Of Eden",
   "genre": "アニソン",
   "lastHit": "2026-10-16T15:00:26Z",
-  "pinned": true
- },
- {
-  "id": "UCwjAKjycHHT1QzHrQN5Stww",
-  "name": "SixTONES",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "アニソン",
-  "lastHit": "2026-10-16T13:00:17Z",
   "pinned": true
  },
  {
@@ -2959,14 +3000,6 @@
   "lastHit": "2026-10-12T10:00:54Z"
  },
  {
-  "id": "UCFvSFbT8okMrpuFxBEIB2lg",
-  "name": "M!LK",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "J-POP",
-  "lastHit": "2026-10-12T10:00:36Z",
-  "pinned": true
- },
- {
   "id": "UCWz0CSYCxf4MhRKPDm220AQ",
   "added": "2026-10-12T21:33:25.769Z",
   "name": "神田笑一 / Kanda Shoichi【 にじさんじ 】",
@@ -2979,42 +3012,5 @@
   "name": "音ノ瀬らこ / Otonose Raco",
   "genre": "アニソン",
   "lastHit": "2026-10-12T09:06:54Z"
- },
- {
-  "id": "UCoEIdZkDEZdrCDCJSqwifzw",
-  "added": "2026-10-12T21:33:25.769Z",
-  "name": "Travis Japan",
-  "genre": "アニソン",
-  "lastHit": "2026-10-12T09:00:07Z",
-  "pinned": true
- },
- {
-  "id": "UC61K1rlTcu3whbzjlHIa2dA",
-  "added": "2026-10-14T23:23:48.922Z",
-  "name": "さんど。【よろずや】",
-  "genre": "アニソン",
-  "lastHit": "2026-10-12T03:00:29Z"
- },
- {
-  "id": "UCG8MvaPCa2ecKH3GZyFxduA",
-  "name": "あいみょん",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "アニソン",
-  "lastHit": "2026-10-11T15:00:06Z",
-  "pinned": true
- },
- {
-  "id": "UCMTfP-48IFILqDyhq_nFTcw",
-  "added": "2026-10-15T21:48:53.889Z",
-  "name": "Rustic",
-  "genre": "アニソン",
-  "lastHit": "2026-10-11T14:31:21Z"
- },
- {
-  "id": "UCZLeZXjm_opUQFhLa4I_VFg",
-  "added": "2026-10-12T11:09:58.604Z",
-  "name": "リオラch-スプラ解説-",
-  "genre": "J-POP",
-  "lastHit": "2026-10-11T11:10:37Z"
  }
 ]
