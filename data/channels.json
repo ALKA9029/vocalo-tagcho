@@ -23,6 +23,13 @@
   "lastHit": "2026-10-24T11:00:08Z"
  },
  {
+  "id": "UCGxSeiJDd_xqH6QKdqGsogw",
+  "added": "2026-10-26T10:57:28.012Z",
+  "name": "amaoto",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-24T11:00:08Z"
+ },
+ {
   "id": "UCDgVHh4XxYK3M2TN75-c-aQ",
   "added": "2026-10-25T21:47:54.440Z",
   "name": "yumegui / さまぐら",
@@ -1527,12 +1534,18 @@
   "pinned": true
  },
  {
-  "id": "UC6p9WK3z1b33aKkgW6tg_1A",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "Release - Topic",
-  "genre": "ボカロ",
-  "lastHit": "2022-01-18T10:02:27Z",
-  "pinned": true
+  "id": "UCKCb7zirdauYVUPokYvoNTQ",
+  "added": "2026-10-18T21:45:48.802Z",
+  "name": "海琳あおい / Mitama Aoi",
+  "genre": "J-POP",
+  "lastHit": "2026-10-26T09:05:26Z"
+ },
+ {
+  "id": "UCPrjycK4eiQhUw2PnVIq7Gg",
+  "added": "2026-10-10T07:39:29.506Z",
+  "name": "CANACANA family",
+  "genre": "アニソン",
+  "lastHit": "2026-10-26T00:47:33Z"
  },
  {
   "id": "UCo2N7C-Z91waaR6lF3LL_jw",
@@ -1562,6 +1575,13 @@
   "name": "カラオケキー検索",
   "genre": "J-POP",
   "lastHit": "2026-10-25T10:00:11Z"
+ },
+ {
+  "id": "UChbU0n7P86fWdZtlzCNCeGg",
+  "added": "2026-10-26T10:57:28.012Z",
+  "name": "M!LK - Topic",
+  "genre": "J-POP",
+  "lastHit": "2026-10-25T10:00:05Z"
  },
  {
   "id": "UCA_t0trBs1Fcb6U4HeUGT4g",
@@ -1626,7 +1646,8 @@
   "added": "2026-10-25T21:47:54.440Z",
   "name": "日常組",
   "genre": "J-POP",
-  "lastHit": "2026-10-24T12:00:32Z"
+  "lastHit": "2026-10-24T12:00:32Z",
+  "pinned": true
  },
  {
   "id": "UCPvBpSphbGzwtvoHKEwXXWw",
@@ -1657,6 +1678,14 @@
   "name": "Hey! Say! JUMP",
   "genre": "アニソン",
   "lastHit": "2026-10-24T12:00:10Z",
+  "pinned": true
+ },
+ {
+  "id": "UCKMrSqp1RC2KtkGLr6dOPLw",
+  "added": "2026-10-25T21:47:54.440Z",
+  "name": "SNIVPA",
+  "genre": "アニソン",
+  "lastHit": "2026-10-24T11:00:25Z",
   "pinned": true
  },
  {
@@ -1716,6 +1745,21 @@
   "genre": "アニソン",
   "lastHit": "2026-10-24T09:00:14Z",
   "pinned": true
+ },
+ {
+  "id": "UCGGJd1m4lzDzYAqjVYLI8MA",
+  "added": "2026-10-19T13:19:55.145Z",
+  "name": "Rika Chan",
+  "genre": "J-POP",
+  "lastHit": "2026-10-24T05:00:16Z",
+  "pinned": true
+ },
+ {
+  "id": "UCgjHnNGucWdtxufa4ZFuY4g",
+  "added": "2026-10-24T21:46:48.750Z",
+  "name": "HARAAO",
+  "genre": "J-POP",
+  "lastHit": "2026-10-23T20:10:18Z"
  },
  {
   "id": "UCpFgmZm65yOU5X-hmWkWjuw",
@@ -1785,6 +1829,13 @@
   "pinned": true
  },
  {
+  "id": "UCv0hpsgpGWYdBsotEA3_5fQ",
+  "added": "2026-10-26T10:57:28.012Z",
+  "name": "あかつき るき / Akatsuki Luci",
+  "genre": "J-POP",
+  "lastHit": "2026-10-23T11:00:07Z"
+ },
+ {
   "id": "UCe_eW6vlB7i5vwxTMiU_wHw",
   "added": "2026-10-17T21:45:11.252Z",
   "name": "親子ユニット ドラゴンエンジェル(ドラエン)",
@@ -1828,13 +1879,6 @@
   "lastHit": "2026-10-23T02:00:16Z"
  },
  {
-  "id": "UCgjHnNGucWdtxufa4ZFuY4g",
-  "added": "2026-10-24T21:46:48.750Z",
-  "name": "HARAAO",
-  "genre": "J-POP",
-  "lastHit": "2026-10-23T01:05:59Z"
- },
- {
   "id": "UCyOej8HdLg_NaAT7BFXenpg",
   "added": "2026-10-25T21:47:54.440Z",
   "name": "ねらひかだ",
@@ -1848,6 +1892,13 @@
   "genre": "J-POP",
   "lastHit": "2026-10-22T12:00:38Z",
   "pinned": true
+ },
+ {
+  "id": "UCC0zLuvujaZRFqR3aNql3Sg",
+  "added": "2026-10-26T10:57:28.012Z",
+  "name": "なとり / natori",
+  "genre": "J-POP",
+  "lastHit": "2026-10-22T12:00:09Z"
  },
  {
   "id": "UCz89MGFBrAqwJ5xMr5weSuA",
@@ -1971,7 +2022,8 @@
   "added": "2026-10-21T21:52:15.808Z",
   "name": "理芽 -RIM-",
   "genre": "J-POP",
-  "lastHit": "2026-10-21T11:00:10Z"
+  "lastHit": "2026-10-21T11:00:10Z",
+  "pinned": true
  },
  {
   "id": "UCaZgY1ysWvHFUVG8xp95PPA",
@@ -1987,14 +2039,6 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "J-POP",
   "lastHit": "2026-10-21T11:00:05Z"
- },
- {
-  "id": "UCKMrSqp1RC2KtkGLr6dOPLw",
-  "added": "2026-10-25T21:47:54.440Z",
-  "name": "SNIVPA",
-  "genre": "アニソン",
-  "lastHit": "2026-10-21T11:00:03Z",
-  "pinned": true
  },
  {
   "id": "UCkqTauzi2HEkxbqAzBD4EFg",
@@ -2056,11 +2100,11 @@
   "pinned": true
  },
  {
-  "id": "UCPrjycK4eiQhUw2PnVIq7Gg",
-  "added": "2026-10-10T07:39:29.506Z",
-  "name": "CANACANA family",
-  "genre": "アニソン",
-  "lastHit": "2026-10-20T11:42:41Z"
+  "id": "UC_KgLkLmVW3yzJyZ9Jkqq9Q",
+  "added": "2026-10-25T21:47:54.440Z",
+  "name": "桜羽台高校 軽音部",
+  "genre": "J-POP",
+  "lastHit": "2026-10-20T10:00:48Z"
  },
  {
   "id": "UChEJh7omBrQ7CNcY1bN2xPg",
@@ -2092,13 +2136,6 @@
   "genre": "アニソン",
   "lastHit": "2026-10-19T13:00:08Z",
   "pinned": true
- },
- {
-  "id": "UC_KgLkLmVW3yzJyZ9Jkqq9Q",
-  "added": "2026-10-25T21:47:54.440Z",
-  "name": "桜羽台高校 軽音部",
-  "genre": "J-POP",
-  "lastHit": "2026-10-19T12:31:40Z"
  },
  {
   "id": "UCz3x9qQNFcbc37R3ND0B8kw",
@@ -2355,13 +2392,6 @@
   "lastHit": "2026-10-17T11:00:10Z"
  },
  {
-  "id": "UCKCb7zirdauYVUPokYvoNTQ",
-  "added": "2026-10-18T21:45:48.802Z",
-  "name": "海琳あおい / Mitama Aoi",
-  "genre": "J-POP",
-  "lastHit": "2026-10-17T11:00:08Z"
- },
- {
   "id": "UCO6mA1hC3Gv9jEoCTITjAQw",
   "name": "琶舞 -ʙᴇᴍᴀ-",
   "added": "2026-10-09T12:06:54.468Z",
@@ -2404,12 +2434,11 @@
   "lastHit": "2026-10-17T09:00:08Z"
  },
  {
-  "id": "UCGGJd1m4lzDzYAqjVYLI8MA",
-  "added": "2026-10-19T13:19:55.145Z",
-  "name": "Rika Chan",
-  "genre": "J-POP",
-  "lastHit": "2026-10-17T05:16:26Z",
-  "pinned": true
+  "id": "UCC6YfCl0X6-z7aZZp1Bd-fg",
+  "added": "2026-10-26T10:57:28.012Z",
+  "name": "音質向上委員会",
+  "genre": "アニソン",
+  "lastHit": "2026-10-17T07:21:02Z"
  },
  {
   "id": "UCLqCmbd6bgcLaBVz3aA-68A",
@@ -2984,35 +3013,5 @@
   "name": "リオラch-スプラ解説-",
   "genre": "J-POP",
   "lastHit": "2026-10-11T11:10:37Z"
- },
- {
-  "id": "UC1cHlPIE-kqiPvpyYz2O8rQ",
-  "name": "ジュニアCHANNEL",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "J-POP",
-  "lastHit": "2026-10-11T11:00:25Z"
- },
- {
-  "id": "UCFJh3MwlerM5ZReA5911JEQ",
-  "added": "2026-10-13T21:45:48.810Z",
-  "name": "HACHI",
-  "genre": "J-POP",
-  "lastHit": "2026-10-11T11:00:09Z",
-  "pinned": true
- },
- {
-  "id": "UCGmiKh6nsbMrja3XCMGxTdw",
-  "name": "山下学園おんがく部",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "J-POP",
-  "lastHit": "2026-10-11T10:00:15Z"
- },
- {
-  "id": "UC8eq3M3Yft3FUgxEX6lOZMg",
-  "added": "2026-10-12T11:09:58.604Z",
-  "name": "Chotokkyu - Topic",
-  "genre": "J-POP",
-  "lastHit": "2026-10-11T10:00:03Z",
-  "pinned": true
  }
 ]
