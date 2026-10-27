@@ -7,22 +7,6 @@
   "lastHit": "2026-10-26T11:00:22Z"
  },
  {
-  "id": "UCW5xxEBTK0lebkTbQMNZJBw",
-  "name": "Fake Beat Japan",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-26T10:00:17Z",
-  "pinned": true
- },
- {
-  "id": "UCAfQ5CojppHVIiLwuRDBzTg",
-  "name": "t+pazolite",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-26T10:00:00Z",
-  "pinned": true
- },
- {
   "id": "UCfyzrRchEuYWpbWnXNRwNLw",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "シアーミュージック",
@@ -43,6 +27,13 @@
   "name": "amaoto",
   "genre": "ボカロ",
   "lastHit": "2026-10-24T11:00:08Z"
+ },
+ {
+  "id": "UCpv_pfKq58sKNws-ckSwuWw",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "Nuts裏目",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-24T10:58:31Z"
  },
  {
   "id": "UCDgVHh4XxYK3M2TN75-c-aQ",
@@ -73,14 +64,6 @@
   "lastHit": "2026-10-24T09:30:10Z"
  },
  {
-  "id": "UCQ1U65-CQdIoZ2_NA4Z4F7A",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "花譜 -KAF-",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-24T09:00:32Z",
-  "pinned": true
- },
- {
   "id": "UCSZOP-ZrOhYmthKxs6uzxWQ",
   "added": "2026-10-25T21:47:54.440Z",
   "name": "JESSIE",
@@ -93,13 +76,6 @@
   "name": "Mayonazy",
   "genre": "ボカロ",
   "lastHit": "2026-10-23T18:59:07Z"
- },
- {
-  "id": "UCgVoOtEHrVg4RFdD-35Pb3A",
-  "added": "2026-10-12T21:33:25.769Z",
-  "name": "Plus Music!! Channel",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-23T13:38:56Z"
  },
  {
   "id": "UCAaGaynFpku5cAx6OOSrW-w",
@@ -143,7 +119,8 @@
   "added": "2026-10-22T21:48:45.712Z",
   "name": "ryo (supercell)",
   "genre": "ボカロ",
-  "lastHit": "2026-10-23T09:39:10Z"
+  "lastHit": "2026-10-23T09:39:10Z",
+  "pinned": true
  },
  {
   "id": "UCHRUWjuzMPSoHih79X8D0pA",
@@ -157,7 +134,8 @@
   "added": "2026-10-25T21:47:54.440Z",
   "name": "南ノ南",
   "genre": "ボカロ",
-  "lastHit": "2026-10-23T08:58:11Z"
+  "lastHit": "2026-10-23T08:58:11Z",
+  "pinned": true
  },
  {
   "id": "UCKeuZ3hrNYtjjjU6Svoyaqw",
@@ -215,13 +193,6 @@
   "name": "フユウ",
   "genre": "ボカロ",
   "lastHit": "2026-10-21T10:00:06Z"
- },
- {
-  "id": "UCReMH9KapHfHOtNQ4hIhhBA",
-  "added": "2026-10-11T21:32:47.826Z",
-  "name": "猫舘 こたつ / Nekotachi Kotatsu",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-20T14:31:17Z"
  },
  {
   "id": "UCcvLSRIWJIAGFDyWtzkbiHA",
@@ -318,6 +289,14 @@
   "pinned": true
  },
  {
+  "id": "UCBb5MFI8eGqQPu1ryyK59Cg",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "ともち / tomochi - piano cover",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-17T10:12:35Z",
+  "pinned": true
+ },
+ {
   "id": "UCXG3OC0N4gwrRWqsckCHD_w",
   "added": "2026-10-13T21:45:48.810Z",
   "name": "全てshadeの所為です。",
@@ -373,6 +352,14 @@
   "name": "buzzG",
   "genre": "ボカロ",
   "lastHit": "2026-10-16T10:00:34Z"
+ },
+ {
+  "id": "UChl7kAxzdXCUQDQzk5Qm30g",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "wotaku",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-16T10:00:22Z",
+  "pinned": true
  },
  {
   "id": "UC5im_C4f5KvSvwuyLvvmVKQ",
@@ -449,27 +436,12 @@
   "pinned": true
  },
  {
-  "id": "UC7hXVHFmyaDT3SNAiQJ4j7Q",
-  "added": "2026-10-10T07:32:06.370Z",
-  "name": "짜몽소다",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-12T18:22:47Z",
-  "pinned": true
- },
- {
   "id": "UCaXYqWTt1iBJiKHTdp_hmsw",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "MIMI - Topic",
   "genre": "ボカロ",
   "lastHit": "2026-10-12T13:10:52Z",
   "pinned": true
- },
- {
-  "id": "UCii85-6X30uI0epcMi4spKQ",
-  "added": "2026-10-12T21:33:25.769Z",
-  "name": "黒魔 / Chroma",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-12T11:00:12Z"
  },
  {
   "id": "UC3Bjw_Ek1FTbhEKZsh9uo1w",
@@ -512,48 +484,12 @@
   "pinned": true
  },
  {
-  "id": "UCO76kaH5FeMWqvhMN9OLxrg",
-  "added": "2026-10-11T21:32:47.826Z",
-  "name": "Ø",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-11T06:19:20Z"
- },
- {
-  "id": "UCjW8Bz5vf3Q9gb0IWi88Y0Q",
-  "added": "2026-10-19T21:48:20.019Z",
-  "name": "Alexiarite",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-11T00:30:31Z"
- },
- {
-  "id": "UCeg7W176gefmYQcIJMfDNcA",
-  "added": "2026-10-11T21:32:47.826Z",
-  "name": "reinou",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-10T11:00:34Z"
- },
- {
   "id": "UCtmi2O7lp0C_i53hFIExAaA",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "サツキ",
   "genre": "ボカロ",
   "lastHit": "2026-10-10T10:00:11Z",
   "pinned": true
- },
- {
-  "id": "UCzfqtSPm7OK8bM_A-90Bhhw",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "appy",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-10T10:00:09Z",
-  "pinned": true
- },
- {
-  "id": "UCFDqQoV6E2JYApLtF4mZR8g",
-  "added": "2026-10-12T21:33:25.769Z",
-  "name": "長谷川迷子",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-10T10:00:06Z"
  },
  {
   "id": "UCRu9LBf2hAp7saEYYQZFFTQ",
@@ -564,26 +500,12 @@
   "pinned": true
  },
  {
-  "id": "UC2IHTTgjQvoYdxj0-Fn3WZg",
-  "name": "せなすけ",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-10T01:00:05Z"
- },
- {
   "id": "UCtwSCTpftyPm4-TBf9S6kfQ",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "r-906",
   "genre": "ボカロ",
   "lastHit": "2026-10-09T11:30:38Z",
   "pinned": true
- },
- {
-  "id": "UCvNAVGgVY7-qzQdJP4__2OQ",
-  "added": "2026-10-11T21:32:47.826Z",
-  "name": "Kuratu",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-09T11:30:05Z"
  },
  {
   "id": "UC90IUi1bKHgIbCm5g5eVyxA",
@@ -602,20 +524,6 @@
   "pinned": true
  },
  {
-  "id": "UCXPS_CJxD4hZkORxDpgD5bg",
-  "added": "2026-10-11T21:32:47.826Z",
-  "name": "だし。",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-09T11:00:07Z"
- },
- {
-  "id": "UCnU78ubdSBEWy6tYi6NegZA",
-  "added": "2026-10-11T00:54:34.249Z",
-  "name": "ki-you",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-09T10:00:23Z"
- },
- {
   "id": "UCLz6MG2kx_0xeaW0LowYnMQ",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "いよわ/ iyowa",
@@ -624,32 +532,12 @@
   "pinned": true
  },
  {
-  "id": "UC9abZyl9Wjfn1ZwuFgJ0hGQ",
-  "added": "2026-10-12T21:33:25.769Z",
-  "name": "奈良瀬",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-09T10:00:10Z"
- },
- {
   "id": "UC49ZFh9hYLpHIN_UbL9wE0g",
   "added": "2026-10-10T21:31:46.969Z",
   "name": "きさら - KISARA",
   "genre": "ボカロ",
-  "lastHit": "2026-10-09T10:00:09Z"
- },
- {
-  "id": "UCQdVTf3gBPy0X95QB2ZQ4TQ",
-  "added": "2026-10-09T17:21:50.995Z",
-  "name": "クワガタP / kuwagataP",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-09T10:00:06Z"
- },
- {
-  "id": "UC8xkzBruPP96NI22ki4mB_w",
-  "name": "バーバパパ",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-09T09:23:17Z"
+  "lastHit": "2026-10-09T10:00:09Z",
+  "pinned": true
  },
  {
   "id": "UCGmO0S4S-AunjRdmxA6TQYg",
@@ -660,33 +548,12 @@
   "pinned": true
  },
  {
-  "id": "UCbgZoMcYhiGNJ5fyqyPcW6Q",
-  "added": "2026-10-12T11:09:58.604Z",
-  "name": "DIORAMA",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-09T09:00:09Z"
- },
- {
-  "id": "UC2xHY_7axfV_j7RVi2gSj9A",
-  "added": "2026-10-11T21:32:47.826Z",
-  "name": "ハニキチャンネル",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-09T09:00:03Z"
- },
- {
   "id": "UC9qSqkNFiByKzzoxT3Cydyw",
   "name": "Aiobahn",
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "ボカロ",
   "lastHit": "2026-10-08T20:28:04Z",
   "pinned": true
- },
- {
-  "id": "UCirbuk79YaCevtuEvu2wERA",
-  "name": "KAITO",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-08T10:00:19Z"
  },
  {
   "id": "UCAwt148qKLXzPF3LHfN76Bw",
@@ -703,13 +570,6 @@
   "genre": "ボカロ",
   "lastHit": "2026-10-07T12:46:31Z",
   "pinned": true
- },
- {
-  "id": "UC3yEB4lwkgEN551lbiYK8sA",
-  "added": "2026-10-09T21:44:42.364Z",
-  "name": "ゆきち",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-07T12:00:20Z"
  },
  {
   "id": "UC2r-wVWZXY-ClUPanhPe8_w",
@@ -736,13 +596,6 @@
   "pinned": true
  },
  {
-  "id": "UCV3n0sOVK-koZ1brDjWjn1g",
-  "added": "2026-10-09T15:55:32.664Z",
-  "name": "ますだデストロイ - MasudaDestroy",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-07T09:00:38Z"
- },
- {
   "id": "UCgbTJ0Qb1OpA0GEocaJ7qrw",
   "name": "はるまきごはん / Harumaki Gohan Official",
   "added": "2026-10-09T12:06:54.468Z",
@@ -757,13 +610,6 @@
   "genre": "ボカロ",
   "lastHit": "2026-10-06T09:00:09Z",
   "pinned": true
- },
- {
-  "id": "UC14nZliZk05IaL2V8qZ6FRg",
-  "added": "2026-10-09T15:55:32.664Z",
-  "name": "弱虫",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-05T12:00:18Z"
  },
  {
   "id": "UCBsngyrDN_WSZ21GEB7qBXw",
@@ -782,11 +628,12 @@
   "pinned": true
  },
  {
-  "id": "UCrTpgxCnbyJbB1LeHmowqTA",
-  "added": "2026-10-09T15:55:32.664Z",
-  "name": "TRXSHY",
+  "id": "UC3GzkuHZNanJZQZml4Wte5A",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "ノイ",
   "genre": "ボカロ",
-  "lastHit": "2026-10-04T14:26:27Z"
+  "lastHit": "2026-10-04T12:00:37Z",
+  "pinned": true
  },
  {
   "id": "UCnjyL32Picn9AbLwLwlczmA",
@@ -821,18 +668,12 @@
   "pinned": true
  },
  {
-  "id": "UC4J2mtT1S4PhQsA9tDWy4gw",
-  "added": "2026-10-09T15:55:32.664Z",
-  "name": "未散。",
+  "id": "UCzTwIedETJq-dLqAhieCm2A",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "吉田夜世",
   "genre": "ボカロ",
-  "lastHit": "2026-10-03T10:00:25Z"
- },
- {
-  "id": "UClwRw8ar3c58joj2WY1WYrA",
-  "added": "2026-10-09T15:55:32.664Z",
-  "name": "芳田 yoshida",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-03T10:00:07Z"
+  "lastHit": "2026-10-01T12:44:42Z",
+  "pinned": true
  },
  {
   "id": "UC10BM9XdLdrvB8japwmRUvA",
@@ -843,11 +684,35 @@
   "pinned": true
  },
  {
+  "id": "UC7C8glg8Yvwy3d0w7mU76Cg",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "内緒のピアス",
+  "genre": "ボカロ",
+  "lastHit": "2026-09-21T12:00:02Z",
+  "pinned": true
+ },
+ {
   "id": "UCfVQDynjGGBJQDpdbGy0ffQ",
   "added": "2026-10-15T10:11:14.946Z",
   "name": "ガルナ(オワタP)",
   "genre": "ボカロ",
   "lastHit": "2026-09-19T10:00:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UCTy9HCrLjcbsK74LFsTcpWg",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "Etori",
+  "genre": "ボカロ",
+  "lastHit": "2026-08-29T12:00:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UCKWuMfOx1MT4tY9-pRAEBYw",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "馬車馬カエデ",
+  "genre": "ボカロ",
+  "lastHit": "2026-08-29T11:00:06Z",
   "pinned": true
  },
  {
@@ -864,6 +729,14 @@
   "name": "320P",
   "genre": "ボカロ",
   "lastHit": "2026-08-25T13:00:21Z",
+  "pinned": true
+ },
+ {
+  "id": "UCQs1YBqd7W2fVsXRXb8dvtQ",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "読谷あかね",
+  "genre": "ボカロ",
+  "lastHit": "2026-08-24T13:24:52Z",
   "pinned": true
  },
  {
@@ -891,11 +764,67 @@
   "pinned": true
  },
  {
+  "id": "UCgFMZfZa0ek3zNpkvlt_nSw",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "うちのボカロは様子がおかしい",
+  "genre": "ボカロ",
+  "lastHit": "2026-07-31T10:00:35Z",
+  "pinned": true
+ },
+ {
+  "id": "UC2zxEt15cSuHEEj5PoNEm2g",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "hiroki.",
+  "genre": "ボカロ",
+  "lastHit": "2026-07-17T11:00:07Z",
+  "pinned": true
+ },
+ {
   "id": "UC_FFb9bWEj0Bbdlnp5SFPIg",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "LonePi",
   "genre": "ボカロ",
   "lastHit": "2026-07-08T11:15:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UCh_vIwOvAvBshqSgvD3G0YA",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "ナナホシ管弦楽団/岩見陸official",
+  "genre": "ボカロ",
+  "lastHit": "2026-07-07T11:00:15Z",
+  "pinned": true
+ },
+ {
+  "id": "UChd8ppH2SUAVNeBnd8BxplA",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "ぴーなた",
+  "genre": "ボカロ",
+  "lastHit": "2026-07-01T10:00:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UCf_vfNyGWyNtzop-Lt34InQ",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "STEAKA - Topic",
+  "genre": "ボカロ",
+  "lastHit": "2026-06-26T10:05:16Z",
+  "pinned": true
+ },
+ {
+  "id": "UCFXkDxCa_XVcNC7oOEw7U5g",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "柊マグネタイト",
+  "genre": "ボカロ",
+  "lastHit": "2026-06-26T02:00:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UCzJbSy-VSib2J8HqZ4Kk-MA",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "서이서 : SEO2SEOP OFFICIAL",
+  "genre": "ボカロ",
+  "lastHit": "2026-06-24T14:01:18Z",
   "pinned": true
  },
  {
@@ -931,6 +860,14 @@
   "pinned": true
  },
  {
+  "id": "UC2UqvkWjQGfyTeLumfyWxiQ",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "THE LUV BUGS",
+  "genre": "ボカロ",
+  "lastHit": "2026-05-20T11:00:06Z",
+  "pinned": true
+ },
+ {
   "id": "UCktjMRvuBnE_XLVWIMa2H1w",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "TAK / DORIDORI",
@@ -939,11 +876,43 @@
   "pinned": true
  },
  {
+  "id": "UCl2BybuWtxg09OjzdCHMjUQ",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "のぼる↑-Noboru-",
+  "genre": "ボカロ",
+  "lastHit": "2026-05-08T10:00:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UC-bOZPPEmO96K7DEHi2lGcw",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "hya",
+  "genre": "ボカロ",
+  "lastHit": "2026-05-04T01:59:29Z",
+  "pinned": true
+ },
+ {
   "id": "UCSVe_NzxYvegv-f5pWBbS5A",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "Atena",
   "genre": "ボカロ",
   "lastHit": "2026-05-03T11:00:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UCM2SwvNjA0uH8oc5D0ihSDA",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "高生紳士",
+  "genre": "ボカロ",
+  "lastHit": "2026-04-25T10:00:07Z",
+  "pinned": true
+ },
+ {
+  "id": "UCgBPuTX7crv_2jKAkH5z7bA",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "Orangestar",
+  "genre": "ボカロ",
+  "lastHit": "2026-04-19T11:00:06Z",
   "pinned": true
  },
  {
@@ -987,19 +956,19 @@
   "pinned": true
  },
  {
+  "id": "UCYQ20cfQReX8xo2E3KA7tew",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "さたぱんP (Sata)",
+  "genre": "ボカロ",
+  "lastHit": "2026-04-04T10:00:06Z",
+  "pinned": true
+ },
+ {
   "id": "UC5yTafHjPGebm2Mj1e5A_4g",
   "added": "2026-10-10T07:32:06.370Z",
   "name": "意味付与症 / 의미부여증",
   "genre": "ボカロ",
   "lastHit": "2026-04-01T12:00:06Z",
-  "pinned": true
- },
- {
-  "id": "UChd8ppH2SUAVNeBnd8BxplA",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "ぴーなた",
-  "genre": "ボカロ",
-  "lastHit": "2026-03-20T13:00:06Z",
   "pinned": true
  },
  {
@@ -1019,6 +988,14 @@
   "pinned": true
  },
  {
+  "id": "UCuNlrb3G0BLLDbwhz7EqF8w",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "Azari",
+  "genre": "ボカロ",
+  "lastHit": "2026-02-09T10:05:06Z",
+  "pinned": true
+ },
+ {
   "id": "UCRF-oSGAxISmpBubZT3WPXQ",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "暴飲暴食P",
@@ -1035,11 +1012,51 @@
   "pinned": true
  },
  {
+  "id": "UCNElM45JypxqAR73RoUQ10g",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "稲葉曇",
+  "genre": "ボカロ",
+  "lastHit": "2026-01-26T10:00:07Z",
+  "pinned": true
+ },
+ {
+  "id": "UCxzIwj10Ou-h_VkmKPKvZVQ",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "岩里祐穂 / Yuho Iwasato",
+  "genre": "ボカロ",
+  "lastHit": "2026-01-16T11:00:40Z",
+  "pinned": true
+ },
+ {
+  "id": "UCp13SxKXbhCS0lb6Ty774iQ",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "かいりきベア／Kairiki bear",
+  "genre": "ボカロ",
+  "lastHit": "2026-01-09T11:31:01Z",
+  "pinned": true
+ },
+ {
   "id": "UCtne7wC5nEDx5p4JzJf9JHQ",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "みつあくま (mitsu_akuma)",
   "genre": "ボカロ",
   "lastHit": "2026-01-09T09:00:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UCo1RH7pR_wdgY_9LKONxXvA",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "エナメル巻きで食べるサラダ",
+  "genre": "ボカロ",
+  "lastHit": "2026-01-09T04:48:15Z",
+  "pinned": true
+ },
+ {
+  "id": "UCLP47XL6OcF0gDzG22khSuw",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "ステイン",
+  "genre": "ボカロ",
+  "lastHit": "2026-01-06T10:00:38Z",
   "pinned": true
  },
  {
@@ -1059,11 +1076,43 @@
   "pinned": true
  },
  {
+  "id": "UCT5ZYc0Whk1NX_Fdvlm1baw",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "Aqu3ra",
+  "genre": "ボカロ",
+  "lastHit": "2025-12-26T10:00:44Z",
+  "pinned": true
+ },
+ {
+  "id": "UC2i1ds0L0atINBDVoNJggig",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "CowEye",
+  "genre": "ボカロ",
+  "lastHit": "2025-12-20T16:20:08Z",
+  "pinned": true
+ },
+ {
   "id": "UCjuAuVO76nZ0mjYzdz3961Q",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "ルシノ / rusino",
   "genre": "ボカロ",
   "lastHit": "2025-12-18T10:01:13Z",
+  "pinned": true
+ },
+ {
+  "id": "UC9ToLHHwCnQ8yDXMqd_-pSQ",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "ポッコトッコ",
+  "genre": "ボカロ",
+  "lastHit": "2025-11-22T10:00:50Z",
+  "pinned": true
+ },
+ {
+  "id": "UCENRrmGuopCcwwi2jW00LDQ",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "jon -YAKITORY",
+  "genre": "ボカロ",
+  "lastHit": "2025-11-16T12:01:25Z",
   "pinned": true
  },
  {
@@ -1075,11 +1124,35 @@
   "pinned": true
  },
  {
+  "id": "UCjA3_co0E8C0_MwkuwNIxwQ",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "タイダサキ",
+  "genre": "ボカロ",
+  "lastHit": "2025-11-05T11:00:17Z",
+  "pinned": true
+ },
+ {
   "id": "UCyxEP7IPtkoozL1J2ux3idg",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "モ葛",
   "genre": "ボカロ",
   "lastHit": "2025-11-01T11:01:53Z",
+  "pinned": true
+ },
+ {
+  "id": "UCfdFNsR_tvF8bwp0KhMaJZQ",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "TOKOTOKO / 西沢さんP / zawaso Official",
+  "genre": "ボカロ",
+  "lastHit": "2025-11-01T10:00:34Z",
+  "pinned": true
+ },
+ {
+  "id": "UCOfESRUR5duQ2hMnTQ4oqhA",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "BUMP OF CHICKEN",
+  "genre": "ボカロ",
+  "lastHit": "2025-11-01T09:00:11Z",
   "pinned": true
  },
  {
@@ -1099,6 +1172,54 @@
   "pinned": true
  },
  {
+  "id": "UCm_1n9F3A6pz-Ms2NP93tBA",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "音楽的同位体 可不・星界・裏命・狐子・羽累 Musical Isotope",
+  "genre": "ボカロ",
+  "lastHit": "2025-10-22T10:00:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UCHGKS3VDKxu3N1u9naM0XYA",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "すりぃ",
+  "genre": "ボカロ",
+  "lastHit": "2025-10-21T09:30:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UC58hIFa6J8zRm3dKg7exQ2Q",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "Sakuzyo Official",
+  "genre": "ボカロ",
+  "lastHit": "2025-10-18T12:30:21Z",
+  "pinned": true
+ },
+ {
+  "id": "UCGGY3oTOQ9g9FCu9hLFJsqw",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "*Luna",
+  "genre": "ボカロ",
+  "lastHit": "2025-10-18T12:00:13Z",
+  "pinned": true
+ },
+ {
+  "id": "UC8_DFGziuc7PCaiTbpu5pxQ",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "MAISONdes  - Topic",
+  "genre": "ボカロ",
+  "lastHit": "2025-10-11T10:01:51Z",
+  "pinned": true
+ },
+ {
+  "id": "UCr7qf2VaU6dvxd428Yni5WA",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "INU / 十五",
+  "genre": "ボカロ",
+  "lastHit": "2025-10-03T10:00:06Z",
+  "pinned": true
+ },
+ {
   "id": "UCyQ__UXmWlC4i-eouqEh71Q",
   "added": "2026-10-10T07:32:06.370Z",
   "name": "naphillow",
@@ -1107,11 +1228,59 @@
   "pinned": true
  },
  {
+  "id": "UCkltfvjVoojq0BGRt4pmlig",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "煮ル果実 / NILFRUITS",
+  "genre": "ボカロ",
+  "lastHit": "2025-09-18T11:10:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UC1NSZMR0Z8EMB-JVy2fHrdA",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "Ponchi♪",
+  "genre": "ボカロ",
+  "lastHit": "2025-09-15T01:00:33Z",
+  "pinned": true
+ },
+ {
   "id": "UCywRD8PUIH0TUBXpG-UnCeg",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "WAWON - Topic",
   "genre": "ボカロ",
   "lastHit": "2025-09-12T19:36:53Z",
+  "pinned": true
+ },
+ {
+  "id": "UCermf7vqBLEsYL-X_8gBcUg",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "Firefly Music",
+  "genre": "ボカロ",
+  "lastHit": "2025-09-12T12:06:56Z",
+  "pinned": true
+ },
+ {
+  "id": "UCZeyGHvgI3xdd-PuhyVR4ag",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "Magens",
+  "genre": "ボカロ",
+  "lastHit": "2025-09-01T11:25:24Z",
+  "pinned": true
+ },
+ {
+  "id": "UCoxBRw8pSAQslZTJ4ToKeqQ",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "倉井零",
+  "genre": "ボカロ",
+  "lastHit": "2025-08-27T11:01:20Z",
+  "pinned": true
+ },
+ {
+  "id": "UCcpP9cOnqPIbO5JljwID0tg",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "青栗鼠",
+  "genre": "ボカロ",
+  "lastHit": "2025-08-25T10:30:06Z",
   "pinned": true
  },
  {
@@ -1171,11 +1340,43 @@
   "pinned": true
  },
  {
+  "id": "UCGa-5RWIYwrQi74aextL2yQ",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "Kakuriyo / 幽世55番街",
+  "genre": "ボカロ",
+  "lastHit": "2025-06-17T12:00:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UC0xPYkeHPlV7IZUn0lbZZXQ",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "n.k / Garakt",
+  "genre": "ボカロ",
+  "lastHit": "2025-06-09T10:01:19Z",
+  "pinned": true
+ },
+ {
+  "id": "UCxOrliMnPTnsRb4GQNjfo4Q",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "monet",
+  "genre": "ボカロ",
+  "lastHit": "2025-06-04T09:00:06Z",
+  "pinned": true
+ },
+ {
   "id": "UCv5TRXJ-oQClg6da3RDUI1A",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "Shaito - Topic",
   "genre": "ボカロ",
   "lastHit": "2025-05-21T10:01:41Z",
+  "pinned": true
+ },
+ {
+  "id": "UCDGF69S2M4S4ad5Xvjxqqdg",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "PizzaNTU(ピザンツ)",
+  "genre": "ボカロ",
+  "lastHit": "2025-05-14T04:00:26Z",
   "pinned": true
  },
  {
@@ -1187,19 +1388,35 @@
   "pinned": true
  },
  {
+  "id": "UCrGzu0MPKQpYF2AV2oG-VpQ",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "DIVELA / Official",
+  "genre": "ボカロ",
+  "lastHit": "2025-04-25T11:01:37Z",
+  "pinned": true
+ },
+ {
+  "id": "UCHrcMdb-ASoHmMFQlWAPUDA",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "T0S",
+  "genre": "ボカロ",
+  "lastHit": "2025-04-23T10:01:24Z",
+  "pinned": true
+ },
+ {
+  "id": "UC80ttKvARb7Gslo7AgPOZeA",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "大漠波新",
+  "genre": "ボカロ",
+  "lastHit": "2025-04-23T09:00:08Z",
+  "pinned": true
+ },
+ {
   "id": "UC-6CnJA6jkZdv_yfv5KIcDA",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "しゃいと",
   "genre": "ボカロ",
   "lastHit": "2025-04-18T10:00:21Z",
-  "pinned": true
- },
- {
-  "id": "UCuNlrb3G0BLLDbwhz7EqF8w",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "Azari",
-  "genre": "ボカロ",
-  "lastHit": "2025-03-28T12:30:06Z",
   "pinned": true
  },
  {
@@ -1211,11 +1428,35 @@
   "pinned": true
  },
  {
+  "id": "UCEHXNknwbsRu73QsakWIdzQ",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "The8BitDrummer",
+  "genre": "ボカロ",
+  "lastHit": "2025-03-07T17:00:56Z",
+  "pinned": true
+ },
+ {
   "id": "UCyxF8d6d5t7HMBVf0g3Kv2A",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "Rukia",
   "genre": "ボカロ",
   "lastHit": "2025-02-24T08:32:45Z",
+  "pinned": true
+ },
+ {
+  "id": "UC49assuwDKpORpcjktUH0bg",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "Teary Planet",
+  "genre": "ボカロ",
+  "lastHit": "2025-01-30T09:00:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UCKWfc0UauocL8iLTF6GDg9A",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "藤原ハガネ / Fujiwara Hagane",
+  "genre": "ボカロ",
+  "lastHit": "2025-01-29T09:00:06Z",
   "pinned": true
  },
  {
@@ -1243,19 +1484,27 @@
   "pinned": true
  },
  {
-  "id": "UCFXkDxCa_XVcNC7oOEw7U5g",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "柊マグネタイト",
-  "genre": "ボカロ",
-  "lastHit": "2024-11-08T13:09:06Z",
-  "pinned": true
- },
- {
   "id": "UCwLPrgQaYh-JiU0rBxhSOew",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "TOKOTOKO(NishizawasanP) - Topic",
   "genre": "ボカロ",
   "lastHit": "2024-10-31T10:06:34Z",
+  "pinned": true
+ },
+ {
+  "id": "UCfzh0Ejekva_h1AUcjabTQQ",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "Kish.",
+  "genre": "ボカロ",
+  "lastHit": "2024-10-18T10:00:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UCvy_1uRgNNu-h3JJCJOGfpw",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "キノシタ/kinoshita",
+  "genre": "ボカロ",
+  "lastHit": "2024-09-23T10:00:21Z",
   "pinned": true
  },
  {
@@ -1267,19 +1516,19 @@
   "pinned": true
  },
  {
+  "id": "UCRZWzEm_YtlgPxaT4_28NIg",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "黒うさぎ",
+  "genre": "ボカロ",
+  "lastHit": "2024-09-01T11:00:55Z",
+  "pinned": true
+ },
+ {
   "id": "UCf1P7pybegAvVWuQOwcjSPw",
   "added": "2026-10-10T07:32:06.370Z",
   "name": "Puppet-P",
   "genre": "ボカロ",
   "lastHit": "2024-08-22T04:38:02Z",
-  "pinned": true
- },
- {
-  "id": "UCHGKS3VDKxu3N1u9naM0XYA",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "すりぃ",
-  "genre": "ボカロ",
-  "lastHit": "2024-08-17T10:30:06Z",
   "pinned": true
  },
  {
@@ -1291,59 +1540,11 @@
   "pinned": true
  },
  {
-  "id": "UCDIAHuD3zg1I0bikA2crP5Q",
-  "added": "2026-10-10T07:32:06.370Z",
-  "name": "namigroove - Topic",
+  "id": "UCxBd2eiE5wew-tjpBEdGSZw",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "tb220",
   "genre": "ボカロ",
-  "lastHit": "2024-05-01T10:02:28Z",
-  "pinned": true
- },
- {
-  "id": "UCUrhvc9hxvrOQosyFyIkeMw",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "マキシウキョウ",
-  "genre": "ボカロ",
-  "lastHit": "2024-04-15T10:03:34Z",
-  "pinned": true
- },
- {
-  "id": "UCJIJNGZ9a53bqBdcjII4cgA",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "シャノン / Shannon Official",
-  "genre": "ボカロ",
-  "lastHit": "2024-03-29T11:00:07Z",
-  "pinned": true
- },
- {
-  "id": "UCfdFNsR_tvF8bwp0KhMaJZQ",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "TOKOTOKO / 西沢さんP / zawaso Official",
-  "genre": "ボカロ",
-  "lastHit": "2024-03-27T10:00:44Z",
-  "pinned": true
- },
- {
-  "id": "UCYQ20cfQReX8xo2E3KA7tew",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "さたぱんP (Sata)",
-  "genre": "ボカロ",
-  "lastHit": "2024-02-25T10:00:08Z",
-  "pinned": true
- },
- {
-  "id": "UCfzh0Ejekva_h1AUcjabTQQ",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "Kish.",
-  "genre": "ボカロ",
-  "lastHit": "2024-02-08T10:16:46Z",
-  "pinned": true
- },
- {
-  "id": "UCpdcUsCOK7AxIXDxRdz_mrA",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "Giga - Topic",
-  "genre": "ボカロ",
-  "lastHit": "2023-12-15T10:03:35Z",
+  "lastHit": "2024-07-06T11:49:08Z",
   "pinned": true
  },
  {
@@ -1351,184 +1552,31 @@
   "added": "2026-10-09T12:20:22.450Z",
   "name": "Shü",
   "genre": "ボカロ",
-  "lastHit": "2023-12-08T09:00:46Z",
+  "lastHit": "2024-05-31T09:45:03Z",
   "pinned": true
  },
  {
-  "id": "UCzTwIedETJq-dLqAhieCm2A",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "吉田夜世",
-  "genre": "ボカロ",
-  "lastHit": "2023-11-29T10:00:07Z",
+  "id": "UCW5xxEBTK0lebkTbQMNZJBw",
+  "name": "Fake Beat Japan",
+  "added": "2026-10-09T12:06:54.468Z",
+  "genre": "アニソン",
+  "lastHit": "2026-10-27T10:00:20Z",
   "pinned": true
  },
  {
-  "id": "UClhYI7CVVOGXeC57qOhJElg",
-  "added": "2026-10-17T01:47:21.626Z",
-  "name": "すよ",
-  "genre": "ボカロ",
-  "lastHit": "2023-11-21T17:30:04Z",
+  "id": "UCRVVQyVOfjI5WEvJMZvj0XQ",
+  "added": "2026-10-19T21:48:20.019Z",
+  "name": "タイココちゃんねる",
+  "genre": "J-POP",
+  "lastHit": "2026-10-27T10:00:10Z",
   "pinned": true
  },
  {
-  "id": "UC80ttKvARb7Gslo7AgPOZeA",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "大漠波新",
-  "genre": "ボカロ",
-  "lastHit": "2023-11-06T09:00:11Z",
-  "pinned": true
- },
- {
-  "id": "UC8c-dBnOuvKsoxSOUihQi0Q",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "Misumi",
-  "genre": "ボカロ",
-  "lastHit": "2023-09-14T11:16:21Z",
-  "pinned": true
- },
- {
-  "id": "UCENRrmGuopCcwwi2jW00LDQ",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "jon -YAKITORY",
-  "genre": "ボカロ",
-  "lastHit": "2023-08-30T11:00:01Z",
-  "pinned": true
- },
- {
-  "id": "UCRQsivtS8Cjj9-X6tOhInKw",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "“亜沙” ASA official channel",
-  "genre": "ボカロ",
-  "lastHit": "2023-08-18T12:00:22Z",
-  "pinned": true
- },
- {
-  "id": "UCAyiAlNizx-GtWVp7453XzA",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "ゆかてふ",
-  "genre": "ボカロ",
-  "lastHit": "2023-08-12T04:33:11Z",
-  "pinned": true
- },
- {
-  "id": "UCYXV1xhH6wmxkxR-Ry5EUVA",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "Vell",
-  "genre": "ボカロ",
-  "lastHit": "2023-08-04T09:52:14Z",
-  "pinned": true
- },
- {
-  "id": "UC7jYRPvbge5tAs0dE2r5_ug",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "犬飼",
-  "genre": "ボカロ",
-  "lastHit": "2023-05-05T11:00:09Z",
-  "pinned": true
- },
- {
-  "id": "UCRYh_OrRM4JnZv3SxExbCnw",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "れるりり, rerulili",
-  "genre": "ボカロ",
-  "lastHit": "2023-04-14T09:00:04Z",
-  "pinned": true
- },
- {
-  "id": "UCQAdXyrF2fYcqdXUUW3YxUg",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "てにをは",
-  "genre": "ボカロ",
-  "lastHit": "2023-04-06T11:01:36Z",
-  "pinned": true
- },
- {
-  "id": "UCl0PsZoA01gZs5q9Osm1Ogg",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "ゆっくりK",
-  "genre": "ボカロ",
-  "lastHit": "2023-03-25T09:00:07Z",
-  "pinned": true
- },
- {
-  "id": "UC2OgzdgLQ7vxlANVxF3kgvg",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "ユリイ・カノン / 月詠み Official",
-  "genre": "ボカロ",
-  "lastHit": "2023-03-08T11:00:07Z",
-  "pinned": true
- },
- {
-  "id": "UCVPqAY-udtbx4HCP_3oo0Aw",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "GaL",
-  "genre": "ボカロ",
-  "lastHit": "2023-02-25T11:00:12Z",
-  "pinned": true
- },
- {
-  "id": "UCj6KjOQsMSsNZbqEPEpBiDA",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "かんてゐく",
-  "genre": "ボカロ",
-  "lastHit": "2023-01-28T10:10:10Z",
-  "pinned": true
- },
- {
-  "id": "UCBR4N5DkgDt3PLTcfJB1iiw",
-  "added": "2026-10-15T10:16:13.913Z",
-  "name": "みきとP mikitoP OFFICIAL",
-  "genre": "ボカロ",
-  "lastHit": "2022-11-08T11:00:04Z",
-  "pinned": true
- },
- {
-  "id": "UC3aIH4ewewheZobgRskmQSw",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "ぐちり / Guchiry",
-  "genre": "ボカロ",
-  "lastHit": "2022-11-04T09:00:13Z",
-  "pinned": true
- },
- {
-  "id": "UCDSFFYv_BRLvXMXRj4hdZyA",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "もちうつね",
-  "genre": "ボカロ",
-  "lastHit": "2022-10-09T15:00:10Z",
-  "pinned": true
- },
- {
-  "id": "UCPq4A0-hOqaALo4F4MRdi9w",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "gcmstyle(アンメルツP) / Ann-MeltsP",
-  "genre": "ボカロ",
-  "lastHit": "2022-07-29T12:00:07Z",
-  "pinned": true
- },
- {
-  "id": "UCDw7vmUWgc8jDx5CpMB6SGg",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "エイハブ / AHUB",
-  "genre": "ボカロ",
-  "lastHit": "2022-07-15T11:00:13Z",
-  "pinned": true
- },
- {
-  "id": "UClkc2M0xPFhoOzzHlgZDMfw",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "sasakure. UK",
-  "genre": "ボカロ",
-  "lastHit": "2022-07-01T06:00:09Z",
-  "pinned": true
- },
- {
-  "id": "UCp13SxKXbhCS0lb6Ty774iQ",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "かいりきベア／Kairiki bear",
-  "genre": "ボカロ",
-  "lastHit": "2022-06-25T10:25:00Z",
-  "pinned": true
+  "id": "UCNMbL86u5LBeO_BWHp5pJ5g",
+  "added": "2026-10-13T21:45:48.810Z",
+  "name": "Element Sicks【EL6】",
+  "genre": "J-POP",
+  "lastHit": "2026-10-27T10:00:03Z"
  },
  {
   "id": "UCwjAKjycHHT1QzHrQN5Stww",
@@ -1537,6 +1585,21 @@
   "genre": "アニソン",
   "lastHit": "2026-10-26T13:00:35Z",
   "pinned": true
+ },
+ {
+  "id": "UCFvSFbT8okMrpuFxBEIB2lg",
+  "name": "M!LK",
+  "added": "2026-10-09T12:06:54.468Z",
+  "genre": "J-POP",
+  "lastHit": "2026-10-26T12:00:09Z",
+  "pinned": true
+ },
+ {
+  "id": "UCKsVfYfguU3s5vMO5yhcWdw",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "STARGLOW Official",
+  "genre": "J-POP",
+  "lastHit": "2026-10-26T12:00:08Z"
  },
  {
   "id": "UCsmXiDP8S40uBeJYxvyulmA",
@@ -1552,6 +1615,14 @@
   "name": "ていく【EL6】",
   "genre": "J-POP",
   "lastHit": "2026-10-26T10:01:51Z"
+ },
+ {
+  "id": "UCAfQ5CojppHVIiLwuRDBzTg",
+  "name": "t+pazolite",
+  "added": "2026-10-09T12:06:54.468Z",
+  "genre": "アニソン",
+  "lastHit": "2026-10-26T10:00:00Z",
+  "pinned": true
  },
  {
   "id": "UCKCb7zirdauYVUPokYvoNTQ",
@@ -1572,14 +1643,16 @@
   "added": "2026-10-13T21:45:48.810Z",
   "name": "甲斐田 晴 / Kaida Haru【にじさんじ】",
   "genre": "アニソン",
-  "lastHit": "2026-10-25T12:00:10Z"
+  "lastHit": "2026-10-25T12:00:10Z",
+  "pinned": true
  },
  {
   "id": "UC_31QOzj4KVm_k0ww0G5grw",
   "added": "2026-10-10T21:31:46.969Z",
   "name": "World J-POP",
   "genre": "アニソン",
-  "lastHit": "2026-10-25T11:21:32Z"
+  "lastHit": "2026-10-25T11:21:32Z",
+  "pinned": true
  },
  {
   "id": "UCah4_WVjmr8XA7i5aigwV-Q",
@@ -1614,8 +1687,9 @@
   "id": "UC7Gow-kNHq21oejSIDg9PAg",
   "added": "2026-10-26T21:49:00.972Z",
   "name": "幸祜 - KOKO -",
-  "genre": "J-POP",
-  "lastHit": "2026-10-25T09:55:10Z"
+  "genre": "アニソン",
+  "lastHit": "2026-10-25T09:55:10Z",
+  "pinned": true
  },
  {
   "id": "UCVZL24gsn601uz30FirXT5w",
@@ -1717,6 +1791,13 @@
   "pinned": true
  },
  {
+  "id": "UCUoh-YtyEGCUNEFzBJp5sFA",
+  "added": "2026-10-17T21:45:11.252Z",
+  "name": "シータピアノ",
+  "genre": "アニソン",
+  "lastHit": "2026-10-24T11:00:20Z"
+ },
+ {
   "id": "UCL0b5Cb1YpXgIH5Ox2RoWwg",
   "added": "2026-10-25T21:47:54.440Z",
   "name": "KUROMI_TF",
@@ -1742,8 +1823,9 @@
   "id": "UC5SSy3julTJHzmExQJjLUkw",
   "added": "2026-10-24T21:46:48.750Z",
   "name": "あくび・でもんすぺーど / Akubi Demonspade ",
-  "genre": "J-POP",
-  "lastHit": "2026-10-24T11:00:07Z"
+  "genre": "アニソン",
+  "lastHit": "2026-10-24T11:00:07Z",
+  "pinned": true
  },
  {
   "id": "UCJ-QT2AoX3xxjtZk7i_htqQ",
@@ -1753,18 +1835,35 @@
   "lastHit": "2026-10-24T10:00:25Z"
  },
  {
-  "id": "UCNMbL86u5LBeO_BWHp5pJ5g",
-  "added": "2026-10-13T21:45:48.810Z",
-  "name": "Element Sicks【EL6】",
-  "genre": "J-POP",
-  "lastHit": "2026-10-24T10:00:24Z"
+  "id": "UCQHCHIoeu0FRJTJNMG2_Ezw",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "藍月なくる / Aitsuki Nakuru",
+  "genre": "アニソン",
+  "lastHit": "2026-10-24T10:00:17Z",
+  "pinned": true
  },
  {
   "id": "UCuUJ4A_PeZOFTD5koXQcg5w",
   "added": "2026-10-12T11:09:58.604Z",
   "name": "ゆう。",
+  "genre": "アニソン",
+  "lastHit": "2026-10-24T10:00:07Z",
+  "pinned": true
+ },
+ {
+  "id": "UCXLroTeJx2AFiZ0bPGsbzZQ",
+  "added": "2026-10-12T11:09:58.604Z",
+  "name": "須野高校軽音部",
   "genre": "J-POP",
-  "lastHit": "2026-10-24T10:00:07Z"
+  "lastHit": "2026-10-24T10:00:00Z"
+ },
+ {
+  "id": "UCQ1U65-CQdIoZ2_NA4Z4F7A",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "花譜 -KAF-",
+  "genre": "アニソン",
+  "lastHit": "2026-10-24T09:00:32Z",
+  "pinned": true
  },
  {
   "id": "UCrALFGPubY9rNwVOOJUYu4g",
@@ -1780,14 +1879,6 @@
   "name": "Rika Chan",
   "genre": "J-POP",
   "lastHit": "2026-10-24T05:00:16Z",
-  "pinned": true
- },
- {
-  "id": "UCFvSFbT8okMrpuFxBEIB2lg",
-  "name": "M!LK",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "J-POP",
-  "lastHit": "2026-10-24T04:02:41Z",
   "pinned": true
  },
  {
@@ -1814,6 +1905,13 @@
   "pinned": true
  },
  {
+  "id": "UCgVoOtEHrVg4RFdD-35Pb3A",
+  "added": "2026-10-12T21:33:25.769Z",
+  "name": "Plus Music!! Channel",
+  "genre": "J-POP",
+  "lastHit": "2026-10-23T13:38:56Z"
+ },
+ {
   "id": "UC-S4wziPnbFiIb3RXKlNG6g",
   "added": "2026-10-23T21:49:42.946Z",
   "name": "KEY TO LIT",
@@ -1825,14 +1923,16 @@
   "added": "2026-10-26T21:49:00.972Z",
   "name": "湘南乃風",
   "genre": "アニソン",
-  "lastHit": "2026-10-23T13:00:07Z"
+  "lastHit": "2026-10-23T13:00:07Z",
+  "pinned": true
  },
  {
   "id": "UC9zY_E8mcAo_Oq772LEZq8Q",
   "name": "THE FIRST TAKE",
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "アニソン",
-  "lastHit": "2026-10-23T13:00:06Z"
+  "lastHit": "2026-10-23T13:00:06Z",
+  "pinned": true
  },
  {
   "id": "UCqEfdEvLG5oQWNYlDQrGlKw",
@@ -1861,15 +1961,17 @@
   "id": "UCQMZpnnl9SCmplHGGVau-0w",
   "added": "2026-10-21T21:52:15.808Z",
   "name": "ふぉるて",
-  "genre": "J-POP",
-  "lastHit": "2026-10-23T11:00:30Z"
+  "genre": "アニソン",
+  "lastHit": "2026-10-23T11:00:30Z",
+  "pinned": true
  },
  {
   "id": "UCVpaaZ-p7GTTFEDR_NCnfNg",
   "added": "2026-10-09T16:13:05.586Z",
   "name": "成人男性三人組 Official",
-  "genre": "J-POP",
-  "lastHit": "2026-10-23T11:00:09Z"
+  "genre": "アニソン",
+  "lastHit": "2026-10-23T11:00:09Z",
+  "pinned": true
  },
  {
   "id": "UCdPCarwi28K5Z7s5l2nMiLw",
@@ -1885,6 +1987,14 @@
   "name": "あかつき るき / Akatsuki Luci",
   "genre": "J-POP",
   "lastHit": "2026-10-23T11:00:07Z"
+ },
+ {
+  "id": "UCasKmptouCrwWLl8SlQU2tQ",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "おなつのにびたし / Onatsu no Nibitashi",
+  "genre": "J-POP",
+  "lastHit": "2026-10-23T10:00:09Z",
+  "pinned": true
  },
  {
   "id": "UCe_eW6vlB7i5vwxTMiU_wHw",
@@ -1905,7 +2015,8 @@
   "added": "2026-10-25T21:47:54.440Z",
   "name": "タドスタジオ",
   "genre": "J-POP",
-  "lastHit": "2026-10-23T09:00:22Z"
+  "lastHit": "2026-10-23T09:00:22Z",
+  "pinned": true
  },
  {
   "id": "UCpfwRncr8S0S3YosR52PX2w",
@@ -1975,13 +2086,6 @@
   "pinned": true
  },
  {
-  "id": "UCUoh-YtyEGCUNEFzBJp5sFA",
-  "added": "2026-10-17T21:45:11.252Z",
-  "name": "シータピアノ",
-  "genre": "アニソン",
-  "lastHit": "2026-10-22T11:00:22Z"
- },
- {
   "id": "UCpgxgkifUGSKg9dNFE5Vo7Q",
   "added": "2026-10-24T21:46:48.750Z",
   "name": "milet Official YouTube Channel",
@@ -2010,13 +2114,6 @@
   "name": "Aぇ! group",
   "genre": "J-POP",
   "lastHit": "2026-10-22T10:00:07Z"
- },
- {
-  "id": "UCXLroTeJx2AFiZ0bPGsbzZQ",
-  "added": "2026-10-12T11:09:58.604Z",
-  "name": "須野高校軽音部",
-  "genre": "J-POP",
-  "lastHit": "2026-10-22T10:00:06Z"
  },
  {
   "id": "UCfICTP3ps3JNVkdqzI7J8HA",
@@ -2052,7 +2149,8 @@
   "added": "2026-10-17T21:45:11.252Z",
   "name": "さばとP",
   "genre": "J-POP",
-  "lastHit": "2026-10-21T15:26:05Z"
+  "lastHit": "2026-10-21T15:26:05Z",
+  "pinned": true
  },
  {
   "id": "UCB_BuOpGioQ7EVKm2F21dnw",
@@ -2081,7 +2179,7 @@
   "id": "UCfBkUgaJ6eqYA9_TX2cmq9A",
   "added": "2026-10-21T21:52:15.808Z",
   "name": "理芽 -RIM-",
-  "genre": "J-POP",
+  "genre": "アニソン",
   "lastHit": "2026-10-21T11:00:10Z",
   "pinned": true
  },
@@ -2108,11 +2206,20 @@
   "lastHit": "2026-10-21T10:00:15Z"
  },
  {
+  "id": "UCyq2WAxX9mWHRVQxASfwMZg",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "Wotamin",
+  "genre": "J-POP",
+  "lastHit": "2026-10-21T10:00:08Z",
+  "pinned": true
+ },
+ {
   "id": "UCDpX_q4mlkbuPJbY6h62eHQ",
   "added": "2026-10-11T21:32:47.826Z",
   "name": "妃那子 / HINAKO",
   "genre": "J-POP",
-  "lastHit": "2026-10-21T10:00:06Z"
+  "lastHit": "2026-10-21T10:00:06Z",
+  "pinned": true
  },
  {
   "id": "UCl2aT0nRejTCQO_LHZAftBw",
@@ -2121,6 +2228,20 @@
   "genre": "アニソン",
   "lastHit": "2026-10-21T09:00:10Z",
   "pinned": true
+ },
+ {
+  "id": "UCi0-OJH_1VEU0a6Vwt7nL6g",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "車の沼チャンネル",
+  "genre": "J-POP",
+  "lastHit": "2026-10-21T09:00:09Z"
+ },
+ {
+  "id": "UCC6YfCl0X6-z7aZZp1Bd-fg",
+  "added": "2026-10-26T10:57:28.012Z",
+  "name": "音質向上委員会",
+  "genre": "アニソン",
+  "lastHit": "2026-10-21T03:15:24Z"
  },
  {
   "id": "UCi0W073dqdnC3FkYGHgyYsg",
@@ -2136,6 +2257,13 @@
   "genre": "アニソン",
   "lastHit": "2026-10-20T15:00:07Z",
   "pinned": true
+ },
+ {
+  "id": "UCReMH9KapHfHOtNQ4hIhhBA",
+  "added": "2026-10-11T21:32:47.826Z",
+  "name": "猫舘 こたつ / Nekotachi Kotatsu",
+  "genre": "J-POP",
+  "lastHit": "2026-10-20T14:31:17Z"
  },
  {
   "id": "UCjv4bfP_67WLuPheS-Z8Ekg",
@@ -2448,7 +2576,8 @@
   "name": "琶舞 -ʙᴇᴍᴀ-",
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "J-POP",
-  "lastHit": "2026-10-17T10:30:32Z"
+  "lastHit": "2026-10-17T10:30:32Z",
+  "pinned": true
  },
  {
   "id": "UCtmL-ahW1SLAN8Y31zkIJGQ",
@@ -2462,7 +2591,8 @@
   "name": "明透 -ᴀsᴜ-",
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "アニソン",
-  "lastHit": "2026-10-17T10:00:23Z"
+  "lastHit": "2026-10-17T10:00:23Z",
+  "pinned": true
  },
  {
   "id": "UCNTsfKKIj8y88uzGgm14OGA",
@@ -2479,18 +2609,19 @@
   "lastHit": "2026-10-17T09:30:33Z"
  },
  {
+  "id": "UCwSvJikaWoEkMqmuJv-Yr4w",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "この場所に救いなど無い。",
+  "genre": "J-POP",
+  "lastHit": "2026-10-17T09:00:22Z",
+  "pinned": true
+ },
+ {
   "id": "UChsqu8g9SRU9GDvw4EExTyQ",
   "added": "2026-10-18T21:45:48.802Z",
   "name": "KAITOストーリー",
   "genre": "J-POP",
   "lastHit": "2026-10-17T09:00:08Z"
- },
- {
-  "id": "UCC6YfCl0X6-z7aZZp1Bd-fg",
-  "added": "2026-10-26T10:57:28.012Z",
-  "name": "音質向上委員会",
-  "genre": "アニソン",
-  "lastHit": "2026-10-17T07:21:02Z"
  },
  {
   "id": "UCLqCmbd6bgcLaBVz3aA-68A",
@@ -2541,7 +2672,7 @@
   "id": "UCFv2z4iM5vHrS8bZPq4fHQQ",
   "added": "2026-10-21T21:52:15.808Z",
   "name": "HIMEHINA Channel",
-  "genre": "J-POP",
+  "genre": "アニソン",
   "lastHit": "2026-10-16T12:00:09Z",
   "pinned": true
  },
@@ -2557,7 +2688,8 @@
   "added": "2026-10-16T21:47:12.648Z",
   "name": "天帝フォルテ / Tentei Forte",
   "genre": "アニソン",
-  "lastHit": "2026-10-16T12:00:07Z"
+  "lastHit": "2026-10-16T12:00:07Z",
+  "pinned": true
  },
  {
   "id": "UC7JQKVJMCIuVMcrFXSozMCw",
@@ -2668,7 +2800,7 @@
   "id": "UCTh7ytsDGf0ev5S1YyDRHCA",
   "added": "2026-10-16T21:47:12.648Z",
   "name": "麻婆豆腐",
-  "genre": "J-POP",
+  "genre": "アニソン",
   "lastHit": "2026-10-16T08:00:15Z",
   "pinned": true
  },
@@ -2777,18 +2909,12 @@
   "pinned": true
  },
  {
-  "id": "UCRVVQyVOfjI5WEvJMZvj0XQ",
-  "added": "2026-10-19T21:48:20.019Z",
-  "name": "タイココちゃんねる",
-  "genre": "J-POP",
-  "lastHit": "2026-10-15T10:00:06Z"
- },
- {
   "id": "UCs9_O1tRPMQTHQ-N_L6FU2g",
   "added": "2026-10-15T21:48:53.889Z",
   "name": "Lui ch. 鷹嶺ルイ - holoX -",
   "genre": "アニソン",
-  "lastHit": "2026-10-15T09:00:10Z"
+  "lastHit": "2026-10-15T09:00:10Z",
+  "pinned": true
  },
  {
   "id": "UCFiXJX4xRhM-4ZNojxTq8aQ",
@@ -2908,7 +3034,8 @@
   "added": "2026-10-20T03:41:54.934Z",
   "name": "桃寝ちのい / momone chinoi",
   "genre": "J-POP",
-  "lastHit": "2026-10-13T11:00:09Z"
+  "lastHit": "2026-10-13T11:00:09Z",
+  "pinned": true
  },
  {
   "id": "UCvOX0NWMvYrgSV15vuxV4Pg",
@@ -2932,85 +3059,5 @@
   "genre": "J-POP",
   "lastHit": "2026-10-13T10:00:15Z",
   "pinned": true
- },
- {
-  "id": "UCqEmTmyRamfTHxCVYR_gluA",
-  "name": "Yusuke ch.悠佑",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "J-POP",
-  "lastHit": "2026-10-13T09:00:08Z"
- },
- {
-  "id": "UC5U6NY3537bZ4JHfgtRnkqA",
-  "added": "2026-10-18T21:45:48.802Z",
-  "name": "【ビートルズ高校】小野リンダ先生",
-  "genre": "J-POP",
-  "lastHit": "2026-10-13T08:00:07Z"
- },
- {
-  "id": "UCmr9bYmymcBmQ1p2tLBRvwg",
-  "name": "櫻坂46 OFFICIAL YouTube CHANNEL",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "J-POP",
-  "lastHit": "2026-10-13T05:11:59Z",
-  "pinned": true
- },
- {
-  "id": "UCTdCc4K_Myln-RY70kxa_MQ",
-  "added": "2026-10-17T21:45:11.252Z",
-  "name": "Good Danny",
-  "genre": "J-POP",
-  "lastHit": "2026-10-13T03:39:18Z"
- },
- {
-  "id": "UCz_qp5woGr9GjmSzGbCCslA",
-  "added": "2026-10-15T10:07:18.046Z",
-  "name": "sumika - Topic",
-  "genre": "J-POP",
-  "lastHit": "2026-10-12T15:00:09Z",
-  "pinned": true
- },
- {
-  "id": "UCWU3QKablvVEK6JcEyEC58w",
-  "added": "2026-10-13T21:45:48.810Z",
-  "name": "メガテラゼロ",
-  "genre": "アニソン",
-  "lastHit": "2026-10-12T12:00:06Z",
-  "pinned": true
- },
- {
-  "id": "UCSI4hIhSvBgSjU4dQbYbx-w",
-  "added": "2026-10-15T21:48:53.889Z",
-  "name": "もるてん",
-  "genre": "J-POP",
-  "lastHit": "2026-10-12T11:00:09Z"
- },
- {
-  "id": "UC3ql_EU4JnaE3Rh3cqbHu6g",
-  "added": "2026-10-18T21:45:48.802Z",
-  "name": "Kotoha",
-  "genre": "J-POP",
-  "lastHit": "2026-10-12T11:00:08Z"
- },
- {
-  "id": "UCTZ74SMIvoxU4Sw1zt5RZuw",
-  "added": "2026-10-16T21:47:12.648Z",
-  "name": "ひろのぶ",
-  "genre": "アニソン",
-  "lastHit": "2026-10-12T10:00:54Z"
- },
- {
-  "id": "UCWz0CSYCxf4MhRKPDm220AQ",
-  "added": "2026-10-12T21:33:25.769Z",
-  "name": "神田笑一 / Kanda Shoichi【 にじさんじ 】",
-  "genre": "アニソン",
-  "lastHit": "2026-10-12T10:00:01Z"
- },
- {
-  "id": "UCH-SLA_jpPhM2lzdZjZDxjQ",
-  "added": "2026-10-10T21:31:46.969Z",
-  "name": "音ノ瀬らこ / Otonose Raco",
-  "genre": "アニソン",
-  "lastHit": "2026-10-12T09:06:54Z"
  }
 ]
