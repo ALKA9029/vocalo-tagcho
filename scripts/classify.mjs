@@ -37,6 +37,7 @@ export const isKaraoke = title => /ニコカラ|off ?vocal|カラオケ|instrume
 const SING_RE = /コラボ|ラップ|歌r|歌っ|歌い|歌う|唄っ|弾いてみ|演奏|cover|カバー|バンド|band|feat|ft\.|MV|PV|主題歌|オリジナル/i;
 export function isNotSong(title = "") {
   if (/#shorts?\b/i.test(title)) return true;
+  if (/(?<!歌って)踊ってみた|【歌枠】|作業用\s*BGM|作業用ＢＧＭ|描きました$/i.test(title)) return true;
   // MMD（3Dモデルが既存の曲で踊る動画）は曲そのものではない
   if (/MMD/i.test(title)) return true;
   // ファンが作った非公式のPV（音は原曲のまま）も、曲として別に並べない
