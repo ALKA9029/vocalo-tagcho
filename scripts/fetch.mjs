@@ -617,9 +617,19 @@ async function fetchManual(knownIds) {
     await writeFile(path("data/overrides.json"), JSON.stringify(overrides) + "\n");
   }
   const yt = list.map(x => x.id).filter(id => id?.startsWith("yt:") && !knownIds.has(id)).map(id => id.slice(3));
-  if (!key || !yt.length) return [];
+  // まとめて追加する動画（data/add-bulk.json：IDの一覧）：一度だけ取りにいって、音楽の動画（音楽カテゴリか、タイトルに歌ってみた・cover・MVなど）だけ入れる。
+  // 取りにいったら一覧は空にする
+  const bulk = (await readJson("data/add-bulk.json", [])).filter(id => id?.startsWith("yt:") && !knownIds.has(id)).map(id => id.slice(3));
+  if (!key || (!yt.length && !bulk.length)) return [];
   const got = (await ytVideos(yt, key)).map(v => ({ ...ytItem(v, "J-POP"), seed: true }));
   console.log(`手で追加する動画: ${got.length}本`);
+  if (bulk.length) {
+    const MUSICISH = /歌ってみた|歌わせて|cover|カバー|\bMV\b|Music Video|feat\.|ft\.|オリジナル曲|Official (Audio|Video)|Lyric/i;
+    const vs = (await ytVideos(bulk, key)).filter(v => !isNoise(v) && (v.snippet?.categoryId === "10" || MUSICISH.test(v.snippet?.title || "")));
+    got.push(...vs.map(v => ({ ...ytItem(v, "J-POP"), seed: true })));
+    console.log(`まとめて追加する動画: ${bulk.length}本のうち音楽の動画 ${vs.length}本`);
+    await writeFile(path("data/add-bulk.json"), "[]\n");
+  }
   return got;
 }
 
