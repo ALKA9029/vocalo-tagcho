@@ -919,6 +919,21 @@ function singerOriginals(items) {
   }
 }
 
+// ボカロ曲のカバーを本家と同じ形の MV で出しているアーティスト（プロセカのユニット・バーチャルシンガーなど）。
+// 先に同じ曲名で別の作者のボカロの本家があれば、その曲の歌ってみたにする
+const COVER_ARTISTS = /^(Nightcord at 25:00|25時、?ナイトコードで。|Leo\/need|MORE MORE JUMP!|Vivid BAD SQUAD|ワンダーランズ×ショウタイム|花譜|秋赤音|Etori|shota horie|ヰ世界情緒.*|Misumi|ステイン)$/i;
+function coverArtists(items) {
+  for (const i of items) if (i.kind === "本家" && i.t && /\s*[(（]\s*$/.test(i.t)) i.t = i.t.replace(/\s*[(（]\s*$/, "");
+  const voc = new Map();
+  for (const o of items) if (o.kind === "本家" && o.g === "ボカロ" && normalize(o.t)) (voc.get(normalize(o.t)) || voc.set(normalize(o.t), []).get(normalize(o.t))).push(o);
+  for (const i of items) {
+    if (i.kind !== "本家" || !COVER_ARTISTS.test((i.p || "").trim())) continue;
+    const o = (voc.get(normalize(i.t)) || []).filter(o => o !== i && normalize(o.p || "") !== normalize(i.p) && (o.date || "") < (i.date || "")).sort((a, b) => (a.date || "").localeCompare(b.date || ""))[0];
+    if (!o) continue;
+    i.kind = "歌ってみた"; i.by = i.p.replace(/\s*#\s*\d+$/, ""); i.of = o.id; i.ofLocked = true; delete i.v; delete i.selfDesc;
+  }
+}
+
 function markRemakes(items) {
   for (const i of items) if (!i.rmFixed) { delete i.rm; delete i.rv; }
   const byT = new Map();
@@ -1041,6 +1056,7 @@ export function linkCovers(items) {
   fillCreators(items);
   fixCreatorNames(items);
   singerOriginals(items);
+  coverArtists(items);
   markRemakes(items);
   vocaloByCreator(items);
   hideTopicWithOfficial(items);
