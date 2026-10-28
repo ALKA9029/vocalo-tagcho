@@ -40,6 +40,12 @@ export function isNotSong(title = "") {
   if (/(?<!歌って)踊ってみた|【歌枠】|作業用\s*BGM|作業用ＢＧＭ|描きました$|【リズム天国】|Cust[ou]m Remix/i.test(title)) return true;   // リズム天国風のアレンジ動画も曲ではない
   // MMD（3Dモデルが既存の曲で踊る動画）は曲そのものではない
   if (/MMD/i.test(title)) return true;
+  // テレビ番組の歌唱（うたコン・SONGS）や出演者のメッセージ、路上ライブの撮影（歌うま）、吹奏楽・ヴァイオリンの演奏、アルバムのクロスフェード、音ゲーのプレイ動画は曲そのものではない
+  if (/【(うたコン|SONGS|Venue101)】|からメッセージ|【歌うま】|吹奏楽|ヴァイオリン演奏|クロスフェード|【プロセカ】.*(APPEND|MASTER|EXPERT|ALL PERFECT|FULL COMBO)/i.test(title)) return true;
+  // ネタの替え歌（淫夢・ケニアVer.・駅名替え歌など）
+  if (/淫夢|YAJU|INMU|野獣先輩|ケニア|汚物|樹液|駅名替え歌/i.test(title)) return true;
+  // AIに歌わせたカバー（声を似せたAI・生成AI）は載せない。Synthesizer V・UTAU などの歌声合成ソフトのカバーはボカロと同じ扱いで残す
+  if (/AI\s*(Sing\s*)?(cover|カバー|vocal|生成)|\baicover|【AIが歌う】|oda∞ai|AI歌ってみた/i.test(title) && !/Synth(esizer)?\s*V|UTAU|CeVIO|VOCALOID|ボイスピーク|VOICEPEAK/i.test(title)) return true;
   // ファンが作った非公式のPV（音は原曲のまま）も、曲として別に並べない
   if (/fan ?made ?PV|ファンメイドPV/i.test(title)) return true;
   // Project DIVA の映像の録画・エディットPV（ゲームの画面に原曲をのせたもの）も同じ
@@ -205,8 +211,13 @@ export function parseTitle(raw) {
     if (slash.length > 1) { rest = slash[0]; credit = slash.slice(1).join(" / "); }
     // 「作者 - 曲名 feat. 歌声」
     const dash = rest.match(/^(.+?)\s+-\s+(.+)$/);
-    if (dash && !credit) { creator = dash[1].trim(); rest = dash[2]; }
-    voice = featOf(rest) || null;
+    if (dash && !credit) {
+      // 「曲名 - 歌声 MV」（右が歌声の名前だけ）のときは左が曲名
+      const right = dash[2].replace(/\s*(MV|PV)$/i, "").trim(), rn = splitNames(right);
+      if (rn.voices.length && !rn.others.length) { rest = dash[1]; voice = rn.voices[0]; }
+      else { creator = dash[1].trim(); rest = dash[2]; }
+    }
+    voice = featOf(rest) || voice || null;
     song = rest;
   }
   song = cleanSong(song);
@@ -860,7 +871,18 @@ export function mergeSources(items) {
 
 // 同じ人の作者名の表記ゆれを、本人の名乗り（X などの表記）にそろえる
 const CREATOR_NAMES = { "黒うさP": "黒うさP/WhiteFlame", "WhiteFlame": "黒うさP/WhiteFlame", "kemu": "KEMU VOXX", "ALEXANDROS": "[Alexandros]", "DISH": "DISH//", "40meterP": "40mP", "Mitchie_M": "Mitchie M" };
-const fixCreatorNames = items => { for (const i of items) if (i.p && CREATOR_NAMES[i.p]) i.p = CREATOR_NAMES[i.p]; };
+// 同じ人の別表記（英語表記・昔の名前・ニコニコのタイトルから読み違えた名前）をそろえる
+Object.assign(CREATOR_NAMES, {
+  "sasakure. UK": "sasakure.UK", "Utsu-P": "鬱P", "ARuFa": "ピノキオピー", "Iなんです": "れるりり", "れるりり, rerulili": "れるりり",
+  "flower - ぬゆり": "ぬゆり", "Flower - ぬゆり": "ぬゆり", "GUMI - ぬゆり": "ぬゆり", "結月ゆかり - ぬゆり・アボガド6": "ぬゆり", "Flower・結月ゆかり : It's Just Life": "ぬゆり",
+  "Neru・z'5": "Neru", "Neru・z’5": "Neru", "片井雨司": "ユリイ・カノン", "こんにちは谷田さん": "キタニタツヤ", "瀬戸わらび": "MIMI", "マイキP": "マイキ", "Kikuo": "きくお",
+  "WONDERFUL★OPPORTUNITY!": "ワンダフル☆オポチュニティ!", "Niccori^^ Survey Team Theme": "ワンダフル☆オポチュニティ!", "ひとしずくP": "ひとしずく×やま△",
+  "cosMo": "cosMo@暴走P", "ボーカロイドにオリ曲を喋ってもらった2": "cosMo@暴走P", "PolyphonicBranch": "ぽりふぉ", "復活の木村わいP": "木村わいP",
+  "Atsu Mizuno": "水野あつ", "Shaito": "しゃいと", "bouinboushokup": "暴飲暴食P", "GUMI, 鏡音レン Ah, It's a Wonderful Cat Life": "Nem",
+  "米津玄師 Kenshi Yonezu": "米津玄師", "米津玄師, 宇多田ヒカル Kenshi Yonezu, Hikaru Utada": "米津玄師,宇多田ヒカル", "Yoshimi Iwasaki": "岩崎良美", "Ryoko Shinohara": "篠原涼子",
+  "Naisho no Pierced Earrings": "内緒のピアス", "Belle  Official  YouTube": "Belle", "Belle Official YouTube": "Belle", "Vaundy LIVE": "Vaundy", "VALIS − 007": "VALIS",
+});
+const fixCreatorNames = items => { for (const i of items) { if (i.p) i.p = i.p.replace(/[\u200b-\u200d\ufeff]/g, ""); if (i.p && CREATOR_NAMES[i.p]) i.p = CREATOR_NAMES[i.p]; } };
 
 // 「恋愛裁判 Love Trial」「トリノコシティ Torinoko City」のように曲名のうしろに英語名が付いていて、
 // 日本語の部分だけの曲名がサイトにほかにもあるときは、日本語の部分を曲名にする（ローマ字・英訳はそろえない）
