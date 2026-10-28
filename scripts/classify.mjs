@@ -40,6 +40,7 @@ export function isNotSong(title = "") {
   if (/(?<!歌って)踊ってみた|【歌枠】|作業用\s*BGM|作業用ＢＧＭ|描きました$|【リズム天国】|Cust[ou]m Remix/i.test(title)) return true;   // リズム天国風のアレンジ動画も曲ではない
   // MMD（3Dモデルが既存の曲で踊る動画）は曲そのものではない
   if (/MMD/i.test(title)) return true;
+  if (/楽譜/.test(title)) return true;   // ピアノ楽譜の演奏動画
   // テレビ番組の歌唱（うたコン・SONGS）や出演者のメッセージ、路上ライブの撮影（歌うま）、吹奏楽・ヴァイオリンの演奏、アルバムのクロスフェード、音ゲーのプレイ動画は曲そのものではない
   if (/【(うたコン|SONGS|Venue101)】|からメッセージ|【歌うま】|吹奏楽|ヴァイオリン演奏|クロスフェード|【プロセカ】.*(APPEND|MASTER|EXPERT|ALL PERFECT|FULL COMBO)/i.test(title)) return true;
   // ネタの替え歌（淫夢・ケニアVer.・駅名替え歌など）
@@ -761,7 +762,7 @@ export function guessChannelGenre(items) {
 // セルフカバー（作曲した本人が歌った歌ってみた）に印をつける。
 // タイトルに「self cover」「セルフカバー」「自分で歌ってみた」とある、または原曲と同じ投稿者（チャンネル）が投稿したもの。
 // （歌い手名と作者名が同じ、は読み取りまちがいのことが多いので使わない）
-const SELF_RE = /self[\s-]*cover|セルフ\s*カ[バヴ]ー|自分で歌ってみ|本人が歌ってみ|作者が歌ってみ/i;
+const SELF_RE = /self[\s-]*cover|セルフ\s*カ[バヴ]ー|自分で歌ってみ|本人が歌っ|作者が歌ってみ/i;
 export function markSelfCovers(items) {
   const byId = new Map(items.map(i => [i.id, i]));
   for (const c of items) {
@@ -782,7 +783,7 @@ const VERSION_RE = /remix|リミックス|\bver\b|ver\.|version|バージョン|
 const SUB_RE = /[\s　]*[\[［【(（]?\s*(中文字幕|中字|繁中字幕|简中字幕|中文翻譯|English\s*sub(title)?s?|Eng\s*sub|\bsubbed\b|한글\s*자막|한국어\s*자막)\s*[\]］】)）]?/gi;
 const REPRINT_RE = /許諾を得て転載|転載(させて|して(い|お)ります|しています|許可)|reprint(s|ed)? from|permission (was |has been )?(obtained|granted|given)/i;
 
-const SHORT_VER_RE = /short\s*ver|ショート\s*ver|ショートバージョン|short\s*version|tv\s*size|tvサイズ|テレビサイズ|アニメ[^\s]*[』」]\s*ver\.?/i;   // 「TVアニメ『忘却バッテリー』Ver.」のようなタイアップ版MVも同じ曲として隠す
+const SHORT_VER_RE = /short\s*ver|short\s*clip|ショート\s*ver|ショートバージョン|short\s*version|tv\s*size|tvサイズ|テレビサイズ|アニメ[^\s]*[』」]\s*ver\.?/i;   // 「TVアニメ『忘却バッテリー』Ver.」のようなタイアップ版MVも同じ曲として隠す
 export function mergeSources(items) {
   for (const i of items) { delete i.dup; delete i.alt; delete i.selfCover; }
   // YouTube の本家で、説明文にニコニコ版へのリンクがある（または転載と書いてある）ものは、
@@ -898,7 +899,7 @@ function dropEnglishTail(items) {
 
 // 作者本人が昔の曲をアレンジして出し直したもの（「ドーナツホール 2024」「アンチクロロベンゼン ver.2025」「〇〇 リメイク」など）。
 // 元の曲とは別の曲のまま、曲名は元の曲にそろえて rm（元の曲のID）と rv（「2024」など）を付ける
-const REMAKE_RE = /(?:19|20)\d\d\s*(?:ver|version|バージョン)|(?:ver|version)\.?\s*(?:19|20)\d\d|リメイク|remake|再録|re-?arrange|リアレンジ|re-?recording/i;
+const REMAKE_RE = /(?:19|20)\d\d\s*年?\s*(?:ver|version|バージョン)|(?:ver|version)\.?\s*(?:19|20)\d\d|リメイク|remake|再録|re-?arrange|リアレンジ|re-?recording/i;
 const REMAKE_TAIL_RE = /[\s　]*[-~～(（\[［]*\s*(?:(?:19|20)\d\d\s*(?:ver(?:sion)?\.?)?|ver(?:sion)?\.?\s*(?:19|20)\d\d|remake|リメイク|re-?arrange|リアレンジ|再録|re-?recording)\s*[-~～)）\]］]*\.?$/i;
 // 歌い手のオリジナル曲（ニコニコインディーズ・NNIオリジナル曲のタグ）は、歌ってみたではなく J-POP の本家にする。
 // 先に同じ曲名の本家があるもの（その曲の歌ってみた）や、セルフカバー・提供曲を歌ったものはそのまま
@@ -934,6 +935,31 @@ function markRemakes(items) {
     const y = (i.title || "").match(/(?:19|20)\d\d/);
     i.t = o.t; i.rm = o.id; i.rv = y ? y[0] : "リメイク"; i.p = o.p; i.a = o.a;
   }
+  // 同じ作者が同じ曲を出し直したもの（long ver.・Remix・New ver.・ダンス版・ライブ版など）は、いちばん古い本家の「別バージョン」にする。
+  // 作者本人が歌ったもの（【本人が歌った】）はセルフカバーとして、その曲の歌ってみたにする
+  const sameP = (a, b) => normalize(a.p || "") && normalize(a.p || "") === normalize(b.p || "") || (a.a && a.a === b.a);
+  for (const i of items) {
+    if (i.kind !== "本家" || !i.t || i.rm || i.rmFixed) continue;
+    const self = SELF_RE.test(i.title || "");
+    if (!self && (!VERSION_RE.test(i.title || "") || SHORT_VER_RE.test(i.title || ""))) continue;
+    const o = (byT.get(normalize(i.t)) || []).filter(o => o !== i && !o.rm && sameP(o, i) && !VERSION_RE.test(o.title || "") && (o.date || "") < (i.date || ""))
+      .sort((a, b) => (a.date || "").localeCompare(b.date || ""))[0];
+    if (!o) continue;
+    if (self) { i.kind = "歌ってみた"; i.of = o.id; i.ofLocked = true; i.by = i.p; i.selfCover = 1; delete i.v; continue; }
+    const rv = versionLabel(i.title || "");
+    if (rv === "別バージョン") continue;   // 「life is short」のように、バージョン名とは言えない言葉に引っかかっただけ
+    i.rm = o.id; i.rv = rv;
+  }
+}
+// タイトルから「long ver.」「Best Friend Remix」のようなバージョン名を取り出す
+function versionLabel(title) {
+  const t = title.normalize("NFKC");
+  const m = t.match(/[(\[]\s*([^()\[\]]*?(?:ver\.?|version|remix|mix|edit|remaster)[^()\[\]]*?)\s*[)\]]/i)
+    || t.match(/-\s*([^-]*?(?:ver\.?|version))\s*-/i)
+    || t.match(/([^\s/「」『』()]+\s*(?:remix|ver\.?|version))(?![\w])/i);
+  if (m) return m[1].replace(/\s+/g, " ").trim();
+  if (/live/i.test(t)) return "LIVE";
+  return "別バージョン";
 }
 
 // 「〇〇 - Topic」の自動生成音源（埋め込みで再生できず、曲名もローマ字のことが多い）は、そのアーティストの公式チャンネルの曲がサイトにあれば出さない
