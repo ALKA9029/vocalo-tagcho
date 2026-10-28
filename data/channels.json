@@ -8,14 +8,6 @@
   "pinned": true
  },
  {
-  "id": "UCfyzrRchEuYWpbWnXNRwNLw",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "シアーミュージック",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-28T11:00:09Z",
-  "pinned": true
- },
- {
   "id": "UC2UqvkWjQGfyTeLumfyWxiQ",
   "added": "2026-10-27T14:15:52.733Z",
   "name": "THE LUV BUGS",
@@ -342,13 +334,6 @@
   "name": "狼ナツヨ🐾 from ZOOO",
   "genre": "ボカロ",
   "lastHit": "2026-10-17T11:22:01Z"
- },
- {
-  "id": "UCsu15LZ3HQFQckNfYaV7VtA",
-  "added": "2026-10-19T21:48:20.019Z",
-  "name": "カゲトP",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-17T11:01:17Z"
  },
  {
   "id": "UClxXuM2m0rIL9VCA1ds9HqA",
@@ -1567,11 +1552,43 @@
   "pinned": true
  },
  {
+  "id": "UCAyiAlNizx-GtWVp7453XzA",
+  "added": "2026-10-28T13:52:20.765Z",
+  "name": "ゆかてふ",
+  "genre": "ボカロ",
+  "lastHit": "2023-08-12T04:33:11Z",
+  "pinned": true
+ },
+ {
+  "id": "UCYXV1xhH6wmxkxR-Ry5EUVA",
+  "added": "2026-10-28T13:52:20.765Z",
+  "name": "Vell",
+  "genre": "ボカロ",
+  "lastHit": "2023-08-04T09:52:14Z",
+  "pinned": true
+ },
+ {
+  "id": "UC9zY_E8mcAo_Oq772LEZq8Q",
+  "name": "THE FIRST TAKE",
+  "added": "2026-10-09T12:06:54.468Z",
+  "genre": "アニソン",
+  "lastHit": "2026-10-28T13:00:09Z",
+  "pinned": true
+ },
+ {
   "id": "UCKsVfYfguU3s5vMO5yhcWdw",
   "added": "2026-10-27T14:15:52.733Z",
   "name": "STARGLOW Official",
   "genre": "J-POP",
   "lastHit": "2026-10-28T11:00:26Z",
+  "pinned": true
+ },
+ {
+  "id": "UCfyzrRchEuYWpbWnXNRwNLw",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "シアーミュージック",
+  "genre": "J-POP",
+  "lastHit": "2026-10-28T11:00:09Z",
   "pinned": true
  },
  {
@@ -1995,14 +2012,6 @@
   "name": "湘南乃風",
   "genre": "アニソン",
   "lastHit": "2026-10-23T13:00:07Z",
-  "pinned": true
- },
- {
-  "id": "UC9zY_E8mcAo_Oq772LEZq8Q",
-  "name": "THE FIRST TAKE",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "アニソン",
-  "lastHit": "2026-10-23T13:00:06Z",
   "pinned": true
  },
  {
@@ -2629,13 +2638,6 @@
   "pinned": true
  },
  {
-  "id": "UCdNE9sEPDrLYhz4OoE8_20A",
-  "added": "2026-10-15T10:45:47.842Z",
-  "name": "MADKID OFFICIAL",
-  "genre": "アニソン",
-  "lastHit": "2026-10-17T11:00:36Z"
- },
- {
   "id": "UCnr0Il4yjtq5PcGtlHJw8Pg",
   "added": "2026-10-23T21:49:42.946Z",
   "name": "SAYURI【滝さゆり】",
@@ -2671,7 +2673,7 @@
   "id": "UCLqCmbd6bgcLaBVz3aA-68A",
   "added": "2026-10-17T21:45:11.252Z",
   "name": "P丸様。",
-  "genre": "J-POP",
+  "genre": "アニソン",
   "lastHit": "2026-10-17T04:00:07Z",
   "pinned": true
  },
