@@ -1592,6 +1592,14 @@
   "pinned": true
  },
  {
+  "id": "UCGQg0ZjM_QQ2jvUd5j9Fp-Q",
+  "added": "2026-10-12T21:33:25.769Z",
+  "name": "センラ / SENRA",
+  "genre": "J-POP",
+  "lastHit": "2026-10-28T10:00:06Z",
+  "pinned": true
+ },
+ {
   "id": "UC8T8_deSUS97DWZeKO_TL9Q",
   "added": "2026-10-22T21:48:45.712Z",
   "name": "NHK MUSIC",
@@ -1621,13 +1629,6 @@
   "name": "Ryoji Takarabe財部亮治",
   "genre": "アニソン",
   "lastHit": "2026-10-27T12:00:07Z"
- },
- {
-  "id": "UCUoh-YtyEGCUNEFzBJp5sFA",
-  "added": "2026-10-17T21:45:11.252Z",
-  "name": "シータピアノ",
-  "genre": "アニソン",
-  "lastHit": "2026-10-27T11:00:31Z"
  },
  {
   "id": "UCAfQ5CojppHVIiLwuRDBzTg",
@@ -2670,14 +2671,6 @@
   "pinned": true
  },
  {
-  "id": "UCGQg0ZjM_QQ2jvUd5j9Fp-Q",
-  "added": "2026-10-12T21:33:25.769Z",
-  "name": "センラ / SENRA",
-  "genre": "J-POP",
-  "lastHit": "2026-10-16T10:00:35Z",
-  "pinned": true
- },
- {
   "id": "UCXN-ZRdGnFtLiJ8EY1i_alg",
   "added": "2026-10-14T11:01:30.035Z",
   "name": "Itsuki Natsume / 棗いつき",
@@ -3107,6 +3100,14 @@
   "name": "町田ちま【にじさんじ】",
   "genre": "アニソン",
   "lastHit": "2026-09-03T11:00:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UCwu15I0KWOI6Xbe2Uziee4A",
+  "added": "2026-10-28T14:22:50.042Z",
+  "name": "【MAIN】96NEKO-CHANNEL",
+  "genre": "アニソン",
+  "lastHit": "2026-09-01T11:00:22Z",
   "pinned": true
  }
 ]
