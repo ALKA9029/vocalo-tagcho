@@ -308,13 +308,6 @@
   "pinned": true
  },
  {
-  "id": "UCfvBjTMd0jP0OFDJmQeF7wA",
-  "added": "2026-10-28T14:10:01.198Z",
-  "name": "かみやすんば",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-18T08:42:44Z"
- },
- {
   "id": "UCIkE8L1XRrwfB7k8AoxWHtg",
   "added": "2026-10-19T21:48:20.019Z",
   "name": "X._X",
@@ -656,14 +649,6 @@
   "pinned": true
  },
  {
-  "id": "UCTy9HCrLjcbsK74LFsTcpWg",
-  "added": "2026-10-27T14:15:52.733Z",
-  "name": "Etori",
-  "genre": "ボカロ",
-  "lastHit": "2026-08-29T12:00:06Z",
-  "pinned": true
- },
- {
   "id": "UCKWuMfOx1MT4tY9-pRAEBYw",
   "added": "2026-10-27T14:15:52.733Z",
   "name": "馬車馬カエデ",
@@ -1000,14 +985,6 @@
   "pinned": true
  },
  {
-  "id": "UCLP47XL6OcF0gDzG22khSuw",
-  "added": "2026-10-27T14:15:52.733Z",
-  "name": "ステイン",
-  "genre": "ボカロ",
-  "lastHit": "2026-01-06T10:00:38Z",
-  "pinned": true
- },
- {
   "id": "UCwFVc6rmAE_hF5ivrXMSYsw",
   "added": "2026-10-10T07:32:06.370Z",
   "name": "작업용",
@@ -1296,14 +1273,6 @@
   "pinned": true
  },
  {
-  "id": "UCMPNkOyomHEpeJ7bTbI8SWA",
-  "added": "2026-10-15T10:11:14.946Z",
-  "name": "Nightcord at 25:00 - Topic",
-  "genre": "ボカロ",
-  "lastHit": "2025-05-13T10:00:34Z",
-  "pinned": true
- },
- {
   "id": "UCrGzu0MPKQpYF2AV2oG-VpQ",
   "added": "2026-10-27T14:15:52.733Z",
   "name": "DIVELA / Official",
@@ -1565,6 +1534,38 @@
   "name": "犬飼",
   "genre": "ボカロ",
   "lastHit": "2023-05-05T11:00:09Z",
+  "pinned": true
+ },
+ {
+  "id": "UCRYh_OrRM4JnZv3SxExbCnw",
+  "added": "2026-10-28T14:29:27.060Z",
+  "name": "れるりり, rerulili",
+  "genre": "ボカロ",
+  "lastHit": "2023-04-14T09:00:04Z",
+  "pinned": true
+ },
+ {
+  "id": "UCQAdXyrF2fYcqdXUUW3YxUg",
+  "added": "2026-10-28T14:29:27.060Z",
+  "name": "てにをは",
+  "genre": "ボカロ",
+  "lastHit": "2023-04-06T11:01:36Z",
+  "pinned": true
+ },
+ {
+  "id": "UCl0PsZoA01gZs5q9Osm1Ogg",
+  "added": "2026-10-28T14:29:27.060Z",
+  "name": "ゆっくりK",
+  "genre": "ボカロ",
+  "lastHit": "2023-03-25T09:00:07Z",
+  "pinned": true
+ },
+ {
+  "id": "UC2OgzdgLQ7vxlANVxF3kgvg",
+  "added": "2026-10-28T14:29:27.060Z",
+  "name": "ユリイ・カノン / 月詠み Official",
+  "genre": "ボカロ",
+  "lastHit": "2023-03-08T11:00:07Z",
   "pinned": true
  },
  {
