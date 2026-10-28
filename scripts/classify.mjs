@@ -900,6 +900,24 @@ function dropEnglishTail(items) {
 // 元の曲とは別の曲のまま、曲名は元の曲にそろえて rm（元の曲のID）と rv（「2024」など）を付ける
 const REMAKE_RE = /(?:19|20)\d\d\s*(?:ver|version|バージョン)|(?:ver|version)\.?\s*(?:19|20)\d\d|リメイク|remake|再録|re-?arrange|リアレンジ|re-?recording/i;
 const REMAKE_TAIL_RE = /[\s　]*[-~～(（\[［]*\s*(?:(?:19|20)\d\d\s*(?:ver(?:sion)?\.?)?|ver(?:sion)?\.?\s*(?:19|20)\d\d|remake|リメイク|re-?arrange|リアレンジ|再録|re-?recording)\s*[-~～)）\]］]*\.?$/i;
+// 歌い手のオリジナル曲（ニコニコインディーズ・NNIオリジナル曲のタグ）は、歌ってみたではなく J-POP の本家にする。
+// 先に同じ曲名の本家があるもの（その曲の歌ってみた）や、セルフカバー・提供曲を歌ったものはそのまま
+const INDIE_TAG = /ニコニコインディーズ|NNIオリジナル曲/;
+function singerOriginals(items) {
+  const earliest = new Map();
+  for (const i of items) if (i.kind === "本家" && normalize(i.t)) { const k = normalize(i.t), d = i.date || ""; if (!earliest.has(k) || d < earliest.get(k)) earliest.set(k, d); }
+  for (const i of items) {
+    if (i.src !== "niconico" || !(i.tags || []).some(t => INDIE_TAG.test(t)) || i.v) continue;
+    if (/self ?cover|セルフカバー|自分で歌って|歌ってみ|cover|カバー|提供|ver\./i.test(i.title || "")) continue;
+    if (i.kind === "歌ってみた" && !i.ofLocked) {
+      const e = earliest.get(normalize(i.t));
+      if (e && e < (i.date || "")) continue;
+      i.kind = "本家"; i.p = i.by || i.p || ""; delete i.by; delete i.of; i.singerOrig = 1;
+    }
+    if (i.kind === "本家" && (i.singerOrig || i.g === "その他")) { i.g = "J-POP"; i.gFixed ||= "J-POP"; }
+  }
+}
+
 function markRemakes(items) {
   for (const i of items) if (!i.rmFixed) { delete i.rm; delete i.rv; }
   const byT = new Map();
@@ -996,6 +1014,7 @@ export function linkCovers(items) {
   guessChannelGenre(items);
   fillCreators(items);
   fixCreatorNames(items);
+  singerOriginals(items);
   markRemakes(items);
   vocaloByCreator(items);
   hideTopicWithOfficial(items);

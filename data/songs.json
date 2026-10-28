@@ -9191,8 +9191,8 @@
   "url": "https://www.nicovideo.jp/watch/sm46955107",
   "title": "水の中の太陽 / 小鳥遊ぐり",
   "t": "水の中の太陽",
-  "kind": "歌ってみた",
-  "g": "その他",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2026-10-24T00:00:00+09:00",
   "views": 542,
   "likes": 122,
@@ -9207,8 +9207,10 @@
   ],
   "uploaderId": 136917693,
   "uploader": null,
-  "by": "小鳥遊ぐり",
-  "firstSeen": "2026-10-25T21:45:15.790Z"
+  "firstSeen": "2026-10-25T21:45:15.790Z",
+  "p": "小鳥遊ぐり",
+  "singerOrig": 1,
+  "gFixed": "J-POP"
  },
  {
   "id": "nico:sm46910822",
@@ -122936,7 +122938,7 @@
   "title": "AIずんだもんで「シル・ヴ・プレジデント」【VOICEVOX＆NEUTRINO】",
   "t": "シル・ヴ・プレジデント",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "J-POP",
   "date": "2022-08-01T00:00:00+09:00",
   "views": 262279,
   "likes": 4852,
@@ -122960,7 +122962,9 @@
   "v": "ずんだもん",
   "vr": "ずんだもん",
   "firstSeen": "2026-10-09T21:44:36.804Z",
-  "seed": true
+  "seed": true,
+  "of": "nico:sm38628739",
+  "p": "P丸様。"
  },
  {
   "id": "yt:ZaIeC1KzA9Y",
@@ -142474,8 +142478,8 @@
   "url": "https://www.nicovideo.jp/watch/sm38628739",
   "title": "【ＭＶ】シル・ヴ・プレジデント /Ｐ丸様。【ナナホシ管弦楽団】",
   "t": "シル・ヴ・プレジデント",
-  "kind": "歌ってみた",
-  "g": "ボカロ",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2021-04-25T16:30:00+09:00",
   "views": 2802675,
   "likes": 7767,
@@ -142495,9 +142499,11 @@
   ],
   "uploaderId": 118622294,
   "uploader": null,
-  "by": "P丸様。",
   "firstSeen": "2026-10-08T15:10:08.716Z",
-  "seed": true
+  "seed": true,
+  "p": "P丸様。",
+  "singerOrig": 1,
+  "gFixed": "J-POP"
  },
  {
   "id": "nico:sm38633778",
@@ -160715,7 +160721,8 @@
   "p": "まふまふ",
   "a": "youtube:UCOTR1tcOAhjgi6YukrPpZxg",
   "firstSeen": "2026-10-15T10:07:04.212Z",
-  "seed": true
+  "seed": true,
+  "dup": "nico:sm35829317"
  },
  {
   "id": "nico:sm35829317",
@@ -160723,7 +160730,7 @@
   "url": "https://www.nicovideo.jp/watch/sm35829317",
   "title": "女の子になりたい／まふまふ",
   "t": "女の子になりたい",
-  "kind": "歌ってみた",
+  "kind": "本家",
   "g": "J-POP",
   "date": "2019-10-18T18:00:00+09:00",
   "views": 1847279,
@@ -160742,12 +160749,14 @@
   ],
   "uploaderId": 18874531,
   "uploader": null,
-  "by": "まふまふ",
   "firstSeen": "2026-10-08T15:10:08.842Z",
   "seed": true,
-  "of": "yt:ucbx9we6EHk",
   "p": "まふまふ",
-  "a": "youtube:UCOTR1tcOAhjgi6YukrPpZxg"
+  "singerOrig": 1,
+  "gFixed": "J-POP",
+  "alt": [
+   "yt:ucbx9we6EHk"
+  ]
  },
  {
   "id": "yt:ElnxZtiBDvs",
@@ -161200,8 +161209,8 @@
   "url": "https://www.nicovideo.jp/watch/sm35765180",
   "title": "Beetle Battle／浦島坂田船",
   "t": "Beetle Battle",
-  "kind": "歌ってみた",
-  "g": "ボカロ",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2019-10-04T19:00:00+09:00",
   "views": 1308000,
   "likes": 2588,
@@ -161221,9 +161230,11 @@
   ],
   "uploaderId": 3443014,
   "uploader": null,
-  "by": "浦島坂田船",
   "firstSeen": "2026-10-08T15:10:09.011Z",
-  "seed": true
+  "seed": true,
+  "p": "浦島坂田船",
+  "singerOrig": 1,
+  "gFixed": "J-POP"
  },
  {
   "id": "yt:y4YnRMsLeds",
@@ -162611,8 +162622,8 @@
   "url": "https://www.nicovideo.jp/watch/sm35580624",
   "title": "【MV】ユルファ / センラ×nqrse×luz",
   "t": "ユルファ",
-  "kind": "歌ってみた",
-  "g": "その他",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2019-08-23T21:00:00+09:00",
   "views": 1903214,
   "likes": 2258,
@@ -162629,9 +162640,11 @@
   ],
   "uploaderId": 32759986,
   "uploader": null,
-  "by": "センラ×nqrse×luz",
   "firstSeen": "2026-10-08T15:10:08.831Z",
-  "seed": true
+  "seed": true,
+  "p": "センラ×nqrse×luz",
+  "singerOrig": 1,
+  "gFixed": "J-POP"
  },
  {
   "id": "yt:qxYK4e_KlF0",
@@ -162850,8 +162863,8 @@
   "url": "https://www.nicovideo.jp/watch/sm35571721",
   "title": "【MV】Finale/XYZ",
   "t": "Finale",
-  "kind": "歌ってみた",
-  "g": "ボカロ",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2019-08-21T18:13:01+09:00",
   "views": 2419044,
   "likes": 2868,
@@ -162869,9 +162882,11 @@
   ],
   "uploaderId": 8357758,
   "uploader": null,
-  "by": "XYZ",
   "firstSeen": "2026-10-08T15:10:08.758Z",
-  "seed": true
+  "seed": true,
+  "p": "XYZ",
+  "singerOrig": 1,
+  "gFixed": "J-POP"
  },
  {
   "id": "yt:3mUXwYx1CQs",
@@ -166281,8 +166296,8 @@
   "url": "https://www.nicovideo.jp/watch/sm35040801",
   "title": "ポーカーフェイク／浦島坂田船",
   "t": "ポーカーフェイク",
-  "kind": "歌ってみた",
-  "g": "その他",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2019-04-29T19:00:00+09:00",
   "views": 1447927,
   "likes": 1863,
@@ -166301,9 +166316,11 @@
   ],
   "uploaderId": 3443014,
   "uploader": null,
-  "by": "浦島坂田船",
   "firstSeen": "2026-10-08T15:10:08.947Z",
-  "seed": true
+  "seed": true,
+  "p": "浦島坂田船",
+  "singerOrig": 1,
+  "gFixed": "J-POP"
  },
  {
   "id": "yt:5GI4zBX4JMI",
@@ -169320,8 +169337,8 @@
   "url": "https://www.nicovideo.jp/watch/sm34350672",
   "title": "ブラッククリスマス／After the Rain【そらる×まふまふ】",
   "t": "ブラッククリスマス",
-  "kind": "歌ってみた",
-  "g": "ボカロ",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2018-12-21T18:00:00+09:00",
   "views": 2076993,
   "likes": 1563,
@@ -169337,9 +169354,11 @@
   ],
   "uploaderId": 18874531,
   "uploader": null,
-  "by": "After the Rain",
   "firstSeen": "2026-10-08T15:10:08.801Z",
-  "seed": true
+  "seed": true,
+  "p": "After the Rain",
+  "singerOrig": 1,
+  "gFixed": "J-POP"
  },
  {
   "id": "yt:EQF19szKfQg",
@@ -174069,8 +174088,8 @@
   "url": "https://www.nicovideo.jp/watch/sm33602871",
   "title": "SAILING!!!!!／浦島坂田船",
   "t": "SAILING!!!!!",
-  "kind": "歌ってみた",
-  "g": "ボカロ",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2018-07-29T19:00:00+09:00",
   "views": 1777689,
   "likes": 1979,
@@ -174089,9 +174108,11 @@
   ],
   "uploaderId": 31774679,
   "uploader": null,
-  "by": "浦島坂田船",
   "firstSeen": "2026-10-08T15:10:08.861Z",
-  "seed": true
+  "seed": true,
+  "p": "浦島坂田船",
+  "singerOrig": 1,
+  "gFixed": "J-POP"
  },
  {
   "id": "nico:sm33600479",
@@ -175700,8 +175721,8 @@
   "url": "https://www.nicovideo.jp/watch/sm33349141",
   "title": "Peacock Epoch／浦島坂田船",
   "t": "Peacock Epoch",
-  "kind": "歌ってみた",
-  "g": "その他",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2018-06-11T19:00:00+09:00",
   "views": 3512168,
   "likes": 3250,
@@ -175719,9 +175740,11 @@
   ],
   "uploaderId": 2149103,
   "uploader": null,
-  "by": "浦島坂田船",
   "firstSeen": "2026-10-08T15:10:08.671Z",
-  "seed": true
+  "seed": true,
+  "p": "浦島坂田船",
+  "singerOrig": 1,
+  "gFixed": "J-POP"
  },
  {
   "id": "nico:sm33342655",
@@ -176347,8 +176370,8 @@
   "url": "https://www.nicovideo.jp/watch/sm33191845",
   "title": "世余威ノ宵　うたった 【島爺／SymaG】",
   "t": "世余威ノ宵",
-  "kind": "歌ってみた",
-  "g": "ボカロ",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2018-05-14T20:00:00+09:00",
   "views": 1517637,
   "likes": 359,
@@ -176368,9 +176391,11 @@
   ],
   "uploaderId": 23420636,
   "uploader": null,
-  "by": "島爺",
   "firstSeen": "2026-10-08T15:10:08.928Z",
-  "seed": true
+  "seed": true,
+  "p": "島爺",
+  "singerOrig": 1,
+  "gFixed": "J-POP"
  },
  {
   "id": "yt:9ZjjwxvSQbI",
@@ -177242,8 +177267,8 @@
   "url": "https://www.nicovideo.jp/watch/sm33042955",
   "title": "【MV】Nectar／まふまふ feat. nqrse",
   "t": "Nectar",
-  "kind": "歌ってみた",
-  "g": "ボカロ",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2018-04-13T18:00:00+09:00",
   "views": 2208865,
   "likes": 1144,
@@ -177261,9 +177286,11 @@
   ],
   "uploaderId": 18874531,
   "uploader": null,
-  "by": "まふまふ",
   "firstSeen": "2026-10-08T15:10:08.783Z",
-  "seed": true
+  "seed": true,
+  "p": "まふまふ",
+  "singerOrig": 1,
+  "gFixed": "J-POP"
  },
  {
   "id": "yt:z-Ijqf0DRCo",
@@ -177809,8 +177836,8 @@
   "url": "https://www.nicovideo.jp/watch/sm32938526",
   "title": "【ニコニコラボ】Mind Craft【ちゃんげろソニック】",
   "t": "Mind Craft",
-  "kind": "歌ってみた",
-  "g": "ボカロ",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2018-03-24T20:30:43+09:00",
   "views": 2060056,
   "likes": 2498,
@@ -177830,9 +177857,11 @@
   ],
   "uploaderId": 190917,
   "uploader": null,
-  "by": "Gero",
   "firstSeen": "2026-10-08T15:10:08.803Z",
-  "seed": true
+  "seed": true,
+  "p": "Gero",
+  "singerOrig": 1,
+  "gFixed": "J-POP"
  },
  {
   "id": "yt:WJW7kS9AAI4",
@@ -178062,8 +178091,8 @@
   "url": "https://www.nicovideo.jp/watch/sm32909966",
   "title": "年に一夜の恋模様 ／ 浦島坂田船",
   "t": "年に一夜の恋模様",
-  "kind": "歌ってみた",
-  "g": "ボカロ",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2018-03-19T18:00:00+09:00",
   "views": 1651391,
   "likes": 1074,
@@ -178083,9 +178112,11 @@
   ],
   "uploaderId": 31774679,
   "uploader": null,
-  "by": "浦島坂田船",
   "firstSeen": "2026-10-08T15:10:08.890Z",
-  "seed": true
+  "seed": true,
+  "p": "浦島坂田船",
+  "singerOrig": 1,
+  "gFixed": "J-POP"
  },
  {
   "id": "nico:sm32891453",
@@ -178989,8 +179020,8 @@
   "url": "https://www.nicovideo.jp/watch/sm32783170",
   "title": "そらに、ひらり ／ 浦島坂田船",
   "t": "そらに、ひらり",
-  "kind": "歌ってみた",
-  "g": "その他",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2018-02-23T19:00:00+09:00",
   "views": 1372344,
   "likes": 822,
@@ -179008,9 +179039,11 @@
   ],
   "uploaderId": 6888642,
   "uploader": null,
-  "by": "浦島坂田船",
   "firstSeen": "2026-10-08T15:10:08.983Z",
-  "seed": true
+  "seed": true,
+  "p": "浦島坂田船",
+  "singerOrig": 1,
+  "gFixed": "J-POP"
  },
  {
   "id": "yt:jb4ybTQwcdw",
@@ -179212,8 +179245,8 @@
   "url": "https://www.nicovideo.jp/watch/sm32737710",
   "title": "シュガーヘイト／luz×nqrse×ぷす",
   "t": "シュガーヘイト",
-  "kind": "歌ってみた",
-  "g": "ボカロ",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2018-02-14T21:00:00+09:00",
   "views": 4678139,
   "likes": 2802,
@@ -179233,9 +179266,11 @@
   ],
   "uploaderId": 8357758,
   "uploader": null,
-  "by": "luz×nqrse×ぷす",
   "firstSeen": "2026-10-08T15:10:08.640Z",
-  "seed": true
+  "seed": true,
+  "p": "luz×nqrse×ぷす",
+  "singerOrig": 1,
+  "gFixed": "J-POP"
  },
  {
   "id": "yt:hZFBTnzKa54",
@@ -181574,7 +181609,7 @@
   "uploader": "まふまふちゃんねる",
   "descHead": "ロールプレイングゲーム（role-playing game）\n===================\nまふ「どの職業にしようかな～」\nさか「まふは魔法使いか死神やろ」\nうら「坂田は脳筋武闘家とか？」\nそら「じゃあ、せーのでやりたいジョブ言おうぜ」\n\nせーの\n\n４人「俺が勇者ね！！！！」\n\n\n普段一緒にゲームをしてる４人でオリジナル曲を作ってみました\n全く意味わからないけど　楽しそうでいいですね\n\n\n■絵／映像：りゅうせー @ryuuseee\n\n●歌／Inst Mix\nそらる @soraruru\n●歌／作詞作編曲／Vo Mix\nまふまふ @uni_mafumafu\n●歌／セリフ台本\nうらたぬき ",
   "p": "そらまふうらさか",
-  "a": "youtube:UCOTR1tcOAhjgi6YukrPpZxg",
+  "a": "name:そらまふうらさか",
   "firstSeen": "2026-10-09T12:20:22.402Z",
   "seed": true,
   "dup": "nico:sm32355422"
@@ -181642,7 +181677,8 @@
   "firstSeen": "2026-10-08T15:10:08.644Z",
   "seed": true,
   "p": "そらまふうらさか",
-  "a": "youtube:UCOTR1tcOAhjgi6YukrPpZxg",
+  "singerOrig": 1,
+  "gFixed": "J-POP",
   "alt": [
    "yt:E286KqzpkKw"
   ]
@@ -182734,8 +182770,8 @@
   "url": "https://www.nicovideo.jp/watch/sm32173978",
   "title": "グッドナイトフォール / はるまきごはん×そらる",
   "t": "グッドナイトフォール",
-  "kind": "歌ってみた",
-  "g": "ボカロ",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2017-10-28T18:00:00+09:00",
   "views": 2044374,
   "likes": 323,
@@ -182753,9 +182789,11 @@
   ],
   "uploaderId": 1796335,
   "uploader": null,
-  "by": "はるまきごはん×そらる",
   "firstSeen": "2026-10-08T15:10:08.807Z",
-  "seed": true
+  "seed": true,
+  "p": "はるまきごはん×そらる",
+  "singerOrig": 1,
+  "gFixed": "J-POP"
  },
  {
   "id": "nico:sm32167114",
@@ -182883,8 +182921,8 @@
   "url": "https://www.nicovideo.jp/watch/sm32127872",
   "title": "ハロウ！ゴーストシップ / 浦島坂田船",
   "t": "ハロウ!ゴーストシップ",
-  "kind": "歌ってみた",
-  "g": "ボカロ",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2017-10-20T20:00:00+09:00",
   "views": 2552770,
   "likes": 1439,
@@ -182904,9 +182942,11 @@
   ],
   "uploaderId": 31774679,
   "uploader": null,
-  "by": "浦島坂田船",
   "firstSeen": "2026-10-08T15:10:08.744Z",
-  "seed": true
+  "seed": true,
+  "p": "浦島坂田船",
+  "singerOrig": 1,
+  "gFixed": "J-POP"
  },
  {
   "id": "nico:sm32121151",
@@ -183558,7 +183598,7 @@
   "title": "【MV】きみだけは。 ／ 天月-あまつき-【オリジナル】",
   "t": "きみだけは",
   "kind": "本家",
-  "g": "その他",
+  "g": "J-POP",
   "date": "2017-09-30T18:00:00+09:00",
   "views": 1447384,
   "likes": 452,
@@ -183578,7 +183618,8 @@
   "p": "天月-あまつき-",
   "a": "niconico:28385",
   "firstSeen": "2026-10-08T15:10:08.948Z",
-  "seed": true
+  "seed": true,
+  "gFixed": "J-POP"
  },
  {
   "id": "nico:sm32020150",
@@ -186690,8 +186731,8 @@
   "url": "https://www.nicovideo.jp/watch/sm31615431",
   "title": "#嘲笑ポラロイド　／志麻＆センラ",
   "t": "#嘲笑ポラロイド",
-  "kind": "歌ってみた",
-  "g": "その他",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2017-07-22T20:00:00+09:00",
   "views": 1387912,
   "likes": 932,
@@ -186707,9 +186748,11 @@
   ],
   "uploaderId": 3443014,
   "uploader": null,
-  "by": "志麻・センラ",
   "firstSeen": "2026-10-08T15:10:08.977Z",
-  "seed": true
+  "seed": true,
+  "p": "志麻・センラ",
+  "singerOrig": 1,
+  "gFixed": "J-POP"
  },
  {
   "id": "nico:sm31600493",
@@ -187145,8 +187188,8 @@
   "url": "https://www.nicovideo.jp/watch/sm31515518",
   "title": "Carry Forward/浦島坂田船",
   "t": "Carry Forward",
-  "kind": "歌ってみた",
-  "g": "ボカロ",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2017-07-05T19:00:00+09:00",
   "views": 1336162,
   "likes": 882,
@@ -187166,9 +187209,11 @@
   ],
   "uploaderId": 31774679,
   "uploader": null,
-  "by": "浦島坂田船",
   "firstSeen": "2026-10-08T15:10:08.998Z",
-  "seed": true
+  "seed": true,
+  "p": "浦島坂田船",
+  "singerOrig": 1,
+  "gFixed": "J-POP"
  },
  {
   "id": "yt:FPLxRe4ho_A",
@@ -193249,7 +193294,7 @@
   "title": "【オリジナル楽曲】Snow melody【浦島坂田船】",
   "t": "Snow melody",
   "kind": "本家",
-  "g": "その他",
+  "g": "J-POP",
   "date": "2016-12-25T20:17:20+09:00",
   "views": 1507020,
   "likes": 1181,
@@ -193272,7 +193317,8 @@
   "firstSeen": "2026-10-08T15:10:08.931Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "gFixed": "J-POP"
  },
  {
   "id": "yt:sHJKQT4A3_0",
@@ -193315,8 +193361,8 @@
   "url": "https://www.nicovideo.jp/watch/sm30278646",
   "title": "[MV] パラサイト / nqrse feat.まふまふ,luz",
   "t": "パラサイト",
-  "kind": "歌ってみた",
-  "g": "ボカロ",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2016-12-23T19:00:00+09:00",
   "views": 2906246,
   "likes": 1448,
@@ -193332,9 +193378,11 @@
   ],
   "uploaderId": 32759986,
   "uploader": null,
-  "by": "nqrse",
   "firstSeen": "2026-10-08T15:10:08.709Z",
-  "seed": true
+  "seed": true,
+  "p": "nqrse",
+  "singerOrig": 1,
+  "gFixed": "J-POP"
  },
  {
   "id": "nico:sm30281014",
@@ -196598,8 +196646,8 @@
   "url": "https://www.nicovideo.jp/watch/sm29602449",
   "title": "夢のまた夢／まふまふ",
   "t": "夢のまた夢",
-  "kind": "歌ってみた",
-  "g": "ボカロ",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2016-09-07T18:00:00+09:00",
   "views": 3086021,
   "likes": 1073,
@@ -196615,9 +196663,11 @@
   ],
   "uploaderId": 18874531,
   "uploader": null,
-  "by": "まふまふ",
   "firstSeen": "2026-10-08T15:10:08.701Z",
-  "seed": true
+  "seed": true,
+  "p": "まふまふ",
+  "singerOrig": 1,
+  "gFixed": "J-POP"
  },
  {
   "id": "yt:AfteRl4ePBc",
@@ -198040,7 +198090,7 @@
   "title": "【オリジナル楽曲】恋色花火【浦島坂田船】",
   "t": "恋色花火",
   "kind": "本家",
-  "g": "その他",
+  "g": "J-POP",
   "date": "2016-07-02T18:00:00+09:00",
   "views": 2370276,
   "likes": 1248,
@@ -198065,7 +198115,8 @@
   "firstSeen": "2026-10-08T15:10:08.764Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "gFixed": "J-POP"
  },
  {
   "id": "nico:sm29159861",
@@ -200586,8 +200637,8 @@
   "url": "https://www.nicovideo.jp/watch/sm28611756",
   "title": "立ち入り禁止／まふまふ",
   "t": "立ち入り禁止",
-  "kind": "歌ってみた",
-  "g": "ボカロ",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2016-04-10T19:01:46+09:00",
   "views": 3112222,
   "likes": 1026,
@@ -200603,11 +200654,11 @@
   ],
   "uploaderId": 18874531,
   "uploader": null,
-  "by": "まふまふ",
   "firstSeen": "2026-10-08T15:10:08.699Z",
   "seed": true,
-  "of": "nico:sm28778872",
-  "a": "niconico:20355857"
+  "p": "まふまふ",
+  "singerOrig": 1,
+  "gFixed": "J-POP"
  },
  {
   "id": "nico:sm28588639",
@@ -202703,7 +202754,7 @@
   "title": "【オリジナル楽曲】Dreamer【浦島坂田船】",
   "t": "Dreamer",
   "kind": "本家",
-  "g": "その他",
+  "g": "J-POP",
   "date": "2015-12-28T20:31:01+09:00",
   "views": 1821376,
   "likes": 1337,
@@ -202727,7 +202778,8 @@
   "firstSeen": "2026-10-08T15:10:08.847Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "gFixed": "J-POP"
  },
  {
   "id": "nico:sm27891004",
@@ -204845,8 +204897,8 @@
   "url": "https://www.nicovideo.jp/watch/sm27132601",
   "title": "鏡花水月／まふまふ",
   "t": "鏡花水月",
-  "kind": "歌ってみた",
-  "g": "ボカロ",
+  "kind": "本家",
+  "g": "J-POP",
   "date": "2015-09-11T19:00:00+09:00",
   "views": 2557594,
   "likes": 734,
@@ -204863,11 +204915,12 @@
   ],
   "uploaderId": 18874531,
   "uploader": null,
-  "by": "まふまふ",
+  "by": "",
   "firstSeen": "2026-10-08T15:10:08.743Z",
   "seed": true,
-  "of": "nico:sm18425761",
-  "a": "niconico:28679538"
+  "p": "まふまふ",
+  "gFixed": "J-POP",
+  "byFixed": true
  },
  {
   "id": "nico:sm27099984",
@@ -218556,9 +218609,10 @@
   ],
   "uploaderId": 4438887,
   "uploader": null,
-  "by": "B】",
+  "by": "SINGERS",
   "firstSeen": "2026-10-08T15:10:08.622Z",
   "seed": true,
+  "byFixed": true,
   "of": "yt:E4tIHBx7bqc",
   "p": "halyosy",
   "a": "youtube:UC-cGs-5HqIutyUrPa8mmDUA"
