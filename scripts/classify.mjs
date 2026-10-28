@@ -982,7 +982,7 @@ export function linkCovers(items) {
     // 自動で集めた歌ってみた（投稿ネタ・リクエスト）でも、原曲より30日以上前の投稿は別の曲なのでつながない
     for (const c of items) {
       const o = c.ofLocked && c.req && !c.byFixed && byId.get(c.of);
-      if (o && ((Date.parse(o.date) || 0) - (Date.parse(c.date) || 0)) / 864e5 > 30 && normalize(c.t) !== normalize(o.t)) { delete c.of; delete c.ofLocked; delete c.req; }
+      if (o && !o.reup && ((Date.parse(o.date) || 0) - (Date.parse(c.date) || 0)) / 864e5 > 30 && normalize(c.t) !== normalize(o.t)) { delete c.of; delete c.ofLocked; delete c.req; }
     }
   }
   const originals = new Map();
@@ -1016,7 +1016,8 @@ export function linkCovers(items) {
     if (o) {
       const early = ((Date.parse(o.date) || 0) - (Date.parse(c.date) || 0)) / 864e5;
       const exact = normalize(t0) === normalize(o.t);
-      if ((!exact && early > 30) || (o.g === "ボカロ" && early > 60)) { c.t = t0; o = null; }
+      // 原曲が消されて出し直された曲（overrides.json の reup）は、前の投稿のころの歌ってみたもつなぐ
+      if (!o.reup && ((!exact && early > 30) || (o.g === "ボカロ" && early > 60))) { c.t = t0; o = null; }
     }
     if (o) { c.of = o.id; c.p = o.p || c.p; c.a = o.p ? o.a : (c.a || o.a); if (o.g !== "その他") c.g = o.g; else if (c.g === "その他") c.g = o.g; }
     // 原曲が見つからない歌ってみたで、曲名に余計な言葉がついているもの（「VOCALOIDでニコニコ動画流星群」「ニコニコ動画流星群を漢らしく」）は、

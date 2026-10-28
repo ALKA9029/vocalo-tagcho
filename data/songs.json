@@ -254066,6 +254066,7 @@
   "a": "niconico:562367",
   "firstSeen": "2026-10-08T14:36:47.318Z",
   "seed": true,
+  "reup": 1,
   "pFilled": true,
   "alt": [
    "yt:dSw8CucthGc"
@@ -256711,7 +256712,7 @@
   "title": "炉心融解を歌ってみた　verよっぺい",
   "t": "炉心融解",
   "kind": "歌ってみた",
-  "g": "その他",
+  "g": "ボカロ",
   "date": "2009-03-26T02:42:38+09:00",
   "views": 6917414,
   "likes": 1560,
@@ -256729,7 +256730,10 @@
   "uploader": null,
   "by": "よっぺい",
   "firstSeen": "2026-10-08T15:10:08.619Z",
-  "seed": true
+  "seed": true,
+  "of": "nico:sm8089993",
+  "p": "iroha",
+  "a": "niconico:562367"
  },
  {
   "id": "nico:sm6529016",
@@ -257693,37 +257697,6 @@
   "pFromTag": true
  },
  {
-  "id": "nico:sm5898072",
-  "src": "niconico",
-  "url": "https://www.nicovideo.jp/watch/sm5898072",
-  "title": "『炉心融解』　バイオリンで弾いてみました。",
-  "t": "炉心融解",
-  "kind": "歌ってみた",
-  "g": "その他",
-  "date": "2009-01-20T21:02:53+09:00",
-  "views": 1542373,
-  "likes": 240,
-  "thumb": "https://nicovideo.cdn.nimg.jp/thumbnails/5898072/5898072",
-  "tags": [
-   "演奏してみた",
-   "フクメン",
-   "炉心融解",
-   "のび太に並ぶほどの就寝速度",
-   "ヴァイオリン",
-   "ボカロオリジナルを演奏してみた",
-   "弾いてみた",
-   "(˘ω˘)ｽﾔｧ",
-   "歌ってみた",
-   "演奏してみた伝説入り",
-   "15周年"
-  ],
-  "uploaderId": 9327171,
-  "uploader": null,
-  "by": "バイオリンで弾いてみました。",
-  "firstSeen": "2026-10-08T15:10:08.918Z",
-  "seed": true
- },
- {
   "id": "nico:sm5865063",
   "src": "niconico",
   "url": "https://www.nicovideo.jp/watch/sm5865063",
@@ -257922,7 +257895,7 @@
   "title": "炉心融解　歌ってみた　【リツカ】",
   "t": "炉心融解",
   "kind": "歌ってみた",
-  "g": "その他",
+  "g": "ボカロ",
   "date": "2008-12-29T21:01:48+09:00",
   "views": 3908706,
   "likes": 620,
@@ -257941,7 +257914,10 @@
   "uploader": null,
   "by": "リツカ",
   "firstSeen": "2026-10-08T15:10:08.660Z",
-  "seed": true
+  "seed": true,
+  "of": "nico:sm8089993",
+  "p": "iroha",
+  "a": "niconico:562367"
  },
  {
   "id": "nico:sm5660854",
@@ -257969,7 +257945,10 @@
   "uploader": null,
   "by": "トゥライ",
   "firstSeen": "2026-10-08T15:10:08.824Z",
-  "seed": true
+  "seed": true,
+  "of": "nico:sm8089993",
+  "p": "iroha",
+  "a": "niconico:562367"
  },
  {
   "id": "nico:sm5567321",

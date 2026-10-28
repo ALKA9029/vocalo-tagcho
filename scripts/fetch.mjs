@@ -668,7 +668,7 @@ async function fetchPickCovers(items) {
       const started = Date.now();
       const res = await fetch("https://snapshot.search.nicovideo.jp/api/v2/snapshot/video/contents/search?" + params, { headers: { "User-Agent": config.userAgent } });
       if (res.ok) {
-        const before = Date.parse(song.date) - 30 * 864e5;   // 原曲より30日以上前の動画は別の曲
+        const before = song.reup ? 0 : Date.parse(song.date) - 30 * 864e5;   // 原曲より30日以上前の動画は別の曲
         const rows = ((await res.json()).data || []).filter(r => !known.has("nico:" + r.contentId) && okTitle(unxml(r.title || "")) && !(Date.parse(r.startTime) < before)).slice(0, perSong);
         for (const r of rows) got.push({ src: "niconico", id: "nico:" + r.contentId, url: "https://www.nicovideo.jp/watch/" + r.contentId,
           title: unxml(r.title || ""), tags: (r.tags || "").split(" ").filter(Boolean).map(unxml), date: r.startTime, views: r.viewCounter, likes: r.likeCounter,
@@ -689,7 +689,7 @@ async function fetchPickCovers(items) {
         if (res.ok) ytIds.push(...((await res.json()).items || []).map(it => it.id?.videoId).filter(v => v && !known.has("yt:" + v) && !ytIds.includes(v)));
         else console.warn(`投稿ネタの歌ってみた（YouTube）「${song.t}」: HTTP ${res.status}`);
       }
-      const vs = (await ytVideos(ytIds, key)).filter(v => !isNoise(v) && !(Date.parse(v.snippet?.publishedAt) < Date.parse(song.date) - 30 * 864e5) && Number(v.statistics?.viewCount || 0) >= minViews && okTitle(v.snippet?.title || "") && !/字幕|転載|reupload|re-upload/i.test(v.snippet?.title || ""))
+      const vs = (await ytVideos(ytIds, key)).filter(v => !isNoise(v) && (song.reup || !(Date.parse(v.snippet?.publishedAt) < Date.parse(song.date) - 30 * 864e5)) && Number(v.statistics?.viewCount || 0) >= minViews && okTitle(v.snippet?.title || "") && !/字幕|転載|reupload|re-upload/i.test(v.snippet?.title || ""))
         .sort((a, b) => Number(b.statistics?.viewCount || 0) - Number(a.statistics?.viewCount || 0)).slice(0, isWanted ? perSong * 2 : perSong);
       for (const v of vs) got.push({ ...ytItem(v, song.g), req: song.id });
     }
