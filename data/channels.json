@@ -1,5 +1,29 @@
 [
  {
+  "id": "UC2Kaq_xADsJSi97iWbttPlQ",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "MAISONdes -メゾン・デ- / 日曜日のメゾンデ",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-28T11:00:11Z",
+  "pinned": true
+ },
+ {
+  "id": "UCfyzrRchEuYWpbWnXNRwNLw",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "シアーミュージック",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-28T11:00:09Z",
+  "pinned": true
+ },
+ {
+  "id": "UC2UqvkWjQGfyTeLumfyWxiQ",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "THE LUV BUGS",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-28T10:00:23Z",
+  "pinned": true
+ },
+ {
   "id": "UCam3IAA-nyfxRL8_wDQ35VA",
   "name": "MIMI",
   "added": "2026-10-09T12:06:54.468Z",
@@ -43,14 +67,6 @@
   "name": "Sakuzyo Official",
   "genre": "ボカロ",
   "lastHit": "2026-10-24T11:35:26Z",
-  "pinned": true
- },
- {
-  "id": "UCfyzrRchEuYWpbWnXNRwNLw",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "シアーミュージック",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-24T11:00:09Z",
   "pinned": true
  },
  {
@@ -298,6 +314,13 @@
   "genre": "ボカロ",
   "lastHit": "2026-10-18T10:00:07Z",
   "pinned": true
+ },
+ {
+  "id": "UCfvBjTMd0jP0OFDJmQeF7wA",
+  "added": "2026-10-28T13:46:02.642Z",
+  "name": "かみやすんば",
+  "genre": "ボカロ",
+  "lastHit": "2026-10-18T08:42:44Z"
  },
  {
   "id": "UCIkE8L1XRrwfB7k8AoxWHtg",
@@ -816,14 +839,6 @@
   "pinned": true
  },
  {
-  "id": "UC2UqvkWjQGfyTeLumfyWxiQ",
-  "added": "2026-10-27T14:15:52.733Z",
-  "name": "THE LUV BUGS",
-  "genre": "ボカロ",
-  "lastHit": "2026-05-20T11:00:06Z",
-  "pinned": true
- },
- {
   "id": "UCktjMRvuBnE_XLVWIMa2H1w",
   "added": "2026-10-09T12:20:22.450Z",
   "name": "TAK / DORIDORI",
@@ -1080,14 +1095,6 @@
   "pinned": true
  },
  {
-  "id": "UC2Kaq_xADsJSi97iWbttPlQ",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "MAISONdes -メゾン・デ- / 日曜日のメゾンデ",
-  "genre": "ボカロ",
-  "lastHit": "2025-11-08T11:00:06Z",
-  "pinned": true
- },
- {
   "id": "UCjA3_co0E8C0_MwkuwNIxwQ",
   "added": "2026-10-27T14:15:52.733Z",
   "name": "タイダサキ",
@@ -1309,14 +1316,6 @@
   "name": "Shaito - Topic",
   "genre": "ボカロ",
   "lastHit": "2025-05-21T10:01:41Z",
-  "pinned": true
- },
- {
-  "id": "UCDGF69S2M4S4ad5Xvjxqqdg",
-  "added": "2026-10-27T14:15:52.733Z",
-  "name": "PizzaNTU(ピザンツ)",
-  "genre": "ボカロ",
-  "lastHit": "2025-05-14T04:00:26Z",
   "pinned": true
  },
  {
@@ -1568,12 +1567,27 @@
   "pinned": true
  },
  {
+  "id": "UCKsVfYfguU3s5vMO5yhcWdw",
+  "added": "2026-10-27T14:15:52.733Z",
+  "name": "STARGLOW Official",
+  "genre": "J-POP",
+  "lastHit": "2026-10-28T11:00:26Z",
+  "pinned": true
+ },
+ {
   "id": "UC8T8_deSUS97DWZeKO_TL9Q",
   "added": "2026-10-22T21:48:45.712Z",
   "name": "NHK MUSIC",
   "genre": "アニソン",
-  "lastHit": "2026-10-28T09:02:08Z",
+  "lastHit": "2026-10-28T09:02:34Z",
   "pinned": true
+ },
+ {
+  "id": "UCwO9rz-7dKqEDI0yIgTRUqQ",
+  "added": "2026-10-09T15:55:32.664Z",
+  "name": "大阪桐蔭高等学校吹奏楽部OB会",
+  "genre": "アニソン",
+  "lastHit": "2026-10-28T09:00:24Z"
  },
  {
   "id": "UCmwgWWVJPuQqWr91bUY3RHw",
@@ -1667,14 +1681,6 @@
   "pinned": true
  },
  {
-  "id": "UCKsVfYfguU3s5vMO5yhcWdw",
-  "added": "2026-10-27T14:15:52.733Z",
-  "name": "STARGLOW Official",
-  "genre": "J-POP",
-  "lastHit": "2026-10-26T12:00:08Z",
-  "pinned": true
- },
- {
   "id": "UCsmXiDP8S40uBeJYxvyulmA",
   "added": "2026-10-26T21:49:00.972Z",
   "name": "JO1",
@@ -1702,13 +1708,6 @@
   "name": "カラオケキー検索",
   "genre": "J-POP",
   "lastHit": "2026-10-26T10:00:23Z"
- },
- {
-  "id": "UCKCb7zirdauYVUPokYvoNTQ",
-  "added": "2026-10-18T21:45:48.802Z",
-  "name": "海琳あおい / Mitama Aoi",
-  "genre": "J-POP",
-  "lastHit": "2026-10-26T09:05:26Z"
  },
  {
   "id": "UCPrjycK4eiQhUw2PnVIq7Gg",
@@ -2089,13 +2088,6 @@
   "name": "親子ユニット ドラゴンエンジェル(ドラエン)",
   "genre": "J-POP",
   "lastHit": "2026-10-23T09:01:21Z"
- },
- {
-  "id": "UCwO9rz-7dKqEDI0yIgTRUqQ",
-  "added": "2026-10-09T15:55:32.664Z",
-  "name": "大阪桐蔭高等学校吹奏楽部OB会",
-  "genre": "アニソン",
-  "lastHit": "2026-10-23T09:00:33Z"
  },
  {
   "id": "UCEjXmgcpphuooHVM63DOn2g",
@@ -2659,13 +2651,6 @@
   "lastHit": "2026-10-17T11:00:15Z"
  },
  {
-  "id": "UCRKiSxlgwDJM51-hKmuabJw",
-  "added": "2026-10-23T21:49:42.946Z",
-  "name": "シェル【歌ってみた】",
-  "genre": "J-POP",
-  "lastHit": "2026-10-17T11:00:10Z"
- },
- {
   "id": "UCO6mA1hC3Gv9jEoCTITjAQw",
   "name": "琶舞 -ʙᴇᴍᴀ-",
   "added": "2026-10-09T12:06:54.468Z",
@@ -3095,6 +3080,22 @@
   "name": "てぃあチャンネル",
   "genre": "J-POP",
   "lastHit": "2026-09-18T09:00:25Z",
+  "pinned": true
+ },
+ {
+  "id": "UCmr9bYmymcBmQ1p2tLBRvwg",
+  "added": "2026-10-28T13:46:02.642Z",
+  "name": "櫻坂46 OFFICIAL YouTube CHANNEL",
+  "genre": "J-POP",
+  "lastHit": "2026-09-16T15:00:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UCf8XzT4HpKrp3ekoGcqqwSQ",
+  "added": "2026-10-28T13:46:02.642Z",
+  "name": "HOKUTO",
+  "genre": "アニソン",
+  "lastHit": "2026-09-16T11:00:06Z",
   "pinned": true
  }
 ]
