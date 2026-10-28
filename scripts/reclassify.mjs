@@ -23,7 +23,7 @@ const out = items.map(old => {
   const merged = { ...fresh, ...keep };
   if (!merged.p && old.p && old.src === "youtube" && normalize(old.p) !== normalize(merged.t || "")) merged.p = old.p;
   const o = overrides[merged.id];
-  if (o) { Object.assign(merged, o); if ("of" in o) merged.ofLocked = true; if ("g" in o) merged.gFixed = o.g; if ("by" in o) merged.byFixed = true; }
+  if (o) { Object.assign(merged, o); if ("of" in o) merged.ofLocked = true; if ("g" in o) merged.gFixed = o.g; if ("by" in o) merged.byFixed = true; if ("rm" in o) merged.rmFixed = true; }
   delete merged.of;
   if (merged.req) { merged.of = merged.req; merged.ofLocked = true; }
   if (o && "of" in o) merged.of = o.of;   // 管理人が手で決めた原曲（overrides.json）

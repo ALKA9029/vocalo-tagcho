@@ -583,6 +583,13 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
   if (video.src === "youtube" && item.kind === "本家" && /(書き下ろし|提供)\S{0,8}セルフカバー|セルフカバーです/.test((video.desc || video.descHead || "").slice(0, 300)) && !ORIGINAL_RE.test(video.title)) {
     item.selfDesc = 1; delete item.v;
   }
+  // シアーミュージック（歌の学校の公式チャンネル）は、ボイストレーナーや生徒がいろんな曲を歌うカバー動画だけ
+  // 「【〇〇が歌う】曲名 / 作者【歌い方解説付き by シアーミュージック】」
+  if (video.src === "youtube" && /^シアーミュージック/.test(video.uploader || "")) {
+    const m = video.title.match(/^【[^】]*?が[歌唄]う】\s*(.+?)(?:\s*[／\/]\s*([^【]+?))?\s*(?:[＜<][^＞>]*[＞>]\s*)?(?:【|by\s|$)/);
+    item.kind = "歌ってみた"; item.by = "シアーミュージック"; delete item.v; delete item.a;
+    if (m) { item.t = m[1].trim(); item.p = (m[2] || "").replace(/\s*(feat\.?|ft\.).*$/i, "").trim(); }
+  }
   return item;
 }
 
@@ -872,11 +879,11 @@ function dropEnglishTail(items) {
 const REMAKE_RE = /(?:19|20)\d\d\s*(?:ver|version|バージョン)|(?:ver|version)\.?\s*(?:19|20)\d\d|リメイク|remake|再録|re-?arrange|リアレンジ|re-?recording/i;
 const REMAKE_TAIL_RE = /[\s　]*[-~～(（\[［]*\s*(?:(?:19|20)\d\d\s*(?:ver(?:sion)?\.?)?|ver(?:sion)?\.?\s*(?:19|20)\d\d|remake|リメイク|re-?arrange|リアレンジ|再録|re-?recording)\s*[-~～)）\]］]*\.?$/i;
 function markRemakes(items) {
-  for (const i of items) { delete i.rm; delete i.rv; }
+  for (const i of items) if (!i.rmFixed) { delete i.rm; delete i.rv; }
   const byT = new Map();
   for (const i of items) if (i.kind === "本家" && normalize(i.t)) (byT.get(normalize(i.t)) || byT.set(normalize(i.t), []).get(normalize(i.t))).push(i);
   for (const i of items) {
-    if (i.kind !== "本家" || !i.t) continue;
+    if (i.kind !== "本家" || !i.t || i.rmFixed) continue;
     const yearTail = /[\s　](?:19|20)\d\d$/.test(i.t);
     if (!REMAKE_RE.test(i.title || "") && !yearTail) continue;
     const base = i.t.replace(REMAKE_TAIL_RE, "").trim() || i.t;

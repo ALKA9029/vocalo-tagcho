@@ -336,7 +336,7 @@ function seg(container, key, options){
 }
 
 const singerText = x => x.vr ? `${x.vr}${x.by ? `（${x.by}）` : ""}` : (x.by || "歌い手不明");
-const remakeLabel = i => /^\d{4}$/.test(i.rv || "") ? `${i.rv}年版` : "リメイク";
+const remakeLabel = i => /^\d{4}$/.test(i.rv || "") ? `${i.rv}年版` : (i.rv || "リメイク");
 function related(i){
   const groups = [];
   // 作者本人の出し直し（リメイク）と元の曲を、おたがいに見つけられるように

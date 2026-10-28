@@ -187,7 +187,7 @@ const thumbImg = i => i.thumb ? `<img src="${esc(i.thumb)}" alt="" loading="lazy
 const li = (i, name, sub, id) => `<li${id ? ` id="${id}"` : ""}${i.thumb ? "" : ' class="nothumb"'}>${thumbImg(i)}<div><div class="name">${name}</div><div class="sub">${sub}</div></div></li>`;
 // 作者本人の出し直し（リメイク）と元の曲のつながり
 function remakeNote(i) {
-  const lab = x => /^\d{4}$/.test(x.rv || "") ? `${x.rv}年版` : "リメイク";
+  const lab = x => /^\d{4}$/.test(x.rv || "") ? `${x.rv}年版` : (x.rv || "リメイク");
   if (i.rm && byId.has(i.rm)) { const o = byId.get(i.rm); return `<p class="note">作者本人による新しいバージョンです。元の曲：<a href="${songUrl(o.id)}">${esc(o.t)}（${fmtDate(o.date).slice(0, 4)}）</a>　歌ってみたは元の曲のページにまとめています。</p>`; }
   const rs = items.filter(x => x.rm === i.id);
   return rs.length ? `<p class="note">新しいバージョン：${rs.map(x => `<a href="${songUrl(x.id)}">${esc(x.t)}（${lab(x)}）</a>`).join("　")}</p>` : "";
@@ -201,7 +201,7 @@ function songPage(i) {
   const who = credit(i);
   const title = covers.length
     ? `${i.t}${i.p ? ` / ${i.p}` : ""}｜歌ってみた${covers.length}件と印象タグ - TagTune`
-    : `${i.t}${i.rm ? `（${/^\d{4}$/.test(i.rv || "") ? `${i.rv}年版` : "リメイク"}）` : ""}${who ? ` / ${who}` : ""}｜印象タグ - TagTune`;
+    : `${i.t}${i.rm ? `（${/^\d{4}$/.test(i.rv || "") ? `${i.rv}年版` : (i.rv || "リメイク")}）` : ""}${who ? ` / ${who}` : ""}｜印象タグ - TagTune`;
   const description = `「${i.t}」${i.p ? `（${who}）` : ""}の${srcNames(i)}の動画${covers.length ? `と、歌ってみた${covers.length}件` : ""}をまとめたページ。聴いた人がつけた「エモい」「爽やか」などの印象タグで、似た曲も探せます。`;
   const creditLine = [
     i.p && `作者：${creatorLink(i)}`,
@@ -215,7 +215,7 @@ function songPage(i) {
     ? `<button type="button" class="thumbbtn" ${playAttrs(firstPlay, i.t)} aria-label="「${esc(i.t)}」をこのページで再生"><img class="thumb" src="${esc(thumbOf(i))}" alt="" referrerpolicy="no-referrer"><span class="play" aria-hidden="true">▶</span></button>`
     : `<img class="thumb" src="${esc(thumbOf(i))}" alt="「${esc(i.t)}」のサムネイル" referrerpolicy="no-referrer">`) : ""}
   <div>
-    <h1>${esc(i.t)}${i.rm ? ` <small class="rv">${esc(/^\d{4}$/.test(i.rv || "") ? `${i.rv}年版` : "リメイク")}</small>` : ""}</h1>
+    <h1>${esc(i.t)}${i.rm ? ` <small class="rv">${esc(/^\d{4}$/.test(i.rv || "") ? `${i.rv}年版` : (i.rv || "リメイク"))}</small>` : ""}</h1>
     <p class="credit">${creditLine}</p>
     <p class="meta"><span class="badge genre">${esc(i.g)}</span><span class="badge">本家</span><span>${srcNames(i)}</span><span>${fmtDate(i.date)} 投稿</span></p>
     <p class="actions">

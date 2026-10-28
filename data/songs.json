@@ -200,7 +200,7 @@
   "url": "https://www.youtube.com/watch?v=MnDvWXtzrG8",
   "title": "【ボイストレーナーと生徒が歌う】チェリー / スピッツ【歌い方解説付き by シアーミュージック】",
   "t": "チェリー",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2026-10-28T11:00:09Z",
   "views": 7247,
@@ -218,7 +218,7 @@
   "uploader": "シアーミュージック",
   "descHead": "【本家MV】\nチェリー / スピッツ\nhttps://youtu.be/Eze6-eHmtJg?si=rKRoWvCu1GFDjwWK\n\n◎シアーミュージックTikTok\nhttps://www.tiktok.com/@sheermusic.official\n◎シアーミュージックInstagram\nhttps://www.instagram.com/sheermusic.official/\n◎シアーミュージックX\nhttps://twitter.com/sheer_inc\n◎シアーミュージックニコニコ動画\nhttps://ch.nicovideo.jp/sheer\n﻿◎シアーミュージックファン",
   "p": "スピッツ",
-  "a": "name:スピッツ",
+  "by": "シアーミュージック",
   "firstSeen": "2026-10-28T12:06:20.639Z"
  },
  {
@@ -6901,8 +6901,8 @@
   "url": "https://www.youtube.com/watch?v=znAIxacseog",
   "title": "【ボイストレーナーと生徒が歌う】ロミオとシンデレラ / doriko【歌い方解説付き by シアーミュージック】",
   "t": "ロミオとシンデレラ",
-  "kind": "本家",
-  "g": "J-POP",
+  "kind": "歌ってみた",
+  "g": "ボカロ",
   "date": "2026-10-24T11:00:09Z",
   "views": 108577,
   "likes": 1592,
@@ -6918,9 +6918,11 @@
   "uploaderId": "UCfyzrRchEuYWpbWnXNRwNLw",
   "uploader": "シアーミュージック",
   "descHead": "【本家MV】\nロミオとシンデレラ / doriko\nhttps://youtu.be/9HrOqmiEsN8?si=hJSeb3gtYc4NgYeN\n﻿\n◎シアーミュージックTikTok\nhttps://www.tiktok.com/@sheermusic.official\n◎シアーミュージックInstagram\nhttps://www.instagram.com/sheermusic.official/\n◎シアーミュージックX\nhttps://twitter.com/sheer_inc\n◎シアーミュージックニコニコ動画\nhttps://ch.nicovideo.jp/sheer\n﻿◎シアーミ",
-  "p": "シアーミュージック",
-  "a": "youtube:UCfyzrRchEuYWpbWnXNRwNLw",
-  "firstSeen": "2026-10-24T21:45:19.967Z"
+  "p": "vo.初音ミク",
+  "by": "シアーミュージック",
+  "firstSeen": "2026-10-24T21:45:19.967Z",
+  "of": "nico:sm6666016",
+  "a": "niconico:655340"
  },
  {
   "id": "yt:3LSKX8YSJJk",
@@ -16435,33 +16437,6 @@
   "p": "TOMORA",
   "a": "name:tomora",
   "firstSeen": "2026-10-22T22:56:29.200Z"
- },
- {
-  "id": "yt:ORH4_0Hq6_8",
-  "src": "youtube",
-  "url": "https://www.youtube.com/watch?v=ORH4_0Hq6_8",
-  "title": "【ボイストレーナーと生徒が歌う】邦楽ロックメドレー⑥【歌い方解説付き by シアーミュージック】（シャングリラ - 狭心症 - 言って。 - 閃光等）",
-  "t": "邦楽ロックメドレー6",
-  "kind": "本家",
-  "g": "J-POP",
-  "date": "2026-10-21T11:00:10Z",
-  "views": 47378,
-  "likes": 427,
-  "thumb": "https://i.ytimg.com/vi/ORH4_0Hq6_8/mqdefault.jpg",
-  "tags": [
-   "しらスタ",
-   "シアー",
-   "シアーミュージック",
-   "歌ってみた",
-   "カラオケ",
-   "ボイトレ"
-  ],
-  "uploaderId": "UCfyzrRchEuYWpbWnXNRwNLw",
-  "uploader": "シアーミュージック",
-  "descHead": "◎シアーミュージックTikTok\nhttps://www.tiktok.com/@sheermusic.official\n◎シアーミュージックInstagram\nhttps://www.instagram.com/sheermusic.official/\n◎シアーミュージックX\nhttps://twitter.com/sheer_inc\n◎シアーミュージックニコニコ動画\nhttps://ch.nicovideo.jp/sheer\n﻿◎シアーミュージックファンクラブサイト\nhttps://sheermusic.bitfan.id/registrations/5329/payment\n﻿\n【タイム",
-  "p": "シアーミュージック",
-  "a": "youtube:UCfyzrRchEuYWpbWnXNRwNLw",
-  "firstSeen": "2026-10-21T11:16:31.913Z"
  },
  {
   "id": "yt:0Qlv3Dlodhg",
@@ -41565,9 +41540,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=1ezNy47bYU8",
   "title": "ワールドイズマイン CPK! Remix / 緑仙 Cover",
-  "t": "ワールドイズマイン",
+  "t": "ワールドイズマイン CPK! Remix",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2026-04-24T10:00:06Z",
   "views": 558164,
   "likes": 14639,
@@ -41603,11 +41578,12 @@
   "descHead": "【Official MV】ワールドイズマイン CPK! Remix (かぐや&月見ヤチヨ ver.) – ryo (supercell) / from 超かぐや姫！\nhttps://youtu.be/g6yAXqs7GpQ?si=HW4jMc5hCL0Sw03x\n\nVocal：緑仙 \nhttps://t.co/OQhPMsxBXb\nhttps://twitter.com/midori_2434\n\nMix：ソノイ\nhttps://x.com/_Sonoi\nillustration：白湯\nhttps://x.com/_sayu_T\nmovie：らいり\nhttps://x.com/_Rai28\n\n\n",
   "by": "緑仙",
   "pHint": "緑仙 Cover",
-  "p": "ryo",
-  "a": "niconico:317063",
+  "p": "緑仙 Cover",
+  "a": "緑仙cover",
   "firstSeen": "2026-10-27T14:07:12.789Z",
   "seed": true,
-  "of": "nico:sm3504435"
+  "ofLocked": true,
+  "of": "yt:g6yAXqs7GpQ"
  },
  {
   "id": "yt:OHAjc-ayhus",
@@ -43067,9 +43043,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=Nsw569YkhBQ",
   "title": "ワールドイズマイン CPK! Remix / 赤見かるび【cover】",
-  "t": "ワールドイズマイン",
+  "t": "ワールドイズマイン CPK! Remix",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2026-04-12T10:00:06Z",
   "views": 238587,
   "likes": 7318,
@@ -43106,8 +43082,8 @@
   "firstSeen": "2026-10-27T14:07:12.803Z",
   "seed": true,
   "p": "ryo",
-  "of": "nico:sm3504435",
-  "a": "niconico:317063"
+  "ofLocked": true,
+  "of": "yt:g6yAXqs7GpQ"
  },
  {
   "id": "yt:jl7GmJBNxk4",
@@ -43402,9 +43378,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=8Yn2-21Eh_8",
   "title": "ワールドイズマイン CPK! Remix covered by 獅子神レオナ × 稀羽すう",
-  "t": "ワールドイズマイン",
+  "t": "ワールドイズマイン CPK! Remix",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2026-04-09T13:00:06Z",
   "views": 73968,
   "likes": 2183,
@@ -43442,8 +43418,8 @@
   "firstSeen": "2026-10-27T14:07:12.812Z",
   "seed": true,
   "p": "ryo",
-  "of": "nico:sm3504435",
-  "a": "niconico:317063"
+  "ofLocked": true,
+  "of": "yt:g6yAXqs7GpQ"
  },
  {
   "id": "yt:c69hBzQFkJk",
@@ -46443,9 +46419,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=d7BHggnitso",
   "title": "ワールドイズマイン CPK! Remix / 棗いつき(cover)",
-  "t": "ワールドイズマイン",
+  "t": "ワールドイズマイン CPK! Remix",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2026-03-14T10:00:52Z",
   "views": 169346,
   "likes": 4436,
@@ -46465,11 +46441,12 @@
   "descHead": "🔸Original\nワールドイズマイン CPK! Remix (かぐや&月見ヤチヨ ver.) – ryo (supercell) / from 超かぐや姫！\nhttps://youtu.be/g6yAXqs7GpQ\nhttps://youtu.be/rXcPRKriVsI\n\n🔸Credits（敬称略）\nVocal：棗いつき\n- https://x.com/itsukinatsume\nIllust：街風ふーな\n- https://x.com/Hell_fuuna\nMix：妃舞ゆにこ\n- https://x.com/ema_yuni_ko\n\n動画の無断転載や、音楽ゲーム等での使用は許可してお",
   "by": "棗いつき",
   "pHint": "棗いつき",
-  "p": "ryo",
-  "a": "niconico:317063",
+  "p": "棗いつき",
+  "a": "棗いつき",
   "firstSeen": "2026-10-27T14:07:12.822Z",
   "seed": true,
-  "of": "nico:sm3504435"
+  "ofLocked": true,
+  "of": "yt:g6yAXqs7GpQ"
  },
  {
   "id": "yt:qls3KwNiwKk",
@@ -46891,9 +46868,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=vkqjzJ1Ef7Y",
   "title": "ワールドイズマイン CPK! Remix/Ｐ丸様。【歌ってみた】",
-  "t": "ワールドイズマイン",
+  "t": "ワールドイズマイン CPK! Remix",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2026-03-08T04:00:51Z",
   "views": 275870,
   "likes": 13917,
@@ -46920,8 +46897,8 @@
   "firstSeen": "2026-10-27T14:07:12.822Z",
   "seed": true,
   "p": "ryo",
-  "of": "nico:sm3504435",
-  "a": "niconico:317063"
+  "ofLocked": true,
+  "of": "yt:g6yAXqs7GpQ"
  },
  {
   "id": "yt:vXb66qeIkZI",
@@ -51702,9 +51679,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=g6yAXqs7GpQ",
   "title": "【Official MV】ワールドイズマイン CPK! Remix (かぐや&月見ヤチヨ ver.) – ryo (supercell) / from 超かぐや姫！",
-  "t": "from 超かぐや姫!",
+  "t": "ワールドイズマイン",
   "kind": "本家",
-  "g": "J-POP",
+  "g": "アニソン",
   "date": "2026-01-23T11:59:06Z",
   "views": 8054196,
   "likes": 172017,
@@ -51713,11 +51690,17 @@
   "uploaderId": "UCNrdR2m8fxDBNbxJDBFPFNQ",
   "uploader": "『超かぐや姫 ! 』公式",
   "descHead": "Vocal：かぐや(cv.夏吉ゆうこ) 月見ヤチヨ(cv.早見沙織)\nLyrics, Music & Arrangement：ryo (supercell)\nMixing & Mastering：ryo (supercell)\nAll Other Instruments & Programming：ryo (supercell)\nRecording Engineer：Keisuke Suwa\n\nInst / lyric : https://www.ryo-supercell.com/karaoke\n商業利用を除き、ご自由にお使いください。\nnon-commercial purposes onl",
-  "p": "ワールドイズマイン CPK! Remix",
-  "a": "name:ワールドイズマインcpkremix",
+  "p": "ryo",
+  "a": "niconico:317063",
   "nicoSrc": "nico:sm3504435",
   "firstSeen": "2026-10-27T14:07:12.575Z",
-  "seed": true
+  "seed": true,
+  "rm": "nico:sm3504435",
+  "rv": "CPK! Remix",
+  "gFixed": "アニソン",
+  "rmFixed": true,
+  "v": "初音ミク",
+  "reprintOf": "nico:sm3504435"
  },
  {
   "id": "yt:txIFj3E-kuk",
@@ -51980,7 +51963,10 @@
   "v": "初音ミク",
   "a": "niconico:317063",
   "firstSeen": "2026-10-27T14:07:12.860Z",
-  "seed": true
+  "seed": true,
+  "rm": "nico:sm1715919",
+  "rv": "CPK! Remix",
+  "rmFixed": true
  },
  {
   "id": "yt:kcsWkLgOU74",
@@ -92658,8 +92644,8 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=WPdp6k9eIsc",
   "title": "【小寺貴裕が歌う】Diamonds ＜ダイアモンド＞ 【誕生日企画】 by シアーミュージック",
-  "t": "Diamonds by",
-  "kind": "本家",
+  "t": "Diamonds",
+  "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2024-08-30T11:00:07Z",
   "views": 324529,
@@ -92670,7 +92656,7 @@
   "uploader": "シアーミュージック",
   "descHead": "【本家MV】\nDiamonds ＜ダイアモンド＞ / プリンセス プリンセス\nhttps://youtu.be/IKjRLKQo7O0\n\n小寺貴裕(シアーミュージック池袋西口校ボイストレーナー)\nhttps://www.youtube.com/channel/UC_P8mKdwDS-YV-DoLM0blyA\nhttps://www.instagram.com/tqrozland/\nhttps://twitter.com/TqROsqmq\n\nエマ(シアーミュージック札幌校生徒)\nhttps://www.youtube.com/channel/UCVe-gDdF0FNj9e_dXrI7A-Q\nht",
   "p": "シアーミュージック",
-  "a": "youtube:UCfyzrRchEuYWpbWnXNRwNLw",
+  "by": "シアーミュージック",
   "firstSeen": "2026-10-27T14:07:12.564Z",
   "seed": true
  },
@@ -99561,7 +99547,7 @@
   "url": "https://www.youtube.com/watch?v=ilp3GUOkSjc",
   "title": "【Riaiが歌う】ENDLESS STORY / REIRA starring YUNA ITO【誕生日企画】 by シアーミュージック",
   "t": "ENDLESS STORY",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2024-03-28T11:00:07Z",
   "views": 190931,
@@ -99571,8 +99557,8 @@
   "uploaderId": "UCfyzrRchEuYWpbWnXNRwNLw",
   "uploader": "シアーミュージック",
   "descHead": "【本家】\nENDLESS STORY / REIRA starring YUNA ITO\n\nRiai(シアーミュージックライブ株式会社代表取締役社長)\nhttps://instagram.com/vo__riai\n\n【タイムライン】 \n0:00 イントロ by Riai\n0:13 Aメロ① by Riai\n0:25 Aメロ② by Riai\n0:41 Bメロ① by Riai\n0:55 サビ① by Riai\n1:11 サビ② by Riai\n1:33 Aメロ③ by Riai\n1:45 Aメロ④ by Riai\n2:01 Bメロ② by Riai\n2:15 サビ③ by Riai\n2:31 ",
-  "p": "シアーミュージック",
-  "a": "youtube:UCfyzrRchEuYWpbWnXNRwNLw",
+  "p": "REIRA starring YUNA ITO",
+  "by": "シアーミュージック",
   "firstSeen": "2026-10-27T14:07:12.761Z",
   "seed": true
  },
@@ -104224,8 +104210,8 @@
   "url": "https://www.youtube.com/watch?v=FpnoO72NcRM",
   "title": "【シアーベンジャーズが歌う】レクイエム / Kanaria×星街すいせい【誕生日企画】by シアーミュージック",
   "t": "レクイエム",
-  "kind": "本家",
-  "g": "J-POP",
+  "kind": "歌ってみた",
+  "g": "ボカロ",
   "date": "2023-12-04T11:00:10Z",
   "views": 502839,
   "likes": 5732,
@@ -104234,10 +104220,12 @@
   "uploaderId": "UCfyzrRchEuYWpbWnXNRwNLw",
   "uploader": "シアーミュージック",
   "descHead": "【本家MV】\nレクイエム / Kanaria×星街すいせい\nhttps://youtu.be/5Jja39-69G8\n\nMARIKA(シアーミュージック宇都宮校ボイストレーナー)\nhttps://www.instagram.com/sasaki_marika/\nhttps://www.youtube.com/channel/UCX23Z9X0m_V3xeWH7_Wb5rQ\nhttps://www.tiktok.com/@sasaki_marika\n\nしんぐよしたか(シアーミュージック小倉校ボイストレーナー)\nhttps://www.instagram.com/y_______sing/\nhtt",
-  "p": "シアーミュージック",
-  "a": "youtube:UCfyzrRchEuYWpbWnXNRwNLw",
+  "p": "Kanaria",
+  "by": "シアーミュージック",
   "firstSeen": "2026-10-27T14:07:12.761Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:5Jja39-69G8",
+  "a": "youtube:UC10BM9XdLdrvB8japwmRUvA"
  },
  {
   "id": "yt:abKcYyQ1V7Y",
@@ -111192,7 +111180,7 @@
   "url": "https://www.youtube.com/watch?v=FMSkVQdVYtI",
   "title": "【ボイストレーナーが歌う】シャルル / バルーン feat.flower【歌い方解説付き by シアーミュージック】",
   "t": "シャルル",
-  "kind": "本家",
+  "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2023-06-13T11:00:07Z",
   "views": 1933376,
@@ -111202,12 +111190,12 @@
   "uploaderId": "UCfyzrRchEuYWpbWnXNRwNLw",
   "uploader": "シアーミュージック",
   "descHead": "【本家MV】\nシャルル / バルーン feat.flower\nhttps://youtu.be/TA5OFS_xX0c\n\n◎シアーミュージックTikTok\nhttps://www.tiktok.com/@sheermusic.official\n◎シアーミュージックInstagram\nhttps://www.instagram.com/sheermusic.official/\n◎シアーミュージックTwitter\nhttps://twitter.com/sheer_inc\n◎シアーミュージックニコニコ動画\nhttps://ch.nicovideo.jp/sheer\n\n【タイムライン】\n0:00 イ",
-  "p": "バルーン",
-  "v": "flower",
-  "a": "niconico:14203891",
+  "p": "須田景凪 バルーン",
+  "by": "シアーミュージック",
   "firstSeen": "2026-10-09T12:20:22.400Z",
   "seed": true,
-  "dup": "nico:sm29822304"
+  "of": "yt:TA5OFS_xX0c",
+  "a": "youtube:UC3Bjw_Ek1FTbhEKZsh9uo1w"
  },
  {
   "id": "yt:iBbNpywXb9k",
@@ -195932,10 +195920,7 @@
   "firstSeen": "2026-10-08T14:36:47.319Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true,
-  "alt": [
-   "yt:FMSkVQdVYtI"
-  ]
+  "pFromTag": true
  },
  {
   "id": "nico:sm29813450",
