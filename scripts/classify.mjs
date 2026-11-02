@@ -216,6 +216,8 @@ export function parseTitle(raw) {
       // 「曲名 - 歌声 MV」（右が歌声の名前だけ）のときは左が曲名
       const right = dash[2].replace(/\s*(MV|PV)$/i, "").trim(), rn = splitNames(right);
       if (rn.voices.length && !rn.others.length) { rest = dash[1]; voice = rn.voices[0]; }
+      // 「曲名 - 〇〇 一緒に歌いました」「曲名 - 〇〇 歌ってみた」（右が歌った人）
+      else if (/歌いました|歌ってみ|うたってみ|cover|カバー/i.test(dash[2])) { rest = dash[1]; creator = dash[2].replace(/\s*(一緒に)?\s*(歌いました|歌ってみ\S*|うたってみ\S*|cover(ed)?|カバー)\s*/gi, " ").trim(); }
       else { creator = dash[1].trim(); rest = dash[2]; }
     }
     voice = featOf(rest) || voice || null;
