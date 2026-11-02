@@ -620,8 +620,16 @@ async function fetchManual(knownIds) {
   // まとめて追加する動画（data/add-bulk.json：IDの一覧）：一度だけ取りにいって、音楽の動画（音楽カテゴリか、タイトルに歌ってみた・cover・MVなど）だけ入れる。
   // 取りにいったら一覧は空にする
   const bulk = (await readJson("data/add-bulk.json", [])).filter(id => id?.startsWith("yt:") && !knownIds.has(id)).map(id => id.slice(3));
-  if (!key || (!yt.length && !bulk.length)) return [];
-  const got = (await ytVideos(yt, key)).map(v => ({ ...ytItem(v, "J-POP"), seed: true }));
+  // ニコニコの動画（"nico:sm〇〇"）は、動画情報API（getthumbinfo）で1本ずつ取りにいく
+  const nicoGot = [];
+  for (const id of list.map(x => x.id).filter(id => id?.startsWith("nico:") && !knownIds.has(id))) {
+    const v = await nicoThumb(id.slice(5)).catch(() => null);
+    if (v) nicoGot.push({ ...v, seed: true }); else console.log(`手で追加する動画 ${id}: 取れなかった`);
+    await sleep(1000);
+  }
+  if (nicoGot.length) console.log(`手で追加する動画（ニコニコ）: ${nicoGot.length}本`);
+  if (!key || (!yt.length && !bulk.length)) return nicoGot;
+  const got = [...nicoGot, ...(await ytVideos(yt, key)).map(v => ({ ...ytItem(v, "J-POP"), seed: true }))];
   console.log(`手で追加する動画: ${got.length}本`);
   if (bulk.length) {
     const MUSICISH = /歌ってみた|歌わせて|cover|カバー|\bMV\b|Music Video|feat\.|ft\.|オリジナル曲|Official (Audio|Video)|Lyric/i;
