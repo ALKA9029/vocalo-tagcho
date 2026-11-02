@@ -505,12 +505,12 @@ await put("s/index.html", singerIndex()); urls.push("/s/");
   const card = ({ i, text }) => `<li class="pick">${thumbOf(i) ? `<img src="${esc(thumbOf(i))}" alt="" referrerpolicy="no-referrer">` : ""}<div>
   <p class="name"><a href="${songUrl(i.id)}" target="_blank">${esc(i.t)}</a> <span class="note">${esc(credit(i))}・${esc(i.g)}</span></p>
   <textarea rows="8">${esc(text)}</textarea>
-  <p class="share"><span class="cnt"></span><a class="btn primary post" href="#" target="_blank" rel="noopener">𝕏 で投稿</a><button type="button" class="btn copy">コピー</button></p>
+  <p class="share"><span class="cnt"></span><a class="btn primary post" href="#" target="_blank" rel="noopener">𝕏 で投稿</a><button type="button" class="btn copy">コピー</button><button type="button" class="btn sched" title="文章をコピーして、予約投稿ができるいつもの投稿画面を開く">🗓 予約用</button></p>
 </div></li>`;
   const body = `
 <header>
   <h1>今日の投稿ネタ <small class="rv">${today.replace(/-/g, "/")}</small></h1>
-  <p class="note">毎朝の自動更新で作り直す、X（@tagtune_net）に投稿するためのネタ帳。各枠から好きな1曲を選んで「𝕏 で投稿」。文章はここで直してから投稿できます。昼と夜の分は、パソコン版Xの予約投稿（投稿画面のカレンダーのアイコン）で予約しておくと楽です。一度出た曲は1年間は出ません。</p>
+  <p class="note">毎朝の自動更新で作り直す、X（@tagtune_net）に投稿するためのネタ帳。各枠から好きな1曲を選んで「𝕏 で投稿」。文章はここで直してから投稿できます。予約するときは「🗓 予約用」：文章をコピーしてXのいつもの投稿画面を開くので、貼りつけてからカレンダーのアイコンで日時を決めてね（「𝕏 で投稿」の画面では予約ができません）。一度出た曲は1年間は出ません。</p>
 </header>
 ${slots.map(s => `<section><h2>${esc(s.label)}<span class="note">　おすすめ ${s.time} ごろ</span></h2>${s.list.length ? `<ul class="picks">${s.list.map(card).join("")}</ul>` : `<p class="note">候補が見つかりませんでした。</p>`}</section>`).join("\n")}
 <style>.picks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:18px}.pick{display:grid;grid-template-columns:160px 1fr;gap:14px;align-items:start}.pick img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;background:var(--line)}@media (max-width:560px){.pick{grid-template-columns:1fr}}.pick textarea{width:100%;font:inherit;font-size:14px;line-height:1.6;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);resize:vertical}.pick .name{margin-bottom:6px}.cnt{font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-right:auto;align-self:center}.cnt.over{color:var(--accent);font-weight:700}h2 .note{font-weight:400}</style>
@@ -522,6 +522,7 @@ ${slots.map(s => `<section><h2>${esc(s.label)}<span class="note">　おすすめ
     const upd = () => { const w = weight(ta.value); cnt.textContent = w + " / 280"; cnt.classList.toggle("over", w > 280); post.href = "https://x.com/intent/post?text=" + encodeURIComponent(ta.value); };
     ta.addEventListener("input", upd); upd();
     copy.addEventListener("click", async () => { try { await navigator.clipboard.writeText(ta.value); copy.textContent = "✓ コピーしたよ"; } catch { ta.select(); } setTimeout(() => copy.textContent = "コピー", 1500); });
+    sched.addEventListener("click", async () => { try { await navigator.clipboard.writeText(ta.value); } catch {} window.open("https://x.com/compose/post", "_blank", "noopener"); sched.textContent = "✓ コピーした・貼りつけてね"; setTimeout(() => sched.textContent = "🗓 予約用", 2500); });
   }
 })();
 </script>
