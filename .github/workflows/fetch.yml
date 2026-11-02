@@ -49,5 +49,9 @@ jobs:
             echo "変更なし"
           else
             git commit -m "曲データを更新 $(TZ=Asia/Tokyo date '+%Y-%m-%d')"
-            git push
+            # 実行中に別の変更が入っていたら（手での修正など）、取りこんでから送り直す
+            for i in 1 2 3; do
+              git push && break
+              git pull --rebase -X theirs origin main || { git rebase --abort; exit 1; }
+            done
           fi
