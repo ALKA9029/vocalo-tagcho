@@ -1649,8 +1649,9 @@
   "id": "UCaZ17KNeiVkQkeG7i2WDOnQ",
   "added": "2026-11-03T21:25:01.582Z",
   "name": "桑田佳祐",
-  "genre": "J-POP",
-  "lastHit": "2026-11-03T03:00:30Z"
+  "genre": "アニソン",
+  "lastHit": "2026-11-03T03:00:31Z",
+  "pinned": true
  },
  {
   "id": "UCoEIdZkDEZdrCDCJSqwifzw",
@@ -1688,7 +1689,15 @@
   "added": "2026-11-03T21:25:01.582Z",
   "name": "SUPER DRAGON OFFICIAL",
   "genre": "アニソン",
-  "lastHit": "2026-11-02T11:00:07Z"
+  "lastHit": "2026-11-02T11:00:07Z",
+  "pinned": true
+ },
+ {
+  "id": "UChbU0n7P86fWdZtlzCNCeGg",
+  "added": "2026-11-03T21:25:01.582Z",
+  "name": "M!LK - Topic",
+  "genre": "J-POP",
+  "lastHit": "2026-11-02T10:00:38Z"
  },
  {
   "id": "UCGQg0ZjM_QQ2jvUd5j9Fp-Q",
@@ -1697,13 +1706,6 @@
   "genre": "J-POP",
   "lastHit": "2026-11-02T10:00:37Z",
   "pinned": true
- },
- {
-  "id": "UChbU0n7P86fWdZtlzCNCeGg",
-  "added": "2026-11-03T21:25:01.582Z",
-  "name": "M!LK - Topic",
-  "genre": "J-POP",
-  "lastHit": "2026-11-02T10:00:37Z"
  },
  {
   "id": "UCNMbL86u5LBeO_BWHp5pJ5g",
@@ -1718,7 +1720,8 @@
   "added": "2026-11-03T21:25:01.582Z",
   "name": "AK-69 Official Channel",
   "genre": "J-POP",
-  "lastHit": "2026-11-02T09:00:09Z"
+  "lastHit": "2026-11-02T09:00:09Z",
+  "pinned": true
  },
  {
   "id": "UCH3rQwjymt2WWLKpDbAb2Dg",
@@ -2104,7 +2107,8 @@
   "added": "2026-11-03T21:25:01.582Z",
   "name": "こっちのけんと",
   "genre": "J-POP",
-  "lastHit": "2026-10-30T12:00:07Z"
+  "lastHit": "2026-10-30T12:00:07Z",
+  "pinned": true
  },
  {
   "id": "UCu2n3qHuOuQIygREMnWeQWg",
@@ -2166,13 +2170,6 @@
   "name": "砂糖の缶詰",
   "genre": "J-POP",
   "lastHit": "2026-10-30T10:00:01Z"
- },
- {
-  "id": "UC8yjkVmGKbonpskqWlwgrsQ",
-  "added": "2026-10-30T21:54:14.548Z",
-  "name": "4YN しゆん【騎士X】",
-  "genre": "J-POP",
-  "lastHit": "2026-10-30T09:00:08Z"
  },
  {
   "id": "UCqtGK-xDHyC_3WWBB0cVC5A",
@@ -3156,6 +3153,14 @@
   "name": "町田ちま【にじさんじ】",
   "genre": "アニソン",
   "lastHit": "2026-09-03T11:00:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UCNZHLeBjtWAIpgh-LONoBHA",
+  "added": "2026-11-03T21:32:43.245Z",
+  "name": "Rain ch.雨宿れいん",
+  "genre": "J-POP",
+  "lastHit": "2026-09-01T11:00:21Z",
   "pinned": true
  }
 ]
