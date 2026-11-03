@@ -518,11 +518,11 @@ ${slots.map(s => `<section><h2>${esc(s.label)}<span class="note">　おすすめ
 (() => {
   const weight = s => { let n = 0; for (const c of s.replace(/https?:\\/\\/\\S+/g, "x".repeat(23))) { const cp = c.codePointAt(0); n += (cp <= 0x10ff || (cp >= 0x2000 && cp <= 0x200d) || (cp >= 0x2010 && cp <= 0x201f) || (cp >= 0x2032 && cp <= 0x2037)) ? 1 : 2; } return n; };
   for (const li of document.querySelectorAll(".pick")) {
-    const ta = li.querySelector("textarea"), cnt = li.querySelector(".cnt"), post = li.querySelector(".post"), copy = li.querySelector(".copy");
+    const ta = li.querySelector("textarea"), cnt = li.querySelector(".cnt"), post = li.querySelector(".post"), copy = li.querySelector(".copy"), sched = li.querySelector(".sched");
     const upd = () => { const w = weight(ta.value); cnt.textContent = w + " / 280"; cnt.classList.toggle("over", w > 280); post.href = "https://x.com/intent/post?text=" + encodeURIComponent(ta.value); };
     ta.addEventListener("input", upd); upd();
     copy.addEventListener("click", async () => { try { await navigator.clipboard.writeText(ta.value); copy.textContent = "✓ コピーしたよ"; } catch { ta.select(); } setTimeout(() => copy.textContent = "コピー", 1500); });
-    sched.addEventListener("click", async () => { try { await navigator.clipboard.writeText(ta.value); } catch {} window.open("https://x.com/compose/post", "_blank", "noopener"); sched.textContent = "✓ コピーした・貼りつけてね"; setTimeout(() => sched.textContent = "🗓 予約用", 2500); });
+    sched.addEventListener("click", () => { navigator.clipboard.writeText(ta.value).catch(() => {}); window.open("https://x.com/compose/post", "_blank", "noopener"); sched.textContent = "✓ コピーした・貼りつけてね"; setTimeout(() => sched.textContent = "🗓 予約用", 2500); });
   }
 })();
 </script>
