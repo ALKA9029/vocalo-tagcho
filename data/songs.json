@@ -171914,7 +171914,7 @@
   "url": "https://www.youtube.com/watch?v=nteGq061Kz4",
   "title": "メカクシコード",
   "t": "メカクシコード",
-  "kind": "歌ってみた",
+  "kind": "本家",
   "g": "ボカロ",
   "date": "2018-07-09T10:58:51Z",
   "views": 458244,
@@ -171935,10 +171935,9 @@
   "a": "youtube:UCoevh_x8j8VepBc1i4Bbqtg",
   "firstSeen": "2026-11-03T21:32:12.306Z",
   "seed": true,
-  "of": "nico:sm14595248",
-  "by": "じん",
-  "selfCover": 1,
-  "self": 1
+  "v": "初音ミク",
+  "gFixed": "ボカロ",
+  "dup": "nico:sm14595248"
  },
  {
   "id": "yt:rpEObcGvxP4",
@@ -244116,7 +244115,10 @@
   "firstSeen": "2026-10-08T14:36:47.352Z",
   "seed": true,
   "pFilled": false,
-  "pFromTag": true
+  "pFromTag": true,
+  "alt": [
+   "yt:nteGq061Kz4"
+  ]
  },
  {
   "id": "nico:sm14588921",
