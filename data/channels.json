@@ -211,27 +211,6 @@
   "pinned": true
  },
  {
-  "id": "UCxtrwP0kbxMySsRnLTvVaFA",
-  "added": "2026-10-29T21:58:44.733Z",
-  "name": "miyu",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-28T11:00:11Z"
- },
- {
-  "id": "UC3VBNT2HNXuZsgodGlSYLuA",
-  "added": "2026-11-01T21:52:11.888Z",
-  "name": "늑대P & 개리믹스",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-28T11:00:08Z"
- },
- {
-  "id": "UC6tlvaIBhfNPnNnJQfrNo7Q",
-  "added": "2026-10-30T21:54:14.548Z",
-  "name": "Hello1103",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-28T11:00:04Z"
- },
- {
   "id": "UC2UqvkWjQGfyTeLumfyWxiQ",
   "added": "2026-10-27T14:15:52.733Z",
   "name": "THE LUV BUGS",
@@ -254,20 +233,6 @@
   "genre": "ボカロ",
   "lastHit": "2026-10-28T10:00:10Z",
   "pinned": true
- },
- {
-  "id": "UCWctsEw-mGPJbfxb7DJAw2Q",
-  "added": "2026-10-29T21:58:44.733Z",
-  "name": "なちぴ",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-28T10:00:06Z"
- },
- {
-  "id": "UCsoaZ0pRx_QCeLDMrqWnVZA",
-  "added": "2026-10-27T21:52:32.692Z",
-  "name": "林田匠 Takumi Hayashida",
-  "genre": "ボカロ",
-  "lastHit": "2026-10-27T12:00:29Z"
  },
  {
   "id": "UC-6CnJA6jkZdv_yfv5KIcDA",
@@ -1582,6 +1547,46 @@
   "pinned": true
  },
  {
+  "id": "UCDOTPjUW-NhQMDmYbgMvQKA",
+  "added": "2026-11-03T00:02:10.038Z",
+  "name": "ポリスピカデリー / Police Piccadilly",
+  "genre": "ボカロ",
+  "lastHit": "2022-04-23T09:00:28Z",
+  "pinned": true
+ },
+ {
+  "id": "UCgf4ASaUXSl960o8wXWHGdQ",
+  "added": "2026-11-03T00:02:10.038Z",
+  "name": "柊キライ",
+  "genre": "ボカロ",
+  "lastHit": "2022-03-25T10:00:22Z",
+  "pinned": true
+ },
+ {
+  "id": "UCBn41FlxHaINjQuaIfzRZbQ",
+  "added": "2026-11-03T00:02:10.038Z",
+  "name": "水野あつ",
+  "genre": "ボカロ",
+  "lastHit": "2022-02-19T09:00:13Z",
+  "pinned": true
+ },
+ {
+  "id": "UCpJgF7I5iSL5_a3xtXgQJvw",
+  "added": "2026-11-03T00:02:10.038Z",
+  "name": "WONDERFUL★OPPORTUNITY!",
+  "genre": "ボカロ",
+  "lastHit": "2022-01-19T13:30:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UC6p9WK3z1b33aKkgW6tg_1A",
+  "added": "2026-11-03T00:02:10.038Z",
+  "name": "Release - Topic",
+  "genre": "ボカロ",
+  "lastHit": "2022-01-18T10:02:27Z",
+  "pinned": true
+ },
+ {
   "id": "UCqEfdEvLG5oQWNYlDQrGlKw",
   "name": "LiSA Official YouTube",
   "added": "2026-10-09T12:06:54.468Z",
@@ -1626,7 +1631,8 @@
   "added": "2026-11-02T21:56:59.633Z",
   "name": "BUDDiiS Channel",
   "genre": "J-POP",
-  "lastHit": "2026-11-02T09:00:06Z"
+  "lastHit": "2026-11-02T09:00:06Z",
+  "pinned": true
  },
  {
   "id": "UClM-RxoeCKN6ArtFfBp05Yw",
@@ -2175,7 +2181,8 @@
   "added": "2026-11-02T21:56:59.633Z",
   "name": "鈴木ゆゆうた",
   "genre": "J-POP",
-  "lastHit": "2026-10-28T08:02:04Z"
+  "lastHit": "2026-10-28T08:02:04Z",
+  "pinned": true
  },
  {
   "id": "UCTh7ytsDGf0ev5S1YyDRHCA",
@@ -2186,11 +2193,12 @@
   "pinned": true
  },
  {
-  "id": "UCAhFa2moEt5owcZRbqnF9eA",
-  "added": "2026-10-29T21:58:44.733Z",
-  "name": "KJPOP RamBi",
+  "id": "UCRJL3BrWVc-ypwXSBprk-1g",
+  "added": "2026-11-02T21:56:59.633Z",
+  "name": "梅田サイファー / Umeda Cypher",
   "genre": "アニソン",
-  "lastHit": "2026-10-27T17:25:32Z"
+  "lastHit": "2026-10-27T15:00:08Z",
+  "pinned": true
  },
  {
   "id": "UCHNhsC0VPItCMeAl11T3rAQ",
@@ -2199,27 +2207,6 @@
   "genre": "アニソン",
   "lastHit": "2026-10-27T15:00:08Z",
   "pinned": true
- },
- {
-  "id": "UCRJL3BrWVc-ypwXSBprk-1g",
-  "added": "2026-11-02T21:56:59.633Z",
-  "name": "梅田サイファー / Umeda Cypher",
-  "genre": "J-POP",
-  "lastHit": "2026-10-27T15:00:08Z"
- },
- {
-  "id": "UCswYNefjDAyQtyN8oiTC1GA",
-  "added": "2026-10-28T21:56:23.247Z",
-  "name": "MOKA Yukimi 雪見もか",
-  "genre": "J-POP",
-  "lastHit": "2026-10-27T13:31:58Z"
- },
- {
-  "id": "UCCHIr1VpnWJaV_Yc4uPRxAA",
-  "added": "2026-11-01T21:52:11.888Z",
-  "name": "オレアリchannel",
-  "genre": "J-POP",
-  "lastHit": "2026-10-27T11:29:48Z"
  },
  {
   "id": "UCAfQ5CojppHVIiLwuRDBzTg",
@@ -3147,6 +3134,30 @@
   "name": "ゆらぎゆら / YuragiYura🌙🫧",
   "genre": "アニソン",
   "lastHit": "2026-08-31T12:00:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UC3OH5FKQ3qtl4uRme_vZTgA",
+  "added": "2026-11-03T00:02:10.038Z",
+  "name": "UNIT B (Pre-Debut) - mekPark",
+  "genre": "J-POP",
+  "lastHit": "2026-08-30T09:00:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UCTy9HCrLjcbsK74LFsTcpWg",
+  "added": "2026-11-03T00:02:10.038Z",
+  "name": "Etori",
+  "genre": "J-POP",
+  "lastHit": "2026-08-29T12:00:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UCYRSuz5cmJeSNnGB7jedITg",
+  "added": "2026-11-03T00:02:10.038Z",
+  "name": "MARUMOCHI from HoneyWorks",
+  "genre": "アニソン",
+  "lastHit": "2026-08-29T11:00:06Z",
   "pinned": true
  }
 ]
