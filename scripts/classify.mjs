@@ -1003,7 +1003,7 @@ const SINGER_NAMES = { "Meychan": "めいちゃん", "96NEKO": "96猫", "Suisei"
 // タイトルの中の歌い手名（「ver.aoru」「【サンヌ cover】」「cover by X」「/ そらびび(cover)」、最後の【X】、最初の【X】の順に探す）
 const BAD_SINGER = /歌ってみた|うたってみた|みた|歌って|踊って|cover|カバー|オリジナル|^MV$|feat|配布|Synthesizer|SynthV|VOCALOID|NEUTRINO|CeVIO|UTAU|VOICEVOX|フル|full|ショート|弾き語り|リレー|メドレー|ミックス|MIX|作業用|歌踊|歌コレ|\d{4}|で$|[をにし]\S*て$|って$/i;
 function singerInTitle(title = "", t = "", strongOnly = false) {
-  const strong = [/ver\.?\s*([^\s【】\[\]()（）]+)\s*$/i, /by\s*([^\s【】\[\]()（）]+)\s*(?:中文字幕|字幕)?\s*$/i, /cover(?:ed)?\s*by\s*([^【】\[\]()（）|｜]+?)\s*(?:[【\[(（|｜]|$)/i, /【([^】]+?)\s+cover\.?】/i,
+  const strong = [/ver\.?\s*([^\s【】\[\]()（）]+)\s*$/i, /by\s*([^\s【】\[\]()（）]+)\s*(?:中文字幕|字幕)?\s*$/i, /cover(?:ed)?\s*(?:by\s*|[.:：]\s*)([^【】\[\]()（）|｜]+?)\s*(?:[【】\[\]()（）|｜]|$)/i, /【([^】]+?)\s+cover\.?】/i,
     /[\/／]\s*([^\/／【】()（）]+?)\s*[（(]\s*cover\s*[)）]/i];
   const pats = strongOnly ? strong : [...strong, /【([^】]+)】\s*$/, /^【([^】]+)】/];
   for (const re of pats) {
@@ -1024,6 +1024,8 @@ function fixCoverSingers(items) {
       const wrong = c.by && (normalize(c.by) === normalize(c.t) || (o0 && normalize(c.by) === normalize(o0.t)) || /^co(ver)?\.?$/i.test(c.by));
       const strong = singerInTitle(c.title, c.t, true);
       if (wrong) { const x = singerInTitle(c.title, c.t); if (x && (!o0 || normalize(x) !== normalize(o0.t))) c.by = x; }
+      // 歌い手名が原曲の作者名（記号ちがい：「King・Prince」）になっていて、タイトルに「covered.めむすけ」などの形で名前があるときはそちら
+      else if (strong && c.by && !c.self && o0?.p && normalize(c.by).replace(/[^\p{L}\p{N}]/gu, "") === normalize(o0.p).replace(/[^\p{L}\p{N}]/gu, "") && normalize(strong).replace(/[^\p{L}\p{N}]/gu, "") !== normalize(o0.p).replace(/[^\p{L}\p{N}]/gu, "")) c.by = strong;
       else if (strong && (!c.by || (c.src === "youtube" && normalize(c.by) !== normalize(strong) && normalize(c.by).startsWith(normalize(strong))))) c.by = strong; }
     if (!c.by) continue;
     if (SINGER_NAMES[c.by]) { c.by = SINGER_NAMES[c.by]; continue; }
