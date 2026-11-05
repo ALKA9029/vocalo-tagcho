@@ -420,7 +420,18 @@ await put("s/index.html", singerIndex()); urls.push("/s/");
   const hist = JSON.parse(await readFile(path("data/picks.json"), "utf8").catch(() => "{}"));
   const yearAgo = new Date(jst - 365 * 864e5).toISOString().slice(0, 10);
   for (const d of Object.keys(hist)) if (d < yearAgo) delete hist[d];
-  const used = new Set(Object.entries(hist).filter(([d]) => d !== today).flatMap(([, v]) => v.flatMap(s => s.ids)));
+  // 実際に投稿した曲（ネタ帳のボタンで Supabase の pick_posts に記録）は1年間出さない。表示しただけで投稿しなかった曲は2週間あけてまた出す。
+  // 記録が読めないとき（表をまだ作っていないなど）は、前と同じく表示した曲を全部1年間出さない
+  let posted = null;
+  try {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/pick_posts?select=song_id&day=gte.${yearAgo}&limit=5000`, { headers: { apikey: SUPABASE_KEY } });
+    if (res.ok) posted = new Set((await res.json()).map(r => ALIAS[r.song_id] || r.song_id));
+    else console.log(`投稿した曲の記録を読めなかった（HTTP ${res.status}）。表示した曲を全部1年間出さない`);
+  } catch (e) { console.log("投稿した曲の記録を読めなかった:", e.message); }
+  const usedFor = day => { const twoWeeks = new Date(Date.parse(day) - 14 * 864e5).toISOString().slice(0, 10);
+    const shown = Object.entries(hist).filter(([d]) => d !== day && (!posted || d >= twoWeeks)).flatMap(([, v]) => v.flatMap(s => s.ids));
+    return new Set([...shown, ...(posted || [])]); };
+  const used = usedFor(today);
   // 日付から決まる乱数（同じ日は同じ結果）
   let seed = [...today].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
   const rnd = () => ((seed = (seed * 1103515245 + 12345) >>> 0) / 2 ** 32);
@@ -482,7 +493,7 @@ await put("s/index.html", singerIndex()); urls.push("/s/");
     const day = new Date(jst.getTime() + 864e5).toISOString().slice(0, 10);
     const have = hist[day] || [];
     if (have.length < 4) {
-      const usedD = new Set(Object.entries(hist).filter(([d]) => d !== day).flatMap(([, v]) => v.flatMap(s => s.ids)));
+      const usedD = usedFor(day);
       let sd = [...day].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
       const r2 = () => ((sd = (sd * 1103515245 + 12345) >>> 0) / 2 ** 32);
       const sh2 = a => { const b = [...a]; for (let k = b.length - 1; k > 0; k--) { const j = Math.floor(r2() * (k + 1)); [b[k], b[j]] = [b[j], b[k]]; } return b; };
@@ -502,27 +513,34 @@ await put("s/index.html", singerIndex()); urls.push("/s/");
   }
   await writeFile(path("data/picks.json"), JSON.stringify(Object.fromEntries(Object.entries(hist).sort())) + "\n");
 
-  const card = ({ i, text }) => `<li class="pick">${thumbOf(i) ? `<img src="${esc(thumbOf(i))}" alt="" referrerpolicy="no-referrer">` : ""}<div>
-  <p class="name"><a href="${songUrl(i.id)}" target="_blank">${esc(i.t)}</a> <span class="note">${esc(credit(i))}・${esc(i.g)}</span></p>
+  const card = ({ i, text }) => `<li class="pick" data-id="${esc(i.id)}">${thumbOf(i) ? `<img src="${esc(thumbOf(i))}" alt="" referrerpolicy="no-referrer">` : ""}<div>
+  <p class="name"><a href="${songUrl(i.id)}" target="_blank">${esc(i.t)}</a> <span class="note">${esc(credit(i))}・${esc(i.g)}</span> <span class="done" hidden>✓ 投稿済み</span></p>
   <textarea rows="8">${esc(text)}</textarea>
   <p class="share"><span class="cnt"></span><a class="btn primary post" href="#" target="_blank" rel="noopener">𝕏 で投稿</a><button type="button" class="btn copy">コピー</button><button type="button" class="btn sched" title="文章をコピーして、予約投稿ができるいつもの投稿画面を開く">🗓 予約用</button></p>
 </div></li>`;
   const body = `
 <header>
   <h1>今日の投稿ネタ <small class="rv">${today.replace(/-/g, "/")}</small></h1>
-  <p class="note">毎朝の自動更新で作り直す、X（@tagtune_net）に投稿するためのネタ帳。各枠から好きな1曲を選んで「𝕏 で投稿」。文章はここで直してから投稿できます。予約するときは「🗓 予約用」：文章をコピーしてXのいつもの投稿画面を開くので、貼りつけてからカレンダーのアイコンで日時を決めてね（「𝕏 で投稿」の画面では予約ができません）。一度出た曲は1年間は出ません。</p>
+  <p class="note">毎朝の自動更新で作り直す、X（@tagtune_net）に投稿するためのネタ帳。各枠から好きな1曲を選んで「𝕏 で投稿」。文章はここで直してから投稿できます。予約するときは「🗓 予約用」：文章をコピーしてXのいつもの投稿画面を開くので、貼りつけてからカレンダーのアイコンで日時を決めてね（「𝕏 で投稿」の画面では予約ができません）。「𝕏 で投稿」か「🗓 予約用」を押した曲は「投稿済み」になって1年間は出ません。押さなかった曲は2週間後からまた候補に出ます。</p>
 </header>
 ${slots.map(s => `<section><h2>${esc(s.label)}<span class="note">　おすすめ ${s.time} ごろ</span></h2>${s.list.length ? `<ul class="picks">${s.list.map(card).join("")}</ul>` : `<p class="note">候補が見つかりませんでした。</p>`}</section>`).join("\n")}
-<style>.picks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:18px}.pick{display:grid;grid-template-columns:160px 1fr;gap:14px;align-items:start}.pick img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;background:var(--line)}@media (max-width:560px){.pick{grid-template-columns:1fr}}.pick textarea{width:100%;font:inherit;font-size:14px;line-height:1.6;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);resize:vertical}.pick .name{margin-bottom:6px}.cnt{font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-right:auto;align-self:center}.cnt.over{color:var(--accent);font-weight:700}h2 .note{font-weight:400}</style>
+<style>.picks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:18px}.pick{display:grid;grid-template-columns:160px 1fr;gap:14px;align-items:start}.pick img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;background:var(--line)}@media (max-width:560px){.pick{grid-template-columns:1fr}}.pick textarea{width:100%;font:inherit;font-size:14px;line-height:1.6;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);resize:vertical}.pick .name{margin-bottom:6px}.cnt{font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-right:auto;align-self:center}.cnt.over{color:var(--accent);font-weight:700}h2 .note{font-weight:400}.done{font-size:12px;font-weight:700;color:var(--bg);background:var(--accent);border-radius:999px;padding:1px 8px;margin-left:4px}</style>
 <script>
 (() => {
   const weight = s => { let n = 0; for (const c of s.replace(/https?:\\/\\/\\S+/g, "x".repeat(23))) { const cp = c.codePointAt(0); n += (cp <= 0x10ff || (cp >= 0x2000 && cp <= 0x200d) || (cp >= 0x2010 && cp <= 0x201f) || (cp >= 0x2032 && cp <= 0x2037)) ? 1 : 2; } return n; };
+  // 押した曲を「投稿済み」として記録する（Supabase の pick_posts）。投稿した曲だけ1年間ネタに出さない
+  const SB = ${JSON.stringify(SUPABASE_URL)}, KEY = ${JSON.stringify(SUPABASE_KEY)}, DAY = ${JSON.stringify(today)};
+  const mark = li => { li.querySelector(".done").hidden = false; };
+  const record = li => { mark(li); fetch(SB + "/rest/v1/pick_posts", { method: "POST", keepalive: true, headers: { apikey: KEY, "Content-Type": "application/json", Prefer: "return=minimal,resolution=ignore-duplicates" }, body: JSON.stringify({ song_id: li.dataset.id, day: DAY }) }).catch(() => {}); };
+  fetch(SB + "/rest/v1/pick_posts?select=song_id&day=gte." + DAY.slice(0, 4) + "-01-01", { headers: { apikey: KEY } }).then(r => r.ok ? r.json() : []).then(rows => {
+    const ids = new Set(rows.map(r => r.song_id)); for (const li of document.querySelectorAll(".pick")) if (ids.has(li.dataset.id)) mark(li); }).catch(() => {});
   for (const li of document.querySelectorAll(".pick")) {
     const ta = li.querySelector("textarea"), cnt = li.querySelector(".cnt"), post = li.querySelector(".post"), copy = li.querySelector(".copy"), sched = li.querySelector(".sched");
     const upd = () => { const w = weight(ta.value); cnt.textContent = w + " / 280"; cnt.classList.toggle("over", w > 280); post.href = "https://x.com/intent/post?text=" + encodeURIComponent(ta.value); };
     ta.addEventListener("input", upd); upd();
+    post.addEventListener("click", () => record(li));
     copy.addEventListener("click", async () => { try { await navigator.clipboard.writeText(ta.value); copy.textContent = "✓ コピーしたよ"; } catch { ta.select(); } setTimeout(() => copy.textContent = "コピー", 1500); });
-    sched.addEventListener("click", () => { navigator.clipboard.writeText(ta.value).catch(() => {}); window.open("https://x.com/compose/post", "_blank", "noopener"); sched.textContent = "✓ コピーした・貼りつけてね"; setTimeout(() => sched.textContent = "🗓 予約用", 2500); });
+    sched.addEventListener("click", () => { navigator.clipboard.writeText(ta.value).catch(() => {}); window.open("https://x.com/compose/post", "_blank", "noopener"); record(li); sched.textContent = "✓ コピーした・貼りつけてね"; setTimeout(() => sched.textContent = "🗓 予約用", 2500); });
   }
 })();
 </script>

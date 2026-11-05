@@ -99,3 +99,38 @@ $$;
 
 revoke all on function public.get_cover_requests() from public;
 grant execute on function public.get_cover_requests() to anon, authenticated;
+
+-- ---------- 今日の投稿ネタ（/picks/）で実際に投稿した曲 ----------
+-- ネタ帳の「𝕏 で投稿」「🗓 予約用」を押した曲を記録する。投稿した曲だけ1年間ネタに出さない（押さなかった候補はまた出る）
+create table if not exists public.pick_posts (
+  id         bigint generated always as identity primary key,
+  song_id    text        not null check (char_length(song_id) between 3 and 64),
+  day        date        not null,
+  created_at timestamptz not null default now(),
+  unique (song_id, day)
+);
+
+alter table public.pick_posts enable row level security;
+
+drop policy if exists "投稿した曲を記録する" on public.pick_posts;
+create policy "投稿した曲を記録する" on public.pick_posts
+  for insert to anon, authenticated with check (day between current_date - 2 and current_date + 2);
+
+drop policy if exists "投稿した曲を読む" on public.pick_posts;
+create policy "投稿した曲を読む" on public.pick_posts
+  for select to anon, authenticated using (true);
+
+-- 荒らし対策：1日に記録できるのは全体で100件まで
+create or replace function public.pick_posts_limit() returns trigger
+language plpgsql security definer set search_path = public as $$
+begin
+  if (select count(*) from public.pick_posts where created_at > now() - interval '1 day') >= 100 then
+    raise exception '今日はもういっぱいです';
+  end if;
+  new.created_at := now();
+  return new;
+end $$;
+
+drop trigger if exists pick_posts_limit on public.pick_posts;
+create trigger pick_posts_limit before insert on public.pick_posts
+  for each row execute function public.pick_posts_limit();
