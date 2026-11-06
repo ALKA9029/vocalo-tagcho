@@ -7,7 +7,7 @@
 //   node scripts/vocadb.mjs --probe sm123   1本だけ問い合わせて、VocaDB の返事をそのまま出す（確認用）
 import { readFile, writeFile } from "node:fs/promises";
 
-const LIMIT = Number(process.env.VOCADB_LIMIT || 400);
+const LIMIT = process.env.VOCADB_LIMIT ? Number(process.env.VOCADB_LIMIT) : 400;
 const UA = "TagTune/1.0 (+https://tagtune.net/about.html)";
 const API = "https://vocadb.net/api";
 const RECHECK_DAYS = 60;   // 見つからなかった曲は60日たったらもう一度調べる（あとから登録されることがあるため）
