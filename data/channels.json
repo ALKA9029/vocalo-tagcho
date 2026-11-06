@@ -142,14 +142,6 @@
   "pinned": true
  },
  {
-  "id": "UCyWEVH8tkJcJVO7IiQ1DGEg",
-  "name": "Tokyo Street Live 4K",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "ボカロ",
-  "lastHit": "2026-11-01T06:00:31Z",
-  "pinned": true
- },
- {
   "id": "UCBb5MFI8eGqQPu1ryyK59Cg",
   "added": "2026-10-27T14:15:52.733Z",
   "name": "ともち / tomochi - piano cover",
@@ -1067,6 +1059,14 @@
   "name": "WAWON /ゴマつぶワヲン",
   "genre": "ボカロ",
   "lastHit": "2025-07-05T11:00:20Z",
+  "pinned": true
+ },
+ {
+  "id": "UCwXXyRNSV6nduBHj_s1_0vQ",
+  "added": "2026-11-06T23:17:04.181Z",
+  "name": "Naisho no Pierced Earrings - Topic",
+  "genre": "ボカロ",
+  "lastHit": "2025-07-03T10:02:08Z",
   "pinned": true
  },
  {
@@ -2047,6 +2047,14 @@
   "name": "メーメントヴァニタス / MEMENTOVANITAS",
   "genre": "アニソン",
   "lastHit": "2026-11-01T09:00:11Z",
+  "pinned": true
+ },
+ {
+  "id": "UCyWEVH8tkJcJVO7IiQ1DGEg",
+  "name": "Tokyo Street Live 4K",
+  "added": "2026-10-09T12:06:54.468Z",
+  "genre": "J-POP",
+  "lastHit": "2026-11-01T06:00:31Z",
   "pinned": true
  },
  {
@@ -3183,14 +3191,6 @@
   "name": "tuki.(17)",
   "genre": "アニソン",
   "lastHit": "2026-08-23T11:56:07Z",
-  "pinned": true
- },
- {
-  "id": "UCbq9yTc3oUdage6MbSSj2KA",
-  "added": "2026-11-06T23:13:34.855Z",
-  "name": "tarachio",
-  "genre": "J-POP",
-  "lastHit": "2026-08-22T14:00:18Z",
   "pinned": true
  }
 ]
