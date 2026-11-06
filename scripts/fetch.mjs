@@ -827,7 +827,7 @@ for (const i of items) {
 }
 // 投稿日時はニコニコが日本時間、YouTubeが世界標準時で書かれているので、時刻に直して比べる
 const byNewest = (a, b) => (Date.parse(b.date) || 0) - (Date.parse(a.date) || 0);
-items = linkCovers(items).sort(byNewest);
+items = linkCovers(items, JSON.parse(await readFile(path("data/vocadb.json"), "utf8").catch(() => "{}"))).sort(byNewest);
 // 人気曲（seed）は原曲の土台なので件数制限で消さない。それ以外は新しい順に残す
 const seeds = items.filter(i => i.seed);
 items = [...seeds, ...items.filter(i => !i.seed).slice(0, Math.max(0, config.maxItems - seeds.length))]

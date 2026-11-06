@@ -227,7 +227,7 @@ function songPage(i) {
     ${i.alt ? `<p class="meta">動画サイトで開く：${sourcesOf(i).map(v => `<a href="${esc(v.url)}" target="_blank" rel="noopener">${srcName(v)} ↗</a>`).join("　")}</p>` : ""}
   </div>
 </header>
-<p class="note">動画タイトル：${esc(i.title)}</p>
+<p class="note">動画タイトル：${esc(i.title)}${i.vdb ? `　<a href="https://vocadb.net/S/${i.vdb}" target="_blank" rel="noopener">VocaDBで見る ↗</a>` : ""}</p>
 ${remakeNote(i)}
 
 <section>

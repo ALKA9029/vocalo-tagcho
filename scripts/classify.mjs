@@ -824,10 +824,15 @@ export function mergeSources(items) {
   }
   const voiceCh = new Set(items.filter(i => i.src === "youtube" && i.v && i.uploaderId).map(i => i.uploaderId));
   const groups = new Map();
+  // VocaDB で分かった曲（vdb）と同じ曲名・作者の動画も、その曲のグループに入れる
+  const tpVdb = new Map();
+  for (const i of items) if (i.vdb && i.kind === "本家" && i.t && i.p && !i.rm) tpVdb.set(normalize(i.t) + "|" + normalize(i.p), i.vdb);
   for (const i of items) {
     // 「ショートVer.」「TVサイズ」は同じ曲として、フルの動画の中に隠す（ほかの別バージョンは別の曲のまま）
-    if (i.kind !== "本家" || i.topicHidden || !i.p || !i.t || (VERSION_RE.test(i.title || "") && !i.rm && !SHORT_VER_RE.test(i.title || ""))) continue;
-    const k = normalize(i.t) + "|" + normalize(i.p) + (i.rm ? "|" + i.rm : "");
+    if (i.kind !== "本家" || i.topicHidden || !i.p || !i.t || (VERSION_RE.test(i.title || "") && !i.rm && !i.vdb && !SHORT_VER_RE.test(i.title || ""))) continue;
+    // VocaDB で同じ曲と分かっているものは、曲名・作者の書き方がちがっても1つにまとめる
+    const vd = i.vdb || (!i.rm && tpVdb.get(normalize(i.t) + "|" + normalize(i.p)));
+    const k = (vd ? `vdb:${vd}` : normalize(i.t) + "|" + normalize(i.p)) + (i.rm ? "|" + i.rm : "");
     if (!normalize(i.t) || !normalize(i.p)) continue;
     (groups.get(k) || groups.set(k, []).get(k)).push(i);
   }
@@ -837,7 +842,7 @@ export function mergeSources(items) {
     // ニコニコの歌声つきの本家が先に投稿されていて、YouTube 側があとから出た本人の歌うMV（歌声の曲がないチャンネル）なら、
     // ニコニコ版がボカロの原曲で、YouTube 版は本人のセルフカバー（Eve の「ドラマツルギー」など）
     const nicoV = list.find(r => r.src === "niconico" && r.v);
-    const selfYT = nicoV ? list.filter(r => r.src === "youtube" && !r.v && (r.g === "J-POP" || r.g === "アニソン") && !voiceCh.has(r.uploaderId)) : [];
+    const selfYT = nicoV ? list.filter(r => r.src === "youtube" && !r.vdb && !r.v && (r.g === "J-POP" || r.g === "アニソン") && !voiceCh.has(r.uploaderId)) : [];
     //  （同じ日の公開でどちらが先か分からないことがあるので、YouTube 版が1日以上先に出ていなければ、ニコニコ版を原曲にする）
     if (selfYT.length && selfYT.every(h => (Date.parse(h.date) || 0) > (Date.parse(nicoV.date) || 0) - 864e5)) {
       for (const h of selfYT) { h.kind = "歌ってみた"; h.of = nicoV.id; h.by = h.p; h.selfCover = 1; dupOf.set(h.id, nicoV.id); }
@@ -857,7 +862,7 @@ export function mergeSources(items) {
     // ただし YouTube 側が歌声の分からない J-POP・アニソンのMV（作者本人が歌っている）なら、そちらに合わせる
     //（Eve の「ドラマツルギー」のように、ニコニコ側のタイトルにだけ「初音ミク」とある場合）
     //  （そのYouTubeチャンネルに歌声の分かる曲が1曲もないときだけ。みきとP の「ロキ」のようなボカロPのチャンネルは除く）
-    const human = picked.find(r => r.src === "youtube" && !r.v && (r.g === "J-POP" || r.g === "アニソン") && !voiceCh.has(r.uploaderId));
+    const human = picked.find(r => r.src === "youtube" && !r.vdb && !r.v && (r.g === "J-POP" || r.g === "アニソン") && !voiceCh.has(r.uploaderId));
     if (human) { main.g = human.g; delete main.v; }
     else {
       if (picked.some(r => r.g === "ボカロ")) main.g = "ボカロ";
@@ -903,6 +908,61 @@ function dropEnglishTail(items) {
 // 元の曲とは別の曲のまま、曲名は元の曲にそろえて rm（元の曲のID）と rv（「2024」など）を付ける
 const REMAKE_RE = /(?:19|20)\d\d\s*年?\s*(?:ver|version|バージョン)|(?:ver|version)\.?\s*(?:19|20)\d\d|リメイク|remake|再録|re-?arrange|リアレンジ|re-?recording/i;
 const REMAKE_TAIL_RE = /[\s　]*[-~～(（\[［]*\s*(?:(?:19|20)\d\d\s*(?:ver(?:sion)?\.?)?|ver(?:sion)?\.?\s*(?:19|20)\d\d|remake|リメイク|re-?arrange|リアレンジ|再録|re-?recording)\s*[-~～)）\]］]*\.?$/i;
+// VocaDB（data/vocadb.json）での答え合わせ。VocaDB のデータは CC BY 4.0（曲ページに出典のリンクを付ける）
+//  ① VocaDB で同じ曲の動画（ニコニコ版・YouTube 版）になっているものは、1曲にまとめる（mergeSources で vdb ごとにまとめる）
+//  ② 作者が空っぽ・曲名と作者が入れ替わっている・曲名に歌声の名前がくっついている、などのときは VocaDB の曲名・作者にする
+//  ③ VocaDB でリミックス・リマスターになっていて、元の曲がサイトにあれば、その曲の別バージョンにする
+// 作者名や歌声の書き方（Chinozo／ちのぞー、flower／ブイフラワ など）は、サイトのいつもの書き方のままにする
+function applyVocaDB(items, vdb) {
+  const byId = new Map(items.map(i => [i.id, i]));
+  const keyOfVdb = new Map(Object.entries(vdb).filter(([, c]) => c.s).map(([k, c]) => [c.s.id, k]));
+  const creators = new Map();
+  for (const i of items) if (i.kind === "本家" && i.p) creators.set(normalize(i.p), i.p);
+  const pickName = s => {
+    for (const names of s.pa || []) for (const n of names) if (creators.has(normalize(n))) return creators.get(normalize(n));
+    return s.p[0];
+  };
+  for (const [key, c] of Object.entries(vdb)) {
+    const s = c.s, i = byId.get(key);
+    if (!s || !i || i.kind !== "本家") continue;
+    // ②
+    const nt = normalize(i.t), st = normalize(s.t), np = normalize(i.p || "");
+    const noP = !np || /^[-‐ー]$/.test(i.p.trim()) || /作詞|作曲|編曲/.test(i.p) || np === st || isVoice(i.p);
+    const rest = st && nt.includes(st) ? nt.replace(st, "") : null;
+    const badT = !nt || np === st || s.p.some(n => normalize(n) === nt) || isVoice(i.t) || (rest && (isVoice(rest) || /^[-‐ー]/.test(rest)));
+    if (badT && s.t && !i.tFixed) i.t = s.t;
+    if (noP && s.p.length && !i.pFixed) { i.p = pickName(s); delete i.a; }
+    // ①
+    i.vdb = s.id;
+    const others = s.pvs.map(pv => byId.get(pv)).filter(o => o && o !== i && !o.ofLocked && !o.req && !o.topicHidden);
+    if (others.length) {
+      const group = [i, ...others];
+      // 作者名は、VocaDB の作者（別名も含む）と同じ書き方をしているものを選ぶ（ニコニコ版を優先）。なければ VocaDB の名前
+      const vn = new Set((s.pa?.length ? s.pa.flat() : s.p).map(normalize));
+      const byP = [...group].sort((a, b) => (a.src === "niconico" ? -1 : 1) - (b.src === "niconico" ? -1 : 1)).find(o => o.p && vn.has(normalize(o.p)));
+      // （別名をまだ取っていない古い記録のときは、名前を書きかえず、ニコニコ版の作者名にそろえるだけにする）
+      const nicoP = group.find(o => o.src === "niconico" && o.p)?.p;
+      const p = byP ? byP.p : !s.pa ? (nicoP || i.p) : s.p.length ? pickName(s) : i.p;
+      const t = (group.find(o => normalize(o.t) === st) || i).t;
+      for (const o of group) {
+        if (o !== i) { o.kind = "本家"; o.g = i.g; if (i.v && !o.v) o.v = i.v; delete o.of; delete o.by; delete o.selfCover; }
+        o.vdb = s.id; o.t = t; if (normalize(o.p || "") !== normalize(p)) { o.p = p; delete o.a; }
+      }
+      const a = group.find(o => o.a)?.a; if (a) for (const o of group) o.a = a;
+    }
+    // ③
+    if ((s.type === "Remix" || s.type === "Remaster") && s.orig && !i.rmFixed) {
+      const o = byId.get(keyOfVdb.get(s.orig));
+      if (o && o !== i && o.kind === "本家") {
+        const lab = versionLabel(i.title || "");
+        i.rm = o.id; i.rv = lab !== "別バージョン" ? lab : s.type === "Remaster" ? "リマスター" : "リミックス"; i.rmFixed = true; i.vdbRm = 1;
+        // 曲名は、元の曲名＋バージョン名のとき（「初恋の絵本 -arrangement-」）だけ元の曲名にそろえる（「キミノヨゾラ哨戒班」のような別の曲名はそのまま）
+        if (normalize(i.p) === normalize(o.p) || !i.p) { if (normalize(i.t).includes(normalize(o.t))) i.t = o.t; i.p = o.p; if (o.a) i.a = o.a; }
+      }
+    }
+  }
+}
+
 // 歌い手のオリジナル曲（ニコニコインディーズ・NNIオリジナル曲のタグ）は、歌ってみたではなく J-POP の本家にする。
 // 先に同じ曲名の本家があるもの（その曲の歌ってみた）や、セルフカバー・提供曲を歌ったものはそのまま
 const INDIE_TAG = /ニコニコインディーズ|NNIオリジナル曲/;
@@ -1052,13 +1112,14 @@ function asToken(raw, sub) {
 }
 
 let CREATOR_SET = new Set();
-export function linkCovers(items) {
+export function linkCovers(items, vdb = {}) {
   CREATOR_SET = new Set(items.filter(i => i.kind === "本家" && i.p).map(i => normalize(i.p)));
   dropEnglishTail(items);
   inferNamesFromTags(items);
   guessChannelGenre(items);
   fillCreators(items);
   fixCreatorNames(items);
+  applyVocaDB(items, vdb);
   singerOriginals(items);
   coverArtists(items);
   markRemakes(items);
@@ -1198,7 +1259,7 @@ function fixCreatorKeys(items) {
 
 // サイト表示用：必要な項目だけにした軽いデータ
 const unent = s => typeof s === "string" ? s.replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'") : s;
-const KEEP = ["id", "src", "url", "title", "t", "kind", "g", "p", "v", "by", "of", "a", "date", "views", "thumb", "ne", "self", "rm", "rv", "vr"];
+const KEEP = ["vdb", "id", "src", "url", "title", "t", "kind", "g", "p", "v", "by", "of", "a", "date", "views", "thumb", "ne", "self", "rm", "rv", "vr"];
 const ALT_KEEP = ["id", "src", "url", "views", "thumb", "ne", "date"];
 // サイト用：まとめた曲（dup）は出さず、代表の曲に alt（もう片方のサイトの投稿）として持たせる。再生数は合計にする
 export const toSite = items => {

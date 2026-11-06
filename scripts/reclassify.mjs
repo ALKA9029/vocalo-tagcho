@@ -29,7 +29,7 @@ const out = items.map(old => {
   if (o && "of" in o) merged.of = o.of;   // 管理人が手で決めた原曲（overrides.json）
   return merged;
 });
-linkCovers(out);
+linkCovers(out, JSON.parse(await readFile(path("data/vocadb.json"), "utf8").catch(() => "{}")));
 await writeFile(path("data/songs.json"), JSON.stringify(out, null, 1) + "\n");
 await writeFile(path("data/site.json"), JSON.stringify(toSite(out)) + "\n");
 console.log(`読み直しました: ${out.length}件`);

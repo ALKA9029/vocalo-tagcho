@@ -36,6 +36,9 @@ function slim(s) {
   return {
     id: s.id, t: s.name || s.defaultName, type: s.songType,
     p: names(a => /Producer|Composer/.test(roles(a))), v: names(a => /Vocalist/.test(roles(a))),
+    // 作者の別名（英語表記・昔の名前など）。サイトでいつも使っている表記に合わせるときに使う
+    pa: (s.artists || []).filter(a => !a.isSupport && /Producer|Composer/.test(roles(a)) && a.artist)
+      .map(a => [a.artist.name, ...String(a.artist.additionalNames || "").split(/\s*,\s*/)].filter(Boolean)),
     orig: s.originalVersionId || null, date: (s.publishDate || "").slice(0, 10) || null, pvs,
   };
 }
@@ -55,7 +58,7 @@ const today = new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 10);
 const old = d => (Date.parse(today) - Date.parse(d)) / 864e5 > RECHECK_DAYS;
 // 調べるのはボカロの本家（ニコニコ・YouTube）。新しい曲を先に、残りは人気順
 const todo = site.filter(i => i.kind === "本家" && i.g === "ボカロ" && (i.src === "niconico" || i.src === "youtube"))
-  .filter(i => !cache[i.id] || (!cache[i.id].s && old(cache[i.id].at)))
+  .filter(i => !cache[i.id] || (!cache[i.id].s && old(cache[i.id].at)) || (cache[i.id].s && !cache[i.id].s.pa))   // pa は後から足したので、無いものは調べ直す
   .sort((a, b) => (!!cache[a.id] - !!cache[b.id]) || ((b.date || "") > today.slice(0, 7) ? 1 : 0) - ((a.date || "") > today.slice(0, 7) ? 1 : 0) || (b.views || 0) - (a.views || 0))
   .slice(0, LIMIT);
 console.log(`VocaDB：${todo.length}曲を調べる（調べ済み ${Object.keys(cache).length}件）`);
