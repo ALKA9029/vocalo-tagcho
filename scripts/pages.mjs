@@ -449,6 +449,9 @@ await put("s/index.html", singerIndex()); urls.push("/s/");
   // 長すぎるときは「みんなの印象」→「タグのお願い」の順に外す
   const fit = lines => { let ls = lines.filter(l => l !== null);
     for (const drop of [l => l.startsWith("みんなの印象"), l => l.endsWith("🏷️")]) while (weight(ls.join("\n")) > 280 && ls.some(drop)) ls = ls.filter(l => !drop(l));
+    // 「sasakure.UK」のようにドメインに見える名前は、X が勝手にリンクにして、そのサイトのカード（画像）が付いてしまう。
+    // 点のうしろに見えない文字（ゼロ幅スペース）をはさんでリンクにならないようにする（URL の行はそのまま）
+    ls = ls.map(l => /^https?:\/\//.test(l) ? l : l.replace(/([A-Za-z0-9])\.(?=[A-Za-z]{2})/g, "$1.\u200B"));
     return ls.join("\n").replace(/\n{3,}/g, "\n\n"); };
   // タグをつけてもらうお願い（曲ごとに言い方を変える。同じ曲ならいつも同じ）
   const ASK = ["聴いた印象をタグで教えてね🏷️", "エモい？爽やか？あなたの印象をタグで投票してね🏷️", "この曲、どんな印象？タグで教えてね🏷️", "聴いたらぜひタグをつけてね🏷️"];
