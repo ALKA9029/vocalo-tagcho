@@ -14,6 +14,14 @@ on:
         description: "YouTube検索も使う（1日の検索回数に上限があるので、ふだんは朝の自動更新だけで使う）"
         type: boolean
         default: false
+      vocadb_probe:
+        description: "VocaDB の確認用：この動画ID（sm〇〇 か YouTube のID）の返事をログに出すだけ"
+        type: string
+        default: ""
+      vocadb_limit:
+        description: "VocaDB で調べる曲の数（1回の実行で）"
+        type: string
+        default: "400"
 
 permissions:
   contents: write
@@ -36,6 +44,11 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           NO_SEARCH: ${{ github.event_name == 'workflow_dispatch' && !inputs.search && '1' || '' }}
         run: node scripts/fetch.mjs ${{ inputs.seed && '--seed' || '' }}
+      - name: VocaDB で答え合わせ用の情報を集める
+        continue-on-error: true
+        env:
+          VOCADB_LIMIT: ${{ inputs.vocadb_limit || '400' }}
+        run: node scripts/vocadb.mjs ${{ inputs.vocadb_probe && format('--probe {0}', inputs.vocadb_probe) || '' }}
       - name: 保存済みの曲を今のルールで読み直す
         run: node scripts/reclassify.mjs
       - name: 曲ごと・作者ごと・タグごとのページを作る
