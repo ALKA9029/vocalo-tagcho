@@ -1680,13 +1680,6 @@
   "pinned": true
  },
  {
-  "id": "UC_hSr2C3pGJwEoaebxDHLEg",
-  "added": "2026-11-07T20:47:29.938Z",
-  "name": "Kijori Konno Ch. 【V2V】",
-  "genre": "J-POP",
-  "lastHit": "2026-11-07T01:32:01Z"
- },
- {
   "id": "UC9zY_E8mcAo_Oq772LEZq8Q",
   "name": "THE FIRST TAKE",
   "added": "2026-10-09T12:06:54.468Z",
@@ -1731,14 +1724,8 @@
   "added": "2026-11-07T20:47:29.938Z",
   "name": "NEARLY EQUAL JOY ニアリーイコールジョイ 公式チャンネル",
   "genre": "J-POP",
-  "lastHit": "2026-11-06T11:00:10Z"
- },
- {
-  "id": "UCv0hpsgpGWYdBsotEA3_5fQ",
-  "added": "2026-11-07T20:47:29.938Z",
-  "name": "あかつき るき / Akatsuki Luci",
-  "genre": "アニソン",
-  "lastHit": "2026-11-06T11:00:09Z"
+  "lastHit": "2026-11-06T11:00:10Z",
+  "pinned": true
  },
  {
   "id": "UCVpaaZ-p7GTTFEDR_NCnfNg",
@@ -3194,6 +3181,22 @@
   "name": "tuki.(17)",
   "genre": "アニソン",
   "lastHit": "2026-08-23T11:56:07Z",
+  "pinned": true
+ },
+ {
+  "id": "UCbq9yTc3oUdage6MbSSj2KA",
+  "added": "2026-11-08T22:31:17.736Z",
+  "name": "tarachio",
+  "genre": "J-POP",
+  "lastHit": "2026-08-22T14:00:18Z",
+  "pinned": true
+ },
+ {
+  "id": "UCRyC5pcvQ-urHmssKC2Zgsg",
+  "added": "2026-11-08T22:31:17.736Z",
+  "name": "Nanatsukaze",
+  "genre": "J-POP",
+  "lastHit": "2026-08-22T06:21:06Z",
   "pinned": true
  }
 ]
