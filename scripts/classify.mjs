@@ -996,6 +996,21 @@ function coverArtists(items) {
   }
 }
 
+// THE FIRST TAKE（アーティスト本人が一発撮りで歌い直す動画）は、元の曲がサイトにあればその曲の別バージョン（バッジは「THE FIRST TAKE」）。
+// 元の曲がなければ、今までどおり単独の曲として残す
+function firstTake(items) {
+  const orig = new Map();
+  for (const o of items) if (o.kind === "本家" && o.t && !/THE FIRST TAKE/i.test(o.title || "")) (orig.get(normalize(o.t)) || orig.set(normalize(o.t), []).get(normalize(o.t))).push(o);
+  const loose = x => normalize(x || "").replace(/[^\p{L}\p{N}]/gu, "");
+  for (const i of items) {
+    if (i.kind !== "本家" || i.rmFixed || !/THE FIRST TAKE/i.test(i.title || "")) continue;
+    const o = (orig.get(normalize(i.t)) || []).filter(o => o.p && (loose(o.p) === loose(i.p) || loose(i.p).includes(loose(o.p)) || loose(o.p).includes(loose(i.p))))
+      .sort((a, b) => (a.date || "").localeCompare(b.date || ""))[0];
+    if (!o) continue;
+    i.rm = o.id; i.rv = "THE FIRST TAKE"; i.rmFixed = true; i.t = o.t; i.p = o.p; if (o.a) i.a = o.a;
+  }
+}
+
 function markRemakes(items) {
   for (const i of items) if (!i.rmFixed) { delete i.rm; delete i.rv; }
   const byT = new Map();
@@ -1122,6 +1137,7 @@ export function linkCovers(items, vdb = {}) {
   applyVocaDB(items, vdb);
   singerOriginals(items);
   coverArtists(items);
+  firstTake(items);
   markRemakes(items);
   vocaloByCreator(items);
   hideTopicWithOfficial(items);

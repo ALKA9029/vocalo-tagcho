@@ -36107,8 +36107,8 @@
   "animeDesc": 1,
   "firstSeen": "2026-10-27T14:07:12.808Z",
   "seed": true,
-  "of": "yt:zr76fswUH2I",
   "p": "指定した歌手の曲を被らずに歌え!",
+  "of": "yt:zr76fswUH2I",
   "a": "youtube:UCNMbL86u5LBeO_BWHp5pJ5g"
  },
  {
@@ -68075,10 +68075,11 @@
   ],
   "uploaderId": 38508555,
   "uploader": null,
-  "by": "うみくん【TVアニメ『薬屋のひとりごと』オープニングテーマ】",
+  "by": "うみくん",
   "req": "yt:RCaTLn4qoz4",
   "firstSeen": "2026-11-01T21:50:10.116Z",
   "seed": true,
+  "byFixed": true,
   "of": "yt:RCaTLn4qoz4",
   "ofLocked": true
  },
@@ -72342,11 +72343,13 @@
   "uploader": "THE FIRST TAKE",
   "descHead": "「THE FIRST TAKE」は、一発撮りのパフォーマンスを鮮明に切り取るYouTubeチャンネル。\n\n第537回は、中毒的でファニーなハイトーンボイスとディスコミュニケーション気味なキャラクターが世代のアイコンとして愛されているインターネット発のアーティスト、ナナヲアカリが「THE FIRST TAKE」に初登場。\n披露するのは、 2020年放送されたTVアニメ「理系が恋に落ちたので証明してみた。」のEDテーマでYouTubeにてMV再生回数1億回を突破した令和を代表するデュエットソング、「チューリングラブ feat. Sou」。\nゲストボーカルのSouとともに「THE FIRST TAK",
   "p": "ナナヲアカリ",
-  "a": "name:ナナヲアカリ",
+  "a": "youtube:UCrrNHoXQ1uTYsR6v41pDalQ",
   "animeDesc": 1,
   "firstSeen": "2026-10-27T14:07:13.055Z",
   "seed": true,
-  "dup": "yt:L-MVk5I6wjo"
+  "rm": "yt:L-MVk5I6wjo",
+  "rv": "THE FIRST TAKE",
+  "rmFixed": true
  },
  {
   "id": "yt:fHrY6rM7uH0",
