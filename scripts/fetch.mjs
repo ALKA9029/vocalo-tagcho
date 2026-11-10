@@ -644,16 +644,17 @@ async function fetchManual(knownIds) {
 // ---------- 今日の投稿ネタの曲の歌ってみた：data/picks.json の今日の曲（前の日に決めてある）について、 ----------
 // ニコニコとYouTubeで「曲名 歌ってみた」を探して、よく聴かれているものを数件ずつその曲の歌ってみたとして追加する。調べた曲は data/pick-covers-done.json に
 const COVER_WORD = /歌ってみた|歌わせていただきました|\bcover\b|カバー/i;
-// 投稿ネタ（夜の「歌ってみた聴きくらべ」）で紹介する歌い手の X アカウントを探す（data/x-handles.json）。
-// 歌い手本人のチャンネル（YouTube）・ユーザー（ニコニコ）の説明文に X のリンクが1つだけあるときだけ使う（複数あると誰のか分からないので使わない）
+// 投稿ネタで紹介する曲の作者の X アカウントを探す（data/x-handles.json）。
+// 本家を投稿したチャンネル（YouTube）・ユーザー（ニコニコ）の説明文に X のリンクが1つだけあるときだけ使う（複数あると誰のか分からないので使わない）
 async function fetchXHandles(items) {
   const today = new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 10);
   const tomorrow = new Date(Date.now() + 33 * 3600e3).toISOString().slice(0, 10);
   const picks = await readJson("data/picks.json", {});
-  const songIds = [today, tomorrow].flatMap(d => (picks[d] || []).filter(s => /歌ってみた/.test(s.label)).flatMap(s => s.ids));
-  if (!songIds.length) return;
+  // 投稿ネタの全部の枠の曲の、作者（本家を投稿したチャンネル・ユーザー）のアカウント。歌い手さんのアカウントは付けない
+  const songIds = new Set([today, tomorrow].flatMap(d => (picks[d] || []).flatMap(s => s.ids)));
+  if (!songIds.size) return;
   const store = await readJson("data/x-handles.json", { ch: {}, v: {} });
-  const covers = songIds.flatMap(id => items.filter(i => i.kind === "歌ってみた" && i.of === id && i.uploaderId).sort((a, b) => (b.views || 0) - (a.views || 0)).slice(0, 6));
+  const covers = items.filter(i => i.kind === "本家" && songIds.has(i.id) && i.uploaderId);
   const fresh = k => store.ch[k] && (Date.parse(today) - Date.parse(store.ch[k].at)) / 864e5 < 30;
   const BAD = /^(intent|share|home|hashtag|search|i|explore|settings|messages|notifications)$/i;
   const handleIn = text => { const hs = [...new Set([...String(text || "").matchAll(/(?:twitter\.com|x\.com)\/(?:#!\/)?@?([A-Za-z0-9_]{1,15})(?![A-Za-z0-9_])/gi)].map(m => m[1]).filter(h => !BAD.test(h)).map(h => h.toLowerCase()))];
@@ -675,7 +676,7 @@ async function fetchXHandles(items) {
   }
   store.v = {};
   for (const c of covers) { const h = store.ch[(c.src === "youtube" ? "yt:" : "nico:") + c.uploaderId]?.h; if (h) store.v[c.id] = h; }
-  console.log(`歌い手のXアカウント: ${covers.length}本中 ${Object.keys(store.v).length}本で見つかった`);
+  console.log(`作者のXアカウント: ${covers.length}曲中 ${Object.keys(store.v).length}本で見つかった`);
   await writeFile(path("data/x-handles.json"), JSON.stringify(store, null, 1) + "\n");
 }
 

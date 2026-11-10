@@ -462,7 +462,10 @@ await put("s/index.html", singerIndex()); urls.push("/s/");
   const ASK_VOTED = ["あなたも聴いた印象をタグで投票してね🏷️", "あなたはどう感じた？タグで投票してね🏷️"];
   const pickOf = (list, id) => list[[...id].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 3) % list.length];
   const askLine = id => tagsOf(id).length ? pickOf(ASK_VOTED, id) : pickOf(ASK, id);
-  const who = i => i.p ? ` / ${i.p}${i.v ? `（${i.v}）` : ""}` : (i.v ? `（${i.v}）` : "");
+  const xh = await readFile(path("data/x-handles.json"), "utf8").then(JSON.parse).catch(() => ({ v: {} }));
+  const handleOf = x => xh.v?.[x.id] || (x.alt || []).map(a => xh.v?.[a.id || a]).find(Boolean);
+  // 作者の X アカウント（fetch.mjs の fetchXHandles）が分かっていれば「作者 @アカウント」にする。本人に通知が行って、見てもらいやすい
+  const who = i => { const h = handleOf(i); return i.p ? ` / ${i.p}${h ? ` @${h}` : ""}${i.v ? `（${i.v}）` : ""}` : (i.v ? `（${i.v}）` : ""); };
   const songText = (head, i, tags) => {
     const n = (coversOf.get(i.id) || []).length;
     return fit([head, "", `「${i.t}」${who(i)}`, `${head.startsWith("📅") ? "" : `${(i.date || "").slice(0, 4)}年の曲・`}${fmtViews(i.views)}回再生${n ? `・歌ってみた${n}件` : ""}`, tagLine(i.id), SITE + songUrl(i.id), "", askLine(i.id), tags]);
@@ -490,12 +493,8 @@ await put("s/index.html", singerIndex()); urls.push("/s/");
   const anniv = prevNight ? [] : take(orig.filter(i => isAnniv(i) && (i.views || 0) >= 100000), 1, taken).map(annivOf);
   anniv.forEach(x => taken.add(x.i.id));
   const GENRE_TAG = { "ボカロ": "ボカロ", "J-POP": "JPOP", "アニソン": "アニソン" };
-  // 歌い手の X アカウント（fetch.mjs の fetchXHandles）が分かっていれば「名前（@アカウント）」にする。名前が出ると本人に通知が行って、見てもらいやすい
-  const xh = await readFile(path("data/x-handles.json"), "utf8").then(JSON.parse).catch(() => ({ v: {} }));
-  const handleOf = x => xh.v?.[x.id] || (x.alt || []).map(a => xh.v?.[a.id || a]).find(Boolean);
   const coverText = i => { const cs = [...(coversOf.get(i.id) || [])].sort((a, b) => (b.views || 0) - (a.views || 0));
-    const seen = new Set(), names = [];
-    for (const x of cs) { const n = x.vr || x.by; if (!n || seen.has(n)) continue; seen.add(n); const h = handleOf(x); names.push(h ? `${n}（@${h}）` : n); if (names.length >= 3) break; }
+    const names = [...new Set(cs.map(x => x.vr || x.by).filter(Boolean))].slice(0, 3);
     return fit(["🎤 歌ってみた聴きくらべ", "", `「${i.t}」${who(i)}`, `TagTuneに歌ってみたが${cs.length}件！`, names.length ? `${names.join("、")}などが歌ってます` : null, SITE + songUrl(i.id), "", "どの歌ってみたが好き？聴きくらべてタグをつけてね🏷️", `#TagTune #歌ってみた${GENRE_TAG[i.g] ? ` #${GENRE_TAG[i.g]}` : ""}`]); };
   const night = slot("夜：歌ってみた・○年前の今日", "20:00", prevNight ? prevNight.map(i => isAnniv(i) ? annivOf(i) : { i, text: coverText(i) }) : [...anniv, ...take(orig.filter(i => (coversOf.get(i.id) || []).length >= 3), 3 - anniv.length, taken).map(i => ({ i, text: coverText(i) }))]);
   const slots = [morning, noon, evening, night];
