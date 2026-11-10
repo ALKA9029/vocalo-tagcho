@@ -1589,6 +1589,29 @@
   "pinned": true
  },
  {
+  "id": "UCUzpZpX2wRYOk3J8QTFGxDg",
+  "added": "2026-11-10T22:43:31.254Z",
+  "name": "乃木坂46 OFFICIAL YouTube CHANNEL",
+  "genre": "J-POP",
+  "lastHit": "2026-11-10T15:00:09Z"
+ },
+ {
+  "id": "UC9zY_E8mcAo_Oq772LEZq8Q",
+  "name": "THE FIRST TAKE",
+  "added": "2026-10-09T12:06:54.468Z",
+  "genre": "アニソン",
+  "lastHit": "2026-11-10T13:00:09Z",
+  "pinned": true
+ },
+ {
+  "id": "UC3OH5FKQ3qtl4uRme_vZTgA",
+  "added": "2026-11-10T22:43:31.254Z",
+  "name": "UNIT B (Pre-Debut) - mekPark",
+  "genre": "J-POP",
+  "lastHit": "2026-11-10T12:10:08Z",
+  "pinned": true
+ },
+ {
   "id": "UCWDA90eEvGBgtbOM997aStw",
   "added": "2026-10-11T21:32:47.826Z",
   "name": "Ryoji Takarabe財部亮治",
@@ -1610,6 +1633,14 @@
   "name": "CANACANA family",
   "genre": "アニソン",
   "lastHit": "2026-11-10T10:44:03Z",
+  "pinned": true
+ },
+ {
+  "id": "UCA_t0trBs1Fcb6U4HeUGT4g",
+  "added": "2026-11-10T15:05:23.320Z",
+  "name": "浦島坂田船公式チャンネル",
+  "genre": "J-POP",
+  "lastHit": "2026-11-10T10:00:10Z",
   "pinned": true
  },
  {
@@ -1728,6 +1759,14 @@
   "lastHit": "2026-11-08T12:00:20Z"
  },
  {
+  "id": "UCA1WrzBKw8BvPg1KUxejOiQ",
+  "added": "2026-11-10T15:05:23.320Z",
+  "name": "音楽チャートの世界",
+  "genre": "アニソン",
+  "lastHit": "2026-11-08T11:00:27Z",
+  "pinned": true
+ },
+ {
   "id": "UC3i4x9_cRUfIBhtDDAlBS3w",
   "added": "2026-10-27T14:21:01.369Z",
   "name": "しほ / shiho",
@@ -1774,6 +1813,13 @@
   "genre": "J-POP",
   "lastHit": "2026-11-08T09:00:11Z",
   "pinned": true
+ },
+ {
+  "id": "UCDIloCskZeTyShWapOOqNrw",
+  "added": "2026-11-10T15:05:23.320Z",
+  "name": "Hoshi AI Music",
+  "genre": "アニソン",
+  "lastHit": "2026-11-08T05:00:12Z"
  },
  {
   "id": "UC8T8_deSUS97DWZeKO_TL9Q",
@@ -1855,26 +1901,11 @@
   "pinned": true
  },
  {
-  "id": "UCDIloCskZeTyShWapOOqNrw",
-  "added": "2026-11-10T15:05:23.320Z",
-  "name": "Hoshi AI Music",
-  "genre": "J-POP",
-  "lastHit": "2026-11-07T05:00:02Z"
- },
- {
   "id": "UC_hSr2C3pGJwEoaebxDHLEg",
   "added": "2026-11-10T15:05:23.320Z",
   "name": "Kijori Konno Ch. 【V2V】",
   "genre": "J-POP",
   "lastHit": "2026-11-07T01:32:01Z"
- },
- {
-  "id": "UC9zY_E8mcAo_Oq772LEZq8Q",
-  "name": "THE FIRST TAKE",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "アニソン",
-  "lastHit": "2026-11-06T13:00:25Z",
-  "pinned": true
  },
  {
   "id": "UCOBECp2BuroMCjEZhu_AK-Q",
@@ -2018,13 +2049,6 @@
   "pinned": true
  },
  {
-  "id": "UCA1WrzBKw8BvPg1KUxejOiQ",
-  "added": "2026-11-10T15:05:23.320Z",
-  "name": "音楽チャートの世界",
-  "genre": "アニソン",
-  "lastHit": "2026-11-06T08:00:32Z"
- },
- {
   "id": "UCRK7qaLk8IRZSi8Su4EGZWg",
   "added": "2026-11-10T15:05:23.320Z",
   "name": "うたのママパパ",
@@ -2151,7 +2175,8 @@
   "added": "2026-11-10T15:05:23.320Z",
   "name": "GAN (岩田剛典)",
   "genre": "J-POP",
-  "lastHit": "2026-11-04T12:00:26Z"
+  "lastHit": "2026-11-04T12:00:26Z",
+  "pinned": true
  },
  {
   "id": "UC5A342geYEdX7fEKajNhG1A",
@@ -2243,18 +2268,18 @@
   "lastHit": "2026-11-04T08:00:06Z"
  },
  {
+  "id": "UCv0W6P8wb48lepdWPzVry7Q",
+  "added": "2026-11-10T15:05:23.320Z",
+  "name": "きらくん",
+  "genre": "J-POP",
+  "lastHit": "2026-11-04T04:00:38Z"
+ },
+ {
   "id": "UCeDRciWGCDp48GD7guaIxfw",
   "added": "2026-11-10T15:05:23.320Z",
   "name": "MAFUYU",
   "genre": "アニソン",
   "lastHit": "2026-11-04T02:34:08Z"
- },
- {
-  "id": "UCv0W6P8wb48lepdWPzVry7Q",
-  "added": "2026-11-10T15:05:23.320Z",
-  "name": "きらくん",
-  "genre": "J-POP",
-  "lastHit": "2026-11-04T01:31:38Z"
  },
  {
   "id": "UCEf_Bc-KVd7onSeifS3py9g",
@@ -2660,14 +2685,6 @@
   "name": "ヰ世界情緒 -Isekaijoucho-",
   "genre": "アニソン",
   "lastHit": "2026-10-25T10:00:22Z",
-  "pinned": true
- },
- {
-  "id": "UCA_t0trBs1Fcb6U4HeUGT4g",
-  "added": "2026-11-10T15:05:23.320Z",
-  "name": "浦島坂田船公式チャンネル",
-  "genre": "J-POP",
-  "lastHit": "2026-10-25T10:00:01Z",
   "pinned": true
  },
  {
@@ -3139,22 +3156,6 @@
   "name": "Polka Ch. 尾丸ポルカ",
   "genre": "アニソン",
   "lastHit": "2026-10-04T13:00:10Z",
-  "pinned": true
- },
- {
-  "id": "UCgtGh19oMBGUvBBr5aA4tyg",
-  "added": "2026-10-27T14:21:01.369Z",
-  "name": "ヒバナ - HIBANA -",
-  "genre": "J-POP",
-  "lastHit": "2026-10-01T11:00:07Z",
-  "pinned": true
- },
- {
-  "id": "UCH-SLA_jpPhM2lzdZjZDxjQ",
-  "added": "2026-10-27T14:21:01.369Z",
-  "name": "音ノ瀬らこ / Otonose Raco",
-  "genre": "アニソン",
-  "lastHit": "2026-09-29T11:00:09Z",
   "pinned": true
  }
 ]
