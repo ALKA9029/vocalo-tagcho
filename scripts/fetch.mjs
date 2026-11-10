@@ -674,8 +674,35 @@ async function fetchXHandles(items) {
     } catch { store.ch["nico:" + u] = { h: null, at: today }; }
     await sleep(500);
   }
+  // チャンネルの説明文で見つからなかった曲は、曲ごとに探す（store.s にとっておく）：
+  //  ボカロは VocaDB の作者ページの X のリンク、それ以外は本家の動画の説明文に X のリンクが1つだけあるとき
+  store.s ||= {};
+  const UA = { "User-Agent": "TagTune/1.0 (+https://tagtune.net/about.html)", Accept: "application/json" };
+  for (const c of covers) {
+    if (store.ch[(c.src === "youtube" ? "yt:" : "nico:") + c.uploaderId]?.h) continue;
+    if (store.s[c.id] && (Date.parse(today) - Date.parse(store.s[c.id].at)) / 864e5 < 30) continue;
+    let h = null;
+    try {
+      if (c.g === "ボカロ") {
+        const [svc, pv] = c.id.startsWith("nico:") ? ["NicoNicoDouga", c.id.slice(5)] : ["Youtube", c.id.slice(3)];
+        const song = await fetch(`https://vocadb.net/api/songs/byPv?pvService=${svc}&pvId=${pv}&fields=Artists`, { headers: UA }).then(r => r.ok ? r.text() : "null").then(t => t && t !== "null" ? JSON.parse(t) : null);
+        const prod = (song?.artists || []).filter(a => !a.isSupport && /Producer/.test(String(a.categories)) && a.artist?.id);
+        if (prod.length === 1) {
+          await sleep(1100);
+          const art = await fetch(`https://vocadb.net/api/artists/${prod[0].artist.id}?fields=WebLinks`, { headers: UA }).then(r => r.ok ? r.json() : null);
+          h = handleIn((art?.webLinks || []).filter(l => !l.disabled).map(l => l.url).join(" "));
+        }
+        await sleep(1100);
+      }
+      if (!h && c.src === "youtube" && key) {
+        const r = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${c.id.slice(3)}&key=${key}`).then(r => r.json());
+        h = handleIn(r.items?.[0]?.snippet?.description);
+      }
+    } catch (e) { console.log(`  ${c.id}: ${e.message}`); }
+    store.s[c.id] = { h, at: today };
+  }
   store.v = {};
-  for (const c of covers) { const h = store.ch[(c.src === "youtube" ? "yt:" : "nico:") + c.uploaderId]?.h; if (h) store.v[c.id] = h; }
+  for (const c of covers) { const h = store.ch[(c.src === "youtube" ? "yt:" : "nico:") + c.uploaderId]?.h || store.s[c.id]?.h; if (h) store.v[c.id] = h; }
   console.log(`作者のXアカウント: ${covers.length}曲中 ${Object.keys(store.v).length}本で見つかった`);
   await writeFile(path("data/x-handles.json"), JSON.stringify(store, null, 1) + "\n");
 }
