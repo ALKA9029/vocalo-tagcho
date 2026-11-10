@@ -134,12 +134,12 @@ function ogMeta(image) {
 const shareRow = (text, url) => `<p class="share"><a class="btn" href="https://x.com/intent/post?text=${encodeURIComponent(text)}&amp;url=${encodeURIComponent(SITE + url)}&amp;hashtags=TagTune" target="_blank" rel="noopener">𝕏 でシェア</a><button type="button" class="btn" data-share="${esc(SITE + url)}" data-text="${esc(text)}">🔗 リンクをコピー</button></p>`;
 
 // ---------- ページの外枠 ----------
-function page({ title, description, url, image, body, jsonld, crumbs = [], noAnalytics = false }) {
+function page({ title, description, url, image, body, jsonld, crumbs = [], noAnalytics = false, noindex = false }) {
   return `<!doctype html>
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">${noindex ? `\n<meta name="robots" content="noindex,follow">` : ""}
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
 <link rel="canonical" href="${SITE}${url}">
@@ -195,6 +195,10 @@ function remakeNote(i) {
 const creatorLink = i => { const c = creators.get(i.a); return c ? `<a href="${c.url}">${esc(i.p)}</a>` : esc(i.p); };
 
 // ---------- 曲ページ ----------
+// 中身の少ない曲ページ（歌ってみたもタグもまだ無く、とても有名な曲でもない）は、いったん検索に出さない（noindex・サイトマップからも外す）。
+// Google はページが多すぎると少しずつしか見に来ないので、歌ってみたやタグのあるページに目を集める。歌ってみたやタグが付けば自動で検索に戻る
+const thinSong = i => !(coversOf.get(i.id) || []).length && !tagsOf(i.id).length && (i.views || 0) < 5e6;
+
 function songPage(i) {
   const covers = coversOf.get(i.id) || [];
   const c = creators.get(i.a);
@@ -268,7 +272,7 @@ ${others.length ? `
   const jsonld = { "@context": "https://schema.org", "@type": "MusicRecording", name: i.t, url: SITE + songUrl(i.id),
     ...(i.p ? { byArtist: { "@type": "MusicGroup", name: i.p } } : {}), ...(i.date ? { datePublished: i.date.slice(0, 10) } : {}),
     ...(thumbOf(i) ? { image: thumbOf(i) } : {}), genre: i.g };
-  return page({ title, description, url: songUrl(i.id), image: sourcesOf(i).find(v => /i\.ytimg\.com/.test(v.thumb || ""))?.thumb || thumbOf(i), body, jsonld,
+  return page({ title, description, url: songUrl(i.id), noindex: thinSong(i), image: sourcesOf(i).find(v => /i\.ytimg\.com/.test(v.thumb || ""))?.thumb || thumbOf(i), body, jsonld,
     crumbs: [...(c ? [[c.name, c.url]] : []), [i.t]] });
 }
 
@@ -399,7 +403,7 @@ for (const dir of ["song", "p", "tag", "s"]) await rm(path(dir), { recursive: tr
 
 const urls = ["/", "/tag/", "/about.html"];
 const songs = items.filter(i => i.kind === "本家");
-for (const i of songs) { await put(`song/${songSlug(i.id)}/index.html`, songPage(i)); urls.push(songUrl(i.id)); }
+for (const i of songs) { await put(`song/${songSlug(i.id)}/index.html`, songPage(i)); if (!thinSong(i)) urls.push(songUrl(i.id)); }
 // まとめた曲のもう片方のページ（前に作ったURL）は、代表の曲のページへ移動させる
 for (const i of songs) for (const v of [...(i.alt || []), ...(i.al || []).map(id => ({ id }))]) {
   const to = songUrl(i.id);
