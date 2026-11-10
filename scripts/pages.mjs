@@ -486,7 +486,12 @@ await put("s/index.html", singerIndex()); urls.push("/s/");
   const anniv = prevNight ? [] : take(orig.filter(i => isAnniv(i) && (i.views || 0) >= 100000), 1, taken).map(annivOf);
   anniv.forEach(x => taken.add(x.i.id));
   const GENRE_TAG = { "ボカロ": "ボカロ", "J-POP": "JPOP", "アニソン": "アニソン" };
-  const coverText = i => { const cs = coversOf.get(i.id) || []; const names = [...new Set(cs.map(x => x.vr || x.by).filter(Boolean))].slice(0, 3);
+  // 歌い手の X アカウント（fetch.mjs の fetchXHandles）が分かっていれば「名前（@アカウント）」にする。名前が出ると本人に通知が行って、見てもらいやすい
+  const xh = await readFile(path("data/x-handles.json"), "utf8").then(JSON.parse).catch(() => ({ v: {} }));
+  const handleOf = x => xh.v?.[x.id] || (x.alt || []).map(a => xh.v?.[a.id || a]).find(Boolean);
+  const coverText = i => { const cs = [...(coversOf.get(i.id) || [])].sort((a, b) => (b.views || 0) - (a.views || 0));
+    const seen = new Set(), names = [];
+    for (const x of cs) { const n = x.vr || x.by; if (!n || seen.has(n)) continue; seen.add(n); const h = handleOf(x); names.push(h ? `${n}（@${h}）` : n); if (names.length >= 3) break; }
     return fit(["🎤 歌ってみた聴きくらべ", "", `「${i.t}」${who(i)}`, `TagTuneに歌ってみたが${cs.length}件！`, names.length ? `${names.join("、")}などが歌ってます` : null, SITE + songUrl(i.id), "", "どの歌ってみたが好き？聴きくらべてタグをつけてね🏷️", `#TagTune #歌ってみた${GENRE_TAG[i.g] ? ` #${GENRE_TAG[i.g]}` : ""}`]); };
   const night = slot("夜：歌ってみた・○年前の今日", "20:00", prevNight ? prevNight.map(i => isAnniv(i) ? annivOf(i) : { i, text: coverText(i) }) : [...anniv, ...take(orig.filter(i => (coversOf.get(i.id) || []).length >= 3), 3 - anniv.length, taken).map(i => ({ i, text: coverText(i) }))]);
   const slots = [morning, noon, evening, night];
