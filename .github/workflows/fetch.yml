@@ -2,10 +2,10 @@ name: 曲データを自動取得
 
 on:
   schedule:
-    # 毎朝5時15分（日本時間）。GitHub の予約実行は30〜40分ほど遅れて始まるので、6時ごろに更新が終わる。ニコニコの検索データは毎朝5時に更新される
-    - cron: "15 20 * * *"
-    # 予備：GitHub が混んでいて上の予約が飛ばされた日のため、7時15分（日本時間）にもう一度。その日の更新がもう済んでいたら何もしない
-    - cron: "15 22 * * *"
+    # ふだんは毎日0時（日本時間）に Claude の予約タスクから手動実行で起動する（GitHub の予約は混んでいると飛ばされることがあるため）。
+    # 下の2つは予備：その日の更新がもう済んでいたら何もしない
+    - cron: "30 15 * * *"   # 0時30分
+    - cron: "15 20 * * *"   # 5時15分
   workflow_dispatch:      # Actionsの画面から手動でも動かせる
     inputs:
       seed:
@@ -42,10 +42,10 @@ jobs:
         with:
           fetch-depth: 50
       - id: c
-        name: 予備の予約のとき、今日の更新が済んでいるか確かめる
+        name: 予約のときは、今日の更新がもう済んでいるか確かめる
         run: |
           today=$(TZ=Asia/Tokyo date '+%Y-%m-%d')
-          if [ "${{ github.event.schedule }}" = "15 22 * * *" ] && git log -50 --format=%s | grep -qx "曲データを更新 $today"; then
+          if [ "${{ github.event_name }}" = "schedule" ] && git log -50 --format=%s | grep -qx "曲データを更新 $today"; then
             echo "今日（$today）の更新は済んでいるので何もしない"; echo "skip=true" >> "$GITHUB_OUTPUT"
           fi
   fetch:
