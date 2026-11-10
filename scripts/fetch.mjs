@@ -679,6 +679,34 @@ async function fetchXHandles(items) {
   await writeFile(path("data/x-handles.json"), JSON.stringify(store, null, 1) + "\n");
 }
 
+// トップページの「きょうのTagTune」用（data/today.json）
+//   added：この1週間に追加された曲（日付ごと）。前に来たときより後のものに NEW を付けるのに使う
+//   trend：急上昇。前の日の再生数（data/views-prev.json に1日1回とっておく）からの伸び。大ヒット曲ばかりにならないよう、伸びを今の再生数の平方根で割った値で並べる
+async function writeToday(items) {
+  const jstDay = t => new Date(Date.parse(t) + 9 * 3600e3).toISOString().slice(0, 10);
+  const today = jstDay(new Date().toISOString());
+  const site = new Set(toSite(items).map(i => i.id));
+  const week = new Date(Date.parse(today) - 6 * 864e5).toISOString().slice(0, 10);
+  const added = {};
+  for (const i of items) {
+    if (!site.has(i.id) || !i.firstSeen || i.topicHidden || !(i.kind === "本家" || (i.kind === "歌ってみた" && i.of))) continue;
+    const d = jstDay(i.firstSeen); if (d < week) continue;
+    (added[d] ||= []).push(i);
+  }
+  for (const d of Object.keys(added)) added[d] = added[d].sort((a, b) => (b.views || 0) - (a.views || 0)).slice(0, 40).map(i => i.id);
+  // 再生数のとっておき：その日の最初の実行で前の日の分を base に回す
+  const vp = await readJson("data/views-prev.json", { date: null, v: {}, base: {} });
+  const now = Object.fromEntries(items.filter(i => site.has(i.id) && i.views).map(i => [i.id, i.views]));
+  if (vp.date !== today) { vp.base = vp.v || {}; vp.date = today; }
+  vp.v = now;
+  const trend = Object.entries(now).filter(([id]) => vp.base[id] != null)
+    .map(([id, v]) => { const d = v - vp.base[id]; return { id, d, score: d / Math.sqrt(v + 1e4) }; })
+    .filter(x => x.d >= 300).sort((a, b) => b.score - a.score).slice(0, 30).map(({ id, d }) => ({ id, d }));
+  await writeFile(path("data/views-prev.json"), JSON.stringify(vp) + "\n");
+  await writeFile(path("data/today.json"), JSON.stringify({ date: today, added, trend }) + "\n");
+  console.log(`きょうのTagTune：追加 ${Object.values(added).flat().length}曲（1週間）・急上昇 ${trend.length}曲`);
+}
+
 async function fetchPickCovers(items) {
   const cfg = config.pickCovers || {};
   if (cfg.enabled === false) return [];
@@ -883,5 +911,6 @@ if (fixtureArg < 0) await writeFile(path("data/meta.json"), JSON.stringify(meta,
 
 // サイト表示用：必要な項目だけにした軽いデータ
 if (fixtureArg < 0) await writeFile(path("data/site.json"), JSON.stringify(toSite(items)) + "\n");
+if (fixtureArg < 0) await writeToday(items).catch(e => console.warn("「きょうのTagTune」の作成に失敗:", e.message));
 console.log(`保存しました: ${outFile}（全${items.length}件、うち歌ってみたの原曲ひもづけ ${meta.linkedCovers}件）`);
 if (fixtureArg < 0) await writeFile(path("data/last-run.txt"), `${new Date().toISOString()}${SEED ? "（seed）" : ""}\n` + RUNLOG.join("\n") + "\n");

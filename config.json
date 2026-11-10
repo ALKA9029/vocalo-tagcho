@@ -1,6 +1,6 @@
 {
   "userAgent": "TagTune (https://github.com/ALKA9029/vocalo-tagcho)",
-  "maxItems": 8000,
+  "maxItems": 20000,
   "niconico": {
     "lookbackDays": 3,
     "seedQueries": [

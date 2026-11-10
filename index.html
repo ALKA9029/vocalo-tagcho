@@ -168,6 +168,22 @@ body.has-player .wrap{padding-bottom:320px}
 footer{border-top:1px solid var(--line);padding-top:16px;font-size:13px;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap}
 footer a{color:var(--muted)}
 footer a:hover{color:var(--accent)}
+/* きょうのTagTune（トップの帯：今日の追加・新曲・急上昇） */
+.today{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 12px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.today .th{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.today .th b{font-size:15px}
+.today .tabs{display:flex;gap:4px;flex-wrap:wrap}
+.today .tabs button{font:inherit;font-size:13px;color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;padding:3px 10px;cursor:pointer}
+.today .tabs button[aria-selected="true"]{color:var(--accent-ink);background:var(--accent);border-color:var(--accent)}
+.today .tabs .n{font-size:11px;margin-left:3px;opacity:.8}
+.today .strip{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+.today .card{flex:0 0 150px;scroll-snap-align:start;display:flex;flex-direction:column;gap:3px;color:var(--ink);text-decoration:none;min-width:0}
+.today .card .im{position:relative;aspect-ratio:16/9;border-radius:8px;overflow:hidden;background:var(--line)}
+.today .card img{width:100%;height:100%;object-fit:cover;display:block}
+.today .card .new{position:absolute;top:4px;left:4px;font-size:10px;font-weight:700;color:var(--accent-ink);background:var(--accent);border-radius:4px;padding:0 5px}
+.today .card .ct{font-size:13px;font-weight:700;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.today .card .cs{font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.today .card:hover .ct{color:var(--accent)}
 </style>
 
 <div class="wrap">
@@ -178,6 +194,11 @@ footer a:hover{color:var(--accent)}
   </header>
 
   <div class="notice" id="status">曲データを読み込み中…</div>
+
+  <section class="today" id="today" hidden aria-label="きょうのTagTune">
+    <div class="th"><b>きょうのTagTune</b><div class="tabs" id="todayTabs" role="tablist"></div></div>
+    <div class="strip" id="todayStrip"></div>
+  </section>
 
   <div class="bar">
     <div class="row">
@@ -881,6 +902,44 @@ try { if (localStorage.getItem(FOLD_KEY) === "1") $(".bar").classList.add("folde
 setFold($(".bar").classList.contains("folded"), false);
 render();
 
+// きょうのTagTune：今日追加された曲・この1週間の新曲・急上昇（data/today.json は毎日の更新で作る）。
+// 前にこの端末で開いた日より後に追加された曲には NEW を付ける
+const VISIT_KEY = "tagtune:lastVisit";
+async function showToday(){
+  const box = $("#today"); if (!box) return;
+  let T; try { T = await fetch("data/today.json").then(r=>r.ok?r.json():null); } catch {}
+  if (!T) return;
+  let last = null; try { last = localStorage.getItem(VISIT_KEY); localStorage.setItem(VISIT_KEY, T.date); } catch {}
+  const live = id => { const i = ITEM[ALIAS[id] || id]; return i && thumbOf(i) ? i : null; };
+  const addedAt = {};
+  for (const [d, ids] of Object.entries(T.added || {})) for (const id of ids) addedAt[id] ??= d;
+  const added = Object.keys(T.added || {}).sort().reverse().flatMap(d => T.added[d]).map(live).filter(Boolean);
+  const week = Date.now() - 7 * 864e5;
+  const fresh = ITEMS.filter(i => i.kind === "本家" && i._t >= week && thumbOf(i)).sort((a,b)=>(b.views||0)-(a.views||0)).slice(0, 30);
+  const trend = (T.trend || []).map(x => { const i = live(x.id); return i ? Object.assign(Object.create(i), { _d: x.d }) : null; }).filter(Boolean);
+  const isNew = i => last && addedAt[i.id] && addedAt[i.id] > last;
+  const tabs = [
+    { key:"trend", label:"🔥 急上昇", list: trend, sub: i => `+${fmtViews(i._d)}` },
+    { key:"new", label:"🎵 新曲", list: fresh, sub: i => `${fmtDate(i.date)}・${fmtViews(i.views)}` },
+    { key:"added", label:"🆕 追加", list: added, sub: i => `${addedAt[i.id] ? addedAt[i.id].slice(5).replace("-","/") + " 追加" : ""}` },
+  ].filter(t => t.list.length);
+  if (!tabs.length) return;
+  const newCount = added.filter(isNew).length;
+  let cur = (newCount ? tabs.find(t=>t.key==="added") : null) || tabs[0];
+  const strip = $("#todayStrip"), tl = $("#todayTabs");
+  const draw = () => {
+    tl.replaceChildren(...tabs.map(t => el("button",{type:"button", role:"tab", "aria-selected": String(t===cur), onclick:()=>{ cur=t; draw(); strip.scrollLeft=0; }},
+      t.label, t.key==="added" && newCount ? el("span",{class:"n"}, `NEW ${newCount}`) : null)));
+    strip.replaceChildren(...cur.list.map(i => {
+      const who = i.kind === "本家" ? (i.p || "") : `歌：${i.by || "?"}`;
+      return el("a",{class:"card", href: detailUrl(i) || i.url, ...(detailUrl(i) ? {} : {target:"_blank", rel:"noopener"})},
+        el("span",{class:"im"}, el("img",{src:thumbOf(i), alt:"", loading:"lazy", decoding:"async", referrerpolicy:"no-referrer", onerror:e=>e.target.remove()}), isNew(i) ? el("span",{class:"new"},"NEW") : null),
+        el("span",{class:"ct"}, i.kind === "歌ってみた" ? `🎤 ${original(i)?.t || i.t}` : i.t), el("span",{class:"cs"}, [who, cur.sub(i)].filter(Boolean).join("・")));
+    }));
+  };
+  draw(); box.hidden = false;
+}
+
 (async()=>{
   try {
     const [songs, meta, pages] = await Promise.all([fetch("data/site.json").then(r=>r.json()), fetch("data/meta.json").then(r=>r.json()).catch(()=>null), fetch("data/pages.json").then(r=>r.json()).catch(()=>null)]);
@@ -896,6 +955,7 @@ render();
     const view = pendingId ? null : loadView();
     if (view) { state.shown = Math.max(PAGE, view.shown || PAGE); state.rel = view.rel && ITEM[view.rel] ? view.rel : null; }
     render();
+    showToday();
     if (view) window.scrollTo(0, view.y || 0);
     if (pendingId && ITEM[pendingId]) jump(pendingId);
     // 票を読み込んだあとに一覧を描き直すので、リンクで開いた曲・戻ってきたときの位置にもう一度合わせる
