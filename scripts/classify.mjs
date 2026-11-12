@@ -604,6 +604,15 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     item.kind = "歌ってみた"; item.by = "シアーミュージック"; delete item.v; delete item.a;
     if (m) { item.t = m[1].trim(); item.p = (m[2] || "").replace(/\s*(feat\.?|ft\.).*$/i, "").trim(); }
   }
+  // 歌い手・VTuber のチャンネルから全部取りこんだ歌ってみた（config の youtube.coverChannels）。歌った人はそのチャンネルの人
+  // 韓国の VTuber はタイトルが「韓国語の曲名 [日本語の曲名 / 作者]」の形が多いので、カッコの中の日本語の曲名を使う
+  if (video.coverBy) {
+    item.kind = "歌ってみた"; item.by = video.coverBy; delete item.v; delete item.a; delete item.selfDesc;
+    const jp = /[\u3040-\u30ff\u4e00-\u9fff]/;
+    const br = [...video.title.matchAll(/[\[［【「『(（]([^\]］】」』)）]+)[\]］】」』)）]/g)].map(m => m[1]).filter(x => !/cover|커버|歌ってみた|カバー|^\s*MV\s*$/i.test(x));
+    const b = br.find(x => jp.test(x) && /[\/／]/.test(x)) || br.find(x => jp.test(x));
+    if (b) { const [t, p] = b.split(/\s*[\/／]\s*/); item.t = t.trim(); if (p) item.p = p.replace(/\s*(feat\.?|ft\.).*$/i, "").trim(); }
+  }
   return item;
 }
 

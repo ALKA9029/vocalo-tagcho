@@ -448,6 +448,43 @@ async function lookupOriginalsYouTube(items) {
 // ---------- 公式チャンネルの過去の人気曲：J-POP・アニソンの本家を出しているチャンネルの全動画から、よく再生された曲を本家として追加 ----------
 // 検索は使わない（動画一覧は50本で1ユニット）。1回の取得で maxChannelsPerRun チャンネルずつ、recheckDays たったら見直す
 const CATALOG_SKIP = /THE FIRST TAKE|\blive\b|ライブ|acoustic|アコースティック|弾き語り|remix|リミックス|instrumental|teaser|trailer|short ver|dance practice|ダンス(練習|プラクティス)|behind|making|メイキング|interview|インタビュー|コメント|告知|\bspot\b|\bcm\b|ダイジェスト|digest|#shorts/i;
+// 歌い手・VTuber のチャンネルの歌ってみたを全部取りこむ（config の youtube.coverChannels）。
+// 初めてのチャンネルは全部の動画を、2回目からは新しい50本だけを見る。タイトルに cover などがある動画だけ。歌った人は config の name
+async function fetchCoverChannels(items) {
+  const cfg = config.youtube.coverChannels, key = process.env.YOUTUBE_API_KEY;
+  if (!cfg?.list?.length || !key) return [];
+  const done = await readJson("data/catalog-done.json", {});
+  const known = new Set(items.map(i => i.id));
+  const re = new RegExp(cfg.titleRe || "cover", "i");
+  const out = [];
+  for (const ch of cfg.list) {
+    let id = ch.id || done["handle:" + ch.handle];
+    if (!id && ch.handle) {
+      const res = await ytFetch("https://www.googleapis.com/youtube/v3/channels?" + new URLSearchParams({ part: "id", forHandle: ch.handle, key }));
+      id = res.ok ? (await res.json()).items?.[0]?.id : null;
+      if (id) done["handle:" + ch.handle] = id; else { console.warn(`歌い手のチャンネル @${ch.handle} が見つからない`); continue; }
+    }
+    const first = !done["cover:" + id];
+    const ids = [];
+    let pageToken = "";
+    for (let page = 0; page < (first ? 40 : 1); page++) {
+      const res = await ytFetch("https://www.googleapis.com/youtube/v3/playlistItems?" + new URLSearchParams({ part: "contentDetails", playlistId: "UU" + id.slice(2), maxResults: "50", key, ...(pageToken ? { pageToken } : {}) }));
+      if (!res.ok) break;
+      const body = await res.json();
+      for (const it of body.items || []) if (it.contentDetails?.videoId) ids.push(it.contentDetails.videoId);
+      pageToken = body.nextPageToken; if (!pageToken) break;
+    }
+    const got = (await ytVideos(ids.filter(v => !known.has("yt:" + v)), key))
+      .filter(v => re.test(v.snippet?.title || "") && !/#shorts|\bshorts?\b|切り抜き|歌枠|노래방송|노래 방송|LIVE|라이브/i.test(v.snippet?.title || ""))
+      .map(v => ({ ...ytItem(v, "J-POP"), coverBy: ch.name, seed: true }));
+    out.push(...got);
+    done["cover:" + id] = new Date().toISOString();
+    console.log(`歌い手のチャンネル「${ch.name}」: ${ids.length}本のうち歌ってみた ${got.length}本を追加`);
+  }
+  await writeFile(path("data/catalog-done.json"), JSON.stringify(done) + "\n");
+  return out;
+}
+
 async function fetchCatalogs(items) {
   const cfg = config.youtube.catalog;
   const key = process.env.YOUTUBE_API_KEY;
@@ -865,6 +902,7 @@ const videos = fixtureArg > -1
      ...(SEED ? await fetchYouTubeSeedSearch().catch(e => (console.warn("YouTube人気ボカロ検索の取得失敗:", e.message), [])) : []),
      ...(SEED ? [] : await fetchFollowed(new Set((await readJson("data/songs.json", [])).map(i => i.id))).catch(e => (console.warn("自動フォローの取得失敗:", e.message), []))),
      ...(SEED ? [] : await fetchCatalogs(await readJson("data/songs.json", [])).catch(e => (console.warn("公式チャンネルの人気曲の取得失敗:", e.message), []))),
+     ...(SEED ? [] : await fetchCoverChannels(await readJson("data/songs.json", [])).catch(e => (console.warn("歌い手のチャンネルの取得失敗:", e.message), []))),
      ...(SEED ? [] : await fetchTopicReplacements(await readJson("data/songs.json", [])).catch(e => (console.warn("Topicの差しかえに失敗:", e.message), []))),
      ...(SEED ? [] : await fetchManual(new Set((await readJson("data/songs.json", [])).map(i => i.id))).catch(e => (console.warn("手で追加する動画の取得失敗:", e.message), []))),
      ...(SEED ? [] : await fetchRequests(await readJson("data/songs.json", [])).catch(e => (console.warn("歌ってみたのリクエストの確認に失敗:", e.message), []))),
