@@ -1136,6 +1136,29 @@ function asToken(raw, sub) {
   return !(i > 0 && joined(R[i - 1], S[0])) && !(rest && joined(S[S.length - 1], rest[0]) && !COVER_TAIL.test(rest));
 }
 
+// 歌い手・VTuber のチャンネルから取りこんだ歌ってみた（coverBy）は、タイトルの形がばらばら（韓国語の曲名・カッコの位置など）なので、
+// タイトルの中に出てくる本家の曲名で原曲を探しなおす。作者名もタイトルにあればそちらを優先、長い曲名を優先。
+// 見つからないもの（原曲がサイトにない K-POP など）は toSite でサイトに出さない（原曲が入ればつながって出てくる）
+function linkChannelCovers(items) {
+  const covers = items.filter(c => c.kind === "歌ってみた" && c.coverBy);
+  if (!covers.length) return;
+  const origs = items.filter(o => o.kind === "本家" && !o.rm && !o.topicHidden && !o.dup && normalize(o.t).length >= 2);
+  for (const c of covers) {
+    const T = c.title || "";
+    // 曲名が作者名そのもの（「Mrs. GREEN APPLE」という曲名の本家など、読み違いの本家）は候補にしない
+    let cands = origs.filter(o => o.p && !CREATOR_SET.has(normalize(o.t)) && asToken(T, o.t));
+    const withP = cands.filter(o => asToken(T, o.p));
+    if (withP.length) cands = withP;
+    // 作者名がタイトルにあるのに、その作者の曲がサイトにない（「ライラック (Mrs. GREEN APPLE)」で、サイトのライラックは別の人の曲）ときはつながない
+    else if ([...CREATOR_SET].some(n => n.length >= 3 && asToken(T, n))) cands = [];
+    // 英語だけの短い曲名（Girl・Stay など）は、作者名もタイトルにあるときだけ
+    else cands = cands.filter(o => /[\u3040-\u30ff\u4e00-\u9fff]/.test(o.t) ? normalize(o.t).length >= 2 : normalize(o.t).length >= 8);
+    const hits = cands.map(o => ({ o, s: normalize(o.t).length * 10 + Math.log10((o.views || 0) + 1) })).sort((a, b) => b.s - a.s);
+    if (hits.length) { const o = hits[0].o; c.of = o.id; c.t = o.t; c.p = o.p; c.g = o.g; }
+    else delete c.of;
+  }
+}
+
 let CREATOR_SET = new Set();
 export function linkCovers(items, vdb = {}) {
   CREATOR_SET = new Set(items.filter(i => i.kind === "本家" && i.p).map(i => normalize(i.p)));
@@ -1226,6 +1249,7 @@ export function linkCovers(items, vdb = {}) {
     if (!c.by || normalize(c.by) !== normalize(o.p || "")) continue;
     c.kind = "本家"; c.p = o.p; c.a = o.a; c.g = o.g; delete c.of; delete c.by; delete c.self;
   }
+  linkChannelCovers(items);
   mergeSources(items);
   // まとめたことで原曲のジャンルが変わった（YouTube版がニコニコ版に合わせてボカロになった など）ら、歌ってみたにも反映
   { const byIdM = new Map(items.map(i => [i.id, i])); for (const c of items) { const o = c.of && byIdM.get(c.of); if (o && c.kind === "歌ってみた" && o.g !== "その他") c.g = o.g; } }
@@ -1293,7 +1317,7 @@ export const toSite = items => {
   // alt にならなかった転載（同じサイトの2本目以降）：前のIDの票やページを代表の曲に寄せるため、IDだけ持たせる
   const hidden = new Map();
   for (const i of items) if (i.dup && !(byId.get(i.dup)?.alt || []).includes(i.id)) (hidden.get(i.dup) || hidden.set(i.dup, []).get(i.dup)).push(i);
-  return items.filter(i => !i.dup && !i.topicHidden).map(i => {
+  return items.filter(i => !i.dup && !i.topicHidden && !(i.kind === "歌ってみた" && i.coverBy && !i.of)).map(i => {
     const o = Object.fromEntries(KEEP.filter(k => i[k] != null && i[k] !== "").map(k => [k, unent(i[k])]));
     const alts = (i.alt || []).map(id => byId.get(id)).filter(Boolean);
     if (alts.length) {

@@ -3352,33 +3352,6 @@
   "firstSeen": "2026-11-10T11:18:50.404Z"
  },
  {
-  "id": "yt:zr76fswUH2I",
-  "src": "youtube",
-  "url": "https://www.youtube.com/watch?v=zr76fswUH2I",
-  "title": "【新人歌い手グループ】指定した歌手の曲を被らずに歌え！『Mrs. GREEN APPLE』 #ミセスグリーンアップル #mga #el6",
-  "t": "Mrs. GREEN APPLE",
-  "kind": "本家",
-  "g": "J-POP",
-  "date": "2026-11-09T10:00:14Z",
-  "views": 129389,
-  "likes": 11533,
-  "thumb": "https://i.ytimg.com/vi/zr76fswUH2I/mqdefault.jpg",
-  "tags": [
-   "歌い手",
-   "いれいす",
-   "シクフォニ",
-   "ミセス",
-   "MGA",
-   "ミセスグリーンアップル"
-  ],
-  "uploaderId": "UCNMbL86u5LBeO_BWHp5pJ5g",
-  "uploader": "Element Sicks【EL6】",
-  "descHead": "▼ Element Sicks Member\n\n【 赤 】ツバサ\n【 黄 】８３２\n【 紫 】春希\n【 白 】JIL\n【 水色 】ねいろ\n【 ピンク 】ていく",
-  "p": "指定した歌手の曲を被らずに歌え!",
-  "a": "youtube:UCNMbL86u5LBeO_BWHp5pJ5g",
-  "firstSeen": "2026-11-10T11:18:50.376Z"
- },
- {
   "id": "yt:DSSL5b3JarI",
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=DSSL5b3JarI",
@@ -16750,7 +16723,6 @@
   "p": "DAOKO × 米津玄師",
   "firstSeen": "2026-11-12T14:53:13.326Z",
   "seed": true,
-  "of": "yt:-tKVN2mAKRI",
   "a": "youtube:UCIzc1_X3OAFquArF3EOVeWw"
  },
  {
@@ -17160,9 +17132,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=VuyZF2VYAfU",
   "title": "CH4NGE [Giga ft.可不] / 유즈하 리코 Yuzuha Riko cover",
-  "t": "Giga ft.可不",
+  "t": "CH4NGE",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2026-10-19T10:00:07Z",
   "views": 427953,
   "likes": 11147,
@@ -17205,7 +17177,9 @@
   "descHead": "☘Original : Giga - CH4NGE ft.可不\nhttps://youtu.be/LbO4pg_LHUI?list=RDLbO4pg_LHUI\n\n☘Vocal & Chorus : Yuzuha Riko\n\n\n☘Directed : REQ\nhttps://x.com/requiemdh\n\n☘MIX & Mastering : AGNA\nhttps://x.com/agna11\n\n\n☘Illustration : KoBa Cha\nhttps://x.com/Koba_cha_2001\n\n☘LIVE 2D : Grempa\nhttps://x.com/grempa_riggin",
   "by": "Yuzuha Riko",
   "firstSeen": "2026-11-12T14:53:13.431Z",
-  "seed": true
+  "seed": true,
+  "p": "Giga",
+  "of": "yt:LbO4pg_LHUI"
  },
  {
   "id": "nico:ss46942629",
@@ -18265,7 +18239,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=JLM7z8afU4s",
   "title": "아 프리오리 (Mrs. GREEN APPLE 「ア・プリオリ」) / 아오쿠모 린(Aokumo Rin) Cover",
-  "t": "Mrs. GREEN APPLE",
+  "t": "Mrs. GREEN APPLE 「ア・プリオリ",
   "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2026-10-12T11:30:09Z",
@@ -18280,9 +18254,7 @@
   "by": "Aokumo Rin",
   "firstSeen": "2026-11-12T14:53:13.404Z",
   "seed": true,
-  "p": "指定した歌手の曲を被らずに歌え!",
-  "of": "yt:zr76fswUH2I",
-  "a": "youtube:UCNMbL86u5LBeO_BWHp5pJ5g"
+  "p": "指定した歌手の曲を被らずに歌え!"
  },
  {
   "id": "nico:sm46916933",
@@ -20393,7 +20365,6 @@
   "p": "Dance The Night Away",
   "firstSeen": "2026-11-12T14:53:13.416Z",
   "seed": true,
-  "of": "nico:sm18916362",
   "a": "niconico:8102842"
  },
  {
@@ -21107,7 +21078,8 @@
   "descHead": "Hanako Nana BIRTHDAY 3D LIVE\n\n- Produced by STELLIVE\nArtist: Hanako Nana\nGuest Artist : Shirayuki Hina, Aokumo Rin\nArtist Management: Marin\nExecutive Direction: DUCKCHUN\n\n\n- Visual & Video\nVisual Direction: Archive86\nProduction Support: Miyuk, Newto\nScreen Video Design: SHIROMASHYU\n\n\n- Music & Sound",
   "by": "Hanako Nana",
   "firstSeen": "2026-11-12T14:53:13.417Z",
-  "seed": true
+  "seed": true,
+  "p": "音田雅則OtodaMasanori"
  },
  {
   "id": "yt:PPL5BYcozLk",
@@ -21310,7 +21282,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=Zetk77I6_s8",
   "title": "오츠카레summer [おつかれsummer/HALCALI] / 하나코 나나, 사키하네 후야 COVER",
-  "t": "おつかれsummer",
+  "t": "おつかれSUMMER",
   "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2026-09-12T11:00:06Z",
@@ -21336,7 +21308,9 @@
   "by": "Hanako Nana",
   "p": "HALCALI",
   "firstSeen": "2026-11-12T14:53:13.418Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:ViFHruS6oO8",
+  "a": "youtube:UCfvKviWFdi00xhgF3gM9d0w"
  },
  {
   "id": "yt:FFLYHWCcxS8",
@@ -21693,7 +21667,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=uBtFoUXR9Qc",
   "title": "물떼새[ヨルシカ - 千鳥]ㅣ아라하시 타비 Cover",
-  "t": "ヨルシカ",
+  "t": "千鳥",
   "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2026-09-07T14:59:07Z",
@@ -21727,9 +21701,8 @@
   "by": "Arahashi Tabi",
   "firstSeen": "2026-11-12T14:53:13.384Z",
   "seed": true,
-  "p": "RADWIMPS",
-  "of": "yt:0pftsY_onk8",
-  "a": "youtube:UCIVqvhyo8ttjYOmMJuhq_YQ"
+  "p": "ヨルシカ",
+  "of": "yt:t75qlQPXJGw"
  },
  {
   "id": "nico:ss46771263",
@@ -22136,7 +22109,7 @@
   "title": "라일락[ライラック] - Mrs. GREEN APPLE / 유즈하 리코 (Yuzuha Riko) cover",
   "t": "ライラック",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "アニソン",
   "date": "2026-09-02T10:45:06Z",
   "views": 1161984,
   "likes": 16829,
@@ -22179,10 +22152,10 @@
   "descHead": "🌊🍀🪻\n\n☘Original : Mrs. GREEN APPLE「ライラック」\nhttps://youtu.be/QjrkrVmC-8M?si=Kk14PWqwy1ilPs4D\n\n\n☘Vocal & Chorus : Yuzuha Riko\n\n\n☘Directed & Inst Arrangement : REQ\nhttps://x.com/requiemdh\n\n☘Guitar Performance : Woong\nhttps://x.com/woongblessyou\n\n☘Vocal Edit : Dal. & AGNA\n\n☘MIX & Mastering : AGNA\nhttps",
   "by": "Yuzuha Riko",
   "pHint": "라일락",
-  "p": "美波",
+  "p": "Mrs. GREEN APPLE",
   "firstSeen": "2026-11-12T14:53:13.432Z",
   "seed": true,
-  "of": "yt:GQ3V50XoLOM",
+  "of": "yt:QjrkrVmC-8M",
   "a": "youtube:UC2JzylaIF8qeowc7-5VwwmA"
  },
  {
@@ -22619,7 +22592,6 @@
   "p": "푸른 산호초",
   "firstSeen": "2026-11-12T14:53:13.322Z",
   "seed": true,
-  "of": "nico:sm1263599",
   "a": "niconico:661206"
  },
  {
@@ -22891,8 +22863,7 @@
   "pHint": "콧치노 켄토",
   "p": "Magens",
   "firstSeen": "2026-11-12T14:53:13.347Z",
-  "seed": true,
-  "of": "nico:sm44103983"
+  "seed": true
  },
  {
   "id": "yt:4YOLSOJYcC8",
@@ -23924,10 +23895,9 @@
   "by": "KMNZ",
   "pHint": "おつかれSUMMER",
   "p": "おつかれSUMMER",
-  "a": "youtube:UCfvKviWFdi00xhgF3gM9d0w",
+  "a": "おつかれsummer",
   "firstSeen": "2026-10-27T14:07:12.628Z",
-  "seed": true,
-  "of": "yt:ViFHruS6oO8"
+  "seed": true
  },
  {
   "id": "yt:uPXWMbG33UE",
@@ -25033,9 +25003,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=9S3if_u5n_Q",
   "title": "소녀레이 [みきとP 『 少女レイ』] / 아오쿠모 린(Aokumo Rin) Cover",
-  "t": "みきとP 『 少女レイ",
+  "t": "少女レイ",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2026-08-11T11:00:06Z",
   "views": 659514,
   "likes": 14149,
@@ -25047,7 +25017,9 @@
   "descHead": "#STELLIVE #스텔라이브 #3기 #아오쿠모린 #Aokumo_Rin #쿠모린 #린 #클리셰 #少女レイ #みきとP #初音ミク #소녀레이 #미키토 #하츠네미쿠 #쿠리미 #cover #뇨\n\n\n☁️Original: みきとP 『 少女レイ 』\nhttps://youtu.be/JW3N-HvU0MA?list=RDJW3N-HvU0MA\n\n☁️Vocal & Chorus: Aokumo Rin\n\n\n☁️Direction & Arrangement: REQ\nhttps://x.com/requiemdh\n\n☁️Guitar Performance: Woong\nhttp",
   "by": "Aokumo Rin",
   "firstSeen": "2026-11-12T14:53:13.404Z",
-  "seed": true
+  "seed": true,
+  "p": "みきとP",
+  "of": "nico:sm33546451"
  },
  {
   "id": "yt:6Abf0yik38c",
@@ -26333,7 +26305,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=MhdJaaEhiHc",
   "title": "우리! 쓰레기 분리수거단 (我ら！ゴミ分別団) - 아오쿠모 린 x 유즈하 리코 (Aokumo Rin x Yuzuha Riko) Cover",
-  "t": "我ら！ゴミ分別団",
+  "t": "我ら!ゴミ分別団",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-07-31T08:00:07Z",
@@ -28250,7 +28222,6 @@
   "p": "じん",
   "firstSeen": "2026-11-12T14:53:13.439Z",
   "seed": true,
-  "of": "nico:sm21737751",
   "a": "niconico:15872264"
  },
  {
@@ -29054,7 +29025,7 @@
   "title": "Booo! - TOKOTOKO l 사키하네 후야(Sakihane Huya) Cover",
   "t": "TOKOTOKO l 사키하네 후야",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2026-07-07T11:30:06Z",
   "views": 432103,
   "likes": 10356,
@@ -30971,7 +30942,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=y1nUYj_D1Es",
   "title": "물떼새(ヨルシカ - 千鳥) / 아오쿠모 린(Aokumo Rin) Cover",
-  "t": "ヨルシカ",
+  "t": "千鳥",
   "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2026-06-28T08:00:06Z",
@@ -30986,9 +30957,8 @@
   "by": "Aokumo Rin",
   "firstSeen": "2026-11-12T14:53:13.404Z",
   "seed": true,
-  "p": "RADWIMPS",
-  "of": "yt:0pftsY_onk8",
-  "a": "youtube:UCIVqvhyo8ttjYOmMJuhq_YQ"
+  "p": "ヨルシカ",
+  "of": "yt:t75qlQPXJGw"
  },
  {
   "id": "yt:o1SW5qMLQSE",
@@ -33122,7 +33092,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=_t4OxKtCHrg",
   "title": "舞台に立って(무대에 서서) - YOASOBIㅣ아카네 리제(Akane Lize) 【COVER】",
-  "t": "YOASOBI",
+  "t": "YOASOBIᅵ아카네 리제",
   "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2026-06-11T12:45:06Z",
@@ -33269,7 +33239,6 @@
   "p": "내일 또 보자",
   "firstSeen": "2026-11-12T14:53:13.327Z",
   "seed": true,
-  "of": "nico:sm19147157",
   "a": "niconico:29049122"
  },
  {
@@ -34122,7 +34091,8 @@
   "descHead": "#Stellive #스텔라이브 #3기 #아오쿠모린 #Aokumo_Rin #쿠모린 #린 #클리셰 #NerissaRavencroft #hololiveEnglish #holoadvent #홀로라이브 #네리사 #cover #POP/STARS #팝스타 #K/DA  #3D #dance \n\n\n\n☁️Original: K/DA - POP/STARS\nhttps://www.youtube.com/watch?v=UOxkGD8qRB4\n\n☁️3D Birthday Live Full: https://youtu.be/AIdhzFiKJwA?si=kFGCsOJaDNc",
   "by": "Aokumo Rin",
   "firstSeen": "2026-11-12T14:53:13.405Z",
-  "seed": true
+  "seed": true,
+  "p": "Snow Man"
  },
  {
   "id": "yt:X7Ht9CULonY",
@@ -34384,7 +34354,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=aACJnJRuCLs",
   "title": "[4K] 귀엽기만 하면 안 되나요? (かわいいだけじゃだめですか？) / 아야츠노 유니 X 시라유키 히나 X 아오쿠모 린 Cover",
-  "t": "かわいいだけじゃだめですか？",
+  "t": "かわいいだけじゃだめですか?",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-06-04T09:00:26Z",
@@ -35141,7 +35111,6 @@
   "p": "Mrs. GREEN APPLE",
   "firstSeen": "2026-11-12T14:53:13.328Z",
   "seed": true,
-  "of": "nico:sm34962206",
   "a": "niconico:65903338"
  },
  {
@@ -38003,7 +37972,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=jTUOSAmCqeI",
   "title": "댄스홀 (Mrs. GREEN APPLE 「ダンスホール」) / 아오쿠모 린(Aokumo Rin) Cover",
-  "t": "Mrs. GREEN APPLE 「ダンスホール",
+  "t": "ダンスホール",
   "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2026-05-03T13:00:06Z",
@@ -38017,7 +37986,9 @@
   "descHead": "#Stellive #스텔라이브 #3기 #아오쿠모린 #Aokumo_Rin #쿠모린 #린 #클리셰 #cover #dancehall #MrsGREENAPPLE #ダンスホール #미세스그린애플 #댄스홀 #청사과 #뇨 #생일 #쿠리미들사랑해요\n\n\n☁️Original: Mrs. GREEN APPLE「ダンスホール」\nhttps://youtu.be/x2rvSf0STBM?list=RDx2rvSf0STBM\n\n☁️Vocal & Chorus: Aokumo Rin\n\n\n☁️Direction & Arrangement: REQ\nhttps://x.com/requie",
   "by": "Aokumo Rin",
   "firstSeen": "2026-11-12T14:53:13.406Z",
-  "seed": true
+  "seed": true,
+  "p": "Mrs. GREEN APPLE",
+  "of": "yt:x2rvSf0STBM"
  },
  {
   "id": "nico:sm46263450",
@@ -38680,7 +38651,7 @@
   "title": "Orange [ オレンジ / 4월은 너의 거짓말 ED ] 유즈하 리코 (Yuzuha Riko) cover",
   "t": "オレンジ",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2026-04-30T08:15:06Z",
   "views": 901216,
   "likes": 15881,
@@ -38722,10 +38693,10 @@
   "coverBy": "Yuzuha Riko",
   "descHead": "☘Original : Seven oops - Orange\nhttps://youtu.be/nf-L5R8U-Q0\n\n☘Vocal & Chorus : Yuzuha Riko\n\n\n☘Directed & Inst Arrangement : REQ\nhttps://x.com/requiemdh\n\n☘Guitar Performance : Woong\nhttps://x.com/woongblessyou\n\n☘MIX & Mastering : AGNA\nhttps://x.com/agna11\n\n\n☘Illustration : Datsha\nhttps://x.com/S2_Da",
   "by": "Yuzuha Riko",
-  "p": "トーマ",
+  "p": "SPYAIR",
   "firstSeen": "2026-11-12T14:53:13.441Z",
   "seed": true,
-  "of": "nico:sm19625630",
+  "of": "yt:YkVjY1F-Eoc",
   "a": "niconico:5683296"
  },
  {
@@ -40221,11 +40192,9 @@
   "descHead": "오리온 별자리를 아시나요\nㅡㅡㅡㅡㅡㅡ\n🩸Vocal & Chorus : Akane Lize\n\n\n🩸Original : 米津玄師 - orion , Kenshi Yonezu\nhttps://youtu.be/lzAyrgSqeeE?list=RDlzAyrgSqeeE\n\n\n🩸Music Direction & Inst Arrangement: REQ\nhttps://x.com/requiemdh \n\n🩸Guitar Performance by Woong\nhttps://x.com/woongblessyou\n\n🩸MIX & Mastering : AGNA\nhtt",
   "by": "Akane Lize",
   "pHint": "orion",
-  "p": "RADWIMPS",
+  "p": "요네즈 켄시",
   "firstSeen": "2026-11-12T14:53:13.358Z",
-  "seed": true,
-  "of": "yt:pwPpqgn-3lw",
-  "a": "youtube:UCIVqvhyo8ttjYOmMJuhq_YQ"
+  "seed": true
  },
  {
   "id": "yt:5rQSMZLi5z4",
@@ -40385,7 +40354,6 @@
   "firstSeen": "2026-11-12T14:53:13.328Z",
   "seed": true,
   "p": "うしお",
-  "of": "nico:sm36400550",
   "a": "niconico:39805725"
  },
  {
@@ -45182,9 +45150,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=UcFBb927-kU",
   "title": "ray - 초(超) 카구야 공주! Ver. / BUMP OF CHICKEN | 시라유키 히나 x 아카네 리제 Cover",
-  "t": "超",
+  "t": "ray",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2026-03-17T11:10:07Z",
   "views": 1550643,
   "likes": 24882,
@@ -45227,9 +45195,10 @@
   "descHead": "Original : ray 超かぐや姫！Version \nhttps://youtu.be/356MRZ6P5h0\n\n✧Vocal & Chorus : Shirayuki Hina, Akane Lize\n\n✧Music Directing : REQ\nhttps://twitter.com/requiemdh\n\n✧Inst Arrangement : Mitsukiyo\nhttps://x.com/mitsukiyo_5\n\n✧MIX & Mastering : 999\nhttps://x.com/guguchan_9\n\n✧Illustration : taav\nhttps://x.com",
   "by": "Shirayuki Hina",
   "pHint": "ray",
-  "p": "ray",
+  "p": "BUMP OF CHICKEN",
   "firstSeen": "2026-11-12T14:53:13.329Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:yT_ylSCgY6Q"
  },
  {
   "id": "yt:zPxuJLwDCJw",
@@ -47376,7 +47345,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=EIvVEA1AfQk",
   "title": "Mrs. GREEN APPLE - lulu.【cover】重音テトSV Byタドスタジオ",
-  "t": "Mrs. GREEN APPLE",
+  "t": "lulu.",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-02-27T09:00:23Z",
@@ -47401,9 +47370,9 @@
   "animeDesc": 1,
   "firstSeen": "2026-10-27T14:07:12.808Z",
   "seed": true,
-  "p": "指定した歌手の曲を被らずに歌え!",
-  "of": "yt:zr76fswUH2I",
-  "a": "youtube:UCNMbL86u5LBeO_BWHp5pJ5g"
+  "p": "Mrs. GREEN APPLE",
+  "of": "yt:MjeiIal1ZR0",
+  "a": "youtube:UCpFgmZm65yOU5X-hmWkWjuw"
  },
  {
   "id": "yt:UsjsYMo3O1Q",
@@ -48429,7 +48398,6 @@
   "firstSeen": "2026-11-12T14:53:13.421Z",
   "seed": true,
   "p": "DECO*27",
-  "of": "nico:sm8166339",
   "a": "niconico:811012"
  },
  {
@@ -48761,7 +48729,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=9a_qB79ntPQ",
   "title": "chocolate box [dezzy(一億円P)] - 아오쿠모 린 x 아야츠노 유니 Cover",
-  "t": "dezzy(一億円P",
+  "t": "chocolate box",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2026-02-14T10:30:06Z",
@@ -48775,10 +48743,11 @@
   "descHead": "#스텔라이브 #아오쿠모린 #아야츠노유니 #StelLive #1기 #에버리스 #Everys  #3기 #클리셰 #Cliché #Aokumo_Rin #Ayatsuno_Yuni #보카로 #vocaloid #chocolatebox #초콜릿박스 #dezzy #一億円P\n\n\n가오쿠모 린씨의 가오를 빌려 가오쿠모 린 코스프레 하고 유니 선배랑 같이 불러봤습니다😎 \n\n\n☁️Original: dezzy(一億円P) - chocolate box ft. 鏡音リン&レン🤍\nhttps://youtu.be/u1rLKGHRKGs?si=bbKAahZj2RuM2-b",
   "by": "Aokumo Rin",
   "pHint": "아오쿠모 린 x 아야츠노",
-  "p": "아오쿠모 린 x 아야츠노",
+  "p": "dezzy",
   "vr": "UNI",
   "firstSeen": "2026-11-12T14:53:13.407Z",
-  "seed": true
+  "seed": true,
+  "of": "nico:sm25503380"
  },
  {
   "id": "yt:pkBA8-nZNbk",
@@ -51730,7 +51699,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=lBtlpVXmbYY",
   "title": "밤을 달리다 夜に駆ける - YOASOBI / 유즈하 리코 Yuzuha Riko cover",
-  "t": "YOASOBI",
+  "t": "夜に駆ける",
   "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2026-01-25T06:00:06Z",
@@ -51775,9 +51744,10 @@
   "descHead": "밤을 걷더라도 같이 걸어가자!\n좋아하는 노래를 열심히 불러보았습니다!\n\n☘Original : YOASOBI「夜に駆ける」\n\n\n☘Vocal & Chorus : Yuzuha Riko\nhttps://youtu.be/x8VYWazR5mE?si=Tx9Uqsh3NXMGsRto\n\n☘Music Directed : REQ\nhttps://x.com/requiemdh\n\n☘MIX & Mastering : AGNA\nhttps://x.com/agna11\n\n☘Illustration : クズノハ\nhttps://x.com/Hanozuku\n\n☘MV : SHIROMA",
   "by": "Yuzuha Riko",
   "pHint": "밤을 달리다 夜に駆ける",
-  "p": "밤을 달리다 夜に駆ける",
+  "p": "YOASOBI",
   "firstSeen": "2026-11-12T14:53:13.443Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:_ZtBv0hTm1w"
  },
  {
   "id": "yt:W5MuSzyfkc0",
@@ -52813,7 +52783,8 @@
   "descHead": "#하나코나나 #스텔라이브 #클리셰 #3기생 #나나 #Stellive #Hanakonana #Nana #RAIN #레인 #鋼の錬金術師 #SID #강철의_연금술사 #FULLMETAL_ALCHEMIST\n\n\n🐰Original : SID - RAIN\nhttps://youtu.be/GB3DN7B4mx4?si=BEKT5SpZf8AHQAtd\n\n\n🐰Vocal & Chorus : Hanako Nana\n\n\n🐰Music Directing & INST Arrangement: REQ\nhttps://x.com/requiemdh\n\n🐰Guitar Perf",
   "by": "Hanako Nana",
   "firstSeen": "2026-11-12T14:53:13.421Z",
-  "seed": true
+  "seed": true,
+  "p": "SEKAI NO OWARI"
  },
  {
   "id": "yt:N79bSihoRUk",
@@ -56096,7 +56067,6 @@
   "vr": "UNI",
   "firstSeen": "2026-11-12T14:53:13.314Z",
   "seed": true,
-  "of": "nico:sm35665550",
   "a": "niconico:34812766"
  },
  {
@@ -56104,7 +56074,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=qao2gYtY7bs",
   "title": "히로인 (back number - ヒロイン) / 유즈하 리코 (Yuzuha Riko) cover",
-  "t": "back number - ヒロイン",
+  "t": "ヒロイン",
   "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2025-12-25T09:08:48Z",
@@ -56149,7 +56119,9 @@
   "descHead": "☘Original : back number - ヒロイン\nhttps://youtu.be/VPZK72W4Xxw?si=P3kNKwHg9g85Y23c\n\n☘Vocal & Chorus : Yuzuha Riko\n\n\n☘Music Directed & Inst Arrangement : REQ\nhttps://x.com/requiemdh\n\n☘Guitar Performance : Woong\nhttps://x.com/woongblessyou\n\n☘MIX & Mastering : AGNA\nhttps://x.com/agna11\n\n☘Illustration : Da",
   "by": "Yuzuha Riko",
   "firstSeen": "2026-11-12T14:53:13.443Z",
-  "seed": true
+  "seed": true,
+  "p": "back number",
+  "of": "yt:VPZK72W4Xxw"
  },
  {
   "id": "yt:e2Jn_8JWtNw",
@@ -56782,7 +56754,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=rRvumOvx21Y",
   "title": "케세라세라 [Mrs. GREEN APPLE - ケセラセラ] ㅣ아카네 리제(Akane Lize) 【COVER】",
-  "t": "Mrs. GREEN APPLE - ケセラセラ",
+  "t": "ケセラセラ",
   "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2025-12-18T14:00:06Z",
@@ -56827,7 +56799,9 @@
   "descHead": "⯌영상의 cc 자막을 활성화 해주세요⯌\n\n이건 예측 못했겠지? ㅎㅣ힣\n\n-------------------------------------------------------------------------\n\n🩸Vocal & Chorus : Akane Lize\n\n\n🩸Original : Mrs. GREEN APPLE「ケセラセラ」\nhttps://youtu.be/Jy-QS27q7lA?si=aCESj7dnFKMQSiye\n\n\n🩸Music Directing & Inst Arrangement : REQ\nhttps://x.com/requiemd",
   "by": "Akane Lize",
   "firstSeen": "2026-11-12T14:53:13.362Z",
-  "seed": true
+  "seed": true,
+  "p": "Mrs. GREEN APPLE",
+  "of": "yt:Jy-QS27q7lA"
  },
  {
   "id": "yt:qR2k4nTCroM",
@@ -57135,7 +57109,6 @@
   "p": "MAZZEL",
   "firstSeen": "2026-11-12T14:53:13.422Z",
   "seed": true,
-  "of": "yt:Xay_gUI-Quw",
   "a": "youtube:UCMF_5h2OejEhVorTB02UUSg"
  },
  {
@@ -58221,9 +58194,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=R_B4tmy2DVA",
   "title": "출항 [抜錨(발묘) / 나나호시 관현악단 ナナホシ管弦楽団] ㅣ아카네 리제(Akane Lize) 【COVER】",
-  "t": "抜錨(발묘",
+  "t": "抜錨",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2025-12-04T10:30:06Z",
   "views": 16869229,
   "likes": 119189,
@@ -58266,7 +58239,9 @@
   "descHead": "엥나에게 리제의 마음\n\n-------------------------------------------------------------------------\n\n🩸Vocal & Chorus : Akane Lize\n\n\n🩸Original : 抜錨 / 巡音ルカ - ナナホシ管弦楽団\nhttps://www.youtube.com/watch?v=C7h6-jU1DCA\n\n\n🩸Music Directing & Inst Arrangement : REQ\nhttps://x.com/requiemdh \n\n🩸Guitar Performance: Woong\nhtt",
   "by": "Akane Lize",
   "firstSeen": "2026-11-12T14:53:13.364Z",
-  "seed": true
+  "seed": true,
+  "p": "ナナホシ管弦楽団",
+  "of": "nico:sm33360604"
  },
  {
   "id": "yt:eFj2sr4qd4M",
@@ -58947,9 +58922,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=eYaX9aDtlmA",
   "title": "목마름을 외치다 (美波 - カワキヲアメク) / 유즈하 리코 (Yuzuha Riko) cover",
-  "t": "美波 - カワキヲアメク",
+  "t": "カワキヲアメク",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "アニソン",
   "date": "2025-11-27T10:15:06Z",
   "views": 2359534,
   "likes": 25234,
@@ -58992,7 +58967,9 @@
   "descHead": "☘Original : 美波 - カワキヲアメク\nhttps://youtu.be/0YF8vecQWYs?si=UbaCn4u1wu7IIU0p\n\n☘Vocal & Chorus : Yuzuha Riko\n\n\n☘Music Directed & Inst Arrangement : REQ\nhttps://x.com/requiemdh\n\n☘Guitar Performance : Woong\nhttps://x.com/woongblessyou\n\n☘MIX & Mastering : AGNA\nhttps://x.com/agna11\n\n☘Illustration : 無知\nhttps",
   "by": "Yuzuha Riko",
   "firstSeen": "2026-11-12T14:53:13.444Z",
-  "seed": true
+  "seed": true,
+  "p": "美波",
+  "of": "yt:0YF8vecQWYs"
  },
  {
   "id": "yt:P2hHxlxOeF0",
@@ -59408,7 +59385,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=9kvoxFiYmWU",
   "title": "깜빡임 (瞬き, back number) arrange ver. | 시라유키 히나 Cover",
-  "t": "瞬き, back number",
+  "t": "瞬き",
   "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2025-11-21T12:00:06Z",
@@ -59453,7 +59430,9 @@
   "descHead": "Original : back number -「瞬き」\nhttps://youtu.be/s-O_JV8j8wc\n\n✧Vocal & Chorus : Shirayuki Hina\n\n✧Music Directing & Inst Arrangement : REQ \nhttps://twitter.com/requiemdh\n\n✧Guitar Performance by Woong\nhttps://x.com/woongblessyou\n\n✧MIX & Mastering : 999\nhttps://x.com/guguchan_9\n\n✧Illustration : taav\nhttps",
   "by": "Shirayuki Hina",
   "firstSeen": "2026-11-12T14:53:13.332Z",
-  "seed": true
+  "seed": true,
+  "p": "back number",
+  "of": "yt:h-KuoHHjGRs"
  },
  {
   "id": "yt:fiG_T-0zFT8",
@@ -59756,7 +59735,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=pwPpqgn-3lw",
   "title": "米津玄師 / Kenshi Yonezu - トレモロ / Tremolo [Audio]",
-  "t": "米津玄師",
+  "t": "トレモロ",
   "kind": "本家",
   "g": "J-POP",
   "date": "2025-11-18T15:01:41Z",
@@ -59767,8 +59746,8 @@
   "uploaderId": "UCIVqvhyo8ttjYOmMJuhq_YQ",
   "uploader": "RADWIMPS",
   "descHead": "「Dear Jubilee -RADWIMPS TRIBUTE-」 out now\nhttps://lnk.to/RAD20th_tribute\n\n--------------------\n\n「Dear Jubilee -RADWIMPS TRIBUTE-」\nhttps://sp.universal-music.co.jp/radwimps/20th/dearjubilee/\n\n--------------------\n\n▼Tracklist\n01. 上白石萌音 / Mone Kamishiraishi - 25ｺ目の染色体 / 25kome No Senshokutai\n02. SEKAI ",
-  "p": "RADWIMPS",
-  "a": "youtube:UCIVqvhyo8ttjYOmMJuhq_YQ",
+  "p": "米津玄師",
+  "a": "name:米津玄師",
   "firstSeen": "2026-10-15T10:11:04.251Z",
   "seed": true
  },
@@ -59882,7 +59861,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=0pftsY_onk8",
   "title": "ヨルシカ / Yorushika - DARMA GRAND PRIX [Audio]",
-  "t": "ヨルシカ",
+  "t": "DARMA GRAND PRIX",
   "kind": "本家",
   "g": "J-POP",
   "date": "2025-11-18T15:00:02Z",
@@ -59893,8 +59872,8 @@
   "uploaderId": "UCIVqvhyo8ttjYOmMJuhq_YQ",
   "uploader": "RADWIMPS",
   "descHead": "「Dear Jubilee -RADWIMPS TRIBUTE-」 out now\nhttps://lnk.to/RAD20th_tribute\n\n--------------------\n\n「Dear Jubilee -RADWIMPS TRIBUTE-」\nhttps://sp.universal-music.co.jp/radwimps/20th/dearjubilee/\n\n--------------------\n\n▼Tracklist\n01. 上白石萌音 / Mone Kamishiraishi - 25ｺ目の染色体 / 25kome No Senshokutai\n02. SEKAI ",
-  "p": "RADWIMPS",
-  "a": "youtube:UCIVqvhyo8ttjYOmMJuhq_YQ",
+  "p": "ヨルシカ",
+  "a": "name:ヨルシカ",
   "firstSeen": "2026-10-15T10:11:04.251Z",
   "seed": true
  },
@@ -60497,7 +60476,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=bJqdy8925Oc",
   "title": "생명에게 미움받고 있어 (命に嫌われている。) / 텐코 시부키(Tenko Shibuki) cover",
-  "t": "命に嫌われている。",
+  "t": "命に嫌われている",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2025-11-14T10:00:08Z",
@@ -60990,7 +60969,6 @@
   "firstSeen": "2026-11-12T14:53:13.408Z",
   "seed": true,
   "p": "PPP",
-  "of": "nico:nm4841742",
   "a": "niconico:7622467"
  },
  {
@@ -61069,7 +61047,6 @@
   "firstSeen": "2026-11-12T14:53:13.445Z",
   "seed": true,
   "p": "米津玄師",
-  "of": "yt:LmZD-TU96q4",
   "a": "youtube:UCUCeZaZeJbEYAAzvMgrKOPQ"
  },
  {
@@ -62519,7 +62496,6 @@
   "firstSeen": "2026-11-12T14:53:13.333Z",
   "seed": true,
   "p": "米津玄師,宇多田ヒカル",
-  "of": "yt:sPLqsLsooJY",
   "a": "youtube:UCUCeZaZeJbEYAAzvMgrKOPQ"
  },
  {
@@ -63089,7 +63065,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=nknH0KshgpY",
   "title": "숙명 (Official髭男dism - 宿命) / 유즈하 리코 (Yuzuha Riko) cover",
-  "t": "Official髭男dism",
+  "t": "宿命",
   "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2025-10-25T09:00:06Z",
@@ -63134,7 +63110,9 @@
   "descHead": "☘Original : Official髭男dism - 宿命\nhttps://youtu.be/-kgOFJG881I?si=HrDoqElFCHaTckNm\n\n\n☘Vocal & Chorus : Yuzuha Riko\n\n\n☘Music Directed & Inst Arrangement : REQ\nhttps://x.com/requiemdh\n\n☘Guitar Performance : Woong\nhttps://x.com/woongblessyou\n\n☘MIX & Mastering : AGNA\nhttps://x.com/agna11\n\n☘Illustration : ",
   "by": "Yuzuha Riko",
   "firstSeen": "2026-11-12T14:53:13.445Z",
-  "seed": true
+  "seed": true,
+  "p": "Official髭男dism",
+  "of": "yt:-kgOFJG881I"
  },
  {
   "id": "yt:4uLErMRIfSs",
@@ -63511,7 +63489,6 @@
   "firstSeen": "2026-11-12T14:53:13.365Z",
   "seed": true,
   "p": "米津玄師,宇多田ヒカル",
-  "of": "yt:sPLqsLsooJY",
   "a": "youtube:UCUCeZaZeJbEYAAzvMgrKOPQ"
  },
  {
@@ -63893,9 +63870,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=6gEc7lUi6xs",
   "title": "울려퍼져라 (Hibikase ヒビカセ) / 하나코 나나 x 텐코 시부키 COVER",
-  "t": "Hibikase ヒビカセ",
+  "t": "ヒビカセ",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2025-10-21T09:00:06Z",
   "views": 1155878,
   "likes": 15431,
@@ -63918,7 +63895,9 @@
   "descHead": "#Stellive #스텔라이브 #3기 #나나 #Hanakonana #Nana #텐코시부키 #TenkoShibuki #시부키 #부키 #클리셰 #cover #기가 #레오루 #히비카세 #Giga #Reol #Hibikase #ヒビカセ #vocaloid #初音ミク\n\n\n🐰[MV] REOL - ヒビカセ / Hibikase\nhttps://youtu.be/UC_qla6FQwM?si=pQHNbsfUAnLpkUOj\n\n🐰Vocal & Chorus🕹: Hanako Nana, Tenko Shibuki\n\n\n🐰Music Directing🕹: REQ\n",
   "by": "Hanako Nana",
   "firstSeen": "2026-11-12T14:53:13.423Z",
-  "seed": true
+  "seed": true,
+  "p": "Giga",
+  "of": "yt:TkroHwQYpFE"
  },
  {
   "id": "yt:uxfeFe3X788",
@@ -64053,7 +64032,6 @@
   "firstSeen": "2026-11-12T14:53:13.409Z",
   "seed": true,
   "p": "米津玄師",
-  "of": "yt:LmZD-TU96q4",
   "a": "youtube:UCUCeZaZeJbEYAAzvMgrKOPQ"
  },
  {
@@ -64264,7 +64242,6 @@
   "firstSeen": "2026-11-12T14:53:13.409Z",
   "seed": true,
   "p": "米津玄師",
-  "of": "yt:LmZD-TU96q4",
   "a": "youtube:UCUCeZaZeJbEYAAzvMgrKOPQ"
  },
  {
@@ -65201,7 +65178,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=u0CKUPR413E",
   "title": "IRIS OUT Arrange ver. - cover. しゃけみー",
-  "t": "IRIS OUT Arrange ver.",
+  "t": "IRIS OUT",
   "kind": "歌ってみた",
   "g": "アニソン",
   "date": "2025-10-14T11:00:06Z",
@@ -65890,9 +65867,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=gBq4IXVgEuE",
   "title": "Henceforth - Orangestar / 유즈하 리코 (Yuzuha Riko) 3D cover",
-  "t": "Orangestar",
+  "t": "Henceforth",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2025-10-11T06:15:02Z",
   "views": 301387,
   "likes": 12566,
@@ -65935,18 +65912,19 @@
   "descHead": "Original :Orangestar - Henceforth \nhttps://youtu.be/L13gCEZJVRU?si=m3PkwF1F5FvSPoNU\n\n--------------------------------------------------------------------------------------------------\nAll Music & Sound Directed by REQ \n\nSound Engineer by Accelers Studio\n\nInstrumental Track Creations by REQ (at STELL",
   "by": "Yuzuha Riko",
   "pHint": "Henceforth",
-  "p": "Henceforth",
+  "p": "Orangestar",
   "firstSeen": "2026-11-12T14:53:13.446Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:L13gCEZJVRU"
  },
  {
   "id": "yt:QgqiJKX0yq0",
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=QgqiJKX0yq0",
   "title": "[4K] Henceforth - Orangestar / 유즈하 리코 (Yuzuha Riko) cover",
-  "t": "Orangestar",
+  "t": "Henceforth",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2025-10-11T06:00:22Z",
   "views": 915151,
   "likes": 11080,
@@ -65989,9 +65967,10 @@
   "descHead": "Full : [4K] 스텔라이브 유즈하 리코! 3D 데뷔!\nhttps://youtu.be/x7VnP5sAZiQ?si=BR3wLJXngez3dVbV\n\nOriginal :Orangestar - Henceforth \nhttps://youtu.be/L13gCEZJVRU?si=m3PkwF1F5FvSPoNU\n\n--------------------------------------------------------------------------------------------------\nAll Music & Sound Directed by REQ",
   "by": "Yuzuha Riko",
   "pHint": "Henceforth",
-  "p": "Henceforth",
+  "p": "Orangestar",
   "firstSeen": "2026-11-12T14:53:13.447Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:L13gCEZJVRU"
  },
  {
   "id": "yt:eNvD-D6Gw6c",
@@ -66370,9 +66349,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=DOF6t9kQv7A",
   "title": "No title - REOL / 유즈하 리코 (Yuzuha Riko) 3D cover",
-  "t": "REOL",
+  "t": "No title",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2025-10-08T06:21:23Z",
   "views": 129730,
   "likes": 5212,
@@ -66415,18 +66394,19 @@
   "descHead": "Full : [4K] 스텔라이브 유즈하 리코! 3D 데뷔!\nhttps://youtu.be/x7VnP5sAZiQ?si=BR3wLJXngez3dVbV\n\n--------------------------------------------------------------------------------------------------\nAll Music & Sound Directed by REQ \n\nSound Engineer by Accelers Studio\n\nInstrumental Track Creations by REQ (at STELLIV",
   "by": "Yuzuha Riko",
   "pHint": "No title",
-  "p": "No title",
+  "p": "REOL",
   "firstSeen": "2026-11-12T14:53:13.448Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:LfephiFN76E"
  },
  {
   "id": "yt:P51Wh7FO28I",
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=P51Wh7FO28I",
   "title": "[4K] No title - REOL / 유즈하 리코 (Yuzuha Riko) cover",
-  "t": "REOL",
+  "t": "No title",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2025-10-08T06:00:17Z",
   "views": 276600,
   "likes": 4811,
@@ -66469,9 +66449,10 @@
   "descHead": "Full : [4K] 스텔라이브 유즈하 리코! 3D 데뷔!\nhttps://youtu.be/x7VnP5sAZiQ?si=BR3wLJXngez3dVbV\n\nOriginal :\n\n--------------------------------------------------------------------------------------------------\nAll Music & Sound Directed by REQ \n\nSound Engineer by Accelers Studio\n\nInstrumental Track Creations by REQ",
   "by": "Yuzuha Riko",
   "pHint": "No title",
-  "p": "No title",
+  "p": "REOL",
   "firstSeen": "2026-11-12T14:53:13.449Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:LfephiFN76E"
  },
  {
   "id": "yt:oksSDf-S64U",
@@ -67390,7 +67371,8 @@
   "descHead": "오늘저녁 7시 치지직 방송에서 만나용🐰♥\n\n-------------------------------------------------------------------------\n\n🩸Vocal & Chorus : Akane Lize\n\n\n🩸Original : 【AKASAKI】Bunny Girl（Lyric Video）\nhttps://youtu.be/RCltAg_iK0E?si=mJRhaCYBhSvsRMxJ\n\n\n🩸Music Directing & Inst Arrangement : REQ\nhttps://x.com/requiemdh \n\n🩸",
   "by": "Akane Lize",
   "firstSeen": "2026-11-12T14:53:13.366Z",
-  "seed": true
+  "seed": true,
+  "p": "アイナ・ジ・エンド"
  },
  {
   "id": "yt:RAjfbpXvTdk",
@@ -68174,9 +68156,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=aUZPqPyLD9s",
   "title": "とんとんまーえ！(쿵쿵 앞-으로!) - 네네코 마시로 Cover",
-  "t": "네네코 마시로",
+  "t": "とんとんまーえ!",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2025-09-28T10:50:06Z",
   "views": 346212,
   "likes": 8126,
@@ -68215,16 +68197,17 @@
   "descHead": "#Stellive #스텔라이브 #2기 #네네코마시로 #とんとんまーえ！ #さつきがてんこもり #톤톤마에 #nenekomashiro #mashiro #네네코마시로 #마시로 #시로 #밍 \n\n\n🥛Original : 【ミク＆レン】とんとんまーえ！【オネショタ】\nhttps://www.youtube.com/watch?v=g4jhtUeM9dQ\n\n\n🥛Vocal & Chorus: Neneko Mashiro\n\n\n🥛Music Direction & MIX & Mastering: REQ\nhttps://x.com/requiemdh\n\n🥛Illustration",
   "by": "Neneko Mashiro",
   "pHint": "とんとんまーえ!",
-  "p": "とんとんまーえ!",
+  "p": "さつきがてんこもり",
   "firstSeen": "2026-11-12T14:53:13.348Z",
-  "seed": true
+  "seed": true,
+  "of": "nico:sm20615010"
  },
  {
   "id": "yt:icR-Tg7YZwY",
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=icR-Tg7YZwY",
   "title": "프로포즈(プロポーズ)ㅣ아카네 리제(Akane Lize) 【COVER】",
-  "t": "プロポーズ",
+  "t": "プロポーズ",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2025-09-27T11:50:06Z",
@@ -69635,7 +69618,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=ViFHruS6oO8",
   "title": "HALCALI / おつかれSUMMER (Official Music Video)",
-  "t": "HALCALI",
+  "t": "おつかれSUMMER",
   "kind": "本家",
   "g": "J-POP",
   "date": "2025-09-19T12:00:06Z",
@@ -69657,8 +69640,8 @@
   "uploaderId": "UCfvKviWFdi00xhgF3gM9d0w",
   "uploader": "FOR LIFE MUSIC ENTERTAINMENT",
   "descHead": "2025年夏、全世界で大ヒットを記録したHALCALI「おつかれSUMMER」\nリリースから22年の時を経て公式Music Videoが完成！\n\n\n2026.03.02「おつかれSUMMER」Digital EP Release\nhttps://halcali.lnk.to/OtsukareSummer_EP\n\n【Tracklist】\nM1. おつかれSUMMER\nM2. おつかれSUMMER - ハルカだけヴァージョン\nM3. おつかれSUMMER - ユカリだけヴァージョン\nM4. おつかれSUMMER - 2人ともいないヴァージョン\n\n\n「おつかれSUMMER」LINEスタンプ好評販売中",
-  "p": "おつかれSUMMER",
-  "a": "name:おつかれsummer",
+  "p": "HALCALI",
+  "a": "name:halcali",
   "firstSeen": "2026-10-30T21:53:45.285Z",
   "seed": true
  },
@@ -70010,11 +69993,11 @@
   "descHead": "#Stellive #스텔라이브 #1기 #아야츠노유니 #Ayatsuno_Yuni #유니 #cover #Lilac #ライラック #라일락 #미세스그린애플 #忘却バッテリー #ライラック #MrsGREENAPPLE\n\n\n🤍Original: Mrs. GREEN APPLE「ライラック」\nhttps://youtu.be/QjrkrVmC-8M?si=asAYJPQFGtVGU3QE\n\n\n🤍Vocal & Chorus: Ayatsuno Yuni\n\n\n🤍Music Directing & Arrangement: REQ\nhttps://x.com/requiemdh\n\n\ud83e",
   "by": "Ayatsuno Yuni",
   "pHint": "아야츠노",
-  "p": "美波",
+  "p": "Mrs. GREEN APPLE",
   "vr": "UNI",
   "firstSeen": "2026-11-12T14:53:13.315Z",
   "seed": true,
-  "of": "yt:GQ3V50XoLOM",
+  "of": "yt:QjrkrVmC-8M",
   "a": "youtube:UC2JzylaIF8qeowc7-5VwwmA"
  },
  {
@@ -70778,9 +70761,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=XnXcVDvbTkM",
   "title": "【重音テト SV】花に亡霊【Synthesizer V】カバー / ヨルシカ",
-  "t": "花に亡霊 カバー",
+  "t": "花に亡霊",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2025-09-10T10:01:01Z",
   "views": 4646,
   "likes": 179,
@@ -70799,11 +70782,12 @@
   "by": "オサキハン",
   "pHint": "ヨルシカ",
   "p": "ヨルシカ",
-  "a": "ヨルシカ",
+  "a": "youtube:UCRIgIJQWuBJ0Cv_VlU3USNA",
   "v": "重音テト",
   "vr": "重音テトSV",
   "firstSeen": "2026-10-27T14:07:12.970Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:9lVPAWLWtWc"
  },
  {
   "id": "yt:5QLuBdv_YjQ",
@@ -72600,7 +72584,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=1HCo6-YL9AY",
   "title": "Ref:rain - Aimerㅣ아라하시 타비(Arahashi Tabi) 「COVER」",
-  "t": "Ref:rain - Aimerㅣ아라하시 타비(Arahashi Tabi) 「COVER」",
+  "t": "Ref:rain",
   "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2025-08-26T13:59:06Z",
@@ -72628,9 +72612,10 @@
   "descHead": "Ref:rain (Aimer) / 아라하시 타비 Cover\n\n#스텔라이브 #아라하시타비 #2기 #유니버스 #타비 #ArahashiTabi #Aimer #에메 #エメ #리프레인 #Refrain #사랑은비가갠뒤처럼\n\n\n🌊Original：Aimer 『Ref:rain』MUSIC VIDEO\nhttps://youtu.be/mvkbCZfwWzA?si=0z7uk9j5RHF7HmVh\n\n\n\n🌊Music Direction & Inst Arrangement : REQ\nhttps://x.com/requiemdh\n\n🌊Guitar Performance:",
   "by": "Arahashi Tabi",
   "pHint": "Ref:rain - Aimerᅵ아라하시 타비",
-  "p": "Ref:rain - Aimerᅵ아라하시 타비",
+  "p": "Aimer",
   "firstSeen": "2026-11-12T14:53:13.388Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:mvkbCZfwWzA"
  },
  {
   "id": "yt:bSiKuOsvzVA",
@@ -74697,7 +74682,8 @@
   "descHead": "#스텔라이브 #텐코시부키 #3기생 #TenkoShibuki #cover #시부키 #클리셰 #푸름과여름 #青と夏 #mrsgreenapple #미세스그린애플 #아오토나츠 #캥캥\n\n\n🕹️Original: Mrs. GREEN APPLE - 青と夏\nhttps://youtu.be/m34DPnRUfMU?si=9LWaAvsjxcYb75dB\n\n🕹️Vocal & Chorus: Tenko Shibuki\n\n\n🕹️Music Production & Inst Arrangement: REQ\nhttps://x.com/requiemdh\n\n🕹️MIX & Ma",
   "by": "Tenko Shibuki",
   "firstSeen": "2026-11-12T14:53:13.399Z",
-  "seed": true
+  "seed": true,
+  "p": "指定した歌手の曲を被らずに歌え!"
  },
  {
   "id": "yt:IK9jijSnIAE",
@@ -76131,7 +76117,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=WKY-KFCvm-A",
   "title": "Summertime (cinnamons × evening cinema) | 시라유키 히나(Shirayuki Hina) x 하나코 나나(Hanako Nana) Cover",
-  "t": "Summertime",
+  "t": "Summer",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2025-07-30T11:00:32Z",
@@ -76177,7 +76163,6 @@
   "by": "Shirayuki Hina",
   "firstSeen": "2026-11-12T14:53:13.335Z",
   "seed": true,
-  "of": "nico:sm38973642",
   "a": "niconico:21343284"
  },
  {
@@ -76578,7 +76563,6 @@
   "firstSeen": "2026-11-12T14:53:13.410Z",
   "seed": true,
   "p": "ꉈꀧ꒒꒒ꁄꍈꍈꀧ꒦ꉈ ꉣꅔꎡꅔꁕꁄ × 椎名林檎",
-  "of": "yt:dYzgZVhiqmU",
   "a": "youtube:UChex1vr4WtFu-OsAukjuYCA"
  },
  {
@@ -77893,7 +77877,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=i5ZEIsWt0Fk",
   "title": "Summertime [이터널 리턴 OST] / 하나코 나나 COVER",
-  "t": "Summertime",
+  "t": "Summer",
   "kind": "歌ってみた",
   "g": "ボカロ",
   "date": "2025-07-11T10:05:27Z",
@@ -77919,7 +77903,6 @@
   "by": "Hanako Nana",
   "firstSeen": "2026-11-12T14:53:13.425Z",
   "seed": true,
-  "of": "nico:sm38973642",
   "a": "niconico:21343284"
  },
  {
@@ -78250,7 +78233,6 @@
   "by": "Hanako Nana",
   "firstSeen": "2026-11-12T14:53:13.425Z",
   "seed": true,
-  "of": "nico:sm42430107",
   "a": "niconico:1021318"
  },
  {
@@ -79278,11 +79260,9 @@
   "descHead": "Original : 米津玄師 - LADY\nhttps://youtu.be/DdF-u3fe5pg\n\n✧Vocal & Chorus : Shirayuki Hina\n\n✧Music Production & Directing : REQ \nhttps://twitter.com/requiemdh\n\n✧INST Arrangement : REQ\n\n✧Vocal Edit : 999\nhttps://x.com/guguchan_9\n\n✧MIX & Mastering : 999\nhttps://x.com/guguchan_9\n\n✧Illustration : ききのき\nhttps:",
   "by": "Shirayuki Hina",
   "pHint": "LADY",
-  "p": "RADWIMPS",
+  "p": "LADY",
   "firstSeen": "2026-11-12T14:53:13.336Z",
-  "seed": true,
-  "of": "yt:pwPpqgn-3lw",
-  "a": "youtube:UCIVqvhyo8ttjYOmMJuhq_YQ"
+  "seed": true
  },
  {
   "id": "yt:XN4RSUj15TE",
@@ -84272,7 +84252,7 @@
   "title": "Grand Escape [날씨의 아이 OST] / 하나코 나나 COVER (Feat. Cliché)",
   "t": "Grand Escape",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2025-05-10T09:00:07Z",
   "views": 1889018,
   "likes": 20493,
@@ -84295,7 +84275,8 @@
   "descHead": "#하나코나나 #스텔라이브 #클리셰 #3기생 #初音ミク #GrandEscape #RADWIMPS #그랜드이스케이프 #대탈출 #랏도 #날씨의아이 #天気の子 #Hanakonana #Nana\n\n\n🐰Original: RADWIMPS - Grand Escape (feat. Toko Miura)\nhttps://www.youtube.com/watch?v=saDmN2f3HI0\n\n🐰Vocal & Chorus: Hanako Nana\n\n🐰Special Chorus: Tenko Shibuki, Yuzuha Riko, Aokumo Rin\n\n🐰Musi",
   "by": "Hanako Nana",
   "firstSeen": "2026-11-12T14:53:13.426Z",
-  "seed": true
+  "seed": true,
+  "p": "ジミーサムP"
  },
  {
   "id": "yt:VQdQBXR50kk",
@@ -85109,7 +85090,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=RpX0r_l7FzI",
   "title": "Stand By You (Official髭男dism) / 아오쿠모 린(Aokumo Rin) Cover",
-  "t": "Official髭男dism",
+  "t": "Stand By You",
   "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2025-05-03T12:02:36Z",
@@ -85123,7 +85104,9 @@
   "descHead": "#Stellive #스텔라이브 #3기 #아오쿠모린 #Aokumo_Rin #쿠모린 #린 #클리셰 #cover #StandByYou #Official髭男dism #OfficialHigeDandism #히게단 #뇨\n\n\n☁️Official髭男dism - Stand By You\nhttps://youtu.be/22mOCjkwQjM?si=SM7cidkoZjmtVdWd\n\n\n☁️Vocal & Chorus: Aokumo Rin\n\n\n☁️Music Production & Arrangement: REQ\nhttps://x.com/requiemdh\n\n☁️Gu",
   "by": "Aokumo Rin",
   "firstSeen": "2026-11-12T14:53:13.411Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:22mOCjkwQjM",
+  "p": "Official髭男dism"
  },
  {
   "id": "yt:VuA7h5klKZ8",
@@ -86291,7 +86274,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=DzSb5b8ehdg",
   "title": "「Orange(オレンジ) / 4월은 너의 거짓말 ED」| 시라유키 히나 Cover",
-  "t": "Orange(オレンジ",
+  "t": "オレンジ",
   "kind": "歌ってみた",
   "g": "アニソン",
   "date": "2025-04-27T11:30:06Z",
@@ -86336,7 +86319,9 @@
   "descHead": "Original : Seven oops - Orange\nhttps://youtu.be/nf-L5R8U-Q0\n\n✧Vocal & Chorus : Shirayuki Hina\n\n✧Music Production & Directing : REQ \nhttps://twitter.com/requiemdh\n\n✧INST Arrangement : REQ\n\n✧Guitar : Woong\nhttps://x.com/woongblessyou\n\n✧Vocal Edit : 999\nhttps://x.com/guguchan_9\n\n✧MIX & Mastering : TRMX",
   "by": "Shirayuki Hina",
   "firstSeen": "2026-11-12T14:53:13.337Z",
-  "seed": true
+  "seed": true,
+  "p": "SPYAIR",
+  "of": "yt:YkVjY1F-Eoc"
  },
  {
   "id": "yt:SQXNmiefbLA",
@@ -89886,7 +89871,6 @@
   "p": "Official髭男dism",
   "firstSeen": "2026-11-12T14:53:13.389Z",
   "seed": true,
-  "of": "yt:0nzgi6dz8VY",
   "a": "youtube:UC3vg17IZ1IV73xx069jG44w"
  },
  {
@@ -91328,7 +91312,6 @@
   "firstSeen": "2026-11-12T14:53:13.401Z",
   "seed": true,
   "p": "そそそP",
-  "of": "nico:sm11425228",
   "a": "niconico:793778"
  },
  {
@@ -91485,7 +91468,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=lsshc8umnE4",
   "title": "역몽 (逆夢, King Gnu) - 아오쿠모 린 x 하나코 나나 Cover",
-  "t": "逆夢, King Gnu",
+  "t": "逆夢",
   "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2025-03-17T12:00:07Z",
@@ -91499,9 +91482,10 @@
   "descHead": "#Stellive #스텔라이브 #3기 #아오쿠모린 #Aokumo_Rin #쿠모린 #린 #Rin #클리셰 #하나코나나 #나나 #Hanakonana #Nana #cover #Sakayume #역몽 #KingGnu #呪術廻戦 #Jujutsukaisen\n\n\n☁️Original🐰: King Gnu - 逆夢\nhttps://youtu.be/M6gcoDN9jBc?si=SGKQMQkcg4Y0Mu99\n\n\n☁️Vocal & Chorus🐰: Aokumo Rin x Hanako Nana\n\n☁️Music Production & Arrangement🐰:",
   "by": "Aokumo Rin",
   "pHint": "역몽",
-  "p": "역몽",
+  "p": "King Gnu",
   "firstSeen": "2026-11-12T14:53:13.412Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:M6gcoDN9jBc"
  },
  {
   "id": "yt:s0jehvlCtxU",
@@ -97456,7 +97440,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=JCJyXMJMLRM",
   "title": "シル・ヴ・プレジデント (실・부・프레지던트) / 하나코 나나 COVER",
-  "t": "실・부・프레지던트",
+  "t": "シル・ヴ・プレジデント",
   "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2024-12-31T10:00:06Z",
@@ -97481,7 +97465,9 @@
   "descHead": "#하나코나나 #스텔라이브 #클리셰 #3기생 #나나 #P丸様 #シルヴプレジデント #실부프레지던트 #P마루사마 #ナナホシ管弦楽団 #Hanakonana #Nana\n\n\n🐰Original : シル・ヴ・プレジデント／P丸様。【大統領になったらね！】\nhttps://youtu.be/3V9952osjnc?si=Tb_VpNFjGCVaMTbN\n\n\n🐰Vocal & Chorus : Hanako Nana\nhttps://x.com/HanakoNana_\n\n🐰Director : REQ\nhttps://x.com/requiemdh\n\n🐰MIX & Mastering",
   "by": "Hanako Nana",
   "firstSeen": "2026-11-12T14:53:13.428Z",
-  "seed": true
+  "seed": true,
+  "p": "P丸様。",
+  "of": "nico:sm38628739"
  },
  {
   "id": "yt:NTMddEqxVBI",
@@ -98841,7 +98827,7 @@
   "vr": "UNI",
   "firstSeen": "2026-11-12T14:53:13.317Z",
   "seed": true,
-  "p": "EasyPop",
+  "p": "ifcat110",
   "of": "nico:sm12825985",
   "a": "niconico:2423537"
  },
@@ -99701,7 +99687,7 @@
   "title": "경화수월(鏡花水月)  / 유즈하 리코(Yuzuha Riko) cover",
   "t": "鏡花水月",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "J-POP",
   "date": "2024-11-21T09:00:07Z",
   "views": 2861329,
   "likes": 19360,
@@ -99736,8 +99722,8 @@
   "by": "Yuzuha Riko",
   "firstSeen": "2026-11-12T14:53:13.460Z",
   "seed": true,
-  "p": "鬼バラ",
-  "of": "nico:sm18425761"
+  "p": "まふまふ",
+  "of": "nico:sm27132601"
  },
  {
   "id": "yt:U4NPr8pvmxQ",
@@ -100589,7 +100575,8 @@
   "descHead": "☘Original : Mrs. GREEN APPLE「ケセラセラ」\nhttps://youtu.be/Jy-QS27q7lA?si=PkXzwKagJEMsYhUV\n\n\n☘Vocal & Chorus : Yuzuha Riko\n\n☘Inst Arrange & Director : REQ\nhttps://x.com/requiemdh\n\n☘Guitar : Woong\n\n☘MIX & Mastering : TRMX Sound Lab & AGNA\nhttps://x.com/Trmx_Sound_Lab\n\n☘Illustration : RUDA\nhttps://x.com/RUD",
   "by": "Yuzuha Riko",
   "firstSeen": "2026-11-12T14:53:13.461Z",
-  "seed": true
+  "seed": true,
+  "p": "指定した歌手の曲を被らずに歌え!"
  },
  {
   "id": "yt:63C74T0DLOg",
@@ -101094,9 +101081,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=-yY4Ijb06zg",
   "title": "アイデンティティ(아이덴티티) - 아오쿠모 린 x 텐코 시부키 (Aokumo Rin x Tenko Shibuki) Cover",
-  "t": "아오쿠모 린 x 텐코 시부키",
+  "t": "アイデンティティ",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2024-10-26T10:00:06Z",
   "views": 2025358,
   "likes": 13814,
@@ -101108,9 +101095,10 @@
   "descHead": "#アイデンティティ #Kanaria #아이덴티티 #Stellive #스텔라이브 #3기생 #아오쿠모린 #텐코시부키 #클리셰 #cover #Aokumo_Rin #Tenko_Shibuki\n\n\n☁️Vocal & Chorus : Aokumo Rin x Tenko Shibuki🕹️\n\n☁️Original : アイデンティティ / Kanaria🕹️\nhttps://youtu.be/M9moY0hEJRE?si=5gcfwqorHzCsJzUP\n\n☁️ Vox Director : REQ🕹️\nhttps://x.com/requiemdh\n\n☁️MIX & Mast",
   "by": "Aokumo Rin",
   "pHint": "アイデンティティ",
-  "p": "アイデンティティ",
+  "p": "Kanaria",
   "firstSeen": "2026-11-12T14:53:13.413Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:M9moY0hEJRE"
  },
  {
   "id": "yt:eBoH6GuQwK8",
@@ -102546,7 +102534,7 @@
   "title": "サムライハート(Some Like It Hot!!) / 하나코 나나 COVER",
   "t": "サムライハート",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2024-10-05T10:00:31Z",
   "views": 4568029,
   "likes": 27392,
@@ -102570,7 +102558,8 @@
   "by": "Hanako Nana",
   "firstSeen": "2026-11-12T14:53:13.429Z",
   "seed": true,
-  "of": "nico:sm2408825",
+  "p": "SPYAIR",
+  "of": "yt:KpM6xNAgRoI",
   "a": "niconico:166889"
  },
  {
@@ -102717,7 +102706,6 @@
   "p": "Giga & KIRA",
   "firstSeen": "2026-11-12T14:53:13.462Z",
   "seed": true,
-  "of": "nico:sm37467451",
   "a": "niconico:4845576"
  },
  {
@@ -103168,9 +103156,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=boePd6psiSc",
   "title": "맑은 날(ヨルシカ - 晴る)  / 유즈하 리코(Yuzuha Riko) cover",
-  "t": "ヨルシカ - 晴る",
+  "t": "晴る",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "アニソン",
   "date": "2024-09-26T06:00:16Z",
   "views": 39833,
   "likes": 3309,
@@ -103213,7 +103201,10 @@
   "descHead": "☘Original : ヨルシカ - 晴る\nhttps://youtu.be/CkvWJNt77mU?si=sMF-1L4Bo-Gu0hhw\n\n☘Vocal & Chorus : Yuzuha Riko\n\n\n⚔️유즈하 리코 YUZUHA RIKO⚔️\nChzzk : https://chzzk.naver.com/8fd39bb8de623317de90654718638b10\nTwitter :  https://x.com/YuzuhaRiko\nYoutube : ‪ https://youtube.com/@yuzuhariko?si=Pqx2Elmndetp0qmA\n--------",
   "by": "Yuzuha Riko",
   "firstSeen": "2026-11-12T14:53:13.463Z",
-  "seed": true
+  "seed": true,
+  "p": "ヨルシカ",
+  "of": "yt:CkvWJNt77mU",
+  "a": "youtube:UCRIgIJQWuBJ0Cv_VlU3USNA"
  },
  {
   "id": "yt:07JLD3d1-W0",
@@ -103427,9 +103418,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=Rr2GjXAgJ9E",
   "title": "맑은 날(ヨルシカ - 晴る)  / 유즈하 리코(Yuzuha Riko) cover",
-  "t": "ヨルシカ - 晴る",
+  "t": "晴る",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "アニソン",
   "date": "2024-09-23T09:00:31Z",
   "views": 1999806,
   "likes": 14439,
@@ -103472,7 +103463,10 @@
   "descHead": "☘Original : ヨルシカ - 晴る\nhttps://youtu.be/CkvWJNt77mU?si=sMF-1L4Bo-Gu0hhw\n\n☘Vocal & Chorus : Yuzuha Riko\n\n☘Inst Arrange & Director : REQ\nhttps://x.com/requiemdh\n\n☘Guitar : Woong\n\n☘MIX & Mastering : TRMXSound Labhttps://x.com/Trmx_Sound_Lab\n\n☘Illustration : AppleCaramel\nhttps://x.com/Apple_A_Caramel\n\n☘M",
   "by": "Yuzuha Riko",
   "firstSeen": "2026-11-12T14:53:13.463Z",
-  "seed": true
+  "seed": true,
+  "p": "ヨルシカ",
+  "of": "yt:CkvWJNt77mU",
+  "a": "youtube:UCRIgIJQWuBJ0Cv_VlU3USNA"
  },
  {
   "id": "nico:sm44125108",
@@ -104519,7 +104513,6 @@
   "by": "Hanako Nana",
   "firstSeen": "2026-11-12T14:53:13.429Z",
   "seed": true,
-  "of": "nico:sm1263599",
   "a": "niconico:661206"
  },
  {
@@ -105739,9 +105732,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=oAa_PoRopSs",
   "title": "Rumor ルーマー (Police Piccadilly) / 아오쿠모 린(Aokumo Rin) Cover",
-  "t": "Rumor ルーマー",
+  "t": "ルーマー",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "ボカロ",
   "date": "2024-08-11T11:30:06Z",
   "views": 2969946,
   "likes": 24839,
@@ -105754,7 +105747,8 @@
   "by": "Aokumo Rin",
   "firstSeen": "2026-11-12T14:53:13.414Z",
   "seed": true,
-  "p": "TDA式改変チャイナドレス初音未來で"
+  "p": "ポリスピカデリー",
+  "of": "yt:DWwFK2gjwa8"
  },
  {
   "id": "yt:IMjVFBNmKiA",
@@ -106131,7 +106125,7 @@
   "title": "청아하게 불러본 ' 4월은 너의 거짓말 ED - 오렌지 オレンジ ' cover",
   "t": "オレンジ",
   "kind": "歌ってみた",
-  "g": "ボカロ",
+  "g": "アニソン",
   "date": "2024-08-08T04:00:38Z",
   "views": 249197,
   "likes": 13303,
@@ -106166,10 +106160,10 @@
   "descHead": "#stellive #3기생 #리코 #스텔라이브 #vtuber  #shorts  #유즈하리코 #깜빡임 #오렌지 #4월은너의거짓말  #四月は君の嘘 #cover #オレンジ\n\n--------------------------------------------------------------------------------------------------\n\n💚Chzzk : https://chzzk.naver.com/8fd39bb8de623317de90654718638b10\n💚Twitter : https://x.com/YuzuhaRiko\n\n-",
   "by": "Yuzuha Riko",
   "pHint": "청아하게 불러본",
-  "p": "トーマ",
+  "p": "SPYAIR",
   "firstSeen": "2026-11-12T14:53:13.466Z",
   "seed": true,
-  "of": "nico:sm19625630",
+  "of": "yt:YkVjY1F-Eoc",
   "a": "niconico:5683296"
  },
  {
@@ -108284,7 +108278,8 @@
   "descHead": "Original : Cyberpunk Edgerunners - I Really Want to Stay At Your House\nhttps://youtu.be/KvMY1uzSC1E\n\n\n✧Director & Inst Arrange : REQ (Accelers)\nhttps://twitter.com/requiemdh\n\n✧Guitar : Woong\n\n✧MIX & Mastering : JiHEE\n\n✧Illustration : ZANYA\nhttps://x.com/ZANYA_001\n\n✧Movie：Tranquillo\nhttps://x.com/Tra",
   "by": "Shirayuki Hina",
   "firstSeen": "2026-11-12T14:53:13.340Z",
-  "seed": true
+  "seed": true,
+  "p": "PPP"
  },
  {
   "id": "yt:eoRXLX4TwPc",
@@ -109283,7 +109278,6 @@
   "firstSeen": "2026-11-12T14:53:13.390Z",
   "seed": true,
   "p": "Vaundy",
-  "of": "yt:hfwfAxkK_YU",
   "a": "youtube:UCnDqohJcDJxvZwT6hTQ0xrA"
  },
  {
@@ -109460,7 +109454,8 @@
   "descHead": "#ado #ウタ #Vaundy #OPFILMRED #逆光\n\noriginal：https://youtu.be/gt-v_YCkaMY?si=ZKXLbdYwwjFR3r7v\n\n✧Director : REQ (Accelers)\n  https://x.com/requiemdh  \n\n\n✧Inst Arrange : REQ\n  https://x.com/requiemdh  \n\n\n✧Guitar : Woong\n\n\n✧Illustration : John kafka , ddl\nhttps://x.com/john_kafka02\nhttps://x.com/ddl112332",
   "by": "Airi Kanna",
   "firstSeen": "2026-11-12T14:53:13.471Z",
-  "seed": true
+  "seed": true,
+  "p": "ちゃんみな"
  },
  {
   "id": "yt:gw4Zd9Jlzyw",
@@ -110982,7 +110977,6 @@
   "firstSeen": "2026-11-12T14:53:13.404Z",
   "seed": true,
   "p": "Penthouse",
-  "of": "yt:m4yCXpCiXpk",
   "a": "youtube:UC5HwceAVbRH7sKrmucI5onQ"
  },
  {
@@ -114129,7 +114123,8 @@
   "descHead": "original：https://www.youtube.com/watch?v=vVrFyMDMrlM\n\n\n✧Special Thanks : REQ (Accelers)\n https://twitter.com/requiemdh\n\n✧MIX & Mastering : runchiz\n https://twitter.com/runchiz_mix\n\n✧Illustration : NEKU\nhttps://twitter.com/NEKU____\n\n✧Movie : サーナ\n https://twitter.com/nonsosul123?s=09\n\n✧Produce : The C",
   "by": "Arahashi Tabi",
   "firstSeen": "2026-11-12T14:53:13.391Z",
-  "seed": true
+  "seed": true,
+  "p": "MongKickHo"
  },
  {
   "id": "yt:TBm473lA5Bk",
@@ -114626,7 +114621,8 @@
   "descHead": "Original : SoHyang - Sweet Dreams, My Dear\nhttps://youtu.be/ENB-BSYCg1c\n\n\n✧Director : REQ (Accelers)\nhttps://twitter.com/requiemdh\n\n✧MIX & Mastering : JiHEE\n\n✧Illustration : ティミータ\nhttps://twitter.com/timitarcat\n\n✧Movie：cappu \nhttps://twitter.com/c4ppu \n\n✧Produce : The Cold\nhttps://twitter.com/thecol",
   "by": "Shirayuki Hina",
   "firstSeen": "2026-11-12T14:53:13.342Z",
-  "seed": true
+  "seed": true,
+  "p": "ZORN"
  },
  {
   "id": "yt:EuI_MbYAB74",
@@ -116128,7 +116124,6 @@
   "firstSeen": "2026-11-12T14:53:13.353Z",
   "seed": true,
   "p": "ano",
-  "of": "yt:-lec--FlSJ4",
   "a": "youtube:UC2tN8yIRVdZ8-Ig2REhPPWg"
  },
  {
@@ -122002,7 +121997,8 @@
   "descHead": "⯌영상의 cc 자막을 활성화 해주세요⯌\n\n안녕하세요 피엔나들 !\n데뷔 커버곡 이후 첫 커버곡으로 Mrs. GREEN APPLE의 '나라는 것' 을 불러보았습니다!\n\n예쁘게 들어주세요!\n\n----------------------------------------------------------------------\n\n⊹original : Mrs. GREEN APPLE\n→https://youtu.be/xefpHEg5UIA?si=YUHA8aKqAMYngNUs\n\n⊹Director : REQ (Accelers)\n→https://twitter.",
   "by": "Akane Lize",
   "firstSeen": "2026-11-12T14:53:13.380Z",
-  "seed": true
+  "seed": true,
+  "p": "指定した歌手の曲を被らずに歌え!"
  },
  {
   "id": "yt:jhFNsjSyy_E",
@@ -122384,7 +122380,6 @@
   "p": "きくお",
   "firstSeen": "2026-11-12T14:53:13.473Z",
   "seed": true,
-  "of": "yt:NTrm_idbhUk",
   "a": "youtube:UCq3vSkJtBZdBjC8yrG-1xmA"
  },
  {
@@ -122580,7 +122575,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=8VdlQZQ46D4",
   "title": "地球儀 (米津玄師ㅣ君たちはどう生きるか OST) / 藍璃かんな Cover",
-  "t": "米津玄師ㅣ君たちはどう生きるか OST",
+  "t": "地球儀",
   "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2023-10-25T08:00:10Z",
@@ -122625,9 +122620,11 @@
   "descHead": "original：https://youtu.be/VUsURj_OYdA?si=yugMayVj5e4P1OBZ\n\n\n✧Director : REQ (Accelers)\nhttps://twitter.com/requiemdh\n\n✧Inst Arrange : REQ\nhttps://twitter.com/requiemdh\n\n✧MIX & Mastering : JiHEE\nhttps://twitter.com/soundingjh\n\n✧Illustration : The Cold\nhttps://twitter.com/thecold_\n\n✧Movie : Cappu\nhttp",
   "by": "Airi Kanna",
   "pHint": "藍璃かんな Cover",
-  "p": "藍璃かんな Cover",
+  "p": "米津玄師",
   "firstSeen": "2026-11-12T14:53:13.473Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:VUsURj_OYdA",
+  "a": "youtube:UCUCeZaZeJbEYAAzvMgrKOPQ"
  },
  {
   "id": "yt:lgP560HhOVs",
@@ -123316,9 +123313,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=Ei1WobzwsVI",
   "title": "KICK BACK (米津玄師) / 藍璃かんな Cover",
-  "t": "米津玄師",
+  "t": "KICKBACK",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "アニソン",
   "date": "2023-10-14T10:30:10Z",
   "views": 3566427,
   "likes": 26170,
@@ -123361,11 +123358,10 @@
   "descHead": "original：https://youtu.be/M2cckDmNLMI?si=JOikpKKXZRqw7uVs\n\n\n✧Director : REQ (Accelers)\nhttps://twitter.com/requiemdh\n\n✧Inst Arrange : REQ\nhttps://twitter.com/requiemdh\n\n✧MIX & Mastering : JiHEE\nhttps://twitter.com/soundingjh\n\n✧Illustration : ｽｲﾐﾝ\nhttps://twitter.com/sui_0z0\n\n✧Movie : Cappu\nhttps://t",
   "by": "Airi Kanna",
   "pHint": "藍璃かんな Cover",
-  "p": "RADWIMPS",
+  "p": "米津玄師",
   "firstSeen": "2026-11-12T14:53:13.473Z",
   "seed": true,
-  "of": "yt:pwPpqgn-3lw",
-  "a": "youtube:UCIVqvhyo8ttjYOmMJuhq_YQ"
+  "a": "youtube:UCUCeZaZeJbEYAAzvMgrKOPQ"
  },
  {
   "id": "yt:Ph5xcTn_I1I",
@@ -124189,7 +124185,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=GdH0TsPznUs",
   "title": "LADY (米津玄師) / 藍璃かんな Cover",
-  "t": "米津玄師",
+  "t": "Lady",
   "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2023-09-23T10:28:11Z",
@@ -124234,11 +124230,10 @@
   "descHead": "#lady #米津玄師\n\noriginal\nhttps://youtu.be/DdF-u3fe5pg?si=-DJ_JRgTRJ9I5PMo\n\n✧Director : REQ (Accelers)\nhttps://twitter.com/requiemdh\n\n✧Arrange : Hoshie\nhttps://twitter.com/hoshie_piano\n\n✧MIX & Mastering : JiHEE\n\n✧Illustration : JW\nhttps://twitter.com/e_hee_hee\n\n✧Movie : Cappu\nhttps://twitter.com/c4ppu\n\n",
   "by": "Airi Kanna",
   "pHint": "藍璃かんな Cover",
-  "p": "RADWIMPS",
+  "p": "Official髭男dism",
   "firstSeen": "2026-11-12T14:53:13.474Z",
   "seed": true,
-  "of": "yt:pwPpqgn-3lw",
-  "a": "youtube:UCIVqvhyo8ttjYOmMJuhq_YQ"
+  "a": "youtube:UC3vg17IZ1IV73xx069jG44w"
  },
  {
   "id": "yt:0i23A2K5sKw",
@@ -131824,7 +131819,6 @@
   "p": "niki",
   "firstSeen": "2026-11-12T14:53:13.475Z",
   "seed": true,
-  "of": "nico:sm12099561",
   "a": "niconico:12651886"
  },
  {
@@ -132621,9 +132615,9 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=v8MjiqzLKTs",
   "title": "すずめ Suzume (RADWIMPS feat.十明) / 藍璃かんな Cover",
-  "t": "RADWIMPS feat.十明",
+  "t": "すずめ",
   "kind": "歌ってみた",
-  "g": "J-POP",
+  "g": "アニソン",
   "date": "2023-04-09T09:59:07Z",
   "views": 2688761,
   "likes": 19203,
@@ -132660,9 +132654,10 @@
   "descHead": "#すずめ #すずめの戸締まり #radwimps #suzume \n\n本家\nhttps://youtu.be/Xs0Lxif1u9E\n\n\n✧Inst Arrange : REQ\nhttps://twitter.com/requiemdh\n\n\n✧Illustration : shijo\nhttps://twitter.com/Shijohane\n\n\n✧Movie：cappu \nhttps://twitter.com/c4ppu \n\n\n✧Mix&Mastering ：TRMX Sound Lab \nhttps://twitter.com/Trmx_Sound_Lab\n\n\n✧Produce : Th",
   "by": "Airi Kanna",
   "pHint": "藍璃かんな Cover",
-  "p": "藍璃かんな Cover",
+  "p": "RADWIMPS",
   "firstSeen": "2026-11-12T14:53:13.476Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:Xs0Lxif1u9E"
  },
  {
   "id": "yt:0H84RlxmLMY",
@@ -137336,7 +137331,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=futqIdI0rOY",
   "title": "好きだから。『ユイカ』 / 藍璃かんな Cover",
-  "t": "ユイカ",
+  "t": "好きだから。",
   "kind": "歌ってみた",
   "g": "J-POP",
   "date": "2023-01-14T10:00:08Z",
@@ -137350,9 +137345,10 @@
   "descHead": "本家様：https://youtu.be/eYAd4uDotF0\n\n✧イラスト：The cold様\nhttps://twitter.com/thecold_\n\n✧映像：cappu様\nhttps://twitter.com/c4ppu\n\n✧ミックス：Space様\nhttps://twitter.com/official_xspace\n\n✧藍璃かんな  Airi Kanna\n\nJP Twitter\n→https://twitter.com/AiriKanna_\nhttps://www.youtube.com/@airikanna\n\nKR Twitter\n→https://twitter.com/A",
   "by": "Airi Kanna",
   "pHint": "好きだから。",
-  "p": "好きだから。",
+  "p": "ユイカ",
   "firstSeen": "2026-11-12T14:53:13.477Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:eYAd4uDotF0"
  },
  {
   "id": "yt:lMEt3RdqB9Y",
@@ -192946,7 +192942,7 @@
   "src": "youtube",
   "url": "https://www.youtube.com/watch?v=sPWJ3epBuxw",
   "title": "【歌ってみた】インフェルノ - Mrs. GREEN APPLE / 星乃めあ【オリジナルMV】TVアニメ「炎炎ノ消防隊 (Fire Force)」オープニング主題歌",
-  "t": "星乃めあ TVアニメ",
+  "t": "インフェルノ",
   "kind": "歌ってみた",
   "g": "アニソン",
   "date": "2019-09-05T11:00:13Z",
@@ -192979,11 +192975,12 @@
   "descHead": "やってまいりました☆☆☆VTuberでVsinger！世界の星乃めあ…だっ！\nMrs.GREEN APPLEさんの『インフェルノ』を歌いました！！\nこちらは、TVアニメ『炎炎ノ消防隊』の主題歌となっております！！\n\n⭐️チャンネル登録よろしくお願いします！\nhttps://www.youtube.com/channel/UCsiKFVHkQSMlSe0vaCG0anw?sub_confirmation=1\n\n⭐️Twitterやってます！フォローお願いします！\nhttps://twitter.com/MaiR_Hoshino\n\n🌠－－－－－－－－－－🌠－－－－－－－－－－－－－－🌠\n\n大",
   "by": "MaiR",
   "pHint": "インフェルノ",
-  "p": "インフェルノ",
-  "a": "インフェルノ",
+  "p": "Mrs. GREEN APPLE",
+  "a": "youtube:UCpFgmZm65yOU5X-hmWkWjuw",
   "animeDesc": 1,
   "firstSeen": "2026-10-27T14:07:13.031Z",
-  "seed": true
+  "seed": true,
+  "of": "yt:wfCcs0vLysk"
  },
  {
   "id": "yt:IQ5eFY1eZg8",
