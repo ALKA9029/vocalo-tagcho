@@ -41,6 +41,8 @@ export function isNotSong(title = "") {
   // MMD（3Dモデルが既存の曲で踊る動画）は曲そのものではない
   if (/MMD/i.test(title)) return true;
   if (/楽譜/.test(title)) return true;   // ピアノ楽譜の演奏動画
+  // 公式チャンネルの、曲ではない動画（バラエティ・CM・インタビュー・メイキング・vlog・リアクション・密着・告知など）
+  if (/休憩中|【(?!太鼓)[^】]*の達人】|コラボCM|テレビCM|\bTVCM\b|CM\s*\d{2}秒|談話|Imagine the culture|メイキング|making of|behind the scenes|\bvlog\b|ビハインド|オフショット|インタビュー|\binterview\b|\bteaser\b|ティザー|予告編|\btrailer\b|ダイジェスト|生配信|配信アーカイブ|リアクション|\breaction\b|密着|ドキュメンタリー|documentary|\bunboxing\b|開封/i.test(title)) return true;
   // テレビ番組の歌唱（うたコン・SONGS）や出演者のメッセージ、路上ライブの撮影（歌うま）、吹奏楽・ヴァイオリンの演奏、アルバムのクロスフェード、音ゲーのプレイ動画は曲そのものではない
   if (/【(うたコン|SONGS|Venue101)】|からメッセージ|【歌うま】|吹奏楽|ヴァイオリン演奏|クロスフェード|【プロセカ】.*(APPEND|MASTER|EXPERT|ALL PERFECT|FULL COMBO)/i.test(title)) return true;
   // ネタの替え歌（淫夢・ケニアVer.・駅名替え歌など）
