@@ -1,10 +1,26 @@
 [
  {
+  "id": "UCmAutZSvFH5mkR9OoPtpOmQ",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "マイキ",
+  "genre": "ボカロ",
+  "lastHit": "2026-11-16T11:43:49Z",
+  "pinned": true
+ },
+ {
   "id": "UCcvLSRIWJIAGFDyWtzkbiHA",
   "name": "marasy8",
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "ボカロ",
   "lastHit": "2026-11-15T13:45:25Z",
+  "pinned": true
+ },
+ {
+  "id": "UClzpoRto1BJXaRGe9OkkGLQ",
+  "added": "2026-11-16T15:08:27.576Z",
+  "name": "ビートまりお / COOL&CREATE",
+  "genre": "ボカロ",
+  "lastHit": "2026-11-15T12:00:07Z",
   "pinned": true
  },
  {
@@ -20,14 +36,6 @@
   "name": "りび",
   "genre": "ボカロ",
   "lastHit": "2026-11-15T10:00:00Z"
- },
- {
-  "id": "UCmAutZSvFH5mkR9OoPtpOmQ",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "マイキ",
-  "genre": "ボカロ",
-  "lastHit": "2026-11-14T12:52:31Z",
-  "pinned": true
  },
  {
   "id": "UCermf7vqBLEsYL-X_8gBcUg",
@@ -1566,11 +1574,19 @@
   "pinned": true
  },
  {
-  "id": "UC2OgzdgLQ7vxlANVxF3kgvg",
-  "added": "2026-10-31T21:50:07.207Z",
-  "name": "ユリイ・カノン / 月詠み Official",
-  "genre": "ボカロ",
-  "lastHit": "2023-03-08T11:00:07Z",
+  "id": "UC2dXx-3RXeeP8hA5AGt8vuw",
+  "added": "2026-11-16T21:34:51.506Z",
+  "name": "初星学園",
+  "genre": "J-POP",
+  "lastHit": "2026-11-16T13:00:11Z",
+  "pinned": true
+ },
+ {
+  "id": "UCWDA90eEvGBgtbOM997aStw",
+  "added": "2026-10-11T21:32:47.826Z",
+  "name": "Ryoji Takarabe財部亮治",
+  "genre": "アニソン",
+  "lastHit": "2026-11-16T12:00:15Z",
   "pinned": true
  },
  {
@@ -1587,6 +1603,14 @@
   "name": "Gero Channel",
   "genre": "アニソン",
   "lastHit": "2026-11-16T10:11:14Z",
+  "pinned": true
+ },
+ {
+  "id": "UCZ-R_bRfQkivdwT3QvY121g",
+  "added": "2026-11-10T15:05:23.320Z",
+  "name": "Leina",
+  "genre": "アニソン",
+  "lastHit": "2026-11-16T10:00:08Z",
   "pinned": true
  },
  {
@@ -1627,13 +1651,6 @@
   "genre": "アニソン",
   "lastHit": "2026-11-15T12:00:10Z",
   "pinned": true
- },
- {
-  "id": "UClzpoRto1BJXaRGe9OkkGLQ",
-  "added": "2026-11-16T15:08:27.576Z",
-  "name": "ビートまりお / COOL&CREATE",
-  "genre": "J-POP",
-  "lastHit": "2026-11-15T12:00:07Z"
  },
  {
   "id": "UCNRh9kkByBTYLo0IJupnAug",
@@ -1955,14 +1972,6 @@
   "lastHit": "2026-11-12T12:05:12Z"
  },
  {
-  "id": "UCWDA90eEvGBgtbOM997aStw",
-  "added": "2026-10-11T21:32:47.826Z",
-  "name": "Ryoji Takarabe財部亮治",
-  "genre": "アニソン",
-  "lastHit": "2026-11-12T12:00:08Z",
-  "pinned": true
- },
- {
   "id": "UCPrjycK4eiQhUw2PnVIq7Gg",
   "added": "2026-10-10T07:39:29.506Z",
   "name": "CANACANA family",
@@ -2011,8 +2020,9 @@
   "id": "UCFvaGh4Tsky5loZdwMNPdNg",
   "added": "2026-11-16T15:08:27.576Z",
   "name": "サンボマスター",
-  "genre": "J-POP",
-  "lastHit": "2026-11-12T09:00:08Z"
+  "genre": "アニソン",
+  "lastHit": "2026-11-12T09:00:08Z",
+  "pinned": true
  },
  {
   "id": "UCfICTP3ps3JNVkdqzI7J8HA",
@@ -2131,7 +2141,8 @@
   "added": "2026-11-16T15:08:27.576Z",
   "name": "AKINA NAKAMORI OFFICIAL",
   "genre": "J-POP",
-  "lastHit": "2026-11-10T15:00:10Z"
+  "lastHit": "2026-11-10T15:00:10Z",
+  "pinned": true
  },
  {
   "id": "UCUzpZpX2wRYOk3J8QTFGxDg",
@@ -2215,7 +2226,8 @@
   "added": "2026-11-16T15:08:27.576Z",
   "name": "いるま",
   "genre": "J-POP",
-  "lastHit": "2026-11-10T09:30:09Z"
+  "lastHit": "2026-11-10T09:30:09Z",
+  "pinned": true
  },
  {
   "id": "UCn9FnRCTmRnmBekLFWko96Q",
@@ -2673,14 +2685,6 @@
   "name": "うたのママパパ",
   "genre": "J-POP",
   "lastHit": "2026-11-06T07:00:32Z"
- },
- {
-  "id": "UCZ-R_bRfQkivdwT3QvY121g",
-  "added": "2026-11-10T15:05:23.320Z",
-  "name": "Leina",
-  "genre": "J-POP",
-  "lastHit": "2026-11-06T01:00:03Z",
-  "pinned": true
  },
  {
   "id": "UC1o4SbQvLYpqYZlUKPRWaRQ",
