@@ -24,6 +24,13 @@
   "pinned": true
  },
  {
+  "id": "UC9ksQtXgktyDHGdjCrzCbOw",
+  "added": "2026-11-16T07:15:52.558Z",
+  "name": "Se",
+  "genre": "ボカロ",
+  "lastHit": "2026-11-14T11:00:16Z"
+ },
+ {
   "id": "UCdTjS3aUdccTLw8CLuLEvMQ",
   "added": "2026-11-14T15:08:13.438Z",
   "name": "FamFa.",
@@ -36,6 +43,13 @@
   "name": "ik1ru",
   "genre": "ボカロ",
   "lastHit": "2026-11-14T10:00:06Z"
+ },
+ {
+  "id": "UCKvCjyB1hR2U6YJjfhPh3oQ",
+  "added": "2026-11-14T15:08:13.438Z",
+  "name": "Soda",
+  "genre": "ボカロ",
+  "lastHit": "2026-11-14T00:25:19Z"
  },
  {
   "id": "UC7jYRPvbge5tAs0dE2r5_ug",
@@ -107,13 +121,6 @@
   "genre": "ボカロ",
   "lastHit": "2026-11-13T09:00:01Z",
   "pinned": true
- },
- {
-  "id": "UCKvCjyB1hR2U6YJjfhPh3oQ",
-  "added": "2026-11-14T15:08:13.438Z",
-  "name": "Soda",
-  "genre": "ボカロ",
-  "lastHit": "2026-11-12T23:23:11Z"
  },
  {
   "id": "UCV4ggxLd_Vz-I-ePGSKfFog",
@@ -1569,11 +1576,11 @@
   "pinned": true
  },
  {
-  "id": "UCBR4N5DkgDt3PLTcfJB1iiw",
-  "added": "2026-11-01T21:52:11.888Z",
-  "name": "みきとP mikitoP OFFICIAL",
-  "genre": "ボカロ",
-  "lastHit": "2022-11-08T11:00:04Z",
+  "id": "UCE7gtjLeZKNXLp5YURzYYeg",
+  "added": "2026-10-21T21:52:15.808Z",
+  "name": "春猿火 -Harusaruhi-",
+  "genre": "アニソン",
+  "lastHit": "2026-11-15T14:00:06Z",
   "pinned": true
  },
  {
@@ -1614,6 +1621,14 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "アニソン",
   "lastHit": "2026-11-15T10:00:24Z",
+  "pinned": true
+ },
+ {
+  "id": "UCjooy4G0O8D-4KkE1SWr5Jg",
+  "added": "2026-11-02T21:56:59.633Z",
+  "name": "ファム・ファタル - (f)EMME FATALE music-channel",
+  "genre": "J-POP",
+  "lastHit": "2026-11-15T10:00:21Z",
   "pinned": true
  },
  {
@@ -1669,6 +1684,13 @@
   "genre": "J-POP",
   "lastHit": "2026-11-14T11:00:08Z",
   "pinned": true
+ },
+ {
+  "id": "UC4rJq3VrnVGEqcD_SalgzNw",
+  "added": "2026-11-16T07:15:52.558Z",
+  "name": "VANTA Official",
+  "genre": "J-POP",
+  "lastHit": "2026-11-14T10:11:17Z"
  },
  {
   "id": "UCuUJ4A_PeZOFTD5koXQcg5w",
@@ -2308,6 +2330,13 @@
   "pinned": true
  },
  {
+  "id": "UCcfweKYj2PeI9u_MeczAPTQ",
+  "added": "2026-11-10T15:05:23.320Z",
+  "name": "Cover Music",
+  "genre": "J-POP",
+  "lastHit": "2026-11-08T09:00:09Z"
+ },
+ {
   "id": "UCH3rQwjymt2WWLKpDbAb2Dg",
   "added": "2026-11-02T21:56:59.633Z",
   "name": "BUDDiiS Channel",
@@ -2684,13 +2713,6 @@
   "pinned": true
  },
  {
-  "id": "UCcfweKYj2PeI9u_MeczAPTQ",
-  "added": "2026-11-10T15:05:23.320Z",
-  "name": "Cover Music",
-  "genre": "J-POP",
-  "lastHit": "2026-11-04T09:00:33Z"
- },
- {
   "id": "UCMZN1sWH4-vOF45C7iEg_KA",
   "added": "2026-11-10T15:05:23.320Z",
   "name": "尾崎千里眼のポケモン実況チャンネル",
@@ -2821,6 +2843,14 @@
   "pinned": true
  },
  {
+  "id": "UCvpredjG93ifbCP1Y77JyFA",
+  "added": "2026-11-16T07:15:52.558Z",
+  "name": "YOASOBI",
+  "genre": "アニソン",
+  "lastHit": "2026-11-01T13:01:55Z",
+  "pinned": true
+ },
+ {
   "id": "UCE4W22kKQQVdrA2KTiyZ_cA",
   "added": "2026-10-28T12:07:05.352Z",
   "name": "メーメントヴァニタス / MEMENTOVANITAS",
@@ -2885,14 +2915,6 @@
   "pinned": true
  },
  {
-  "id": "UCE7gtjLeZKNXLp5YURzYYeg",
-  "added": "2026-10-21T21:52:15.808Z",
-  "name": "春猿火 -Harusaruhi-",
-  "genre": "アニソン",
-  "lastHit": "2026-10-31T10:00:32Z",
-  "pinned": true
- },
- {
   "id": "UCXN-ZRdGnFtLiJ8EY1i_alg",
   "added": "2026-10-14T11:01:30.035Z",
   "name": "Itsuki Natsume / 棗いつき",
@@ -2954,14 +2976,6 @@
   "name": "タカオカミズキ - takaokamizuki -",
   "genre": "J-POP",
   "lastHit": "2026-10-30T11:00:08Z",
-  "pinned": true
- },
- {
-  "id": "UCjooy4G0O8D-4KkE1SWr5Jg",
-  "added": "2026-11-02T21:56:59.633Z",
-  "name": "ファム・ファタル - (f)EMME FATALE music-channel",
-  "genre": "J-POP",
-  "lastHit": "2026-10-30T10:00:02Z",
   "pinned": true
  },
  {
@@ -3098,21 +3112,6 @@
   "name": "Mrs. GREEN APPLE",
   "genre": "アニソン",
   "lastHit": "2026-10-23T14:53:07Z",
-  "pinned": true
- },
- {
-  "id": "UC-S4wziPnbFiIb3RXKlNG6g",
-  "added": "2026-11-10T11:19:07.415Z",
-  "name": "KEY TO LIT",
-  "genre": "J-POP",
-  "lastHit": "2026-10-23T13:00:11Z"
- },
- {
-  "id": "UCwAVKZKMkKNEMShMK68PuzA",
-  "added": "2026-10-26T21:49:00.972Z",
-  "name": "湘南乃風",
-  "genre": "アニソン",
-  "lastHit": "2026-10-23T13:00:07Z",
   "pinned": true
  }
 ]
