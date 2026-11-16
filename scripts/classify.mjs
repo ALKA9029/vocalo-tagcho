@@ -939,7 +939,9 @@ function applyVocaDB(items, vdb) {
     if (!s || !i || i.kind !== "本家") continue;
     // ②
     const nt = normalize(i.t), st = normalize(s.t), np = normalize(i.p || "");
-    const noP = !np || /^[-‐ー]$/.test(i.p.trim()) || /作詞|作曲|編曲/.test(i.p) || np === st || isVoice(i.p);
+    // 作者名が「をKAITO,MEIKO,初音ミクにry 修正版」のように、タイトルの残り（助詞で始まる・歌声の名前が入っている）になっているものも空っぽと同じ
+    const noP = !np || /^[-‐ー]$/.test(i.p.trim()) || /作詞|作曲|編曲/.test(i.p) || np === st || isVoice(i.p)
+      || /^[をにがのへとで]/.test(i.p.trim()) || /にry|修正版/.test(i.p) || i.p.split(/[,、・&＆×]/).some(x => isVoice(x.trim()));
     const rest = st && nt.includes(st) ? nt.replace(st, "") : null;
     const badT = !nt || np === st || s.p.some(n => normalize(n) === nt) || isVoice(i.t) || (rest && (isVoice(rest) || /^[-‐ー]/.test(rest)));
     if (badT && s.t && !i.tFixed) i.t = s.t;
