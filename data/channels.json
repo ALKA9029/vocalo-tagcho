@@ -1606,6 +1606,14 @@
   "pinned": true
  },
  {
+  "id": "UCnnxfjgEZ39GSMiteFSiXoA",
+  "added": "2026-11-13T15:19:50.222Z",
+  "name": "MIRAGE PHANTOM JP",
+  "genre": "アニソン",
+  "lastHit": "2026-11-16T10:00:15Z",
+  "pinned": true
+ },
+ {
   "id": "UCZ-R_bRfQkivdwT3QvY121g",
   "added": "2026-11-10T15:05:23.320Z",
   "name": "Leina",
@@ -1936,6 +1944,13 @@
   "pinned": true
  },
  {
+  "id": "UCnDhg9nkNOi9dJqwfKVh4sg",
+  "added": "2026-11-17T09:40:01.064Z",
+  "name": "Yume Song",
+  "genre": "J-POP",
+  "lastHit": "2026-11-13T09:15:06Z"
+ },
+ {
   "id": "UC6mR9smN7CQcI-1RyNM2e8Q",
   "added": "2026-11-16T15:08:27.576Z",
   "name": "무적교자",
@@ -1999,14 +2014,6 @@
   "name": "MIRAGE OVERDRIVE JP",
   "genre": "J-POP",
   "lastHit": "2026-11-12T10:00:30Z"
- },
- {
-  "id": "UCnnxfjgEZ39GSMiteFSiXoA",
-  "added": "2026-11-13T15:19:50.222Z",
-  "name": "MIRAGE PHANTOM JP",
-  "genre": "アニソン",
-  "lastHit": "2026-11-12T10:00:03Z",
-  "pinned": true
  },
  {
   "id": "UCvTsv4KmVuBdECI08_HR87Q",
@@ -3095,14 +3102,6 @@
   "name": "デカ文字衛門",
   "genre": "J-POP",
   "lastHit": "2026-10-29T22:00:37Z",
-  "pinned": true
- },
- {
-  "id": "UCgipy6-EqjT-1BCDndXX1PA",
-  "added": "2026-10-31T21:50:07.207Z",
-  "name": "back number",
-  "genre": "J-POP",
-  "lastHit": "2026-10-29T09:00:23Z",
   "pinned": true
  }
 ]
