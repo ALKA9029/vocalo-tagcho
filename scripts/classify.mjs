@@ -89,7 +89,9 @@ export function detectKind(title, tags, src) {
 export function detectVoice(title, tags) {
   // 長い名前を先に見る（「初音ミクNT」を「初音ミク」と誤判定しないため）
   const byLen = [...VOICES].sort((a, b) => b.length - a.length);
-  for (const v of byLen) if (tags.some(t => normalize(t) === normalize(v))) return v;
+  // 「ONE」はふつうの英単語のタグ（ONE OK ROCK・One Piece の動画のタグ）にもなるので、タイトルに【ONE】や CeVIO・feat. ONE などがあるときだけ
+  const oneOk = /[【\[(（]\s*ONE\s*[】\])）]|CeVIO|feat\.?\s*ONE\b|ONE\s*[・×&]/i.test(title);
+  for (const v of byLen) if ((v !== "ONE" || oneOk) && tags.some(t => normalize(t) === normalize(v))) return v;
   for (const t of tags) if (VOICE_ALIASES[normalize(t)]) return VOICE_ALIASES[normalize(t)];
   // 韓国語の歌声名はタイトルの中からも探す
   const nt = normalize(title);
@@ -108,7 +110,10 @@ const ANIME_RE = /TVアニメ|アニメ[「『]|劇場版|主題歌|オープニ
 // YouTube の説明文（長め）にアニメ・ゲームの主題歌だと書いてあるか。取得したときに animeDesc として覚えておく
 export const ANIME_DESC_RE = /TVアニメ|テレビアニメ|アニメ[「『]|劇場版|アニメーション映画|アニメ映画|アニメ(主題歌|OP|ED|オープニング|エンディング)|(オープニング|エンディング)(テーマ|主題歌)|ノンクレジット|ゲーム[「『][^」』]*[」』].{0,12}(主題歌|テーマ)/;
 // 説明文の最初のほう（500文字）で、収録曲リスト（「01. 〜」「・〜」）ではない行にアニメ・ゲームの主題歌と書いてあるか
-export const animeInDesc = (desc = "") => desc.slice(0, 500).split(/\n/).some(l => !/^\s*(\d+\s*[.)．]|M\d|[・\-−–#＃])/.test(l) && ANIME_DESC_RE.test(l));
+// テレビ番組・ドラマの「エンディングテーマ」（「TBS系テレビ『あらびき団』エンディングテーマ」）はアニソンではない
+const tvTheme = d => /(エンディング|オープニング)(テーマ|主題歌)|主題歌/.test(d) && /番組|テレビ系|TV系|ＴＶ系|TBS|日テレ|フジテレビ|テレビ朝日|NHK|ドラマ/.test(d) && !/アニメ|anime/i.test(d);
+export const animeInDesc = (desc = "") => desc.slice(0, 500).split(/\n/).some(l => !/^\s*(\d+\s*[.)．]|M\d|[・\-−–#＃])/.test(l) && ANIME_DESC_RE.test(l)
+  && !(/ドラマ|番組|テレビ系|TV系|ＴＶ系|日テレ|フジテレビ|テレビ朝日|TBS|NHK|\bCM\b|映画「|映画『/i.test(l) && !/アニメ|anime/i.test(l)));
 // タイトルの「主題歌」「オープニング」は、ドラマ・テレビ番組・CMのものならアニソンではない
 function animeTitle(title = "") {
   if (!ANIME_RE.test(title)) return false;
@@ -119,7 +124,7 @@ const ANIME_TAGS = ["アニソン", "アニメ", "アニメソング", "anime"];
 
 export function detectGenre(title, tags, fallback = "その他", desc = "") {
   if (hasTag(tags, VOCALO_TAGS) || (detectVoice(title, tags) && !hasTag(tags, JPOP_TAGS))) return "ボカロ";
-  if (hasTag(tags, ANIME_TAGS) || animeTitle(title) || ANIME_DESC_RE.test(desc.slice(0, 300))) return "アニソン";
+  if (hasTag(tags, ANIME_TAGS) || animeTitle(title) || (ANIME_DESC_RE.test(desc.slice(0, 300)) && !tvTheme(desc.slice(0, 300)))) return "アニソン";
   if (hasTag(tags, JPOP_TAGS)) return "J-POP";
   return fallback;
 }
@@ -434,7 +439,8 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
   // YouTubeで「ボカロ」として集めた動画でも、歌声やボカロの手がかりがなければボカロにしない
   const vocaloHint = !!rawVoice || hasTag(vtags, VOCALO_TAGS) || /VOCALOID|ボカロ|ボーカロイド|初音ミク|重音テト|可不|Synthesizer ?V|UTAU|CeVIO|보컬로이드|보카로/i.test(`${video.title} ${desc.slice(0, 300)}`);
   // 「アニメ主題歌」の検索で見つけた動画やアニソン寄りのチャンネルの動画でも、アニメ・ゲームの手がかりがなければアニソンにしない
-  const animeHint = animeOrGame(video.title, vtags) || ANIME_DESC_RE.test(desc.slice(0, 600)) || !!video.animeDesc;
+  const tvOnly = tvTheme(String(video.descHead || desc || "").slice(0, 300));
+  const animeHint = animeOrGame(video.title, vtags) || (!tvOnly && (ANIME_DESC_RE.test(desc.slice(0, 600)) || !!video.animeDesc));
   const fb = video.src === "youtube" && fallbackGenre === "ボカロ" && !vocaloHint ? "J-POP"
     : video.src === "youtube" && fallbackGenre === "アニソン" && !animeHint ? "J-POP" : fallbackGenre;
   let g = detectGenre(video.title, vtags, fb, desc);
@@ -589,7 +595,8 @@ export function classify(video, { fallbackGenre = "その他" } = {}) {
     if (tag) item.t = tag;
   }
   // 説明文の後ろのほうに「TVアニメ『〇〇』オープニングテーマ」とある YouTube の本家はアニソン
-  if (video.animeDesc) {
+  // （ただし説明文の最初のほうが「TBS系テレビ『あらびき団』エンディングテーマ」のようなテレビ番組の主題歌で、アニメの言葉がないときは除く）
+  if (video.animeDesc && !tvTheme(String(video.descHead || video.desc || "").slice(0, 300))) {
     item.animeDesc = 1;
     if (video.src === "youtube" && item.kind === "本家" && (item.g === "J-POP" || item.g === "その他")) item.g = "アニソン";
   }
