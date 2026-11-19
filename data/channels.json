@@ -1,5 +1,13 @@
 [
  {
+  "id": "UCfVQDynjGGBJQDpdbGy0ffQ",
+  "added": "2026-10-15T10:11:14.946Z",
+  "name": "ガルナ(オワタP)",
+  "genre": "ボカロ",
+  "lastHit": "2026-11-18T14:43:48Z",
+  "pinned": true
+ },
+ {
   "id": "UCKtHebNfVM2_uiuuYhkxCrg",
   "added": "2026-11-18T15:08:37.126Z",
   "name": "晴いちばん / Haru-ichiban",
@@ -35,7 +43,21 @@
   "added": "2026-11-12T14:57:45.696Z",
   "name": "R3 Music Box ~癒しのオルゴールサウンド~",
   "genre": "ボカロ",
-  "lastHit": "2026-11-16T12:00:06Z"
+  "lastHit": "2026-11-17T12:00:17Z"
+ },
+ {
+  "id": "UCebZ4XxYgh5XMeGi9Yk09dA",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "Pirate Flavor",
+  "genre": "ボカロ",
+  "lastHit": "2026-11-17T10:00:06Z"
+ },
+ {
+  "id": "UCFNpdrPaOHK6_m8VItNTYOQ",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "우타이노",
+  "genre": "ボカロ",
+  "lastHit": "2026-11-17T08:00:32Z"
  },
  {
   "id": "UCmAutZSvFH5mkR9OoPtpOmQ",
@@ -126,6 +148,21 @@
   "lastHit": "2026-11-13T11:00:06Z"
  },
  {
+  "id": "UCraC7460yGQF4GDmSjCecpQ",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "syudou",
+  "genre": "ボカロ",
+  "lastHit": "2026-11-13T11:00:06Z",
+  "pinned": true
+ },
+ {
+  "id": "UCuYutnIVG5CvpHtJgMVf3XA",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "大サブ波新",
+  "genre": "ボカロ",
+  "lastHit": "2026-11-13T10:00:35Z"
+ },
+ {
   "id": "UC_yWxcHREeEUJh_YMZ4qh7A",
   "added": "2026-10-28T21:56:23.247Z",
   "name": "Chogakusei Official",
@@ -140,6 +177,13 @@
   "genre": "ボカロ",
   "lastHit": "2026-11-13T10:00:11Z",
   "pinned": true
+ },
+ {
+  "id": "UCBIyCDa691dlV57vksRq6mw",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "Ruliea",
+  "genre": "ボカロ",
+  "lastHit": "2026-11-13T10:00:09Z"
  },
  {
   "id": "UCTN4HHk7-DHZYk2rMe55uaw",
@@ -799,14 +843,6 @@
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "ボカロ",
   "lastHit": "2026-09-25T10:00:01Z",
-  "pinned": true
- },
- {
-  "id": "UCfVQDynjGGBJQDpdbGy0ffQ",
-  "added": "2026-10-15T10:11:14.946Z",
-  "name": "ガルナ(オワタP)",
-  "genre": "ボカロ",
-  "lastHit": "2026-09-19T10:00:06Z",
   "pinned": true
  },
  {
@@ -1530,51 +1566,80 @@
   "pinned": true
  },
  {
-  "id": "UCpdcUsCOK7AxIXDxRdz_mrA",
-  "added": "2026-10-27T21:52:32.692Z",
-  "name": "Giga - Topic",
-  "genre": "ボカロ",
-  "lastHit": "2023-12-15T10:03:35Z",
-  "pinned": true
- },
- {
-  "id": "UClhYI7CVVOGXeC57qOhJElg",
-  "added": "2026-10-27T21:52:32.692Z",
-  "name": "すよ",
-  "genre": "ボカロ",
-  "lastHit": "2023-11-21T17:30:04Z",
-  "pinned": true
- },
- {
-  "id": "UC8c-dBnOuvKsoxSOUihQi0Q",
-  "added": "2026-10-27T21:52:32.692Z",
-  "name": "Misumi",
-  "genre": "ボカロ",
-  "lastHit": "2023-09-14T11:16:21Z",
-  "pinned": true
- },
- {
-  "id": "UCRQsivtS8Cjj9-X6tOhInKw",
-  "added": "2026-10-28T12:07:05.352Z",
-  "name": "“亜沙” ASA official channel",
-  "genre": "ボカロ",
-  "lastHit": "2023-08-18T12:00:22Z",
-  "pinned": true
- },
- {
-  "id": "UCAyiAlNizx-GtWVp7453XzA",
-  "added": "2026-10-28T13:52:20.765Z",
-  "name": "ゆかてふ",
-  "genre": "ボカロ",
-  "lastHit": "2023-08-12T04:33:11Z",
-  "pinned": true
- },
- {
   "id": "UC9zY_E8mcAo_Oq772LEZq8Q",
   "name": "THE FIRST TAKE",
   "added": "2026-10-09T12:06:54.468Z",
   "genre": "アニソン",
-  "lastHit": "2026-11-18T13:00:07Z",
+  "lastHit": "2026-11-19T13:00:05Z",
+  "pinned": true
+ },
+ {
+  "id": "UCWDA90eEvGBgtbOM997aStw",
+  "added": "2026-10-11T21:32:47.826Z",
+  "name": "Ryoji Takarabe財部亮治",
+  "genre": "アニソン",
+  "lastHit": "2026-11-19T12:00:09Z",
+  "pinned": true
+ },
+ {
+  "id": "UCiJ_Um3KbfF19NzkDYLzZVQ",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "綺沙良 / Kisara【にじさんじ】",
+  "genre": "アニソン",
+  "lastHit": "2026-11-19T11:00:09Z",
+  "pinned": true
+ },
+ {
+  "id": "UCjGsOnj8SPL7CWVTgXDmm3g",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "VESPERBELL_KM",
+  "genre": "J-POP",
+  "lastHit": "2026-11-19T11:00:09Z",
+  "pinned": true
+ },
+ {
+  "id": "UCgcel56b36LSI1uViDRxj5w",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "あたたかくなる",
+  "genre": "J-POP",
+  "lastHit": "2026-11-19T11:00:06Z"
+ },
+ {
+  "id": "UC8hGV6UGvtlC4k2McpRgBvw",
+  "added": "2026-11-10T15:05:23.320Z",
+  "name": "鷲尾伶菜 Official YouTube Channel",
+  "genre": "J-POP",
+  "lastHit": "2026-11-19T11:00:05Z"
+ },
+ {
+  "id": "UCpmSwekVKXnObCY7hpdHXdQ",
+  "added": "2026-11-18T15:08:37.126Z",
+  "name": "七海うらら*歌channel",
+  "genre": "アニソン",
+  "lastHit": "2026-11-19T10:00:08Z",
+  "pinned": true
+ },
+ {
+  "id": "UCNMbL86u5LBeO_BWHp5pJ5g",
+  "added": "2026-10-13T21:45:48.810Z",
+  "name": "Element Sicks【EL6】",
+  "genre": "J-POP",
+  "lastHit": "2026-11-19T10:00:07Z",
+  "pinned": true
+ },
+ {
+  "id": "UCdOFJTdqeytxPttqDnWfS_A",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "リアルピース",
+  "genre": "J-POP",
+  "lastHit": "2026-11-19T09:00:06Z"
+ },
+ {
+  "id": "UC_A_w2KhC3emxNZWQ3pYpfQ",
+  "added": "2026-11-06T20:55:26.741Z",
+  "name": "FlyingDog",
+  "genre": "アニソン",
+  "lastHit": "2026-11-18T15:00:09Z",
   "pinned": true
  },
  {
@@ -1583,6 +1648,14 @@
   "name": "BUDDiiS Channel",
   "genre": "J-POP",
   "lastHit": "2026-11-18T12:30:30Z",
+  "pinned": true
+ },
+ {
+  "id": "UCH_3Vp2d8s-ILTQCv73jKSQ",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "吉井和哉",
+  "genre": "アニソン",
+  "lastHit": "2026-11-18T12:05:47Z",
   "pinned": true
  },
  {
@@ -1602,11 +1675,50 @@
   "pinned": true
  },
  {
+  "id": "UCfyzrRchEuYWpbWnXNRwNLw",
+  "added": "2026-10-09T12:20:22.450Z",
+  "name": "シアーミュージック",
+  "genre": "アニソン",
+  "lastHit": "2026-11-18T11:00:11Z",
+  "pinned": true
+ },
+ {
+  "id": "UCrnZYYRdNp8VD2ESbzG3gWw",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "TAGRIGHT Official",
+  "genre": "J-POP",
+  "lastHit": "2026-11-18T11:00:10Z"
+ },
+ {
   "id": "UCzRUSFIF_plgY0a7u7TulEQ",
   "added": "2026-10-22T21:48:45.712Z",
   "name": "FZMZ Official",
   "genre": "アニソン",
   "lastHit": "2026-11-18T11:00:09Z",
+  "pinned": true
+ },
+ {
+  "id": "UCRBl_lQ0-2srrliMbh8q29Q",
+  "added": "2026-11-17T15:08:09.487Z",
+  "name": "流水Rusui●",
+  "genre": "J-POP",
+  "lastHit": "2026-11-18T11:00:07Z",
+  "pinned": true
+ },
+ {
+  "id": "UCiMletJHhosC0P1jl3Hieaw",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "ツバサ【EL6】",
+  "genre": "J-POP",
+  "lastHit": "2026-11-18T10:30:31Z",
+  "pinned": true
+ },
+ {
+  "id": "UCO6mA1hC3Gv9jEoCTITjAQw",
+  "name": "琶舞 -ʙᴇᴍᴀ-",
+  "added": "2026-10-09T12:06:54.468Z",
+  "genre": "アニソン",
+  "lastHit": "2026-11-18T10:30:16Z",
   "pinned": true
  },
  {
@@ -1634,11 +1746,27 @@
   "pinned": true
  },
  {
+  "id": "UCs9_O1tRPMQTHQ-N_L6FU2g",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "Lui ch. 鷹嶺ルイ - holoX -",
+  "genre": "J-POP",
+  "lastHit": "2026-11-18T09:00:07Z",
+  "pinned": true
+ },
+ {
+  "id": "UCA1WrzBKw8BvPg1KUxejOiQ",
+  "added": "2026-11-10T15:05:23.320Z",
+  "name": "音楽チャートの世界",
+  "genre": "アニソン",
+  "lastHit": "2026-11-18T08:00:12Z",
+  "pinned": true
+ },
+ {
   "id": "UCCy_q-N7F2FOIZ6ZggHIAKg",
   "added": "2026-10-09T12:23:27.151Z",
   "name": "Sony Music (Japan)",
   "genre": "アニソン",
-  "lastHit": "2026-11-18T03:01:14Z",
+  "lastHit": "2026-11-18T03:02:22Z",
   "pinned": true
  },
  {
@@ -1682,6 +1810,20 @@
   "pinned": true
  },
  {
+  "id": "UCz6Tr1WNS7tKeAht46Ef6KA",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "Retake Art",
+  "genre": "J-POP",
+  "lastHit": "2026-11-17T11:00:28Z"
+ },
+ {
+  "id": "UCCyBj7kgaiw_jWQ0uQOUDJQ",
+  "added": "2026-11-11T15:08:37.767Z",
+  "name": "カラオケキー検索",
+  "genre": "J-POP",
+  "lastHit": "2026-11-17T10:00:29Z"
+ },
+ {
   "id": "UChEJh7omBrQ7CNcY1bN2xPg",
   "added": "2026-11-18T15:08:37.126Z",
   "name": "ファントムシータ",
@@ -1698,12 +1840,11 @@
   "pinned": true
  },
  {
-  "id": "UCWDA90eEvGBgtbOM997aStw",
-  "added": "2026-10-11T21:32:47.826Z",
-  "name": "Ryoji Takarabe財部亮治",
+  "id": "UC8Qwnts13zIh2EYUCau6m3w",
+  "added": "2026-11-10T11:19:07.415Z",
+  "name": "ONE N' ONLY TV",
   "genre": "アニソン",
-  "lastHit": "2026-11-16T12:00:15Z",
-  "pinned": true
+  "lastHit": "2026-11-16T12:00:06Z"
  },
  {
   "id": "UCFuugQScqDfJcsOEWbL1_tg",
@@ -1725,14 +1866,6 @@
   "id": "UCZ-R_bRfQkivdwT3QvY121g",
   "added": "2026-11-10T15:05:23.320Z",
   "name": "Leina",
-  "genre": "アニソン",
-  "lastHit": "2026-11-16T10:00:08Z",
-  "pinned": true
- },
- {
-  "id": "UCpmSwekVKXnObCY7hpdHXdQ",
-  "added": "2026-11-18T15:08:37.126Z",
-  "name": "七海うらら*歌channel",
   "genre": "アニソン",
   "lastHit": "2026-11-16T10:00:08Z",
   "pinned": true
@@ -1792,19 +1925,19 @@
   "pinned": true
  },
  {
-  "id": "UCRBl_lQ0-2srrliMbh8q29Q",
-  "added": "2026-11-17T15:08:09.487Z",
-  "name": "流水Rusui●",
-  "genre": "J-POP",
-  "lastHit": "2026-11-15T10:59:07Z",
+  "id": "UCtOy6aKyz2ltSKSkQccXVGA",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "Kurokumo Official ",
+  "genre": "アニソン",
+  "lastHit": "2026-11-15T11:00:17Z",
   "pinned": true
  },
  {
-  "id": "UCNMbL86u5LBeO_BWHp5pJ5g",
-  "added": "2026-10-13T21:45:48.810Z",
-  "name": "Element Sicks【EL6】",
+  "id": "UCtQwleVyBMjBGNuUQ7a-KYg",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "雨夜リズ / Amayo Liz",
   "genre": "J-POP",
-  "lastHit": "2026-11-15T10:02:19Z",
+  "lastHit": "2026-11-15T11:00:08Z",
   "pinned": true
  },
  {
@@ -1868,6 +2001,13 @@
   "lastHit": "2026-11-14T14:15:07Z"
  },
  {
+  "id": "UC43cLiOM6Q1QsIGc0wtvgGw",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "夢語る花",
+  "genre": "アニソン",
+  "lastHit": "2026-11-14T13:08:03Z"
+ },
+ {
   "id": "UCwjAKjycHHT1QzHrQN5Stww",
   "name": "SixTONES",
   "added": "2026-10-09T12:06:54.468Z",
@@ -1898,27 +2038,19 @@
   "lastHit": "2026-11-14T11:00:21Z"
  },
  {
-  "id": "UCA1WrzBKw8BvPg1KUxejOiQ",
-  "added": "2026-11-10T15:05:23.320Z",
-  "name": "音楽チャートの世界",
-  "genre": "アニソン",
-  "lastHit": "2026-11-14T11:00:16Z",
-  "pinned": true
- },
- {
-  "id": "UCfyzrRchEuYWpbWnXNRwNLw",
-  "added": "2026-10-09T12:20:22.450Z",
-  "name": "シアーミュージック",
-  "genre": "J-POP",
-  "lastHit": "2026-11-14T11:00:08Z",
-  "pinned": true
- },
- {
   "id": "UCln9P4Qm3-EAY4aiEPmRwEA",
   "added": "2026-11-17T15:08:09.487Z",
   "name": "Ado",
   "genre": "アニソン",
   "lastHit": "2026-11-14T11:00:07Z",
+  "pinned": true
+ },
+ {
+  "id": "UCTZyqEU7dSXbc4b-NBolgMg",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "氷夏至 -HINAGESHI- / 罪十罰 from 少女革命計画",
+  "genre": "J-POP",
+  "lastHit": "2026-11-14T10:55:08Z",
   "pinned": true
  },
  {
@@ -1973,6 +2105,13 @@
   "lastHit": "2026-11-14T08:00:18Z"
  },
  {
+  "id": "UCna-xnmSAJum5lfFirBcQyA",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "ジジの遊び場",
+  "genre": "J-POP",
+  "lastHit": "2026-11-13T15:11:50Z"
+ },
+ {
   "id": "UCl2aT0nRejTCQO_LHZAftBw",
   "added": "2026-10-09T12:23:27.151Z",
   "name": "UNIVERSAL MUSIC JAPAN",
@@ -1987,6 +2126,13 @@
   "genre": "J-POP",
   "lastHit": "2026-11-13T13:00:22Z",
   "pinned": true
+ },
+ {
+  "id": "UCXhj2pPWvONXmvgHX5wllCA",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "Stray Kids Japan Official YouTube",
+  "genre": "J-POP",
+  "lastHit": "2026-11-13T13:00:22Z"
  },
  {
   "id": "UCPvBpSphbGzwtvoHKEwXXWw",
@@ -2071,6 +2217,13 @@
   "pinned": true
  },
  {
+  "id": "UCTwKpp4T5n1wyxLVf-cD4ew",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "汐れいら",
+  "genre": "J-POP",
+  "lastHit": "2026-11-13T11:00:00Z"
+ },
+ {
   "id": "UCX1ufnWuZ45jZeoJZQIUlFg",
   "added": "2026-11-10T15:05:23.320Z",
   "name": "nacoco music",
@@ -2091,13 +2244,6 @@
   "name": "陽真",
   "genre": "J-POP",
   "lastHit": "2026-11-13T10:00:30Z"
- },
- {
-  "id": "UCCyBj7kgaiw_jWQ0uQOUDJQ",
-  "added": "2026-11-11T15:08:37.767Z",
-  "name": "カラオケキー検索",
-  "genre": "J-POP",
-  "lastHit": "2026-11-13T10:00:14Z"
  },
  {
   "id": "UCd-Ocf0UUzXw0zcJ2I8VcxA",
@@ -2135,6 +2281,13 @@
   "name": "무적교자",
   "genre": "J-POP",
   "lastHit": "2026-11-13T09:00:21Z"
+ },
+ {
+  "id": "UCQLNBzvl68f2oWdzY5BbWMQ",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "ツバサ",
+  "genre": "J-POP",
+  "lastHit": "2026-11-13T09:00:19Z"
  },
  {
   "id": "UCrJpzU5plftpnitnPqGOZbg",
@@ -2240,19 +2393,12 @@
   "lastHit": "2026-11-11T19:44:41Z"
  },
  {
-  "id": "UC_A_w2KhC3emxNZWQ3pYpfQ",
-  "added": "2026-11-06T20:55:26.741Z",
-  "name": "FlyingDog",
-  "genre": "アニソン",
-  "lastHit": "2026-11-11T15:00:11Z",
-  "pinned": true
- },
- {
   "id": "UCdJcuuYo5z0MACEovXWhSYQ",
   "added": "2026-11-12T15:08:46.104Z",
   "name": "亜咲花公式チャンネル",
   "genre": "アニソン",
-  "lastHit": "2026-11-11T13:30:07Z"
+  "lastHit": "2026-11-11T13:30:07Z",
+  "pinned": true
  },
  {
   "id": "UCcA21_PzN1EhNe7xS4MJGsQ",
@@ -2305,7 +2451,8 @@
   "added": "2026-11-14T15:08:13.438Z",
   "name": "福田こうへい",
   "genre": "J-POP",
-  "lastHit": "2026-11-11T07:00:39Z"
+  "lastHit": "2026-11-11T07:00:39Z",
+  "pinned": true
  },
  {
   "id": "UCDIloCskZeTyShWapOOqNrw",
@@ -2572,14 +2719,6 @@
   "pinned": true
  },
  {
-  "id": "UCO6mA1hC3Gv9jEoCTITjAQw",
-  "name": "琶舞 -ʙᴇᴍᴀ-",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "アニソン",
-  "lastHit": "2026-11-08T10:30:24Z",
-  "pinned": true
- },
- {
   "id": "UCjUjZ46zFVr5VdaFKZG9GTw",
   "added": "2026-11-13T15:19:50.222Z",
   "name": "Release - Topic",
@@ -2826,6 +2965,13 @@
   "pinned": true
  },
  {
+  "id": "UC-EOYZAhn-dwtq86WUzU0Gw",
+  "added": "2026-11-19T22:47:45.814Z",
+  "name": "メルノア / Melnoa【新人歌い手グループ】",
+  "genre": "J-POP",
+  "lastHit": "2026-11-06T09:00:11Z"
+ },
+ {
   "id": "UCRK7qaLk8IRZSi8Su4EGZWg",
   "added": "2026-11-10T15:05:23.320Z",
   "name": "うたのママパパ",
@@ -2924,13 +3070,6 @@
   "lastHit": "2026-11-04T11:00:06Z"
  },
  {
-  "id": "UC8hGV6UGvtlC4k2McpRgBvw",
-  "added": "2026-11-10T15:05:23.320Z",
-  "name": "鷲尾伶菜 Official YouTube Channel",
-  "genre": "J-POP",
-  "lastHit": "2026-11-04T11:00:06Z"
- },
- {
   "id": "UCjXp3yT9CmSQynONc0OGrQg",
   "added": "2026-10-20T21:49:26.400Z",
   "name": "East Of Eden",
@@ -2944,152 +3083,6 @@
   "name": "THE RAMPAGE from EXILE TRIBE",
   "genre": "アニソン",
   "lastHit": "2026-11-04T10:00:28Z",
-  "pinned": true
- },
- {
-  "id": "UCu3Q_WZQf8tW6xH8Kx21Lgg",
-  "added": "2026-11-06T20:55:26.741Z",
-  "name": "もるでお",
-  "genre": "J-POP",
-  "lastHit": "2026-11-04T10:00:26Z",
-  "pinned": true
- },
- {
-  "id": "UCyXBNgCulibV9pRm3ZKpmoQ",
-  "added": "2026-11-04T21:01:26.916Z",
-  "name": "榊ネス / Sakaki Ness【にじさんじ】",
-  "genre": "アニソン",
-  "lastHit": "2026-11-04T10:00:07Z",
-  "pinned": true
- },
- {
-  "id": "UCMZN1sWH4-vOF45C7iEg_KA",
-  "added": "2026-11-10T15:05:23.320Z",
-  "name": "尾崎千里眼のポケモン実況チャンネル",
-  "genre": "アニソン",
-  "lastHit": "2026-11-04T09:00:18Z"
- },
- {
-  "id": "UCymbnl9LW7qi94bELkArpcQ",
-  "added": "2026-11-10T15:05:23.320Z",
-  "name": "みーこ💫Vtuber",
-  "genre": "J-POP",
-  "lastHit": "2026-11-04T09:00:09Z"
- },
- {
-  "id": "UCSAFgtALLOrJ7P5yJh7YbPw",
-  "added": "2026-11-10T15:05:23.320Z",
-  "name": "うるみや",
-  "genre": "J-POP",
-  "lastHit": "2026-11-04T08:00:06Z"
- },
- {
-  "id": "UCeDRciWGCDp48GD7guaIxfw",
-  "added": "2026-11-10T15:05:23.320Z",
-  "name": "MAFUYU",
-  "genre": "アニソン",
-  "lastHit": "2026-11-04T02:34:08Z"
- },
- {
-  "id": "UCEf_Bc-KVd7onSeifS3py9g",
-  "added": "2026-11-04T21:01:26.916Z",
-  "name": "SMTOWN",
-  "genre": "J-POP",
-  "lastHit": "2026-11-03T15:00:21Z",
-  "pinned": true
- },
- {
-  "id": "UCi_AquB9uaI3-9xXkuWG7IQ",
-  "name": "BE:FIRST Official",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "アニソン",
-  "lastHit": "2026-11-03T12:30:10Z",
-  "pinned": true
- },
- {
-  "id": "UCLkxbtUqIudgGSOl8XAdCfA",
-  "added": "2026-11-03T21:25:01.582Z",
-  "name": "Meychan",
-  "genre": "J-POP",
-  "lastHit": "2026-11-03T11:00:11Z",
-  "pinned": true
- },
- {
-  "id": "UC8Qwnts13zIh2EYUCau6m3w",
-  "added": "2026-11-10T11:19:07.415Z",
-  "name": "ONE N' ONLY TV",
-  "genre": "アニソン",
-  "lastHit": "2026-11-03T11:00:09Z"
- },
- {
-  "id": "UCaZgY1ysWvHFUVG8xp95PPA",
-  "added": "2026-10-23T21:49:42.946Z",
-  "name": "水槽",
-  "genre": "アニソン",
-  "lastHit": "2026-11-03T11:00:07Z",
-  "pinned": true
- },
- {
-  "id": "UC3XrP1yEARz4_iFsmrdUfRA",
-  "added": "2026-11-10T11:19:07.415Z",
-  "name": "超特急",
-  "genre": "J-POP",
-  "lastHit": "2026-11-02T12:00:00Z"
- },
- {
-  "id": "UC34yDnq7cs_4TQZF9jCZuJA",
-  "added": "2026-11-03T21:25:01.582Z",
-  "name": "SUPER DRAGON OFFICIAL",
-  "genre": "アニソン",
-  "lastHit": "2026-11-02T11:00:07Z",
-  "pinned": true
- },
- {
-  "id": "UCGQg0ZjM_QQ2jvUd5j9Fp-Q",
-  "added": "2026-10-12T21:33:25.769Z",
-  "name": "センラ / SENRA",
-  "genre": "J-POP",
-  "lastHit": "2026-11-02T10:00:37Z",
-  "pinned": true
- },
- {
-  "id": "UCcXY1U92HVxjhW3SDdDbTyw",
-  "added": "2026-11-03T21:25:01.582Z",
-  "name": "AK-69 Official Channel",
-  "genre": "J-POP",
-  "lastHit": "2026-11-02T09:00:09Z",
-  "pinned": true
- },
- {
-  "id": "UClM-RxoeCKN6ArtFfBp05Yw",
-  "added": "2026-10-18T21:45:48.802Z",
-  "name": "WHITE JAM Official",
-  "genre": "J-POP",
-  "lastHit": "2026-11-01T16:38:32Z",
-  "pinned": true
- },
- {
-  "id": "UCvpredjG93ifbCP1Y77JyFA",
-  "added": "2026-11-16T07:15:52.558Z",
-  "name": "YOASOBI",
-  "genre": "アニソン",
-  "lastHit": "2026-11-01T13:01:55Z",
-  "pinned": true
- },
- {
-  "id": "UCE4W22kKQQVdrA2KTiyZ_cA",
-  "added": "2026-10-28T12:07:05.352Z",
-  "name": "メーメントヴァニタス / MEMENTOVANITAS",
-  "genre": "アニソン",
-  "lastHit": "2026-11-01T09:00:11Z",
-  "pinned": true
- },
- {
-  "id": "UCyWEVH8tkJcJVO7IiQ1DGEg",
-  "name": "Tokyo Street Live 4K",
-  "added": "2026-10-09T12:06:54.468Z",
-  "genre": "J-POP",
-  "lastHit": "2026-11-01T06:00:31Z",
   "pinned": true
  }
 ]
