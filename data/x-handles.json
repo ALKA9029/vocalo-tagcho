@@ -595,15 +595,55 @@
   "nico:112798": {
    "h": "neru_sleep",
    "at": "2026-11-24"
+  },
+  "yt:UCFvSFbT8okMrpuFxBEIB2lg": {
+   "h": null,
+   "at": "2026-11-24"
+  },
+  "yt:UCv7VutirxDn3RWIJXI68n_A": {
+   "h": null,
+   "at": "2026-11-24"
+  },
+  "yt:UCl7OsED7y9eavZJbTGnK0xg": {
+   "h": null,
+   "at": "2026-11-24"
+  },
+  "yt:UC9rPALOT-ZVc7VEXATYSNCA": {
+   "h": null,
+   "at": "2026-11-24"
+  },
+  "yt:UC6zDox8Bunezuztd3sOm5WQ": {
+   "h": null,
+   "at": "2026-11-24"
+  },
+  "yt:UC-cGs-5HqIutyUrPa8mmDUA": {
+   "h": null,
+   "at": "2026-11-24"
+  },
+  "yt:UCfdFNsR_tvF8bwp0KhMaJZQ": {
+   "h": "nishizawasanp",
+   "at": "2026-11-24"
+  },
+  "nico:4845576": {
+   "h": null,
+   "at": "2026-11-24"
   }
  },
  "v": {
+  "yt:7VqCdhFGE78": "milk_info",
+  "yt:M8tRBup0j9E": "kisida_info",
+  "yt:t_qyKCMU4sU": "macarock0616",
   "yt:UnIhRpIT7nc": "inabakumori",
   "yt:MSv7NbfbtU8": "kinggnu_jp",
   "yt:dWL_vmm1AMI": "inouesonoko",
+  "yt:NT69Q8ny15c": "aoya_aotani",
   "nico:sm27057005": "nabuna2",
+  "yt:v9sR1Tm1diQ": "halyosy",
   "yt:xOF65F9FHqE": "aquatimezstaff",
+  "nico:sm24029703": "gigamozuku",
   "nico:sm24024502": "mikanseip",
+  "yt:sFhKP57Nk1U": "nishizawasanp",
+  "nico:sm22792311": "mikanseip",
   "nico:sm14375135": "neru_sleep"
  },
  "s": {
@@ -1217,6 +1257,46 @@
   },
   "yt:xOF65F9FHqE": {
    "h": "aquatimezstaff",
+   "at": "2026-11-24"
+  },
+  "yt:7VqCdhFGE78": {
+   "h": "milk_info",
+   "at": "2026-11-24"
+  },
+  "yt:D0SfIi-0Zpo": {
+   "h": null,
+   "at": "2026-11-24"
+  },
+  "yt:M8tRBup0j9E": {
+   "h": "kisida_info",
+   "at": "2026-11-24"
+  },
+  "yt:FL1QjjkZVm4": {
+   "h": null,
+   "at": "2026-11-24"
+  },
+  "yt:t_qyKCMU4sU": {
+   "h": "macarock0616",
+   "at": "2026-11-24"
+  },
+  "yt:pUH9vCsvq08": {
+   "h": null,
+   "at": "2026-11-24"
+  },
+  "yt:olWPDel6ti4": {
+   "h": null,
+   "at": "2026-11-24"
+  },
+  "yt:NT69Q8ny15c": {
+   "h": "aoya_aotani",
+   "at": "2026-11-24"
+  },
+  "yt:v9sR1Tm1diQ": {
+   "h": "halyosy",
+   "at": "2026-11-24"
+  },
+  "nico:sm24029703": {
+   "h": "gigamozuku",
    "at": "2026-11-24"
   }
  }

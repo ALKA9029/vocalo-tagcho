@@ -136,6 +136,13 @@
   "pinned": true
  },
  {
+  "id": "UCTe9yeIdsLQ6CrxKKQy5EtA",
+  "added": "2026-11-23T15:09:03.092Z",
+  "name": "프로세카 어나보",
+  "genre": "ボカロ",
+  "lastHit": "2026-11-19T10:24:04Z"
+ },
+ {
   "id": "UCyDONYXsTFQYlOsIB2e0UoA",
   "added": "2026-11-22T15:06:54.024Z",
   "name": "희죤",
@@ -380,13 +387,6 @@
   "name": "VOCALOID",
   "genre": "ボカロ",
   "lastHit": "2026-11-11T06:03:08Z"
- },
- {
-  "id": "UCTe9yeIdsLQ6CrxKKQy5EtA",
-  "added": "2026-11-23T15:09:03.092Z",
-  "name": "프로세카 어나보",
-  "genre": "ボカロ",
-  "lastHit": "2026-11-11T05:02:15Z"
  },
  {
   "id": "UCeBuESc6vN_IiFR3je4NYTg",
@@ -1955,6 +1955,14 @@
   "lastHit": "2026-11-20T10:00:40Z"
  },
  {
+  "id": "UCcg_rvE-fU2tATMwBAxW9bA",
+  "added": "2026-11-23T15:09:03.092Z",
+  "name": "ヤングスキニー",
+  "genre": "J-POP",
+  "lastHit": "2026-11-20T10:00:31Z",
+  "pinned": true
+ },
+ {
   "id": "UCeGendL8CO5RkffB6IFwHow",
   "added": "2026-11-22T15:06:54.024Z",
   "name": "セフィナ / Seffyna【にじさんじ】",
@@ -1989,7 +1997,8 @@
   "added": "2026-11-23T15:09:03.092Z",
   "name": "THA BLUE HERB RECORDINGS",
   "genre": "J-POP",
-  "lastHit": "2026-11-20T08:59:46Z"
+  "lastHit": "2026-11-20T08:59:46Z",
+  "pinned": true
  },
  {
   "id": "UCsmXiDP8S40uBeJYxvyulmA",
@@ -2261,13 +2270,6 @@
   "genre": "J-POP",
   "lastHit": "2026-11-17T15:00:11Z",
   "pinned": true
- },
- {
-  "id": "UCcg_rvE-fU2tATMwBAxW9bA",
-  "added": "2026-11-23T15:09:03.092Z",
-  "name": "ヤングスキニー",
-  "genre": "J-POP",
-  "lastHit": "2026-11-17T15:00:07Z"
  },
  {
   "id": "UCX8P-LApHpfSfT1ICdra-rQ",
