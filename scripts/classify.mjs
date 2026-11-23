@@ -41,6 +41,7 @@ export function isNotSong(title = "") {
   // MMD（3Dモデルが既存の曲で踊る動画）は曲そのものではない
   if (/MMD/i.test(title)) return true;
   if (/楽譜/.test(title)) return true;   // ピアノ楽譜の演奏動画
+  if (/解説して(み|ま)/.test(title)) return true;   // 解説動画
   // 公式チャンネルの、曲ではない動画（バラエティ・CM・インタビュー・メイキング・vlog・リアクション・密着・告知など）
   if (/休憩中|【(?!太鼓)[^】]*の達人】|コラボCM|テレビCM|\bTVCM\b|CM\s*\d{2}秒|談話|Imagine the culture|メイキング|making of|behind the scenes|\bvlog\b|ビハインド|オフショット|インタビュー|\binterview\b|\bteaser\b|ティザー|予告編|\btrailer\b|ダイジェスト|生配信|配信アーカイブ|リアクション|\breaction\b|密着|ドキュメンタリー|documentary|\bunboxing\b|開封/i.test(title)) return true;
   // テレビ番組の歌唱（うたコン・SONGS）や出演者のメッセージ、路上ライブの撮影（歌うま）、吹奏楽・ヴァイオリンの演奏、アルバムのクロスフェード、音ゲーのプレイ動画は曲そのものではない
@@ -1170,6 +1171,22 @@ function linkChannelCovers(items) {
   }
 }
 
+// 曲名の後ろに歌った人・作者の名前がくっついているもの（「えらくてえらい あらき×nqrse×めいちゃん」「IKI メガテラ・ゼロ」）は名前を外す。
+// 最後の空白より後ろが「作者名と同じ名前」をふくむときだけ。「A×B×C」のように複数人なら、それを作者名にする
+function stripPerformerTail(items) {
+  const lo = x => String(x || "").normalize("NFKC").toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
+  for (const i of items) {
+    if (i.kind !== "本家" || !i.p || !i.t || i.tFixed) continue;
+    const m = i.t.match(/^(.+?)[\s_\-│|]+([^\s]+)$/);
+    // 作者名が長すぎる（読み違いの説明文）・前の部分が「Chain of the」「… /」のように途中で切れているときはしない
+    if (!m || lo(m[1]).length < 2 || lo(i.p).length > 24 || /\b(of|the|by|and|a|an|in|to|for)$/i.test(m[1].trim()) || /[\/／(（【「『]$/.test(m[1].trim())) continue;
+    const names = m[2].split(/[×✕xX&＆、,]/).map(lo).filter(n => n.length >= 3);
+    if (!names.some(n => lo(i.p) === n || lo(i.p).includes(n) || n.includes(lo(i.p)))) continue;
+    i.t = m[1].trim();
+    if (/[×✕&＆]/.test(m[2]) && m[2].split(/[×✕&＆]/).length >= 2 && !m[2].split(/[×✕&＆]/).some(n => isVoice(n))) i.p = m[2];
+  }
+}
+
 let CREATOR_SET = new Set();
 export function linkCovers(items, vdb = {}) {
   CREATOR_SET = new Set(items.filter(i => i.kind === "本家" && i.p).map(i => normalize(i.p)));
@@ -1178,6 +1195,7 @@ export function linkCovers(items, vdb = {}) {
   guessChannelGenre(items);
   fillCreators(items);
   fixCreatorNames(items);
+  stripPerformerTail(items);
   applyVocaDB(items, vdb);
   singerOriginals(items);
   coverArtists(items);
